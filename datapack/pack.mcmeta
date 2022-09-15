@@ -5,5 +5,14 @@
          "text": "Baba is you",
          "color": "#8fdff7"
       }
+   },
+   "filter": {
+      "block": [
+         {
+            "namespace": "^minecraft$",
+            "path": ["advancements/.*",
+               "recipes/.*"]
+         }
+      ]
    }
 }

@@ -1,0 +1,122 @@
+{
+   "providers": [
+      {
+         "type": "space",
+         "advances": {
+            " ": 24,
+            "!": -240,
+            ".": -1
+         }
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": 0,
+         "height": 24,
+         "chars": [
+            "\ue000\ue001\ue002",
+            "\ue003\ue004\ue005",
+            "\ue006\ue007\ue008"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -24,
+         "height": 24,
+         "chars": [
+            "\ue009\ue00a\ue00b",
+            "\ue00c\ue00d\ue00e",
+            "\ue00f\ue010\ue011"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -48,
+         "height": 24,
+         "chars": [
+            "\ue012\ue013\ue014",
+            "\ue015\ue016\ue017",
+            "\ue018\ue019\ue01a"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -72,
+         "height": 24,
+         "chars": [
+            "\ue01b\ue01c\ue01d",
+            "\ue01e\ue01f\ue020",
+            "\ue021\ue022\ue023"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -96,
+         "height": 24,
+         "chars": [
+            "\ue024\ue025\ue026",
+            "\ue027\ue028\ue029",
+            "\ue02a\ue02b\ue02c"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -120,
+         "height": 24,
+         "chars": [
+            "\ue02d\ue02e\ue02f",
+            "\ue030\ue031\ue032",
+            "\ue033\ue034\ue035"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -144,
+         "height": 24,
+         "chars": [
+            "\ue036\ue037\ue038",
+            "\ue039\ue03a\ue03b",
+            "\ue03c\ue03d\ue03e"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -168,
+         "height": 24,
+         "chars": [
+            "\ue03f\ue040\ue041",
+            "\ue042\ue043\ue044",
+            "\ue045\ue046\ue047"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -192,
+         "height": 24,
+         "chars": [
+            "\ue048\ue049\ue04a",
+            "\ue04b\ue04c\ue04d",
+            "\ue04e\ue04f\ue050"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:text.png",
+         "ascent": -216,
+         "height": 24,
+         "chars": [
+            "\ue051\ue052\ue053",
+            "\ue054\ue055\ue056",
+            "\ue057\ue058\ue059"
+         ]
+      }
+   ]
+}
