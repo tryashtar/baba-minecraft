@@ -75,10 +75,11 @@ class TextManager:
     self.id = 0
     self.rows = rows
     self.charmap = {}
+    self.placement = {}
     self.negatives = {}
     self.ids = {}
     self.lang = {"baba.row_end":"-","baba.empty_tile":" "}
-    self.providers = [{"type":"space","advances":{" ":24, "!":-24, '.':-2, "-":-240}}]
+    self.providers = [{"type":"space","advances":{" ":24, "!":-24, '.':-3, "-":-24*16}}]
     for r in range(rows):
       self.charmap[r] = {}
   def next_char(self):
@@ -86,18 +87,21 @@ class TextManager:
     return self.char
   def to_char_grid(self, grid, source):
     return [''.join(['\u0000' if x is None else source[x] for x in y]) for y in grid.tiles]
-  def add_grid(self, grid):
-    for c in itertools.chain.from_iterable(grid.tiles):
-      if c is not None:
-        self.negatives[c] = self.next_char()
-        for r in range(self.rows):
-          self.charmap[r][c] = self.next_char()
-          self.lang[f'baba.{c.name}.{c.sprite}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
-        self.ids[self.id] = c
-        self.id += 1
+  def add_grid(self, grid, filename):
+    for y in range(len(grid.tiles)):
+      for x in range(len(grid.tiles[y])):
+        c = grid.tiles[y][x]
+        if c is not None:
+          self.negatives[c] = self.next_char()
+          for r in range(self.rows):
+            self.charmap[r][c] = self.next_char()
+            self.lang[f'baba.{c.name}.{c.sprite}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
+          self.ids[self.id] = c
+          self.id += 1
+          self.placement[c] = (grid, y, x)
     for r in range(self.rows):
-      self.providers.append({"type":"bitmap","grid":grid,"file":None,"height":24,"ascent":-r*24,"chars":self.to_char_grid(grid, self.charmap[r])})
-    self.providers.append({"type":"bitmap","grid":grid,"file":None,"height":-24,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
+      self.providers.append({"type":"bitmap","file":filename,"height":24,"ascent":-r*24,"chars":self.to_char_grid(grid, self.charmap[r])})
+    self.providers.append({"type":"bitmap","file":filename,"height":-24,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
 
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
@@ -115,10 +119,12 @@ sprites3.add_similar_rows(['moon', None, None, 'star', 'tree'], 376, 451, ['text
 sprites3.add_similar_rows(['box', None, 'fire', None, 'jelly'], 751, 1, ['text', 'obj'])
 text = Sheet('sprites/text.png')
 text.add_similar_rows(['all', None, 'has', None, 'push'], 1, 1, ['text'])
-text.add_similar_rows(['is', None, 'you'], 226, 76, ['active'])
-text.add_similar_rows(['and'], 301, 76, ['active'])
+text.add_similar_rows(['is', None, 'you'], 226, 76, ['text'])
+text.add_similar_rows(['and'], 301, 76, ['text'])
+text.add_similar_rows(['win'], 226, 1123, ['text'])
+text.add_similar_rows(['stop'], 151, 301, ['text'])
 tiles = Sheet('sprites/tiles.png')
-tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, 'wall', 'water'], 1, 451, ['none', 'r', 'u', 'ur', 'l', 'lr', 'ul', 'ulr', 'd', 'dr', 'ud', 'udr', 'dl', 'dlr', 'udl', 'udlr'])
+tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, 'wall', 'water'], 1, 451, ['text', 'none', 'r', 'u', 'ur', 'l', 'lr', 'ul', 'ulr', 'd', 'dr', 'ud', 'udr', 'dl', 'dlr', 'udl', 'udlr'])
 info.add_sheet(sprites1)
 info.add_sheet(sprites2)
 info.add_sheet(sprites3)
@@ -127,19 +133,16 @@ info.add_sheet(tiles)
 generated = info.generate_grids()
 
 text = TextManager(10)
-for grid in generated[0]:
-  text.add_grid(grid)
+for i,grid in enumerate(generated[0]):
+  text.add_grid(grid, f'baba:grid{i}_anim0.png')
 tat.write_json(text.lang, 'resourcepack/assets/baba/lang/en_us.json')
 for a,grids in enumerate(generated):
   for i,grid in enumerate(grids):
     grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{a}.png')
-  providers = text.providers.copy()
-  for p in providers:
-    for i in range(len(grids)):
-      if 'grid' in p and p['grid'] == generated[0][i]:
-        del p['grid']
-        p['file'] = f'baba:grid{i}_anim{a}.png'
-  tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/anim{a}.json')
+  for p in text.providers:
+    if 'file' in p:
+      p['file'] = p['file'].replace(f'anim{a-1}', f'anim{a}')
+  tat.write_json({"providers":text.providers}, f'resourcepack/assets/baba/font/anim{a}.json')
 
 def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
@@ -151,3 +154,22 @@ for r in range(0,text.rows):
     noteblock = note_block(i)
     lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main text[-1] set value \'{{"translate":"baba.{t.name}.{t.sprite}.row{r}"}}\'')
   tat.write_lines(lines, f'datapack/data/baba/functions/check_block/row{r}.mcfunction')
+
+blockstate = {}
+custom_model = []
+get_all = []
+for i,t in text.ids.items():
+  noteblock = note_block(i)
+  placement = text.placement[t]
+  for g,grid in enumerate(generated[0]):
+    if grid == placement[0]:
+      model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[1.6*placement[2],1.6*placement[1],1.6*placement[2]+1.6,1.6*placement[1]+1.6],"texture":"#up"}}}]}
+      blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{t.name}_{t.sprite}','y':90}
+      custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{t.name}_{t.sprite}'})
+      if t.sprite in ['text', 'obj', 'r', 'f1', 'r1']:
+        get_all.append(f'give @s note_block{{CustomModelData:{i},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{t.name} {t.sprite}","italic":false}}\'}}}}')
+      tat.write_json(model, f'resourcepack/assets/baba/models/{t.name}_{t.sprite}.json')
+tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
+tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, f'resourcepack/assets/baba/models/parent_display.json')
+tat.write_json({"overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
+tat.write_lines(get_all, f'datapack/data/baba/functions/dev/all_items.mcfunction')
