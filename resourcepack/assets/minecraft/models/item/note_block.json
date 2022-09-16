@@ -4,7 +4,7 @@
          "predicate": {
             "custom_model_data": 0
          },
-         "model": "baba:belt_text"
+         "model": "baba:text_belt"
       },
       {
          "predicate": {
@@ -106,7 +106,7 @@
          "predicate": {
             "custom_model_data": 17
          },
-         "model": "baba:bug_text"
+         "model": "baba:text_bug"
       },
       {
          "predicate": {
@@ -136,7 +136,7 @@
          "predicate": {
             "custom_model_data": 22
          },
-         "model": "baba:crab_text"
+         "model": "baba:text_crab"
       },
       {
          "predicate": {
@@ -166,7 +166,7 @@
          "predicate": {
             "custom_model_data": 27
          },
-         "model": "baba:rocket_text"
+         "model": "baba:text_rocket"
       },
       {
          "predicate": {
@@ -196,7 +196,7 @@
          "predicate": {
             "custom_model_data": 32
          },
-         "model": "baba:skull_text"
+         "model": "baba:text_skull"
       },
       {
          "predicate": {
@@ -226,7 +226,7 @@
          "predicate": {
             "custom_model_data": 37
          },
-         "model": "baba:ghost_text"
+         "model": "baba:text_ghost"
       },
       {
          "predicate": {
@@ -256,7 +256,7 @@
          "predicate": {
             "custom_model_data": 42
          },
-         "model": "baba:statue_text"
+         "model": "baba:text_statue"
       },
       {
          "predicate": {
@@ -286,7 +286,7 @@
          "predicate": {
             "custom_model_data": 47
          },
-         "model": "baba:bat_text"
+         "model": "baba:text_bat"
       },
       {
          "predicate": {
@@ -316,7 +316,7 @@
          "predicate": {
             "custom_model_data": 52
          },
-         "model": "baba:cog_text"
+         "model": "baba:text_cog"
       },
       {
          "predicate": {
@@ -346,7 +346,7 @@
          "predicate": {
             "custom_model_data": 57
          },
-         "model": "baba:baba_text"
+         "model": "baba:text_baba"
       },
       {
          "predicate": {
@@ -472,7 +472,7 @@
          "predicate": {
             "custom_model_data": 78
          },
-         "model": "baba:keke_text"
+         "model": "baba:text_keke"
       },
       {
          "predicate": {
@@ -598,7 +598,7 @@
          "predicate": {
             "custom_model_data": 99
          },
-         "model": "baba:me_text"
+         "model": "baba:text_me"
       },
       {
          "predicate": {
@@ -724,7 +724,7 @@
          "predicate": {
             "custom_model_data": 120
          },
-         "model": "baba:robot_text"
+         "model": "baba:text_robot"
       },
       {
          "predicate": {
@@ -850,7 +850,7 @@
          "predicate": {
             "custom_model_data": 141
          },
-         "model": "baba:algae_text"
+         "model": "baba:text_algae"
       },
       {
          "predicate": {
@@ -862,7 +862,7 @@
          "predicate": {
             "custom_model_data": 143
          },
-         "model": "baba:flag_text"
+         "model": "baba:text_flag"
       },
       {
          "predicate": {
@@ -874,7 +874,7 @@
          "predicate": {
             "custom_model_data": 145
          },
-         "model": "baba:key_text"
+         "model": "baba:text_key"
       },
       {
          "predicate": {
@@ -886,7 +886,7 @@
          "predicate": {
             "custom_model_data": 147
          },
-         "model": "baba:love_text"
+         "model": "baba:text_love"
       },
       {
          "predicate": {
@@ -898,7 +898,7 @@
          "predicate": {
             "custom_model_data": 149
          },
-         "model": "baba:ufo_text"
+         "model": "baba:text_ufo"
       },
       {
          "predicate": {
@@ -910,7 +910,7 @@
          "predicate": {
             "custom_model_data": 151
          },
-         "model": "baba:door_text"
+         "model": "baba:text_door"
       },
       {
          "predicate": {
@@ -922,7 +922,7 @@
          "predicate": {
             "custom_model_data": 153
          },
-         "model": "baba:flower_text"
+         "model": "baba:text_flower"
       },
       {
          "predicate": {
@@ -934,7 +934,7 @@
          "predicate": {
             "custom_model_data": 155
          },
-         "model": "baba:pillar_text"
+         "model": "baba:text_pillar"
       },
       {
          "predicate": {
@@ -946,7 +946,7 @@
          "predicate": {
             "custom_model_data": 157
          },
-         "model": "baba:rock_text"
+         "model": "baba:text_rock"
       },
       {
          "predicate": {
@@ -958,7 +958,7 @@
          "predicate": {
             "custom_model_data": 159
          },
-         "model": "baba:tile_text"
+         "model": "baba:text_tile"
       },
       {
          "predicate": {
@@ -970,7 +970,7 @@
          "predicate": {
             "custom_model_data": 161
          },
-         "model": "baba:moon_text"
+         "model": "baba:text_moon"
       },
       {
          "predicate": {
@@ -982,7 +982,7 @@
          "predicate": {
             "custom_model_data": 163
          },
-         "model": "baba:star_text"
+         "model": "baba:text_star"
       },
       {
          "predicate": {
@@ -994,7 +994,7 @@
          "predicate": {
             "custom_model_data": 165
          },
-         "model": "baba:tree_text"
+         "model": "baba:text_tree"
       },
       {
          "predicate": {
@@ -1006,7 +1006,7 @@
          "predicate": {
             "custom_model_data": 167
          },
-         "model": "baba:box_text"
+         "model": "baba:text_box"
       },
       {
          "predicate": {
@@ -1018,7 +1018,7 @@
          "predicate": {
             "custom_model_data": 169
          },
-         "model": "baba:fire_text"
+         "model": "baba:text_fire"
       },
       {
          "predicate": {
@@ -1030,7 +1030,7 @@
          "predicate": {
             "custom_model_data": 171
          },
-         "model": "baba:jelly_text"
+         "model": "baba:text_jelly"
       },
       {
          "predicate": {
@@ -1042,55 +1042,55 @@
          "predicate": {
             "custom_model_data": 173
          },
-         "model": "baba:all_text"
+         "model": "baba:text_all"
       },
       {
          "predicate": {
             "custom_model_data": 174
          },
-         "model": "baba:has_text"
+         "model": "baba:text_has"
       },
       {
          "predicate": {
             "custom_model_data": 175
          },
-         "model": "baba:push_text"
+         "model": "baba:text_push"
       },
       {
          "predicate": {
             "custom_model_data": 176
          },
-         "model": "baba:is_text"
+         "model": "baba:text_is"
       },
       {
          "predicate": {
             "custom_model_data": 177
          },
-         "model": "baba:you_text"
+         "model": "baba:text_you"
       },
       {
          "predicate": {
             "custom_model_data": 178
          },
-         "model": "baba:and_text"
+         "model": "baba:text_and"
       },
       {
          "predicate": {
             "custom_model_data": 179
          },
-         "model": "baba:win_text"
+         "model": "baba:text_win"
       },
       {
          "predicate": {
             "custom_model_data": 180
          },
-         "model": "baba:stop_text"
+         "model": "baba:text_stop"
       },
       {
          "predicate": {
             "custom_model_data": 181
          },
-         "model": "baba:cloud_text"
+         "model": "baba:text_cloud"
       },
       {
          "predicate": {
@@ -1192,7 +1192,7 @@
          "predicate": {
             "custom_model_data": 198
          },
-         "model": "baba:fence_text"
+         "model": "baba:text_fence"
       },
       {
          "predicate": {
@@ -1294,7 +1294,7 @@
          "predicate": {
             "custom_model_data": 215
          },
-         "model": "baba:grass_text"
+         "model": "baba:text_grass"
       },
       {
          "predicate": {
@@ -1396,7 +1396,7 @@
          "predicate": {
             "custom_model_data": 232
          },
-         "model": "baba:hedge_text"
+         "model": "baba:text_hedge"
       },
       {
          "predicate": {
@@ -1498,7 +1498,7 @@
          "predicate": {
             "custom_model_data": 249
          },
-         "model": "baba:ice_text"
+         "model": "baba:text_ice"
       },
       {
          "predicate": {
@@ -1600,7 +1600,7 @@
          "predicate": {
             "custom_model_data": 266
          },
-         "model": "baba:lava_text"
+         "model": "baba:text_lava"
       },
       {
          "predicate": {
@@ -1702,7 +1702,7 @@
          "predicate": {
             "custom_model_data": 283
          },
-         "model": "baba:pipe_text"
+         "model": "baba:text_pipe"
       },
       {
          "predicate": {
@@ -1804,7 +1804,7 @@
          "predicate": {
             "custom_model_data": 300
          },
-         "model": "baba:rubble_text"
+         "model": "baba:text_rubble"
       },
       {
          "predicate": {
@@ -1906,7 +1906,7 @@
          "predicate": {
             "custom_model_data": 317
          },
-         "model": "baba:wall_text"
+         "model": "baba:text_wall"
       },
       {
          "predicate": {
@@ -2008,7 +2008,7 @@
          "predicate": {
             "custom_model_data": 334
          },
-         "model": "baba:water_text"
+         "model": "baba:text_water"
       },
       {
          "predicate": {

@@ -64,8 +64,8 @@ class Grid:
 
 class Tile:
   def __init__(self, name, sprite, anim, image):
-    self.name = name
-    self.sprite = sprite
+    self.name = sprite if sprite == 'text' else name
+    self.sprite = name if sprite == 'text' else sprite
     self.anim = anim
     self.image = image
 
@@ -73,13 +73,16 @@ class TextManager:
   def __init__(self, rows):
     self.char = '\ue000'
     self.id = 0
+    self.sprite_id = 1
     self.rows = rows
     self.charmap = {}
     self.placement = {}
     self.negatives = {}
     self.ids = {}
+    self.sprite_ids = {}
     self.lang = {"baba.row_end":"-","baba.empty_tile":" "}
     self.providers = [{"type":"space","advances":{" ":24, "!":-24, '.':-3, "-":-24*16}}]
+    self.sprites = {}
     for r in range(rows):
       self.charmap[r] = {}
   def next_char(self):
@@ -96,9 +99,15 @@ class TextManager:
           for r in range(self.rows):
             self.charmap[r][c] = self.next_char()
             self.lang[f'baba.{c.name}.{c.sprite}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
-          self.ids[self.id] = c
+          self.ids[c] = self.id
           self.id += 1
           self.placement[c] = (grid, y, x)
+          if c.name not in self.sprites:
+            self.sprites[c.name] = {}
+            self.sprite_ids[c.name] = self.sprite_id
+            self.sprite_id += 1
+          self.sprites[c.name][c.sprite] = c
+
     for r in range(self.rows):
       self.providers.append({"type":"bitmap","file":filename,"height":24,"ascent":-r*24,"chars":self.to_char_grid(grid, self.charmap[r])})
     self.providers.append({"type":"bitmap","file":filename,"height":-24,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
@@ -148,17 +157,26 @@ def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
   return (instrument, val % 25)
 
-for r in range(0,text.rows):
-  lines = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
-  for i,t in text.ids.items():
-    noteblock = note_block(i)
-    lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main text[-1] set value \'{{"translate":"baba.{t.name}.{t.sprite}.row{r}"}}\'')
-  tat.write_lines(lines, f'datapack/data/baba/functions/check_block/row{r}.mcfunction')
+lines = ['data modify storage baba:main row append value {}']
+for t,i in text.ids.items():
+  noteblock = note_block(i)
+  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main row[-1] set value {{sprite:{t.name},variant:{t.sprite}}}')
+tat.write_lines(lines, f'datapack/data/baba/functions/check_block.mcfunction')
+
+for r in range(text.rows):
+  lines = [
+    f'data modify storage baba:main tile set from storage baba:main consume[{r}][0]',
+    f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\''
+  ]
+  for t,i in text.ids.items():
+    lines.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{{"translate":"baba.{t.name}.{t.sprite}.row{r}"}}\'')
+  lines.append(f'data remove storage baba:main consume[{r}][0]')
+  tat.write_lines(lines, f'datapack/data/baba/functions/check_tile/row{r}.mcfunction')
 
 blockstate = {}
 custom_model = []
 get_all = []
-for i,t in text.ids.items():
+for t,i in text.ids.items():
   noteblock = note_block(i)
   placement = text.placement[t]
   for g,grid in enumerate(generated[0]):
@@ -166,7 +184,7 @@ for i,t in text.ids.items():
       model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[1.6*placement[2],1.6*placement[1],1.6*placement[2]+1.6,1.6*placement[1]+1.6],"texture":"#up"}}}]}
       blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{t.name}_{t.sprite}','y':90}
       custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{t.name}_{t.sprite}'})
-      if t.sprite in ['text', 'obj', 'r', 'f1', 'r1']:
+      if t.name in ['text'] or t.sprite in ['obj', 'r', 'f1', 'r1']:
         get_all.append(f'give @s note_block{{CustomModelData:{i},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{t.name} {t.sprite}","italic":false}}\'}}}}')
       tat.write_json(model, f'resourcepack/assets/baba/models/{t.name}_{t.sprite}.json')
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
