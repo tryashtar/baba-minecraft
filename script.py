@@ -2,6 +2,7 @@ import tryashtools as tat
 import PIL.Image
 import itertools
 import numpy as np
+import json
 
 class Info:
   def __init__(self):
@@ -16,7 +17,16 @@ class Info:
       for sheet in self.sheets:
         for row in sheet.rows:
           for t,tile in enumerate(row.tiles):
-            sprite = Tile(row.name, tile, h, sheet.image.crop((row.x+(25*t),row.y+(25*h),row.x+(25*t)+24,row.y+(25*h)+24)))
+            img = sheet.image.crop((row.x+(25*t),row.y+(25*h),row.x+(25*t)+24,row.y+(25*h)+24))
+            color = None
+            name = row.name
+            if type(row.name) is tuple:
+              name = row.name[0]
+              if tile == 'text':
+                color = row.name[1]
+              else:
+                color = row.name[2]
+            sprite = Tile(name, tile, h, img, color)
             grid.add(sprite)
             if grid.is_full():
               grid = Grid()
@@ -63,11 +73,12 @@ class Grid:
     return self.y >= 10
 
 class Tile:
-  def __init__(self, name, sprite, anim, image):
+  def __init__(self, name, sprite, anim, image, color):
     self.name = sprite if sprite == 'text' else name
     self.sprite = name if sprite == 'text' else sprite
     self.anim = anim
     self.image = image
+    self.color = color
 
 class TextManager:
   def __init__(self, rows):
@@ -120,20 +131,20 @@ sprites1.add_similar_rows(['ghost', None, None, None, 'statue'], 276, 622, ['tex
 sprites1.add_similar_rows(['bat'], 1, 1081, ['text', 'f1', 'f2', 'f3', 'f4'])
 sprites1.add_similar_rows(['cog'], 1, 1167, ['text', 'f1', 'f2', 'f3', 'f4'])
 sprites2 = Sheet('sprites/sprites2.png')
-sprites2.add_similar_rows(['baba', None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text','r1','r2','r3','r4','u1','u2','u3','u4','l1','l2','l3','l4','d1','d2','d3','d4','sr','su','sl','sd'])
+sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text','r1','r2','r3','r4','u1','u2','u3','u4','l1','l2','l3','l4','d1','d2','d3','d4','sr','su','sl','sd'])
 sprites3 = Sheet('sprites/sprites3.png')
-sprites3.add_similar_rows(['algae', None, None, 'flag', None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', 'obj'])
-sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', 'rock', None, 'tile'], 126, 151, ['text', 'obj'])
+sprites3.add_similar_rows(['algae', None, None, ('flag', '#EDE285', '#EDE285'), None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', 'obj'])
+sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', 'obj'])
 sprites3.add_similar_rows(['moon', None, None, 'star', 'tree'], 376, 451, ['text', 'obj'])
 sprites3.add_similar_rows(['box', None, 'fire', None, 'jelly'], 751, 1, ['text', 'obj'])
 text = Sheet('sprites/text.png')
-text.add_similar_rows(['all', None, 'has', None, 'push'], 1, 1, ['text'])
-text.add_similar_rows(['is', None, 'you'], 226, 76, ['text'])
+text.add_similar_rows(['all', None, 'has', None, ('push', '#90673E')], 1, 1, ['text'])
+text.add_similar_rows(['is', None, ('you', '#D9396A')], 226, 76, ['text'])
 text.add_similar_rows(['and'], 301, 76, ['text'])
-text.add_similar_rows(['win'], 226, 1123, ['text'])
-text.add_similar_rows(['stop'], 151, 301, ['text'])
+text.add_similar_rows([('win', '#F0E484')], 226, 1123, ['text'])
+text.add_similar_rows([('stop', '#4B5C1C')], 151, 301, ['text'])
 tiles = Sheet('sprites/tiles.png')
-tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, 'wall', 'water'], 1, 451, ['text', 'none', 'r', 'u', 'ur', 'l', 'lr', 'ul', 'ulr', 'd', 'dr', 'ud', 'udr', 'dl', 'dlr', 'udl', 'udlr'])
+tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, ('wall', '#737373', '#293141'), 'water'], 1, 451, ['text', 'none', 'r', 'u', 'ur', 'l', 'lr', 'ul', 'ulr', 'd', 'dr', 'ud', 'udr', 'dl', 'dlr', 'udl', 'udlr'])
 info.add_sheet(sprites1)
 info.add_sheet(sprites2)
 info.add_sheet(sprites3)
@@ -169,7 +180,10 @@ for r in range(text.rows):
     f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\''
   ]
   for t,i in text.ids.items():
-    lines.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{{"translate":"baba.{t.name}.{t.sprite}.row{r}"}}\'')
+    translate = {"translate":f"baba.{t.name}.{t.sprite}.row{r}"}
+    if t.color is not None:
+      translate["color"] = t.color
+    lines.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{json.dumps(translate, separators=(",", ":"))}\'')
   lines.append(f'data remove storage baba:main consume[{r}][0]')
   tat.write_lines(lines, f'datapack/data/baba/functions/check_tile/row{r}.mcfunction')
 

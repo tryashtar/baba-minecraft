@@ -1,4 +1,4 @@
-data modify storage baba:main text set value []
+data modify storage baba:main text set value ['""']
 data modify storage baba:main consume set from storage baba:main level
 function baba:check_tile/row0
 function baba:check_tile/row0
