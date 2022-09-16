@@ -1,3 +1,5 @@
+bossbar add baba:main ""
+bossbar set baba:main players @a
 scoreboard objectives add baba dummy
 scoreboard players set #6 baba 6
 scoreboard players set #4 baba 4

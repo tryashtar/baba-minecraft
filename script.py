@@ -6,14 +6,10 @@ import numpy as np
 class Info:
   def __init__(self):
     self.sheets = []
-    self.char = '\ue000'
-  def next_char(self):
-    self.char = chr(ord(self.char)+1)
-    return self.char
   def add_sheet(self, sheet):
     self.sheets.append(sheet)
   def generate_grids(self):
-    result = [[],[],[]]
+    result = [[] for x in range(3)]
     for h,grids in enumerate(result):
       grid = Grid()
       grids.append(grid)
@@ -73,6 +69,36 @@ class Tile:
     self.anim = anim
     self.image = image
 
+class TextManager:
+  def __init__(self, rows):
+    self.char = '\ue000'
+    self.id = 0
+    self.rows = rows
+    self.charmap = {}
+    self.negatives = {}
+    self.ids = {}
+    self.lang = {"baba.row_end":"-","baba.empty_tile":" "}
+    self.providers = [{"type":"space","advances":{" ":24, "!":-24, '.':-2, "-":-240}}]
+    for r in range(rows):
+      self.charmap[r] = {}
+  def next_char(self):
+    self.char = chr(ord(self.char)+1)
+    return self.char
+  def to_char_grid(self, grid, source):
+    return [''.join(['\u0000' if x is None else source[x] for x in y]) for y in grid.tiles]
+  def add_grid(self, grid):
+    for c in itertools.chain.from_iterable(grid.tiles):
+      if c is not None:
+        self.negatives[c] = self.next_char()
+        for r in range(self.rows):
+          self.charmap[r][c] = self.next_char()
+          self.lang[f'baba.{c.name}.{c.sprite}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
+        self.ids[self.id] = c
+        self.id += 1
+    for r in range(self.rows):
+      self.providers.append({"type":"bitmap","grid":grid,"file":None,"height":24,"ascent":-r*24,"chars":self.to_char_grid(grid, self.charmap[r])})
+    self.providers.append({"type":"bitmap","grid":grid,"file":None,"height":-24,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
+
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
 sprites1.add_similar_rows(['belt'], 1, 85, ['text', 'r1', 'r2', 'r3', 'r4', 'u1', 'u2', 'u3', 'u4', 'l1', 'l2', 'l3', 'l4', 'd1', 'd2', 'd3', 'd4'])
@@ -99,21 +125,29 @@ info.add_sheet(sprites3)
 info.add_sheet(text)
 info.add_sheet(tiles)
 generated = info.generate_grids()
-chargrids = {}
-lang = {}
-for i,grid in enumerate(generated[0]):
-  chargrids[i] = {}
-  for r in range(-1, 10):
-    chargrids[i][r] = [''.join(['\u0000' if x is None else info.next_char() for x in y]) for y in grid.tiles]
-    for g in itertools.chain.from_iterable(grid.tiles):
-      if g is not None and r>-1:
-        lang[f'baba.{g.name}.{g.sprite}.row{r}'] = 'hi'
-tat.write_json(lang, 'resourcepack/assets/baba/lang/en_us.json')
+
+text = TextManager(10)
+for grid in generated[0]:
+  text.add_grid(grid)
+tat.write_json(text.lang, 'resourcepack/assets/baba/lang/en_us.json')
 for a,grids in enumerate(generated):
   for i,grid in enumerate(grids):
     grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{a}.png')
-  providers = [{"type":"space","advances":{" ":24, "!":-24}}]
-  for i,grids in chargrids.items():
-    for r,g in grids.items():
-      providers.append({"type":"bitmap","file":f"baba:grid{i}_anim{a}","height":24,"ascent":-32000 if r==-1 else -r*24,"chars":g})
+  providers = text.providers.copy()
+  for p in providers:
+    for i in range(len(grids)):
+      if 'grid' in p and p['grid'] == generated[0][i]:
+        del p['grid']
+        p['file'] = f'baba:grid{i}_anim{a}.png'
   tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/anim{a}.json')
+
+def note_block(val):
+  instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
+  return (instrument, val % 25)
+
+for r in range(0,text.rows):
+  lines = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
+  for i,t in text.ids.items():
+    noteblock = note_block(i)
+    lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main text[-1] set value \'{{"translate":"baba.{t.name}.{t.sprite}.row{r}"}}\'')
+  tat.write_lines(lines, f'datapack/data/baba/functions/check_block/row{r}.mcfunction')
