@@ -1,4 +1,3 @@
-data modify storage baba:main consume set from storage baba:main level
 execute positioned 9 1 0 run function baba:save_block
 execute positioned 9 1 1 run function baba:save_block
 execute positioned 9 1 2 run function baba:save_block
@@ -16,7 +15,6 @@ execute positioned 9 1 13 run function baba:save_block
 execute positioned 9 1 14 run function baba:save_block
 execute positioned 9 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 8 1 0 run function baba:save_block
 execute positioned 8 1 1 run function baba:save_block
 execute positioned 8 1 2 run function baba:save_block
@@ -34,7 +32,6 @@ execute positioned 8 1 13 run function baba:save_block
 execute positioned 8 1 14 run function baba:save_block
 execute positioned 8 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 7 1 0 run function baba:save_block
 execute positioned 7 1 1 run function baba:save_block
 execute positioned 7 1 2 run function baba:save_block
@@ -52,7 +49,6 @@ execute positioned 7 1 13 run function baba:save_block
 execute positioned 7 1 14 run function baba:save_block
 execute positioned 7 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 6 1 0 run function baba:save_block
 execute positioned 6 1 1 run function baba:save_block
 execute positioned 6 1 2 run function baba:save_block
@@ -70,7 +66,6 @@ execute positioned 6 1 13 run function baba:save_block
 execute positioned 6 1 14 run function baba:save_block
 execute positioned 6 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 5 1 0 run function baba:save_block
 execute positioned 5 1 1 run function baba:save_block
 execute positioned 5 1 2 run function baba:save_block
@@ -88,7 +83,6 @@ execute positioned 5 1 13 run function baba:save_block
 execute positioned 5 1 14 run function baba:save_block
 execute positioned 5 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 4 1 0 run function baba:save_block
 execute positioned 4 1 1 run function baba:save_block
 execute positioned 4 1 2 run function baba:save_block
@@ -106,7 +100,6 @@ execute positioned 4 1 13 run function baba:save_block
 execute positioned 4 1 14 run function baba:save_block
 execute positioned 4 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 3 1 0 run function baba:save_block
 execute positioned 3 1 1 run function baba:save_block
 execute positioned 3 1 2 run function baba:save_block
@@ -124,7 +117,6 @@ execute positioned 3 1 13 run function baba:save_block
 execute positioned 3 1 14 run function baba:save_block
 execute positioned 3 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 2 1 0 run function baba:save_block
 execute positioned 2 1 1 run function baba:save_block
 execute positioned 2 1 2 run function baba:save_block
@@ -142,7 +134,6 @@ execute positioned 2 1 13 run function baba:save_block
 execute positioned 2 1 14 run function baba:save_block
 execute positioned 2 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 1 1 0 run function baba:save_block
 execute positioned 1 1 1 run function baba:save_block
 execute positioned 1 1 2 run function baba:save_block
@@ -160,7 +151,6 @@ execute positioned 1 1 13 run function baba:save_block
 execute positioned 1 1 14 run function baba:save_block
 execute positioned 1 1 15 run function baba:save_block
 
-data remove storage baba:main consume[0]
 execute positioned 0 1 0 run function baba:save_block
 execute positioned 0 1 1 run function baba:save_block
 execute positioned 0 1 2 run function baba:save_block

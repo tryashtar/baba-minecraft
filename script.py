@@ -168,26 +168,28 @@ def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
   return (instrument, val % 25)
 
-lines = ['data modify storage baba:main row append value {}']
-lines2 = ['data modify storage baba:main tile set from storage baba:main consume[0][0]']
+def instrument(inst):
+  return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
+
+lines = []
+lines2 = []
 for t,i in text.ids.items():
   noteblock = note_block(i)
-  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main row[-1] set value {{sprite:{t.name},variant:{t.sprite}}}')
-  lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
-tat.write_lines(lines, f'datapack/data/baba/functions/check_block.mcfunction')
+  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ ~10 ~ RecordItem.tag set value {{sprite:{t.name},variant:{t.sprite}}}')
+  lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
+  lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
+tat.write_lines(lines, f'datapack/data/baba/functions/load_block.mcfunction')
 tat.write_lines(lines2, f'datapack/data/baba/functions/save_block.mcfunction')
 
 for r in range(text.rows):
   lines = [
-    f'data modify storage baba:main tile set from storage baba:main consume[{r}][0]',
     f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\''
   ]
   for t,i in text.ids.items():
     translate = {"translate":f"baba.{t.name}.{t.sprite}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
-    lines.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{json.dumps(translate, separators=(",", ":"))}\'')
-  lines.append(f'data remove storage baba:main consume[{r}][0]')
+    lines.append(f'execute if data block ~ ~ ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{json.dumps(translate, separators=(",", ":"))}\'')
   tat.write_lines(lines, f'datapack/data/baba/functions/check_tile/row{r}.mcfunction')
 
 blockstate = {}
