@@ -178,8 +178,8 @@ for t,i in text.ids.items():
   lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ ~10 ~ RecordItem.tag set value {{sprite:{t.name},variant:{t.sprite}}}')
   lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
   lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
-tat.write_lines(lines, f'datapack/data/baba/functions/load_block.mcfunction')
-tat.write_lines(lines2, f'datapack/data/baba/functions/save_block.mcfunction')
+tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
+tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_block.mcfunction')
 
 for r in range(text.rows):
   lines = [
@@ -190,7 +190,7 @@ for r in range(text.rows):
     if t.color is not None:
       translate["color"] = t.color
     lines.append(f'execute if data block ~ ~ ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{json.dumps(translate, separators=(",", ":"))}\'')
-  tat.write_lines(lines, f'datapack/data/baba/functions/check_tile/row{r}.mcfunction')
+  tat.write_lines(lines, f'datapack/data/baba/functions/text/check_tile/row{r}.mcfunction')
 
 blockstate = {}
 custom_model = []

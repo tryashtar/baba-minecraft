@@ -1,4 +1,4 @@
 tp @s 6.5 2 18.5 -90 90
-function baba:update_properties
+function baba:board/update_properties
 scoreboard players set direction baba 1
-function baba:move
+function baba:board/move
