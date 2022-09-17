@@ -169,10 +169,13 @@ def note_block(val):
   return (instrument, val % 25)
 
 lines = ['data modify storage baba:main row append value {}']
+lines2 = ['data modify storage baba:main tile set from storage baba:main consume[0][0]']
 for t,i in text.ids.items():
   noteblock = note_block(i)
   lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify storage baba:main row[-1] set value {{sprite:{t.name},variant:{t.sprite}}}')
+  lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
 tat.write_lines(lines, f'datapack/data/baba/functions/check_block.mcfunction')
+tat.write_lines(lines2, f'datapack/data/baba/functions/save_block.mcfunction')
 
 for r in range(text.rows):
   lines = [
