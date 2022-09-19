@@ -1,702 +1,706 @@
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:belt} run setblock ~ ~ ~ note_block[instrument=harp,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:belt} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r1} run setblock ~ ~ ~ note_block[instrument=harp,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r1} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r2} run setblock ~ ~ ~ note_block[instrument=harp,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r2} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r3} run setblock ~ ~ ~ note_block[instrument=harp,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r3} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r4} run setblock ~ ~ ~ note_block[instrument=harp,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:r4} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u1} run setblock ~ ~ ~ note_block[instrument=harp,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u1} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u2} run setblock ~ ~ ~ note_block[instrument=harp,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u2} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u3} run setblock ~ ~ ~ note_block[instrument=harp,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u3} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u4} run setblock ~ ~ ~ note_block[instrument=harp,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:u4} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l1} run setblock ~ ~ ~ note_block[instrument=harp,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l1} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l2} run setblock ~ ~ ~ note_block[instrument=harp,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l2} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l3} run setblock ~ ~ ~ note_block[instrument=harp,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l3} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l4} run setblock ~ ~ ~ note_block[instrument=harp,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:l4} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d1} run setblock ~ ~ ~ note_block[instrument=harp,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d1} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d2} run setblock ~ ~ ~ note_block[instrument=harp,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d2} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d3} run setblock ~ ~ ~ note_block[instrument=harp,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d3} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d4} run setblock ~ ~ ~ note_block[instrument=harp,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:belt,variant:d4} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:bug} run setblock ~ ~ ~ note_block[instrument=harp,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:bug} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:r} run setblock ~ ~ ~ note_block[instrument=harp,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:r} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:u} run setblock ~ ~ ~ note_block[instrument=harp,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:u} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:l} run setblock ~ ~ ~ note_block[instrument=harp,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:l} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:d} run setblock ~ ~ ~ note_block[instrument=harp,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bug,variant:d} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:crab} run setblock ~ ~ ~ note_block[instrument=harp,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:crab} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:r} run setblock ~ ~ ~ note_block[instrument=harp,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:r} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:u} run setblock ~ ~ ~ note_block[instrument=harp,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:u} run setblock ~ ~-1 ~ dirt
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:l} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:crab,variant:d} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rocket} run setblock ~ ~ ~ note_block[instrument=basedrum,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rocket} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:r} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:u} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:l} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rocket,variant:d} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:skull} run setblock ~ ~ ~ note_block[instrument=basedrum,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:skull} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:r} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:u} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:l} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:skull,variant:d} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ghost} run setblock ~ ~ ~ note_block[instrument=basedrum,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ghost} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:r} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:u} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:l} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ghost,variant:d} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:statue} run setblock ~ ~ ~ note_block[instrument=basedrum,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:statue} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:r} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:u} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:l} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:statue,variant:d} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:bat} run setblock ~ ~ ~ note_block[instrument=basedrum,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:bat} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f1} run setblock ~ ~ ~ note_block[instrument=basedrum,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f1} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f2} run setblock ~ ~ ~ note_block[instrument=basedrum,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f2} run setblock ~ ~-1 ~ stone
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f3} run setblock ~ ~ ~ note_block[instrument=snare,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f4} run setblock ~ ~ ~ note_block[instrument=snare,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:bat,variant:f4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:cog} run setblock ~ ~ ~ note_block[instrument=snare,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:cog} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f1} run setblock ~ ~ ~ note_block[instrument=snare,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f1} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f2} run setblock ~ ~ ~ note_block[instrument=snare,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f2} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f3} run setblock ~ ~ ~ note_block[instrument=snare,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f4} run setblock ~ ~ ~ note_block[instrument=snare,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cog,variant:f4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:baba} run setblock ~ ~ ~ note_block[instrument=snare,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:baba} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r1} run setblock ~ ~ ~ note_block[instrument=snare,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r1} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r2} run setblock ~ ~ ~ note_block[instrument=snare,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r2} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r3} run setblock ~ ~ ~ note_block[instrument=snare,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r4} run setblock ~ ~ ~ note_block[instrument=snare,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:r4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u1} run setblock ~ ~ ~ note_block[instrument=snare,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u1} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u2} run setblock ~ ~ ~ note_block[instrument=snare,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u2} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u3} run setblock ~ ~ ~ note_block[instrument=snare,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u4} run setblock ~ ~ ~ note_block[instrument=snare,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:u4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l1} run setblock ~ ~ ~ note_block[instrument=snare,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l1} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l2} run setblock ~ ~ ~ note_block[instrument=snare,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l2} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l3} run setblock ~ ~ ~ note_block[instrument=snare,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l4} run setblock ~ ~ ~ note_block[instrument=snare,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:l4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d1} run setblock ~ ~ ~ note_block[instrument=snare,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d1} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d2} run setblock ~ ~ ~ note_block[instrument=snare,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d2} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d3} run setblock ~ ~ ~ note_block[instrument=snare,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d3} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d4} run setblock ~ ~ ~ note_block[instrument=snare,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:d4} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sr} run setblock ~ ~ ~ note_block[instrument=snare,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sr} run setblock ~ ~-1 ~ sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:su} run setblock ~ ~ ~ note_block[instrument=hat,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:su} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sl} run setblock ~ ~ ~ note_block[instrument=hat,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sl} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sd} run setblock ~ ~ ~ note_block[instrument=hat,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:baba,variant:sd} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:keke} run setblock ~ ~ ~ note_block[instrument=hat,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:keke} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r1} run setblock ~ ~ ~ note_block[instrument=hat,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r1} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r2} run setblock ~ ~ ~ note_block[instrument=hat,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r2} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r3} run setblock ~ ~ ~ note_block[instrument=hat,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r3} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r4} run setblock ~ ~ ~ note_block[instrument=hat,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:r4} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u1} run setblock ~ ~ ~ note_block[instrument=hat,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u1} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u2} run setblock ~ ~ ~ note_block[instrument=hat,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u2} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u3} run setblock ~ ~ ~ note_block[instrument=hat,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u3} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u4} run setblock ~ ~ ~ note_block[instrument=hat,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:u4} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l1} run setblock ~ ~ ~ note_block[instrument=hat,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l1} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l2} run setblock ~ ~ ~ note_block[instrument=hat,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l2} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l3} run setblock ~ ~ ~ note_block[instrument=hat,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l3} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l4} run setblock ~ ~ ~ note_block[instrument=hat,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:l4} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d1} run setblock ~ ~ ~ note_block[instrument=hat,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d1} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d2} run setblock ~ ~ ~ note_block[instrument=hat,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d2} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d3} run setblock ~ ~ ~ note_block[instrument=hat,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d3} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d4} run setblock ~ ~ ~ note_block[instrument=hat,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:d4} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sr} run setblock ~ ~ ~ note_block[instrument=hat,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sr} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:su} run setblock ~ ~ ~ note_block[instrument=hat,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:su} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sl} run setblock ~ ~ ~ note_block[instrument=hat,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sl} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sd} run setblock ~ ~ ~ note_block[instrument=hat,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:keke,variant:sd} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:me} run setblock ~ ~ ~ note_block[instrument=hat,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:me} run setblock ~ ~-1 ~ glass
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r1} run setblock ~ ~ ~ note_block[instrument=bass,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r1} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r2} run setblock ~ ~ ~ note_block[instrument=bass,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r2} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r3} run setblock ~ ~ ~ note_block[instrument=bass,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r3} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r4} run setblock ~ ~ ~ note_block[instrument=bass,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:r4} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u1} run setblock ~ ~ ~ note_block[instrument=bass,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u1} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u2} run setblock ~ ~ ~ note_block[instrument=bass,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u2} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u3} run setblock ~ ~ ~ note_block[instrument=bass,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u3} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u4} run setblock ~ ~ ~ note_block[instrument=bass,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:u4} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l1} run setblock ~ ~ ~ note_block[instrument=bass,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l1} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l2} run setblock ~ ~ ~ note_block[instrument=bass,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l2} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l3} run setblock ~ ~ ~ note_block[instrument=bass,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l3} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l4} run setblock ~ ~ ~ note_block[instrument=bass,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:l4} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d1} run setblock ~ ~ ~ note_block[instrument=bass,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d1} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d2} run setblock ~ ~ ~ note_block[instrument=bass,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d2} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d3} run setblock ~ ~ ~ note_block[instrument=bass,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d3} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d4} run setblock ~ ~ ~ note_block[instrument=bass,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:d4} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sr} run setblock ~ ~ ~ note_block[instrument=bass,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sr} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:su} run setblock ~ ~ ~ note_block[instrument=bass,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:su} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sl} run setblock ~ ~ ~ note_block[instrument=bass,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sl} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sd} run setblock ~ ~ ~ note_block[instrument=bass,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:me,variant:sd} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:robot} run setblock ~ ~ ~ note_block[instrument=bass,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:robot} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r1} run setblock ~ ~ ~ note_block[instrument=bass,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r1} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r2} run setblock ~ ~ ~ note_block[instrument=bass,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r2} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r3} run setblock ~ ~ ~ note_block[instrument=bass,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r3} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r4} run setblock ~ ~ ~ note_block[instrument=bass,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:r4} run setblock ~ ~-1 ~ oak_planks
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u1} run setblock ~ ~ ~ note_block[instrument=flute,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u1} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u2} run setblock ~ ~ ~ note_block[instrument=flute,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u2} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u3} run setblock ~ ~ ~ note_block[instrument=flute,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u3} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u4} run setblock ~ ~ ~ note_block[instrument=flute,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:u4} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l1} run setblock ~ ~ ~ note_block[instrument=flute,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l1} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l2} run setblock ~ ~ ~ note_block[instrument=flute,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l2} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l3} run setblock ~ ~ ~ note_block[instrument=flute,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l3} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l4} run setblock ~ ~ ~ note_block[instrument=flute,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:l4} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d1} run setblock ~ ~ ~ note_block[instrument=flute,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d1} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d2} run setblock ~ ~ ~ note_block[instrument=flute,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d2} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d3} run setblock ~ ~ ~ note_block[instrument=flute,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d3} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d4} run setblock ~ ~ ~ note_block[instrument=flute,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:d4} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sr} run setblock ~ ~ ~ note_block[instrument=flute,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sr} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:su} run setblock ~ ~ ~ note_block[instrument=flute,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:su} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sl} run setblock ~ ~ ~ note_block[instrument=flute,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sl} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sd} run setblock ~ ~ ~ note_block[instrument=flute,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:robot,variant:sd} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:algae} run setblock ~ ~ ~ note_block[instrument=flute,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:algae} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:algae,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:algae,variant:obj} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:flag} run setblock ~ ~ ~ note_block[instrument=flute,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:flag} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:flag,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:flag,variant:obj} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:key} run setblock ~ ~ ~ note_block[instrument=flute,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:key} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:key,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:key,variant:obj} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:love} run setblock ~ ~ ~ note_block[instrument=flute,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:love} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:love,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:love,variant:obj} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ufo} run setblock ~ ~ ~ note_block[instrument=flute,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ufo} run setblock ~ ~-1 ~ clay
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ufo,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ufo,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:door} run setblock ~ ~ ~ note_block[instrument=bell,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:door} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:door,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:door,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:flower} run setblock ~ ~ ~ note_block[instrument=bell,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:flower} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:flower,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:flower,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:pillar} run setblock ~ ~ ~ note_block[instrument=bell,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:pillar} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pillar,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pillar,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rock} run setblock ~ ~ ~ note_block[instrument=bell,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rock} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rock,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rock,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:tile} run setblock ~ ~ ~ note_block[instrument=bell,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:tile} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:tile,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:tile,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:moon} run setblock ~ ~ ~ note_block[instrument=bell,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:moon} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:moon,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:moon,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:star} run setblock ~ ~ ~ note_block[instrument=bell,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:star} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:star,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:star,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:tree} run setblock ~ ~ ~ note_block[instrument=bell,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:tree} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:tree,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:tree,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:box} run setblock ~ ~ ~ note_block[instrument=bell,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:box} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:box,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:box,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:fire} run setblock ~ ~ ~ note_block[instrument=bell,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:fire} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fire,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fire,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:jelly} run setblock ~ ~ ~ note_block[instrument=bell,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:jelly} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:jelly,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:jelly,variant:obj} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:all} run setblock ~ ~ ~ note_block[instrument=bell,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:all} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:has} run setblock ~ ~ ~ note_block[instrument=bell,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:has} run setblock ~ ~-1 ~ gold_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:push} run setblock ~ ~ ~ note_block[instrument=guitar,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:push} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:is} run setblock ~ ~ ~ note_block[instrument=guitar,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:is} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:you} run setblock ~ ~ ~ note_block[instrument=guitar,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:you} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:and} run setblock ~ ~ ~ note_block[instrument=guitar,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:and} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:win} run setblock ~ ~ ~ note_block[instrument=guitar,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:win} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:stop} run setblock ~ ~ ~ note_block[instrument=guitar,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:stop} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:cloud} run setblock ~ ~ ~ note_block[instrument=guitar,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:cloud} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:none} run setblock ~ ~ ~ note_block[instrument=guitar,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:none} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:r} run setblock ~ ~ ~ note_block[instrument=guitar,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:r} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:u} run setblock ~ ~ ~ note_block[instrument=guitar,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:u} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ur} run setblock ~ ~ ~ note_block[instrument=guitar,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ur} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:l} run setblock ~ ~ ~ note_block[instrument=guitar,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:l} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:lr} run setblock ~ ~ ~ note_block[instrument=guitar,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:lr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ul} run setblock ~ ~ ~ note_block[instrument=guitar,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ul} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ulr} run setblock ~ ~ ~ note_block[instrument=guitar,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ulr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:d} run setblock ~ ~ ~ note_block[instrument=guitar,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:d} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dr} run setblock ~ ~ ~ note_block[instrument=guitar,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ud} run setblock ~ ~ ~ note_block[instrument=guitar,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:ud} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udr} run setblock ~ ~ ~ note_block[instrument=guitar,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dl} run setblock ~ ~ ~ note_block[instrument=guitar,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dl} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dlr} run setblock ~ ~ ~ note_block[instrument=guitar,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:dlr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udl} run setblock ~ ~ ~ note_block[instrument=guitar,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udl} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udlr} run setblock ~ ~ ~ note_block[instrument=guitar,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:cloud,variant:udlr} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:fence} run setblock ~ ~ ~ note_block[instrument=guitar,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:fence} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:none} run setblock ~ ~ ~ note_block[instrument=guitar,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:none} run setblock ~ ~-1 ~ white_wool
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:r} run setblock ~ ~ ~ note_block[instrument=chime,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:r} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:u} run setblock ~ ~ ~ note_block[instrument=chime,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:u} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ur} run setblock ~ ~ ~ note_block[instrument=chime,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ur} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:l} run setblock ~ ~ ~ note_block[instrument=chime,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:l} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:lr} run setblock ~ ~ ~ note_block[instrument=chime,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:lr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ul} run setblock ~ ~ ~ note_block[instrument=chime,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ul} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ulr} run setblock ~ ~ ~ note_block[instrument=chime,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ulr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:d} run setblock ~ ~ ~ note_block[instrument=chime,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:d} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dr} run setblock ~ ~ ~ note_block[instrument=chime,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ud} run setblock ~ ~ ~ note_block[instrument=chime,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:ud} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udr} run setblock ~ ~ ~ note_block[instrument=chime,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dl} run setblock ~ ~ ~ note_block[instrument=chime,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dl} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dlr} run setblock ~ ~ ~ note_block[instrument=chime,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:dlr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udl} run setblock ~ ~ ~ note_block[instrument=chime,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udl} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udlr} run setblock ~ ~ ~ note_block[instrument=chime,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:fence,variant:udlr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:grass} run setblock ~ ~ ~ note_block[instrument=chime,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:grass} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:none} run setblock ~ ~ ~ note_block[instrument=chime,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:none} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:r} run setblock ~ ~ ~ note_block[instrument=chime,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:r} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:u} run setblock ~ ~ ~ note_block[instrument=chime,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:u} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ur} run setblock ~ ~ ~ note_block[instrument=chime,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ur} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:l} run setblock ~ ~ ~ note_block[instrument=chime,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:l} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:lr} run setblock ~ ~ ~ note_block[instrument=chime,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:lr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ul} run setblock ~ ~ ~ note_block[instrument=chime,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ul} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ulr} run setblock ~ ~ ~ note_block[instrument=chime,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ulr} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:d} run setblock ~ ~ ~ note_block[instrument=chime,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:d} run setblock ~ ~-1 ~ packed_ice
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ud} run setblock ~ ~ ~ note_block[instrument=xylophone,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:ud} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dl} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:dlr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udl} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:grass,variant:udlr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:hedge} run setblock ~ ~ ~ note_block[instrument=xylophone,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:hedge} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:none} run setblock ~ ~ ~ note_block[instrument=xylophone,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:none} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:r} run setblock ~ ~ ~ note_block[instrument=xylophone,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:r} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:u} run setblock ~ ~ ~ note_block[instrument=xylophone,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:u} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ur} run setblock ~ ~ ~ note_block[instrument=xylophone,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ur} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:l} run setblock ~ ~ ~ note_block[instrument=xylophone,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:l} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:lr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:lr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ul} run setblock ~ ~ ~ note_block[instrument=xylophone,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ul} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ulr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ulr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:d} run setblock ~ ~ ~ note_block[instrument=xylophone,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:d} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ud} run setblock ~ ~ ~ note_block[instrument=xylophone,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:ud} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dl} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:dlr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udl} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:hedge,variant:udlr} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ice} run setblock ~ ~ ~ note_block[instrument=xylophone,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:ice} run setblock ~ ~-1 ~ bone_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:none} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:none} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:r} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:r} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:u} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:u} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ur} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ur} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:l} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:l} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:lr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:lr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ul} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ul} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ulr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ulr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:d} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:d} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ud} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:ud} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dl} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dl} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dlr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:dlr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udl} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udl} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udlr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:ice,variant:udlr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:lava} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:lava} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:none} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:none} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:r} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:r} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:u} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:u} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ur} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ur} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:l} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:l} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:lr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:lr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ul} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ul} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ulr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ulr} run setblock ~ ~-1 ~ iron_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:d} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:d} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ud} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:ud} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dl} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:dlr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udl} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:lava,variant:udlr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:pipe} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:pipe} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:none} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:none} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:r} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:r} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:u} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:u} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ur} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ur} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:l} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:l} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:lr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:lr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ul} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ul} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ulr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ulr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:d} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:d} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ud} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:ud} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dl} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:dlr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udl} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:pipe,variant:udlr} run setblock ~ ~-1 ~ soul_sand
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rubble} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:rubble} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:none} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:none} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:r} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:r} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:u} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:u} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ur} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ur} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:l} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:l} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:lr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:lr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ul} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ul} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ulr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ulr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:d} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:d} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ud} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:ud} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dl} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dl} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dlr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:dlr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udl} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udl} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udlr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:rubble,variant:udlr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:wall} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:wall} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:none} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:none} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:r} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:r} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:u} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:u} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ur} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ur} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:l} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:l} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:lr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:lr} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ul} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ul} run setblock ~ ~-1 ~ pumpkin
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ulr} run setblock ~ ~ ~ note_block[instrument=bit,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ulr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:d} run setblock ~ ~ ~ note_block[instrument=bit,note=1]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:d} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dr} run setblock ~ ~ ~ note_block[instrument=bit,note=2]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ud} run setblock ~ ~ ~ note_block[instrument=bit,note=3]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:ud} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udr} run setblock ~ ~ ~ note_block[instrument=bit,note=4]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dl} run setblock ~ ~ ~ note_block[instrument=bit,note=5]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dl} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dlr} run setblock ~ ~ ~ note_block[instrument=bit,note=6]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:dlr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udl} run setblock ~ ~ ~ note_block[instrument=bit,note=7]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udl} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udlr} run setblock ~ ~ ~ note_block[instrument=bit,note=8]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:wall,variant:udlr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:water} run setblock ~ ~ ~ note_block[instrument=bit,note=9]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:text,variant:water} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:none} run setblock ~ ~ ~ note_block[instrument=bit,note=10]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:none} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:r} run setblock ~ ~ ~ note_block[instrument=bit,note=11]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:r} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:u} run setblock ~ ~ ~ note_block[instrument=bit,note=12]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:u} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ur} run setblock ~ ~ ~ note_block[instrument=bit,note=13]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ur} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:l} run setblock ~ ~ ~ note_block[instrument=bit,note=14]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:l} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:lr} run setblock ~ ~ ~ note_block[instrument=bit,note=15]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:lr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ul} run setblock ~ ~ ~ note_block[instrument=bit,note=16]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ul} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ulr} run setblock ~ ~ ~ note_block[instrument=bit,note=17]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ulr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:d} run setblock ~ ~ ~ note_block[instrument=bit,note=18]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:d} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dr} run setblock ~ ~ ~ note_block[instrument=bit,note=19]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ud} run setblock ~ ~ ~ note_block[instrument=bit,note=20]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:ud} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udr} run setblock ~ ~ ~ note_block[instrument=bit,note=21]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dl} run setblock ~ ~ ~ note_block[instrument=bit,note=22]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dl} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dlr} run setblock ~ ~ ~ note_block[instrument=bit,note=23]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:dlr} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udl} run setblock ~ ~ ~ note_block[instrument=bit,note=24]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udl} run setblock ~ ~-1 ~ emerald_block
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udlr} run setblock ~ ~ ~ note_block[instrument=banjo,note=0]
-execute if data block ~ ~10 ~ RecordItem.tag{sprite:water,variant:udlr} run setblock ~ ~-1 ~ hay_block
+data modify storage baba:main tile set value {}
+data modify storage baba:main tile set from block ~ ~10 ~ RecordItem.tag.tiles[0]
+setblock ~ ~ ~ air
+setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:belt} run setblock ~ ~ ~ note_block[instrument=harp,note=0]
+execute if data storage baba:main tile{sprite:text,variant:belt} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:r1} run setblock ~ ~ ~ note_block[instrument=harp,note=1]
+execute if data storage baba:main tile{sprite:belt,variant:r1} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:r2} run setblock ~ ~ ~ note_block[instrument=harp,note=2]
+execute if data storage baba:main tile{sprite:belt,variant:r2} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:r3} run setblock ~ ~ ~ note_block[instrument=harp,note=3]
+execute if data storage baba:main tile{sprite:belt,variant:r3} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:r4} run setblock ~ ~ ~ note_block[instrument=harp,note=4]
+execute if data storage baba:main tile{sprite:belt,variant:r4} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:u1} run setblock ~ ~ ~ note_block[instrument=harp,note=5]
+execute if data storage baba:main tile{sprite:belt,variant:u1} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:u2} run setblock ~ ~ ~ note_block[instrument=harp,note=6]
+execute if data storage baba:main tile{sprite:belt,variant:u2} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:u3} run setblock ~ ~ ~ note_block[instrument=harp,note=7]
+execute if data storage baba:main tile{sprite:belt,variant:u3} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:u4} run setblock ~ ~ ~ note_block[instrument=harp,note=8]
+execute if data storage baba:main tile{sprite:belt,variant:u4} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:l1} run setblock ~ ~ ~ note_block[instrument=harp,note=9]
+execute if data storage baba:main tile{sprite:belt,variant:l1} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:l2} run setblock ~ ~ ~ note_block[instrument=harp,note=10]
+execute if data storage baba:main tile{sprite:belt,variant:l2} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:l3} run setblock ~ ~ ~ note_block[instrument=harp,note=11]
+execute if data storage baba:main tile{sprite:belt,variant:l3} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:l4} run setblock ~ ~ ~ note_block[instrument=harp,note=12]
+execute if data storage baba:main tile{sprite:belt,variant:l4} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:d1} run setblock ~ ~ ~ note_block[instrument=harp,note=13]
+execute if data storage baba:main tile{sprite:belt,variant:d1} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:d2} run setblock ~ ~ ~ note_block[instrument=harp,note=14]
+execute if data storage baba:main tile{sprite:belt,variant:d2} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:d3} run setblock ~ ~ ~ note_block[instrument=harp,note=15]
+execute if data storage baba:main tile{sprite:belt,variant:d3} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:belt,variant:d4} run setblock ~ ~ ~ note_block[instrument=harp,note=16]
+execute if data storage baba:main tile{sprite:belt,variant:d4} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:text,variant:bug} run setblock ~ ~ ~ note_block[instrument=harp,note=17]
+execute if data storage baba:main tile{sprite:text,variant:bug} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:bug,variant:r} run setblock ~ ~ ~ note_block[instrument=harp,note=18]
+execute if data storage baba:main tile{sprite:bug,variant:r} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:bug,variant:u} run setblock ~ ~ ~ note_block[instrument=harp,note=19]
+execute if data storage baba:main tile{sprite:bug,variant:u} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:bug,variant:l} run setblock ~ ~ ~ note_block[instrument=harp,note=20]
+execute if data storage baba:main tile{sprite:bug,variant:l} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:bug,variant:d} run setblock ~ ~ ~ note_block[instrument=harp,note=21]
+execute if data storage baba:main tile{sprite:bug,variant:d} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:text,variant:crab} run setblock ~ ~ ~ note_block[instrument=harp,note=22]
+execute if data storage baba:main tile{sprite:text,variant:crab} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:crab,variant:r} run setblock ~ ~ ~ note_block[instrument=harp,note=23]
+execute if data storage baba:main tile{sprite:crab,variant:r} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:crab,variant:u} run setblock ~ ~ ~ note_block[instrument=harp,note=24]
+execute if data storage baba:main tile{sprite:crab,variant:u} run setblock ~ ~-1 ~ dirt
+execute if data storage baba:main tile{sprite:crab,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=0]
+execute if data storage baba:main tile{sprite:crab,variant:l} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:crab,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=1]
+execute if data storage baba:main tile{sprite:crab,variant:d} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:rocket} run setblock ~ ~ ~ note_block[instrument=basedrum,note=2]
+execute if data storage baba:main tile{sprite:text,variant:rocket} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:rocket,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=3]
+execute if data storage baba:main tile{sprite:rocket,variant:r} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:rocket,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=4]
+execute if data storage baba:main tile{sprite:rocket,variant:u} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:rocket,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=5]
+execute if data storage baba:main tile{sprite:rocket,variant:l} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:rocket,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=6]
+execute if data storage baba:main tile{sprite:rocket,variant:d} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:skull} run setblock ~ ~ ~ note_block[instrument=basedrum,note=7]
+execute if data storage baba:main tile{sprite:text,variant:skull} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:skull,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=8]
+execute if data storage baba:main tile{sprite:skull,variant:r} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:skull,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=9]
+execute if data storage baba:main tile{sprite:skull,variant:u} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:skull,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=10]
+execute if data storage baba:main tile{sprite:skull,variant:l} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:skull,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=11]
+execute if data storage baba:main tile{sprite:skull,variant:d} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:ghost} run setblock ~ ~ ~ note_block[instrument=basedrum,note=12]
+execute if data storage baba:main tile{sprite:text,variant:ghost} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:ghost,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=13]
+execute if data storage baba:main tile{sprite:ghost,variant:r} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:ghost,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=14]
+execute if data storage baba:main tile{sprite:ghost,variant:u} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:ghost,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=15]
+execute if data storage baba:main tile{sprite:ghost,variant:l} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:ghost,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=16]
+execute if data storage baba:main tile{sprite:ghost,variant:d} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:statue} run setblock ~ ~ ~ note_block[instrument=basedrum,note=17]
+execute if data storage baba:main tile{sprite:text,variant:statue} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:statue,variant:r} run setblock ~ ~ ~ note_block[instrument=basedrum,note=18]
+execute if data storage baba:main tile{sprite:statue,variant:r} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:statue,variant:u} run setblock ~ ~ ~ note_block[instrument=basedrum,note=19]
+execute if data storage baba:main tile{sprite:statue,variant:u} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:statue,variant:l} run setblock ~ ~ ~ note_block[instrument=basedrum,note=20]
+execute if data storage baba:main tile{sprite:statue,variant:l} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:statue,variant:d} run setblock ~ ~ ~ note_block[instrument=basedrum,note=21]
+execute if data storage baba:main tile{sprite:statue,variant:d} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:text,variant:bat} run setblock ~ ~ ~ note_block[instrument=basedrum,note=22]
+execute if data storage baba:main tile{sprite:text,variant:bat} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:bat,variant:f1} run setblock ~ ~ ~ note_block[instrument=basedrum,note=23]
+execute if data storage baba:main tile{sprite:bat,variant:f1} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:bat,variant:f2} run setblock ~ ~ ~ note_block[instrument=basedrum,note=24]
+execute if data storage baba:main tile{sprite:bat,variant:f2} run setblock ~ ~-1 ~ stone
+execute if data storage baba:main tile{sprite:bat,variant:f3} run setblock ~ ~ ~ note_block[instrument=snare,note=0]
+execute if data storage baba:main tile{sprite:bat,variant:f3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:bat,variant:f4} run setblock ~ ~ ~ note_block[instrument=snare,note=1]
+execute if data storage baba:main tile{sprite:bat,variant:f4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:text,variant:cog} run setblock ~ ~ ~ note_block[instrument=snare,note=2]
+execute if data storage baba:main tile{sprite:text,variant:cog} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:cog,variant:f1} run setblock ~ ~ ~ note_block[instrument=snare,note=3]
+execute if data storage baba:main tile{sprite:cog,variant:f1} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:cog,variant:f2} run setblock ~ ~ ~ note_block[instrument=snare,note=4]
+execute if data storage baba:main tile{sprite:cog,variant:f2} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:cog,variant:f3} run setblock ~ ~ ~ note_block[instrument=snare,note=5]
+execute if data storage baba:main tile{sprite:cog,variant:f3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:cog,variant:f4} run setblock ~ ~ ~ note_block[instrument=snare,note=6]
+execute if data storage baba:main tile{sprite:cog,variant:f4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:text,variant:baba} run setblock ~ ~ ~ note_block[instrument=snare,note=7]
+execute if data storage baba:main tile{sprite:text,variant:baba} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:r1} run setblock ~ ~ ~ note_block[instrument=snare,note=8]
+execute if data storage baba:main tile{sprite:baba,variant:r1} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:r2} run setblock ~ ~ ~ note_block[instrument=snare,note=9]
+execute if data storage baba:main tile{sprite:baba,variant:r2} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:r3} run setblock ~ ~ ~ note_block[instrument=snare,note=10]
+execute if data storage baba:main tile{sprite:baba,variant:r3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:r4} run setblock ~ ~ ~ note_block[instrument=snare,note=11]
+execute if data storage baba:main tile{sprite:baba,variant:r4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:u1} run setblock ~ ~ ~ note_block[instrument=snare,note=12]
+execute if data storage baba:main tile{sprite:baba,variant:u1} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:u2} run setblock ~ ~ ~ note_block[instrument=snare,note=13]
+execute if data storage baba:main tile{sprite:baba,variant:u2} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:u3} run setblock ~ ~ ~ note_block[instrument=snare,note=14]
+execute if data storage baba:main tile{sprite:baba,variant:u3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:u4} run setblock ~ ~ ~ note_block[instrument=snare,note=15]
+execute if data storage baba:main tile{sprite:baba,variant:u4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:l1} run setblock ~ ~ ~ note_block[instrument=snare,note=16]
+execute if data storage baba:main tile{sprite:baba,variant:l1} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:l2} run setblock ~ ~ ~ note_block[instrument=snare,note=17]
+execute if data storage baba:main tile{sprite:baba,variant:l2} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:l3} run setblock ~ ~ ~ note_block[instrument=snare,note=18]
+execute if data storage baba:main tile{sprite:baba,variant:l3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:l4} run setblock ~ ~ ~ note_block[instrument=snare,note=19]
+execute if data storage baba:main tile{sprite:baba,variant:l4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:d1} run setblock ~ ~ ~ note_block[instrument=snare,note=20]
+execute if data storage baba:main tile{sprite:baba,variant:d1} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:d2} run setblock ~ ~ ~ note_block[instrument=snare,note=21]
+execute if data storage baba:main tile{sprite:baba,variant:d2} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:d3} run setblock ~ ~ ~ note_block[instrument=snare,note=22]
+execute if data storage baba:main tile{sprite:baba,variant:d3} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:d4} run setblock ~ ~ ~ note_block[instrument=snare,note=23]
+execute if data storage baba:main tile{sprite:baba,variant:d4} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:sr} run setblock ~ ~ ~ note_block[instrument=snare,note=24]
+execute if data storage baba:main tile{sprite:baba,variant:sr} run setblock ~ ~-1 ~ sand
+execute if data storage baba:main tile{sprite:baba,variant:su} run setblock ~ ~ ~ note_block[instrument=hat,note=0]
+execute if data storage baba:main tile{sprite:baba,variant:su} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:baba,variant:sl} run setblock ~ ~ ~ note_block[instrument=hat,note=1]
+execute if data storage baba:main tile{sprite:baba,variant:sl} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:baba,variant:sd} run setblock ~ ~ ~ note_block[instrument=hat,note=2]
+execute if data storage baba:main tile{sprite:baba,variant:sd} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:text,variant:keke} run setblock ~ ~ ~ note_block[instrument=hat,note=3]
+execute if data storage baba:main tile{sprite:text,variant:keke} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:r1} run setblock ~ ~ ~ note_block[instrument=hat,note=4]
+execute if data storage baba:main tile{sprite:keke,variant:r1} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:r2} run setblock ~ ~ ~ note_block[instrument=hat,note=5]
+execute if data storage baba:main tile{sprite:keke,variant:r2} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:r3} run setblock ~ ~ ~ note_block[instrument=hat,note=6]
+execute if data storage baba:main tile{sprite:keke,variant:r3} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:r4} run setblock ~ ~ ~ note_block[instrument=hat,note=7]
+execute if data storage baba:main tile{sprite:keke,variant:r4} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:u1} run setblock ~ ~ ~ note_block[instrument=hat,note=8]
+execute if data storage baba:main tile{sprite:keke,variant:u1} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:u2} run setblock ~ ~ ~ note_block[instrument=hat,note=9]
+execute if data storage baba:main tile{sprite:keke,variant:u2} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:u3} run setblock ~ ~ ~ note_block[instrument=hat,note=10]
+execute if data storage baba:main tile{sprite:keke,variant:u3} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:u4} run setblock ~ ~ ~ note_block[instrument=hat,note=11]
+execute if data storage baba:main tile{sprite:keke,variant:u4} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:l1} run setblock ~ ~ ~ note_block[instrument=hat,note=12]
+execute if data storage baba:main tile{sprite:keke,variant:l1} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:l2} run setblock ~ ~ ~ note_block[instrument=hat,note=13]
+execute if data storage baba:main tile{sprite:keke,variant:l2} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:l3} run setblock ~ ~ ~ note_block[instrument=hat,note=14]
+execute if data storage baba:main tile{sprite:keke,variant:l3} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:l4} run setblock ~ ~ ~ note_block[instrument=hat,note=15]
+execute if data storage baba:main tile{sprite:keke,variant:l4} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:d1} run setblock ~ ~ ~ note_block[instrument=hat,note=16]
+execute if data storage baba:main tile{sprite:keke,variant:d1} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:d2} run setblock ~ ~ ~ note_block[instrument=hat,note=17]
+execute if data storage baba:main tile{sprite:keke,variant:d2} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:d3} run setblock ~ ~ ~ note_block[instrument=hat,note=18]
+execute if data storage baba:main tile{sprite:keke,variant:d3} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:d4} run setblock ~ ~ ~ note_block[instrument=hat,note=19]
+execute if data storage baba:main tile{sprite:keke,variant:d4} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:sr} run setblock ~ ~ ~ note_block[instrument=hat,note=20]
+execute if data storage baba:main tile{sprite:keke,variant:sr} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:su} run setblock ~ ~ ~ note_block[instrument=hat,note=21]
+execute if data storage baba:main tile{sprite:keke,variant:su} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:sl} run setblock ~ ~ ~ note_block[instrument=hat,note=22]
+execute if data storage baba:main tile{sprite:keke,variant:sl} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:keke,variant:sd} run setblock ~ ~ ~ note_block[instrument=hat,note=23]
+execute if data storage baba:main tile{sprite:keke,variant:sd} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:text,variant:me} run setblock ~ ~ ~ note_block[instrument=hat,note=24]
+execute if data storage baba:main tile{sprite:text,variant:me} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{sprite:me,variant:r1} run setblock ~ ~ ~ note_block[instrument=bass,note=0]
+execute if data storage baba:main tile{sprite:me,variant:r1} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:r2} run setblock ~ ~ ~ note_block[instrument=bass,note=1]
+execute if data storage baba:main tile{sprite:me,variant:r2} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:r3} run setblock ~ ~ ~ note_block[instrument=bass,note=2]
+execute if data storage baba:main tile{sprite:me,variant:r3} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:r4} run setblock ~ ~ ~ note_block[instrument=bass,note=3]
+execute if data storage baba:main tile{sprite:me,variant:r4} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:u1} run setblock ~ ~ ~ note_block[instrument=bass,note=4]
+execute if data storage baba:main tile{sprite:me,variant:u1} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:u2} run setblock ~ ~ ~ note_block[instrument=bass,note=5]
+execute if data storage baba:main tile{sprite:me,variant:u2} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:u3} run setblock ~ ~ ~ note_block[instrument=bass,note=6]
+execute if data storage baba:main tile{sprite:me,variant:u3} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:u4} run setblock ~ ~ ~ note_block[instrument=bass,note=7]
+execute if data storage baba:main tile{sprite:me,variant:u4} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:l1} run setblock ~ ~ ~ note_block[instrument=bass,note=8]
+execute if data storage baba:main tile{sprite:me,variant:l1} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:l2} run setblock ~ ~ ~ note_block[instrument=bass,note=9]
+execute if data storage baba:main tile{sprite:me,variant:l2} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:l3} run setblock ~ ~ ~ note_block[instrument=bass,note=10]
+execute if data storage baba:main tile{sprite:me,variant:l3} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:l4} run setblock ~ ~ ~ note_block[instrument=bass,note=11]
+execute if data storage baba:main tile{sprite:me,variant:l4} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:d1} run setblock ~ ~ ~ note_block[instrument=bass,note=12]
+execute if data storage baba:main tile{sprite:me,variant:d1} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:d2} run setblock ~ ~ ~ note_block[instrument=bass,note=13]
+execute if data storage baba:main tile{sprite:me,variant:d2} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:d3} run setblock ~ ~ ~ note_block[instrument=bass,note=14]
+execute if data storage baba:main tile{sprite:me,variant:d3} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:d4} run setblock ~ ~ ~ note_block[instrument=bass,note=15]
+execute if data storage baba:main tile{sprite:me,variant:d4} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:sr} run setblock ~ ~ ~ note_block[instrument=bass,note=16]
+execute if data storage baba:main tile{sprite:me,variant:sr} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:su} run setblock ~ ~ ~ note_block[instrument=bass,note=17]
+execute if data storage baba:main tile{sprite:me,variant:su} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:sl} run setblock ~ ~ ~ note_block[instrument=bass,note=18]
+execute if data storage baba:main tile{sprite:me,variant:sl} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:me,variant:sd} run setblock ~ ~ ~ note_block[instrument=bass,note=19]
+execute if data storage baba:main tile{sprite:me,variant:sd} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:text,variant:robot} run setblock ~ ~ ~ note_block[instrument=bass,note=20]
+execute if data storage baba:main tile{sprite:text,variant:robot} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:robot,variant:r1} run setblock ~ ~ ~ note_block[instrument=bass,note=21]
+execute if data storage baba:main tile{sprite:robot,variant:r1} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:robot,variant:r2} run setblock ~ ~ ~ note_block[instrument=bass,note=22]
+execute if data storage baba:main tile{sprite:robot,variant:r2} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:robot,variant:r3} run setblock ~ ~ ~ note_block[instrument=bass,note=23]
+execute if data storage baba:main tile{sprite:robot,variant:r3} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:robot,variant:r4} run setblock ~ ~ ~ note_block[instrument=bass,note=24]
+execute if data storage baba:main tile{sprite:robot,variant:r4} run setblock ~ ~-1 ~ oak_planks
+execute if data storage baba:main tile{sprite:robot,variant:u1} run setblock ~ ~ ~ note_block[instrument=flute,note=0]
+execute if data storage baba:main tile{sprite:robot,variant:u1} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:u2} run setblock ~ ~ ~ note_block[instrument=flute,note=1]
+execute if data storage baba:main tile{sprite:robot,variant:u2} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:u3} run setblock ~ ~ ~ note_block[instrument=flute,note=2]
+execute if data storage baba:main tile{sprite:robot,variant:u3} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:u4} run setblock ~ ~ ~ note_block[instrument=flute,note=3]
+execute if data storage baba:main tile{sprite:robot,variant:u4} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:l1} run setblock ~ ~ ~ note_block[instrument=flute,note=4]
+execute if data storage baba:main tile{sprite:robot,variant:l1} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:l2} run setblock ~ ~ ~ note_block[instrument=flute,note=5]
+execute if data storage baba:main tile{sprite:robot,variant:l2} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:l3} run setblock ~ ~ ~ note_block[instrument=flute,note=6]
+execute if data storage baba:main tile{sprite:robot,variant:l3} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:l4} run setblock ~ ~ ~ note_block[instrument=flute,note=7]
+execute if data storage baba:main tile{sprite:robot,variant:l4} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:d1} run setblock ~ ~ ~ note_block[instrument=flute,note=8]
+execute if data storage baba:main tile{sprite:robot,variant:d1} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:d2} run setblock ~ ~ ~ note_block[instrument=flute,note=9]
+execute if data storage baba:main tile{sprite:robot,variant:d2} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:d3} run setblock ~ ~ ~ note_block[instrument=flute,note=10]
+execute if data storage baba:main tile{sprite:robot,variant:d3} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:d4} run setblock ~ ~ ~ note_block[instrument=flute,note=11]
+execute if data storage baba:main tile{sprite:robot,variant:d4} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:sr} run setblock ~ ~ ~ note_block[instrument=flute,note=12]
+execute if data storage baba:main tile{sprite:robot,variant:sr} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:su} run setblock ~ ~ ~ note_block[instrument=flute,note=13]
+execute if data storage baba:main tile{sprite:robot,variant:su} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:sl} run setblock ~ ~ ~ note_block[instrument=flute,note=14]
+execute if data storage baba:main tile{sprite:robot,variant:sl} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:robot,variant:sd} run setblock ~ ~ ~ note_block[instrument=flute,note=15]
+execute if data storage baba:main tile{sprite:robot,variant:sd} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:text,variant:algae} run setblock ~ ~ ~ note_block[instrument=flute,note=16]
+execute if data storage baba:main tile{sprite:text,variant:algae} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:algae,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=17]
+execute if data storage baba:main tile{sprite:algae,variant:obj} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:text,variant:flag} run setblock ~ ~ ~ note_block[instrument=flute,note=18]
+execute if data storage baba:main tile{sprite:text,variant:flag} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:flag,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=19]
+execute if data storage baba:main tile{sprite:flag,variant:obj} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:text,variant:key} run setblock ~ ~ ~ note_block[instrument=flute,note=20]
+execute if data storage baba:main tile{sprite:text,variant:key} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:key,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=21]
+execute if data storage baba:main tile{sprite:key,variant:obj} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:text,variant:love} run setblock ~ ~ ~ note_block[instrument=flute,note=22]
+execute if data storage baba:main tile{sprite:text,variant:love} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:love,variant:obj} run setblock ~ ~ ~ note_block[instrument=flute,note=23]
+execute if data storage baba:main tile{sprite:love,variant:obj} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:text,variant:ufo} run setblock ~ ~ ~ note_block[instrument=flute,note=24]
+execute if data storage baba:main tile{sprite:text,variant:ufo} run setblock ~ ~-1 ~ clay
+execute if data storage baba:main tile{sprite:ufo,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=0]
+execute if data storage baba:main tile{sprite:ufo,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:door} run setblock ~ ~ ~ note_block[instrument=bell,note=1]
+execute if data storage baba:main tile{sprite:text,variant:door} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:door,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=2]
+execute if data storage baba:main tile{sprite:door,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:flower} run setblock ~ ~ ~ note_block[instrument=bell,note=3]
+execute if data storage baba:main tile{sprite:text,variant:flower} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:flower,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=4]
+execute if data storage baba:main tile{sprite:flower,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:pillar} run setblock ~ ~ ~ note_block[instrument=bell,note=5]
+execute if data storage baba:main tile{sprite:text,variant:pillar} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:pillar,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=6]
+execute if data storage baba:main tile{sprite:pillar,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:rock} run setblock ~ ~ ~ note_block[instrument=bell,note=7]
+execute if data storage baba:main tile{sprite:text,variant:rock} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:rock,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=8]
+execute if data storage baba:main tile{sprite:rock,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:tile} run setblock ~ ~ ~ note_block[instrument=bell,note=9]
+execute if data storage baba:main tile{sprite:text,variant:tile} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:tile,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=10]
+execute if data storage baba:main tile{sprite:tile,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:moon} run setblock ~ ~ ~ note_block[instrument=bell,note=11]
+execute if data storage baba:main tile{sprite:text,variant:moon} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:moon,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=12]
+execute if data storage baba:main tile{sprite:moon,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:star} run setblock ~ ~ ~ note_block[instrument=bell,note=13]
+execute if data storage baba:main tile{sprite:text,variant:star} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:star,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=14]
+execute if data storage baba:main tile{sprite:star,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:tree} run setblock ~ ~ ~ note_block[instrument=bell,note=15]
+execute if data storage baba:main tile{sprite:text,variant:tree} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:tree,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=16]
+execute if data storage baba:main tile{sprite:tree,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:box} run setblock ~ ~ ~ note_block[instrument=bell,note=17]
+execute if data storage baba:main tile{sprite:text,variant:box} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:box,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=18]
+execute if data storage baba:main tile{sprite:box,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:fire} run setblock ~ ~ ~ note_block[instrument=bell,note=19]
+execute if data storage baba:main tile{sprite:text,variant:fire} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:fire,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=20]
+execute if data storage baba:main tile{sprite:fire,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:jelly} run setblock ~ ~ ~ note_block[instrument=bell,note=21]
+execute if data storage baba:main tile{sprite:text,variant:jelly} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:jelly,variant:obj} run setblock ~ ~ ~ note_block[instrument=bell,note=22]
+execute if data storage baba:main tile{sprite:jelly,variant:obj} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:all} run setblock ~ ~ ~ note_block[instrument=bell,note=23]
+execute if data storage baba:main tile{sprite:text,variant:all} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:has} run setblock ~ ~ ~ note_block[instrument=bell,note=24]
+execute if data storage baba:main tile{sprite:text,variant:has} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{sprite:text,variant:push} run setblock ~ ~ ~ note_block[instrument=guitar,note=0]
+execute if data storage baba:main tile{sprite:text,variant:push} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:is} run setblock ~ ~ ~ note_block[instrument=guitar,note=1]
+execute if data storage baba:main tile{sprite:text,variant:is} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:you} run setblock ~ ~ ~ note_block[instrument=guitar,note=2]
+execute if data storage baba:main tile{sprite:text,variant:you} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:and} run setblock ~ ~ ~ note_block[instrument=guitar,note=3]
+execute if data storage baba:main tile{sprite:text,variant:and} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:win} run setblock ~ ~ ~ note_block[instrument=guitar,note=4]
+execute if data storage baba:main tile{sprite:text,variant:win} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:stop} run setblock ~ ~ ~ note_block[instrument=guitar,note=5]
+execute if data storage baba:main tile{sprite:text,variant:stop} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:cloud} run setblock ~ ~ ~ note_block[instrument=guitar,note=6]
+execute if data storage baba:main tile{sprite:text,variant:cloud} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:none} run setblock ~ ~ ~ note_block[instrument=guitar,note=7]
+execute if data storage baba:main tile{sprite:cloud,variant:none} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:r} run setblock ~ ~ ~ note_block[instrument=guitar,note=8]
+execute if data storage baba:main tile{sprite:cloud,variant:r} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:u} run setblock ~ ~ ~ note_block[instrument=guitar,note=9]
+execute if data storage baba:main tile{sprite:cloud,variant:u} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:ur} run setblock ~ ~ ~ note_block[instrument=guitar,note=10]
+execute if data storage baba:main tile{sprite:cloud,variant:ur} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:l} run setblock ~ ~ ~ note_block[instrument=guitar,note=11]
+execute if data storage baba:main tile{sprite:cloud,variant:l} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:lr} run setblock ~ ~ ~ note_block[instrument=guitar,note=12]
+execute if data storage baba:main tile{sprite:cloud,variant:lr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:ul} run setblock ~ ~ ~ note_block[instrument=guitar,note=13]
+execute if data storage baba:main tile{sprite:cloud,variant:ul} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:ulr} run setblock ~ ~ ~ note_block[instrument=guitar,note=14]
+execute if data storage baba:main tile{sprite:cloud,variant:ulr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:d} run setblock ~ ~ ~ note_block[instrument=guitar,note=15]
+execute if data storage baba:main tile{sprite:cloud,variant:d} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:dr} run setblock ~ ~ ~ note_block[instrument=guitar,note=16]
+execute if data storage baba:main tile{sprite:cloud,variant:dr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:ud} run setblock ~ ~ ~ note_block[instrument=guitar,note=17]
+execute if data storage baba:main tile{sprite:cloud,variant:ud} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:udr} run setblock ~ ~ ~ note_block[instrument=guitar,note=18]
+execute if data storage baba:main tile{sprite:cloud,variant:udr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:dl} run setblock ~ ~ ~ note_block[instrument=guitar,note=19]
+execute if data storage baba:main tile{sprite:cloud,variant:dl} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:dlr} run setblock ~ ~ ~ note_block[instrument=guitar,note=20]
+execute if data storage baba:main tile{sprite:cloud,variant:dlr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:udl} run setblock ~ ~ ~ note_block[instrument=guitar,note=21]
+execute if data storage baba:main tile{sprite:cloud,variant:udl} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:cloud,variant:udlr} run setblock ~ ~ ~ note_block[instrument=guitar,note=22]
+execute if data storage baba:main tile{sprite:cloud,variant:udlr} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:text,variant:fence} run setblock ~ ~ ~ note_block[instrument=guitar,note=23]
+execute if data storage baba:main tile{sprite:text,variant:fence} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:fence,variant:none} run setblock ~ ~ ~ note_block[instrument=guitar,note=24]
+execute if data storage baba:main tile{sprite:fence,variant:none} run setblock ~ ~-1 ~ white_wool
+execute if data storage baba:main tile{sprite:fence,variant:r} run setblock ~ ~ ~ note_block[instrument=chime,note=0]
+execute if data storage baba:main tile{sprite:fence,variant:r} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:u} run setblock ~ ~ ~ note_block[instrument=chime,note=1]
+execute if data storage baba:main tile{sprite:fence,variant:u} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:ur} run setblock ~ ~ ~ note_block[instrument=chime,note=2]
+execute if data storage baba:main tile{sprite:fence,variant:ur} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:l} run setblock ~ ~ ~ note_block[instrument=chime,note=3]
+execute if data storage baba:main tile{sprite:fence,variant:l} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:lr} run setblock ~ ~ ~ note_block[instrument=chime,note=4]
+execute if data storage baba:main tile{sprite:fence,variant:lr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:ul} run setblock ~ ~ ~ note_block[instrument=chime,note=5]
+execute if data storage baba:main tile{sprite:fence,variant:ul} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:ulr} run setblock ~ ~ ~ note_block[instrument=chime,note=6]
+execute if data storage baba:main tile{sprite:fence,variant:ulr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:d} run setblock ~ ~ ~ note_block[instrument=chime,note=7]
+execute if data storage baba:main tile{sprite:fence,variant:d} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:dr} run setblock ~ ~ ~ note_block[instrument=chime,note=8]
+execute if data storage baba:main tile{sprite:fence,variant:dr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:ud} run setblock ~ ~ ~ note_block[instrument=chime,note=9]
+execute if data storage baba:main tile{sprite:fence,variant:ud} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:udr} run setblock ~ ~ ~ note_block[instrument=chime,note=10]
+execute if data storage baba:main tile{sprite:fence,variant:udr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:dl} run setblock ~ ~ ~ note_block[instrument=chime,note=11]
+execute if data storage baba:main tile{sprite:fence,variant:dl} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:dlr} run setblock ~ ~ ~ note_block[instrument=chime,note=12]
+execute if data storage baba:main tile{sprite:fence,variant:dlr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:udl} run setblock ~ ~ ~ note_block[instrument=chime,note=13]
+execute if data storage baba:main tile{sprite:fence,variant:udl} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:fence,variant:udlr} run setblock ~ ~ ~ note_block[instrument=chime,note=14]
+execute if data storage baba:main tile{sprite:fence,variant:udlr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:text,variant:grass} run setblock ~ ~ ~ note_block[instrument=chime,note=15]
+execute if data storage baba:main tile{sprite:text,variant:grass} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:none} run setblock ~ ~ ~ note_block[instrument=chime,note=16]
+execute if data storage baba:main tile{sprite:grass,variant:none} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:r} run setblock ~ ~ ~ note_block[instrument=chime,note=17]
+execute if data storage baba:main tile{sprite:grass,variant:r} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:u} run setblock ~ ~ ~ note_block[instrument=chime,note=18]
+execute if data storage baba:main tile{sprite:grass,variant:u} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:ur} run setblock ~ ~ ~ note_block[instrument=chime,note=19]
+execute if data storage baba:main tile{sprite:grass,variant:ur} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:l} run setblock ~ ~ ~ note_block[instrument=chime,note=20]
+execute if data storage baba:main tile{sprite:grass,variant:l} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:lr} run setblock ~ ~ ~ note_block[instrument=chime,note=21]
+execute if data storage baba:main tile{sprite:grass,variant:lr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:ul} run setblock ~ ~ ~ note_block[instrument=chime,note=22]
+execute if data storage baba:main tile{sprite:grass,variant:ul} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:ulr} run setblock ~ ~ ~ note_block[instrument=chime,note=23]
+execute if data storage baba:main tile{sprite:grass,variant:ulr} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:d} run setblock ~ ~ ~ note_block[instrument=chime,note=24]
+execute if data storage baba:main tile{sprite:grass,variant:d} run setblock ~ ~-1 ~ packed_ice
+execute if data storage baba:main tile{sprite:grass,variant:dr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=0]
+execute if data storage baba:main tile{sprite:grass,variant:dr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:ud} run setblock ~ ~ ~ note_block[instrument=xylophone,note=1]
+execute if data storage baba:main tile{sprite:grass,variant:ud} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:udr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=2]
+execute if data storage baba:main tile{sprite:grass,variant:udr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:dl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=3]
+execute if data storage baba:main tile{sprite:grass,variant:dl} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:dlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=4]
+execute if data storage baba:main tile{sprite:grass,variant:dlr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:udl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=5]
+execute if data storage baba:main tile{sprite:grass,variant:udl} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:grass,variant:udlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=6]
+execute if data storage baba:main tile{sprite:grass,variant:udlr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:text,variant:hedge} run setblock ~ ~ ~ note_block[instrument=xylophone,note=7]
+execute if data storage baba:main tile{sprite:text,variant:hedge} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:none} run setblock ~ ~ ~ note_block[instrument=xylophone,note=8]
+execute if data storage baba:main tile{sprite:hedge,variant:none} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:r} run setblock ~ ~ ~ note_block[instrument=xylophone,note=9]
+execute if data storage baba:main tile{sprite:hedge,variant:r} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:u} run setblock ~ ~ ~ note_block[instrument=xylophone,note=10]
+execute if data storage baba:main tile{sprite:hedge,variant:u} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:ur} run setblock ~ ~ ~ note_block[instrument=xylophone,note=11]
+execute if data storage baba:main tile{sprite:hedge,variant:ur} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:l} run setblock ~ ~ ~ note_block[instrument=xylophone,note=12]
+execute if data storage baba:main tile{sprite:hedge,variant:l} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:lr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=13]
+execute if data storage baba:main tile{sprite:hedge,variant:lr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:ul} run setblock ~ ~ ~ note_block[instrument=xylophone,note=14]
+execute if data storage baba:main tile{sprite:hedge,variant:ul} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:ulr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=15]
+execute if data storage baba:main tile{sprite:hedge,variant:ulr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:d} run setblock ~ ~ ~ note_block[instrument=xylophone,note=16]
+execute if data storage baba:main tile{sprite:hedge,variant:d} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:dr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=17]
+execute if data storage baba:main tile{sprite:hedge,variant:dr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:ud} run setblock ~ ~ ~ note_block[instrument=xylophone,note=18]
+execute if data storage baba:main tile{sprite:hedge,variant:ud} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:udr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=19]
+execute if data storage baba:main tile{sprite:hedge,variant:udr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:dl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=20]
+execute if data storage baba:main tile{sprite:hedge,variant:dl} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:dlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=21]
+execute if data storage baba:main tile{sprite:hedge,variant:dlr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:udl} run setblock ~ ~ ~ note_block[instrument=xylophone,note=22]
+execute if data storage baba:main tile{sprite:hedge,variant:udl} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:hedge,variant:udlr} run setblock ~ ~ ~ note_block[instrument=xylophone,note=23]
+execute if data storage baba:main tile{sprite:hedge,variant:udlr} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:text,variant:ice} run setblock ~ ~ ~ note_block[instrument=xylophone,note=24]
+execute if data storage baba:main tile{sprite:text,variant:ice} run setblock ~ ~-1 ~ bone_block
+execute if data storage baba:main tile{sprite:ice,variant:none} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=0]
+execute if data storage baba:main tile{sprite:ice,variant:none} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:r} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=1]
+execute if data storage baba:main tile{sprite:ice,variant:r} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:u} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=2]
+execute if data storage baba:main tile{sprite:ice,variant:u} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:ur} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=3]
+execute if data storage baba:main tile{sprite:ice,variant:ur} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:l} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=4]
+execute if data storage baba:main tile{sprite:ice,variant:l} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:lr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=5]
+execute if data storage baba:main tile{sprite:ice,variant:lr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:ul} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=6]
+execute if data storage baba:main tile{sprite:ice,variant:ul} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:ulr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=7]
+execute if data storage baba:main tile{sprite:ice,variant:ulr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:d} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=8]
+execute if data storage baba:main tile{sprite:ice,variant:d} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:dr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=9]
+execute if data storage baba:main tile{sprite:ice,variant:dr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:ud} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=10]
+execute if data storage baba:main tile{sprite:ice,variant:ud} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:udr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=11]
+execute if data storage baba:main tile{sprite:ice,variant:udr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:dl} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=12]
+execute if data storage baba:main tile{sprite:ice,variant:dl} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:dlr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=13]
+execute if data storage baba:main tile{sprite:ice,variant:dlr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:udl} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=14]
+execute if data storage baba:main tile{sprite:ice,variant:udl} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:ice,variant:udlr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=15]
+execute if data storage baba:main tile{sprite:ice,variant:udlr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:text,variant:lava} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=16]
+execute if data storage baba:main tile{sprite:text,variant:lava} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:none} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=17]
+execute if data storage baba:main tile{sprite:lava,variant:none} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:r} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=18]
+execute if data storage baba:main tile{sprite:lava,variant:r} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:u} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=19]
+execute if data storage baba:main tile{sprite:lava,variant:u} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:ur} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=20]
+execute if data storage baba:main tile{sprite:lava,variant:ur} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:l} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=21]
+execute if data storage baba:main tile{sprite:lava,variant:l} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:lr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=22]
+execute if data storage baba:main tile{sprite:lava,variant:lr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:ul} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=23]
+execute if data storage baba:main tile{sprite:lava,variant:ul} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:ulr} run setblock ~ ~ ~ note_block[instrument=iron_xylophone,note=24]
+execute if data storage baba:main tile{sprite:lava,variant:ulr} run setblock ~ ~-1 ~ iron_block
+execute if data storage baba:main tile{sprite:lava,variant:d} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=0]
+execute if data storage baba:main tile{sprite:lava,variant:d} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:dr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=1]
+execute if data storage baba:main tile{sprite:lava,variant:dr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:ud} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=2]
+execute if data storage baba:main tile{sprite:lava,variant:ud} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:udr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=3]
+execute if data storage baba:main tile{sprite:lava,variant:udr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:dl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=4]
+execute if data storage baba:main tile{sprite:lava,variant:dl} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:dlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=5]
+execute if data storage baba:main tile{sprite:lava,variant:dlr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:udl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=6]
+execute if data storage baba:main tile{sprite:lava,variant:udl} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:lava,variant:udlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=7]
+execute if data storage baba:main tile{sprite:lava,variant:udlr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:text,variant:pipe} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=8]
+execute if data storage baba:main tile{sprite:text,variant:pipe} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:none} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=9]
+execute if data storage baba:main tile{sprite:pipe,variant:none} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:r} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=10]
+execute if data storage baba:main tile{sprite:pipe,variant:r} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:u} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=11]
+execute if data storage baba:main tile{sprite:pipe,variant:u} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:ur} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=12]
+execute if data storage baba:main tile{sprite:pipe,variant:ur} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:l} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=13]
+execute if data storage baba:main tile{sprite:pipe,variant:l} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:lr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=14]
+execute if data storage baba:main tile{sprite:pipe,variant:lr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:ul} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=15]
+execute if data storage baba:main tile{sprite:pipe,variant:ul} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:ulr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=16]
+execute if data storage baba:main tile{sprite:pipe,variant:ulr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:d} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=17]
+execute if data storage baba:main tile{sprite:pipe,variant:d} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:dr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=18]
+execute if data storage baba:main tile{sprite:pipe,variant:dr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:ud} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=19]
+execute if data storage baba:main tile{sprite:pipe,variant:ud} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:udr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=20]
+execute if data storage baba:main tile{sprite:pipe,variant:udr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:dl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=21]
+execute if data storage baba:main tile{sprite:pipe,variant:dl} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:dlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=22]
+execute if data storage baba:main tile{sprite:pipe,variant:dlr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:udl} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=23]
+execute if data storage baba:main tile{sprite:pipe,variant:udl} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:pipe,variant:udlr} run setblock ~ ~ ~ note_block[instrument=cow_bell,note=24]
+execute if data storage baba:main tile{sprite:pipe,variant:udlr} run setblock ~ ~-1 ~ soul_sand
+execute if data storage baba:main tile{sprite:text,variant:rubble} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=0]
+execute if data storage baba:main tile{sprite:text,variant:rubble} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:none} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=1]
+execute if data storage baba:main tile{sprite:rubble,variant:none} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:r} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=2]
+execute if data storage baba:main tile{sprite:rubble,variant:r} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:u} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=3]
+execute if data storage baba:main tile{sprite:rubble,variant:u} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:ur} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=4]
+execute if data storage baba:main tile{sprite:rubble,variant:ur} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:l} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=5]
+execute if data storage baba:main tile{sprite:rubble,variant:l} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:lr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=6]
+execute if data storage baba:main tile{sprite:rubble,variant:lr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:ul} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=7]
+execute if data storage baba:main tile{sprite:rubble,variant:ul} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:ulr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=8]
+execute if data storage baba:main tile{sprite:rubble,variant:ulr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:d} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=9]
+execute if data storage baba:main tile{sprite:rubble,variant:d} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:dr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=10]
+execute if data storage baba:main tile{sprite:rubble,variant:dr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:ud} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=11]
+execute if data storage baba:main tile{sprite:rubble,variant:ud} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:udr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=12]
+execute if data storage baba:main tile{sprite:rubble,variant:udr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:dl} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=13]
+execute if data storage baba:main tile{sprite:rubble,variant:dl} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:dlr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=14]
+execute if data storage baba:main tile{sprite:rubble,variant:dlr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:udl} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=15]
+execute if data storage baba:main tile{sprite:rubble,variant:udl} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:rubble,variant:udlr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=16]
+execute if data storage baba:main tile{sprite:rubble,variant:udlr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:text,variant:wall} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=17]
+execute if data storage baba:main tile{sprite:text,variant:wall} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:none} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=18]
+execute if data storage baba:main tile{sprite:wall,variant:none} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:r} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=19]
+execute if data storage baba:main tile{sprite:wall,variant:r} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:u} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=20]
+execute if data storage baba:main tile{sprite:wall,variant:u} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:ur} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=21]
+execute if data storage baba:main tile{sprite:wall,variant:ur} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:l} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=22]
+execute if data storage baba:main tile{sprite:wall,variant:l} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:lr} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=23]
+execute if data storage baba:main tile{sprite:wall,variant:lr} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:ul} run setblock ~ ~ ~ note_block[instrument=didgeridoo,note=24]
+execute if data storage baba:main tile{sprite:wall,variant:ul} run setblock ~ ~-1 ~ pumpkin
+execute if data storage baba:main tile{sprite:wall,variant:ulr} run setblock ~ ~ ~ note_block[instrument=bit,note=0]
+execute if data storage baba:main tile{sprite:wall,variant:ulr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:d} run setblock ~ ~ ~ note_block[instrument=bit,note=1]
+execute if data storage baba:main tile{sprite:wall,variant:d} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:dr} run setblock ~ ~ ~ note_block[instrument=bit,note=2]
+execute if data storage baba:main tile{sprite:wall,variant:dr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:ud} run setblock ~ ~ ~ note_block[instrument=bit,note=3]
+execute if data storage baba:main tile{sprite:wall,variant:ud} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:udr} run setblock ~ ~ ~ note_block[instrument=bit,note=4]
+execute if data storage baba:main tile{sprite:wall,variant:udr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:dl} run setblock ~ ~ ~ note_block[instrument=bit,note=5]
+execute if data storage baba:main tile{sprite:wall,variant:dl} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:dlr} run setblock ~ ~ ~ note_block[instrument=bit,note=6]
+execute if data storage baba:main tile{sprite:wall,variant:dlr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:udl} run setblock ~ ~ ~ note_block[instrument=bit,note=7]
+execute if data storage baba:main tile{sprite:wall,variant:udl} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:wall,variant:udlr} run setblock ~ ~ ~ note_block[instrument=bit,note=8]
+execute if data storage baba:main tile{sprite:wall,variant:udlr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:text,variant:water} run setblock ~ ~ ~ note_block[instrument=bit,note=9]
+execute if data storage baba:main tile{sprite:text,variant:water} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:none} run setblock ~ ~ ~ note_block[instrument=bit,note=10]
+execute if data storage baba:main tile{sprite:water,variant:none} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:r} run setblock ~ ~ ~ note_block[instrument=bit,note=11]
+execute if data storage baba:main tile{sprite:water,variant:r} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:u} run setblock ~ ~ ~ note_block[instrument=bit,note=12]
+execute if data storage baba:main tile{sprite:water,variant:u} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:ur} run setblock ~ ~ ~ note_block[instrument=bit,note=13]
+execute if data storage baba:main tile{sprite:water,variant:ur} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:l} run setblock ~ ~ ~ note_block[instrument=bit,note=14]
+execute if data storage baba:main tile{sprite:water,variant:l} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:lr} run setblock ~ ~ ~ note_block[instrument=bit,note=15]
+execute if data storage baba:main tile{sprite:water,variant:lr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:ul} run setblock ~ ~ ~ note_block[instrument=bit,note=16]
+execute if data storage baba:main tile{sprite:water,variant:ul} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:ulr} run setblock ~ ~ ~ note_block[instrument=bit,note=17]
+execute if data storage baba:main tile{sprite:water,variant:ulr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:d} run setblock ~ ~ ~ note_block[instrument=bit,note=18]
+execute if data storage baba:main tile{sprite:water,variant:d} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:dr} run setblock ~ ~ ~ note_block[instrument=bit,note=19]
+execute if data storage baba:main tile{sprite:water,variant:dr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:ud} run setblock ~ ~ ~ note_block[instrument=bit,note=20]
+execute if data storage baba:main tile{sprite:water,variant:ud} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:udr} run setblock ~ ~ ~ note_block[instrument=bit,note=21]
+execute if data storage baba:main tile{sprite:water,variant:udr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:dl} run setblock ~ ~ ~ note_block[instrument=bit,note=22]
+execute if data storage baba:main tile{sprite:water,variant:dl} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:dlr} run setblock ~ ~ ~ note_block[instrument=bit,note=23]
+execute if data storage baba:main tile{sprite:water,variant:dlr} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:udl} run setblock ~ ~ ~ note_block[instrument=bit,note=24]
+execute if data storage baba:main tile{sprite:water,variant:udl} run setblock ~ ~-1 ~ emerald_block
+execute if data storage baba:main tile{sprite:water,variant:udlr} run setblock ~ ~ ~ note_block[instrument=banjo,note=0]
+execute if data storage baba:main tile{sprite:water,variant:udlr} run setblock ~ ~-1 ~ hay_block

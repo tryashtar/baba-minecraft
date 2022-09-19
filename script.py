@@ -82,6 +82,7 @@ class Tile:
 
 class TextManager:
   def __init__(self, rows):
+    self.scale = 12
     self.char = '\ue000'
     self.id = 0
     self.sprite_id = 1
@@ -91,8 +92,8 @@ class TextManager:
     self.negatives = {}
     self.ids = {}
     self.sprite_ids = {}
-    self.lang = {"baba.row_end":"-","baba.empty_tile":" "}
-    self.providers = [{"type":"space","advances":{" ":24, "!":-24, '.':-3, "-":-24*16}}]
+    self.lang = {"baba.row_end":"-","baba.empty_tile":" ","baba.overlay":"!"}
+    self.providers = [{"type":"space","advances":{" ":self.scale, "!":-self.scale, '.':-3, "-":-self.scale*16,"!":-self.scale}}]
     self.sprites = {}
     for r in range(rows):
       self.charmap[r] = {}
@@ -120,8 +121,8 @@ class TextManager:
           self.sprites[c.name][c.sprite] = c
 
     for r in range(self.rows):
-      self.providers.append({"type":"bitmap","file":filename,"height":24,"ascent":-r*24,"chars":self.to_char_grid(grid, self.charmap[r])})
-    self.providers.append({"type":"bitmap","file":filename,"height":-24,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
+      self.providers.append({"type":"bitmap","file":filename,"height":self.scale,"ascent":-r*self.scale,"chars":self.to_char_grid(grid, self.charmap[r])})
+    self.providers.append({"type":"bitmap","file":filename,"height":-self.scale,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
 
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
@@ -172,25 +173,36 @@ def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
 lines = []
-lines2 = []
+lines2 = [
+  'data modify storage baba:main tile set value {}',
+  'data modify storage baba:main tile set from block ~ ~10 ~ RecordItem.tag.tiles[0]',
+  'setblock ~ ~ ~ air',
+  'setblock ~ ~-1 ~ stone',
+]
 for t,i in text.ids.items():
   noteblock = note_block(i)
-  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ ~10 ~ RecordItem.tag set value {{sprite:{t.name},variant:{t.sprite}}}')
-  lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
-  lines2.append(f'execute if data block ~ ~10 ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
+  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ ~10 ~ RecordItem.tag set value {{tiles:[{{sprite:{t.name},variant:{t.sprite}}}]}}')
+  lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
+  lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
 tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
 tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_block.mcfunction')
 
 for r in range(text.rows):
   lines = [
-    f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\''
+    f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\'',
+    f'data modify storage baba:main tiles set from block ~ ~ ~ RecordItem.tag.tiles',
+    f'execute if data storage baba:main tiles[0] run function baba:text/check_tile/row{r}_loop',
   ]
+  loop = [f'data modify storage baba:main tile set from storage baba:main tiles[0]']
   for t,i in text.ids.items():
     translate = {"translate":f"baba.{t.name}.{t.sprite}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
-    lines.append(f'execute if data block ~ ~ ~ RecordItem.tag{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text[-1] set value \'{json.dumps(translate, separators=(",", ":"))}\'')
+    loop.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
+  loop.append(f'data remove storage baba:main tiles[0]')
+  loop.append(f'execute if data storage baba:main tiles[0] run function baba:text/check_tile/row{r}_loop')
   tat.write_lines(lines, f'datapack/data/baba/functions/text/check_tile/row{r}.mcfunction')
+  tat.write_lines(loop, f'datapack/data/baba/functions/text/check_tile/row{r}_loop.mcfunction')
 
 blockstate = {}
 custom_model = []

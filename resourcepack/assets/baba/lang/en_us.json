@@ -1,6 +1,7 @@
 {
    "baba.row_end": "-",
    "baba.empty_tile": " ",
+   "baba.overlay": "!",
    "baba.text.belt.row0": "\ue002\ue001. ",
    "baba.text.belt.row1": "\ue003\ue001. ",
    "baba.text.belt.row2": "\ue004\ue001. ",

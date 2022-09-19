@@ -3,16 +3,16 @@
       {
          "type": "space",
          "advances": {
-            " ": 24,
-            "!": -24,
+            " ": 12,
+            "!": -12,
             ".": -3,
-            "-": -384
+            "-": -192
          }
       },
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
+         "height": 12,
          "ascent": 0,
          "chars": [
             "\ue002\ue00d\ue018\ue023\ue02e\ue039\ue044\ue04f\ue05a\ue065",
@@ -30,8 +30,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -24,
+         "height": 12,
+         "ascent": -12,
          "chars": [
             "\ue003\ue00e\ue019\ue024\ue02f\ue03a\ue045\ue050\ue05b\ue066",
             "\ue071\ue07c\ue087\ue092\ue09d\ue0a8\ue0b3\ue0be\ue0c9\ue0d4",
@@ -48,8 +48,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -48,
+         "height": 12,
+         "ascent": -24,
          "chars": [
             "\ue004\ue00f\ue01a\ue025\ue030\ue03b\ue046\ue051\ue05c\ue067",
             "\ue072\ue07d\ue088\ue093\ue09e\ue0a9\ue0b4\ue0bf\ue0ca\ue0d5",
@@ -66,8 +66,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -72,
+         "height": 12,
+         "ascent": -36,
          "chars": [
             "\ue005\ue010\ue01b\ue026\ue031\ue03c\ue047\ue052\ue05d\ue068",
             "\ue073\ue07e\ue089\ue094\ue09f\ue0aa\ue0b5\ue0c0\ue0cb\ue0d6",
@@ -84,8 +84,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -96,
+         "height": 12,
+         "ascent": -48,
          "chars": [
             "\ue006\ue011\ue01c\ue027\ue032\ue03d\ue048\ue053\ue05e\ue069",
             "\ue074\ue07f\ue08a\ue095\ue0a0\ue0ab\ue0b6\ue0c1\ue0cc\ue0d7",
@@ -102,8 +102,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -120,
+         "height": 12,
+         "ascent": -60,
          "chars": [
             "\ue007\ue012\ue01d\ue028\ue033\ue03e\ue049\ue054\ue05f\ue06a",
             "\ue075\ue080\ue08b\ue096\ue0a1\ue0ac\ue0b7\ue0c2\ue0cd\ue0d8",
@@ -120,8 +120,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -144,
+         "height": 12,
+         "ascent": -72,
          "chars": [
             "\ue008\ue013\ue01e\ue029\ue034\ue03f\ue04a\ue055\ue060\ue06b",
             "\ue076\ue081\ue08c\ue097\ue0a2\ue0ad\ue0b8\ue0c3\ue0ce\ue0d9",
@@ -138,8 +138,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -168,
+         "height": 12,
+         "ascent": -84,
          "chars": [
             "\ue009\ue014\ue01f\ue02a\ue035\ue040\ue04b\ue056\ue061\ue06c",
             "\ue077\ue082\ue08d\ue098\ue0a3\ue0ae\ue0b9\ue0c4\ue0cf\ue0da",
@@ -156,8 +156,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -192,
+         "height": 12,
+         "ascent": -96,
          "chars": [
             "\ue00a\ue015\ue020\ue02b\ue036\ue041\ue04c\ue057\ue062\ue06d",
             "\ue078\ue083\ue08e\ue099\ue0a4\ue0af\ue0ba\ue0c5\ue0d0\ue0db",
@@ -174,8 +174,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": 24,
-         "ascent": -216,
+         "height": 12,
+         "ascent": -108,
          "chars": [
             "\ue00b\ue016\ue021\ue02c\ue037\ue042\ue04d\ue058\ue063\ue06e",
             "\ue079\ue084\ue08f\ue09a\ue0a5\ue0b0\ue0bb\ue0c6\ue0d1\ue0dc",
@@ -192,7 +192,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid0_anim0.png",
-         "height": -24,
+         "height": -12,
          "ascent": -32000,
          "chars": [
             "\ue001\ue00c\ue017\ue022\ue02d\ue038\ue043\ue04e\ue059\ue064",
@@ -210,7 +210,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
+         "height": 12,
          "ascent": 0,
          "chars": [
             "\ue44e\ue459\ue464\ue46f\ue47a\ue485\ue490\ue49b\ue4a6\ue4b1",
@@ -228,8 +228,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -24,
+         "height": 12,
+         "ascent": -12,
          "chars": [
             "\ue44f\ue45a\ue465\ue470\ue47b\ue486\ue491\ue49c\ue4a7\ue4b2",
             "\ue4bd\ue4c8\ue4d3\ue4de\ue4e9\ue4f4\ue4ff\ue50a\ue515\ue520",
@@ -246,8 +246,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -48,
+         "height": 12,
+         "ascent": -24,
          "chars": [
             "\ue450\ue45b\ue466\ue471\ue47c\ue487\ue492\ue49d\ue4a8\ue4b3",
             "\ue4be\ue4c9\ue4d4\ue4df\ue4ea\ue4f5\ue500\ue50b\ue516\ue521",
@@ -264,8 +264,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -72,
+         "height": 12,
+         "ascent": -36,
          "chars": [
             "\ue451\ue45c\ue467\ue472\ue47d\ue488\ue493\ue49e\ue4a9\ue4b4",
             "\ue4bf\ue4ca\ue4d5\ue4e0\ue4eb\ue4f6\ue501\ue50c\ue517\ue522",
@@ -282,8 +282,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -96,
+         "height": 12,
+         "ascent": -48,
          "chars": [
             "\ue452\ue45d\ue468\ue473\ue47e\ue489\ue494\ue49f\ue4aa\ue4b5",
             "\ue4c0\ue4cb\ue4d6\ue4e1\ue4ec\ue4f7\ue502\ue50d\ue518\ue523",
@@ -300,8 +300,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -120,
+         "height": 12,
+         "ascent": -60,
          "chars": [
             "\ue453\ue45e\ue469\ue474\ue47f\ue48a\ue495\ue4a0\ue4ab\ue4b6",
             "\ue4c1\ue4cc\ue4d7\ue4e2\ue4ed\ue4f8\ue503\ue50e\ue519\ue524",
@@ -318,8 +318,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -144,
+         "height": 12,
+         "ascent": -72,
          "chars": [
             "\ue454\ue45f\ue46a\ue475\ue480\ue48b\ue496\ue4a1\ue4ac\ue4b7",
             "\ue4c2\ue4cd\ue4d8\ue4e3\ue4ee\ue4f9\ue504\ue50f\ue51a\ue525",
@@ -336,8 +336,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -168,
+         "height": 12,
+         "ascent": -84,
          "chars": [
             "\ue455\ue460\ue46b\ue476\ue481\ue48c\ue497\ue4a2\ue4ad\ue4b8",
             "\ue4c3\ue4ce\ue4d9\ue4e4\ue4ef\ue4fa\ue505\ue510\ue51b\ue526",
@@ -354,8 +354,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -192,
+         "height": 12,
+         "ascent": -96,
          "chars": [
             "\ue456\ue461\ue46c\ue477\ue482\ue48d\ue498\ue4a3\ue4ae\ue4b9",
             "\ue4c4\ue4cf\ue4da\ue4e5\ue4f0\ue4fb\ue506\ue511\ue51c\ue527",
@@ -372,8 +372,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": 24,
-         "ascent": -216,
+         "height": 12,
+         "ascent": -108,
          "chars": [
             "\ue457\ue462\ue46d\ue478\ue483\ue48e\ue499\ue4a4\ue4af\ue4ba",
             "\ue4c5\ue4d0\ue4db\ue4e6\ue4f1\ue4fc\ue507\ue512\ue51d\ue528",
@@ -390,7 +390,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid1_anim0.png",
-         "height": -24,
+         "height": -12,
          "ascent": -32000,
          "chars": [
             "\ue44d\ue458\ue463\ue46e\ue479\ue484\ue48f\ue49a\ue4a5\ue4b0",
@@ -408,7 +408,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
+         "height": 12,
          "ascent": 0,
          "chars": [
             "\ue89a\ue8a5\ue8b0\ue8bb\ue8c6\ue8d1\ue8dc\ue8e7\ue8f2\ue8fd",
@@ -426,8 +426,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -24,
+         "height": 12,
+         "ascent": -12,
          "chars": [
             "\ue89b\ue8a6\ue8b1\ue8bc\ue8c7\ue8d2\ue8dd\ue8e8\ue8f3\ue8fe",
             "\ue909\ue914\ue91f\ue92a\ue935\ue940\ue94b\ue956\ue961\ue96c",
@@ -444,8 +444,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -48,
+         "height": 12,
+         "ascent": -24,
          "chars": [
             "\ue89c\ue8a7\ue8b2\ue8bd\ue8c8\ue8d3\ue8de\ue8e9\ue8f4\ue8ff",
             "\ue90a\ue915\ue920\ue92b\ue936\ue941\ue94c\ue957\ue962\ue96d",
@@ -462,8 +462,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -72,
+         "height": 12,
+         "ascent": -36,
          "chars": [
             "\ue89d\ue8a8\ue8b3\ue8be\ue8c9\ue8d4\ue8df\ue8ea\ue8f5\ue900",
             "\ue90b\ue916\ue921\ue92c\ue937\ue942\ue94d\ue958\ue963\ue96e",
@@ -480,8 +480,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -96,
+         "height": 12,
+         "ascent": -48,
          "chars": [
             "\ue89e\ue8a9\ue8b4\ue8bf\ue8ca\ue8d5\ue8e0\ue8eb\ue8f6\ue901",
             "\ue90c\ue917\ue922\ue92d\ue938\ue943\ue94e\ue959\ue964\ue96f",
@@ -498,8 +498,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -120,
+         "height": 12,
+         "ascent": -60,
          "chars": [
             "\ue89f\ue8aa\ue8b5\ue8c0\ue8cb\ue8d6\ue8e1\ue8ec\ue8f7\ue902",
             "\ue90d\ue918\ue923\ue92e\ue939\ue944\ue94f\ue95a\ue965\ue970",
@@ -516,8 +516,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -144,
+         "height": 12,
+         "ascent": -72,
          "chars": [
             "\ue8a0\ue8ab\ue8b6\ue8c1\ue8cc\ue8d7\ue8e2\ue8ed\ue8f8\ue903",
             "\ue90e\ue919\ue924\ue92f\ue93a\ue945\ue950\ue95b\ue966\ue971",
@@ -534,8 +534,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -168,
+         "height": 12,
+         "ascent": -84,
          "chars": [
             "\ue8a1\ue8ac\ue8b7\ue8c2\ue8cd\ue8d8\ue8e3\ue8ee\ue8f9\ue904",
             "\ue90f\ue91a\ue925\ue930\ue93b\ue946\ue951\ue95c\ue967\ue972",
@@ -552,8 +552,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -192,
+         "height": 12,
+         "ascent": -96,
          "chars": [
             "\ue8a2\ue8ad\ue8b8\ue8c3\ue8ce\ue8d9\ue8e4\ue8ef\ue8fa\ue905",
             "\ue910\ue91b\ue926\ue931\ue93c\ue947\ue952\ue95d\ue968\ue973",
@@ -570,8 +570,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": 24,
-         "ascent": -216,
+         "height": 12,
+         "ascent": -108,
          "chars": [
             "\ue8a3\ue8ae\ue8b9\ue8c4\ue8cf\ue8da\ue8e5\ue8f0\ue8fb\ue906",
             "\ue911\ue91c\ue927\ue932\ue93d\ue948\ue953\ue95e\ue969\ue974",
@@ -588,7 +588,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid2_anim0.png",
-         "height": -24,
+         "height": -12,
          "ascent": -32000,
          "chars": [
             "\ue899\ue8a4\ue8af\ue8ba\ue8c5\ue8d0\ue8db\ue8e6\ue8f1\ue8fc",
@@ -606,7 +606,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
+         "height": 12,
          "ascent": 0,
          "chars": [
             "\uece6\uecf1\uecfc\ued07\ued12\ued1d\ued28\ued33\ued3e\ued49",
@@ -624,8 +624,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -24,
+         "height": 12,
+         "ascent": -12,
          "chars": [
             "\uece7\uecf2\uecfd\ued08\ued13\ued1e\ued29\ued34\ued3f\ued4a",
             "\ued55\ued60\ued6b\ued76\ued81\ued8c\ued97\ueda2\uedad\uedb8",
@@ -642,8 +642,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -48,
+         "height": 12,
+         "ascent": -24,
          "chars": [
             "\uece8\uecf3\uecfe\ued09\ued14\ued1f\ued2a\ued35\ued40\ued4b",
             "\ued56\ued61\ued6c\ued77\ued82\ued8d\ued98\ueda3\uedae\uedb9",
@@ -660,8 +660,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -72,
+         "height": 12,
+         "ascent": -36,
          "chars": [
             "\uece9\uecf4\uecff\ued0a\ued15\ued20\ued2b\ued36\ued41\ued4c",
             "\ued57\ued62\ued6d\ued78\ued83\ued8e\ued99\ueda4\uedaf\uedba",
@@ -678,8 +678,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -96,
+         "height": 12,
+         "ascent": -48,
          "chars": [
             "\uecea\uecf5\ued00\ued0b\ued16\ued21\ued2c\ued37\ued42\ued4d",
             "\ued58\ued63\ued6e\ued79\ued84\ued8f\ued9a\ueda5\uedb0\uedbb",
@@ -696,8 +696,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -120,
+         "height": 12,
+         "ascent": -60,
          "chars": [
             "\ueceb\uecf6\ued01\ued0c\ued17\ued22\ued2d\ued38\ued43\ued4e",
             "\ued59\ued64\ued6f\ued7a\ued85\ued90\ued9b\ueda6\uedb1\uedbc",
@@ -714,8 +714,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -144,
+         "height": 12,
+         "ascent": -72,
          "chars": [
             "\uecec\uecf7\ued02\ued0d\ued18\ued23\ued2e\ued39\ued44\ued4f",
             "\ued5a\ued65\ued70\ued7b\ued86\ued91\ued9c\ueda7\uedb2\uedbd",
@@ -732,8 +732,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -168,
+         "height": 12,
+         "ascent": -84,
          "chars": [
             "\ueced\uecf8\ued03\ued0e\ued19\ued24\ued2f\ued3a\ued45\ued50",
             "\ued5b\ued66\ued71\ued7c\ued87\ued92\ued9d\ueda8\uedb3\uedbe",
@@ -750,8 +750,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -192,
+         "height": 12,
+         "ascent": -96,
          "chars": [
             "\uecee\uecf9\ued04\ued0f\ued1a\ued25\ued30\ued3b\ued46\ued51",
             "\ued5c\ued67\ued72\ued7d\ued88\ued93\ued9e\ueda9\uedb4\uedbf",
@@ -768,8 +768,8 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": 24,
-         "ascent": -216,
+         "height": 12,
+         "ascent": -108,
          "chars": [
             "\uecef\uecfa\ued05\ued10\ued1b\ued26\ued31\ued3c\ued47\ued52",
             "\ued5d\ued68\ued73\ued7e\ued89\ued94\ued9f\uedaa\uedb5\uedc0",
@@ -786,7 +786,7 @@
       {
          "type": "bitmap",
          "file": "baba:grid3_anim0.png",
-         "height": -24,
+         "height": -12,
          "ascent": -32000,
          "chars": [
             "\uece5\uecf0\uecfb\ued06\ued11\ued1c\ued27\ued32\ued3d\ued48",

@@ -1,5 +1,5 @@
 fill 0 11 0 9 11 15 air
-fill 0 11 0 9 11 15 jukebox{RecordItem:{id:tnt,Count:1b}}
+fill 0 11 0 9 11 15 jukebox{RecordItem:{id:tnt,Count:1b,tag:{tiles:[]}}}
 execute positioned 9 1 0 run function baba:io/load_block
 execute positioned 9 1 1 run function baba:io/load_block
 execute positioned 9 1 2 run function baba:io/load_block
