@@ -1,7 +1,5 @@
 data modify storage baba:main tile set value {}
 data modify storage baba:main tile set from block ~ ~10 ~ RecordItem.tag.tiles[0]
-setblock ~ ~ ~ air
-setblock ~ ~-1 ~ stone
 execute if data storage baba:main tile{sprite:text,variant:belt} run setblock ~ ~ ~ note_block[instrument=harp,note=0]
 execute if data storage baba:main tile{sprite:text,variant:belt} run setblock ~ ~-1 ~ dirt
 execute if data storage baba:main tile{sprite:belt,variant:r1} run setblock ~ ~ ~ note_block[instrument=harp,note=1]
