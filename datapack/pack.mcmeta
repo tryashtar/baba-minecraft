@@ -10,8 +10,11 @@
       "block": [
          {
             "namespace": "^minecraft$",
-            "path": ["^advancements/.*",
-               "^recipes/.*"]
+            "path": "^advancements/.*"
+         },
+         {
+            "namespace": "^minecraft$",
+            "path": "^recipes/.*"
          }
       ]
    }
