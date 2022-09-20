@@ -154,7 +154,7 @@ info.add_sheet(text)
 info.add_sheet(tiles)
 generated = info.generate_grids()
 
-manager = TileManager(20,20)
+manager = TileManager(20,40)
 for i,grid in enumerate(generated[0]):
   manager.add_grid(grid, f'baba:grid{i}_anim0.png')
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
@@ -173,17 +173,21 @@ load = [
   f'fill 0 11 0 {manager.rows-1} 11 {manager.columns-1} jukebox{{RecordItem:{{id:tnt,Count:1b,tag:{{tiles:[]}}}}}}'
 ]
 save = [
-  f'fill 0 1 0 {manager.rows-1} 1 {manager.columns-1} air',
-  f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} stone',
-  f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass'
+    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete',
+    f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass'
 ]
+for h in range(3):
+  save.extend([
+    f'fill 0 {h*2+1} 0 {manager.rows-1} {h*2+1} {manager.columns-1} air',
+  ])
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
   for c in range(manager.columns):
+    for h in range(3):
+      load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
+      save.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/save_block{h}')
     move.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/movement/move_you')
     props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/check_text')
-    load.append(f'execute positioned {manager.rows-r-1} 1 {c} run function baba:io/load_block')
-    save.append(f'execute positioned {manager.rows-r-1} 1 {c} run function baba:io/save_block')
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
@@ -203,18 +207,22 @@ def note_block(val):
 def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
+for h in range(3):
+  block = [
+    'data modify storage baba:main tile set value {}',
+    f'data modify storage baba:main tile set from block ~ 11 ~ RecordItem.tag.tiles[{h}]',
+    'function baba:io/save_tile'
+  ]
+  tat.write_lines(block, f'datapack/data/baba/functions/io/save_block{h}.mcfunction')
 lines = []
-lines2 = [
-  'data modify storage baba:main tile set value {}',
-  'data modify storage baba:main tile set from block ~ ~10 ~ RecordItem.tag.tiles[0]'
-]
+lines2 = []
 for t,i in manager.ids.items():
   noteblock = note_block(i)
-  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ ~10 ~ RecordItem.tag set value {{tiles:[{{sprite:{t.name},variant:{t.sprite}}}]}}')
+  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ 11 ~ RecordItem.tag.tiles append value {{sprite:{t.name},variant:{t.sprite}}}')
   lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
   lines2.append(f'execute if data storage baba:main tile{{sprite:{t.name},variant:{t.sprite}}} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
 tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
-tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_block.mcfunction')
+tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_tile.mcfunction')
 
 for r in range(manager.rows):
   lines = [
@@ -235,6 +243,7 @@ for r in range(manager.rows):
 
 blockstate = {}
 custom_model = []
+loot_table = []
 get_all = []
 for t,i in manager.ids.items():
   noteblock = note_block(i)
@@ -244,10 +253,12 @@ for t,i in manager.ids.items():
       model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[1.6*placement[2],1.6*placement[1],1.6*placement[2]+1.6,1.6*placement[1]+1.6],"texture":"#up"}}}]}
       blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{t.name}_{t.sprite}','y':90}
       custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{t.name}_{t.sprite}'})
+      loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":noteblock[0],"note":noteblock[1]}}],"functions":[{"function":"set_name","name":{"text":f'{t.name} {t.sprite}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
       if t.name in ['text'] or t.sprite in ['obj', 'r', 'f1', 'r1']:
-        get_all.append(f'give @s note_block{{CustomModelData:{i},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{t.name} {t.sprite}","italic":false}}\'}}}}')
+        get_all.append(f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{t.name} {t.sprite}","italic":false}}\'}}}}')
       tat.write_json(model, f'resourcepack/assets/baba/models/{t.name}_{t.sprite}.json')
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
-tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, f'resourcepack/assets/baba/models/parent_display.json')
+tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')
 tat.write_json({"overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
-tat.write_lines(get_all, f'datapack/data/baba/functions/dev/all_items.mcfunction')
+tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
+tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":"minecraft:note_block","properties":["instrument","note"]}],"pools":loot_table}, f'datapack/data/minecraft/loot_tables/blocks/note_block.json')
