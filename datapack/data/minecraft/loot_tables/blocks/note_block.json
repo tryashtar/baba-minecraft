@@ -31,13 +31,1485 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text belt",
+                        "text": "text text-belt.part-noun",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:0}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "harp",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-bug.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:17}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "harp",
+                        "note": 22
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-crab.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:22}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "basedrum",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-rocket.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:27}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "basedrum",
+                        "note": 7
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-skull.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:32}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "basedrum",
+                        "note": 12
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-ghost.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:37}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "basedrum",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-statue.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:42}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "basedrum",
+                        "note": 22
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-bat.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:47}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "snare",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-cog.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:52}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "snare",
+                        "note": 7
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-baba.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:57}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "hat",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-keke.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:78}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "hat",
+                        "note": 24
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-me.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:99}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bass",
+                        "note": 20
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-robot.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:120}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "flute",
+                        "note": 16
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-algae.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:141}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "flute",
+                        "note": 18
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-flag.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:143}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "flute",
+                        "note": 20
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-key.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:145}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "flute",
+                        "note": 22
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-love.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:147}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "flute",
+                        "note": 24
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-ufo.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:149}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-door.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:151}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-flower.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:153}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 5
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-pillar.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:155}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 7
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-rock.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:157}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 9
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-tile.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:159}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 11
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-moon.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:161}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 13
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-star.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:163}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 15
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-tree.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:165}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-box.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:167}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 19
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-fire.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:169}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 21
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-jelly.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:171}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 23
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-all.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:173}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bell",
+                        "note": 24
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-has.part-has",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:174}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 0
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-push.part-property",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:175}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-is.part-is",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:176}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-you.part-property",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:177}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-and.part-and",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:178}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 4
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-win.part-property",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:179}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 5
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-stop.part-property",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:180}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 6
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-cloud.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:181}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 23
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-fence.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:198}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 15
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-grass.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:215}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 7
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-hedge.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:232}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 24
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-ice.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:249}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "iron_xylophone",
+                        "note": 16
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-lava.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:266}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "cow_bell",
+                        "note": 8
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-pipe.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:283}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "didgeridoo",
+                        "note": 0
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-rubble.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:300}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "didgeridoo",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-wall.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:317}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bit",
+                        "note": 9
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text-water.part-noun",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:334}"
                   }
                ]
             }
@@ -63,7 +1535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt r1",
+                        "text": "belt facing-right.frame-0",
                         "italic": false
                      }
                   },
@@ -95,7 +1567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt r2",
+                        "text": "belt facing-right.frame-1",
                         "italic": false
                      }
                   },
@@ -127,7 +1599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt r3",
+                        "text": "belt facing-right.frame-2",
                         "italic": false
                      }
                   },
@@ -159,7 +1631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt r4",
+                        "text": "belt facing-right.frame-3",
                         "italic": false
                      }
                   },
@@ -191,7 +1663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt u1",
+                        "text": "belt facing-up.frame-0",
                         "italic": false
                      }
                   },
@@ -223,7 +1695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt u2",
+                        "text": "belt facing-up.frame-1",
                         "italic": false
                      }
                   },
@@ -255,7 +1727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt u3",
+                        "text": "belt facing-up.frame-2",
                         "italic": false
                      }
                   },
@@ -287,7 +1759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt u4",
+                        "text": "belt facing-up.frame-3",
                         "italic": false
                      }
                   },
@@ -319,7 +1791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt l1",
+                        "text": "belt facing-left.frame-0",
                         "italic": false
                      }
                   },
@@ -351,7 +1823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt l2",
+                        "text": "belt facing-left.frame-1",
                         "italic": false
                      }
                   },
@@ -383,7 +1855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt l3",
+                        "text": "belt facing-left.frame-2",
                         "italic": false
                      }
                   },
@@ -415,7 +1887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt l4",
+                        "text": "belt facing-left.frame-3",
                         "italic": false
                      }
                   },
@@ -447,7 +1919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt d1",
+                        "text": "belt facing-down.frame-0",
                         "italic": false
                      }
                   },
@@ -479,7 +1951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt d2",
+                        "text": "belt facing-down.frame-1",
                         "italic": false
                      }
                   },
@@ -511,7 +1983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt d3",
+                        "text": "belt facing-down.frame-2",
                         "italic": false
                      }
                   },
@@ -543,45 +2015,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt d4",
+                        "text": "belt facing-down.frame-3",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:16}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "harp",
-                        "note": 17
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text bug",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:17}"
                   }
                ]
             }
@@ -607,7 +2047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bug r",
+                        "text": "bug facing-right",
                         "italic": false
                      }
                   },
@@ -639,7 +2079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bug u",
+                        "text": "bug facing-up",
                         "italic": false
                      }
                   },
@@ -671,7 +2111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bug l",
+                        "text": "bug facing-left",
                         "italic": false
                      }
                   },
@@ -703,45 +2143,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bug d",
+                        "text": "bug facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:21}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "harp",
-                        "note": 22
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text crab",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:22}"
                   }
                ]
             }
@@ -767,7 +2175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "crab r",
+                        "text": "crab facing-right",
                         "italic": false
                      }
                   },
@@ -799,7 +2207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "crab u",
+                        "text": "crab facing-up",
                         "italic": false
                      }
                   },
@@ -831,7 +2239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "crab l",
+                        "text": "crab facing-left",
                         "italic": false
                      }
                   },
@@ -863,45 +2271,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "crab d",
+                        "text": "crab facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:26}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "basedrum",
-                        "note": 2
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text rocket",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:27}"
                   }
                ]
             }
@@ -927,7 +2303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket r",
+                        "text": "rocket facing-right",
                         "italic": false
                      }
                   },
@@ -959,7 +2335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket u",
+                        "text": "rocket facing-up",
                         "italic": false
                      }
                   },
@@ -991,7 +2367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket l",
+                        "text": "rocket facing-left",
                         "italic": false
                      }
                   },
@@ -1023,45 +2399,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket d",
+                        "text": "rocket facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:31}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "basedrum",
-                        "note": 7
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text skull",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:32}"
                   }
                ]
             }
@@ -1087,7 +2431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull r",
+                        "text": "skull facing-right",
                         "italic": false
                      }
                   },
@@ -1119,7 +2463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull u",
+                        "text": "skull facing-up",
                         "italic": false
                      }
                   },
@@ -1151,7 +2495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull l",
+                        "text": "skull facing-left",
                         "italic": false
                      }
                   },
@@ -1183,45 +2527,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull d",
+                        "text": "skull facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:36}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "basedrum",
-                        "note": 12
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text ghost",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:37}"
                   }
                ]
             }
@@ -1247,7 +2559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ghost r",
+                        "text": "ghost facing-right",
                         "italic": false
                      }
                   },
@@ -1279,7 +2591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ghost u",
+                        "text": "ghost facing-up",
                         "italic": false
                      }
                   },
@@ -1311,7 +2623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ghost l",
+                        "text": "ghost facing-left",
                         "italic": false
                      }
                   },
@@ -1343,45 +2655,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ghost d",
+                        "text": "ghost facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:41}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "basedrum",
-                        "note": 17
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text statue",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:42}"
                   }
                ]
             }
@@ -1407,7 +2687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue r",
+                        "text": "statue facing-right",
                         "italic": false
                      }
                   },
@@ -1439,7 +2719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue u",
+                        "text": "statue facing-up",
                         "italic": false
                      }
                   },
@@ -1471,7 +2751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue l",
+                        "text": "statue facing-left",
                         "italic": false
                      }
                   },
@@ -1503,45 +2783,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue d",
+                        "text": "statue facing-down",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:46}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "basedrum",
-                        "note": 22
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text bat",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:47}"
                   }
                ]
             }
@@ -1567,7 +2815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bat f1",
+                        "text": "bat frame-0",
                         "italic": false
                      }
                   },
@@ -1599,7 +2847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bat f2",
+                        "text": "bat frame-1",
                         "italic": false
                      }
                   },
@@ -1631,7 +2879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bat f3",
+                        "text": "bat frame-2",
                         "italic": false
                      }
                   },
@@ -1663,45 +2911,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bat f4",
+                        "text": "bat frame-3",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:51}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "snare",
-                        "note": 2
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text cog",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:52}"
                   }
                ]
             }
@@ -1727,7 +2943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cog f1",
+                        "text": "cog frame-0",
                         "italic": false
                      }
                   },
@@ -1759,7 +2975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cog f2",
+                        "text": "cog frame-1",
                         "italic": false
                      }
                   },
@@ -1791,7 +3007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cog f3",
+                        "text": "cog frame-2",
                         "italic": false
                      }
                   },
@@ -1823,45 +3039,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cog f4",
+                        "text": "cog frame-3",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:56}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "snare",
-                        "note": 7
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text baba",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:57}"
                   }
                ]
             }
@@ -1887,7 +3071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba r1",
+                        "text": "baba facing-right.frame-0",
                         "italic": false
                      }
                   },
@@ -1919,7 +3103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba r2",
+                        "text": "baba facing-right.frame-1",
                         "italic": false
                      }
                   },
@@ -1951,7 +3135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba r3",
+                        "text": "baba facing-right.frame-2",
                         "italic": false
                      }
                   },
@@ -1983,7 +3167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba r4",
+                        "text": "baba facing-right.frame-3",
                         "italic": false
                      }
                   },
@@ -2015,7 +3199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba u1",
+                        "text": "baba facing-up.frame-0",
                         "italic": false
                      }
                   },
@@ -2047,7 +3231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba u2",
+                        "text": "baba facing-up.frame-1",
                         "italic": false
                      }
                   },
@@ -2079,7 +3263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba u3",
+                        "text": "baba facing-up.frame-2",
                         "italic": false
                      }
                   },
@@ -2111,7 +3295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba u4",
+                        "text": "baba facing-up.frame-3",
                         "italic": false
                      }
                   },
@@ -2143,7 +3327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba l1",
+                        "text": "baba facing-left.frame-0",
                         "italic": false
                      }
                   },
@@ -2175,7 +3359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba l2",
+                        "text": "baba facing-left.frame-1",
                         "italic": false
                      }
                   },
@@ -2207,7 +3391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba l3",
+                        "text": "baba facing-left.frame-2",
                         "italic": false
                      }
                   },
@@ -2239,7 +3423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba l4",
+                        "text": "baba facing-left.frame-3",
                         "italic": false
                      }
                   },
@@ -2271,7 +3455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba d1",
+                        "text": "baba facing-down.frame-0",
                         "italic": false
                      }
                   },
@@ -2303,7 +3487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba d2",
+                        "text": "baba facing-down.frame-1",
                         "italic": false
                      }
                   },
@@ -2335,7 +3519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba d3",
+                        "text": "baba facing-down.frame-2",
                         "italic": false
                      }
                   },
@@ -2367,7 +3551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba d4",
+                        "text": "baba facing-down.frame-3",
                         "italic": false
                      }
                   },
@@ -2399,7 +3583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba sr",
+                        "text": "baba facing-right.sleep-true",
                         "italic": false
                      }
                   },
@@ -2431,7 +3615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba su",
+                        "text": "baba facing-up.sleep-true",
                         "italic": false
                      }
                   },
@@ -2463,7 +3647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba sl",
+                        "text": "baba facing-left.sleep-true",
                         "italic": false
                      }
                   },
@@ -2495,45 +3679,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba sd",
+                        "text": "baba facing-down.sleep-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:77}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "hat",
-                        "note": 3
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text keke",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:78}"
                   }
                ]
             }
@@ -2559,7 +3711,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke r1",
+                        "text": "keke facing-right.frame-0",
                         "italic": false
                      }
                   },
@@ -2591,7 +3743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke r2",
+                        "text": "keke facing-right.frame-1",
                         "italic": false
                      }
                   },
@@ -2623,7 +3775,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke r3",
+                        "text": "keke facing-right.frame-2",
                         "italic": false
                      }
                   },
@@ -2655,7 +3807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke r4",
+                        "text": "keke facing-right.frame-3",
                         "italic": false
                      }
                   },
@@ -2687,7 +3839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke u1",
+                        "text": "keke facing-up.frame-0",
                         "italic": false
                      }
                   },
@@ -2719,7 +3871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke u2",
+                        "text": "keke facing-up.frame-1",
                         "italic": false
                      }
                   },
@@ -2751,7 +3903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke u3",
+                        "text": "keke facing-up.frame-2",
                         "italic": false
                      }
                   },
@@ -2783,7 +3935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke u4",
+                        "text": "keke facing-up.frame-3",
                         "italic": false
                      }
                   },
@@ -2815,7 +3967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke l1",
+                        "text": "keke facing-left.frame-0",
                         "italic": false
                      }
                   },
@@ -2847,7 +3999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke l2",
+                        "text": "keke facing-left.frame-1",
                         "italic": false
                      }
                   },
@@ -2879,7 +4031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke l3",
+                        "text": "keke facing-left.frame-2",
                         "italic": false
                      }
                   },
@@ -2911,7 +4063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke l4",
+                        "text": "keke facing-left.frame-3",
                         "italic": false
                      }
                   },
@@ -2943,7 +4095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke d1",
+                        "text": "keke facing-down.frame-0",
                         "italic": false
                      }
                   },
@@ -2975,7 +4127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke d2",
+                        "text": "keke facing-down.frame-1",
                         "italic": false
                      }
                   },
@@ -3007,7 +4159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke d3",
+                        "text": "keke facing-down.frame-2",
                         "italic": false
                      }
                   },
@@ -3039,7 +4191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke d4",
+                        "text": "keke facing-down.frame-3",
                         "italic": false
                      }
                   },
@@ -3071,7 +4223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke sr",
+                        "text": "keke facing-right.sleep-true",
                         "italic": false
                      }
                   },
@@ -3103,7 +4255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke su",
+                        "text": "keke facing-up.sleep-true",
                         "italic": false
                      }
                   },
@@ -3135,7 +4287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke sl",
+                        "text": "keke facing-left.sleep-true",
                         "italic": false
                      }
                   },
@@ -3167,45 +4319,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke sd",
+                        "text": "keke facing-down.sleep-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:98}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "hat",
-                        "note": 24
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text me",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:99}"
                   }
                ]
             }
@@ -3231,7 +4351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me r1",
+                        "text": "me facing-right.frame-0",
                         "italic": false
                      }
                   },
@@ -3263,7 +4383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me r2",
+                        "text": "me facing-right.frame-1",
                         "italic": false
                      }
                   },
@@ -3295,7 +4415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me r3",
+                        "text": "me facing-right.frame-2",
                         "italic": false
                      }
                   },
@@ -3327,7 +4447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me r4",
+                        "text": "me facing-right.frame-3",
                         "italic": false
                      }
                   },
@@ -3359,7 +4479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me u1",
+                        "text": "me facing-up.frame-0",
                         "italic": false
                      }
                   },
@@ -3391,7 +4511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me u2",
+                        "text": "me facing-up.frame-1",
                         "italic": false
                      }
                   },
@@ -3423,7 +4543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me u3",
+                        "text": "me facing-up.frame-2",
                         "italic": false
                      }
                   },
@@ -3455,7 +4575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me u4",
+                        "text": "me facing-up.frame-3",
                         "italic": false
                      }
                   },
@@ -3487,7 +4607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me l1",
+                        "text": "me facing-left.frame-0",
                         "italic": false
                      }
                   },
@@ -3519,7 +4639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me l2",
+                        "text": "me facing-left.frame-1",
                         "italic": false
                      }
                   },
@@ -3551,7 +4671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me l3",
+                        "text": "me facing-left.frame-2",
                         "italic": false
                      }
                   },
@@ -3583,7 +4703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me l4",
+                        "text": "me facing-left.frame-3",
                         "italic": false
                      }
                   },
@@ -3615,7 +4735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me d1",
+                        "text": "me facing-down.frame-0",
                         "italic": false
                      }
                   },
@@ -3647,7 +4767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me d2",
+                        "text": "me facing-down.frame-1",
                         "italic": false
                      }
                   },
@@ -3679,7 +4799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me d3",
+                        "text": "me facing-down.frame-2",
                         "italic": false
                      }
                   },
@@ -3711,7 +4831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me d4",
+                        "text": "me facing-down.frame-3",
                         "italic": false
                      }
                   },
@@ -3743,7 +4863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me sr",
+                        "text": "me facing-right.sleep-true",
                         "italic": false
                      }
                   },
@@ -3775,7 +4895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me su",
+                        "text": "me facing-up.sleep-true",
                         "italic": false
                      }
                   },
@@ -3807,7 +4927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me sl",
+                        "text": "me facing-left.sleep-true",
                         "italic": false
                      }
                   },
@@ -3839,45 +4959,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me sd",
+                        "text": "me facing-down.sleep-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:119}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bass",
-                        "note": 20
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text robot",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:120}"
                   }
                ]
             }
@@ -3903,7 +4991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot r1",
+                        "text": "robot facing-right.frame-0",
                         "italic": false
                      }
                   },
@@ -3935,7 +5023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot r2",
+                        "text": "robot facing-right.frame-1",
                         "italic": false
                      }
                   },
@@ -3967,7 +5055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot r3",
+                        "text": "robot facing-right.frame-2",
                         "italic": false
                      }
                   },
@@ -3999,7 +5087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot r4",
+                        "text": "robot facing-right.frame-3",
                         "italic": false
                      }
                   },
@@ -4031,7 +5119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot u1",
+                        "text": "robot facing-up.frame-0",
                         "italic": false
                      }
                   },
@@ -4063,7 +5151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot u2",
+                        "text": "robot facing-up.frame-1",
                         "italic": false
                      }
                   },
@@ -4095,7 +5183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot u3",
+                        "text": "robot facing-up.frame-2",
                         "italic": false
                      }
                   },
@@ -4127,7 +5215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot u4",
+                        "text": "robot facing-up.frame-3",
                         "italic": false
                      }
                   },
@@ -4159,7 +5247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot l1",
+                        "text": "robot facing-left.frame-0",
                         "italic": false
                      }
                   },
@@ -4191,7 +5279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot l2",
+                        "text": "robot facing-left.frame-1",
                         "italic": false
                      }
                   },
@@ -4223,7 +5311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot l3",
+                        "text": "robot facing-left.frame-2",
                         "italic": false
                      }
                   },
@@ -4255,7 +5343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot l4",
+                        "text": "robot facing-left.frame-3",
                         "italic": false
                      }
                   },
@@ -4287,7 +5375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot d1",
+                        "text": "robot facing-down.frame-0",
                         "italic": false
                      }
                   },
@@ -4319,7 +5407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot d2",
+                        "text": "robot facing-down.frame-1",
                         "italic": false
                      }
                   },
@@ -4351,7 +5439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot d3",
+                        "text": "robot facing-down.frame-2",
                         "italic": false
                      }
                   },
@@ -4383,7 +5471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot d4",
+                        "text": "robot facing-down.frame-3",
                         "italic": false
                      }
                   },
@@ -4415,7 +5503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot sr",
+                        "text": "robot facing-right.sleep-true",
                         "italic": false
                      }
                   },
@@ -4447,7 +5535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot su",
+                        "text": "robot facing-up.sleep-true",
                         "italic": false
                      }
                   },
@@ -4479,7 +5567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot sl",
+                        "text": "robot facing-left.sleep-true",
                         "italic": false
                      }
                   },
@@ -4511,45 +5599,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot sd",
+                        "text": "robot facing-down.sleep-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:140}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "flute",
-                        "note": 16
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text algae",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:141}"
                   }
                ]
             }
@@ -4599,38 +5655,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "flute",
-                        "note": 18
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text flag",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:143}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "flute",
                         "note": 19
                      }
                   }
@@ -4646,38 +5670,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:144}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "flute",
-                        "note": 20
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text key",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:145}"
                   }
                ]
             }
@@ -4727,38 +5719,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "flute",
-                        "note": 22
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text love",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:147}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "flute",
                         "note": 23
                      }
                   }
@@ -4774,38 +5734,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:148}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "flute",
-                        "note": 24
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text ufo",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:149}"
                   }
                ]
             }
@@ -4855,38 +5783,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 1
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text door",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:151}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 2
                      }
                   }
@@ -4902,38 +5798,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:152}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 3
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text flower",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:153}"
                   }
                ]
             }
@@ -4983,38 +5847,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 5
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text pillar",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:155}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 6
                      }
                   }
@@ -5030,38 +5862,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:156}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 7
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text rock",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:157}"
                   }
                ]
             }
@@ -5111,38 +5911,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 9
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text tile",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:159}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 10
                      }
                   }
@@ -5158,38 +5926,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:160}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 11
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text moon",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:161}"
                   }
                ]
             }
@@ -5239,38 +5975,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 13
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text star",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:163}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 14
                      }
                   }
@@ -5286,38 +5990,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:164}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 15
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text tree",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:165}"
                   }
                ]
             }
@@ -5367,38 +6039,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 17
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text box",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:167}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 18
                      }
                   }
@@ -5414,38 +6054,6 @@
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:168}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 19
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text fire",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:169}"
                   }
                ]
             }
@@ -5495,38 +6103,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bell",
-                        "note": 21
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text jelly",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:171}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
                         "note": 22
                      }
                   }
@@ -5558,294 +6134,6 @@
                      "condition": "minecraft:block_state_property",
                      "block": "minecraft:note_block",
                      "properties": {
-                        "instrument": "bell",
-                        "note": 23
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text all",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:173}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bell",
-                        "note": 24
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text has",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:174}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 0
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text push",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:175}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 1
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text is",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:176}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 2
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text you",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:177}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 3
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text and",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:178}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 4
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text win",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:179}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 5
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text stop",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:180}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 6
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text cloud",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:181}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
                         "instrument": "guitar",
                         "note": 7
                      }
@@ -5855,7 +6143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud none",
+                        "text": "cloud up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -5887,7 +6175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud r",
+                        "text": "cloud up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -5919,7 +6207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud u",
+                        "text": "cloud up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -5951,7 +6239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud ur",
+                        "text": "cloud up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -5983,7 +6271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud l",
+                        "text": "cloud up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6015,7 +6303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud lr",
+                        "text": "cloud up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6047,7 +6335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud ul",
+                        "text": "cloud up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6079,7 +6367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud ulr",
+                        "text": "cloud up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6111,7 +6399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud d",
+                        "text": "cloud up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6143,7 +6431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud dr",
+                        "text": "cloud up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6175,7 +6463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud ud",
+                        "text": "cloud up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6207,7 +6495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud udr",
+                        "text": "cloud up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6239,7 +6527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud dl",
+                        "text": "cloud up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6271,7 +6559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud dlr",
+                        "text": "cloud up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6303,7 +6591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud udl",
+                        "text": "cloud up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6335,45 +6623,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud udlr",
+                        "text": "cloud up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:197}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 23
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text fence",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:198}"
                   }
                ]
             }
@@ -6399,7 +6655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence none",
+                        "text": "fence up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6431,7 +6687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence r",
+                        "text": "fence up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6463,7 +6719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence u",
+                        "text": "fence up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6495,7 +6751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence ur",
+                        "text": "fence up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6527,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence l",
+                        "text": "fence up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6559,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence lr",
+                        "text": "fence up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6591,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence ul",
+                        "text": "fence up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6623,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence ulr",
+                        "text": "fence up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6655,7 +6911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence d",
+                        "text": "fence up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6687,7 +6943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence dr",
+                        "text": "fence up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6719,7 +6975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence ud",
+                        "text": "fence up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6751,7 +7007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence udr",
+                        "text": "fence up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -6783,7 +7039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence dl",
+                        "text": "fence up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6815,7 +7071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence dlr",
+                        "text": "fence up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -6847,7 +7103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence udl",
+                        "text": "fence up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -6879,45 +7135,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence udlr",
+                        "text": "fence up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:214}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "chime",
-                        "note": 15
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text grass",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:215}"
                   }
                ]
             }
@@ -6943,7 +7167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass none",
+                        "text": "grass up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -6975,7 +7199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass r",
+                        "text": "grass up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7007,7 +7231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass u",
+                        "text": "grass up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7039,7 +7263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass ur",
+                        "text": "grass up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7071,7 +7295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass l",
+                        "text": "grass up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7103,7 +7327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass lr",
+                        "text": "grass up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7135,7 +7359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass ul",
+                        "text": "grass up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7167,7 +7391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass ulr",
+                        "text": "grass up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7199,7 +7423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass d",
+                        "text": "grass up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7231,7 +7455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass dr",
+                        "text": "grass up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7263,7 +7487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass ud",
+                        "text": "grass up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7295,7 +7519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass udr",
+                        "text": "grass up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7327,7 +7551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass dl",
+                        "text": "grass up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7359,7 +7583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass dlr",
+                        "text": "grass up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7391,7 +7615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass udl",
+                        "text": "grass up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7423,45 +7647,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass udlr",
+                        "text": "grass up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:231}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "xylophone",
-                        "note": 7
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text hedge",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:232}"
                   }
                ]
             }
@@ -7487,7 +7679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge none",
+                        "text": "hedge up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7519,7 +7711,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge r",
+                        "text": "hedge up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7551,7 +7743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge u",
+                        "text": "hedge up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7583,7 +7775,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge ur",
+                        "text": "hedge up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7615,7 +7807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge l",
+                        "text": "hedge up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7647,7 +7839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge lr",
+                        "text": "hedge up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7679,7 +7871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge ul",
+                        "text": "hedge up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7711,7 +7903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge ulr",
+                        "text": "hedge up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7743,7 +7935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge d",
+                        "text": "hedge up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7775,7 +7967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge dr",
+                        "text": "hedge up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7807,7 +7999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge ud",
+                        "text": "hedge up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -7839,7 +8031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge udr",
+                        "text": "hedge up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -7871,7 +8063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge dl",
+                        "text": "hedge up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7903,7 +8095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge dlr",
+                        "text": "hedge up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -7935,7 +8127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge udl",
+                        "text": "hedge up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -7967,45 +8159,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge udlr",
+                        "text": "hedge up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:248}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "xylophone",
-                        "note": 24
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text ice",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:249}"
                   }
                ]
             }
@@ -8031,7 +8191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice none",
+                        "text": "ice up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8063,7 +8223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice r",
+                        "text": "ice up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8095,7 +8255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice u",
+                        "text": "ice up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8127,7 +8287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice ur",
+                        "text": "ice up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8159,7 +8319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice l",
+                        "text": "ice up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8191,7 +8351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice lr",
+                        "text": "ice up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -8223,7 +8383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice ul",
+                        "text": "ice up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8255,7 +8415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice ulr",
+                        "text": "ice up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -8287,7 +8447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice d",
+                        "text": "ice up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8319,7 +8479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice dr",
+                        "text": "ice up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8351,7 +8511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice ud",
+                        "text": "ice up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8383,7 +8543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice udr",
+                        "text": "ice up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8415,7 +8575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice dl",
+                        "text": "ice up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8447,7 +8607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice dlr",
+                        "text": "ice up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -8479,7 +8639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice udl",
+                        "text": "ice up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8511,45 +8671,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice udlr",
+                        "text": "ice up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:265}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "iron_xylophone",
-                        "note": 16
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text lava",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:266}"
                   }
                ]
             }
@@ -8575,7 +8703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava none",
+                        "text": "lava up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8607,7 +8735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava r",
+                        "text": "lava up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8639,7 +8767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava u",
+                        "text": "lava up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8671,7 +8799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava ur",
+                        "text": "lava up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8703,7 +8831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava l",
+                        "text": "lava up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8735,7 +8863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava lr",
+                        "text": "lava up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -8767,7 +8895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava ul",
+                        "text": "lava up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8799,7 +8927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava ulr",
+                        "text": "lava up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -8831,7 +8959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava d",
+                        "text": "lava up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8863,7 +8991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava dr",
+                        "text": "lava up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8895,7 +9023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava ud",
+                        "text": "lava up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -8927,7 +9055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava udr",
+                        "text": "lava up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -8959,7 +9087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava dl",
+                        "text": "lava up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -8991,7 +9119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava dlr",
+                        "text": "lava up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9023,7 +9151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava udl",
+                        "text": "lava up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9055,45 +9183,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava udlr",
+                        "text": "lava up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:282}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "cow_bell",
-                        "note": 8
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text pipe",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:283}"
                   }
                ]
             }
@@ -9119,7 +9215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe none",
+                        "text": "pipe up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9151,7 +9247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe r",
+                        "text": "pipe up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9183,7 +9279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe u",
+                        "text": "pipe up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9215,7 +9311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe ur",
+                        "text": "pipe up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9247,7 +9343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe l",
+                        "text": "pipe up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9279,7 +9375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe lr",
+                        "text": "pipe up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9311,7 +9407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe ul",
+                        "text": "pipe up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9343,7 +9439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe ulr",
+                        "text": "pipe up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9375,7 +9471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe d",
+                        "text": "pipe up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9407,7 +9503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe dr",
+                        "text": "pipe up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9439,7 +9535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe ud",
+                        "text": "pipe up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9471,7 +9567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe udr",
+                        "text": "pipe up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9503,7 +9599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe dl",
+                        "text": "pipe up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9535,7 +9631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe dlr",
+                        "text": "pipe up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9567,7 +9663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe udl",
+                        "text": "pipe up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9599,45 +9695,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe udlr",
+                        "text": "pipe up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:299}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "didgeridoo",
-                        "note": 0
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text rubble",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:300}"
                   }
                ]
             }
@@ -9663,7 +9727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble none",
+                        "text": "rubble up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9695,7 +9759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble r",
+                        "text": "rubble up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9727,7 +9791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble u",
+                        "text": "rubble up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9759,7 +9823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble ur",
+                        "text": "rubble up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9791,7 +9855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble l",
+                        "text": "rubble up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9823,7 +9887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble lr",
+                        "text": "rubble up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9855,7 +9919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble ul",
+                        "text": "rubble up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -9887,7 +9951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble ulr",
+                        "text": "rubble up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -9919,7 +9983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble d",
+                        "text": "rubble up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -9951,7 +10015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble dr",
+                        "text": "rubble up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -9983,7 +10047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble ud",
+                        "text": "rubble up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10015,7 +10079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble udr",
+                        "text": "rubble up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10047,7 +10111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble dl",
+                        "text": "rubble up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10079,7 +10143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble dlr",
+                        "text": "rubble up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -10111,7 +10175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble udl",
+                        "text": "rubble up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10143,45 +10207,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble udlr",
+                        "text": "rubble up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:316}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "didgeridoo",
-                        "note": 17
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text wall",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:317}"
                   }
                ]
             }
@@ -10207,7 +10239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall none",
+                        "text": "wall up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10239,7 +10271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall r",
+                        "text": "wall up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10271,7 +10303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall u",
+                        "text": "wall up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10303,7 +10335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall ur",
+                        "text": "wall up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10335,7 +10367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall l",
+                        "text": "wall up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10367,7 +10399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall lr",
+                        "text": "wall up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -10399,7 +10431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall ul",
+                        "text": "wall up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10431,7 +10463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall ulr",
+                        "text": "wall up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -10463,7 +10495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall d",
+                        "text": "wall up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10495,7 +10527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall dr",
+                        "text": "wall up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10527,7 +10559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall ud",
+                        "text": "wall up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10559,7 +10591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall udr",
+                        "text": "wall up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10591,7 +10623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall dl",
+                        "text": "wall up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10623,7 +10655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall dlr",
+                        "text": "wall up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -10655,7 +10687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall udl",
+                        "text": "wall up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10687,45 +10719,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall udlr",
+                        "text": "wall up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:333}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bit",
-                        "note": 9
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text water",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:334}"
                   }
                ]
             }
@@ -10751,7 +10751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water none",
+                        "text": "water up-false.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10783,7 +10783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water r",
+                        "text": "water up-false.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10815,7 +10815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water u",
+                        "text": "water up-true.down-false.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -10847,7 +10847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water ur",
+                        "text": "water up-true.down-false.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -10879,7 +10879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water l",
+                        "text": "water up-false.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10911,7 +10911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water lr",
+                        "text": "water up-false.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -10943,7 +10943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water ul",
+                        "text": "water up-true.down-false.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -10975,7 +10975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water ulr",
+                        "text": "water up-true.down-false.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -11007,7 +11007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water d",
+                        "text": "water up-false.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -11039,7 +11039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water dr",
+                        "text": "water up-false.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -11071,7 +11071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water ud",
+                        "text": "water up-true.down-true.left-false.right-false",
                         "italic": false
                      }
                   },
@@ -11103,7 +11103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water udr",
+                        "text": "water up-true.down-true.left-false.right-true",
                         "italic": false
                      }
                   },
@@ -11135,7 +11135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water dl",
+                        "text": "water up-false.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -11167,7 +11167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water dlr",
+                        "text": "water up-false.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
@@ -11199,7 +11199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water udl",
+                        "text": "water up-true.down-true.left-true.right-false",
                         "italic": false
                      }
                   },
@@ -11231,7 +11231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water udlr",
+                        "text": "water up-true.down-true.left-true.right-true",
                         "italic": false
                      }
                   },
