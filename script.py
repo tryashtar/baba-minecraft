@@ -84,7 +84,7 @@ class Tile:
 class TileManager:
   def __init__(self, rows, columns):
     self.scale = 12
-    self.char = '\ue000'
+    self.char = '\u0900'
     self.id = 0
     self.sprite_id = 1
     self.rows = rows
@@ -100,7 +100,11 @@ class TileManager:
     for r in range(rows):
       self.charmap[r] = {}
   def next_char(self):
-    self.char = chr(ord(self.char)+1)
+    i = ord(self.char)
+    i += 1
+    if i>=0x600 and i<=0x6ff:
+      i=0x700
+    self.char = chr(i)
     return self.char
   def to_char_grid(self, grid, source):
     return [''.join(['\u0000' if x is None else source[x] for x in y]) for y in grid.tiles]
@@ -171,7 +175,7 @@ for a,grids in enumerate(generated):
       p['file'] = p['file'].replace(f'anim{a-1}', f'anim{a}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{a}.json')
 
-move = ['execute store result storage baba:main tick int 1 run scoreboard players get tick baba']
+step = ['execute store result storage baba:main tick int 1 run scoreboard players get tick baba']
 props = ['data modify storage baba:main properties set value [{sprite:"text",property:"push"}]']
 load = [
   f'fill 0 11 0 {manager.rows-1} 11 {manager.columns-1} air',
@@ -192,18 +196,18 @@ for r in range(manager.rows):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
       save.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/save_block{h}')
-    move.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[{{properties:["you"]}}] run function baba:board/movement/move_you')
-    props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/check_text')
-    props_after.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/assign_properties')
+    step.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/step_tile')
+    props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/properties/check_text')
+    props_after.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/properties/assign')
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
-move.append('function baba:text/update_text')
+step.append('function baba:text/update_text')
 load.append('function baba:text/update_text')
 text.append('function baba:text/update_anim')
 props.extend(props_after)
-tat.write_lines(move, 'datapack/data/baba/functions/board/move.mcfunction')
-tat.write_lines(props, 'datapack/data/baba/functions/board/update_properties.mcfunction')
+tat.write_lines(step, 'datapack/data/baba/functions/board/step.mcfunction')
+tat.write_lines(props, 'datapack/data/baba/functions/board/properties/update.mcfunction')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
 tat.write_lines(save, 'datapack/data/baba/functions/io/save_level.mcfunction')
 tat.write_lines(text, 'datapack/data/baba/functions/text/update_text.mcfunction')
