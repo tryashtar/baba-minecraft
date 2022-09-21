@@ -129,13 +129,13 @@ class TileManager:
 
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
-sprites1.add_similar_rows(['belt'], 1, 85, ['text', {"facing":"right","frame":0}, {"facing":"right","frame":1}, {"facing":"right","frame":2}, {"facing":"right","frame":3}, {"facing":"up","frame":0}, {"facing":"up","frame":1}, {"facing":"up","frame":2}, {"facing":"up","frame":3}, {"facing":"left","frame":0}, {"facing":"left","frame":1}, {"facing":"left","frame":2}, {"facing":"left","frame":3}, {"facing":"down","frame":0}, {"facing":"down","frame":1}, {"facing":"down","frame":2}, {"facing":"down","frame":3}])
-sprites1.add_similar_rows(['bug', 'crab', None, None, None, None, 'rocket', ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":"right"}, {"facing":"up"}, {"facing":"left"}, {"facing":"down"}])
+sprites1.add_similar_rows([('belt','#609CD4','#5F9DD1')], 1, 85, ['text', {"facing":"right","frame":0}, {"facing":"right","frame":1}, {"facing":"right","frame":2}, {"facing":"right","frame":3}, {"facing":"up","frame":0}, {"facing":"up","frame":1}, {"facing":"up","frame":2}, {"facing":"up","frame":3}, {"facing":"left","frame":0}, {"facing":"left","frame":1}, {"facing":"left","frame":2}, {"facing":"left","frame":3}, {"facing":"down","frame":0}, {"facing":"down","frame":1}, {"facing":"down","frame":2}, {"facing":"down","frame":3}])
+sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, 'rocket', ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":"right"}, {"facing":"up"}, {"facing":"left"}, {"facing":"down"}])
 sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, 'statue'], 276, 622, ['text', {"facing":"right"}, {"facing":"up"}, {"facing":"left"}, {"facing":"down"}])
-sprites1.add_similar_rows(['bat'], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
+sprites1.add_similar_rows([('bat','#8C5C9C','#8C5C9C')], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites1.add_similar_rows(['cog'], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites2 = Sheet('sprites/sprites2.png')
-sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text',{"facing":"right","frame":0,},{"facing":"right","frame":1,},{"facing":"right","frame":2,},{"facing":"right","frame":3,},{"facing":"up","frame":0,},{"facing":"up","frame":1,},{"facing":"up","frame":2,},{"facing":"up","frame":3,},{"facing":"left","frame":0,},{"facing":"left","frame":1,},{"facing":"left","frame":2,},{"facing":"left","frame":3,},{"facing":"down","frame":0,},{"facing":"down","frame":1,},{"facing":"down","frame":2,},{"facing":"down","frame":3,},{"facing":"right","sleep":True},{"facing":"up","sleep":True},{"facing":"left","sleep":True},{"facing":"down","sleep":True}])
+sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text',{"facing":"right","frame":0},{"facing":"right","frame":1},{"facing":"right","frame":2},{"facing":"right","frame":3},{"facing":"up","frame":0},{"facing":"up","frame":1},{"facing":"up","frame":2},{"facing":"up","frame":3},{"facing":"left","frame":0},{"facing":"left","frame":1},{"facing":"left","frame":2},{"facing":"left","frame":3},{"facing":"down","frame":0},{"facing":"down","frame":1},{"facing":"down","frame":2},{"facing":"down","frame":3},{"facing":"right","sleep":True},{"facing":"up","sleep":True},{"facing":"left","sleep":True},{"facing":"down","sleep":True}])
 sprites3 = Sheet('sprites/sprites3.png')
 sprites3.add_similar_rows(['algae', None, None, ('flag', '#EDE285', '#EDE285'), None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', {}])
 sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
@@ -185,20 +185,23 @@ for h in range(3):
   save.extend([
     f'fill 0 {h*2+1} 0 {manager.rows-1} {h*2+1} {manager.columns-1} air',
   ])
+props_after = []
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
       save.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/save_block{h}')
-    move.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/movement/move_you')
+    move.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[{{properties:["you"]}}] run function baba:board/movement/move_you')
     props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/check_text')
+    props_after.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/assign_properties')
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
 move.append('function baba:text/update_text')
 load.append('function baba:text/update_text')
 text.append('function baba:text/update_anim')
+props.extend(props_after)
 tat.write_lines(move, 'datapack/data/baba/functions/board/move.mcfunction')
 tat.write_lines(props, 'datapack/data/baba/functions/board/update_properties.mcfunction')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
