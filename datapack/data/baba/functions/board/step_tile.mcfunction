@@ -8,4 +8,5 @@ execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"pipe"}] run function b
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"rubble"}] run function baba:board/graphics/rubble
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"wall"}] run function baba:board/graphics/wall
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"water"}] run function baba:board/graphics/water
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["sink"]}] if data block ~ ~ ~ RecordItem.tag.tiles[1] run data modify block ~ ~ ~ RecordItem.tag.tiles set value []
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run function baba:board/movement/move_you

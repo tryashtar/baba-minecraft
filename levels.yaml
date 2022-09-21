@@ -1,0 +1,58 @@
+level0:
+  name: baba is you
+  width: 33
+  height: 18
+  palette:
+    W: wall
+    .: tile
+    R: rock
+    F: flag
+    B: baba
+  map:
+  - '                                 '
+  - '                                 '
+  - '                                 '
+  - '                                 '
+  - '                                 '
+  - '                                 '
+  - '           (BABA)(IS)(YOU)     (FLAG)(IS)(WIN)           '
+  - '                                 '
+  - '           WWWWWWWWWWW           '
+  - '           .....R.....           '
+  - '           .B...R...F.           '
+  - '           .....R.....           '
+  - '           WWWWWWWWWWW           '
+  - '                                 '
+  - '           (WALL)(IS)(STOP)     (ROCK)(IS)(PUSH)           '
+  - '                                 '
+  - '                                 '
+  - '                                 '
+level1:
+  name: where do I go?
+  width: 24
+  height: 18
+  palette:
+    W: wall
+    .: tile
+    G: grass
+    F: flag
+    B: baba
+  map:
+    - '                        '
+    - '                        '
+    - '         WWWWWWWW       '
+    - '         W      W       '
+    - '         W      W       '
+    - '         W      W       '
+    - '     WWWWW      W       '
+    - '     W          W       '
+    - '     W          W       '
+    - '     W          W       '
+    - '     W          W       '
+    - '                W    G  '
+    - '                W   GG  '
+    - '                W       '
+    - '                W       '
+    - '                W       '
+    - '                W  G    '
+    - '                        '
