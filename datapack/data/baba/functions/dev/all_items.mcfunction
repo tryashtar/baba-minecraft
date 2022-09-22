@@ -32,20 +32,21 @@ give @s note_block{babatile:1b,CustomModelData:174,BlockStateTag:{instrument:"be
 give @s note_block{babatile:1b,CustomModelData:175,BlockStateTag:{instrument:"guitar",note:"0"},display:{Name:'{"text":"text push","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:176,BlockStateTag:{instrument:"guitar",note:"1"},display:{Name:'{"text":"text is","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:177,BlockStateTag:{instrument:"guitar",note:"2"},display:{Name:'{"text":"text you","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:178,BlockStateTag:{instrument:"guitar",note:"3"},display:{Name:'{"text":"text and","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:179,BlockStateTag:{instrument:"guitar",note:"4"},display:{Name:'{"text":"text win","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:180,BlockStateTag:{instrument:"guitar",note:"5"},display:{Name:'{"text":"text stop","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:181,BlockStateTag:{instrument:"guitar",note:"6"},display:{Name:'{"text":"text sink","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:182,BlockStateTag:{instrument:"guitar",note:"7"},display:{Name:'{"text":"text cloud","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:199,BlockStateTag:{instrument:"guitar",note:"24"},display:{Name:'{"text":"text fence","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:216,BlockStateTag:{instrument:"chime",note:"16"},display:{Name:'{"text":"text grass","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:233,BlockStateTag:{instrument:"xylophone",note:"8"},display:{Name:'{"text":"text hedge","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:250,BlockStateTag:{instrument:"iron_xylophone",note:"0"},display:{Name:'{"text":"text ice","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:267,BlockStateTag:{instrument:"iron_xylophone",note:"17"},display:{Name:'{"text":"text lava","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:284,BlockStateTag:{instrument:"cow_bell",note:"9"},display:{Name:'{"text":"text pipe","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:301,BlockStateTag:{instrument:"didgeridoo",note:"1"},display:{Name:'{"text":"text rubble","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:318,BlockStateTag:{instrument:"didgeridoo",note:"18"},display:{Name:'{"text":"text wall","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:335,BlockStateTag:{instrument:"bit",note:"10"},display:{Name:'{"text":"text water","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:178,BlockStateTag:{instrument:"guitar",note:"3"},display:{Name:'{"text":"text move","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:179,BlockStateTag:{instrument:"guitar",note:"4"},display:{Name:'{"text":"text and","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:180,BlockStateTag:{instrument:"guitar",note:"5"},display:{Name:'{"text":"text win","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:181,BlockStateTag:{instrument:"guitar",note:"6"},display:{Name:'{"text":"text stop","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:182,BlockStateTag:{instrument:"guitar",note:"7"},display:{Name:'{"text":"text sink","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:183,BlockStateTag:{instrument:"guitar",note:"8"},display:{Name:'{"text":"text cloud","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:200,BlockStateTag:{instrument:"chime",note:"0"},display:{Name:'{"text":"text fence","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:217,BlockStateTag:{instrument:"chime",note:"17"},display:{Name:'{"text":"text grass","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:234,BlockStateTag:{instrument:"xylophone",note:"9"},display:{Name:'{"text":"text hedge","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:251,BlockStateTag:{instrument:"iron_xylophone",note:"1"},display:{Name:'{"text":"text ice","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:268,BlockStateTag:{instrument:"iron_xylophone",note:"18"},display:{Name:'{"text":"text lava","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:285,BlockStateTag:{instrument:"cow_bell",note:"10"},display:{Name:'{"text":"text pipe","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:302,BlockStateTag:{instrument:"didgeridoo",note:"2"},display:{Name:'{"text":"text rubble","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:319,BlockStateTag:{instrument:"didgeridoo",note:"19"},display:{Name:'{"text":"text wall","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:336,BlockStateTag:{instrument:"bit",note:"11"},display:{Name:'{"text":"text water","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:1,BlockStateTag:{instrument:"harp",note:"1"},display:{Name:'{"text":"belt","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:18,BlockStateTag:{instrument:"harp",note:"18"},display:{Name:'{"text":"bug","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:23,BlockStateTag:{instrument:"harp",note:"23"},display:{Name:'{"text":"crab","italic":false}'}}
@@ -75,13 +76,13 @@ give @s note_block{babatile:1b,CustomModelData:166,BlockStateTag:{instrument:"be
 give @s note_block{babatile:1b,CustomModelData:168,BlockStateTag:{instrument:"bell",note:"18"},display:{Name:'{"text":"box","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:170,BlockStateTag:{instrument:"bell",note:"20"},display:{Name:'{"text":"fire","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:172,BlockStateTag:{instrument:"bell",note:"22"},display:{Name:'{"text":"jelly","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:183,BlockStateTag:{instrument:"guitar",note:"8"},display:{Name:'{"text":"cloud","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:200,BlockStateTag:{instrument:"chime",note:"0"},display:{Name:'{"text":"fence","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:217,BlockStateTag:{instrument:"chime",note:"17"},display:{Name:'{"text":"grass","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:234,BlockStateTag:{instrument:"xylophone",note:"9"},display:{Name:'{"text":"hedge","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:251,BlockStateTag:{instrument:"iron_xylophone",note:"1"},display:{Name:'{"text":"ice","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:268,BlockStateTag:{instrument:"iron_xylophone",note:"18"},display:{Name:'{"text":"lava","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:285,BlockStateTag:{instrument:"cow_bell",note:"10"},display:{Name:'{"text":"pipe","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:302,BlockStateTag:{instrument:"didgeridoo",note:"2"},display:{Name:'{"text":"rubble","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:319,BlockStateTag:{instrument:"didgeridoo",note:"19"},display:{Name:'{"text":"wall","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:336,BlockStateTag:{instrument:"bit",note:"11"},display:{Name:'{"text":"water","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:184,BlockStateTag:{instrument:"guitar",note:"9"},display:{Name:'{"text":"cloud","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:201,BlockStateTag:{instrument:"chime",note:"1"},display:{Name:'{"text":"fence","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:218,BlockStateTag:{instrument:"chime",note:"18"},display:{Name:'{"text":"grass","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:235,BlockStateTag:{instrument:"xylophone",note:"10"},display:{Name:'{"text":"hedge","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:252,BlockStateTag:{instrument:"iron_xylophone",note:"2"},display:{Name:'{"text":"ice","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:269,BlockStateTag:{instrument:"iron_xylophone",note:"19"},display:{Name:'{"text":"lava","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:286,BlockStateTag:{instrument:"cow_bell",note:"11"},display:{Name:'{"text":"pipe","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:303,BlockStateTag:{instrument:"didgeridoo",note:"3"},display:{Name:'{"text":"rubble","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:320,BlockStateTag:{instrument:"didgeridoo",note:"20"},display:{Name:'{"text":"wall","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:337,BlockStateTag:{instrument:"bit",note:"12"},display:{Name:'{"text":"water","italic":false}'}}

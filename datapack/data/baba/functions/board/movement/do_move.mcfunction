@@ -1,7 +1,4 @@
-execute if score direction baba matches 1 run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value "up"
-execute if score direction baba matches 2 run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value "down"
-execute if score direction baba matches 3 run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value "left"
-execute if score direction baba matches 4 run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value "right"
+execute store result block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing int 1 run scoreboard players get direction baba
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:3}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:3}].frame set value 4
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:2}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:2}].frame set value 3
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:1}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b,frame:1}].frame set value 2

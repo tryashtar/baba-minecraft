@@ -76,10 +76,27 @@ class Tile:
   def __init__(self, name, metadata, anim, image, color):
     self.name = metadata if metadata == 'text' else name
     self.metadata = {"text":name,"part":"noun"} if metadata == 'text' else metadata
-    self.desc = "obj" if len(metadata)==0 else ".".join(map(lambda x: str(x[0])+'-'+str(x[1]).lower(), self.metadata.items()))
+    if len(metadata)==0:
+      self.desc = "obj"
+    else:
+      self.desc = ""
+      for k,v in self.metadata.items():
+        if k in ('part'):
+          continue
+        if k == 'text':
+          self.desc += v + '.'
+          continue
+        if k == 'facing':
+          v = {1:'up',2:'down',3:'left',4:'right'}[v]
+        self.desc += str(k)+'-'+str(v).lower() + '.'
+      self.desc = self.desc[:-1]
     self.anim = anim
     self.image = image
     self.color = color
+  def description(self, separator):
+    if len(self.metadata)==0:
+      return self.name
+    return self.name+separator+self.desc
 
 class TileManager:
   def __init__(self, rows, columns):
@@ -116,7 +133,7 @@ class TileManager:
           self.negatives[c] = self.next_char()
           for r in range(self.rows):
             self.charmap[r][c] = self.next_char()
-            self.lang[f'baba.{c.name}.{c.desc}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
+            self.lang[f'baba.{c.description(".")}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
           self.ids[c] = self.id
           self.id += 1
           self.placement[c] = (grid, y, x)
@@ -133,13 +150,13 @@ class TileManager:
 
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
-sprites1.add_similar_rows([('belt','#609CD4','#5F9DD1')], 1, 85, ['text', {"facing":"right","frame":0}, {"facing":"right","frame":1}, {"facing":"right","frame":2}, {"facing":"right","frame":3}, {"facing":"up","frame":0}, {"facing":"up","frame":1}, {"facing":"up","frame":2}, {"facing":"up","frame":3}, {"facing":"left","frame":0}, {"facing":"left","frame":1}, {"facing":"left","frame":2}, {"facing":"left","frame":3}, {"facing":"down","frame":0}, {"facing":"down","frame":1}, {"facing":"down","frame":2}, {"facing":"down","frame":3}])
-sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, 'rocket', ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":"right"}, {"facing":"up"}, {"facing":"left"}, {"facing":"down"}])
-sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, 'statue'], 276, 622, ['text', {"facing":"right"}, {"facing":"up"}, {"facing":"left"}, {"facing":"down"}])
+sprites1.add_similar_rows([('belt','#609CD4','#5F9DD1')], 1, 85, ['text', {"facing":4,"frame":0}, {"facing":4,"frame":1}, {"facing":4,"frame":2}, {"facing":4,"frame":3}, {"facing":1,"frame":0}, {"facing":1,"frame":1}, {"facing":1,"frame":2}, {"facing":1,"frame":3}, {"facing":3,"frame":0}, {"facing":3,"frame":1}, {"facing":3,"frame":2}, {"facing":3,"frame":3}, {"facing":2,"frame":0}, {"facing":2,"frame":1}, {"facing":2,"frame":2}, {"facing":2,"frame":3}])
+sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, 'rocket', ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
+sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, 'statue'], 276, 622, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
 sprites1.add_similar_rows([('bat','#8C5C9C','#8C5C9C')], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites1.add_similar_rows(['cog'], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites2 = Sheet('sprites/sprites2.png')
-sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text',{"facing":"right","frame":0},{"facing":"right","frame":1},{"facing":"right","frame":2},{"facing":"right","frame":3},{"facing":"up","frame":0},{"facing":"up","frame":1},{"facing":"up","frame":2},{"facing":"up","frame":3},{"facing":"left","frame":0},{"facing":"left","frame":1},{"facing":"left","frame":2},{"facing":"left","frame":3},{"facing":"down","frame":0},{"facing":"down","frame":1},{"facing":"down","frame":2},{"facing":"down","frame":3},{"facing":"right","sleep":True},{"facing":"up","sleep":True},{"facing":"left","sleep":True},{"facing":"down","sleep":True}])
+sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text',{"facing":4,"frame":0},{"facing":4,"frame":1},{"facing":4,"frame":2},{"facing":4,"frame":3},{"facing":1,"frame":0},{"facing":1,"frame":1},{"facing":1,"frame":2},{"facing":1,"frame":3},{"facing":3,"frame":0},{"facing":3,"frame":1},{"facing":3,"frame":2},{"facing":3,"frame":3},{"facing":2,"frame":0},{"facing":2,"frame":1},{"facing":2,"frame":2},{"facing":2,"frame":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
 sprites3 = Sheet('sprites/sprites3.png')
 sprites3.add_similar_rows(['algae', None, None, ('flag', '#EDE285', '#EDE285'), None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', {}])
 sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
@@ -151,6 +168,7 @@ text.add_row('text', 1, 151, [{"text":"has","part":"has"}])
 text.add_row(('text', '#90673E'), 1, 301, [{"text":"push","part":"property"}])
 text.add_row('text', 226, 76, [{"text":"is","part":"is"}])
 text.add_row(('text', '#D9396A'), 226, 226, [{"text":"you","part":"property"}])
+text.add_row(('text', '#A8B43C'), 226, 301, [{"text":"move","part":"property"}])
 text.add_row('text', 301, 76, [{"text":"and","part":"and"}])
 text.add_row(('text', '#F0E484'), 226, 1123, [{"text":"win","part":"property"}])
 text.add_row(('text', '#4B5C1C'), 151, 301, [{"text":"stop","part":"property"}])
@@ -250,6 +268,7 @@ for t,i in manager.ids.items():
 tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
 tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_tile.mcfunction')
 
+tat.delete_folder('datapack/data/baba/functions/text/check_tile')
 for r in range(manager.rows):
   lines = [
     f'data modify storage baba:main text append value \'{{"translate":"baba.empty_tile"}}\'',
@@ -258,7 +277,7 @@ for r in range(manager.rows):
   ]
   loop = [f'data modify storage baba:main tile set from storage baba:main tiles[0]']
   for t,i in manager.ids.items():
-    translate = {"translate":f"baba.{t.name}.{t.desc}.row{r}"}
+    translate = {"translate":f"baba.{t.description('.')}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
     snbt = nbt(t.name, t.metadata)
@@ -272,6 +291,8 @@ blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
+tat.delete_folder('resourcepack/assets/baba/models')
+tat.delete_folder('datapack/data/baba/functions/dev/give')
 for name, spritelist in manager.sprite_collections.items():
   for index, t in enumerate(spritelist):
     spriteid = manager.ids[t]
@@ -279,10 +300,11 @@ for name, spritelist in manager.sprite_collections.items():
     placement = manager.placement[t]
     for g,grid in enumerate(generated[0]):
       if grid == placement[0]:
-        model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[1.6*placement[2],1.6*placement[1],1.6*placement[2]+1.6,1.6*placement[1]+1.6],"texture":"#up"}}}]}
-        blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{t.name}_{t.desc}','y':90}
-        custom_model.append({'predicate':{'custom_model_data':spriteid},'model':f'baba:{t.name}_{t.desc}'})
-        loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":noteblock[0],"note":noteblock[1]}}],"functions":[{"function":"set_name","name":{"text":f'{t.name} {t.desc}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{spriteid}}}"}]}]})
+        model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(1.6*placement[2],2),round(1.6*placement[1],2),round(1.6*placement[2]+1.6,2),round(1.6*placement[1]+1.6,2)],"texture":"#up"}}}]}
+        description = t.description("_")
+        blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{description}','y':90}
+        custom_model.append({'predicate':{'custom_model_data':spriteid},'model':f'baba:{description}'})
+        loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":noteblock[0],"note":noteblock[1]}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{spriteid}}}"}]}]})
         if t.name == 'text' or index==0:
           simple_name = f'{t.name}'
           if t.name == 'text':
@@ -290,7 +312,7 @@ for name, spritelist in manager.sprite_collections.items():
           cmd = f'give @s note_block{{babatile:1b,CustomModelData:{spriteid},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
           get_all.append(cmd)
           tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{simple_name.replace(" ","_")}.mcfunction')
-        tat.write_json(model, f'resourcepack/assets/baba/models/{t.name}_{t.desc}.json')
+        tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')

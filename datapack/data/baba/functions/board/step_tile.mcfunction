@@ -10,3 +10,6 @@ execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"wall"}] run function b
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"water"}] run function baba:board/graphics/water
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["sink"]}] if data block ~ ~ ~ RecordItem.tag.tiles[1] run data modify block ~ ~ ~ RecordItem.tag.tiles set value []
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run function baba:board/movement/move_you
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["defeat"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}]
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["hot"]}] if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["melt"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["melt"]}]
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["move"]}] run function baba:board/movement/auto_move

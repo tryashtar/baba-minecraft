@@ -31,7 +31,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-belt.part-noun",
+                        "text": "text belt",
                         "italic": false
                      }
                   },
@@ -63,7 +63,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-bug.part-noun",
+                        "text": "text bug",
                         "italic": false
                      }
                   },
@@ -95,7 +95,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-crab.part-noun",
+                        "text": "text crab",
                         "italic": false
                      }
                   },
@@ -127,7 +127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-rocket.part-noun",
+                        "text": "text rocket",
                         "italic": false
                      }
                   },
@@ -159,7 +159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-skull.part-noun",
+                        "text": "text skull",
                         "italic": false
                      }
                   },
@@ -191,7 +191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-ghost.part-noun",
+                        "text": "text ghost",
                         "italic": false
                      }
                   },
@@ -223,7 +223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-statue.part-noun",
+                        "text": "text statue",
                         "italic": false
                      }
                   },
@@ -255,7 +255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-bat.part-noun",
+                        "text": "text bat",
                         "italic": false
                      }
                   },
@@ -287,7 +287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-cog.part-noun",
+                        "text": "text cog",
                         "italic": false
                      }
                   },
@@ -319,7 +319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-baba.part-noun",
+                        "text": "text baba",
                         "italic": false
                      }
                   },
@@ -351,7 +351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-keke.part-noun",
+                        "text": "text keke",
                         "italic": false
                      }
                   },
@@ -383,7 +383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-me.part-noun",
+                        "text": "text me",
                         "italic": false
                      }
                   },
@@ -415,7 +415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-robot.part-noun",
+                        "text": "text robot",
                         "italic": false
                      }
                   },
@@ -447,7 +447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-algae.part-noun",
+                        "text": "text algae",
                         "italic": false
                      }
                   },
@@ -479,7 +479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-flag.part-noun",
+                        "text": "text flag",
                         "italic": false
                      }
                   },
@@ -511,7 +511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-key.part-noun",
+                        "text": "text key",
                         "italic": false
                      }
                   },
@@ -543,7 +543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-love.part-noun",
+                        "text": "text love",
                         "italic": false
                      }
                   },
@@ -575,7 +575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-ufo.part-noun",
+                        "text": "text ufo",
                         "italic": false
                      }
                   },
@@ -607,7 +607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-door.part-noun",
+                        "text": "text door",
                         "italic": false
                      }
                   },
@@ -639,7 +639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-flower.part-noun",
+                        "text": "text flower",
                         "italic": false
                      }
                   },
@@ -671,7 +671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-pillar.part-noun",
+                        "text": "text pillar",
                         "italic": false
                      }
                   },
@@ -703,7 +703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-rock.part-noun",
+                        "text": "text rock",
                         "italic": false
                      }
                   },
@@ -735,7 +735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-tile.part-noun",
+                        "text": "text tile",
                         "italic": false
                      }
                   },
@@ -767,7 +767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-moon.part-noun",
+                        "text": "text moon",
                         "italic": false
                      }
                   },
@@ -799,7 +799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-star.part-noun",
+                        "text": "text star",
                         "italic": false
                      }
                   },
@@ -831,7 +831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-tree.part-noun",
+                        "text": "text tree",
                         "italic": false
                      }
                   },
@@ -863,7 +863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-box.part-noun",
+                        "text": "text box",
                         "italic": false
                      }
                   },
@@ -895,7 +895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-fire.part-noun",
+                        "text": "text fire",
                         "italic": false
                      }
                   },
@@ -927,7 +927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-jelly.part-noun",
+                        "text": "text jelly",
                         "italic": false
                      }
                   },
@@ -959,7 +959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-all.part-noun",
+                        "text": "text all",
                         "italic": false
                      }
                   },
@@ -991,7 +991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-has.part-has",
+                        "text": "text has",
                         "italic": false
                      }
                   },
@@ -1023,7 +1023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-push.part-property",
+                        "text": "text push",
                         "italic": false
                      }
                   },
@@ -1055,7 +1055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-is.part-is",
+                        "text": "text is",
                         "italic": false
                      }
                   },
@@ -1087,7 +1087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-you.part-property",
+                        "text": "text you",
                         "italic": false
                      }
                   },
@@ -1119,7 +1119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-and.part-and",
+                        "text": "text move",
                         "italic": false
                      }
                   },
@@ -1151,7 +1151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-win.part-property",
+                        "text": "text and",
                         "italic": false
                      }
                   },
@@ -1183,7 +1183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-stop.part-property",
+                        "text": "text win",
                         "italic": false
                      }
                   },
@@ -1215,7 +1215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-sink.part-property",
+                        "text": "text stop",
                         "italic": false
                      }
                   },
@@ -1247,7 +1247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-cloud.part-noun",
+                        "text": "text sink",
                         "italic": false
                      }
                   },
@@ -1271,7 +1271,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "guitar",
-                        "note": 24
+                        "note": 8
                      }
                   }
                ],
@@ -1279,13 +1279,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-fence.part-noun",
+                        "text": "text cloud",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:199}"
+                     "tag": "{babatile:1b,CustomModelData:183}"
                   }
                ]
             }
@@ -1303,7 +1303,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "chime",
-                        "note": 16
+                        "note": 0
                      }
                   }
                ],
@@ -1311,13 +1311,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-grass.part-noun",
+                        "text": "text fence",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:216}"
+                     "tag": "{babatile:1b,CustomModelData:200}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text grass",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:217}"
                   }
                ]
             }
@@ -1335,7 +1367,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "xylophone",
-                        "note": 8
+                        "note": 9
                      }
                   }
                ],
@@ -1343,13 +1375,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-hedge.part-noun",
+                        "text": "text hedge",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:233}"
+                     "tag": "{babatile:1b,CustomModelData:234}"
                   }
                ]
             }
@@ -1367,7 +1399,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 0
+                        "note": 1
                      }
                   }
                ],
@@ -1375,13 +1407,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-ice.part-noun",
+                        "text": "text ice",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:250}"
+                     "tag": "{babatile:1b,CustomModelData:251}"
                   }
                ]
             }
@@ -1399,7 +1431,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 17
+                        "note": 18
                      }
                   }
                ],
@@ -1407,13 +1439,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-lava.part-noun",
+                        "text": "text lava",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:267}"
+                     "tag": "{babatile:1b,CustomModelData:268}"
                   }
                ]
             }
@@ -1431,7 +1463,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "cow_bell",
-                        "note": 9
+                        "note": 10
                      }
                   }
                ],
@@ -1439,13 +1471,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-pipe.part-noun",
+                        "text": "text pipe",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:284}"
+                     "tag": "{babatile:1b,CustomModelData:285}"
                   }
                ]
             }
@@ -1463,7 +1495,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 1
+                        "note": 2
                      }
                   }
                ],
@@ -1471,13 +1503,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-rubble.part-noun",
+                        "text": "text rubble",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:301}"
+                     "tag": "{babatile:1b,CustomModelData:302}"
                   }
                ]
             }
@@ -1495,7 +1527,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 18
+                        "note": 19
                      }
                   }
                ],
@@ -1503,13 +1535,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-wall.part-noun",
+                        "text": "text wall",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:318}"
+                     "tag": "{babatile:1b,CustomModelData:319}"
                   }
                ]
             }
@@ -1527,7 +1559,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bit",
-                        "note": 10
+                        "note": 11
                      }
                   }
                ],
@@ -1535,13 +1567,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text-water.part-noun",
+                        "text": "text water",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:335}"
+                     "tag": "{babatile:1b,CustomModelData:336}"
                   }
                ]
             }
@@ -1567,7 +1599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-right.frame-0",
+                        "text": "belt facing-right frame-0",
                         "italic": false
                      }
                   },
@@ -1599,7 +1631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-right.frame-1",
+                        "text": "belt facing-right frame-1",
                         "italic": false
                      }
                   },
@@ -1631,7 +1663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-right.frame-2",
+                        "text": "belt facing-right frame-2",
                         "italic": false
                      }
                   },
@@ -1663,7 +1695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-right.frame-3",
+                        "text": "belt facing-right frame-3",
                         "italic": false
                      }
                   },
@@ -1695,7 +1727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-up.frame-0",
+                        "text": "belt facing-up frame-0",
                         "italic": false
                      }
                   },
@@ -1727,7 +1759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-up.frame-1",
+                        "text": "belt facing-up frame-1",
                         "italic": false
                      }
                   },
@@ -1759,7 +1791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-up.frame-2",
+                        "text": "belt facing-up frame-2",
                         "italic": false
                      }
                   },
@@ -1791,7 +1823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-up.frame-3",
+                        "text": "belt facing-up frame-3",
                         "italic": false
                      }
                   },
@@ -1823,7 +1855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-left.frame-0",
+                        "text": "belt facing-left frame-0",
                         "italic": false
                      }
                   },
@@ -1855,7 +1887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-left.frame-1",
+                        "text": "belt facing-left frame-1",
                         "italic": false
                      }
                   },
@@ -1887,7 +1919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-left.frame-2",
+                        "text": "belt facing-left frame-2",
                         "italic": false
                      }
                   },
@@ -1919,7 +1951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-left.frame-3",
+                        "text": "belt facing-left frame-3",
                         "italic": false
                      }
                   },
@@ -1951,7 +1983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-down.frame-0",
+                        "text": "belt facing-down frame-0",
                         "italic": false
                      }
                   },
@@ -1983,7 +2015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-down.frame-1",
+                        "text": "belt facing-down frame-1",
                         "italic": false
                      }
                   },
@@ -2015,7 +2047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-down.frame-2",
+                        "text": "belt facing-down frame-2",
                         "italic": false
                      }
                   },
@@ -2047,7 +2079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "belt facing-down.frame-3",
+                        "text": "belt facing-down frame-3",
                         "italic": false
                      }
                   },
@@ -3103,7 +3135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right.frame-0",
+                        "text": "baba facing-right frame-0",
                         "italic": false
                      }
                   },
@@ -3135,7 +3167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right.frame-1",
+                        "text": "baba facing-right frame-1",
                         "italic": false
                      }
                   },
@@ -3167,7 +3199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right.frame-2",
+                        "text": "baba facing-right frame-2",
                         "italic": false
                      }
                   },
@@ -3199,7 +3231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right.frame-3",
+                        "text": "baba facing-right frame-3",
                         "italic": false
                      }
                   },
@@ -3231,7 +3263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up.frame-0",
+                        "text": "baba facing-up frame-0",
                         "italic": false
                      }
                   },
@@ -3263,7 +3295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up.frame-1",
+                        "text": "baba facing-up frame-1",
                         "italic": false
                      }
                   },
@@ -3295,7 +3327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up.frame-2",
+                        "text": "baba facing-up frame-2",
                         "italic": false
                      }
                   },
@@ -3327,7 +3359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up.frame-3",
+                        "text": "baba facing-up frame-3",
                         "italic": false
                      }
                   },
@@ -3359,7 +3391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left.frame-0",
+                        "text": "baba facing-left frame-0",
                         "italic": false
                      }
                   },
@@ -3391,7 +3423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left.frame-1",
+                        "text": "baba facing-left frame-1",
                         "italic": false
                      }
                   },
@@ -3423,7 +3455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left.frame-2",
+                        "text": "baba facing-left frame-2",
                         "italic": false
                      }
                   },
@@ -3455,7 +3487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left.frame-3",
+                        "text": "baba facing-left frame-3",
                         "italic": false
                      }
                   },
@@ -3487,7 +3519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down.frame-0",
+                        "text": "baba facing-down frame-0",
                         "italic": false
                      }
                   },
@@ -3519,7 +3551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down.frame-1",
+                        "text": "baba facing-down frame-1",
                         "italic": false
                      }
                   },
@@ -3551,7 +3583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down.frame-2",
+                        "text": "baba facing-down frame-2",
                         "italic": false
                      }
                   },
@@ -3583,7 +3615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down.frame-3",
+                        "text": "baba facing-down frame-3",
                         "italic": false
                      }
                   },
@@ -3615,7 +3647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right.sleep-true",
+                        "text": "baba facing-right sleep-true",
                         "italic": false
                      }
                   },
@@ -3647,7 +3679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up.sleep-true",
+                        "text": "baba facing-up sleep-true",
                         "italic": false
                      }
                   },
@@ -3679,7 +3711,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left.sleep-true",
+                        "text": "baba facing-left sleep-true",
                         "italic": false
                      }
                   },
@@ -3711,7 +3743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down.sleep-true",
+                        "text": "baba facing-down sleep-true",
                         "italic": false
                      }
                   },
@@ -3743,7 +3775,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right.frame-0",
+                        "text": "keke facing-right frame-0",
                         "italic": false
                      }
                   },
@@ -3775,7 +3807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right.frame-1",
+                        "text": "keke facing-right frame-1",
                         "italic": false
                      }
                   },
@@ -3807,7 +3839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right.frame-2",
+                        "text": "keke facing-right frame-2",
                         "italic": false
                      }
                   },
@@ -3839,7 +3871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right.frame-3",
+                        "text": "keke facing-right frame-3",
                         "italic": false
                      }
                   },
@@ -3871,7 +3903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up.frame-0",
+                        "text": "keke facing-up frame-0",
                         "italic": false
                      }
                   },
@@ -3903,7 +3935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up.frame-1",
+                        "text": "keke facing-up frame-1",
                         "italic": false
                      }
                   },
@@ -3935,7 +3967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up.frame-2",
+                        "text": "keke facing-up frame-2",
                         "italic": false
                      }
                   },
@@ -3967,7 +3999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up.frame-3",
+                        "text": "keke facing-up frame-3",
                         "italic": false
                      }
                   },
@@ -3999,7 +4031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left.frame-0",
+                        "text": "keke facing-left frame-0",
                         "italic": false
                      }
                   },
@@ -4031,7 +4063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left.frame-1",
+                        "text": "keke facing-left frame-1",
                         "italic": false
                      }
                   },
@@ -4063,7 +4095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left.frame-2",
+                        "text": "keke facing-left frame-2",
                         "italic": false
                      }
                   },
@@ -4095,7 +4127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left.frame-3",
+                        "text": "keke facing-left frame-3",
                         "italic": false
                      }
                   },
@@ -4127,7 +4159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down.frame-0",
+                        "text": "keke facing-down frame-0",
                         "italic": false
                      }
                   },
@@ -4159,7 +4191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down.frame-1",
+                        "text": "keke facing-down frame-1",
                         "italic": false
                      }
                   },
@@ -4191,7 +4223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down.frame-2",
+                        "text": "keke facing-down frame-2",
                         "italic": false
                      }
                   },
@@ -4223,7 +4255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down.frame-3",
+                        "text": "keke facing-down frame-3",
                         "italic": false
                      }
                   },
@@ -4255,7 +4287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right.sleep-true",
+                        "text": "keke facing-right sleep-true",
                         "italic": false
                      }
                   },
@@ -4287,7 +4319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up.sleep-true",
+                        "text": "keke facing-up sleep-true",
                         "italic": false
                      }
                   },
@@ -4319,7 +4351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left.sleep-true",
+                        "text": "keke facing-left sleep-true",
                         "italic": false
                      }
                   },
@@ -4351,7 +4383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down.sleep-true",
+                        "text": "keke facing-down sleep-true",
                         "italic": false
                      }
                   },
@@ -4383,7 +4415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right.frame-0",
+                        "text": "me facing-right frame-0",
                         "italic": false
                      }
                   },
@@ -4415,7 +4447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right.frame-1",
+                        "text": "me facing-right frame-1",
                         "italic": false
                      }
                   },
@@ -4447,7 +4479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right.frame-2",
+                        "text": "me facing-right frame-2",
                         "italic": false
                      }
                   },
@@ -4479,7 +4511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right.frame-3",
+                        "text": "me facing-right frame-3",
                         "italic": false
                      }
                   },
@@ -4511,7 +4543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up.frame-0",
+                        "text": "me facing-up frame-0",
                         "italic": false
                      }
                   },
@@ -4543,7 +4575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up.frame-1",
+                        "text": "me facing-up frame-1",
                         "italic": false
                      }
                   },
@@ -4575,7 +4607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up.frame-2",
+                        "text": "me facing-up frame-2",
                         "italic": false
                      }
                   },
@@ -4607,7 +4639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up.frame-3",
+                        "text": "me facing-up frame-3",
                         "italic": false
                      }
                   },
@@ -4639,7 +4671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left.frame-0",
+                        "text": "me facing-left frame-0",
                         "italic": false
                      }
                   },
@@ -4671,7 +4703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left.frame-1",
+                        "text": "me facing-left frame-1",
                         "italic": false
                      }
                   },
@@ -4703,7 +4735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left.frame-2",
+                        "text": "me facing-left frame-2",
                         "italic": false
                      }
                   },
@@ -4735,7 +4767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left.frame-3",
+                        "text": "me facing-left frame-3",
                         "italic": false
                      }
                   },
@@ -4767,7 +4799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down.frame-0",
+                        "text": "me facing-down frame-0",
                         "italic": false
                      }
                   },
@@ -4799,7 +4831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down.frame-1",
+                        "text": "me facing-down frame-1",
                         "italic": false
                      }
                   },
@@ -4831,7 +4863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down.frame-2",
+                        "text": "me facing-down frame-2",
                         "italic": false
                      }
                   },
@@ -4863,7 +4895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down.frame-3",
+                        "text": "me facing-down frame-3",
                         "italic": false
                      }
                   },
@@ -4895,7 +4927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right.sleep-true",
+                        "text": "me facing-right sleep-true",
                         "italic": false
                      }
                   },
@@ -4927,7 +4959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up.sleep-true",
+                        "text": "me facing-up sleep-true",
                         "italic": false
                      }
                   },
@@ -4959,7 +4991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left.sleep-true",
+                        "text": "me facing-left sleep-true",
                         "italic": false
                      }
                   },
@@ -4991,7 +5023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down.sleep-true",
+                        "text": "me facing-down sleep-true",
                         "italic": false
                      }
                   },
@@ -5023,7 +5055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right.frame-0",
+                        "text": "robot facing-right frame-0",
                         "italic": false
                      }
                   },
@@ -5055,7 +5087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right.frame-1",
+                        "text": "robot facing-right frame-1",
                         "italic": false
                      }
                   },
@@ -5087,7 +5119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right.frame-2",
+                        "text": "robot facing-right frame-2",
                         "italic": false
                      }
                   },
@@ -5119,7 +5151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right.frame-3",
+                        "text": "robot facing-right frame-3",
                         "italic": false
                      }
                   },
@@ -5151,7 +5183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up.frame-0",
+                        "text": "robot facing-up frame-0",
                         "italic": false
                      }
                   },
@@ -5183,7 +5215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up.frame-1",
+                        "text": "robot facing-up frame-1",
                         "italic": false
                      }
                   },
@@ -5215,7 +5247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up.frame-2",
+                        "text": "robot facing-up frame-2",
                         "italic": false
                      }
                   },
@@ -5247,7 +5279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up.frame-3",
+                        "text": "robot facing-up frame-3",
                         "italic": false
                      }
                   },
@@ -5279,7 +5311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left.frame-0",
+                        "text": "robot facing-left frame-0",
                         "italic": false
                      }
                   },
@@ -5311,7 +5343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left.frame-1",
+                        "text": "robot facing-left frame-1",
                         "italic": false
                      }
                   },
@@ -5343,7 +5375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left.frame-2",
+                        "text": "robot facing-left frame-2",
                         "italic": false
                      }
                   },
@@ -5375,7 +5407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left.frame-3",
+                        "text": "robot facing-left frame-3",
                         "italic": false
                      }
                   },
@@ -5407,7 +5439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down.frame-0",
+                        "text": "robot facing-down frame-0",
                         "italic": false
                      }
                   },
@@ -5439,7 +5471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down.frame-1",
+                        "text": "robot facing-down frame-1",
                         "italic": false
                      }
                   },
@@ -5471,7 +5503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down.frame-2",
+                        "text": "robot facing-down frame-2",
                         "italic": false
                      }
                   },
@@ -5503,7 +5535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down.frame-3",
+                        "text": "robot facing-down frame-3",
                         "italic": false
                      }
                   },
@@ -5535,7 +5567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right.sleep-true",
+                        "text": "robot facing-right sleep-true",
                         "italic": false
                      }
                   },
@@ -5567,7 +5599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up.sleep-true",
+                        "text": "robot facing-up sleep-true",
                         "italic": false
                      }
                   },
@@ -5599,7 +5631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left.sleep-true",
+                        "text": "robot facing-left sleep-true",
                         "italic": false
                      }
                   },
@@ -5631,7 +5663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down.sleep-true",
+                        "text": "robot facing-down sleep-true",
                         "italic": false
                      }
                   },
@@ -5663,7 +5695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "algae obj",
+                        "text": "algae",
                         "italic": false
                      }
                   },
@@ -5695,7 +5727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "flag obj",
+                        "text": "flag",
                         "italic": false
                      }
                   },
@@ -5727,7 +5759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "key obj",
+                        "text": "key",
                         "italic": false
                      }
                   },
@@ -5759,7 +5791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "love obj",
+                        "text": "love",
                         "italic": false
                      }
                   },
@@ -5791,7 +5823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ufo obj",
+                        "text": "ufo",
                         "italic": false
                      }
                   },
@@ -5823,7 +5855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "door obj",
+                        "text": "door",
                         "italic": false
                      }
                   },
@@ -5855,7 +5887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "flower obj",
+                        "text": "flower",
                         "italic": false
                      }
                   },
@@ -5887,7 +5919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pillar obj",
+                        "text": "pillar",
                         "italic": false
                      }
                   },
@@ -5919,7 +5951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rock obj",
+                        "text": "rock",
                         "italic": false
                      }
                   },
@@ -5951,7 +5983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tile obj",
+                        "text": "tile",
                         "italic": false
                      }
                   },
@@ -5983,7 +6015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "moon obj",
+                        "text": "moon",
                         "italic": false
                      }
                   },
@@ -6015,7 +6047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "star obj",
+                        "text": "star",
                         "italic": false
                      }
                   },
@@ -6047,7 +6079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tree obj",
+                        "text": "tree",
                         "italic": false
                      }
                   },
@@ -6079,7 +6111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "box obj",
+                        "text": "box",
                         "italic": false
                      }
                   },
@@ -6111,7 +6143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fire obj",
+                        "text": "fire",
                         "italic": false
                      }
                   },
@@ -6143,45 +6175,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "jelly obj",
+                        "text": "jelly",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:172}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 8
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "cloud up-false.down-false.left-false.right-false",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:183}"
                   }
                ]
             }
@@ -6207,7 +6207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-false.left-false.right-true",
+                        "text": "cloud up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6239,7 +6239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-false.left-false.right-false",
+                        "text": "cloud up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6271,7 +6271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-false.left-false.right-true",
+                        "text": "cloud up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6303,7 +6303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-false.left-true.right-false",
+                        "text": "cloud up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6335,7 +6335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-false.left-true.right-true",
+                        "text": "cloud up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6367,7 +6367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-false.left-true.right-false",
+                        "text": "cloud up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6399,7 +6399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-false.left-true.right-true",
+                        "text": "cloud up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6431,7 +6431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-true.left-false.right-false",
+                        "text": "cloud up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6463,7 +6463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-true.left-false.right-true",
+                        "text": "cloud up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -6495,7 +6495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-true.left-false.right-false",
+                        "text": "cloud up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -6527,7 +6527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-true.left-false.right-true",
+                        "text": "cloud up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -6559,7 +6559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-true.left-true.right-false",
+                        "text": "cloud up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -6591,7 +6591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false.down-true.left-true.right-true",
+                        "text": "cloud up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -6623,7 +6623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-true.left-true.right-false",
+                        "text": "cloud up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -6655,7 +6655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true.down-true.left-true.right-true",
+                        "text": "cloud up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -6678,8 +6678,8 @@
                      "condition": "minecraft:block_state_property",
                      "block": "minecraft:note_block",
                      "properties": {
-                        "instrument": "chime",
-                        "note": 0
+                        "instrument": "guitar",
+                        "note": 24
                      }
                   }
                ],
@@ -6687,13 +6687,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-false.left-false.right-false",
+                        "text": "cloud up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:200}"
+                     "tag": "{babatile:1b,CustomModelData:199}"
                   }
                ]
             }
@@ -6719,7 +6719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-false.left-false.right-true",
+                        "text": "fence up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6751,7 +6751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-false.left-false.right-false",
+                        "text": "fence up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6783,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-false.left-false.right-true",
+                        "text": "fence up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6815,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-false.left-true.right-false",
+                        "text": "fence up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6847,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-false.left-true.right-true",
+                        "text": "fence up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6879,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-false.left-true.right-false",
+                        "text": "fence up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6911,7 +6911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-false.left-true.right-true",
+                        "text": "fence up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6943,7 +6943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-true.left-false.right-false",
+                        "text": "fence up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6975,7 +6975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-true.left-false.right-true",
+                        "text": "fence up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7007,7 +7007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-true.left-false.right-false",
+                        "text": "fence up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7039,7 +7039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-true.left-false.right-true",
+                        "text": "fence up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7071,7 +7071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-true.left-true.right-false",
+                        "text": "fence up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7103,7 +7103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false.down-true.left-true.right-true",
+                        "text": "fence up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7135,7 +7135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-true.left-true.right-false",
+                        "text": "fence up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -7167,7 +7167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true.down-true.left-true.right-true",
+                        "text": "fence up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7191,7 +7191,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "chime",
-                        "note": 17
+                        "note": 16
                      }
                   }
                ],
@@ -7199,13 +7199,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-false.left-false.right-false",
+                        "text": "fence up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:217}"
+                     "tag": "{babatile:1b,CustomModelData:216}"
                   }
                ]
             }
@@ -7231,7 +7231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-false.left-false.right-true",
+                        "text": "grass up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7263,7 +7263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-false.left-false.right-false",
+                        "text": "grass up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7295,7 +7295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-false.left-false.right-true",
+                        "text": "grass up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7327,7 +7327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-false.left-true.right-false",
+                        "text": "grass up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7359,7 +7359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-false.left-true.right-true",
+                        "text": "grass up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7391,7 +7391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-false.left-true.right-false",
+                        "text": "grass up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7423,7 +7423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-false.left-true.right-true",
+                        "text": "grass up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7455,7 +7455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-true.left-false.right-false",
+                        "text": "grass up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7487,7 +7487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-true.left-false.right-true",
+                        "text": "grass up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7519,7 +7519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-true.left-false.right-false",
+                        "text": "grass up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7551,7 +7551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-true.left-false.right-true",
+                        "text": "grass up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7583,7 +7583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-true.left-true.right-false",
+                        "text": "grass up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7615,7 +7615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false.down-true.left-true.right-true",
+                        "text": "grass up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7647,7 +7647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-true.left-true.right-false",
+                        "text": "grass up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -7679,7 +7679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true.down-true.left-true.right-true",
+                        "text": "grass up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7703,7 +7703,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "xylophone",
-                        "note": 9
+                        "note": 8
                      }
                   }
                ],
@@ -7711,13 +7711,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-false.left-false.right-false",
+                        "text": "grass up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:234}"
+                     "tag": "{babatile:1b,CustomModelData:233}"
                   }
                ]
             }
@@ -7743,7 +7743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-false.left-false.right-true",
+                        "text": "hedge up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7775,7 +7775,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-false.left-false.right-false",
+                        "text": "hedge up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7807,7 +7807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-false.left-false.right-true",
+                        "text": "hedge up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7839,7 +7839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-false.left-true.right-false",
+                        "text": "hedge up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7871,7 +7871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-false.left-true.right-true",
+                        "text": "hedge up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7903,7 +7903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-false.left-true.right-false",
+                        "text": "hedge up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7935,7 +7935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-false.left-true.right-true",
+                        "text": "hedge up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7967,7 +7967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-true.left-false.right-false",
+                        "text": "hedge up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7999,7 +7999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-true.left-false.right-true",
+                        "text": "hedge up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8031,7 +8031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-true.left-false.right-false",
+                        "text": "hedge up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8063,7 +8063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-true.left-false.right-true",
+                        "text": "hedge up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8095,7 +8095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-true.left-true.right-false",
+                        "text": "hedge up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8127,7 +8127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false.down-true.left-true.right-true",
+                        "text": "hedge up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8159,7 +8159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-true.left-true.right-false",
+                        "text": "hedge up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -8191,7 +8191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true.down-true.left-true.right-true",
+                        "text": "hedge up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8215,7 +8215,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 1
+                        "note": 0
                      }
                   }
                ],
@@ -8223,13 +8223,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-false.left-false.right-false",
+                        "text": "hedge up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:251}"
+                     "tag": "{babatile:1b,CustomModelData:250}"
                   }
                ]
             }
@@ -8255,7 +8255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-false.left-false.right-true",
+                        "text": "ice up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8287,7 +8287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-false.left-false.right-false",
+                        "text": "ice up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8319,7 +8319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-false.left-false.right-true",
+                        "text": "ice up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8351,7 +8351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-false.left-true.right-false",
+                        "text": "ice up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8383,7 +8383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-false.left-true.right-true",
+                        "text": "ice up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8415,7 +8415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-false.left-true.right-false",
+                        "text": "ice up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8447,7 +8447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-false.left-true.right-true",
+                        "text": "ice up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8479,7 +8479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-true.left-false.right-false",
+                        "text": "ice up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8511,7 +8511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-true.left-false.right-true",
+                        "text": "ice up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8543,7 +8543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-true.left-false.right-false",
+                        "text": "ice up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8575,7 +8575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-true.left-false.right-true",
+                        "text": "ice up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8607,7 +8607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-true.left-true.right-false",
+                        "text": "ice up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8639,7 +8639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false.down-true.left-true.right-true",
+                        "text": "ice up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8671,7 +8671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-true.left-true.right-false",
+                        "text": "ice up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -8703,7 +8703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true.down-true.left-true.right-true",
+                        "text": "ice up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8727,7 +8727,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 18
+                        "note": 17
                      }
                   }
                ],
@@ -8735,13 +8735,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-false.left-false.right-false",
+                        "text": "ice up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:268}"
+                     "tag": "{babatile:1b,CustomModelData:267}"
                   }
                ]
             }
@@ -8767,7 +8767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-false.left-false.right-true",
+                        "text": "lava up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8799,7 +8799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-false.left-false.right-false",
+                        "text": "lava up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8831,7 +8831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-false.left-false.right-true",
+                        "text": "lava up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8863,7 +8863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-false.left-true.right-false",
+                        "text": "lava up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8895,7 +8895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-false.left-true.right-true",
+                        "text": "lava up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8927,7 +8927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-false.left-true.right-false",
+                        "text": "lava up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8959,7 +8959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-false.left-true.right-true",
+                        "text": "lava up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8991,7 +8991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-true.left-false.right-false",
+                        "text": "lava up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9023,7 +9023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-true.left-false.right-true",
+                        "text": "lava up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9055,7 +9055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-true.left-false.right-false",
+                        "text": "lava up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9087,7 +9087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-true.left-false.right-true",
+                        "text": "lava up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9119,7 +9119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-true.left-true.right-false",
+                        "text": "lava up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9151,7 +9151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false.down-true.left-true.right-true",
+                        "text": "lava up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9183,7 +9183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-true.left-true.right-false",
+                        "text": "lava up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -9215,7 +9215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true.down-true.left-true.right-true",
+                        "text": "lava up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9239,7 +9239,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "cow_bell",
-                        "note": 10
+                        "note": 9
                      }
                   }
                ],
@@ -9247,13 +9247,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-false.left-false.right-false",
+                        "text": "lava up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:285}"
+                     "tag": "{babatile:1b,CustomModelData:284}"
                   }
                ]
             }
@@ -9279,7 +9279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-false.left-false.right-true",
+                        "text": "pipe up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9311,7 +9311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-false.left-false.right-false",
+                        "text": "pipe up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9343,7 +9343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-false.left-false.right-true",
+                        "text": "pipe up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9375,7 +9375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-false.left-true.right-false",
+                        "text": "pipe up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9407,7 +9407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-false.left-true.right-true",
+                        "text": "pipe up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9439,7 +9439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-false.left-true.right-false",
+                        "text": "pipe up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9471,7 +9471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-false.left-true.right-true",
+                        "text": "pipe up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9503,7 +9503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-true.left-false.right-false",
+                        "text": "pipe up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9535,7 +9535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-true.left-false.right-true",
+                        "text": "pipe up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9567,7 +9567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-true.left-false.right-false",
+                        "text": "pipe up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9599,7 +9599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-true.left-false.right-true",
+                        "text": "pipe up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9631,7 +9631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-true.left-true.right-false",
+                        "text": "pipe up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9663,7 +9663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false.down-true.left-true.right-true",
+                        "text": "pipe up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9695,7 +9695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-true.left-true.right-false",
+                        "text": "pipe up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -9727,7 +9727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true.down-true.left-true.right-true",
+                        "text": "pipe up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9751,7 +9751,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 2
+                        "note": 1
                      }
                   }
                ],
@@ -9759,13 +9759,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-false.left-false.right-false",
+                        "text": "pipe up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:302}"
+                     "tag": "{babatile:1b,CustomModelData:301}"
                   }
                ]
             }
@@ -9791,7 +9791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-false.left-false.right-true",
+                        "text": "rubble up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9823,7 +9823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-false.left-false.right-false",
+                        "text": "rubble up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9855,7 +9855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-false.left-false.right-true",
+                        "text": "rubble up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9887,7 +9887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-false.left-true.right-false",
+                        "text": "rubble up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9919,7 +9919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-false.left-true.right-true",
+                        "text": "rubble up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9951,7 +9951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-false.left-true.right-false",
+                        "text": "rubble up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9983,7 +9983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-false.left-true.right-true",
+                        "text": "rubble up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10015,7 +10015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-true.left-false.right-false",
+                        "text": "rubble up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10047,7 +10047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-true.left-false.right-true",
+                        "text": "rubble up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10079,7 +10079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-true.left-false.right-false",
+                        "text": "rubble up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10111,7 +10111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-true.left-false.right-true",
+                        "text": "rubble up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10143,7 +10143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-true.left-true.right-false",
+                        "text": "rubble up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10175,7 +10175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false.down-true.left-true.right-true",
+                        "text": "rubble up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10207,7 +10207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-true.left-true.right-false",
+                        "text": "rubble up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -10239,7 +10239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true.down-true.left-true.right-true",
+                        "text": "rubble up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10263,7 +10263,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 19
+                        "note": 18
                      }
                   }
                ],
@@ -10271,13 +10271,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-false.left-false.right-false",
+                        "text": "rubble up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:319}"
+                     "tag": "{babatile:1b,CustomModelData:318}"
                   }
                ]
             }
@@ -10303,7 +10303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-false.left-false.right-true",
+                        "text": "wall up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10335,7 +10335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-false.left-false.right-false",
+                        "text": "wall up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10367,7 +10367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-false.left-false.right-true",
+                        "text": "wall up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10399,7 +10399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-false.left-true.right-false",
+                        "text": "wall up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10431,7 +10431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-false.left-true.right-true",
+                        "text": "wall up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10463,7 +10463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-false.left-true.right-false",
+                        "text": "wall up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10495,7 +10495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-false.left-true.right-true",
+                        "text": "wall up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10527,7 +10527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-true.left-false.right-false",
+                        "text": "wall up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10559,7 +10559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-true.left-false.right-true",
+                        "text": "wall up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10591,7 +10591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-true.left-false.right-false",
+                        "text": "wall up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10623,7 +10623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-true.left-false.right-true",
+                        "text": "wall up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10655,7 +10655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-true.left-true.right-false",
+                        "text": "wall up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10687,7 +10687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false.down-true.left-true.right-true",
+                        "text": "wall up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10719,7 +10719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-true.left-true.right-false",
+                        "text": "wall up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -10751,7 +10751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true.down-true.left-true.right-true",
+                        "text": "wall up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10775,7 +10775,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bit",
-                        "note": 11
+                        "note": 10
                      }
                   }
                ],
@@ -10783,13 +10783,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-false.left-false.right-false",
+                        "text": "wall up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:336}"
+                     "tag": "{babatile:1b,CustomModelData:335}"
                   }
                ]
             }
@@ -10815,7 +10815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-false.left-false.right-true",
+                        "text": "water up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10847,7 +10847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-false.left-false.right-false",
+                        "text": "water up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10879,7 +10879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-false.left-false.right-true",
+                        "text": "water up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10911,7 +10911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-false.left-true.right-false",
+                        "text": "water up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10943,7 +10943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-false.left-true.right-true",
+                        "text": "water up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10975,7 +10975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-false.left-true.right-false",
+                        "text": "water up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -11007,7 +11007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-false.left-true.right-true",
+                        "text": "water up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -11039,7 +11039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-true.left-false.right-false",
+                        "text": "water up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -11071,7 +11071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-true.left-false.right-true",
+                        "text": "water up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -11103,7 +11103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-true.left-false.right-false",
+                        "text": "water up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -11135,7 +11135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-true.left-false.right-true",
+                        "text": "water up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -11167,7 +11167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-true.left-true.right-false",
+                        "text": "water up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -11199,7 +11199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false.down-true.left-true.right-true",
+                        "text": "water up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -11231,7 +11231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-true.left-true.right-false",
+                        "text": "water up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
@@ -11263,13 +11263,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true.down-true.left-true.right-true",
+                        "text": "water up-true down-true left-true right-false",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:351}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "banjo",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water up-true down-true left-true right-true",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:352}"
                   }
                ]
             }
