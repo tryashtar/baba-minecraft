@@ -1,1 +1,1 @@
-summon marker ~ ~ ~ {Tags:["baba.you"]}
+summon marker ~ ~ ~ {Tags:["baba.you","baba.move_marker"]}

@@ -1,1 +1,1 @@
-summon marker ~ ~ ~ {Tags:["baba.shift"]}
+summon marker ~ ~ ~ {Tags:["baba.shift","baba.move_marker"]}

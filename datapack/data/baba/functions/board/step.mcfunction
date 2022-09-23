@@ -799,10 +799,13 @@ execute positioned 0 11 36 run function baba:board/step_tile
 execute positioned 0 11 37 run function baba:board/step_tile
 execute positioned 0 11 38 run function baba:board/step_tile
 execute positioned 0 11 39 run function baba:board/step_tile
-function baba:board/movement/process/you
+execute at @e[type=marker,tag=baba.you] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b
+execute if score direction baba matches 1.. run function baba:board/movement/process/you
 kill @e[type=marker,tag=baba.you]
+execute at @e[type=marker,tag=baba.move] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b
 function baba:board/movement/process/move
 kill @e[type=marker,tag=baba.move]
+execute at @e[type=marker,tag=baba.shift] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b
 function baba:board/movement/process/shift
 kill @e[type=marker,tag=baba.shift]
 function baba:text/update_text

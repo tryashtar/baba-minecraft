@@ -156,7 +156,7 @@ sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, 'sta
 sprites1.add_similar_rows([('bat','#8C5C9C','#8C5C9C')], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites1.add_similar_rows(['cog'], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites2 = Sheet('sprites/sprites2.png')
-sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, 'keke', None, 'me', None, 'robot'], 1, 1, ['text',{"facing":4,"frame":0},{"facing":4,"frame":1},{"facing":4,"frame":2},{"facing":4,"frame":3},{"facing":1,"frame":0},{"facing":1,"frame":1},{"facing":1,"frame":2},{"facing":1,"frame":3},{"facing":3,"frame":0},{"facing":3,"frame":1},{"facing":3,"frame":2},{"facing":3,"frame":3},{"facing":2,"frame":0},{"facing":2,"frame":1},{"facing":2,"frame":2},{"facing":2,"frame":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
+sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, ('keke', '#CE7B52', '#CE7B52'), None, 'me', None, 'robot'], 1, 1, ['text',{"facing":4,"frame":0},{"facing":4,"frame":1},{"facing":4,"frame":2},{"facing":4,"frame":3},{"facing":1,"frame":0},{"facing":1,"frame":1},{"facing":1,"frame":2},{"facing":1,"frame":3},{"facing":3,"frame":0},{"facing":3,"frame":1},{"facing":3,"frame":2},{"facing":3,"frame":3},{"facing":2,"frame":0},{"facing":2,"frame":1},{"facing":2,"frame":2},{"facing":2,"frame":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
 sprites3 = Sheet('sprites/sprites3.png')
 sprites3.add_similar_rows(['algae', None, None, ('flag', '#EDE285', '#EDE285'), None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', {}])
 sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
@@ -222,10 +222,13 @@ for r in range(manager.rows):
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
 step.extend([
-  'function baba:board/movement/process/you',
+  'execute at @e[type=marker,tag=baba.you] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
+  'execute if score direction baba matches 1.. run function baba:board/movement/process/you',
   'kill @e[type=marker,tag=baba.you]',
+  'execute at @e[type=marker,tag=baba.move] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
   'function baba:board/movement/process/move',
   'kill @e[type=marker,tag=baba.move]',
+  'execute at @e[type=marker,tag=baba.shift] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
   'function baba:board/movement/process/shift',
   'kill @e[type=marker,tag=baba.shift]',
   'function baba:text/update_text',
@@ -251,8 +254,7 @@ def nbt(name, metadata, setting):
   meta = t.metadata.copy()
   if setting:
     if 'facing' not in meta:
-      meta['facing'] = 0
-    meta['moved'] = False
+      meta['facing'] = 4
   else:
     if 'part' in meta:
       del meta['part']
