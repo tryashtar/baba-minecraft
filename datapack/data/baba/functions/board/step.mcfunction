@@ -799,4 +799,10 @@ execute positioned 0 11 36 run function baba:board/step_tile
 execute positioned 0 11 37 run function baba:board/step_tile
 execute positioned 0 11 38 run function baba:board/step_tile
 execute positioned 0 11 39 run function baba:board/step_tile
+function baba:board/movement/process/you
+kill @e[type=marker,tag=baba.you]
+function baba:board/movement/process/move
+kill @e[type=marker,tag=baba.move]
+function baba:board/movement/process/shift
+kill @e[type=marker,tag=baba.shift]
 function baba:text/update_text

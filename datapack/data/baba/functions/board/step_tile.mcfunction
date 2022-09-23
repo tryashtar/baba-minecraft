@@ -1,3 +1,8 @@
+execute if data block ~ ~ ~ RecordItem.tag.tiles[0] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run function baba:board/movement/prepass/you
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["move"]}] run function baba:board/movement/prepass/move
+execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"]}] run function baba:board/movement/prepass/shift
+
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"cloud"}] run function baba:board/graphics/cloud
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"fence"}] run function baba:board/graphics/fence
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"grass"}] run function baba:board/graphics/grass
@@ -9,7 +14,5 @@ execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"rubble"}] run function
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"wall"}] run function baba:board/graphics/wall
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"water"}] run function baba:board/graphics/water
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["sink"]}] if data block ~ ~ ~ RecordItem.tag.tiles[1] run data modify block ~ ~ ~ RecordItem.tag.tiles set value []
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run function baba:board/movement/move_you
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["defeat"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}]
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["hot"]}] if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["melt"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["melt"]}]
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["move"]}] run function baba:board/movement/auto_move

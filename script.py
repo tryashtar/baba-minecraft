@@ -221,7 +221,15 @@ for r in range(manager.rows):
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
-step.append('function baba:text/update_text')
+step.extend([
+  'function baba:board/movement/process/you',
+  'kill @e[type=marker,tag=baba.you]',
+  'function baba:board/movement/process/move',
+  'kill @e[type=marker,tag=baba.move]',
+  'function baba:board/movement/process/shift',
+  'kill @e[type=marker,tag=baba.shift]',
+  'function baba:text/update_text',
+])
 load.append('function baba:text/update_text')
 text.append('function baba:text/update_anim')
 props.extend(props_after)
@@ -238,9 +246,17 @@ def note_block(val):
 def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
-def nbt(name, metadata):
+def nbt(name, metadata, setting):
   result = f'{{sprite:"{t.name}"'
-  for k,v in t.metadata.items():
+  meta = t.metadata.copy()
+  if setting:
+    if 'facing' not in meta:
+      meta['facing'] = 0
+    meta['moved'] = False
+  else:
+    if 'part' in meta:
+      del meta['part']
+  for k,v in meta.items():
     strv = v
     if type(v) is str:
       strv = f'"{v}"'
@@ -261,10 +277,11 @@ lines = []
 lines2 = []
 for t,i in manager.ids.items():
   noteblock = note_block(i)
-  snbt = nbt(t.name, t.metadata)
-  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ 11 ~ RecordItem.tag.tiles append value {snbt}')
-  lines2.append(f'execute if data storage baba:main tile{snbt} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
-  lines2.append(f'execute if data storage baba:main tile{snbt} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
+  snbt_set = nbt(t.name, t.metadata, True)
+  snbt_check = nbt(t.name, t.metadata, False)
+  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ 11 ~ RecordItem.tag.tiles append value {snbt_set}')
+  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
+  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
 tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
 tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_tile.mcfunction')
 
@@ -280,7 +297,7 @@ for r in range(manager.rows):
     translate = {"translate":f"baba.{t.description('.')}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
-    snbt = nbt(t.name, t.metadata)
+    snbt = nbt(t.name, t.metadata, False)
     loop.append(f'execute if data storage baba:main tile{snbt} run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
   loop.append(f'data remove storage baba:main tiles[0]')
   loop.append(f'execute if data storage baba:main tiles[0] run function baba:text/check_tile/row{r}_loop')
