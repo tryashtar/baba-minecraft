@@ -1,20 +1,9 @@
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:1}] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moving set value 1b
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:1}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:1}].moving
-data remove block ~ ~ ~ RecordItem.tag.tiles[{moved:1b}].moving
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:1}] if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value 1
-execute rotated 270 0 if block ^ ^ ^1 jukebox if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run function baba:board/movement/try_move
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:2}] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moving set value 1b
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:2}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:2}].moving
-data remove block ~ ~ ~ RecordItem.tag.tiles[{moved:1b}].moving
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:2}] if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value 2
-execute rotated 90 0 if block ^ ^ ^1 jukebox if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run function baba:board/movement/try_move
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:3}] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moving set value 1b
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:3}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:3}].moving
-data remove block ~ ~ ~ RecordItem.tag.tiles[{moved:1b}].moving
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:3}] if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value 3
-execute rotated 180 0 if block ^ ^ ^1 jukebox if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run function baba:board/movement/try_move
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:4}] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moving set value 1b
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:4}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:4}].moving
-data remove block ~ ~ ~ RecordItem.tag.tiles[{moved:1b}].moving
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"],facing:4}] if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].facing set value 4
-execute rotated 0 0 if block ^ ^ ^1 jukebox if data block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}] run function baba:board/movement/try_move
+tag @s add self
+execute store result score baba facing run data get entity @s data.facing
+execute as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] store result entity @s data.facing int 1 run scoreboard players get baba facing
+execute if entity @s[nbt={data:{facing:1}}] as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] rotated 270 0 run function baba:board/movement/try_move
+execute if entity @s[nbt={data:{facing:1}}] as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] rotated 270 0 run function baba:board/movement/try_move
+execute if entity @s[nbt={data:{facing:2}}] as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] rotated 90 0 run function baba:board/movement/try_move
+execute if entity @s[nbt={data:{facing:3}}] as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] rotated 180 0 run function baba:board/movement/try_move
+execute if entity @s[nbt={data:{facing:4}}] as @e[type=marker,tag=baba.tile,tag=!self,distance=..0.1] rotated 0 0 run function baba:board/movement/try_move
+tag @s remove self

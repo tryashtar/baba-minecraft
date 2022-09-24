@@ -2399,4 +2399,4 @@ execute positioned 0 5 38 run function baba:io/load_block
 execute positioned 0 1 39 run function baba:io/load_block
 execute positioned 0 3 39 run function baba:io/load_block
 execute positioned 0 5 39 run function baba:io/load_block
-function baba:text/update_text
+function baba:display/update_text

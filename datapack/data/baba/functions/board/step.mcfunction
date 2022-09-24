@@ -2,4 +2,4 @@ execute if score direction baba matches 1.. run function baba:board/movement/pro
 function baba:board/movement/process/move
 function baba:board/movement/process/shift
 execute as @e[type=marker,tag=baba.tile] at @s run function baba:board/step_tile
-function baba:text/update_text
+function baba:display/update_text

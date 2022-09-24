@@ -1,4 +1,0 @@
-execute if data storage baba:main tile{sprite:"skull",facing:4} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.skull.facing-right.row11","color":"#82261C"}]'
-execute if data storage baba:main tile{sprite:"skull",facing:1} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.skull.facing-up.row11","color":"#82261C"}]'
-execute if data storage baba:main tile{sprite:"skull",facing:3} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.skull.facing-left.row11","color":"#82261C"}]'
-execute if data storage baba:main tile{sprite:"skull",facing:2} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.skull.facing-down.row11","color":"#82261C"}]'
