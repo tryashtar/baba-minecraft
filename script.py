@@ -200,24 +200,26 @@ load = [
   f'kill @e[type=marker,tag=baba.tile]'
 ]
 save = [
+    f'fill 0 1 0 {manager.rows-1} 1 {manager.columns-1} air',
     f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete',
-    f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass'
+    f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass',
+    'execute as @e[type=marker,tag=baba.tile] at @s run function baba:io/save_block'
 ]
-for h in range(3):
-  save.extend([
-    f'fill 0 {h*2+1} 0 {manager.rows-1} {h*2+1} {manager.columns-1} air',
-  ])
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
-  text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
-  text.append(f'execute positioned {manager.rows-r-1} 11 0 as @e[type=marker,tag=baba.tile,dz={manager.columns},sort=nearest] run function baba:display/check_tile/row{r}')
-  text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
+  text.extend([
+    f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'',
+    f'scoreboard players set last_column baba 0',
+    f'execute positioned {manager.rows-r-1} 0.9 0 as @e[type=marker,tag=baba.tile,dx=1,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
+    f'scoreboard players set column baba {manager.columns}',
+    f'execute if score column baba > last_column baba run function baba:display/add_empty',
+    f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\''
+  ])
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
-    save.append(f'execute as @e[type=marker,tag=baba.tile,x={manager.rows-r-1},y=1,z={c},distance=..0.1] run function baba:io/save_block')
 load.append('function baba:display/update_text')
 text.append('function baba:display/update_anim')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
@@ -282,7 +284,11 @@ tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_block.mcfunction'
 
 tat.delete_folder('datapack/data/baba/functions/display/check_tile')
 for r in range(manager.rows):
-  lines = []
+  lines = [
+    'execute store result score column baba run data get entity @s Pos[2]',
+    'execute if score column baba > last_column baba run function baba:display/add_empty',
+    'execute store result score last_column baba run data get entity @s Pos[2]',
+  ]
   subfns = {}
   for t,i in manager.ids.items():
     translate = {"translate":f"baba.{t.description('.')}.row{r}"}
@@ -304,10 +310,10 @@ connectors = ['cloud', 'fence', 'grass', 'hedge', 'ice', 'lava', 'pipe', 'rubble
 for c in connectors:
   lines = [
     f'data merge entity @s {{data:{{up:0b,down:0b,left:0b,right:0b}}}}',
-    f'execute positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}}] run data modify entity @s data.up set value 1b',
-    f'execute positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}}] run data modify entity @s data.down set value 1b',
-    f'execute positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}}] run data modify entity @s data.right set value 1b',
-    f'execute positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}}] run data modify entity @s data.left set value 1b'
+    f'execute positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.up set value 1b',
+    f'execute positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.down set value 1b',
+    f'execute positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.right set value 1b',
+    f'execute positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.left set value 1b'
   ]
   tat.write_lines(lines, f'datapack/data/baba/functions/board/graphics/{c}.mcfunction')
 

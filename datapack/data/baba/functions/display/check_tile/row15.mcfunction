@@ -1,3 +1,6 @@
+execute store result score column baba run data get entity @s Pos[2]
+execute if score column baba > last_column baba run function baba:display/add_empty
+execute store result score last_column baba run data get entity @s Pos[2]
 execute if entity @s[nbt={data:{sprite:"text"}}] run function baba:display/check_tile/row15/text
 execute if entity @s[nbt={data:{sprite:"belt"}}] run function baba:display/check_tile/row15/belt
 execute if entity @s[nbt={data:{sprite:"bug"}}] run function baba:display/check_tile/row15/bug
