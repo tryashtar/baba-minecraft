@@ -1,0 +1,4 @@
+execute if data storage baba:main tile{sprite:"crab",facing:4} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.crab.facing-right.row5","color":"#82261C"}]'
+execute if data storage baba:main tile{sprite:"crab",facing:1} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.crab.facing-up.row5","color":"#82261C"}]'
+execute if data storage baba:main tile{sprite:"crab",facing:3} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.crab.facing-left.row5","color":"#82261C"}]'
+execute if data storage baba:main tile{sprite:"crab",facing:2} run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.crab.facing-down.row5","color":"#82261C"}]'

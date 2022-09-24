@@ -196,7 +196,7 @@ for a,grids in enumerate(generated):
       p['file'] = p['file'].replace(f'anim{a-1}', f'anim{a}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{a}.json')
 
-step = ['execute store result storage baba:main tick int 1 run scoreboard players get tick baba']
+step = []
 props = [
   'data modify storage baba:main properties set value [{sprite:"text",property:"push"}]',
   'data modify storage baba:main transforms set value []'
@@ -304,12 +304,21 @@ for r in range(manager.rows):
     f'execute if data storage baba:main tiles[0] run function baba:text/check_tile/row{r}_loop',
   ]
   loop = [f'data modify storage baba:main tile set from storage baba:main tiles[0]']
+  subfns = {}
   for t,i in manager.ids.items():
     translate = {"translate":f"baba.{t.description('.')}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
+    if t.name not in subfns:
+      subfns[t.name] = []
     snbt = nbt(t.name, t.metadata, False)
-    loop.append(f'execute if data storage baba:main tile{snbt} run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
+    subfns[t.name].append(f'execute if data storage baba:main tile{snbt} run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
+  for name,fn in subfns.items():
+    if len(fn)>1:
+      loop.append(f'execute if data storage baba:main tile{{sprite:"{name}"}} run function baba:text/check_tile/row{r}/{name}')
+      tat.write_lines(fn, f'datapack/data/baba/functions/text/check_tile/row{r}/{name}.mcfunction')
+    else:
+      loop.append(fn[0])
   loop.append(f'data remove storage baba:main tiles[0]')
   loop.append(f'execute if data storage baba:main tiles[0] run function baba:text/check_tile/row{r}_loop')
   tat.write_lines(lines, f'datapack/data/baba/functions/text/check_tile/row{r}.mcfunction')

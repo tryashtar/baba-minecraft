@@ -1,4 +1,3 @@
-execute store result storage baba:main tick int 1 run scoreboard players get tick baba
 execute positioned 19 11 0 run function baba:board/step_tile
 execute positioned 19 11 1 run function baba:board/step_tile
 execute positioned 19 11 2 run function baba:board/step_tile
