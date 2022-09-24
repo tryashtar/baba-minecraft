@@ -1,4 +1,5 @@
 data modify storage baba:main properties set value [{sprite:"text",property:"push"}]
+data modify storage baba:main transforms set value []
 execute positioned 19 11 0 run function baba:board/properties/check_text
 execute positioned 19 11 1 run function baba:board/properties/check_text
 execute positioned 19 11 2 run function baba:board/properties/check_text

@@ -2,6 +2,7 @@ execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run funct
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["move"]}] run function baba:board/movement/prepass/move
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"]}] run function baba:board/movement/prepass/shift
 
+execute if data block ~ ~ ~ RecordItem.tag.tiles[].frame run function baba:board/graphics/frame
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"cloud"}] run function baba:board/graphics/cloud
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"fence"}] run function baba:board/graphics/fence
 execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"grass"}] run function baba:board/graphics/grass

@@ -1151,7 +1151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text and",
+                        "text": "text shift",
                         "italic": false
                      }
                   },
@@ -1183,7 +1183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text win",
+                        "text": "text defeat",
                         "italic": false
                      }
                   },
@@ -1215,7 +1215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stop",
+                        "text": "text and",
                         "italic": false
                      }
                   },
@@ -1247,7 +1247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sink",
+                        "text": "text win",
                         "italic": false
                      }
                   },
@@ -1279,7 +1279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cloud",
+                        "text": "text stop",
                         "italic": false
                      }
                   },
@@ -1302,8 +1302,8 @@
                      "condition": "minecraft:block_state_property",
                      "block": "minecraft:note_block",
                      "properties": {
-                        "instrument": "chime",
-                        "note": 0
+                        "instrument": "guitar",
+                        "note": 9
                      }
                   }
                ],
@@ -1311,13 +1311,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fence",
+                        "text": "text sink",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:200}"
+                     "tag": "{babatile:1b,CustomModelData:184}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 10
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text cloud",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:185}"
                   }
                ]
             }
@@ -1335,7 +1367,39 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "chime",
-                        "note": 17
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text fence",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:202}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 19
                      }
                   }
                ],
@@ -1349,7 +1413,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:217}"
+                     "tag": "{babatile:1b,CustomModelData:219}"
                   }
                ]
             }
@@ -1367,7 +1431,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "xylophone",
-                        "note": 9
+                        "note": 11
                      }
                   }
                ],
@@ -1381,7 +1445,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:234}"
+                     "tag": "{babatile:1b,CustomModelData:236}"
                   }
                ]
             }
@@ -1399,7 +1463,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 1
+                        "note": 3
                      }
                   }
                ],
@@ -1413,7 +1477,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:251}"
+                     "tag": "{babatile:1b,CustomModelData:253}"
                   }
                ]
             }
@@ -1431,7 +1495,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "iron_xylophone",
-                        "note": 18
+                        "note": 20
                      }
                   }
                ],
@@ -1445,7 +1509,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:268}"
+                     "tag": "{babatile:1b,CustomModelData:270}"
                   }
                ]
             }
@@ -1463,7 +1527,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "cow_bell",
-                        "note": 10
+                        "note": 12
                      }
                   }
                ],
@@ -1477,7 +1541,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:285}"
+                     "tag": "{babatile:1b,CustomModelData:287}"
                   }
                ]
             }
@@ -1495,7 +1559,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 2
+                        "note": 4
                      }
                   }
                ],
@@ -1509,7 +1573,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:302}"
+                     "tag": "{babatile:1b,CustomModelData:304}"
                   }
                ]
             }
@@ -1527,7 +1591,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "didgeridoo",
-                        "note": 19
+                        "note": 21
                      }
                   }
                ],
@@ -1541,7 +1605,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:319}"
+                     "tag": "{babatile:1b,CustomModelData:321}"
                   }
                ]
             }
@@ -1559,7 +1623,7 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "bit",
-                        "note": 11
+                        "note": 13
                      }
                   }
                ],
@@ -1573,7 +1637,7 @@
                   },
                   {
                      "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:336}"
+                     "tag": "{babatile:1b,CustomModelData:338}"
                   }
                ]
             }
@@ -3135,7 +3199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right frame-0",
+                        "text": "baba facing-right walk-0",
                         "italic": false
                      }
                   },
@@ -3167,7 +3231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right frame-1",
+                        "text": "baba facing-right walk-1",
                         "italic": false
                      }
                   },
@@ -3199,7 +3263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right frame-2",
+                        "text": "baba facing-right walk-2",
                         "italic": false
                      }
                   },
@@ -3231,7 +3295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-right frame-3",
+                        "text": "baba facing-right walk-3",
                         "italic": false
                      }
                   },
@@ -3263,7 +3327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up frame-0",
+                        "text": "baba facing-up walk-0",
                         "italic": false
                      }
                   },
@@ -3295,7 +3359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up frame-1",
+                        "text": "baba facing-up walk-1",
                         "italic": false
                      }
                   },
@@ -3327,7 +3391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up frame-2",
+                        "text": "baba facing-up walk-2",
                         "italic": false
                      }
                   },
@@ -3359,7 +3423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-up frame-3",
+                        "text": "baba facing-up walk-3",
                         "italic": false
                      }
                   },
@@ -3391,7 +3455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left frame-0",
+                        "text": "baba facing-left walk-0",
                         "italic": false
                      }
                   },
@@ -3423,7 +3487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left frame-1",
+                        "text": "baba facing-left walk-1",
                         "italic": false
                      }
                   },
@@ -3455,7 +3519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left frame-2",
+                        "text": "baba facing-left walk-2",
                         "italic": false
                      }
                   },
@@ -3487,7 +3551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-left frame-3",
+                        "text": "baba facing-left walk-3",
                         "italic": false
                      }
                   },
@@ -3519,7 +3583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down frame-0",
+                        "text": "baba facing-down walk-0",
                         "italic": false
                      }
                   },
@@ -3551,7 +3615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down frame-1",
+                        "text": "baba facing-down walk-1",
                         "italic": false
                      }
                   },
@@ -3583,7 +3647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down frame-2",
+                        "text": "baba facing-down walk-2",
                         "italic": false
                      }
                   },
@@ -3615,7 +3679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing-down frame-3",
+                        "text": "baba facing-down walk-3",
                         "italic": false
                      }
                   },
@@ -3775,7 +3839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right frame-0",
+                        "text": "keke facing-right walk-0",
                         "italic": false
                      }
                   },
@@ -3807,7 +3871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right frame-1",
+                        "text": "keke facing-right walk-1",
                         "italic": false
                      }
                   },
@@ -3839,7 +3903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right frame-2",
+                        "text": "keke facing-right walk-2",
                         "italic": false
                      }
                   },
@@ -3871,7 +3935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right frame-3",
+                        "text": "keke facing-right walk-3",
                         "italic": false
                      }
                   },
@@ -3903,7 +3967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up frame-0",
+                        "text": "keke facing-up walk-0",
                         "italic": false
                      }
                   },
@@ -3935,7 +3999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up frame-1",
+                        "text": "keke facing-up walk-1",
                         "italic": false
                      }
                   },
@@ -3967,7 +4031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up frame-2",
+                        "text": "keke facing-up walk-2",
                         "italic": false
                      }
                   },
@@ -3999,7 +4063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up frame-3",
+                        "text": "keke facing-up walk-3",
                         "italic": false
                      }
                   },
@@ -4031,7 +4095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left frame-0",
+                        "text": "keke facing-left walk-0",
                         "italic": false
                      }
                   },
@@ -4063,7 +4127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left frame-1",
+                        "text": "keke facing-left walk-1",
                         "italic": false
                      }
                   },
@@ -4095,7 +4159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left frame-2",
+                        "text": "keke facing-left walk-2",
                         "italic": false
                      }
                   },
@@ -4127,7 +4191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left frame-3",
+                        "text": "keke facing-left walk-3",
                         "italic": false
                      }
                   },
@@ -4159,7 +4223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down frame-0",
+                        "text": "keke facing-down walk-0",
                         "italic": false
                      }
                   },
@@ -4191,7 +4255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down frame-1",
+                        "text": "keke facing-down walk-1",
                         "italic": false
                      }
                   },
@@ -4223,7 +4287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down frame-2",
+                        "text": "keke facing-down walk-2",
                         "italic": false
                      }
                   },
@@ -4255,7 +4319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down frame-3",
+                        "text": "keke facing-down walk-3",
                         "italic": false
                      }
                   },
@@ -4415,7 +4479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right frame-0",
+                        "text": "me facing-right walk-0",
                         "italic": false
                      }
                   },
@@ -4447,7 +4511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right frame-1",
+                        "text": "me facing-right walk-1",
                         "italic": false
                      }
                   },
@@ -4479,7 +4543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right frame-2",
+                        "text": "me facing-right walk-2",
                         "italic": false
                      }
                   },
@@ -4511,7 +4575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right frame-3",
+                        "text": "me facing-right walk-3",
                         "italic": false
                      }
                   },
@@ -4543,7 +4607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up frame-0",
+                        "text": "me facing-up walk-0",
                         "italic": false
                      }
                   },
@@ -4575,7 +4639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up frame-1",
+                        "text": "me facing-up walk-1",
                         "italic": false
                      }
                   },
@@ -4607,7 +4671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up frame-2",
+                        "text": "me facing-up walk-2",
                         "italic": false
                      }
                   },
@@ -4639,7 +4703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up frame-3",
+                        "text": "me facing-up walk-3",
                         "italic": false
                      }
                   },
@@ -4671,7 +4735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left frame-0",
+                        "text": "me facing-left walk-0",
                         "italic": false
                      }
                   },
@@ -4703,7 +4767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left frame-1",
+                        "text": "me facing-left walk-1",
                         "italic": false
                      }
                   },
@@ -4735,7 +4799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left frame-2",
+                        "text": "me facing-left walk-2",
                         "italic": false
                      }
                   },
@@ -4767,7 +4831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left frame-3",
+                        "text": "me facing-left walk-3",
                         "italic": false
                      }
                   },
@@ -4799,7 +4863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down frame-0",
+                        "text": "me facing-down walk-0",
                         "italic": false
                      }
                   },
@@ -4831,7 +4895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down frame-1",
+                        "text": "me facing-down walk-1",
                         "italic": false
                      }
                   },
@@ -4863,7 +4927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down frame-2",
+                        "text": "me facing-down walk-2",
                         "italic": false
                      }
                   },
@@ -4895,7 +4959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down frame-3",
+                        "text": "me facing-down walk-3",
                         "italic": false
                      }
                   },
@@ -5055,7 +5119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right frame-0",
+                        "text": "robot facing-right walk-0",
                         "italic": false
                      }
                   },
@@ -5087,7 +5151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right frame-1",
+                        "text": "robot facing-right walk-1",
                         "italic": false
                      }
                   },
@@ -5119,7 +5183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right frame-2",
+                        "text": "robot facing-right walk-2",
                         "italic": false
                      }
                   },
@@ -5151,7 +5215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right frame-3",
+                        "text": "robot facing-right walk-3",
                         "italic": false
                      }
                   },
@@ -5183,7 +5247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up frame-0",
+                        "text": "robot facing-up walk-0",
                         "italic": false
                      }
                   },
@@ -5215,7 +5279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up frame-1",
+                        "text": "robot facing-up walk-1",
                         "italic": false
                      }
                   },
@@ -5247,7 +5311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up frame-2",
+                        "text": "robot facing-up walk-2",
                         "italic": false
                      }
                   },
@@ -5279,7 +5343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up frame-3",
+                        "text": "robot facing-up walk-3",
                         "italic": false
                      }
                   },
@@ -5311,7 +5375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left frame-0",
+                        "text": "robot facing-left walk-0",
                         "italic": false
                      }
                   },
@@ -5343,7 +5407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left frame-1",
+                        "text": "robot facing-left walk-1",
                         "italic": false
                      }
                   },
@@ -5375,7 +5439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left frame-2",
+                        "text": "robot facing-left walk-2",
                         "italic": false
                      }
                   },
@@ -5407,7 +5471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left frame-3",
+                        "text": "robot facing-left walk-3",
                         "italic": false
                      }
                   },
@@ -5439,7 +5503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down frame-0",
+                        "text": "robot facing-down walk-0",
                         "italic": false
                      }
                   },
@@ -5471,7 +5535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down frame-1",
+                        "text": "robot facing-down walk-1",
                         "italic": false
                      }
                   },
@@ -5503,7 +5567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down frame-2",
+                        "text": "robot facing-down walk-2",
                         "italic": false
                      }
                   },
@@ -5535,7 +5599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down frame-3",
+                        "text": "robot facing-down walk-3",
                         "italic": false
                      }
                   },
@@ -6199,70 +6263,6 @@
                      "block": "minecraft:note_block",
                      "properties": {
                         "instrument": "guitar",
-                        "note": 9
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "cloud up-false down-false left-false right-false",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:184}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
-                        "note": 10
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "cloud up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:185}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "guitar",
                         "note": 11
                      }
                   }
@@ -6271,7 +6271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-false left-false right-false",
+                        "text": "cloud up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6303,7 +6303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-false left-false right-true",
+                        "text": "cloud up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6335,7 +6335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-false left-true right-false",
+                        "text": "cloud up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6367,7 +6367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-false left-true right-true",
+                        "text": "cloud up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6399,7 +6399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-false left-true right-false",
+                        "text": "cloud up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6431,7 +6431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-false left-true right-true",
+                        "text": "cloud up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6463,7 +6463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-true left-false right-false",
+                        "text": "cloud up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6495,7 +6495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-true left-false right-true",
+                        "text": "cloud up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6527,7 +6527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-true left-false right-false",
+                        "text": "cloud up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -6559,7 +6559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-true left-false right-true",
+                        "text": "cloud up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -6591,7 +6591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-true left-true right-false",
+                        "text": "cloud up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -6623,7 +6623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-false down-true left-true right-true",
+                        "text": "cloud up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -6655,7 +6655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-true left-true right-false",
+                        "text": "cloud up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -6687,13 +6687,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cloud up-true down-true left-true right-true",
+                        "text": "cloud up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:199}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 0
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "cloud up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:200}"
                   }
                ]
             }
@@ -6719,45 +6751,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-false left-false right-false",
+                        "text": "cloud up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:201}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "chime",
-                        "note": 2
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "fence up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:202}"
                   }
                ]
             }
@@ -6783,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-false left-false right-false",
+                        "text": "fence up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6815,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-false left-false right-true",
+                        "text": "fence up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6847,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-false left-true right-false",
+                        "text": "fence up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -6879,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-false left-true right-true",
+                        "text": "fence up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -6911,7 +6911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-false left-true right-false",
+                        "text": "fence up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -6943,7 +6943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-false left-true right-true",
+                        "text": "fence up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -6975,7 +6975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-true left-false right-false",
+                        "text": "fence up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7007,7 +7007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-true left-false right-true",
+                        "text": "fence up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7039,7 +7039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-true left-false right-false",
+                        "text": "fence up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7071,7 +7071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-true left-false right-true",
+                        "text": "fence up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7103,7 +7103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-true left-true right-false",
+                        "text": "fence up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7135,7 +7135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-false down-true left-true right-true",
+                        "text": "fence up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7167,7 +7167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-true left-true right-false",
+                        "text": "fence up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7199,13 +7199,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fence up-true down-true left-true right-true",
+                        "text": "fence up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:216}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "fence up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:217}"
                   }
                ]
             }
@@ -7231,45 +7263,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-false left-false right-false",
+                        "text": "fence up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:218}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "chime",
-                        "note": 19
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "grass up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:219}"
                   }
                ]
             }
@@ -7295,7 +7295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-false left-false right-false",
+                        "text": "grass up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7327,7 +7327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-false left-false right-true",
+                        "text": "grass up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7359,7 +7359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-false left-true right-false",
+                        "text": "grass up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7391,7 +7391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-false left-true right-true",
+                        "text": "grass up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7423,7 +7423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-false left-true right-false",
+                        "text": "grass up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7455,7 +7455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-false left-true right-true",
+                        "text": "grass up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7487,7 +7487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-true left-false right-false",
+                        "text": "grass up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7519,7 +7519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-true left-false right-true",
+                        "text": "grass up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7551,7 +7551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-true left-false right-false",
+                        "text": "grass up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7583,7 +7583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-true left-false right-true",
+                        "text": "grass up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7615,7 +7615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-true left-true right-false",
+                        "text": "grass up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -7647,7 +7647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-false down-true left-true right-true",
+                        "text": "grass up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -7679,7 +7679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-true left-true right-false",
+                        "text": "grass up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -7711,13 +7711,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "grass up-true down-true left-true right-true",
+                        "text": "grass up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:233}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 9
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "grass up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:234}"
                   }
                ]
             }
@@ -7743,45 +7775,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-false left-false right-false",
+                        "text": "grass up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:235}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "xylophone",
-                        "note": 11
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "hedge up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:236}"
                   }
                ]
             }
@@ -7807,7 +7807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-false left-false right-false",
+                        "text": "hedge up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7839,7 +7839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-false left-false right-true",
+                        "text": "hedge up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7871,7 +7871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-false left-true right-false",
+                        "text": "hedge up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -7903,7 +7903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-false left-true right-true",
+                        "text": "hedge up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -7935,7 +7935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-false left-true right-false",
+                        "text": "hedge up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -7967,7 +7967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-false left-true right-true",
+                        "text": "hedge up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -7999,7 +7999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-true left-false right-false",
+                        "text": "hedge up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8031,7 +8031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-true left-false right-true",
+                        "text": "hedge up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8063,7 +8063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-true left-false right-false",
+                        "text": "hedge up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8095,7 +8095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-true left-false right-true",
+                        "text": "hedge up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8127,7 +8127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-true left-true right-false",
+                        "text": "hedge up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8159,7 +8159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-false down-true left-true right-true",
+                        "text": "hedge up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8191,7 +8191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-true left-true right-false",
+                        "text": "hedge up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8223,13 +8223,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "hedge up-true down-true left-true right-true",
+                        "text": "hedge up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:250}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "iron_xylophone",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "hedge up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:251}"
                   }
                ]
             }
@@ -8255,45 +8287,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-false left-false right-false",
+                        "text": "hedge up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:252}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "iron_xylophone",
-                        "note": 3
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "ice up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:253}"
                   }
                ]
             }
@@ -8319,7 +8319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-false left-false right-false",
+                        "text": "ice up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8351,7 +8351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-false left-false right-true",
+                        "text": "ice up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8383,7 +8383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-false left-true right-false",
+                        "text": "ice up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8415,7 +8415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-false left-true right-true",
+                        "text": "ice up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8447,7 +8447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-false left-true right-false",
+                        "text": "ice up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8479,7 +8479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-false left-true right-true",
+                        "text": "ice up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8511,7 +8511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-true left-false right-false",
+                        "text": "ice up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8543,7 +8543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-true left-false right-true",
+                        "text": "ice up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -8575,7 +8575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-true left-false right-false",
+                        "text": "ice up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8607,7 +8607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-true left-false right-true",
+                        "text": "ice up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8639,7 +8639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-true left-true right-false",
+                        "text": "ice up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -8671,7 +8671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-false down-true left-true right-true",
+                        "text": "ice up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -8703,7 +8703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-true left-true right-false",
+                        "text": "ice up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -8735,13 +8735,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice up-true down-true left-true right-true",
+                        "text": "ice up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:267}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "iron_xylophone",
+                        "note": 18
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "ice up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:268}"
                   }
                ]
             }
@@ -8767,45 +8799,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-false left-false right-false",
+                        "text": "ice up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:269}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "iron_xylophone",
-                        "note": 20
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "lava up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:270}"
                   }
                ]
             }
@@ -8831,7 +8831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-false left-false right-false",
+                        "text": "lava up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8863,7 +8863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-false left-false right-true",
+                        "text": "lava up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8895,7 +8895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-false left-true right-false",
+                        "text": "lava up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -8927,7 +8927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-false left-true right-true",
+                        "text": "lava up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -8959,7 +8959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-false left-true right-false",
+                        "text": "lava up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -8991,7 +8991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-false left-true right-true",
+                        "text": "lava up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9023,7 +9023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-true left-false right-false",
+                        "text": "lava up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9055,7 +9055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-true left-false right-true",
+                        "text": "lava up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9087,7 +9087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-true left-false right-false",
+                        "text": "lava up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9119,7 +9119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-true left-false right-true",
+                        "text": "lava up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9151,7 +9151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-true left-true right-false",
+                        "text": "lava up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9183,7 +9183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-false down-true left-true right-true",
+                        "text": "lava up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9215,7 +9215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-true left-true right-false",
+                        "text": "lava up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9247,13 +9247,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava up-true down-true left-true right-true",
+                        "text": "lava up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:284}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "cow_bell",
+                        "note": 10
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "lava up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:285}"
                   }
                ]
             }
@@ -9279,45 +9311,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-false left-false right-false",
+                        "text": "lava up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:286}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "cow_bell",
-                        "note": 12
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "pipe up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:287}"
                   }
                ]
             }
@@ -9343,7 +9343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-false left-false right-false",
+                        "text": "pipe up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9375,7 +9375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-false left-false right-true",
+                        "text": "pipe up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9407,7 +9407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-false left-true right-false",
+                        "text": "pipe up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9439,7 +9439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-false left-true right-true",
+                        "text": "pipe up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9471,7 +9471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-false left-true right-false",
+                        "text": "pipe up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9503,7 +9503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-false left-true right-true",
+                        "text": "pipe up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9535,7 +9535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-true left-false right-false",
+                        "text": "pipe up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -9567,7 +9567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-true left-false right-true",
+                        "text": "pipe up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -9599,7 +9599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-true left-false right-false",
+                        "text": "pipe up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9631,7 +9631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-true left-false right-true",
+                        "text": "pipe up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9663,7 +9663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-true left-true right-false",
+                        "text": "pipe up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -9695,7 +9695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-false down-true left-true right-true",
+                        "text": "pipe up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -9727,7 +9727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-true left-true right-false",
+                        "text": "pipe up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -9759,13 +9759,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe up-true down-true left-true right-true",
+                        "text": "pipe up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:301}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "didgeridoo",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "pipe up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:302}"
                   }
                ]
             }
@@ -9791,45 +9823,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-false left-false right-false",
+                        "text": "pipe up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:303}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "didgeridoo",
-                        "note": 4
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "rubble up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:304}"
                   }
                ]
             }
@@ -9855,7 +9855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-false left-false right-false",
+                        "text": "rubble up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9887,7 +9887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-false left-false right-true",
+                        "text": "rubble up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9919,7 +9919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-false left-true right-false",
+                        "text": "rubble up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -9951,7 +9951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-false left-true right-true",
+                        "text": "rubble up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -9983,7 +9983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-false left-true right-false",
+                        "text": "rubble up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10015,7 +10015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-false left-true right-true",
+                        "text": "rubble up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10047,7 +10047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-true left-false right-false",
+                        "text": "rubble up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10079,7 +10079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-true left-false right-true",
+                        "text": "rubble up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10111,7 +10111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-true left-false right-false",
+                        "text": "rubble up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10143,7 +10143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-true left-false right-true",
+                        "text": "rubble up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10175,7 +10175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-true left-true right-false",
+                        "text": "rubble up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10207,7 +10207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-false down-true left-true right-true",
+                        "text": "rubble up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10239,7 +10239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-true left-true right-false",
+                        "text": "rubble up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10271,13 +10271,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble up-true down-true left-true right-true",
+                        "text": "rubble up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:318}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "didgeridoo",
+                        "note": 19
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "rubble up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:319}"
                   }
                ]
             }
@@ -10303,45 +10335,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-false left-false right-false",
+                        "text": "rubble up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:320}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "didgeridoo",
-                        "note": 21
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "wall up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:321}"
                   }
                ]
             }
@@ -10367,7 +10367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-false left-false right-false",
+                        "text": "wall up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10399,7 +10399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-false left-false right-true",
+                        "text": "wall up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10431,7 +10431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-false left-true right-false",
+                        "text": "wall up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10463,7 +10463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-false left-true right-true",
+                        "text": "wall up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10495,7 +10495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-false left-true right-false",
+                        "text": "wall up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10527,7 +10527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-false left-true right-true",
+                        "text": "wall up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10559,7 +10559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-true left-false right-false",
+                        "text": "wall up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -10591,7 +10591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-true left-false right-true",
+                        "text": "wall up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -10623,7 +10623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-true left-false right-false",
+                        "text": "wall up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10655,7 +10655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-true left-false right-true",
+                        "text": "wall up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10687,7 +10687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-true left-true right-false",
+                        "text": "wall up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -10719,7 +10719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-false down-true left-true right-true",
+                        "text": "wall up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -10751,7 +10751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-true left-true right-false",
+                        "text": "wall up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -10783,13 +10783,45 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall up-true down-true left-true right-true",
+                        "text": "wall up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:335}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "bit",
+                        "note": 11
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "wall up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:336}"
                   }
                ]
             }
@@ -10815,45 +10847,13 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-false left-false right-false",
+                        "text": "wall up-true down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:337}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "minecraft:item",
-               "name": "minecraft:note_block",
-               "conditions": [
-                  {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:note_block",
-                     "properties": {
-                        "instrument": "bit",
-                        "note": 13
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "water up-false down-false left-false right-true",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:338}"
                   }
                ]
             }
@@ -10879,7 +10879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-false left-false right-false",
+                        "text": "water up-false down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10911,7 +10911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-false left-false right-true",
+                        "text": "water up-false down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -10943,7 +10943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-false left-true right-false",
+                        "text": "water up-true down-false left-false right-false",
                         "italic": false
                      }
                   },
@@ -10975,7 +10975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-false left-true right-true",
+                        "text": "water up-true down-false left-false right-true",
                         "italic": false
                      }
                   },
@@ -11007,7 +11007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-false left-true right-false",
+                        "text": "water up-false down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -11039,7 +11039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-false left-true right-true",
+                        "text": "water up-false down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -11071,7 +11071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-true left-false right-false",
+                        "text": "water up-true down-false left-true right-false",
                         "italic": false
                      }
                   },
@@ -11103,7 +11103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-true left-false right-true",
+                        "text": "water up-true down-false left-true right-true",
                         "italic": false
                      }
                   },
@@ -11135,7 +11135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-true left-false right-false",
+                        "text": "water up-false down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -11167,7 +11167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-true left-false right-true",
+                        "text": "water up-false down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -11199,7 +11199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-true left-true right-false",
+                        "text": "water up-true down-true left-false right-false",
                         "italic": false
                      }
                   },
@@ -11231,7 +11231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-false down-true left-true right-true",
+                        "text": "water up-true down-true left-false right-true",
                         "italic": false
                      }
                   },
@@ -11263,7 +11263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-true left-true right-false",
+                        "text": "water up-false down-true left-true right-false",
                         "italic": false
                      }
                   },
@@ -11295,13 +11295,77 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water up-true down-true left-true right-true",
+                        "text": "water up-false down-true left-true right-true",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:352}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "banjo",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water up-true down-true left-true right-false",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:353}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "banjo",
+                        "note": 4
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water up-true down-true left-true right-true",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:354}"
                   }
                ]
             }
