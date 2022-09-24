@@ -196,14 +196,8 @@ for a,grids in enumerate(generated):
       p['file'] = p['file'].replace(f'anim{a-1}', f'anim{a}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{a}.json')
 
-step = []
-props = [
-  'data modify storage baba:main properties set value [{sprite:"text",property:"push"}]',
-  'data modify storage baba:main transforms set value []'
-]
 load = [
-  f'fill 0 11 0 {manager.rows-1} 11 {manager.columns-1} air',
-  f'fill 0 11 0 {manager.rows-1} 11 {manager.columns-1} jukebox{{RecordItem:{{id:tnt,Count:1b,tag:{{tiles:[]}}}}}}'
+  f'kill @e[type=marker,tag=baba.tile]'
 ]
 save = [
     f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete',
@@ -213,16 +207,12 @@ for h in range(3):
   save.extend([
     f'fill 0 {h*2+1} 0 {manager.rows-1} {h*2+1} {manager.columns-1} air',
   ])
-props_after = []
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
       save.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/save_block{h}')
-    step.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/step_tile')
-    props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/properties/check_text')
-    props_after.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/properties/assign')
     if c==0:
       text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
@@ -230,23 +220,8 @@ for r in range(manager.rows):
       text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
-step.extend([
-  'execute at @e[type=marker,tag=baba.you] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
-  'execute if score direction baba matches 1.. run function baba:board/movement/process/you',
-  'kill @e[type=marker,tag=baba.you]',
-  'execute at @e[type=marker,tag=baba.move] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
-  'function baba:board/movement/process/move',
-  'kill @e[type=marker,tag=baba.move]',
-  'execute at @e[type=marker,tag=baba.shift] run data modify block ~ ~ ~ RecordItem.tag.tiles[].moved set value 0b',
-  'function baba:board/movement/process/shift',
-  'kill @e[type=marker,tag=baba.shift]',
-  'function baba:text/update_text',
-])
 load.append('function baba:text/update_text')
 text.append('function baba:text/update_anim')
-props.extend(props_after)
-tat.write_lines(step, 'datapack/data/baba/functions/board/step.mcfunction')
-tat.write_lines(props, 'datapack/data/baba/functions/board/properties/update.mcfunction')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
 tat.write_lines(save, 'datapack/data/baba/functions/io/save_level.mcfunction')
 tat.write_lines(text, 'datapack/data/baba/functions/text/update_text.mcfunction')
@@ -286,13 +261,20 @@ for h in range(3):
   tat.write_lines(block, f'datapack/data/baba/functions/io/save_block{h}.mcfunction')
 lines = []
 lines2 = []
+instruments = {}
 for t,i in manager.ids.items():
-  noteblock = note_block(i)
+  (inst, note) = note_block(i)
+  if inst not in instruments:
+    instruments[inst] = []
+    lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/load_block/{inst}')
   snbt_set = nbt(t.name, t.metadata, True)
   snbt_check = nbt(t.name, t.metadata, False)
-  lines.append(f'execute if block ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}] run data modify block ~ 11 ~ RecordItem.tag.tiles append value {snbt_set}')
-  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~ ~ note_block[instrument={noteblock[0]},note={noteblock[1]}]')
-  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~-1 ~ {instrument(noteblock[0])}')
+  instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run summon marker ~ ~ ~ {{Tags:["baba.tile"],data:{snbt_set}}}')
+  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
+  lines2.append(f'execute if data storage baba:main tile{snbt_check} run setblock ~ ~-1 ~ {instrument(inst)}')
+tat.delete_folder(f'datapack/data/baba/functions/io/load_block')
+for i,fn in instruments.items():
+  tat.write_lines(fn, f'datapack/data/baba/functions/io/load_block/{i}.mcfunction')
 tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
 tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_tile.mcfunction')
 

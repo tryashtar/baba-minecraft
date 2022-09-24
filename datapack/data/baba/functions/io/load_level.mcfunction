@@ -1,5 +1,4 @@
-fill 0 11 0 19 11 39 air
-fill 0 11 0 19 11 39 jukebox{RecordItem:{id:tnt,Count:1b,tag:{tiles:[]}}}
+kill @e[type=marker,tag=baba.tile]
 execute positioned 19 1 0 run function baba:io/load_block
 execute positioned 19 3 0 run function baba:io/load_block
 execute positioned 19 5 0 run function baba:io/load_block
