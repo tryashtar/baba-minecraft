@@ -113,7 +113,7 @@ class TileManager:
     self.sprite_ids = {}
     self.sprite_collections = {}
     self.lang = {"baba.row_end":"-","baba.empty_tile":" ","baba.overlay":"!"}
-    self.providers = [{"type":"space","advances":{" ":self.scale, "!":-self.scale, '.':-3, "-":-self.scale*self.columns,"!":-self.scale}}]
+    self.providers = [{"type":"space","advances":{" ":self.scale, "!":-self.scale, '.':-3, "-":-self.scale*(self.columns+2),"!":-self.scale}}]
     for r in range(rows):
       self.charmap[r] = {}
   def next_char(self):
@@ -218,7 +218,11 @@ for r in range(manager.rows):
     step.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/step_tile')
     props.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:board/properties/check_text')
     props_after.append(f'execute positioned {manager.rows-r-1} 11 {c} if data block ~ ~ ~ RecordItem.tag.tiles[0] run function baba:board/properties/assign')
+    if c==0:
+      text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
     text.append(f'execute positioned {manager.rows-r-1} 11 {c} run function baba:text/check_tile/row{r}')
+    if c==manager.columns-1:
+      text.append(f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'')
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
 step.extend([
