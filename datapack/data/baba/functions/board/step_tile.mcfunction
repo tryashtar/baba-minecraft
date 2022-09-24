@@ -1,18 +1,16 @@
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}] run function baba:board/movement/prepass/you
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["move"]}] run function baba:board/movement/prepass/move
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["shift"]}] run function baba:board/movement/prepass/shift
-
-execute if data block ~ ~ ~ RecordItem.tag.tiles[].frame run function baba:board/graphics/frame
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"cloud"}] run function baba:board/graphics/cloud
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"fence"}] run function baba:board/graphics/fence
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"grass"}] run function baba:board/graphics/grass
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"hedge"}] run function baba:board/graphics/hedge
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"ice"}] run function baba:board/graphics/ice
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"lava"}] run function baba:board/graphics/lava
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"pipe"}] run function baba:board/graphics/pipe
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"rubble"}] run function baba:board/graphics/rubble
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"wall"}] run function baba:board/graphics/wall
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{sprite:"water"}] run function baba:board/graphics/water
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["sink"]}] if data block ~ ~ ~ RecordItem.tag.tiles[1] run data modify block ~ ~ ~ RecordItem.tag.tiles set value []
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["defeat"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["you"]}]
-execute if data block ~ ~ ~ RecordItem.tag.tiles[{properties:["hot"]}] run data remove block ~ ~ ~ RecordItem.tag.tiles[{properties:["melt"]}]
+tag @s add self
+execute if data entity @s data.frame run function baba:board/graphics/frame
+execute if entity @s[nbt={data:{sprite:"cloud"}}] run function baba:board/graphics/cloud
+execute if entity @s[nbt={data:{sprite:"fence"}}] run function baba:board/graphics/fence
+execute if entity @s[nbt={data:{sprite:"grass"}}] run function baba:board/graphics/grass
+execute if entity @s[nbt={data:{sprite:"hedge"}}] run function baba:board/graphics/hedge
+execute if entity @s[nbt={data:{sprite:"ice"}}] run function baba:board/graphics/ice
+execute if entity @s[nbt={data:{sprite:"lava"}}] run function baba:board/graphics/lava
+execute if entity @s[nbt={data:{sprite:"pipe"}}] run function baba:board/graphics/pipe
+execute if entity @s[nbt={data:{sprite:"rubble"}}] run function baba:board/graphics/rubble
+execute if entity @s[nbt={data:{sprite:"wall"}}] run function baba:board/graphics/wall
+execute if entity @s[nbt={data:{sprite:"water"}}] run function baba:board/graphics/water
+execute if entity @s[nbt={data:{properties:["sink"]}}] if entity @e[type=marker,tag=baba.tile,tag=!self] run kill @e[type=marker,tag=baba.tile,distance=..0.1]
+execute if entity @s[nbt={data:{properties:["defeat"]}}] run kill @e[type=marker,tag=baba.tile,nbt={data:{properties:["you"]}},distance=..0.1]
+execute if entity @s[nbt={data:{properties:["hot"]}}] run kill @e[type=marker,tag=baba.tile,nbt={data:{properties:["melt"]}},distance=..0.1]
+tag @s remove self

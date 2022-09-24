@@ -1,0 +1,3 @@
+data modify storage baba:main affected_sprite set from entity @s data.text
+execute positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.tile,nbt={data:{sprite:"text",part:"is"}},distance=..0.1] positioned ~ ~ ~1 as @e[type=marker,tag=baba.tile,nbt={data:{sprite:"text","part":"noun"}},distance=..0.1] run function baba:board/rules/assign_transform
+execute positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={data:{sprite:"text",part:"is"}},distance=..0.1] positioned ~-1 ~ ~ as @e[type=marker,tag=baba.tile,nbt={data:{sprite:"text","part":"noun"}},distance=..0.1] run function baba:board/rules/assign_transform
