@@ -7,4 +7,4 @@ data modify block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}].moved set value 1b
 data modify block ^ ^ ^1 RecordItem.tag.tiles append from block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}]
 data remove block ^ ^ ^1 RecordItem.tag.tiles[].moving
 data remove block ~ ~ ~ RecordItem.tag.tiles[{moving:1b}]
-tp @s ^ ^ ^1
+tp @e[type=marker,tag=baba.move_marker,distance=..0.1] ^ ^ ^1
