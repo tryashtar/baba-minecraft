@@ -5,3 +5,5 @@ execute if entity @s[nbt={data:{walk:1}}] run data modify entity @s data.walk se
 execute if entity @s[nbt={data:{walk:0}}] run data modify entity @s data.walk set value 1
 execute if entity @s[nbt={data:{walk:-1}}] run data modify entity @s data.walk set value 0
 tp @s ^ ^ ^1
+tag @s add move_handled
+execute if score facing baba matches 1.. store result entity @s data.facing int 1 run scoreboard players get facing baba

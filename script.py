@@ -210,7 +210,7 @@ for r in range(manager.rows):
   text.extend([
     f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'',
     f'scoreboard players set last_column baba -1',
-    f'execute positioned {manager.rows-r-2} 0.9 -0.5 as @e[type=marker,tag=baba.tile,dx=1,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
+    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.tile,dx=0.5,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
     f'scoreboard players set column baba {manager.columns-1}',
     f'execute if score column baba > last_column baba run function baba:display/add_empty',
     f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\''
