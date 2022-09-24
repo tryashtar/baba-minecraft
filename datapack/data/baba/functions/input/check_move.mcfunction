@@ -1,5 +1,5 @@
-execute if entity @s[x=-1.3,distance=..0.1] run function baba:input/move/up
-execute if entity @s[x=-1.7,distance=..0.1] run function baba:input/move/down
-execute if entity @s[z=2.7,distance=..0.1] run function baba:input/move/right
-execute if entity @s[z=2.3,distance=..0.1] run function baba:input/move/left
 execute if entity @s[predicate=baba:sneaking] run function baba:input/wait
+execute if entity @s[predicate=!baba:sneaking,x=-1.199,z=0,dz=6] run function baba:input/move/up
+execute if entity @s[predicate=!baba:sneaking,x=-2.801,z=0,dz=6] run function baba:input/move/down
+execute if entity @s[predicate=!baba:sneaking,z=2.81,x=-3,dx=3] run function baba:input/move/right
+execute if entity @s[predicate=!baba:sneaking,z=1.199,x=-3,dx=3] run function baba:input/move/left
