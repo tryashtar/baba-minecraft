@@ -81,7 +81,7 @@ class Tile:
     else:
       self.desc = ""
       for k,v in self.metadata.items():
-        if k in ('part'):
+        if k in ('part', 'connector'):
           continue
         if k == 'text':
           self.desc += v + '.'
@@ -175,8 +175,11 @@ text.add_row('text', 301, 76, [{"text":"and","part":"and"}])
 text.add_row(('text', '#F0E484'), 226, 1123, [{"text":"win","part":"property"}])
 text.add_row(('text', '#4B5C1C'), 151, 301, [{"text":"stop","part":"property"}])
 text.add_row(('text', '#5F9DD1'), 1, 805, [{"text":"sink","part":"property"}])
+text.add_row(('text', '#F0E484'), 226, 730, [{"text":"open","part":"property"}])
+text.add_row(('text', '#E8543C'), 301, 730, [{"text":"shut","part":"property"}])
+text.add_row(('text', '#40748C'), 151, 1123, [{"text":"weak","part":"property"}])
 tiles = Sheet('sprites/tiles.png')
-tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, ('wall', '#737373', '#293141'), 'water'], 1, 451, ['text', {"up":False, "down":False, "left":False, "right":False}, {"up":False, "down":False, "left":False, "right":True}, {"up":True, "down":False, "left":False, "right":False}, {"up":True, "down":False, "left":False, "right":True}, {"up":False, "down":False, "left":True, "right":False}, {"up":False, "down":False, "left":True, "right":True}, {"up":True, "down":False, "left":True, "right":False}, {"up":True, "down":False, "left":True, "right":True}, {"up":False, "down":True, "left":False, "right":False}, {"up":False, "down":True, "left":False, "right":True}, {"up":True, "down":True, "left":False, "right":False}, {"up":True, "down":True, "left":False, "right":True}, {"up":False, "down":True, "left":True, "right":False}, {"up":False, "down":True, "left":True, "right":True}, {"up":True, "down":True, "left":True, "right":False}, {"up":True, "down":True, "left":True, "right":True}])
+tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, ('wall', '#737373', '#293141'), 'water'], 1, 451, ['text', {"connector":True,"up":False, "down":False, "left":False, "right":False}, {"connector":True,"up":False, "down":False, "left":False, "right":True}, {"connector":True,"up":True, "down":False, "left":False, "right":False}, {"connector":True,"up":True, "down":False, "left":False, "right":True}, {"connector":True,"up":False, "down":False, "left":True, "right":False}, {"connector":True,"up":False, "down":False, "left":True, "right":True}, {"connector":True,"up":True, "down":False, "left":True, "right":False}, {"connector":True,"up":True, "down":False, "left":True, "right":True}, {"connector":True,"up":False, "down":True, "left":False, "right":False}, {"connector":True,"up":False, "down":True, "left":False, "right":True}, {"connector":True,"up":True, "down":True, "left":False, "right":False}, {"connector":True,"up":True, "down":True, "left":False, "right":True}, {"connector":True,"up":False, "down":True, "left":True, "right":False}, {"connector":True,"up":False, "down":True, "left":True, "right":True}, {"connector":True,"up":True, "down":True, "left":True, "right":False}, {"connector":True,"up":True, "down":True, "left":True, "right":True}])
 info.add_sheet(sprites1)
 info.add_sheet(sprites2)
 info.add_sheet(sprites3)
@@ -210,6 +213,7 @@ for r in range(manager.rows):
   text.extend([
     f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'',
     f'scoreboard players set last_column baba -1',
+    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.tile,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{sprite:"baba"}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.501',
     f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.tile,dx=0.5,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
     f'scoreboard players set column baba {manager.columns-1}',
     f'execute if score column baba > last_column baba run function baba:display/add_empty',
@@ -240,8 +244,9 @@ def nbt(name, metadata, setting):
     if 'facing' not in meta:
       meta['facing'] = 4
   else:
-    if 'part' in meta:
-      del meta['part']
+    for rem in ['part', 'connector']:
+      if rem in meta:
+        del meta[rem]
   for k,v in meta.items():
     strv = v
     if type(v) is str:
@@ -305,17 +310,6 @@ for r in range(manager.rows):
     else:
       lines.append(fn[0])
   tat.write_lines(lines, f'datapack/data/baba/functions/display/check_tile/row{r}.mcfunction')
-
-connectors = ['cloud', 'fence', 'grass', 'hedge', 'ice', 'lava', 'pipe', 'rubble', 'wall', 'water']
-for c in connectors:
-  lines = [
-    f'data merge entity @s {{data:{{up:0b,down:0b,left:0b,right:0b}}}}',
-    f'execute positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.up set value 1b',
-    f'execute positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.down set value 1b',
-    f'execute positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.right set value 1b',
-    f'execute positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.tile,nbt={{data:{{sprite:"{c}"}}}},distance=..0.1] run data modify entity @s data.left set value 1b'
-  ]
-  tat.write_lines(lines, f'datapack/data/baba/functions/board/graphics/{c}.mcfunction')
 
 blockstate = {}
 custom_model = []
