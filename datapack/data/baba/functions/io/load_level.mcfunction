@@ -2399,5 +2399,6 @@ execute positioned 0 5 38 run function baba:io/load_block
 execute positioned 0 1 39 run function baba:io/load_block
 execute positioned 0 3 39 run function baba:io/load_block
 execute positioned 0 5 39 run function baba:io/load_block
+function baba:board/rules/update
 execute as @e[type=marker,tag=baba.tile,nbt={data:{connector:1b}}] at @s run function baba:board/graphics/connector
 function baba:display/update_text

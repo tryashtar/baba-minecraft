@@ -1,5 +1,3 @@
-function baba:board/rules/update
-
 scoreboard players set facing baba 0
 execute if score direction baba matches 1.. run function baba:board/movement/process/you
 tag @e[type=marker,tag=baba.tile,tag=move_success] remove move_success
@@ -12,6 +10,7 @@ function baba:board/movement/process/shift
 tag @e[type=marker,tag=baba.tile,tag=move_success] remove move_success
 tag @e[type=marker,tag=baba.tile,tag=move_done] remove move_done
 
+tag @e[type=marker,tag=baba.tile,tag=transformed] remove transformed
 function baba:board/rules/update
 
 execute as @e[type=marker,tag=baba.tile,nbt={data:{properties:["sink"]}}] at @s run function baba:board/interact/sink

@@ -224,6 +224,7 @@ for r in range(manager.rows):
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
+load.append('function baba:board/rules/update')
 load.append('execute as @e[type=marker,tag=baba.tile,nbt={data:{connector:1b}}] at @s run function baba:board/graphics/connector')
 load.append('function baba:display/update_text')
 text.append('function baba:display/update_anim')
