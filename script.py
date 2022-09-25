@@ -151,17 +151,17 @@ class TileManager:
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
 sprites1.add_similar_rows([('belt','#609CD4','#5F9DD1')], 1, 85, ['text', {"facing":4,"frame":0}, {"facing":4,"frame":1}, {"facing":4,"frame":2}, {"facing":4,"frame":3}, {"facing":1,"frame":0}, {"facing":1,"frame":1}, {"facing":1,"frame":2}, {"facing":1,"frame":3}, {"facing":3,"frame":0}, {"facing":3,"frame":1}, {"facing":3,"frame":2}, {"facing":3,"frame":3}, {"facing":2,"frame":0}, {"facing":2,"frame":1}, {"facing":2,"frame":2}, {"facing":2,"frame":3}])
-sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, 'rocket', ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
-sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, 'statue'], 276, 622, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
+sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, ('rocket','#E49950','#E49950'), ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
+sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, ('statue','#737373','#737373')], 276, 622, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
 sprites1.add_similar_rows([('bat','#8C5C9C','#8C5C9C')], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
-sprites1.add_similar_rows(['cog'], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
+sprites1.add_similar_rows([('cog','#737373','#737373')], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites2 = Sheet('sprites/sprites2.png')
-sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, ('keke', '#CE7B52', '#CE7B52'), None, 'me', None, 'robot'], 1, 1, ['text',{"facing":4,"walk":0},{"facing":4,"walk":1},{"facing":4,"walk":2},{"facing":4,"walk":3},{"facing":1,"walk":0},{"facing":1,"walk":1},{"facing":1,"walk":2},{"facing":1,"walk":3},{"facing":3,"walk":0},{"facing":3,"walk":1},{"facing":3,"walk":2},{"facing":3,"walk":3},{"facing":2,"walk":0},{"facing":2,"walk":1},{"facing":2,"walk":2},{"facing":2,"walk":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
+sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, ('keke', '#CE7B52', '#CE7B52'), None, ('me','#8E5E9C','#8E5E9C'), None, ('robot','#737373','#737373')], 1, 1, ['text',{"facing":4,"walk":0},{"facing":4,"walk":1},{"facing":4,"walk":2},{"facing":4,"walk":3},{"facing":1,"walk":0},{"facing":1,"walk":1},{"facing":1,"walk":2},{"facing":1,"walk":3},{"facing":3,"walk":0},{"facing":3,"walk":1},{"facing":3,"walk":2},{"facing":3,"walk":3},{"facing":2,"walk":0},{"facing":2,"walk":1},{"facing":2,"walk":2},{"facing":2,"walk":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
 sprites3 = Sheet('sprites/sprites3.png')
-sprites3.add_similar_rows([('algae','#5C8339','#5C8339'), None, None, ('flag', '#EDE285', '#EDE285'), None, 'key', 'love', None, None, None, None, 'ufo'], 1, 1, ['text', {}])
-sprites3.add_similar_rows(['door', 'flower', None, None, None, 'pillar', ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
-sprites3.add_similar_rows(['moon', None, None, 'star', 'tree'], 376, 451, ['text', {}])
-sprites3.add_similar_rows(['box', None, 'fire', None, 'jelly'], 751, 1, ['text', {}])
+sprites3.add_similar_rows([('algae','#5C8339','#5C8339'), None, None, ('flag', '#EDE285', '#EDE285'), None, ('key','#EDE285','#EDE285'), ('love','#EB91CA','#EB91CA'), None, None, None, None, ('ufo','#D9396A','#D9396A')], 1, 1, ['text', {}])
+sprites3.add_similar_rows([('door','#E5533B','#E5533B'), ('flower','#9183D7','#9183D7'), None, None, None, ('pillar','#737373','#737373'), ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
+sprites3.add_similar_rows([('moon','#EDE285','#EDE285'), None, None, ('star','#EDE285','#EDE285'), ('tree','#5C8339','#5C8339')], 376, 451, ['text', {}])
+sprites3.add_similar_rows(['box', None, ('fire','#421910','#421910'), None, ('jelly','#5F9DD1','#5F9DD1')], 751, 1, ['text', {}])
 text = Sheet('sprites/text.png')
 text.add_row('text', 1, 1, [{"text":"all","part":"noun"}])
 text.add_row('text', 1, 151, [{"text":"has","part":"has"}])
@@ -179,7 +179,7 @@ text.add_row(('text', '#F0E484'), 226, 730, [{"text":"open","part":"property"}])
 text.add_row(('text', '#E8543C'), 301, 730, [{"text":"shut","part":"property"}])
 text.add_row(('text', '#40748C'), 151, 1123, [{"text":"weak","part":"property"}])
 tiles = Sheet('sprites/tiles.png')
-tiles.add_similar_rows(['cloud', 'fence', None, 'grass', 'hedge', 'ice', 'lava', None, 'pipe', None, None, 'rubble', None, None, ('wall', '#737373', '#293141'), 'water'], 1, 451, ['text', {"connector":True,"up":False, "down":False, "left":False, "right":False}, {"connector":True,"up":False, "down":False, "left":False, "right":True}, {"connector":True,"up":True, "down":False, "left":False, "right":False}, {"connector":True,"up":True, "down":False, "left":False, "right":True}, {"connector":True,"up":False, "down":False, "left":True, "right":False}, {"connector":True,"up":False, "down":False, "left":True, "right":True}, {"connector":True,"up":True, "down":False, "left":True, "right":False}, {"connector":True,"up":True, "down":False, "left":True, "right":True}, {"connector":True,"up":False, "down":True, "left":False, "right":False}, {"connector":True,"up":False, "down":True, "left":False, "right":True}, {"connector":True,"up":True, "down":True, "left":False, "right":False}, {"connector":True,"up":True, "down":True, "left":False, "right":True}, {"connector":True,"up":False, "down":True, "left":True, "right":False}, {"connector":True,"up":False, "down":True, "left":True, "right":True}, {"connector":True,"up":True, "down":True, "left":True, "right":False}, {"connector":True,"up":True, "down":True, "left":True, "right":True}])
+tiles.add_similar_rows([('cloud','#83C8E5','#83C8E5'), ('fence','#90673E','#90673E'), None, ('grass','#A5B13F','#303824'), ('hedge','#4B5C1C','#4B5C1C'), ('ice','#5F9DD1','#5F9DD1'), ('lava','#E49950','#E49950'), None, ('pipe','#293141','#293141'), None, None, ('rubble','#503F24','#503F24'), None, None, ('wall', '#737373', '#293141'), ('water','#5F9DD1','#5F9DD1')], 1, 451, ['text', {"connector":True,"up":False, "down":False, "left":False, "right":False}, {"connector":True,"up":False, "down":False, "left":False, "right":True}, {"connector":True,"up":True, "down":False, "left":False, "right":False}, {"connector":True,"up":True, "down":False, "left":False, "right":True}, {"connector":True,"up":False, "down":False, "left":True, "right":False}, {"connector":True,"up":False, "down":False, "left":True, "right":True}, {"connector":True,"up":True, "down":False, "left":True, "right":False}, {"connector":True,"up":True, "down":False, "left":True, "right":True}, {"connector":True,"up":False, "down":True, "left":False, "right":False}, {"connector":True,"up":False, "down":True, "left":False, "right":True}, {"connector":True,"up":True, "down":True, "left":False, "right":False}, {"connector":True,"up":True, "down":True, "left":False, "right":True}, {"connector":True,"up":False, "down":True, "left":True, "right":False}, {"connector":True,"up":False, "down":True, "left":True, "right":True}, {"connector":True,"up":True, "down":True, "left":True, "right":False}, {"connector":True,"up":True, "down":True, "left":True, "right":True}])
 info.add_sheet(sprites1)
 info.add_sheet(sprites2)
 info.add_sheet(sprites3)
@@ -211,19 +211,20 @@ save = [
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
   text.extend([
-    f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\'',
+    f'data modify storage baba:main text append value \'{{"translate":"baba.tile.row{r}","color":"black"}}\'',
     f'scoreboard players set last_column baba -1',
     f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.tile,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{sprite:"baba"}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.501',
     f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.tile,dx=0.5,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
     f'scoreboard players set column baba {manager.columns-1}',
     f'execute if score column baba > last_column baba run function baba:display/add_empty',
-    f'data modify storage baba:main text append value \'{{"translate":"baba.text.wall.row{r}"}}\''
+    f'data modify storage baba:main text append value \'{{"translate":"baba.tile.row{r}","color":"black"}}\''
   ])
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
+load.append('execute as @e[type=marker,tag=baba.tile,nbt={data:{connector:1b}}] at @s run function baba:board/graphics/connector')
 load.append('function baba:display/update_text')
 text.append('function baba:display/update_anim')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
@@ -270,7 +271,7 @@ for t,i in manager.ids.items():
     sprites[t.name] = []
   snbt_set = nbt(t.name, t.metadata, True)
   snbt_check = nbt(t.name, t.metadata, False)
-  instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run summon marker ~ ~ ~ {{Tags:["baba.tile"],data:{snbt_set}}}')
+  instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run summon marker ~ 1 ~ {{Tags:["baba.tile"],data:{snbt_set}}}')
   sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
   sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~-1 ~ {instrument(inst)}')
 tat.delete_folder(f'datapack/data/baba/functions/io/load_block')
