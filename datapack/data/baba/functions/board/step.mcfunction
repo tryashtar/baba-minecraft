@@ -24,6 +24,7 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["weak"]}}] at @
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["hot"]}}] at @s run function baba:board/interact/hot
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["defeat"]}}] at @s run function baba:board/interact/defeat
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @s run function baba:board/interact/shut
+execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["win"]}}] at @s run function baba:board/interact/win
 
 function baba:board/rules/update
 

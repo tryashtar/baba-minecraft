@@ -1,0 +1,21 @@
+{
+   "win": {
+      "sounds": ["baba:win"]
+   },
+   "sink": {
+      "sounds": [
+         "baba:sink1",
+         "baba:sink2",
+         "baba:sink3",
+         "baba:sink4"
+      ]
+   },
+   "open": {
+      "sounds": [
+         "baba:open1",
+         "baba:open2",
+         "baba:open3",
+         "baba:open4"
+      ]
+   }
+}
