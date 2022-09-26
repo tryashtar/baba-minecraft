@@ -1,5 +1,6 @@
-scoreboard players set push_success baba 1
-scoreboard players add @s walk 1
-scoreboard players set @s[scores={walk=4..}] walk 0
-tp @s ^ ^ ^1
-execute if score facing baba matches 1.. run scoreboard players operation @s facing = facing baba
+scoreboard players add @e[type=marker,tag=baba.object,tag=can_move] walk 1
+scoreboard players set @e[type=marker,tag=baba.object,tag=can_move,scores={walk=4..}] walk 0
+execute as @e[type=marker,tag=baba.object,tag=can_move] positioned as @s run tp @s ^ ^ ^1
+scoreboard players operation @e[type=marker,tag=baba.object,tag=can_move] facing = @s facing
+tag @e[type=marker,tag=baba.object,tag=can_move] add move_success
+tag @e[type=marker,tag=baba.object,tag=can_move] remove can_move
