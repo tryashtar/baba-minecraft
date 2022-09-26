@@ -21,6 +21,6 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @
 
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 execute as @e[type=marker,tag=baba.object] run function baba:board/graphics/frame
-execute as @e[type=marker,tag=baba.object] at @s unless block ~ -1 ~ glass run kill @s
+execute as @e[type=marker,tag=baba.object] at @s unless block ~ -1 ~ glass run function baba:board/interact/destroy
 
 function baba:display/update_text
