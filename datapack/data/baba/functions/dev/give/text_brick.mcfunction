@@ -1,1 +1,0 @@
-give @s note_block{babatile:1b,CustomModelData:214,BlockStateTag:{instrument:"chime",note:"14"},display:{Name:'{"text":"text brick","italic":false}'}}

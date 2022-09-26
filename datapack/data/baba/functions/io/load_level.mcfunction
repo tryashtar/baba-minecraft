@@ -1,4 +1,4 @@
-kill @e[type=marker,tag=baba.tile]
+kill @e[type=marker,tag=baba.object]
 execute positioned 19 1 0 run function baba:io/load_block
 execute positioned 19 3 0 run function baba:io/load_block
 execute positioned 19 5 0 run function baba:io/load_block
@@ -2400,5 +2400,5 @@ execute positioned 0 1 39 run function baba:io/load_block
 execute positioned 0 3 39 run function baba:io/load_block
 execute positioned 0 5 39 run function baba:io/load_block
 function baba:board/rules/update
-execute as @e[type=marker,tag=baba.tile,nbt={data:{connector:1b}}] at @s run function baba:board/graphics/connector
+execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 function baba:display/update_text

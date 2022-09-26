@@ -1,8 +1,8 @@
-execute if entity @s[nbt={data:{sprite:"hand",facing:4}}] run setblock ~ ~ ~ note_block[instrument=basedrum,note=11]
-execute if entity @s[nbt={data:{sprite:"hand",facing:4}}] run setblock ~ ~-1 ~ stone
-execute if entity @s[nbt={data:{sprite:"hand",facing:1}}] run setblock ~ ~ ~ note_block[instrument=basedrum,note=12]
-execute if entity @s[nbt={data:{sprite:"hand",facing:1}}] run setblock ~ ~-1 ~ stone
-execute if entity @s[nbt={data:{sprite:"hand",facing:3}}] run setblock ~ ~ ~ note_block[instrument=basedrum,note=13]
-execute if entity @s[nbt={data:{sprite:"hand",facing:3}}] run setblock ~ ~-1 ~ stone
-execute if entity @s[nbt={data:{sprite:"hand",facing:2}}] run setblock ~ ~ ~ note_block[instrument=basedrum,note=14]
-execute if entity @s[nbt={data:{sprite:"hand",facing:2}}] run setblock ~ ~-1 ~ stone
+execute if entity @s[scores={facing=4}] run setblock ~ ~ ~ note_block[instrument=snare,note=0]
+execute if entity @s[scores={facing=4}] run setblock ~ ~-1 ~ sand
+execute if entity @s[scores={facing=1}] run setblock ~ ~ ~ note_block[instrument=snare,note=1]
+execute if entity @s[scores={facing=1}] run setblock ~ ~-1 ~ sand
+execute if entity @s[scores={facing=3}] run setblock ~ ~ ~ note_block[instrument=snare,note=2]
+execute if entity @s[scores={facing=3}] run setblock ~ ~-1 ~ sand
+execute if entity @s[scores={facing=2}] run setblock ~ ~ ~ note_block[instrument=snare,note=3]
+execute if entity @s[scores={facing=2}] run setblock ~ ~-1 ~ sand

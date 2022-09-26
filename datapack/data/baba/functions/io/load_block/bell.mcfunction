@@ -1,25 +1,75 @@
-execute if block ~ ~ ~ note_block[note=0] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"fungus",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=1] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"fungus",facing:4}}
-execute if block ~ ~ ~ note_block[note=2] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"stump",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=3] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"stump",facing:4}}
-execute if block ~ ~ ~ note_block[note=4] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"is",part:"is",facing:4}}
-execute if block ~ ~ ~ note_block[note=5] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"and",part:"and",facing:4}}
-execute if block ~ ~ ~ note_block[note=6] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"not",part:"not",facing:4}}
-execute if block ~ ~ ~ note_block[note=7] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"on",part:"on",facing:4}}
-execute if block ~ ~ ~ note_block[note=8] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"near",part:"near",facing:4}}
-execute if block ~ ~ ~ note_block[note=9] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"facing",part:"facing",facing:4}}
-execute if block ~ ~ ~ note_block[note=10] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"has",part:"has",facing:4}}
-execute if block ~ ~ ~ note_block[note=11] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"make",part:"make",facing:4}}
-execute if block ~ ~ ~ note_block[note=12] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"write",part:"write",facing:4}}
-execute if block ~ ~ ~ note_block[note=13] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"all",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=14] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"empty",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=15] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"text",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=16] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"level",part:"noun",facing:4}}
-execute if block ~ ~ ~ note_block[note=17] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"you",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=18] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"push",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=19] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"pull",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=20] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"move",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=21] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"shift",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=22] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"defeat",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=23] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"win",part:"property",facing:4}}
-execute if block ~ ~ ~ note_block[note=24] run summon marker ~ 1 ~ {Tags:["baba.tile"],data:{sprite:"text",text:"stop",part:"property",facing:4}}
+execute if block ~ ~ ~ note_block[note=0] run summon marker ~ 1 ~ {Tags:["baba.object","part.infix","spawn"],data:{sprite:"text",text:"near"}}
+execute if block ~ ~ ~ note_block[note=0] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=0] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=1] run summon marker ~ 1 ~ {Tags:["baba.object","part.infix","spawn"],data:{sprite:"text",text:"facing"}}
+execute if block ~ ~ ~ note_block[note=1] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=1] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=2] run summon marker ~ 1 ~ {Tags:["baba.object","part.verb","spawn"],data:{sprite:"text",text:"has"}}
+execute if block ~ ~ ~ note_block[note=2] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=2] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=3] run summon marker ~ 1 ~ {Tags:["baba.object","part.verb","spawn"],data:{sprite:"text",text:"make"}}
+execute if block ~ ~ ~ note_block[note=3] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=3] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=4] run summon marker ~ 1 ~ {Tags:["baba.object","part.verb","spawn"],data:{sprite:"text",text:"write"}}
+execute if block ~ ~ ~ note_block[note=4] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=4] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=5] run summon marker ~ 1 ~ {Tags:["baba.object","part.noun","spawn"],data:{sprite:"text",text:"all"}}
+execute if block ~ ~ ~ note_block[note=5] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=5] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=6] run summon marker ~ 1 ~ {Tags:["baba.object","part.noun","spawn"],data:{sprite:"text",text:"empty"}}
+execute if block ~ ~ ~ note_block[note=6] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=6] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=7] run summon marker ~ 1 ~ {Tags:["baba.object","part.noun","spawn"],data:{sprite:"text",text:"text"}}
+execute if block ~ ~ ~ note_block[note=7] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=7] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=8] run summon marker ~ 1 ~ {Tags:["baba.object","part.noun","spawn"],data:{sprite:"text",text:"level"}}
+execute if block ~ ~ ~ note_block[note=8] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=8] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=9] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"you"}}
+execute if block ~ ~ ~ note_block[note=9] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=9] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=10] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"push"}}
+execute if block ~ ~ ~ note_block[note=10] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=10] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=11] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"pull"}}
+execute if block ~ ~ ~ note_block[note=11] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=11] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=12] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"move"}}
+execute if block ~ ~ ~ note_block[note=12] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=12] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=13] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"shift"}}
+execute if block ~ ~ ~ note_block[note=13] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=13] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=14] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"defeat"}}
+execute if block ~ ~ ~ note_block[note=14] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=14] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=15] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"win"}}
+execute if block ~ ~ ~ note_block[note=15] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=15] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=16] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"stop"}}
+execute if block ~ ~ ~ note_block[note=16] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=16] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=17] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"open"}}
+execute if block ~ ~ ~ note_block[note=17] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=17] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=18] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"shut"}}
+execute if block ~ ~ ~ note_block[note=18] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=18] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=19] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"float"}}
+execute if block ~ ~ ~ note_block[note=19] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=19] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=20] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"sink"}}
+execute if block ~ ~ ~ note_block[note=20] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=20] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=21] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"weak"}}
+execute if block ~ ~ ~ note_block[note=21] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=21] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=22] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"swap"}}
+execute if block ~ ~ ~ note_block[note=22] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=22] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=23] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"tele"}}
+execute if block ~ ~ ~ note_block[note=23] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=23] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn
+execute if block ~ ~ ~ note_block[note=24] run summon marker ~ 1 ~ {Tags:["baba.object","part.property","spawn"],data:{sprite:"text",text:"fall"}}
+execute if block ~ ~ ~ note_block[note=24] run scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] facing 4
+execute if block ~ ~ ~ note_block[note=24] run tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn

@@ -1,1 +1,1 @@
-give @s note_block{babatile:1b,CustomModelData:97,BlockStateTag:{instrument:"hat",note:"22"},display:{Name:'{"text":"key","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:63,BlockStateTag:{instrument:"snare",note:"12"},display:{Name:'{"text":"key","italic":false}'}}
