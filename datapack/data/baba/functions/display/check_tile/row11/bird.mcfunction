@@ -1,0 +1,4 @@
+execute if entity @s[nbt={data:{sprite:"bird",facing:4}}] run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.bird.facing-right.row11","color":"#E5533B"}]'
+execute if entity @s[nbt={data:{sprite:"bird",facing:1}}] run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.bird.facing-up.row11","color":"#E5533B"}]'
+execute if entity @s[nbt={data:{sprite:"bird",facing:3}}] run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.bird.facing-left.row11","color":"#E5533B"}]'
+execute if entity @s[nbt={data:{sprite:"bird",facing:2}}] run data modify storage baba:main text append value '[{"translate":"baba.overlay"},{"translate":"baba.bird.facing-down.row11","color":"#E5533B"}]'

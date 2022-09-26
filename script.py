@@ -112,6 +112,8 @@ class TileManager:
     self.ids = {}
     self.sprite_ids = {}
     self.sprite_collections = {}
+    self.note_block_id = 0
+    self.note_blocks = {}
     self.lang = {"baba.row_end":"-","baba.empty_tile":" ","baba.overlay":"!"}
     self.providers = [{"type":"space","advances":{" ":self.scale, "!":-self.scale, '.':-3, "-":-self.scale*(self.columns+2),"!":-self.scale}}]
     for r in range(rows):
@@ -140,6 +142,12 @@ class TileManager:
           if c.name not in self.sprite_ids:
             self.sprite_ids[c.name] = self.sprite_id
             self.sprite_id += 1
+            self.note_blocks[self.note_block_id] = c
+            self.note_block_id += 1
+          elif c.name=='text' or 'facing' in c.metadata:
+            if ('frame' not in c.metadata or c.metadata['frame'] == 0) and ('walk' not in c.metadata or c.metadata['walk'] == 0):
+              self.note_blocks[self.note_block_id] = c
+              self.note_block_id += 1
           if c.name not in self.sprite_collections:
             self.sprite_collections[c.name] = []
           self.sprite_collections[c.name].append(c)
@@ -151,35 +159,65 @@ class TileManager:
 info = Info()
 sprites1 = Sheet('sprites/sprites1.png')
 sprites1.add_similar_rows([('belt','#609CD4','#5F9DD1')], 1, 85, ['text', {"facing":4,"frame":0}, {"facing":4,"frame":1}, {"facing":4,"frame":2}, {"facing":4,"frame":3}, {"facing":1,"frame":0}, {"facing":1,"frame":1}, {"facing":1,"frame":2}, {"facing":1,"frame":3}, {"facing":3,"frame":0}, {"facing":3,"frame":1}, {"facing":3,"frame":2}, {"facing":3,"frame":3}, {"facing":2,"frame":0}, {"facing":2,"frame":1}, {"facing":2,"frame":2}, {"facing":2,"frame":3}])
-sprites1.add_similar_rows([('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, ('rocket','#E49950','#E49950'), ('skull','#82261C','#82261C')], 1, 397, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
+sprites1.add_similar_rows([('bird','#E5533B','#E5533B'), ('bug','#C29E46','#C29E46'), ('crab','#82261C','#82261C'), None, None, None, None, ('rocket','#E49950','#E49950'), ('skull','#82261C','#82261C')], 1, 322, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
+sprites1.add_similar_rows([('bolt','#EDE285','#EDE285'), None, None, None, 'hand'], 551, 322, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
 sprites1.add_similar_rows([('ghost','#EB91CA','#EB91CA'), None, None, None, ('statue','#737373','#737373')], 276, 622, ['text', {"facing":4}, {"facing":1}, {"facing":3}, {"facing":2}])
 sprites1.add_similar_rows([('bat','#8C5C9C','#8C5C9C')], 1, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
+sprites1.add_similar_rows([('bubble','#83C8E5','#83C8E5')], 276, 1081, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites1.add_similar_rows([('cog','#737373','#737373')], 1, 1167, ['text', {"frame":0}, {"frame":1}, {"frame":2}, {"frame":3}])
 sprites2 = Sheet('sprites/sprites2.png')
 sprites2.add_similar_rows([('baba','#D9396A','#FFFFFF'), None, None, None, None, None, None, None, None, None, ('keke', '#CE7B52', '#CE7B52'), None, ('me','#8E5E9C','#8E5E9C'), None, ('robot','#737373','#737373')], 1, 1, ['text',{"facing":4,"walk":0},{"facing":4,"walk":1},{"facing":4,"walk":2},{"facing":4,"walk":3},{"facing":1,"walk":0},{"facing":1,"walk":1},{"facing":1,"walk":2},{"facing":1,"walk":3},{"facing":3,"walk":0},{"facing":3,"walk":1},{"facing":3,"walk":2},{"facing":3,"walk":3},{"facing":2,"walk":0},{"facing":2,"walk":1},{"facing":2,"walk":2},{"facing":2,"walk":3},{"facing":4,"sleep":True},{"facing":1,"sleep":True},{"facing":3,"sleep":True},{"facing":2,"sleep":True}])
 sprites3 = Sheet('sprites/sprites3.png')
 sprites3.add_similar_rows([('algae','#5C8339','#5C8339'), None, None, ('flag', '#EDE285', '#EDE285'), None, ('key','#EDE285','#EDE285'), ('love','#EB91CA','#EB91CA'), None, None, None, None, ('ufo','#D9396A','#D9396A')], 1, 1, ['text', {}])
 sprites3.add_similar_rows([('door','#E5533B','#E5533B'), ('flower','#9183D7','#9183D7'), None, None, None, ('pillar','#737373','#737373'), ('rock', '#90673E', '#C29E46'), None, ('tile', '#737373', '#242424')], 126, 151, ['text', {}])
-sprites3.add_similar_rows([('moon','#EDE285','#EDE285'), None, None, ('star','#EDE285','#EDE285'), ('tree','#5C8339','#5C8339')], 376, 451, ['text', {}])
-sprites3.add_similar_rows(['box', None, ('fire','#421910','#421910'), None, ('jelly','#5F9DD1','#5F9DD1')], 751, 1, ['text', {}])
+sprites3.add_similar_rows([('fruit', '#E5533B', '#E5533B'), None, None, ('moon','#EDE285','#EDE285'), None, None, ('star','#EDE285','#EDE285'), ('tree','#5C8339','#5C8339')], 376, 226, ['text', {}])
+sprites3.add_similar_rows([('box', '#90673E', '#90673E'), None, ('fire','#421910','#421910'), None, ('jelly','#5F9DD1','#5F9DD1'), None, None, ('reed', '#A58D3E', '#A58D3E'), ('sign', '#C89C44', '#C89C44'), ('sun', '#E49950', '#E49950')], 751, 1, ['text', {}])
+sprites3.add_similar_rows([('fungi', '#C89C44', '#C89C44'), ('husk', '#98643C', '#98643C'), ('leaf', '#EDE285', '#EDE285'), ('orb', '#D9396A', '#D9396A')], 501, 226, ['text', {}])
+sprites3.add_similar_rows([('cake', '#EB91CA', '#EB91CA'), 'dot', ('foliage', '#4B5C1C', '#4B5C1C'), None, None, None, None, ('rose', '#E5533B', '#E5533B')], 251, 76, ['text', {}])
+sprites3.add_similar_rows([('dust', '#EDE285', '#EDE285'), ('fungus', '#90673E', '#90673E'), None, None, None, None, None, ('stump', '#C89C44', '#C89C44')], 626, 151, ['text', {}])
 text = Sheet('sprites/text.png')
-text.add_row('text', 1, 1, [{"text":"all","part":"noun"}])
-text.add_row('text', 1, 151, [{"text":"has","part":"has"}])
-text.add_row(('text', '#90673E'), 1, 301, [{"text":"push","part":"property"}])
 text.add_row('text', 226, 76, [{"text":"is","part":"is"}])
+text.add_row('text', 301, 76, [{"text":"and","part":"and"}])
+text.add_row(('text', '#E5533B'), 226, 1, [{"text":"not","part":"not"}])
+text.add_row('text', 1, 1273, [{"text":"on","part":"on"}])
+text.add_row('text', 76, 1273, [{"text":"near","part":"near"}])
+text.add_row('text', 226, 1273, [{"text":"facing","part":"facing"}])
+text.add_row('text', 1, 151, [{"text":"has","part":"has"}])
+text.add_row('text', 301, 151, [{"text":"make","part":"make"}])
+text.add_row('text', 151, 226, [{"text":"write","part":"write"}])
+text.add_row('text', 1, 1, [{"text":"all","part":"noun"}])
+text.add_row('text', 76, 76, [{"text":"empty","part":"noun"}])
+text.add_row('text', 76, 1, [{"text":"text","part":"noun"}])
+text.add_row('text', 151, 1, [{"text":"level","part":"noun"}])
 text.add_row(('text', '#D9396A'), 226, 226, [{"text":"you","part":"property"}])
+text.add_row(('text', '#90673E'), 1, 301, [{"text":"push","part":"property"}])
+text.add_row(('text', '#90673E'), 76, 301, [{"text":"pull","part":"property"}])
 text.add_row(('text', '#A8B43C'), 226, 301, [{"text":"move","part":"property"}])
 text.add_row(('text', '#609CD4'), 301, 301, [{"text":"shift","part":"property"}])
 text.add_row(('text', '#82261C'), 1, 731, [{"text":"defeat","part":"property"}])
-text.add_row('text', 301, 76, [{"text":"and","part":"and"}])
 text.add_row(('text', '#F0E484'), 226, 1123, [{"text":"win","part":"property"}])
 text.add_row(('text', '#4B5C1C'), 151, 301, [{"text":"stop","part":"property"}])
-text.add_row(('text', '#5F9DD1'), 1, 805, [{"text":"sink","part":"property"}])
 text.add_row(('text', '#F0E484'), 226, 730, [{"text":"open","part":"property"}])
 text.add_row(('text', '#E8543C'), 301, 730, [{"text":"shut","part":"property"}])
+text.add_row(('text', '#88CCE4'), 226, 805, [{"text":"float","part":"property"}])
+text.add_row(('text', '#5F9DD1'), 1, 805, [{"text":"sink","part":"property"}])
 text.add_row(('text', '#40748C'), 151, 1123, [{"text":"weak","part":"property"}])
+text.add_row(('text', '#905C9C'), 1, 1123, [{"text":"swap","part":"property"}])
+text.add_row(('text', '#88CCE4'), 76, 1123, [{"text":"tele","part":"property"}])
+text.add_row(('text', '#A8B43C'), 227, 2407, [{"text":"fall","part":"property"}])
+text.add_row(('text', '#D9396A'), 301, 1123, [{"text":"more","part":"property"}])
+text.add_row(('text', '#E5533B'), 151, 1498, [{"text":"red","part":"property"}])
+text.add_row(('text', '#9183D7'), 226, 1573, [{"text":"blue","part":"property"}])
+text.add_row('text', 1, 1198, [{"text":"word","part":"property"}])
+text.add_row(('text', '#9183D7'), 226, 1, [{"text":"group","part":"group"}])
+text.add_row(('text', '#83C8E5'), 1, 376, [{"text":"right","part":"property"}])
+text.add_row(('text', '#83C8E5'), 76, 376, [{"text":"up","part":"property"}])
+text.add_row(('text', '#83C8E5'), 151, 376, [{"text":"left","part":"property"}])
+text.add_row(('text', '#83C8E5'), 226, 376, [{"text":"down","part":"property"}])
 tiles = Sheet('sprites/tiles.png')
-tiles.add_similar_rows([('cloud','#83C8E5','#83C8E5'), ('fence','#90673E','#90673E'), None, ('grass','#A5B13F','#303824'), ('hedge','#4B5C1C','#4B5C1C'), ('ice','#5F9DD1','#5F9DD1'), ('lava','#E49950','#E49950'), None, ('pipe','#293141','#293141'), None, None, ('rubble','#503F24','#503F24'), None, None, ('wall', '#737373', '#293141'), ('water','#5F9DD1','#5F9DD1')], 1, 451, ['text', {"connector":True,"up":False, "down":False, "left":False, "right":False}, {"connector":True,"up":False, "down":False, "left":False, "right":True}, {"connector":True,"up":True, "down":False, "left":False, "right":False}, {"connector":True,"up":True, "down":False, "left":False, "right":True}, {"connector":True,"up":False, "down":False, "left":True, "right":False}, {"connector":True,"up":False, "down":False, "left":True, "right":True}, {"connector":True,"up":True, "down":False, "left":True, "right":False}, {"connector":True,"up":True, "down":False, "left":True, "right":True}, {"connector":True,"up":False, "down":True, "left":False, "right":False}, {"connector":True,"up":False, "down":True, "left":False, "right":True}, {"connector":True,"up":True, "down":True, "left":False, "right":False}, {"connector":True,"up":True, "down":True, "left":False, "right":True}, {"connector":True,"up":False, "down":True, "left":True, "right":False}, {"connector":True,"up":False, "down":True, "left":True, "right":True}, {"connector":True,"up":True, "down":True, "left":True, "right":False}, {"connector":True,"up":True, "down":True, "left":True, "right":True}])
+connector_order = ['text', {"connector":True,"up":False, "down":False, "left":False, "right":False}, {"connector":True,"up":False, "down":False, "left":False, "right":True}, {"connector":True,"up":True, "down":False, "left":False, "right":False}, {"connector":True,"up":True, "down":False, "left":False, "right":True}, {"connector":True,"up":False, "down":False, "left":True, "right":False}, {"connector":True,"up":False, "down":False, "left":True, "right":True}, {"connector":True,"up":True, "down":False, "left":True, "right":False}, {"connector":True,"up":True, "down":False, "left":True, "right":True}, {"connector":True,"up":False, "down":True, "left":False, "right":False}, {"connector":True,"up":False, "down":True, "left":False, "right":True}, {"connector":True,"up":True, "down":True, "left":False, "right":False}, {"connector":True,"up":True, "down":True, "left":False, "right":True}, {"connector":True,"up":False, "down":True, "left":True, "right":False}, {"connector":True,"up":False, "down":True, "left":True, "right":True}, {"connector":True,"up":True, "down":True, "left":True, "right":False}, {"connector":True,"up":True, "down":True, "left":True, "right":True}]
+tiles.add_similar_rows([('cloud','#83C8E5','#83C8E5'), ('fence','#90673E','#90673E'), None, ('grass','#A5B13F','#303824'), ('hedge','#4B5C1C','#4B5C1C'), ('ice','#5F9DD1','#5F9DD1'), ('lava','#E49950','#E49950'), None, ('pipe','#293141','#293141'), None, None, ('rubble','#503F24','#503F24'), None, None, ('wall', '#737373', '#293141'), ('water','#5F9DD1','#5F9DD1')], 1, 451, connector_order)
+tiles.add_similar_rows([('bog','#5C8339','#5C8339'), ('brick','#90673E','#362E22'), ('cliff','#90673E','#90673E')], 1, 76, connector_order)
 info.add_sheet(sprites1)
 info.add_sheet(sprites2)
 info.add_sheet(sprites3)
@@ -259,36 +297,6 @@ def nbt(name, metadata, setting):
   result += "}"
   return result
 
-lines = []
-lines2 = []
-instruments = {}
-sprites = {}
-for t,i in manager.ids.items():
-  (inst, note) = note_block(i)
-  if inst not in instruments:
-    instruments[inst] = []
-    lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/load_block/{inst}')
-  if t.name not in sprites:
-    sprites[t.name] = []
-  snbt_set = nbt(t.name, t.metadata, True)
-  snbt_check = nbt(t.name, t.metadata, False)
-  instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run summon marker ~ 1 ~ {{Tags:["baba.tile"],data:{snbt_set}}}')
-  sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
-  sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~-1 ~ {instrument(inst)}')
-tat.delete_folder(f'datapack/data/baba/functions/io/load_block')
-tat.delete_folder(f'datapack/data/baba/functions/io/save_block')
-for i,fn in instruments.items():
-  tat.write_lines(fn, f'datapack/data/baba/functions/io/load_block/{i}.mcfunction')
-for i,fn in sprites.items():
-  if len(fn)>2:
-    tat.write_lines(fn, f'datapack/data/baba/functions/io/save_block/{i}.mcfunction')
-    lines2.append(f'execute if entity @s[nbt={{data:{{sprite:"{t.name}"}}}}] run function baba:io/save_block/{t.name}')
-  else:
-    lines2.append(fn[0])
-    lines2.append(fn[1])
-tat.write_lines(lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
-tat.write_lines(lines2, f'datapack/data/baba/functions/io/save_block.mcfunction')
-
 tat.delete_folder('datapack/data/baba/functions/display/check_tile')
 for r in range(manager.rows):
   lines = [
@@ -297,7 +305,7 @@ for r in range(manager.rows):
     'execute store result score last_column baba run data get entity @s Pos[2]',
   ]
   subfns = {}
-  for t,i in manager.ids.items():
+  for t in manager.ids:
     translate = {"translate":f"baba.{t.description('.')}.row{r}"}
     if t.color is not None:
       translate["color"] = t.color
@@ -313,32 +321,62 @@ for r in range(manager.rows):
       lines.append(fn[0])
   tat.write_lines(lines, f'datapack/data/baba/functions/display/check_tile/row{r}.mcfunction')
 
+
+load_lines = []
+save_lines = []
+instruments = {}
+sprites = {}
 blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
+gives = set()
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
-for name, spritelist in manager.sprite_collections.items():
-  for index, t in enumerate(spritelist):
-    spriteid = manager.ids[t]
-    noteblock = note_block(spriteid)
-    placement = manager.placement[t]
-    for g,grid in enumerate(generated[0]):
-      if grid == placement[0]:
-        model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(1.6*placement[2],2),round(1.6*placement[1],2),round(1.6*placement[2]+1.6,2),round(1.6*placement[1]+1.6,2)],"texture":"#up"}}}]}
-        description = t.description("_")
-        blockstate[f'instrument={noteblock[0]},note={noteblock[1]}'] = {'model': f'baba:{description}','y':90}
-        custom_model.append({'predicate':{'custom_model_data':spriteid},'model':f'baba:{description}'})
-        loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":noteblock[0],"note":noteblock[1]}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{spriteid}}}"}]}]})
-        if t.name == 'text' or index==0:
-          simple_name = f'{t.name}'
-          if t.name == 'text':
-            simple_name += ' ' + t.metadata['text']
-          cmd = f'give @s note_block{{babatile:1b,CustomModelData:{spriteid},BlockStateTag:{{instrument:"{noteblock[0]}",note:"{noteblock[1]}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
-          get_all.append(cmd)
-          tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{simple_name.replace(" ","_")}.mcfunction')
-        tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
+tat.delete_folder(f'datapack/data/baba/functions/io/load_block')
+tat.delete_folder(f'datapack/data/baba/functions/io/save_block')
+
+for i,t in manager.note_blocks.items():
+  (inst, note) = note_block(i)
+  if inst not in instruments:
+    instruments[inst] = []
+    load_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/load_block/{inst}')
+  if t.name not in sprites:
+    sprites[t.name] = []
+  snbt_set = nbt(t.name, t.metadata, True)
+  snbt_check = nbt(t.name, t.metadata, False)
+  instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run summon marker ~ 1 ~ {{Tags:["baba.tile"],data:{snbt_set}}}')
+  sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
+  sprites[t.name].append(f'execute if entity @s[nbt={{data:{snbt_check}}}] run setblock ~ ~-1 ~ {instrument(inst)}')
+  placement = manager.placement[t]
+  for g,grid in enumerate(generated[0]):
+    if grid == placement[0]:
+      break
+  model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(1.6*placement[2],2),round(1.6*placement[1],2),round(1.6*placement[2]+1.6,2),round(1.6*placement[1]+1.6,2)],"texture":"#up"}}}]}
+  description = t.description("_")
+  blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
+  custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
+  loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
+  tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
+  if t.name == 'text' or t.name not in gives:
+    gives.add(t.name)
+    simple_name = t.name
+    if t.name == 'text':
+      simple_name = f'text {t.metadata["text"]}'
+    cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
+    get_all.append(cmd)
+    tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{simple_name.replace(" ","_")}.mcfunction')
+for i,fn in instruments.items():
+  tat.write_lines(fn, f'datapack/data/baba/functions/io/load_block/{i}.mcfunction')
+for i,fn in sprites.items():
+  if len(fn)>2:
+    tat.write_lines(fn, f'datapack/data/baba/functions/io/save_block/{i}.mcfunction')
+    save_lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{i}"}}}}] run function baba:io/save_block/{i}')
+  else:
+    save_lines.append(fn[0])
+    save_lines.append(fn[1])
+tat.write_lines(load_lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
+tat.write_lines(save_lines, f'datapack/data/baba/functions/io/save_block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')
