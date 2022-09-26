@@ -5951,7 +5951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tile",
+                        "text": "text cloud",
                         "italic": false
                      }
                   },
@@ -5983,7 +5983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tree",
+                        "text": "text fence",
                         "italic": false
                      }
                   },
@@ -6015,7 +6015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ufo",
+                        "text": "text grass",
                         "italic": false
                      }
                   },
@@ -6047,7 +6047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall",
+                        "text": "text hedge",
                         "italic": false
                      }
                   },
@@ -6079,13 +6079,429 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water",
+                        "text": "text ice",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:190}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 15
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text lava",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:191}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 16
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text pipe",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:192}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text rubble",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:193}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 18
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text wall",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:194}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 19
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text water",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:195}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 20
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text bog",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:196}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 21
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text brick",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:197}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 22
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text cliff",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:198}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 23
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "tile",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:199}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "guitar",
+                        "note": 24
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "tree",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:200}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 0
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "ufo",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:201}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "wall",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:202}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "chime",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:203}"
                   }
                ]
             }

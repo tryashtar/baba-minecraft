@@ -741,22 +741,74 @@
          "y": 90
       },
       "instrument=guitar,note=10": {
-         "model": "baba:tile",
+         "model": "baba:text.cloud",
          "y": 90
       },
       "instrument=guitar,note=11": {
-         "model": "baba:tree",
+         "model": "baba:text.fence",
          "y": 90
       },
       "instrument=guitar,note=12": {
-         "model": "baba:ufo",
+         "model": "baba:text.grass",
          "y": 90
       },
       "instrument=guitar,note=13": {
-         "model": "baba:wall",
+         "model": "baba:text.hedge",
          "y": 90
       },
       "instrument=guitar,note=14": {
+         "model": "baba:text.ice",
+         "y": 90
+      },
+      "instrument=guitar,note=15": {
+         "model": "baba:text.lava",
+         "y": 90
+      },
+      "instrument=guitar,note=16": {
+         "model": "baba:text.pipe",
+         "y": 90
+      },
+      "instrument=guitar,note=17": {
+         "model": "baba:text.rubble",
+         "y": 90
+      },
+      "instrument=guitar,note=18": {
+         "model": "baba:text.wall",
+         "y": 90
+      },
+      "instrument=guitar,note=19": {
+         "model": "baba:text.water",
+         "y": 90
+      },
+      "instrument=guitar,note=20": {
+         "model": "baba:text.bog",
+         "y": 90
+      },
+      "instrument=guitar,note=21": {
+         "model": "baba:text.brick",
+         "y": 90
+      },
+      "instrument=guitar,note=22": {
+         "model": "baba:text.cliff",
+         "y": 90
+      },
+      "instrument=guitar,note=23": {
+         "model": "baba:tile",
+         "y": 90
+      },
+      "instrument=guitar,note=24": {
+         "model": "baba:tree",
+         "y": 90
+      },
+      "instrument=chime,note=0": {
+         "model": "baba:ufo",
+         "y": 90
+      },
+      "instrument=chime,note=1": {
+         "model": "baba:wall",
+         "y": 90
+      },
+      "instrument=chime,note=2": {
          "model": "baba:water",
          "y": 90
       }

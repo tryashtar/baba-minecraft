@@ -502,6 +502,7 @@ sheets:
     properties:
       connector: true
     sprites:
+    - text
     - {up: false, down: false, left: false, right: false}
     - {up: false, down: false, left: false, right: true}
     - {up: true, down: false, left: false, right: false}

@@ -82,16 +82,16 @@ execute if entity @s[nbt={data:{sprite:"stump"}}] run setblock ~ ~ ~ note_block[
 execute if entity @s[nbt={data:{sprite:"stump"}}] run setblock ~ ~-1 ~ glass
 execute if entity @s[nbt={data:{sprite:"sun"}}] run setblock ~ ~ ~ note_block[instrument=hat,note=22]
 execute if entity @s[nbt={data:{sprite:"sun"}}] run setblock ~ ~-1 ~ glass
-execute if entity @s[nbt={data:{sprite:"tile"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=10]
+execute if entity @s[nbt={data:{sprite:"tile"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=23]
 execute if entity @s[nbt={data:{sprite:"tile"}}] run setblock ~ ~-1 ~ white_wool
-execute if entity @s[nbt={data:{sprite:"tree"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=11]
+execute if entity @s[nbt={data:{sprite:"tree"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=24]
 execute if entity @s[nbt={data:{sprite:"tree"}}] run setblock ~ ~-1 ~ white_wool
-execute if entity @s[nbt={data:{sprite:"ufo"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=12]
-execute if entity @s[nbt={data:{sprite:"ufo"}}] run setblock ~ ~-1 ~ white_wool
-execute if entity @s[nbt={data:{sprite:"wall"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=13]
-execute if entity @s[nbt={data:{sprite:"wall"}}] run setblock ~ ~-1 ~ white_wool
-execute if entity @s[nbt={data:{sprite:"water"}}] run setblock ~ ~ ~ note_block[instrument=guitar,note=14]
-execute if entity @s[nbt={data:{sprite:"water"}}] run setblock ~ ~-1 ~ white_wool
+execute if entity @s[nbt={data:{sprite:"ufo"}}] run setblock ~ ~ ~ note_block[instrument=chime,note=0]
+execute if entity @s[nbt={data:{sprite:"ufo"}}] run setblock ~ ~-1 ~ packed_ice
+execute if entity @s[nbt={data:{sprite:"wall"}}] run setblock ~ ~ ~ note_block[instrument=chime,note=1]
+execute if entity @s[nbt={data:{sprite:"wall"}}] run setblock ~ ~-1 ~ packed_ice
+execute if entity @s[nbt={data:{sprite:"water"}}] run setblock ~ ~ ~ note_block[instrument=chime,note=2]
+execute if entity @s[nbt={data:{sprite:"water"}}] run setblock ~ ~-1 ~ packed_ice
 execute if entity @s[nbt={data:{sprite:"baba"}}] run function baba:io/save_block/baba
 execute if entity @s[nbt={data:{sprite:"belt"}}] run function baba:io/save_block/belt
 execute if entity @s[nbt={data:{sprite:"bird"}}] run function baba:io/save_block/bird

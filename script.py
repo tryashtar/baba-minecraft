@@ -264,7 +264,7 @@ with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
 
 for o in sprites.objects.values():
-  for s,props in o.filter_sprites('sprite').items():
+  for s,props in o.filter_sprites('editor').items():
     print(s.display(props, ' ', '=', ' '))
 
 manager = TileManager(20,40)
