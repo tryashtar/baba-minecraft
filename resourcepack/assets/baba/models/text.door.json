@@ -1,7 +1,7 @@
 {
    "parent": "baba:parent_display",
    "textures": {
-      "up": "baba:grid1_anim0"
+      "up": "baba:grid_anim0"
    },
    "elements": [
       {
@@ -18,10 +18,10 @@
          "faces": {
             "up": {
                "uv": [
-                  1.6,
-                  11.2,
-                  3.2,
-                  12.8
+                  12.36,
+                  5.09,
+                  13.09,
+                  5.82
                ],
                "texture": "#up"
             }

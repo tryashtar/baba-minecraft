@@ -5,6 +5,7 @@ import numpy as np
 import json
 import yaml
 import os
+import math
 
 class SpriteCollection:
   def __init__(self, data, anim_frames):
@@ -27,7 +28,7 @@ class SpriteCollection:
     return list(dict(zip(properties, x)) for x in itertools.product(*properties.values()))
 
   def generate_grids(self):
-    result = [[Grid()] for x in range(self.anim_frames)]
+    result = [[] for x in range(self.anim_frames)]
     coords = None
     for sheetname, sheetdata in self.data['sheets'].items():
       image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
@@ -69,13 +70,12 @@ class SpriteCollection:
               props[self.properties[k]] = v
             sprite = BabaSprite(adding, props, color)
             adding.sprites.append(sprite)
-            for h,l in enumerate(result):
+            for h,g in enumerate(result):
               x, y = coords
               img = image.crop((x+(25*i),y+(25*h),x+(25*i)+24,y+(25*h)+24))
-              l[-1].add(sprite, img)
-              if l[-1].is_full():
-                l.append(Grid())
-    return result
+              g.append((sprite, img))
+
+    return list(map(lambda x: Grid(x), result))
 
   def create_summon(self, sprite):
     types = {}
@@ -191,23 +191,21 @@ class BabaSprite:
     result = result[:-1]
     return result
 
+
 class Grid:
-  def __init__(self):
-    self.image = PIL.Image.new('RGBA', (24*10, 24*10))
-    self.sprites = [[None for x in range(10)] for x in range(10)]
-    self.x = 0
-    self.y = 0
-
-  def add(self, sprite, image):
-    PIL.Image.Image.paste(self.image, image, (self.x*24, self.y*24))    
-    self.sprites[self.y][self.x] = sprite
-    self.x += 1
-    if self.x >= 10:
-      self.x = 0
-      self.y += 1
-
-  def is_full(self):
-    return self.y >= 10
+  def __init__(self, spritelist):
+    self.size = math.ceil(math.sqrt(len(spritelist)))
+    self.image = PIL.Image.new('RGBA', (24*self.size, 24*self.size))
+    self.sprites = [[None for x in range(self.size)] for x in range(self.size)]
+    x = 0
+    y = 0
+    for sprite,image in spritelist:
+      PIL.Image.Image.paste(self.image, image, (x*24, y*24))    
+      self.sprites[y][x] = sprite
+      x += 1
+      if x >= self.size:
+        x = 0
+        y += 1
 
 
 class Metadata:
@@ -268,16 +266,14 @@ for o in sprites.objects.values():
     print(s.display(props, ' ', '=', ' '))
 
 manager = TileManager(20,40)
-for i,grid in enumerate(sprites.grids[0]):
-  manager.add_grid(grid, f'baba:grid{i}_anim0.png')
+manager.add_grid(sprites.grids[0], f'baba:grid_anim0.png')
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
-for a,grids in enumerate(sprites.grids):
-  for i,grid in enumerate(grids):
-    grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{a}.png')
+for i,grid in enumerate(sprites.grids):
+  grid.image.save(f'resourcepack/assets/baba/textures/grid_anim{i}.png')
   for p in manager.providers:
     if 'file' in p:
-      p['file'] = p['file'].replace(f'anim{a-1}', f'anim{a}')
-  tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{a}.json')
+      p['file'] = p['file'].replace(f'anim{i-1}', f'anim{i}')
+  tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{i}.json')
 
 load = [
   f'kill @e[type=marker,tag=baba.object]'
@@ -385,10 +381,8 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
       save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
       save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)}')
     placement = manager.placement[s]
-    for g,grid in enumerate(sprites.grids[0]):
-      if grid == placement[0]:
-        break
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(1.6*placement[2],2),round(1.6*placement[1],2),round(1.6*placement[2]+1.6,2),round(1.6*placement[1]+1.6,2)],"texture":"#up"}}}]}
+    uvsize = 16/sprites.grids[0].size
+    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],2),round(uvsize*placement[1],2),round(uvsize*placement[2]+uvsize,2),round(uvsize*placement[1]+uvsize,2)],"texture":"#up"}}}]}
     description = s.display(p, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
