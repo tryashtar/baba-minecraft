@@ -3,11 +3,12 @@ level0:
   width: 33
   height: 18
   palette:
-    W: wall
+    w: wall
+    r: rock
+    f: flag
+    b: baba
     .: tile
-    R: rock
-    F: flag
-    B: baba
+    i: text.is
   map:
   - '                                 '
   - '                                 '
@@ -15,15 +16,15 @@ level0:
   - '                                 '
   - '                                 '
   - '                                 '
-  - '           (BABA)(IS)(YOU)     (FLAG)(IS)(WIN)           '
+  - '           BiY     FiW           '
   - '                                 '
-  - '           WWWWWWWWWWW           '
-  - '           .....R.....           '
-  - '           .B...R...F.           '
-  - '           .....R.....           '
-  - '           WWWWWWWWWWW           '
+  - '           wwwwwwwwwww           '
+  - '           .....r.....           '
+  - '           .b...r...f.           '
+  - '           .....r.....           '
+  - '           wwwwwwwwwww           '
   - '                                 '
-  - '           (WALL)(IS)(STOP)     (ROCK)(IS)(PUSH)           '
+  - '           WiS     RiP           '
   - '                                 '
   - '                                 '
   - '                                 '

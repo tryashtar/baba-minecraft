@@ -7,6 +7,7 @@ import yaml
 import os
 import math
 
+# keeps track of all the object definitions
 class SpriteCollection:
   def __init__(self, data, anim_frames):
     self.data = data
@@ -28,26 +29,32 @@ class SpriteCollection:
     return list(dict(zip(properties, x)) for x in itertools.product(*properties.values()))
 
   def generate_grids(self):
+    # we need a separate grid for each frame of idle animation
     result = [[] for x in range(self.anim_frames)]
     coords = None
     for sheetname, sheetdata in self.data['sheets'].items():
+      # load the spritesheet PNG and filter out the background color
       image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
       array = np.array(image, dtype=np.ubyte)
       mask = (array[:,:,:3] == (84, 165, 75)).all(axis=2)
       alpha = np.where(mask, 0, 255)
       array[:,:,-1] = alpha
       image = PIL.Image.fromarray(np.ubyte(array))
+
       for config in sheetdata:
         for obj in config['objects']:
+          # if coords are unspecified, move to the next row
           if coords is not None:
             coords[1] += 25 * self.anim_frames
           if obj is None:
             continue
-          baba = self.get_obj(obj['name'])
           coords = obj.get('coords', coords)
+          # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
+          baba = self.get_obj(obj['name'])
           sprites = []
+          # expand sprite definitions from shorthands to a complete list of all sprites
           for spr in config['sprites']:
-            if 'permute' in spr:
+            if type(spr) is dict and 'permute' in spr:
               sprites.extend(self.permute(spr['permute']))
             else:
               sprites.append(spr)
@@ -59,15 +66,18 @@ class SpriteCollection:
             else:
               adding = baba
               color = obj.get('object color', obj.get('color'))
+            # include properties specific to this object, or this sprite
             if 'properties' in obj:
               for k,v in obj['properties'].items():
                 spr[k] = v
             if 'properties' in config:
               for k,v in config['properties'].items():
                 spr[k] = v
+            # make keys the actual metadata objects instead of their names
             props = {}
             for k,v in spr.items():
               props[self.properties[k]] = v
+            # finalize the sprite and add each anim frame to its respective grid
             sprite = BabaSprite(adding, props, color)
             adding.sprites.append(sprite)
             for h,g in enumerate(result):
@@ -95,6 +105,8 @@ class SpriteCollection:
     tags = ["baba.object"]
     for t,vals in types.items():
       if t == 'tag':
+        # if the metadata value is set to a bool, we just check for a tag by that name
+        # if it's set to a string (like text 'part'), we check for a tag of the form <metadata>.<value>
         tags.extend(list(map(lambda x: x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name, filter(lambda x: type(x[1]) is str or x[1], vals.items()))))
       elif t == 'score':
         tags.append('spawn')
@@ -120,6 +132,8 @@ class BabaObject:
     self.name = name
     self.sprites = []
 
+  # get sprites that are unique when filtering by an attribute
+  # for example, baba has many sprites, but only 4 are unique with respect to the facing property
   def filter_sprites(self, attribute):
     sprites = {}
     for s in self.sprites:
@@ -134,6 +148,7 @@ class BabaSprite:
     self.properties = properties
     self.color = color
 
+  # return a copy of properties, only including metadata with the given attribute
   def filter_properties(self, attribute):
     props = self.properties.copy()
     for p in self.properties:
@@ -141,6 +156,7 @@ class BabaSprite:
         del props[p]
     return props
 
+  # lots of repeated code from create_summon above
   def create_selector(self, properties, include_sprite):
     types = {}
     for k,v in properties.items():

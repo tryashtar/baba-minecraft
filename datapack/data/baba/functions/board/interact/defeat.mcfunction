@@ -1,1 +1,1 @@
-execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["you"]}},distance=..0.1] run function baba:board/interact/destroy
+execute as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["you"]}}] run function baba:board/interact/destroy

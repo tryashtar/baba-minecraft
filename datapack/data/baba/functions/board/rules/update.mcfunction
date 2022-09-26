@@ -1,3 +1,4 @@
+# parse text and cache properties in the affected objects
 execute as @e[type=marker,tag=baba.object] run data modify entity @s data.properties set value []
 execute as @e[type=marker,tag=baba.object] run data modify entity @s data.has set value []
 execute as @e[type=marker,tag=baba.object,tag=part.noun,nbt={data:{sprite:"text"}}] at @s run function baba:board/rules/transform/check
