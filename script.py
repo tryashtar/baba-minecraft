@@ -123,6 +123,8 @@ class SpriteCollection:
       elif t == 'score':
         tags.append('spawn')
         for prop,val in vals.items():
+          # for scores that are represented with strings, use the index of the values list
+          # add 1 because I prefer facing to be 1/2/3/4 instead of 0/1/2/3
           commands.append(f'scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] {prop.name} {val if type(val) is int else prop.values.index(val)+1}')
         commands.append(f'tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn')
       elif t == 'nbt':
@@ -323,7 +325,8 @@ for j,grid in enumerate(sprites.grids[0]):
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
 load = [
-  f'kill @e[type=marker,tag=baba.object]'
+  f'kill @e[type=marker,tag=baba.object]',
+  f'kill @e[type=marker,tag=baba.space]'
 ]
 save = [
     f'fill 0 1 0 {manager.rows-1} 11 {manager.columns-1} air',
@@ -349,6 +352,8 @@ for r in range(manager.rows):
   for c in range(manager.columns):
     for h in range(3):
       load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
+      if h == 0:
+        load.append(f'summon marker {manager.rows-r-1} 1 {c} {{Tags:["baba.space"]}}')
 load.append('function baba:board/rules/update')
 load.append('execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector')
 load.append('function baba:display/update_text')

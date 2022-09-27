@@ -1,3 +1,5 @@
+execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
+
 # first, process movement in batches: you, then move, then shift
 # if anything in a batch fails to move, try again until everything either succeeds or fails
 # additionally, anything can only move once per batch
