@@ -356,6 +356,7 @@ for r in range(manager.rows):
         load.append(f'summon marker {manager.rows-r-1} 1 {c} {{Tags:["baba.space"]}}')
 load.append('function baba:board/rules/update')
 load.append('execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector')
+load.append('execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record')
 load.append('function baba:display/update_text')
 text.append('function baba:display/update_anim')
 tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')

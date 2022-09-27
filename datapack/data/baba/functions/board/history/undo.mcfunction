@@ -1,8 +1,5 @@
-execute unless data entity @s data.history[-1][0].unchanged run data modify entity @s data.recent set from entity @s data.history[-1]
-execute unless data entity @s data.history[-1][0].unchanged run kill @e[type=marker,tag=baba.object,distance=..0.1]
-execute if data entity @s data.history[-1][0].unchanged store result score unchanged baba run data get entity @s data.history[-1][0].unchanged
-execute if data entity @s data.history[-1][0].unchanged store result entity @s data.history[-1][0].unchanged int 1 run scoreboard players remove unchanged baba 1
-execute if score unchanged baba matches 0 if data entity @s data.history[-1][0].unchanged run data remove entity @s data.history[-1]
-execute unless data entity @s data.history[-1][0].unchanged run data remove entity @s data.history[-1]
-data modify storage baba:main objects set from entity @s data.recent
-execute if data storage baba:main objects[0] run function baba:board/history/spawn
+data modify storage baba:main previous set from entity @s data.history[-1]
+execute store result score repeats baba run data get storage baba:main previous.repeats
+execute if score repeats baba matches ..1 run data remove entity @s data.history[-1]
+execute if score repeats baba matches ..1 if data entity @s data.history[-1] run function baba:board/history/pop
+execute if score repeats baba matches 2.. store result entity @s data.history[-1].repeats int 1 run scoreboard players remove repeats baba 1
