@@ -27,495 +27,581 @@ properties:
     attributes: []
   text:
     type: nbt
-    attributes: [editor, sprite]
+    attributes: [editor, sprite, primary]
   part:
     type: tag
     attributes: []
+  type:
+    type: tag
+    attributes: [editor, sprite, primary]
   sleep:
     type: property
     attributes: [sprite]
 
-sheets:
-  sprites1:
-  - objects:
-    - name: baba
-      text color: '#d9396a'
-      object color: '#ffffff'
-      coords: [1, 1]
-    - name: keke
-      color: '#ce7b52'
-      coords: [1, 751]
-    - name: me
-      color: '#8e5e9c'
-      coords: [1, 901]
-    - name: robot
-      color: '#737373'
-      coords: [1, 1051]
-    sprites:
-    - text
-    - permute:
-        facing: ['right', 'up', 'left', 'down']
-        walk: [0, 1, 2, 3]
-        sleep: [False]
-    - permute:
-        facing: ['right', 'up', 'left', 'down']
-        sleep: [True]
-  
-  sprites2:
-  - objects:
-    - name: belt
-      text color: '#609cd4'
-      object color: '#5f9dd1'
-      coords: [1, 85]
-    sprites:
-    - text
-    - permute:
-        facing: ['right', 'up', 'left', 'down']
-        frame: [0, 1, 2, 3]
-  - objects:
-    - name: bird
-      color: '#e5533b'
-      coords: [1, 322]
-    - name: bug
-      color: '#c29e46'
-    - name: crab
-      color: '#82261c'
-    - name: rocket
-      color: '#e49950'
-      coords: [1, 847]
-    - name: skull
-      color: '#82261c'
-    - name: ghost
-      color: '#eb91ca'
-      coords: [276, 622]
-    - name: statue
-      color: '#737373'
-      coords: [276, 922]
-    - name: bolt
-      color: '#ede285'
-      coords: [551, 322]
-    - name: hand
-      color: '#ffffff'
-      coords: [551, 622]
-    sprites:
-    - text
-    - permute:
-        facing: ['right', 'up', 'left', 'down']
-  - objects:
-    - name: bat
-      color: '#8c5c9c'
-      coords: [1, 1081]
-    - name: bubble
-      color: '#83c8e5'
-      coords: [276, 1081]
-    - name: cog
-      color: '#737373'
-      coords: [1, 1167]
-    sprites:
-    - text
-    - permute:
-        frame: [0, 1, 2, 3]
-  
-  sprites3:
-  - objects:
-    - name: algae
-      color: '#5c8339'
-      coords: [1, 1]
-    - null
-    - null
-    - name: flag
-      color: '#ede285'
-    - null
-    - name: key
-      color: '#ede285'
-    - name: love
-      color: '#eb91ca'
-    - null
-    - null
-    - null
-    - null
-    - name: ufo
-      color: '#d9396a'
-    - name: door
-      color: '#e5533b'
-      coords: [126, 151]
-    - name: flower
-      color: '#9183d7'
-    - null
-    - null
-    - null
-    - name: pillar
-      color: '#737373'
-    - name: rock
-      text color: '#90673e'
-      object color: '#c29e46'
-    - null
-    - name: tile
-      text color: '#737373'
-      object color: '#242424'
-    - name: fruit
-      color: '#e5533b'
-      coords: [376, 226]
-    - null
-    - null
-    - name: moon
-      color: '#ede285'
-    - null
-    - null
-    - name: star
-      color: '#ede285'
-    - name: tree
-      color: '#5c8339'
-    - name: box
-      color: '#90673e'
-      coords: [751, 1]
-    - null
-    - name: fire
-      color: '#421910'
-    - null
-    - name: jelly
-      color: '#5f9dd1'
-    - null
-    - null
-    - name: reed
-      color: '#a58d3e'
-    - name: sign
-      color: '#c89c44'
-    - name: sun
-      color: '#e49950'
-    - name: fungi
-      color: '#c89c44'
-      coords: [501, 226]
-    - name: husk
-      color: '#98643c'
-    - name: leaf
-      color: '#ede285'
-    - name: orb
-      color: '#d9396a'
-    - name: cake
-      color: '#eb91ca'
-      coords: [251, 76]
-    - name: dot
-      color: '#ffffff'
-    - name: foliage
-      color: '#4b5c1c'
-    - null
-    - null
-    - null
-    - null
-    - name: rose
-      color: '#e5533b'
-    - name: dust
-      color: '#ede285'
-      coords: [626, 151]
-    - name: fungus
-      color: '#90673e'
-    - null
-    - null
-    - null
-    - null
-    - null
-    - name: stump
-      color: '#c89c44'
-    sprites:
-    - text
-    - {}
-  
-  text:
-  - objects:
-    - name: text
-      color: '#ffffff'
-      coords: [226, 76]
+grids:
+- size: [24, 24]
+  sheets:
+    sprites1:
+    - objects:
+      - name: baba
+        text color: '#d9396a'
+        object color: '#ffffff'
+        coords: [1, 1]
+      - name: keke
+        color: '#ce7b52'
+        coords: [1, 751]
+      - name: me
+        color: '#8e5e9c'
+        coords: [1, 901]
+      - name: robot
+        color: '#737373'
+        coords: [1, 1051]
+      sprites:
+      - text
+      - permute:
+          facing: ['right', 'up', 'left', 'down']
+          walk: [0, 1, 2, 3]
+          sleep: [False]
+      - permute:
+          facing: ['right', 'up', 'left', 'down']
+          sleep: [True]
+    
+    sprites2:
+    - objects:
+      - name: belt
+        text color: '#609cd4'
+        object color: '#5f9dd1'
+        coords: [1, 85]
+      sprites:
+      - text
+      - permute:
+          facing: ['right', 'up', 'left', 'down']
+          frame: [0, 1, 2, 3]
+    - objects:
+      - name: bird
+        color: '#e5533b'
+        coords: [1, 322]
+      - name: bug
+        color: '#c29e46'
+      - name: crab
+        color: '#82261c'
+      - name: rocket
+        color: '#737373'
+        coords: [1, 847]
+      - name: skull
+        color: '#82261c'
+      - name: ghost
+        color: '#eb91ca'
+        coords: [276, 622]
+      - name: statue
+        color: '#737373'
+        coords: [276, 922]
+      - name: bolt
+        color: '#ede285'
+        coords: [551, 322]
+      - name: hand
+        color: '#ffffff'
+        coords: [551, 622]
+      sprites:
+      - text
+      - permute:
+          facing: ['right', 'up', 'left', 'down']
+    - objects:
+      - name: bat
+        color: '#8c5c9c'
+        coords: [1, 1081]
+      - name: bubble
+        color: '#83c8e5'
+        coords: [276, 1081]
+      - name: cog
+        color: '#737373'
+        coords: [1, 1167]
+      sprites:
+      - text
+      - permute:
+          frame: [0, 1, 2, 3]
+    
+    sprites3:
+    - objects:
+      - name: algae
+        color: '#5c8339'
+        coords: [1, 1]
+      - null
+      - null
+      - name: flag
+        color: '#ede285'
+      - null
+      - name: key
+        color: '#ede285'
+      - name: love
+        color: '#eb91ca'
+      - null
+      - null
+      - null
+      - null
+      - name: ufo
+        color: '#d9396a'
+      - name: door
+        color: '#e5533b'
+        coords: [126, 151]
+      - name: flower
+        color: '#9183d7'
+      - null
+      - null
+      - null
+      - name: pillar
+        color: '#737373'
+      - name: rock
+        text color: '#90673e'
+        object color: '#c29e46'
+      - null
+      - name: tile
+        text color: '#737373'
+        object color: '#242424'
+      - name: fruit
+        color: '#e5533b'
+        coords: [376, 226]
+      - null
+      - null
+      - name: moon
+        color: '#ede285'
+      - null
+      - null
+      - name: star
+        color: '#ede285'
+      - name: tree
+        color: '#5c8339'
+      - name: box
+        color: '#90673e'
+        coords: [751, 1]
+      - null
+      - name: fire
+        color: '#e49950'
+      - name: gate
+        color: '#e5533b'
+      - name: jelly
+        color: '#5f9dd1'
+      - null
+      - null
+      - name: reed
+        color: '#a58d3e'
+      - name: sign
+        color: '#c89c44'
+      - name: sun
+        color: '#e49950'
+      - name: fungi
+        color: '#c89c44'
+        coords: [501, 226]
+      - name: husk
+        color: '#98643c'
+      - name: leaf
+        color: '#ede285'
+      - name: orb
+        color: '#d9396a'
+      - name: cake
+        color: '#eb91ca'
+        coords: [251, 76]
+      - name: dot
+        color: '#ffffff'
+      - name: foliage
+        color: '#4b5c1c'
+      - null
+      - null
+      - null
+      - null
+      - name: rose
+        color: '#e5533b'
+      - name: dust
+        color: '#ede285'
+        coords: [626, 151]
+      - name: fungus
+        color: '#90673e'
+      - null
+      - null
+      - null
+      - null
+      - null
+      - name: stump
+        color: '#c89c44'
+      sprites:
+      - text
+      - {}
+    - objects:
+      - name: text
+        color: '#ede285'
+        coords: [376, 826]
+        frames: right
+        properties:
+          text: cursor
+          part: noun
+      sprites:
+      - {}
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [751, 910]
+        frames: none
+      sprites:
+      - type: jelly
+      - type: moon
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [776, 910]
+        frames: none
+      sprites:
+      - type: mountains
+      - type: flowers
+      - type: abc
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [801, 910]
+        frames: none
+      sprites:
+      - type: pillar
+      - type: square
+      - type: dust
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [826, 910]
+        frames: none
+      sprites:
+      - type: leaf
+      - type: skull
+      - type: level
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [851, 910]
+        frames: none
+      sprites:
+      - type: tree
+      - type: snowflake
+      - type: dot
+
+    extras:
+    - objects:
+      - name: level
+        color: '#212734'
+        coords: [1, 1]
+      sprites:
+      - {}
+
+    text:
+    - objects:
+      - name: text
+        color: '#ffffff'
+        coords: [226, 76]
+        properties:
+          text: is
+          part: verb
+      - name: text
+        color: '#ffffff'
+        coords: [301, 76]
+        properties:
+          text: and
+          part: operator
+      - name: text
+        color: '#e5533b'
+        coords: [226, 1]
+        properties:
+          text: not
+          part: operator
+      - name: text
+        color: '#ffffff'
+        coords: [1, 1273]
+        properties:
+          text: on
+          part: infix
+      - name: text
+        color: '#ffffff'
+        coords: [76, 1273]
+        properties:
+          text: near
+          part: infix
+      - name: text
+        color: '#ffffff'
+        coords: [226, 1273]
+        properties:
+          text: facing
+          part: infix
+      - name: text
+        color: '#ffffff'
+        coords: [1, 151]
+        properties:
+          text: has
+          part: verb
+      - name: text
+        color: '#ffffff'
+        coords: [301, 151]
+        properties:
+          text: make
+          part: verb
+      - name: text
+        color: '#ffffff'
+        coords: [151, 226]
+        properties:
+          text: write
+          part: verb
+      - name: text
+        color: '#ffffff'
+        coords: [1, 1]
+        properties:
+          text: all
+          part: noun
+      - name: text
+        color: '#ffffff'
+        coords: [76, 76]
+        properties:
+          text: empty
+          part: noun
+      - name: text
+        color: '#d9396a'
+        coords: [76, 1]
+        properties:
+          text: text
+          part: noun
+      - name: text
+        color: '#d9396a'
+        coords: [151, 1]
+        properties:
+          text: level
+          part: noun
+      - name: text
+        color: '#d9396a'
+        coords: [226, 226]
+        properties:
+          text: you
+          part: property
+      - name: text
+        color: '#90673e'
+        coords: [1, 301]
+        properties:
+          text: push
+          part: property
+      - name: text
+        color: '#90673e'
+        coords: [76, 301]
+        properties:
+          text: pull
+          part: property
+      - name: text
+        color: '#a8b43c'
+        coords: [226, 301]
+        properties:
+          text: move
+          part: property
+      - name: text
+        color: '#609cd4'
+        coords: [301, 301]
+        properties:
+          text: shift
+          part: property
+      - name: text
+        color: '#82261c'
+        coords: [1, 730]
+        properties:
+          text: defeat
+          part: property
+      - name: text
+        color: '#f0e484'
+        coords: [226, 1123]
+        properties:
+          text: win
+          part: property
+      - name: text
+        color: '#4b5c1c'
+        coords: [151, 301]
+        properties:
+          text: stop
+          part: property
+      - name: text
+        color: '#f0e484'
+        coords: [226, 730]
+        properties:
+          text: open
+          part: property
+      - name: text
+        color: '#e8543c'
+        coords: [301, 730]
+        properties:
+          text: shut
+          part: property
+      - name: text
+        color: '#88cce4'
+        coords: [226, 805]
+        properties:
+          text: float
+          part: property
+      - name: text
+        color: '#5f9dd1'
+        coords: [1, 805]
+        properties:
+          text: sink
+          part: property
+      - name: text
+        color: '#40748c'
+        coords: [151, 1123]
+        properties:
+          text: weak
+          part: property
+      - name: text
+        color: '#905c9c'
+        coords: [1, 1123]
+        properties:
+          text: swap
+          part: property
+      - name: text
+        color: '#88cce4'
+        coords: [76, 1123]
+        properties:
+          text: tele
+          part: property
+      - name: text
+        color: '#a8b43c'
+        coords: [227, 2407]
+        properties:
+          text: fall
+          part: property
+      - name: text
+        color: '#d9396a'
+        coords: [301, 1123]
+        properties:
+          text: more
+          part: property
+      - name: text
+        color: '#e5533b'
+        coords: [151, 1498]
+        properties:
+          text: red
+          part: property
+      - name: text
+        color: '#9183d7'
+        coords: [226, 1573]
+        properties:
+          text: blue
+          part: property
+      - name: text
+        color: '#88cce4'
+        coords: [1, 955]
+        properties:
+          text: sleep
+          part: property
+      - name: text
+        color: '#9183d7'
+        coords: [226, 1]
+        properties:
+          text: group
+          part: noun
+      - name: text
+        color: '#83c8e5'
+        coords: [1, 376]
+        properties:
+          text: right
+          part: property
+      - name: text
+        color: '#83c8e5'
+        coords: [76, 376]
+        properties:
+          text: up
+          part: property
+      - name: text
+        color: '#83c8e5'
+        coords: [151, 376]
+        properties:
+          text: left
+          part: property
+      - name: text
+        color: '#83c8e5'
+        coords: [226, 376]
+        properties:
+          text: down
+          part: property
+      - name: text
+        color: '#ffffff'
+        coords: [1, 1198]
+        properties:
+          text: word
+          part: property
+      - name: text
+        color: '#ede285'
+        coords: [151, 1873]
+        properties:
+          text: select
+          part: property
+      sprites:
+      - {}
+    
+    tiles:
+    - objects:
+      - name: cloud
+        color: '#83c8e5'
+        coords: [1, 451]
+      - name: fence
+        color: '#90673e'
+      - null
+      - name: grass
+        text color: '#a5b13f'
+        object color: '#303824'
+      - name: hedge
+        color: '#4b5c1c'
+      - name: ice
+        color: '#5f9dd1'
+      - name: lava
+        color: '#e49950'
+      - name: line
+        color: '#ffffff'
+      - name: pipe
+        color: '#293141'
+      - null
+      - null
+      - name: rubble
+        color: '#503f24'
+      - null
+      - null
+      - name: wall
+        text color: '#737373'
+        object color: '#293141'
+      - name: water
+        color: '#5f9dd1'
+      - name: bog
+        color: '#5c8339'
+        coords: [1, 76]
+      - name: brick
+        text color: '#90673e'
+        object color: '#362e22'
+      - name: cliff
+        color: '#90673e'
       properties:
-        text: is
-        part: verb
-    - name: text
-      color: '#ffffff'
-      coords: [301, 76]
-      properties:
-        text: and
-        part: operator
-    - name: text
-      color: '#e5533b'
-      coords: [226, 1]
-      properties:
-        text: not
-        part: operator
-    - name: text
-      color: '#ffffff'
-      coords: [1, 1273]
-      properties:
-        text: on
-        part: infix
-    - name: text
-      color: '#ffffff'
-      coords: [76, 1273]
-      properties:
-        text: near
-        part: infix
-    - name: text
-      color: '#ffffff'
-      coords: [226, 1273]
-      properties:
-        text: facing
-        part: infix
-    - name: text
-      color: '#ffffff'
-      coords: [1, 151]
-      properties:
-        text: has
-        part: verb
-    - name: text
-      color: '#ffffff'
-      coords: [301, 151]
-      properties:
-        text: make
-        part: verb
-    - name: text
-      color: '#ffffff'
-      coords: [151, 226]
-      properties:
-        text: write
-        part: verb
-    - name: text
-      color: '#ffffff'
-      coords: [1, 1]
-      properties:
-        text: all
-        part: noun
-    - name: text
-      color: '#ffffff'
-      coords: [76, 76]
-      properties:
-        text: empty
-        part: noun
-    - name: text
-      color: '#d9396a'
-      coords: [76, 1]
-      properties:
-        text: text
-        part: noun
-    - name: text
-      color: '#d9396a'
-      coords: [151, 1]
-      properties:
-        text: level
-        part: noun
-    - name: text
-      color: '#d9396a'
-      coords: [226, 226]
-      properties:
-        text: you
-        part: property
-    - name: text
-      color: '#90673e'
-      coords: [1, 301]
-      properties:
-        text: push
-        part: property
-    - name: text
-      color: '#90673e'
-      coords: [76, 301]
-      properties:
-        text: pull
-        part: property
-    - name: text
-      color: '#a8b43c'
-      coords: [226, 301]
-      properties:
-        text: move
-        part: property
-    - name: text
-      color: '#609cd4'
-      coords: [301, 301]
-      properties:
-        text: shift
-        part: property
-    - name: text
-      color: '#82261c'
-      coords: [1, 731]
-      properties:
-        text: defeat
-        part: property
-    - name: text
-      color: '#f0e484'
-      coords: [226, 1123]
-      properties:
-        text: win
-        part: property
-    - name: text
-      color: '#4b5c1c'
-      coords: [151, 301]
-      properties:
-        text: stop
-        part: property
-    - name: text
-      color: '#f0e484'
-      coords: [226, 730]
-      properties:
-        text: open
-        part: property
-    - name: text
-      color: '#e8543c'
-      coords: [301, 730]
-      properties:
-        text: shut
-        part: property
-    - name: text
-      color: '#88cce4'
-      coords: [226, 805]
-      properties:
-        text: float
-        part: property
-    - name: text
-      color: '#5f9dd1'
-      coords: [1, 805]
-      properties:
-        text: sink
-        part: property
-    - name: text
-      color: '#40748c'
-      coords: [151, 1123]
-      properties:
-        text: weak
-        part: property
-    - name: text
-      color: '#905c9c'
-      coords: [1, 1123]
-      properties:
-        text: swap
-        part: property
-    - name: text
-      color: '#88cce4'
-      coords: [76, 1123]
-      properties:
-        text: tele
-        part: property
-    - name: text
-      color: '#a8b43c'
-      coords: [227, 2407]
-      properties:
-        text: fall
-        part: property
-    - name: text
-      color: '#d9396a'
-      coords: [301, 1123]
-      properties:
-        text: more
-        part: property
-    - name: text
-      color: '#e5533b'
-      coords: [151, 1498]
-      properties:
-        text: red
-        part: property
-    - name: text
-      color: '#9183d7'
-      coords: [226, 1573]
-      properties:
-        text: blue
-        part: property
-    - name: text
-      color: '#88cce4'
-      coords: [1, 955]
-      properties:
-        text: sleep
-        part: property
-    - name: text
-      color: '#9183d7'
-      coords: [226, 1]
-      properties:
-        text: group
-        part: noun
-    - name: text
-      color: '#83c8e5'
-      coords: [1, 376]
-      properties:
-        text: right
-        part: property
-    - name: text
-      color: '#83c8e5'
-      coords: [76, 376]
-      properties:
-        text: up
-        part: property
-    - name: text
-      color: '#83c8e5'
-      coords: [151, 376]
-      properties:
-        text: left
-        part: property
-    - name: text
-      color: '#83c8e5'
-      coords: [226, 376]
-      properties:
-        text: down
-        part: property
-    - name: text
-      color: '#ffffff'
-      coords: [1, 1198]
-      properties:
-        text: word
-        part: property
-    sprites:
-    - {}
-  
-  tiles:
-  - objects:
-    - name: cloud
-      color: '#83c8e5'
-      coords: [1, 451]
-    - name: fence
-      color: '#90673e'
-    - null
-    - name: grass
-      text color: '#a5b13f'
-      object color: '#303824'
-    - name: hedge
-      color: '#4b5c1c'
-    - name: ice
-      color: '#5f9dd1'
-    - name: lava
-      color: '#e49950'
-    - null
-    - name: pipe
-      color: '#293141'
-    - null
-    - null
-    - name: rubble
-      color: '#503f24'
-    - null
-    - null
-    - name: wall
-      text color: '#737373'
-      object color: '#293141'
-    - name: water
-      color: '#5f9dd1'
-    - name: bog
-      color: '#5c8339'
-      coords: [1, 76]
-    - name: brick
-      text color: '#90673e'
-      object color: '#362e22'
-    - name: cliff
-      color: '#90673e'
-    properties:
-      connector: true
-    sprites:
-    - text
-    - {up: false, down: false, left: false, right: false}
-    - {up: false, down: false, left: false, right: true}
-    - {up: true, down: false, left: false, right: false}
-    - {up: true, down: false, left: false, right: true}
-    - {up: false, down: false, left: true, right: false}
-    - {up: false, down: false, left: true, right: true}
-    - {up: true, down: false, left: true, right: false}
-    - {up: true, down: false, left: true, right: true}
-    - {up: false, down: true, left: false, right: false}
-    - {up: false, down: true, left: false, right: true}
-    - {up: true, down: true, left: false, right: false}
-    - {up: true, down: true, left: false, right: true}
-    - {up: false, down: true, left: true, right: false}
-    - {up: false, down: true, left: true, right: true}
-    - {up: true, down: true, left: true, right: false}
-    - {up: true, down: true, left: true, right: true}
+        connector: true
+      sprites:
+      - text
+      - {up: false, down: false, left: false, right: false}
+      - {up: false, down: false, left: false, right: true}
+      - {up: true, down: false, left: false, right: false}
+      - {up: true, down: false, left: false, right: true}
+      - {up: false, down: false, left: true, right: false}
+      - {up: false, down: false, left: true, right: true}
+      - {up: true, down: false, left: true, right: false}
+      - {up: true, down: false, left: true, right: true}
+      - {up: false, down: true, left: false, right: false}
+      - {up: false, down: true, left: false, right: true}
+      - {up: true, down: true, left: false, right: false}
+      - {up: true, down: true, left: false, right: true}
+      - {up: false, down: true, left: true, right: false}
+      - {up: false, down: true, left: true, right: true}
+      - {up: true, down: true, left: true, right: false}
+      - {up: true, down: true, left: true, right: true}
+- size: [32, 32]
+  scale: 1.333
+  sheets:
+    sprites3:
+    - objects:
+      - name: cursor
+        color: '#eb91ca'
+        coords: [376, 851]
+        frames: right
+      sprites:
+      - {}

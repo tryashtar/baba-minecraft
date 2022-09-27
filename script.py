@@ -29,63 +29,75 @@ class SpriteCollection:
     return list(dict(zip(properties, x)) for x in itertools.product(*properties.values()))
 
   def generate_grids(self):
-    # we need a separate grid for each frame of idle animation
-    result = [[] for x in range(self.anim_frames)]
-    coords = None
-    for sheetname, sheetdata in self.data['sheets'].items():
-      # load the spritesheet PNG and filter out the background color
-      image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
-      array = np.array(image, dtype=np.ubyte)
-      mask = (array[:,:,:3] == (84, 165, 75)).all(axis=2)
-      alpha = np.where(mask, 0, 255)
-      array[:,:,-1] = alpha
-      image = PIL.Image.fromarray(np.ubyte(array))
-
-      for config in sheetdata:
-        for obj in config['objects']:
-          # if coords are unspecified, move to the next row
-          if coords is not None:
-            coords[1] += 25 * self.anim_frames
-          if obj is None:
-            continue
-          coords = obj.get('coords', coords)
-          # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
-          baba = self.get_obj(obj['name'])
-          sprites = []
-          # expand sprite definitions from shorthands to a complete list of all sprites
-          for spr in config['sprites']:
-            if type(spr) is dict and 'permute' in spr:
-              sprites.extend(self.permute(spr['permute']))
-            else:
-              sprites.append(spr)
-          for i,spr in enumerate(sprites):
-            if spr == 'text':
-              adding = self.get_obj('text')
-              color = obj.get('text color', obj.get('color'))
-              spr = {'text': obj['name'], 'part': 'noun'}
-            else:
-              adding = baba
-              color = obj.get('object color', obj.get('color'))
-            # include properties specific to this object, or this sprite
-            if 'properties' in obj:
-              for k,v in obj['properties'].items():
-                spr[k] = v
-            if 'properties' in config:
-              for k,v in config['properties'].items():
-                spr[k] = v
-            # make keys the actual metadata objects instead of their names
-            props = {}
-            for k,v in spr.items():
-              props[self.properties[k]] = v
-            # finalize the sprite and add each anim frame to its respective grid
-            sprite = BabaSprite(adding, props, color)
-            adding.sprites.append(sprite)
-            for h,g in enumerate(result):
-              x, y = coords
-              img = image.crop((x+(25*i),y+(25*h),x+(25*i)+24,y+(25*h)+24))
-              g.append((sprite, img))
-
-    return list(map(lambda x: Grid(x), result))
+    grids = []
+    for grid in self.data['grids']:
+      # we need a separate grid for each frame of idle animation
+      result = [[] for x in range(self.anim_frames)]
+      coords = None
+      (width, height) = grid['size']
+      for sheetname, sheetdata in grid['sheets'].items():
+        # load the spritesheet PNG and filter out the background color
+        image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
+        array = np.array(image, dtype=np.ubyte)
+        mask = (array[:,:,:3] == (84, 165, 75)).all(axis=2)
+        alpha = np.where(mask, 0, 255)
+        array[:,:,-1] = alpha
+        image = PIL.Image.fromarray(np.ubyte(array))
+  
+        for config in sheetdata:
+          for obj in config['objects']:
+            # if coords are unspecified, move to the next row
+            if coords is not None:
+              coords[1] += (height+1) * frames
+            if obj is None:
+              continue
+            coords = obj.get('coords', coords)
+            framedir = obj.get('frames', 'down')
+            frames = 1 if framedir == 'none' else self.anim_frames
+            # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
+            baba = self.get_obj(obj['name'])
+            sprites = []
+            # expand sprite definitions from shorthands to a complete list of all sprites
+            for spr in config['sprites']:
+              if type(spr) is dict and 'permute' in spr:
+                sprites.extend(self.permute(spr['permute']))
+              else:
+                sprites.append(spr)
+            for i,spr in enumerate(sprites):
+              if spr == 'text':
+                adding = self.get_obj('text')
+                color = obj.get('text color', obj.get('color'))
+                spr = {'text': obj['name'], 'part': 'noun'}
+              else:
+                adding = baba
+                color = obj.get('object color', obj.get('color'))
+              # include properties specific to this object, or this sprite
+              if 'properties' in obj:
+                for k,v in obj['properties'].items():
+                  spr[k] = v
+              if 'properties' in config:
+                for k,v in config['properties'].items():
+                  spr[k] = v
+              # make keys the actual metadata objects instead of their names
+              props = {}
+              for k,v in spr.items():
+                props[self.properties[k]] = v
+              # finalize the sprite and add each anim frame to its respective grid
+              sprite = BabaSprite(adding, props, color)
+              adding.sprites.append(sprite)
+              for h,g in enumerate(result):
+                x, y = coords
+                if framedir == 'down':
+                  img = image.crop((x+((width+1)*i),y+((height+1)*h),x+((width+1)*i)+width,y+((height+1)*h)+height))
+                elif framedir == 'right':
+                  img = image.crop((x+((width+1)*h),y+((height+1)*i),x+((width+1)*h)+width,y+((height+1)*i)+height))
+                elif framedir == 'none':
+                  img = image.crop((x,y+((height+1)*i),x+width,y+((height+1)*i)+height))
+                g.append((sprite, img))
+  
+      result = [Grid(x, width, height, grid.get('scale', 1)) for x in result]
+      grids.append(result)
+    return grids
 
   def create_summon(self, sprite):
     types = {}
@@ -199,24 +211,25 @@ class BabaSprite:
       return self.parent.name
     result = self.parent.name + sep1
     for k,v in properties.items():
-      if k.name == 'text':
+      if 'primary' in k.attributes:
         result += str(v).lower() + sep3
     for k,v in properties.items():
-      if k.name != 'text':
+      if 'primary' not in k.attributes:
         result += k.name + sep2 + str(v).lower() + sep3
     result = result[:-1]
     return result
 
 
 class Grid:
-  def __init__(self, spritelist):
+  def __init__(self, spritelist, sprite_width, sprite_height, scale):
+    self.scale = scale
     self.size = math.ceil(math.sqrt(len(spritelist)))
-    self.image = PIL.Image.new('RGBA', (24*self.size, 24*self.size))
+    self.image = PIL.Image.new('RGBA', (sprite_width*self.size, sprite_height*self.size))
     self.sprites = [[None for x in range(self.size)] for x in range(self.size)]
     x = 0
     y = 0
     for sprite,image in spritelist:
-      PIL.Image.Image.paste(self.image, image, (x*24, y*24))    
+      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height))    
       self.sprites[y][x] = sprite
       x += 1
       if x >= self.size:
@@ -242,10 +255,22 @@ class TileManager:
     self.charmap = {}
     self.placement = {}
     self.negatives = {}
-    self.lang = {"baba.row_end":"-","baba.empty_tile":" ","baba.overlay":"!"}
-    self.providers = [{"type":"space","advances":{" ":self.scale, "!":-self.scale, '.':-3, "-":-self.scale*(self.columns+2),"!":-self.scale}}]
+    self.advances = {}
+    self.reverse_advances = {}
+    self.providers = [{"type":"space","advances":self.advances}]
+    self.lang = {"baba.row_end":self.get_advance(-self.scale*(self.columns+2)),"baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
     for r in range(rows):
       self.charmap[r] = {}
+
+  def get_advance(self, width):
+    if width == 0:
+      return ''
+    if width in self.reverse_advances:
+      return self.reverse_advances[width]
+    char = self.next_char()
+    self.reverse_advances[width] = char
+    self.advances[char] = width
+    return char
 
   def next_char(self):
     i = ord(self.char)
@@ -259,6 +284,8 @@ class TileManager:
     return [''.join(['\u0000' if x is None else source[x] for x in y]) for y in grid.sprites]
 
   def add_grid(self, grid, filename):
+    height = round(self.scale*grid.scale, 2)
+    adjust = round((height-self.scale)/2,2)
     for y in range(len(grid.sprites)):
       for x in range(len(grid.sprites[y])):
         c = grid.sprites[y][x]
@@ -267,12 +294,12 @@ class TileManager:
           for r in range(self.rows):
             self.charmap[r][c] = self.next_char()
             display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-            self.lang[f'baba.{display}.row{r}'] = self.charmap[r][c]+self.negatives[c]+'. '
+            self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust)+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust)
           self.placement[c] = (grid, y, x)
 
     for r in range(self.rows):
-      self.providers.append({"type":"bitmap","file":filename,"height":self.scale,"ascent":-r*self.scale,"chars":self.to_char_grid(grid, self.charmap[r])})
-    self.providers.append({"type":"bitmap","file":filename,"height":-self.scale,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
+      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[r])})
+    self.providers.append({"type":"bitmap","file":filename,"height":-height,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
 
 with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
@@ -282,14 +309,18 @@ for o in sprites.objects.values():
     print(s.display(props, ' ', '=', ' '))
 
 manager = TileManager(20,40)
-manager.add_grid(sprites.grids[0], f'baba:grid_anim0.png')
+for i,grids in enumerate(sprites.grids):
+  manager.add_grid(grids[0], f'baba:grid{i}_anim0.png')
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
-for i,grid in enumerate(sprites.grids):
-  grid.image.save(f'resourcepack/assets/baba/textures/grid_anim{i}.png')
+for i,grids in enumerate(sprites.grids):
+  for j,grid in enumerate(grids):
+    grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{j}.png')
+
+for j,grid in enumerate(sprites.grids[0]):
   for p in manager.providers:
     if 'file' in p:
-      p['file'] = p['file'].replace(f'anim{i-1}', f'anim{i}')
-  tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{i}.json')
+      p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
+  tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
 load = [
   f'kill @e[type=marker,tag=baba.object]'
@@ -306,6 +337,7 @@ for r in range(manager.rows):
     f'data modify storage baba:main text append value \'{{"translate":"baba.tile.row{r}","color":"black"}}\'',
     f'scoreboard players set last_column baba -1',
     f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{sprite:"baba"}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.501',
+    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{properties:["select"]}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.502',
     f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
     f'scoreboard players set column baba {manager.columns-1}',
     f'execute if score column baba > last_column baba run function baba:display/add_empty',
@@ -397,8 +429,11 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
       save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
       save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)}')
     placement = manager.placement[s]
-    uvsize = 16/sprites.grids[0].size
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],2),round(uvsize*placement[1],2),round(uvsize*placement[2]+uvsize,2),round(uvsize*placement[1]+uvsize,2)],"texture":"#up"}}}]}
+    for g,grids in enumerate(sprites.grids):
+      if grids[0] == placement[0]:
+        break
+    uvsize = 16/grids[0].size
+    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],2),round(uvsize*placement[1],2),round(uvsize*placement[2]+uvsize,2),round(uvsize*placement[1]+uvsize,2)],"texture":"#up"}}}]}
     description = s.display(p, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
