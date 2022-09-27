@@ -1887,7 +1887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ice",
+                        "text": "husks",
                         "italic": false
                      }
                   },
@@ -1919,7 +1919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon jelly",
+                        "text": "ice",
                         "italic": false
                      }
                   },
@@ -1951,7 +1951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon moon",
+                        "text": "icon jelly",
                         "italic": false
                      }
                   },
@@ -1983,7 +1983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon mountains",
+                        "text": "icon moon",
                         "italic": false
                      }
                   },
@@ -2015,7 +2015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon flowers",
+                        "text": "icon mountains",
                         "italic": false
                      }
                   },
@@ -2047,7 +2047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon abc",
+                        "text": "icon flowers",
                         "italic": false
                      }
                   },
@@ -2079,7 +2079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon pillar",
+                        "text": "icon abc",
                         "italic": false
                      }
                   },
@@ -2111,7 +2111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon square",
+                        "text": "icon pillar",
                         "italic": false
                      }
                   },
@@ -2143,7 +2143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon dust",
+                        "text": "icon square",
                         "italic": false
                      }
                   },
@@ -2175,7 +2175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon leaf",
+                        "text": "icon dust",
                         "italic": false
                      }
                   },
@@ -2207,7 +2207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon skull",
+                        "text": "icon leaf",
                         "italic": false
                      }
                   },
@@ -2239,7 +2239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon level",
+                        "text": "icon skull",
                         "italic": false
                      }
                   },
@@ -2271,7 +2271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon tree",
+                        "text": "icon level",
                         "italic": false
                      }
                   },
@@ -2303,7 +2303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon snowflake",
+                        "text": "icon tree",
                         "italic": false
                      }
                   },
@@ -2335,7 +2335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "icon dot",
+                        "text": "icon snowflake",
                         "italic": false
                      }
                   },
@@ -2367,7 +2367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "jelly",
+                        "text": "icon dot",
                         "italic": false
                      }
                   },
@@ -2399,7 +2399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-right",
+                        "text": "icon extra1",
                         "italic": false
                      }
                   },
@@ -2431,7 +2431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-up",
+                        "text": "icon extra2",
                         "italic": false
                      }
                   },
@@ -2463,7 +2463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-left",
+                        "text": "icon extra3",
                         "italic": false
                      }
                   },
@@ -2495,7 +2495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "keke facing-down",
+                        "text": "icon extra4",
                         "italic": false
                      }
                   },
@@ -2527,7 +2527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "key",
+                        "text": "icon extra5",
                         "italic": false
                      }
                   },
@@ -2559,7 +2559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "lava",
+                        "text": "icon extra6",
                         "italic": false
                      }
                   },
@@ -2591,7 +2591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "leaf",
+                        "text": "icon extra7",
                         "italic": false
                      }
                   },
@@ -2623,7 +2623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "level",
+                        "text": "icon a",
                         "italic": false
                      }
                   },
@@ -2655,7 +2655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "line",
+                        "text": "icon b",
                         "italic": false
                      }
                   },
@@ -2687,7 +2687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "love",
+                        "text": "icon c",
                         "italic": false
                      }
                   },
@@ -2719,7 +2719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-right",
+                        "text": "icon d",
                         "italic": false
                      }
                   },
@@ -2751,7 +2751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-up",
+                        "text": "icon e",
                         "italic": false
                      }
                   },
@@ -2783,7 +2783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-left",
+                        "text": "icon f",
                         "italic": false
                      }
                   },
@@ -2815,7 +2815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "me facing-down",
+                        "text": "icon g",
                         "italic": false
                      }
                   },
@@ -2847,7 +2847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "moon",
+                        "text": "icon h",
                         "italic": false
                      }
                   },
@@ -2879,7 +2879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "orb",
+                        "text": "icon i",
                         "italic": false
                      }
                   },
@@ -2911,7 +2911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pillar",
+                        "text": "jelly",
                         "italic": false
                      }
                   },
@@ -2943,7 +2943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "pipe",
+                        "text": "keke facing-right",
                         "italic": false
                      }
                   },
@@ -2975,7 +2975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "reed",
+                        "text": "keke facing-up",
                         "italic": false
                      }
                   },
@@ -3007,7 +3007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-right",
+                        "text": "keke facing-left",
                         "italic": false
                      }
                   },
@@ -3039,7 +3039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-up",
+                        "text": "keke facing-down",
                         "italic": false
                      }
                   },
@@ -3071,7 +3071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-left",
+                        "text": "key",
                         "italic": false
                      }
                   },
@@ -3103,7 +3103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "robot facing-down",
+                        "text": "lava",
                         "italic": false
                      }
                   },
@@ -3135,7 +3135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rock",
+                        "text": "leaf",
                         "italic": false
                      }
                   },
@@ -3167,7 +3167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket facing-right",
+                        "text": "level",
                         "italic": false
                      }
                   },
@@ -3199,7 +3199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket facing-up",
+                        "text": "line",
                         "italic": false
                      }
                   },
@@ -3231,7 +3231,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket facing-left",
+                        "text": "love",
                         "italic": false
                      }
                   },
@@ -3263,7 +3263,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rocket facing-down",
+                        "text": "me facing-right",
                         "italic": false
                      }
                   },
@@ -3295,7 +3295,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rose",
+                        "text": "me facing-up",
                         "italic": false
                      }
                   },
@@ -3327,7 +3327,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rubble",
+                        "text": "me facing-left",
                         "italic": false
                      }
                   },
@@ -3359,7 +3359,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "sign",
+                        "text": "me facing-down",
                         "italic": false
                      }
                   },
@@ -3391,7 +3391,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull facing-right",
+                        "text": "moon",
                         "italic": false
                      }
                   },
@@ -3423,7 +3423,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull facing-up",
+                        "text": "orb",
                         "italic": false
                      }
                   },
@@ -3455,7 +3455,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull facing-left",
+                        "text": "pillar",
                         "italic": false
                      }
                   },
@@ -3487,7 +3487,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "skull facing-down",
+                        "text": "pipe",
                         "italic": false
                      }
                   },
@@ -3519,7 +3519,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "star",
+                        "text": "reed",
                         "italic": false
                      }
                   },
@@ -3551,7 +3551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue facing-right",
+                        "text": "robot facing-right",
                         "italic": false
                      }
                   },
@@ -3583,7 +3583,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue facing-up",
+                        "text": "robot facing-up",
                         "italic": false
                      }
                   },
@@ -3615,7 +3615,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue facing-left",
+                        "text": "robot facing-left",
                         "italic": false
                      }
                   },
@@ -3647,7 +3647,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "statue facing-down",
+                        "text": "robot facing-down",
                         "italic": false
                      }
                   },
@@ -3679,7 +3679,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "stump",
+                        "text": "rock",
                         "italic": false
                      }
                   },
@@ -3711,7 +3711,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "sun",
+                        "text": "rocket facing-right",
                         "italic": false
                      }
                   },
@@ -3743,7 +3743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text baba",
+                        "text": "rocket facing-up",
                         "italic": false
                      }
                   },
@@ -3775,7 +3775,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text keke",
+                        "text": "rocket facing-left",
                         "italic": false
                      }
                   },
@@ -3807,7 +3807,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text me",
+                        "text": "rocket facing-down",
                         "italic": false
                      }
                   },
@@ -3839,7 +3839,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text robot",
+                        "text": "rose",
                         "italic": false
                      }
                   },
@@ -3871,7 +3871,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text belt",
+                        "text": "rubble",
                         "italic": false
                      }
                   },
@@ -3903,7 +3903,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bird",
+                        "text": "sign",
                         "italic": false
                      }
                   },
@@ -3935,7 +3935,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bug",
+                        "text": "skull facing-right",
                         "italic": false
                      }
                   },
@@ -3967,7 +3967,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text crab",
+                        "text": "skull facing-up",
                         "italic": false
                      }
                   },
@@ -3999,7 +3999,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rocket",
+                        "text": "skull facing-left",
                         "italic": false
                      }
                   },
@@ -4031,7 +4031,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text skull",
+                        "text": "skull facing-down",
                         "italic": false
                      }
                   },
@@ -4063,7 +4063,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text ghost",
+                        "text": "star",
                         "italic": false
                      }
                   },
@@ -4095,7 +4095,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text statue",
+                        "text": "statue facing-right",
                         "italic": false
                      }
                   },
@@ -4127,7 +4127,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bolt",
+                        "text": "statue facing-up",
                         "italic": false
                      }
                   },
@@ -4159,7 +4159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text hand",
+                        "text": "statue facing-left",
                         "italic": false
                      }
                   },
@@ -4191,7 +4191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bat",
+                        "text": "statue facing-down",
                         "italic": false
                      }
                   },
@@ -4223,7 +4223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bubble",
+                        "text": "stump",
                         "italic": false
                      }
                   },
@@ -4255,7 +4255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cog",
+                        "text": "sun",
                         "italic": false
                      }
                   },
@@ -4287,7 +4287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text algae",
+                        "text": "text baba",
                         "italic": false
                      }
                   },
@@ -4319,7 +4319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text flag",
+                        "text": "text keke",
                         "italic": false
                      }
                   },
@@ -4351,7 +4351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text key",
+                        "text": "text me",
                         "italic": false
                      }
                   },
@@ -4383,7 +4383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text love",
+                        "text": "text robot",
                         "italic": false
                      }
                   },
@@ -4415,7 +4415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text ufo",
+                        "text": "text belt",
                         "italic": false
                      }
                   },
@@ -4447,7 +4447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text door",
+                        "text": "text bird",
                         "italic": false
                      }
                   },
@@ -4479,7 +4479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text flower",
+                        "text": "text bug",
                         "italic": false
                      }
                   },
@@ -4511,7 +4511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pillar",
+                        "text": "text crab",
                         "italic": false
                      }
                   },
@@ -4543,7 +4543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rock",
+                        "text": "text rocket",
                         "italic": false
                      }
                   },
@@ -4575,7 +4575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tile",
+                        "text": "text skull",
                         "italic": false
                      }
                   },
@@ -4607,7 +4607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fruit",
+                        "text": "text ghost",
                         "italic": false
                      }
                   },
@@ -4639,7 +4639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text moon",
+                        "text": "text statue",
                         "italic": false
                      }
                   },
@@ -4671,7 +4671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text star",
+                        "text": "text bolt",
                         "italic": false
                      }
                   },
@@ -4703,7 +4703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tree",
+                        "text": "text hand",
                         "italic": false
                      }
                   },
@@ -4735,7 +4735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text box",
+                        "text": "text bat",
                         "italic": false
                      }
                   },
@@ -4767,7 +4767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fire",
+                        "text": "text bubble",
                         "italic": false
                      }
                   },
@@ -4799,7 +4799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text gate",
+                        "text": "text cog",
                         "italic": false
                      }
                   },
@@ -4831,7 +4831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text jelly",
+                        "text": "text algae",
                         "italic": false
                      }
                   },
@@ -4863,7 +4863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text reed",
+                        "text": "text flag",
                         "italic": false
                      }
                   },
@@ -4895,7 +4895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sign",
+                        "text": "text key",
                         "italic": false
                      }
                   },
@@ -4927,7 +4927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sun",
+                        "text": "text love",
                         "italic": false
                      }
                   },
@@ -4959,7 +4959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungi",
+                        "text": "text ufo",
                         "italic": false
                      }
                   },
@@ -4991,7 +4991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text husk",
+                        "text": "text door",
                         "italic": false
                      }
                   },
@@ -5023,7 +5023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text leaf",
+                        "text": "text flower",
                         "italic": false
                      }
                   },
@@ -5055,7 +5055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text orb",
+                        "text": "text pillar",
                         "italic": false
                      }
                   },
@@ -5087,7 +5087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cake",
+                        "text": "text rock",
                         "italic": false
                      }
                   },
@@ -5119,7 +5119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dot",
+                        "text": "text tile",
                         "italic": false
                      }
                   },
@@ -5151,7 +5151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text foliage",
+                        "text": "text fruit",
                         "italic": false
                      }
                   },
@@ -5183,7 +5183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rose",
+                        "text": "text moon",
                         "italic": false
                      }
                   },
@@ -5215,7 +5215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dust",
+                        "text": "text star",
                         "italic": false
                      }
                   },
@@ -5247,7 +5247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungus",
+                        "text": "text tree",
                         "italic": false
                      }
                   },
@@ -5279,7 +5279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stump",
+                        "text": "text box",
                         "italic": false
                      }
                   },
@@ -5311,7 +5311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cursor",
+                        "text": "text fire",
                         "italic": false
                      }
                   },
@@ -5343,7 +5343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text is",
+                        "text": "text gate",
                         "italic": false
                      }
                   },
@@ -5375,7 +5375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text and",
+                        "text": "text jelly",
                         "italic": false
                      }
                   },
@@ -5407,7 +5407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text not",
+                        "text": "text reed",
                         "italic": false
                      }
                   },
@@ -5439,7 +5439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text true",
+                        "text": "text sign",
                         "italic": false
                      }
                   },
@@ -5471,7 +5471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text near",
+                        "text": "text sun",
                         "italic": false
                      }
                   },
@@ -5503,7 +5503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text facing",
+                        "text": "text fungi",
                         "italic": false
                      }
                   },
@@ -5535,7 +5535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text has",
+                        "text": "text husk",
                         "italic": false
                      }
                   },
@@ -5567,7 +5567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text make",
+                        "text": "text leaf",
                         "italic": false
                      }
                   },
@@ -5599,7 +5599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text write",
+                        "text": "text orb",
                         "italic": false
                      }
                   },
@@ -5631,7 +5631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text all",
+                        "text": "text trees",
                         "italic": false
                      }
                   },
@@ -5663,7 +5663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text empty",
+                        "text": "text cake",
                         "italic": false
                      }
                   },
@@ -5695,7 +5695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text",
+                        "text": "text dot",
                         "italic": false
                      }
                   },
@@ -5727,7 +5727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text level",
+                        "text": "text foliage",
                         "italic": false
                      }
                   },
@@ -5759,7 +5759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text you",
+                        "text": "text rose",
                         "italic": false
                      }
                   },
@@ -5791,7 +5791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text push",
+                        "text": "text dust",
                         "italic": false
                      }
                   },
@@ -5823,7 +5823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pull",
+                        "text": "text fungus",
                         "italic": false
                      }
                   },
@@ -5855,7 +5855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text move",
+                        "text": "text husks",
                         "italic": false
                      }
                   },
@@ -5887,7 +5887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text shift",
+                        "text": "text stump",
                         "italic": false
                      }
                   },
@@ -5919,7 +5919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text defeat",
+                        "text": "text cursor",
                         "italic": false
                      }
                   },
@@ -5951,7 +5951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text win",
+                        "text": "text is",
                         "italic": false
                      }
                   },
@@ -5983,7 +5983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stop",
+                        "text": "text and",
                         "italic": false
                      }
                   },
@@ -6015,7 +6015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text open",
+                        "text": "text not",
                         "italic": false
                      }
                   },
@@ -6047,7 +6047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text shut",
+                        "text": "text true",
                         "italic": false
                      }
                   },
@@ -6079,7 +6079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text float",
+                        "text": "text near",
                         "italic": false
                      }
                   },
@@ -6111,7 +6111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sink",
+                        "text": "text facing",
                         "italic": false
                      }
                   },
@@ -6143,7 +6143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text weak",
+                        "text": "text has",
                         "italic": false
                      }
                   },
@@ -6175,7 +6175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text swap",
+                        "text": "text make",
                         "italic": false
                      }
                   },
@@ -6207,7 +6207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tele",
+                        "text": "text write",
                         "italic": false
                      }
                   },
@@ -6239,7 +6239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fall",
+                        "text": "text all",
                         "italic": false
                      }
                   },
@@ -6271,7 +6271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text more",
+                        "text": "text empty",
                         "italic": false
                      }
                   },
@@ -6303,7 +6303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text red",
+                        "text": "text text",
                         "italic": false
                      }
                   },
@@ -6335,7 +6335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text blue",
+                        "text": "text level",
                         "italic": false
                      }
                   },
@@ -6367,7 +6367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sleep",
+                        "text": "text you",
                         "italic": false
                      }
                   },
@@ -6399,7 +6399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text group",
+                        "text": "text push",
                         "italic": false
                      }
                   },
@@ -6431,7 +6431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text right",
+                        "text": "text pull",
                         "italic": false
                      }
                   },
@@ -6463,7 +6463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text up",
+                        "text": "text move",
                         "italic": false
                      }
                   },
@@ -6495,7 +6495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text left",
+                        "text": "text shift",
                         "italic": false
                      }
                   },
@@ -6527,7 +6527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text down",
+                        "text": "text defeat",
                         "italic": false
                      }
                   },
@@ -6559,7 +6559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text word",
+                        "text": "text win",
                         "italic": false
                      }
                   },
@@ -6591,7 +6591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text select",
+                        "text": "text stop",
                         "italic": false
                      }
                   },
@@ -6623,7 +6623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cloud",
+                        "text": "text open",
                         "italic": false
                      }
                   },
@@ -6655,7 +6655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fence",
+                        "text": "text shut",
                         "italic": false
                      }
                   },
@@ -6687,7 +6687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text grass",
+                        "text": "text float",
                         "italic": false
                      }
                   },
@@ -6719,7 +6719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text hedge",
+                        "text": "text sink",
                         "italic": false
                      }
                   },
@@ -6751,7 +6751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text ice",
+                        "text": "text weak",
                         "italic": false
                      }
                   },
@@ -6783,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text lava",
+                        "text": "text swap",
                         "italic": false
                      }
                   },
@@ -6815,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text line",
+                        "text": "text tele",
                         "italic": false
                      }
                   },
@@ -6847,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pipe",
+                        "text": "text fall",
                         "italic": false
                      }
                   },
@@ -6879,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rubble",
+                        "text": "text more",
                         "italic": false
                      }
                   },
@@ -6911,7 +6911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text wall",
+                        "text": "text red",
                         "italic": false
                      }
                   },
@@ -6943,7 +6943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text water",
+                        "text": "text blue",
                         "italic": false
                      }
                   },
@@ -6975,7 +6975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bog",
+                        "text": "text sleep",
                         "italic": false
                      }
                   },
@@ -7007,7 +7007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text brick",
+                        "text": "text group",
                         "italic": false
                      }
                   },
@@ -7039,7 +7039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cliff",
+                        "text": "text right",
                         "italic": false
                      }
                   },
@@ -7071,7 +7071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tile",
+                        "text": "text up",
                         "italic": false
                      }
                   },
@@ -7103,7 +7103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tree",
+                        "text": "text left",
                         "italic": false
                      }
                   },
@@ -7135,7 +7135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ufo",
+                        "text": "text down",
                         "italic": false
                      }
                   },
@@ -7167,7 +7167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall",
+                        "text": "text word",
                         "italic": false
                      }
                   },
@@ -7199,13 +7199,653 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water",
+                        "text": "text select",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:225}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 0
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text cloud",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:226}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text fence",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:227}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text grass",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:228}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text hedge",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:229}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 4
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text ice",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:230}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 5
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text lava",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:231}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 6
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text line",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:232}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 7
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text pipe",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:233}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 8
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text rubble",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:234}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 9
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text wall",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:235}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 10
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text water",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:236}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 11
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text bog",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:237}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 12
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text brick",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:238}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 13
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text cliff",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:239}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 14
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "tile",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:240}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 15
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "tree",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:241}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 16
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "trees",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:242}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 17
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "ufo",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:243}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 18
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "wall",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:244}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 19
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:245}"
                   }
                ]
             }

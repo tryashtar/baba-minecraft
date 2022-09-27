@@ -326,10 +326,11 @@ load = [
   f'kill @e[type=marker,tag=baba.object]'
 ]
 save = [
-    f'fill 0 1 0 {manager.rows-1} 1 {manager.columns-1} air',
-    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete',
+    f'fill 0 1 0 {manager.rows-1} 11 {manager.columns-1} air',
+    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} air',
     f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass',
-    'execute as @e[type=marker,tag=baba.object] at @s run function baba:io/save_block'
+    'execute as @e[type=marker,tag=baba.object] at @s run function baba:io/save_block',
+    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete replace air'
 ]
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
@@ -393,7 +394,7 @@ for r in range(manager.rows):
 
 
 load_lines = []
-save_lines = []
+save_lines = ['execute unless block ~ ~ ~ air positioned ~ ~2 ~ run function baba:io/save_block']
 instruments = {}
 sprite_fns = {}
 blockstate = {}
@@ -422,12 +423,12 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
       if o.name not in sprite_fns:
         sprite_fns[o.name] = []
       selector = s.create_selector(p, False)
-      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
-      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)}')
+      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}] keep')
+      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)} keep')
     else:
       selector = s.create_selector(p, True)
-      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
-      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)}')
+      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}] keep')
+      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)} keep')
     placement = manager.placement[s]
     for g,grids in enumerate(sprites.grids):
       if grids[0] == placement[0]:

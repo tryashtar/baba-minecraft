@@ -7,3 +7,4 @@ execute if block ~ ~ ~ note_block[instrument=flute] run function baba:io/load_bl
 execute if block ~ ~ ~ note_block[instrument=bell] run function baba:io/load_block/bell
 execute if block ~ ~ ~ note_block[instrument=guitar] run function baba:io/load_block/guitar
 execute if block ~ ~ ~ note_block[instrument=chime] run function baba:io/load_block/chime
+execute if block ~ ~ ~ note_block[instrument=xylophone] run function baba:io/load_block/xylophone

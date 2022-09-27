@@ -198,6 +198,11 @@ grids:
         color: '#ede285'
       - name: orb
         color: '#d9396a'
+      - null
+      - null
+      - null
+      - name: trees
+        color: '#5c8339'
       - name: cake
         color: '#eb91ca'
         coords: [251, 76]
@@ -216,8 +221,8 @@ grids:
         coords: [626, 151]
       - name: fungus
         color: '#90673e'
-      - null
-      - null
+      - name: husks
+        color: '#90673e'
       - null
       - null
       - null
@@ -282,6 +287,34 @@ grids:
       - type: dot
 
     extras:
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [51, 1]
+        frames: none
+      sprites:
+      - type: extra1
+      - type: extra2
+      - type: extra3
+      - type: extra4
+      - type: extra5
+      - type: extra6
+      - type: extra7
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [1, 76]
+        frames: none
+      sprites:
+      - type: a
+      - type: b
+      - type: c
+      - type: d
+      - type: e
+      - type: f
+      - type: g
+      - type: h
+      - type: i
     - objects:
       - name: level
         color: '#212734'
@@ -461,7 +494,7 @@ grids:
           part: property
       - name: text
         color: '#a8b43c'
-        coords: [227, 2407]
+        coords: [226, 2407]
         properties:
           text: fall
           part: property
