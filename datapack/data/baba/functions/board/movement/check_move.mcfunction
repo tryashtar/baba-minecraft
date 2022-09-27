@@ -16,8 +16,8 @@ execute if entity @s[tag=can_move,nbt=!{data:{properties:["shut"]}},nbt=!{data:{
 execute if entity @s[tag=can_move,nbt=!{data:{properties:["shut"]}},nbt=!{data:{properties:["open"]}}] positioned ^ ^ ^1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["pull"]}},nbt=!{data:{properties:["push"]}},nbt=!{data:{properties:["weak"]}},limit=1] run tag @s remove can_move
 
 # can't move out of bounds
-execute positioned ^ ^ ^1 unless block ~ -1 ~ glass run tag @s remove can_move
+execute positioned ^ ^ ^1 unless block ~ ~-1 ~ white_concrete run tag @s remove can_move
 
-# weak objects can always move
+# weak objects that try to move and can't get destroyed
 # objects with both 'move' and 'weak' won't willingly walk into walls, they turn around like normal
-tag @s[tag=!can_move,tag=!auto_move,nbt={data:{properties:["weak"]}}] add can_move
+tag @s[tag=!can_move,tag=!auto_move,nbt={data:{properties:["weak"]}}] add destroy

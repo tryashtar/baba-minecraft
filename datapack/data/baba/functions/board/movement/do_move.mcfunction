@@ -1,3 +1,4 @@
+execute as @e[type=marker,tag=baba.object,tag=destroy] at @s run function baba:board/interact/destroy
 scoreboard players add @e[type=marker,tag=baba.object,tag=can_move] walk 1
 scoreboard players set @e[type=marker,tag=baba.object,tag=can_move,scores={walk=4..}] walk 0
 execute as @e[type=marker,tag=baba.object,tag=can_move] positioned as @s run tp @s ^ ^ ^1

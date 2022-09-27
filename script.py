@@ -141,6 +141,45 @@ class SpriteCollection:
     commands.insert(0, 'summon marker ~ 1 ~ {'+','.join(summon)+'}')
     return commands
 
+  def create_storage(self, sprite, properties, mode):
+    types = {}
+    for k,v in properties.items():
+      if k.kind not in types:
+        types[k.kind] = {}
+      types[k.kind][k] = v
+    if mode == 'create':
+      for k in self.properties.values():
+        if 'all' in k.attributes:
+          if k.kind not in types:
+            types[k.kind] = {}
+          if k not in types[k.kind]:
+            types[k.kind][k] = k.default
+    nbt = []
+    data = [] if mode == 'check_props' else [f'sprite:"{sprite.parent.name}"']
+    tags = ['baba.object'] if mode == 'create' else []
+    for t,vals in types.items():
+      if t == 'tag':
+        tags.extend(list(map(lambda x: x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name, filter(lambda x: type(x[1]) is str or x[1], vals.items()))))
+      elif t == 'score':
+        scores = []
+        for prop,val in vals.items():
+          scores.append(f'{prop.name}:{val if type(val) is int else prop.values.index(val)+1}')
+        nbt.append('scores:{'+','.join(scores)+'}')
+      elif t == 'nbt':
+        for prop,val in vals.items():
+          v = val
+          if type(v) is bool:
+            v = '1b' if v else '0b'
+          elif type(v) is str:
+            v = '"'+v+'"'
+          data.append(prop.name+':'+v)
+    if len(tags) > 0:
+      nbt.append('tags:['+','.join(['"'+x+'"' for x in tags])+']')
+    if len(data) > 0:
+      nbt.append('data:{'+','.join(data)+'}')
+    return ','.join(nbt)
+
+
 class BabaObject:
   def __init__(self, name):
     self.name = name
@@ -324,17 +363,6 @@ for j,grid in enumerate(sprites.grids[0]):
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-load = [
-  f'kill @e[type=marker,tag=baba.object]',
-  f'kill @e[type=marker,tag=baba.space]'
-]
-save = [
-    f'fill 0 1 0 {manager.rows-1} 11 {manager.columns-1} air',
-    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} air',
-    f'fill 0 -1 0 {manager.rows-1} -1 {manager.columns-1} glass',
-    'execute as @e[type=marker,tag=baba.object] at @s run function baba:io/save_block',
-    f'fill 0 0 0 {manager.rows-1} 0 {manager.columns-1} white_concrete replace air'
-]
 text = ['data modify storage baba:main text set value [\'""\']']
 for r in range(manager.rows):
   text.extend([
@@ -349,18 +377,6 @@ for r in range(manager.rows):
   ])
   if r!=manager.rows-1:
     text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
-  for c in range(manager.columns):
-    for h in range(3):
-      load.append(f'execute positioned {manager.rows-r-1} {1+2*h} {c} run function baba:io/load_block')
-      if h == 0:
-        load.append(f'summon marker {manager.rows-r-1} 1 {c} {{Tags:["baba.space"]}}')
-load.append('function baba:board/rules/update')
-load.append('execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector')
-load.append('execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record')
-load.append('function baba:display/update_text')
-text.append('function baba:display/update_anim')
-tat.write_lines(load, 'datapack/data/baba/functions/io/load_level.mcfunction')
-tat.write_lines(save, 'datapack/data/baba/functions/io/save_level.mcfunction')
 tat.write_lines(text, 'datapack/data/baba/functions/display/update_text.mcfunction')
 
 def note_block(val):
@@ -399,65 +415,72 @@ for r in range(manager.rows):
   tat.write_lines(lines, f'datapack/data/baba/functions/display/check_tile/row{r}.mcfunction')
 
 
-load_lines = []
-save_lines = ['execute unless block ~ ~ ~ air positioned ~ ~2 ~ run function baba:io/save_block']
-instruments = {}
-sprite_fns = {}
+pack_lines = []
+unpack_lines = ['data modify storage baba:main tile set from storage baba:main level[0][0][0]']
+pack_sub = {}
+unpack_sub = {}
 blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
-gives = set()
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
-tat.delete_folder(f'datapack/data/baba/functions/io/load_block')
-tat.delete_folder(f'datapack/data/baba/functions/io/save_block')
+tat.delete_folder('datapack/data/baba/functions/io/editor/pack/block')
+tat.delete_folder('datapack/data/baba/functions/io/editor/unpack/block')
+tat.delete_folder('datapack/data/baba/functions/io/editor/pack/block')
 
 i = 0
 for o in sorted(sprites.objects.values(), key=lambda x:x.name):
   sprs = o.filter_sprites('editor').items()
-  for s,p in sprs:
+  for s,props in sprs:
     (inst, note) = note_block(i)
     i += 1
-    if inst not in instruments:
-      instruments[inst] = []
-      load_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/load_block/{inst}')
-    summon = sprites.create_summon(s)
-    for cmd in summon:
-      instruments[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run {cmd}')
+    set_storage = sprites.create_storage(s, s.properties, 'create')
+    check_full = sprites.create_storage(s, props, 'check_full')
+    check_props = sprites.create_storage(s, props, 'check_props')
+    if inst not in pack_sub:
+      pack_sub[inst] = []
+      pack_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/editor/pack/block/{inst}')
+    pack_sub[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run data modify storage baba:main tile append value {{{set_storage}}}')
     if len(sprs) > 1:
-      if o.name not in sprite_fns:
-        sprite_fns[o.name] = []
-      selector = s.create_selector(p, False)
-      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}] keep')
-      sprite_fns[o.name].append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)} keep')
+      if o.name not in unpack_sub:
+        unpack_sub[o.name] = []
+      unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:io/editor/unpack/block/{o.name}')
+      unpack_sub[o.name].extend([
+        f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]',
+        f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~-1 ~ {instrument(inst)}'
+      ])
     else:
-      selector = s.create_selector(p, True)
-      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~ ~ note_block[instrument={inst},note={note}] keep')
-      save_lines.append(f'execute if entity @s[{selector}] run setblock ~ ~-1 ~ {instrument(inst)} keep')
+      unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
+      unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~-1 ~ {instrument(inst)}')
     placement = manager.placement[s]
     for g,grids in enumerate(sprites.grids):
       if grids[0] == placement[0]:
         break
     uvsize = 16/grids[0].size
     model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],2),round(uvsize*placement[1],2),round(uvsize*placement[2]+uvsize,2),round(uvsize*placement[1]+uvsize,2)],"texture":"#up"}}}]}
-    description = s.display(p, '.','-','.')
+    description = s.display(props, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
     loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
     tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
-    gives.add(o.name)
-    simple_name = s.display(p, ' ','=',' ')
+    simple_name = s.display(props, ' ','=',' ')
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
-for i,fn in instruments.items():
-  tat.write_lines(fn, f'datapack/data/baba/functions/io/load_block/{i}.mcfunction')
-for i,fn in sprite_fns.items():
-  tat.write_lines(fn, f'datapack/data/baba/functions/io/save_block/{i}.mcfunction')
-  save_lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{i}"}}}}] run function baba:io/save_block/{i}')
-tat.write_lines(load_lines, f'datapack/data/baba/functions/io/load_block.mcfunction')
-tat.write_lines(save_lines, f'datapack/data/baba/functions/io/save_block.mcfunction')
+for i,fn in pack_sub.items():
+  tat.write_lines(fn, f'datapack/data/baba/functions/io/editor/pack/block/{i}.mcfunction')
+for i,fn in unpack_sub.items():
+  tat.write_lines(fn, f'datapack/data/baba/functions/io/editor/unpack/block/{i}.mcfunction')
+pack_lines.extend([
+  'execute positioned ~ ~2 ~ if block ~ ~ ~ note_block run function baba:io/editor/pack/block'
+])
+unpack_lines.extend([
+  'data remove storage baba:main level[0][0][0]',
+  'execute if data storage baba:main level[0][0][0] positioned ~ ~2 ~ run function baba:io/editor/unpack/block',
+])
+tat.write_lines(pack_lines, f'datapack/data/baba/functions/io/editor/pack/block.mcfunction')
+tat.write_lines(unpack_lines, f'datapack/data/baba/functions/io/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')

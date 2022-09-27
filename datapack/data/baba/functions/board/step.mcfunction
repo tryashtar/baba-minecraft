@@ -33,7 +33,7 @@ function baba:board/rules/update
 # graphical updates
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 execute as @e[type=marker,tag=baba.object,nbt=!{data:{properties:["sleep"]}}] run function baba:board/graphics/frame
-execute as @e[type=marker,tag=baba.object] at @s unless block ~ -1 ~ glass run function baba:board/interact/destroy
+execute as @e[type=marker,tag=baba.object] at @s unless block ~ ~-1 ~ white_concrete run function baba:board/interact/destroy
 
 function baba:display/update_text
 
