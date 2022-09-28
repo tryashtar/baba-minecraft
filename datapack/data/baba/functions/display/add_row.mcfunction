@@ -1,5 +1,7 @@
+execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"tile"}}] at @s align xyz run tp @s ~0.5 ~ ~0.499
 execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"baba"}}] at @s align xyz run tp @s ~0.5 ~ ~0.501
-execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{properties:["select"]}}] at @s align xyz run tp @s ~0.5 ~ ~0.502
+execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"text"}}] at @s align xyz run tp @s ~0.5 ~ ~0.502
+execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{properties:["select"]}}] at @s align xyz run tp @s ~0.5 ~ ~0.503
 execute if score row baba matches 0 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value '{"translate":"baba.level_border.row-1","color":"#15181f"}'
 execute if score row baba matches 0 run data modify storage baba:main text append value '[{"translate":"baba.level_border.row-1","color":"#15181f"},{"translate":"baba.level_border.row-1","color":"#15181f"}]'
 execute if score row baba matches 0 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value '{"translate":"baba.overlay"}'

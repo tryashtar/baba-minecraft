@@ -7,6 +7,5 @@ execute if block ~ ~ ~ note_block[instrument=flute] run function baba:editor/pac
 execute if block ~ ~ ~ note_block[instrument=bell] run function baba:editor/pack/block/bell
 execute if block ~ ~ ~ note_block[instrument=guitar] run function baba:editor/pack/block/guitar
 execute if block ~ ~ ~ note_block[instrument=chime] run function baba:editor/pack/block/chime
-execute if block ~ ~ ~ note_block[instrument=xylophone] run function baba:editor/pack/block/xylophone
-execute if block ~ ~ ~ note_block[instrument=iron_xylophone] run function baba:editor/pack/block/iron_xylophone
-execute positioned ~ ~2 ~ if block ~ ~ ~ note_block run function baba:editor/pack/block
+data modify storage baba:main tile[-1].extra set from block ~ ~1 ~ RecordItem.tag.extra
+execute positioned ~ ~3 ~ if block ~ ~ ~ note_block run function baba:editor/pack/block

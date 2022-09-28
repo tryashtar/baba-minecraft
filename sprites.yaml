@@ -34,6 +34,12 @@ properties:
   type:
     type: tag
     attributes: [editor, sprite, primary]
+  style:
+    type: tag
+    attributes: [sprite]
+  number:
+    type: score
+    attributes: [sprite]
   sleep:
     type: property
     attributes: [sprite]
@@ -247,84 +253,143 @@ grids:
           part: noun
       sprites:
       - {}
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [751, 910]
-        frames: none
-      sprites:
-      - type: jelly
-      - type: moon
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [776, 910]
-        frames: none
-      sprites:
-      - type: mountains
-      - type: flowers
-      - type: abc
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [801, 910]
-        frames: none
-      sprites:
-      - type: pillar
-      - type: square
-      - type: dust
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [826, 910]
-        frames: none
-      sprites:
-      - type: leaf
-      - type: skull
-      - type: level
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [851, 910]
-        frames: none
-      sprites:
-      - type: tree
-      - type: snowflake
-      - type: dot
 
     extras:
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [51, 1]
-        frames: none
-      sprites:
-      - type: a
-      - type: b
-      - type: c
-      - type: d
-      - type: e
-      - type: f
-      - type: g
-      - type: h
-      - type: i
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [1, 76]
-        frames: none
-      sprites:
-      - type: extra1
-      - type: extra2
-      - type: extra3
-      - type: extra4
-      - type: extra5
-      - type: extra6
-      - type: extra7
     - objects:
       - name: level
         color: '#212734'
         coords: [1, 1]
+        overlays:
+        - name: icon
+          color: '#ffffff'
+          coords: [1, 76]
+          frames: none
+          properties:
+            style: dice
+          sprites:
+          - number: 1
+          - number: 2
+          - number: 3
+          - number: 4
+          - number: 5
+          - number: 6
+          - number: 7
+        - name: icon
+          color: '#ffffff'
+          coords: [76, 1]
+          frames: none
+          properties:
+            style: letter
+          sprites:
+          - number: 1
+          - number: 2
+          - number: 3
+          - number: 4
+          - number: 5
+          - number: 6
+          - number: 7
+          - number: 8
+          - number: 9
+        - name: icon
+          color: '#ffffff'
+          coords: [101, 1]
+          frames: none
+          sprites:
+          - style: jelly
+          - style: island
+          - style: pillar
+          - style: leaf
+          - style: tree
+          - style: snow
+          - style: skull
+          - style: flower
+          - style: moon
+          - style: square
+        - name: icon
+          color: '#ffffff'
+          coords: [126, 1]
+          frames: none
+          sprites:
+          - style: abc
+          - style: dust
+          - style: text
+          - style: dot
+        - name: icon
+          color: '#ffffff'
+          coords: [51, 1]
+          frames: none
+          shift: [-4, 0]
+          properties:
+            style: digit
+          sprites:
+          - number: [0, 9]
+          - number: [10, 19]
+          - number: [20, 29]
+          - number: [30, 39]
+          - number: [40, 49]
+          - number: [50, 59]
+          - number: [60, 69]
+          - number: [70, 79]
+          - number: [80, 89]
+          - number: [90, 99]
+        - name: icon
+          color: '#ffffff'
+          coords: [26, 1]
+          frames: none
+          shift: [4, 0]
+          properties:
+            style: digit
+          sprites:
+          - number:
+              operation: modulo
+              operator: 10
+              value: 0
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 1
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 2
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 3
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 4
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 5
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 6
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 7
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 8
+              display: ones
+          - number:
+              operation: modulo
+              operator: 10
+              value: 9
+              display: ones
       sprites:
       - {}
 

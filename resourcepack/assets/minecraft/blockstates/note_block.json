@@ -241,774 +241,654 @@
          "y": 90
       },
       "instrument=snare,note=10": {
-         "model": "baba:icon.jelly",
-         "y": 90
-      },
-      "instrument=snare,note=11": {
-         "model": "baba:icon.moon",
-         "y": 90
-      },
-      "instrument=snare,note=12": {
-         "model": "baba:icon.mountains",
-         "y": 90
-      },
-      "instrument=snare,note=13": {
-         "model": "baba:icon.flowers",
-         "y": 90
-      },
-      "instrument=snare,note=14": {
-         "model": "baba:icon.abc",
-         "y": 90
-      },
-      "instrument=snare,note=15": {
-         "model": "baba:icon.pillar",
-         "y": 90
-      },
-      "instrument=snare,note=16": {
-         "model": "baba:icon.square",
-         "y": 90
-      },
-      "instrument=snare,note=17": {
-         "model": "baba:icon.dust",
-         "y": 90
-      },
-      "instrument=snare,note=18": {
-         "model": "baba:icon.leaf",
-         "y": 90
-      },
-      "instrument=snare,note=19": {
-         "model": "baba:icon.skull",
-         "y": 90
-      },
-      "instrument=snare,note=20": {
-         "model": "baba:icon.level",
-         "y": 90
-      },
-      "instrument=snare,note=21": {
-         "model": "baba:icon.tree",
-         "y": 90
-      },
-      "instrument=snare,note=22": {
-         "model": "baba:icon.snowflake",
-         "y": 90
-      },
-      "instrument=snare,note=23": {
-         "model": "baba:icon.dot",
-         "y": 90
-      },
-      "instrument=snare,note=24": {
-         "model": "baba:icon.a",
-         "y": 90
-      },
-      "instrument=hat,note=0": {
-         "model": "baba:icon.b",
-         "y": 90
-      },
-      "instrument=hat,note=1": {
-         "model": "baba:icon.c",
-         "y": 90
-      },
-      "instrument=hat,note=2": {
-         "model": "baba:icon.d",
-         "y": 90
-      },
-      "instrument=hat,note=3": {
-         "model": "baba:icon.e",
-         "y": 90
-      },
-      "instrument=hat,note=4": {
-         "model": "baba:icon.f",
-         "y": 90
-      },
-      "instrument=hat,note=5": {
-         "model": "baba:icon.g",
-         "y": 90
-      },
-      "instrument=hat,note=6": {
-         "model": "baba:icon.h",
-         "y": 90
-      },
-      "instrument=hat,note=7": {
-         "model": "baba:icon.i",
-         "y": 90
-      },
-      "instrument=hat,note=8": {
-         "model": "baba:icon.extra1",
-         "y": 90
-      },
-      "instrument=hat,note=9": {
-         "model": "baba:icon.extra2",
-         "y": 90
-      },
-      "instrument=hat,note=10": {
-         "model": "baba:icon.extra3",
-         "y": 90
-      },
-      "instrument=hat,note=11": {
-         "model": "baba:icon.extra4",
-         "y": 90
-      },
-      "instrument=hat,note=12": {
-         "model": "baba:icon.extra5",
-         "y": 90
-      },
-      "instrument=hat,note=13": {
-         "model": "baba:icon.extra6",
-         "y": 90
-      },
-      "instrument=hat,note=14": {
-         "model": "baba:icon.extra7",
-         "y": 90
-      },
-      "instrument=hat,note=15": {
          "model": "baba:jelly",
          "y": 90
       },
-      "instrument=hat,note=16": {
+      "instrument=snare,note=11": {
          "model": "baba:keke.facing-right",
          "y": 90
       },
-      "instrument=hat,note=17": {
+      "instrument=snare,note=12": {
          "model": "baba:keke.facing-up",
          "y": 90
       },
-      "instrument=hat,note=18": {
+      "instrument=snare,note=13": {
          "model": "baba:keke.facing-left",
          "y": 90
       },
-      "instrument=hat,note=19": {
+      "instrument=snare,note=14": {
          "model": "baba:keke.facing-down",
          "y": 90
       },
-      "instrument=hat,note=20": {
+      "instrument=snare,note=15": {
          "model": "baba:key",
          "y": 90
       },
-      "instrument=hat,note=21": {
+      "instrument=snare,note=16": {
          "model": "baba:lava",
          "y": 90
       },
-      "instrument=hat,note=22": {
+      "instrument=snare,note=17": {
          "model": "baba:leaf",
          "y": 90
       },
-      "instrument=hat,note=23": {
+      "instrument=snare,note=18": {
          "model": "baba:level",
          "y": 90
       },
-      "instrument=hat,note=24": {
+      "instrument=snare,note=19": {
          "model": "baba:line",
          "y": 90
       },
-      "instrument=bass,note=0": {
+      "instrument=snare,note=20": {
          "model": "baba:love",
          "y": 90
       },
-      "instrument=bass,note=1": {
+      "instrument=snare,note=21": {
          "model": "baba:me.facing-right",
          "y": 90
       },
-      "instrument=bass,note=2": {
+      "instrument=snare,note=22": {
          "model": "baba:me.facing-up",
          "y": 90
       },
-      "instrument=bass,note=3": {
+      "instrument=snare,note=23": {
          "model": "baba:me.facing-left",
          "y": 90
       },
-      "instrument=bass,note=4": {
+      "instrument=snare,note=24": {
          "model": "baba:me.facing-down",
          "y": 90
       },
-      "instrument=bass,note=5": {
+      "instrument=hat,note=0": {
          "model": "baba:moon",
          "y": 90
       },
-      "instrument=bass,note=6": {
+      "instrument=hat,note=1": {
          "model": "baba:orb",
          "y": 90
       },
-      "instrument=bass,note=7": {
+      "instrument=hat,note=2": {
          "model": "baba:pillar",
          "y": 90
       },
-      "instrument=bass,note=8": {
+      "instrument=hat,note=3": {
          "model": "baba:pipe",
          "y": 90
       },
-      "instrument=bass,note=9": {
+      "instrument=hat,note=4": {
          "model": "baba:reed",
          "y": 90
       },
-      "instrument=bass,note=10": {
+      "instrument=hat,note=5": {
          "model": "baba:robot.facing-right",
          "y": 90
       },
-      "instrument=bass,note=11": {
+      "instrument=hat,note=6": {
          "model": "baba:robot.facing-up",
          "y": 90
       },
-      "instrument=bass,note=12": {
+      "instrument=hat,note=7": {
          "model": "baba:robot.facing-left",
          "y": 90
       },
-      "instrument=bass,note=13": {
+      "instrument=hat,note=8": {
          "model": "baba:robot.facing-down",
          "y": 90
       },
-      "instrument=bass,note=14": {
+      "instrument=hat,note=9": {
          "model": "baba:rock",
          "y": 90
       },
-      "instrument=bass,note=15": {
+      "instrument=hat,note=10": {
          "model": "baba:rocket.facing-right",
          "y": 90
       },
-      "instrument=bass,note=16": {
+      "instrument=hat,note=11": {
          "model": "baba:rocket.facing-up",
          "y": 90
       },
-      "instrument=bass,note=17": {
+      "instrument=hat,note=12": {
          "model": "baba:rocket.facing-left",
          "y": 90
       },
-      "instrument=bass,note=18": {
+      "instrument=hat,note=13": {
          "model": "baba:rocket.facing-down",
          "y": 90
       },
-      "instrument=bass,note=19": {
+      "instrument=hat,note=14": {
          "model": "baba:rose",
          "y": 90
       },
-      "instrument=bass,note=20": {
+      "instrument=hat,note=15": {
          "model": "baba:rubble",
          "y": 90
       },
-      "instrument=bass,note=21": {
+      "instrument=hat,note=16": {
          "model": "baba:sign",
          "y": 90
       },
-      "instrument=bass,note=22": {
+      "instrument=hat,note=17": {
          "model": "baba:skull.facing-right",
          "y": 90
       },
-      "instrument=bass,note=23": {
+      "instrument=hat,note=18": {
          "model": "baba:skull.facing-up",
          "y": 90
       },
-      "instrument=bass,note=24": {
+      "instrument=hat,note=19": {
          "model": "baba:skull.facing-left",
          "y": 90
       },
-      "instrument=flute,note=0": {
+      "instrument=hat,note=20": {
          "model": "baba:skull.facing-down",
          "y": 90
       },
-      "instrument=flute,note=1": {
+      "instrument=hat,note=21": {
          "model": "baba:star",
          "y": 90
       },
-      "instrument=flute,note=2": {
+      "instrument=hat,note=22": {
          "model": "baba:statue.facing-right",
          "y": 90
       },
-      "instrument=flute,note=3": {
+      "instrument=hat,note=23": {
          "model": "baba:statue.facing-up",
          "y": 90
       },
-      "instrument=flute,note=4": {
+      "instrument=hat,note=24": {
          "model": "baba:statue.facing-left",
          "y": 90
       },
-      "instrument=flute,note=5": {
+      "instrument=bass,note=0": {
          "model": "baba:statue.facing-down",
          "y": 90
       },
-      "instrument=flute,note=6": {
+      "instrument=bass,note=1": {
          "model": "baba:stump",
          "y": 90
       },
-      "instrument=flute,note=7": {
+      "instrument=bass,note=2": {
          "model": "baba:sun",
          "y": 90
       },
-      "instrument=flute,note=8": {
+      "instrument=bass,note=3": {
          "model": "baba:text.baba",
          "y": 90
       },
-      "instrument=flute,note=9": {
+      "instrument=bass,note=4": {
          "model": "baba:text.keke",
          "y": 90
       },
-      "instrument=flute,note=10": {
+      "instrument=bass,note=5": {
          "model": "baba:text.me",
          "y": 90
       },
-      "instrument=flute,note=11": {
+      "instrument=bass,note=6": {
          "model": "baba:text.robot",
          "y": 90
       },
-      "instrument=flute,note=12": {
+      "instrument=bass,note=7": {
          "model": "baba:text.belt",
          "y": 90
       },
-      "instrument=flute,note=13": {
+      "instrument=bass,note=8": {
          "model": "baba:text.bird",
          "y": 90
       },
-      "instrument=flute,note=14": {
+      "instrument=bass,note=9": {
          "model": "baba:text.bug",
          "y": 90
       },
-      "instrument=flute,note=15": {
+      "instrument=bass,note=10": {
          "model": "baba:text.crab",
          "y": 90
       },
-      "instrument=flute,note=16": {
+      "instrument=bass,note=11": {
          "model": "baba:text.rocket",
          "y": 90
       },
-      "instrument=flute,note=17": {
+      "instrument=bass,note=12": {
          "model": "baba:text.skull",
          "y": 90
       },
-      "instrument=flute,note=18": {
+      "instrument=bass,note=13": {
          "model": "baba:text.ghost",
          "y": 90
       },
-      "instrument=flute,note=19": {
+      "instrument=bass,note=14": {
          "model": "baba:text.statue",
          "y": 90
       },
-      "instrument=flute,note=20": {
+      "instrument=bass,note=15": {
          "model": "baba:text.bolt",
          "y": 90
       },
-      "instrument=flute,note=21": {
+      "instrument=bass,note=16": {
          "model": "baba:text.hand",
          "y": 90
       },
-      "instrument=flute,note=22": {
+      "instrument=bass,note=17": {
          "model": "baba:text.bat",
          "y": 90
       },
-      "instrument=flute,note=23": {
+      "instrument=bass,note=18": {
          "model": "baba:text.bubble",
          "y": 90
       },
-      "instrument=flute,note=24": {
+      "instrument=bass,note=19": {
          "model": "baba:text.cog",
          "y": 90
       },
-      "instrument=bell,note=0": {
+      "instrument=bass,note=20": {
          "model": "baba:text.algae",
          "y": 90
       },
-      "instrument=bell,note=1": {
+      "instrument=bass,note=21": {
          "model": "baba:text.flag",
          "y": 90
       },
-      "instrument=bell,note=2": {
+      "instrument=bass,note=22": {
          "model": "baba:text.key",
          "y": 90
       },
-      "instrument=bell,note=3": {
+      "instrument=bass,note=23": {
          "model": "baba:text.love",
          "y": 90
       },
-      "instrument=bell,note=4": {
+      "instrument=bass,note=24": {
          "model": "baba:text.ufo",
          "y": 90
       },
-      "instrument=bell,note=5": {
+      "instrument=flute,note=0": {
          "model": "baba:text.door",
          "y": 90
       },
-      "instrument=bell,note=6": {
+      "instrument=flute,note=1": {
          "model": "baba:text.flower",
          "y": 90
       },
-      "instrument=bell,note=7": {
+      "instrument=flute,note=2": {
          "model": "baba:text.pillar",
          "y": 90
       },
-      "instrument=bell,note=8": {
+      "instrument=flute,note=3": {
          "model": "baba:text.rock",
          "y": 90
       },
-      "instrument=bell,note=9": {
+      "instrument=flute,note=4": {
          "model": "baba:text.tile",
          "y": 90
       },
-      "instrument=bell,note=10": {
+      "instrument=flute,note=5": {
          "model": "baba:text.fruit",
          "y": 90
       },
-      "instrument=bell,note=11": {
+      "instrument=flute,note=6": {
          "model": "baba:text.moon",
          "y": 90
       },
-      "instrument=bell,note=12": {
+      "instrument=flute,note=7": {
          "model": "baba:text.star",
          "y": 90
       },
-      "instrument=bell,note=13": {
+      "instrument=flute,note=8": {
          "model": "baba:text.tree",
          "y": 90
       },
-      "instrument=bell,note=14": {
+      "instrument=flute,note=9": {
          "model": "baba:text.box",
          "y": 90
       },
-      "instrument=bell,note=15": {
+      "instrument=flute,note=10": {
          "model": "baba:text.fire",
          "y": 90
       },
-      "instrument=bell,note=16": {
+      "instrument=flute,note=11": {
          "model": "baba:text.gate",
          "y": 90
       },
-      "instrument=bell,note=17": {
+      "instrument=flute,note=12": {
          "model": "baba:text.jelly",
          "y": 90
       },
-      "instrument=bell,note=18": {
+      "instrument=flute,note=13": {
          "model": "baba:text.reed",
          "y": 90
       },
-      "instrument=bell,note=19": {
+      "instrument=flute,note=14": {
          "model": "baba:text.sign",
          "y": 90
       },
-      "instrument=bell,note=20": {
+      "instrument=flute,note=15": {
          "model": "baba:text.sun",
          "y": 90
       },
-      "instrument=bell,note=21": {
+      "instrument=flute,note=16": {
          "model": "baba:text.fungi",
          "y": 90
       },
-      "instrument=bell,note=22": {
+      "instrument=flute,note=17": {
          "model": "baba:text.husk",
          "y": 90
       },
-      "instrument=bell,note=23": {
+      "instrument=flute,note=18": {
          "model": "baba:text.leaf",
          "y": 90
       },
-      "instrument=bell,note=24": {
+      "instrument=flute,note=19": {
          "model": "baba:text.orb",
          "y": 90
       },
-      "instrument=guitar,note=0": {
+      "instrument=flute,note=20": {
          "model": "baba:text.trees",
          "y": 90
       },
-      "instrument=guitar,note=1": {
+      "instrument=flute,note=21": {
          "model": "baba:text.cake",
          "y": 90
       },
-      "instrument=guitar,note=2": {
+      "instrument=flute,note=22": {
          "model": "baba:text.dot",
          "y": 90
       },
-      "instrument=guitar,note=3": {
+      "instrument=flute,note=23": {
          "model": "baba:text.foliage",
          "y": 90
       },
-      "instrument=guitar,note=4": {
+      "instrument=flute,note=24": {
          "model": "baba:text.rose",
          "y": 90
       },
-      "instrument=guitar,note=5": {
+      "instrument=bell,note=0": {
          "model": "baba:text.dust",
          "y": 90
       },
-      "instrument=guitar,note=6": {
+      "instrument=bell,note=1": {
          "model": "baba:text.fungus",
          "y": 90
       },
-      "instrument=guitar,note=7": {
+      "instrument=bell,note=2": {
          "model": "baba:text.husks",
          "y": 90
       },
-      "instrument=guitar,note=8": {
+      "instrument=bell,note=3": {
          "model": "baba:text.stump",
          "y": 90
       },
-      "instrument=guitar,note=9": {
+      "instrument=bell,note=4": {
          "model": "baba:text.cursor",
          "y": 90
       },
-      "instrument=guitar,note=10": {
+      "instrument=bell,note=5": {
          "model": "baba:text.is",
          "y": 90
       },
-      "instrument=guitar,note=11": {
+      "instrument=bell,note=6": {
          "model": "baba:text.and",
          "y": 90
       },
-      "instrument=guitar,note=12": {
+      "instrument=bell,note=7": {
          "model": "baba:text.not",
          "y": 90
       },
-      "instrument=guitar,note=13": {
+      "instrument=bell,note=8": {
          "model": "baba:text.true",
          "y": 90
       },
-      "instrument=guitar,note=14": {
+      "instrument=bell,note=9": {
          "model": "baba:text.near",
          "y": 90
       },
-      "instrument=guitar,note=15": {
+      "instrument=bell,note=10": {
          "model": "baba:text.facing",
          "y": 90
       },
-      "instrument=guitar,note=16": {
+      "instrument=bell,note=11": {
          "model": "baba:text.lonely",
          "y": 90
       },
-      "instrument=guitar,note=17": {
+      "instrument=bell,note=12": {
          "model": "baba:text.has",
          "y": 90
       },
-      "instrument=guitar,note=18": {
+      "instrument=bell,note=13": {
          "model": "baba:text.make",
          "y": 90
       },
-      "instrument=guitar,note=19": {
+      "instrument=bell,note=14": {
          "model": "baba:text.write",
          "y": 90
       },
-      "instrument=guitar,note=20": {
+      "instrument=bell,note=15": {
          "model": "baba:text.all",
          "y": 90
       },
-      "instrument=guitar,note=21": {
+      "instrument=bell,note=16": {
          "model": "baba:text.empty",
          "y": 90
       },
-      "instrument=guitar,note=22": {
+      "instrument=bell,note=17": {
          "model": "baba:text.text",
          "y": 90
       },
-      "instrument=guitar,note=23": {
+      "instrument=bell,note=18": {
          "model": "baba:text.level",
          "y": 90
       },
-      "instrument=guitar,note=24": {
+      "instrument=bell,note=19": {
          "model": "baba:text.you",
          "y": 90
       },
-      "instrument=chime,note=0": {
+      "instrument=bell,note=20": {
          "model": "baba:text.push",
          "y": 90
       },
-      "instrument=chime,note=1": {
+      "instrument=bell,note=21": {
          "model": "baba:text.pull",
          "y": 90
       },
-      "instrument=chime,note=2": {
+      "instrument=bell,note=22": {
          "model": "baba:text.move",
          "y": 90
       },
-      "instrument=chime,note=3": {
+      "instrument=bell,note=23": {
          "model": "baba:text.shift",
          "y": 90
       },
-      "instrument=chime,note=4": {
+      "instrument=bell,note=24": {
          "model": "baba:text.defeat",
          "y": 90
       },
-      "instrument=chime,note=5": {
+      "instrument=guitar,note=0": {
          "model": "baba:text.hot",
          "y": 90
       },
-      "instrument=chime,note=6": {
+      "instrument=guitar,note=1": {
          "model": "baba:text.melt",
          "y": 90
       },
-      "instrument=chime,note=7": {
+      "instrument=guitar,note=2": {
          "model": "baba:text.hide",
          "y": 90
       },
-      "instrument=chime,note=8": {
+      "instrument=guitar,note=3": {
          "model": "baba:text.win",
          "y": 90
       },
-      "instrument=chime,note=9": {
+      "instrument=guitar,note=4": {
          "model": "baba:text.stop",
          "y": 90
       },
-      "instrument=chime,note=10": {
+      "instrument=guitar,note=5": {
          "model": "baba:text.open",
          "y": 90
       },
-      "instrument=chime,note=11": {
+      "instrument=guitar,note=6": {
          "model": "baba:text.shut",
          "y": 90
       },
-      "instrument=chime,note=12": {
+      "instrument=guitar,note=7": {
          "model": "baba:text.float",
          "y": 90
       },
-      "instrument=chime,note=13": {
+      "instrument=guitar,note=8": {
          "model": "baba:text.sink",
          "y": 90
       },
-      "instrument=chime,note=14": {
+      "instrument=guitar,note=9": {
          "model": "baba:text.weak",
          "y": 90
       },
-      "instrument=chime,note=15": {
+      "instrument=guitar,note=10": {
          "model": "baba:text.swap",
          "y": 90
       },
-      "instrument=chime,note=16": {
+      "instrument=guitar,note=11": {
          "model": "baba:text.tele",
          "y": 90
       },
-      "instrument=chime,note=17": {
+      "instrument=guitar,note=12": {
          "model": "baba:text.fall",
          "y": 90
       },
-      "instrument=chime,note=18": {
+      "instrument=guitar,note=13": {
          "model": "baba:text.more",
          "y": 90
       },
-      "instrument=chime,note=19": {
+      "instrument=guitar,note=14": {
          "model": "baba:text.red",
          "y": 90
       },
-      "instrument=chime,note=20": {
+      "instrument=guitar,note=15": {
          "model": "baba:text.blue",
          "y": 90
       },
-      "instrument=chime,note=21": {
+      "instrument=guitar,note=16": {
          "model": "baba:text.sleep",
          "y": 90
       },
-      "instrument=chime,note=22": {
+      "instrument=guitar,note=17": {
          "model": "baba:text.group",
          "y": 90
       },
-      "instrument=chime,note=23": {
+      "instrument=guitar,note=18": {
          "model": "baba:text.right",
          "y": 90
       },
-      "instrument=chime,note=24": {
+      "instrument=guitar,note=19": {
          "model": "baba:text.up",
          "y": 90
       },
-      "instrument=xylophone,note=0": {
+      "instrument=guitar,note=20": {
          "model": "baba:text.left",
          "y": 90
       },
-      "instrument=xylophone,note=1": {
+      "instrument=guitar,note=21": {
          "model": "baba:text.down",
          "y": 90
       },
-      "instrument=xylophone,note=2": {
+      "instrument=guitar,note=22": {
          "model": "baba:text.word",
          "y": 90
       },
-      "instrument=xylophone,note=3": {
+      "instrument=guitar,note=23": {
          "model": "baba:text.select",
          "y": 90
       },
-      "instrument=xylophone,note=4": {
+      "instrument=guitar,note=24": {
          "model": "baba:text.best",
          "y": 90
       },
-      "instrument=xylophone,note=5": {
+      "instrument=chime,note=0": {
          "model": "baba:text.bonus",
          "y": 90
       },
-      "instrument=xylophone,note=6": {
+      "instrument=chime,note=1": {
          "model": "baba:text.end",
          "y": 90
       },
-      "instrument=xylophone,note=7": {
+      "instrument=chime,note=2": {
          "model": "baba:text.done",
          "y": 90
       },
-      "instrument=xylophone,note=8": {
+      "instrument=chime,note=3": {
          "model": "baba:text.cloud",
          "y": 90
       },
-      "instrument=xylophone,note=9": {
+      "instrument=chime,note=4": {
          "model": "baba:text.fence",
          "y": 90
       },
-      "instrument=xylophone,note=10": {
+      "instrument=chime,note=5": {
          "model": "baba:text.grass",
          "y": 90
       },
-      "instrument=xylophone,note=11": {
+      "instrument=chime,note=6": {
          "model": "baba:text.hedge",
          "y": 90
       },
-      "instrument=xylophone,note=12": {
+      "instrument=chime,note=7": {
          "model": "baba:text.ice",
          "y": 90
       },
-      "instrument=xylophone,note=13": {
+      "instrument=chime,note=8": {
          "model": "baba:text.lava",
          "y": 90
       },
-      "instrument=xylophone,note=14": {
+      "instrument=chime,note=9": {
          "model": "baba:text.line",
          "y": 90
       },
-      "instrument=xylophone,note=15": {
+      "instrument=chime,note=10": {
          "model": "baba:text.pipe",
          "y": 90
       },
-      "instrument=xylophone,note=16": {
+      "instrument=chime,note=11": {
          "model": "baba:text.rubble",
          "y": 90
       },
-      "instrument=xylophone,note=17": {
+      "instrument=chime,note=12": {
          "model": "baba:text.wall",
          "y": 90
       },
-      "instrument=xylophone,note=18": {
+      "instrument=chime,note=13": {
          "model": "baba:text.water",
          "y": 90
       },
-      "instrument=xylophone,note=19": {
+      "instrument=chime,note=14": {
          "model": "baba:text.bog",
          "y": 90
       },
-      "instrument=xylophone,note=20": {
+      "instrument=chime,note=15": {
          "model": "baba:text.brick",
          "y": 90
       },
-      "instrument=xylophone,note=21": {
+      "instrument=chime,note=16": {
          "model": "baba:text.cliff",
          "y": 90
       },
-      "instrument=xylophone,note=22": {
+      "instrument=chime,note=17": {
          "model": "baba:tile",
          "y": 90
       },
-      "instrument=xylophone,note=23": {
+      "instrument=chime,note=18": {
          "model": "baba:tree",
          "y": 90
       },
-      "instrument=xylophone,note=24": {
+      "instrument=chime,note=19": {
          "model": "baba:trees",
          "y": 90
       },
-      "instrument=iron_xylophone,note=0": {
+      "instrument=chime,note=20": {
          "model": "baba:ufo",
          "y": 90
       },
-      "instrument=iron_xylophone,note=1": {
+      "instrument=chime,note=21": {
          "model": "baba:wall",
          "y": 90
       },
-      "instrument=iron_xylophone,note=2": {
+      "instrument=chime,note=22": {
          "model": "baba:water",
          "y": 90
       }

@@ -13,6 +13,7 @@ class SpriteCollection:
     self.data = data
     self.anim_frames = anim_frames
     self.objects = {}
+    self.overlays = {}
     self.properties = {}
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
@@ -47,7 +48,8 @@ class SpriteCollection:
         image = PIL.Image.fromarray(np.ubyte(array))
   
         for config in sheetdata:
-          for obj in config['objects']:
+          objlist = config.get('objects', [])
+          for obj in objlist:
             # if coords are unspecified, move to the next row
             if coords is not None:
               coords[1] += (height+1) * frames
@@ -87,27 +89,44 @@ class SpriteCollection:
               # finalize the sprite and add each anim frame to its respective grid
               sprite = BabaSprite(adding, props, color)
               adding.sprites.append(sprite)
-              for h,g in enumerate(anim_grids):
-                x, y = coords
-                if framedir == 'down':
-                  img = image.crop((x+((width+1)*i),y+((height+1)*h),x+((width+1)*i)+width,y+((height+1)*h)+height))
-                elif framedir == 'right':
-                  img = image.crop((x+((width+1)*h),y+((height+1)*i),x+((width+1)*h)+width,y+((height+1)*i)+height))
-                elif framedir == 'none':
-                  img = image.crop((x,y+((height+1)*i),x+width,y+((height+1)*i)+height))
-                g.append((sprite, img))
-                if h == 0:
-                  rc, gc, bc, ac = img.split()
-                  r, g, b = bytes.fromhex(color[1:])
-                  rc = rc.point(lambda i: i * r/255)
-                  gc = gc.point(lambda i: i * g/255)
-                  bc = bc.point(lambda i: i * b/255)
-                  color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
-                  colorgrid.append((sprite, color_img))
+              self.add_to_grids(i, sprite, image, anim_grids, colorgrid, coords, framedir, width, height, color)
+            for ov in obj.get('overlays', []):
+              coords = ov['coords']
+              framedir = ov['frames']
+              frames = 1 if framedir == 'none' else self.anim_frames
+              for i,spr in enumerate(ov['sprites']):
+                if 'properties' in ov:
+                  for k,v in ov['properties'].items():
+                    spr[k] = v
+                props = {}
+                for k,v in spr.items():
+                  props[self.properties[k]] = v
+                overlay = Overlay(ov['name'], baba, props, ov['color'])
+                baba.overlays.append(overlay)
+                self.add_to_grids(i, overlay, image, anim_grids, colorgrid, coords, framedir, width, height, ov['color'])
       color_grids.append(Grid(colorgrid, width, height, grid.get('scale', 1), '#00000000'))
       anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
       grids.append(anim_grids)
     return (grids, color_grids)
+
+  def add_to_grids(self, i, sprite, image, anim_grids, colorgrid, coords, framedir, width, height, color):
+    for h,g in enumerate(anim_grids):
+      x, y = coords
+      if framedir == 'down':
+        img = image.crop((x+((width+1)*i),y+((height+1)*h),x+((width+1)*i)+width,y+((height+1)*h)+height))
+      elif framedir == 'right':
+        img = image.crop((x+((width+1)*h),y+((height+1)*i),x+((width+1)*h)+width,y+((height+1)*i)+height))
+      elif framedir == 'none':
+        img = image.crop((x,y+((height+1)*i),x+width,y+((height+1)*i)+height))
+      g.append((sprite, img))
+      if h == 0:
+        rc, gc, bc, ac = img.split()
+        r, g, b = bytes.fromhex(color[1:])
+        rc = rc.point(lambda x: x * r/255)
+        gc = gc.point(lambda x: x * g/255)
+        bc = bc.point(lambda x: x * b/255)
+        color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
+        colorgrid.append((sprite, color_img))
 
   def create_summon(self, sprite):
     types = {}
@@ -190,10 +209,43 @@ class SpriteCollection:
     return ','.join(nbt)
 
 
+class Overlay:
+  def __init__(self, name, obj, properties, color):
+    self.name = name
+    self.parent = obj
+    self.properties = properties
+    self.color = color
+
+  def filter_properties(self, attribute):
+    props = self.properties.copy()
+    for p in self.properties:
+      if attribute not in p.attributes:
+        del props[p]
+    return props
+
+  def display(self, properties, sep1, sep2, sep3):
+    if len(properties) == 0:
+      return self.name
+    result = self.name + sep1
+    for k,v in properties.items():
+      if 'primary' in k.attributes:
+        result += str(v).lower() + sep3
+    for k,v in properties.items():
+      if 'primary' not in k.attributes:
+        if type(v) is dict:
+          v = v['display']+str(v['value'])
+        if type(v) is list:
+          v = v[0]
+        result += k.name + sep2 + str(v).lower() + sep3
+    result = result[:-1]
+    return result
+
+
 class BabaObject:
   def __init__(self, name):
     self.name = name
     self.sprites = []
+    self.overlays = []
 
   # get sprites that are unique when filtering by an attribute
   # for example, baba has many sprites, but only 4 are unique with respect to the facing property
@@ -229,13 +281,15 @@ class BabaSprite:
     result = []
     nbt_true = []
     nbt_false = []
+    tags = []
+    scores = []
     if include_sprite:
       nbt_true.append('sprite:"'+self.parent.name+'"')
     for t,vals in types.items():
       if t == 'tag':
-        result.append(','.join(['tag='+('' if (type(x[1]) is str or x[1]) else '!') + (x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name) for x in vals.items()]))
+        tags.extend([('' if (type(x[1]) is str or x[1]) else '!') + (x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name) for x in vals.items()])
       elif t == 'score':
-        result.append('scores={'+','.join([x[0].name+'='+str(x[1] if type(x[1]) is int else x[0].values.index(x[1])+1) for x in vals.items()])+'}')
+        scores.extend([x[0].name+'='+str(x[1] if type(x[1]) is int else (x[0].values.index(x[1])+1) if type(x[1]) is str else (str(x[1][0])+'..'+str(x[1][1]))) for x in vals.items()])
       elif t == 'property':
         trues = list(filter(lambda x: x[1], vals.items()))
         falses = list(filter(lambda x: not x[1], vals.items()))
@@ -251,6 +305,10 @@ class BabaSprite:
           elif type(v) is str:
             v = '"'+v+'"'
           nbt_true.append(prop.name+':'+v)
+    if len(tags) > 0:
+      result.append(','.join(['tag='+x for x in tags]))
+    if len(scores) > 0:
+      result.append('scores={'+','.join([x for x in scores])+'}')
     if len(nbt_true) > 0:
       result.append('nbt={data:{'+','.join(nbt_true)+'}}')
     if len(nbt_false) > 0:
@@ -350,7 +408,7 @@ class TileManager:
           for r in range(self.rows):
             self.charmap[r][c] = self.next_char()
             display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-            self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust)+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust)
+            self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale)+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust)
           self.placement[c] = (grid, y, x)
 
     for r in range(self.rows):
@@ -360,9 +418,9 @@ class TileManager:
 with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
 
-for o in sprites.objects.values():
-  for s,props in o.filter_sprites('editor').items():
-    print(s.display(props, ' ', '=', ' '))
+#for o in sprites.objects.values():
+#  for s,props in o.filter_sprites('editor').items():
+#    print(s.display(props, ' ', '=', ' '))
 
 manager = TileManager(18,33)
 (anim_grids, color_grids) = sprites.grids
@@ -386,7 +444,7 @@ border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score row baba matches {r} as @e[type=marker,tag=baba.object,distance=..0.1,sort=nearest] run function baba:display/add_object/row{r}'
+    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,sort=nearest] run function baba:display/add_object/row{r}'
   ])
   border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#15181f"}}\'')
   full_border.extend([
@@ -414,14 +472,42 @@ for r in range(manager.rows):
       translate = {"translate":f"baba.{s.display(p,'.','-','.')}.row{r}"}
       if s.color is not None:
         translate["color"] = s.color
-      if len(sprs) > 1:
+      if len(sprs) > 1 or len(o.overlays) > 0:
         if o.name not in subfns:
           subfns[o.name] = []
         selector = s.create_selector(p, False)
-        subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
+        if len(selector) > 0:
+          subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
+        else:
+          subfns[o.name].append(f'data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
       else:
         selector = s.create_selector(p, True)
-        lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
+        lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
+    special_checks = list(filter(lambda x: type(x[1]) is dict, itertools.chain.from_iterable(map(lambda x: x.properties.items(), o.overlays))))
+    values_needed = set()
+    for spc in special_checks:
+      values_needed.add((spc[1]['operation'], spc[1]['operator'], spc[0].name))
+    for v in values_needed:
+      if v[0] == 'modulo':
+        subfns[o.name].append(f'scoreboard players operation check baba = @s {v[2]}')
+        subfns[o.name].append(f'scoreboard players operation check baba %= #{v[1]} baba')
+    for ov in o.overlays:
+      props = ov.properties.copy()
+      special = None
+      for p,v in props.copy().items():
+        if any(map(lambda x: x[1] == v, special_checks)):
+          special = v
+          if type(special) is dict:
+            special = special['value']
+          if type(special) is list:
+            special = f'{special[0]}..{special[1]}'
+          del props[p]
+      selector = s.create_selector(props, False)
+      disp = ov.display(ov.properties,".","-",".")
+      if special is not None:
+        subfns[o.name].append(f'execute if score check baba matches {special} if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\'')
+      else:
+        subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\'')
 
   for name,fn in subfns.items():
     lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
@@ -459,7 +545,7 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
     if len(sprs) > 1:
       if o.name not in unpack_sub:
         unpack_sub[o.name] = []
-      unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:editor/unpack/block/{o.name}')
+        unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:editor/unpack/block/{o.name}')
       unpack_sub[o.name].extend([
         f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]',
         f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~-1 ~ {instrument(inst)}'
@@ -487,11 +573,15 @@ for i,fn in pack_sub.items():
 for i,fn in unpack_sub.items():
   tat.write_lines(fn, f'datapack/data/baba/functions/editor/unpack/block/{i}.mcfunction')
 pack_lines.extend([
-  'execute positioned ~ ~2 ~ if block ~ ~ ~ note_block run function baba:editor/pack/block'
+  'data modify storage baba:main tile[-1].extra set from block ~ ~1 ~ RecordItem.tag.extra',
+  'execute positioned ~ ~3 ~ if block ~ ~ ~ note_block run function baba:editor/pack/block'
 ])
 unpack_lines.extend([
+  'execute if data storage baba:main level[0][0][1] run setblock ~ ~1 ~ glass',
+  'execute if data storage baba:main tile.extra run setblock ~ ~1 ~ jukebox{RecordItem:{id:"minecraft:tnt",Count:1b}}',
+  'execute if data storage baba:main tile.extra run data modify block ~ ~1 ~ RecordItem.tag.extra set from storage baba:main tile.extra',
   'data remove storage baba:main level[0][0][0]',
-  'execute if data storage baba:main level[0][0][0] positioned ~ ~2 ~ run function baba:editor/unpack/block',
+  'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
