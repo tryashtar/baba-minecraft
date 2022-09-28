@@ -30,11 +30,13 @@ class SpriteCollection:
 
   def generate_grids(self):
     grids = []
+    color_grids = []
     for grid in self.data['grids']:
       # we need a separate grid for each frame of idle animation
-      result = [[] for x in range(self.anim_frames)]
+      anim_grids = [[] for x in range(self.anim_frames)]
       coords = None
       (width, height) = grid['size']
+      colorgrid = []
       for sheetname, sheetdata in grid['sheets'].items():
         # load the spritesheet PNG and filter out the background color
         image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
@@ -85,7 +87,7 @@ class SpriteCollection:
               # finalize the sprite and add each anim frame to its respective grid
               sprite = BabaSprite(adding, props, color)
               adding.sprites.append(sprite)
-              for h,g in enumerate(result):
+              for h,g in enumerate(anim_grids):
                 x, y = coords
                 if framedir == 'down':
                   img = image.crop((x+((width+1)*i),y+((height+1)*h),x+((width+1)*i)+width,y+((height+1)*h)+height))
@@ -94,10 +96,18 @@ class SpriteCollection:
                 elif framedir == 'none':
                   img = image.crop((x,y+((height+1)*i),x+width,y+((height+1)*i)+height))
                 g.append((sprite, img))
-  
-      result = [Grid(x, width, height, grid.get('scale', 1)) for x in result]
-      grids.append(result)
-    return grids
+                if h == 0:
+                  rc, gc, bc, ac = img.split()
+                  r, g, b = bytes.fromhex(color[1:])
+                  rc = rc.point(lambda i: i * r/255)
+                  gc = gc.point(lambda i: i * g/255)
+                  bc = bc.point(lambda i: i * b/255)
+                  color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
+                  colorgrid.append((sprite, color_img))
+      color_grids.append(Grid(colorgrid, width, height, grid.get('scale', 1), '#00000000'))
+      anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
+      grids.append(anim_grids)
+    return (grids, color_grids)
 
   def create_summon(self, sprite):
     types = {}
@@ -262,15 +272,15 @@ class BabaSprite:
 
 
 class Grid:
-  def __init__(self, spritelist, sprite_width, sprite_height, scale):
+  def __init__(self, spritelist, sprite_width, sprite_height, scale, color):
     self.scale = scale
     self.size = math.ceil(math.sqrt(len(spritelist)))
-    self.image = PIL.Image.new('RGBA', (sprite_width*self.size, sprite_height*self.size))
+    self.image = PIL.Image.new('RGBA', (sprite_width*self.size, sprite_height*self.size), color)
     self.sprites = [[None for x in range(self.size)] for x in range(self.size)]
     x = 0
     y = 0
     for sprite,image in spritelist:
-      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height))    
+      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height), image)    
       self.sprites[y][x] = sprite
       x += 1
       if x >= self.size:
@@ -299,9 +309,14 @@ class TileManager:
     self.advances = {}
     self.reverse_advances = {}
     self.providers = [{"type":"space","advances":self.advances}]
-    self.lang = {"baba.row_end":self.get_advance(-self.scale*(self.columns+2)),"baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
-    for r in range(rows):
+    self.lang = {"baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
+    negative_px = self.next_char()
+    self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
+    for r in range(-1,rows+1):
       self.charmap[r] = {}
+      char = self.next_char()
+      self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":self.scale,"ascent":-r*self.scale,"chars":[char]})
+      self.lang[f"baba.level_border.row{r}"] = char + self.get_advance(-1)
 
   def get_advance(self, width):
     if width == 0:
@@ -349,35 +364,38 @@ for o in sprites.objects.values():
   for s,props in o.filter_sprites('editor').items():
     print(s.display(props, ' ', '=', ' '))
 
-manager = TileManager(20,40)
-for i,grids in enumerate(sprites.grids):
+manager = TileManager(18,33)
+(anim_grids, color_grids) = sprites.grids
+for i,grids in enumerate(anim_grids):
   manager.add_grid(grids[0], f'baba:grid{i}_anim0.png')
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
-for i,grids in enumerate(sprites.grids):
+for i,grids in enumerate(anim_grids):
   for j,grid in enumerate(grids):
     grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{j}.png')
+for i,grid in enumerate(color_grids):
+  grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_color.png')
 
-for j,grid in enumerate(sprites.grids[0]):
+for j,grid in enumerate(anim_grids[0]):
   for p in manager.providers:
     if 'file' in p:
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-text = ['data modify storage baba:main text set value [\'""\']']
+text = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
+border = []
+full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'data modify storage baba:main text append value \'{{"translate":"baba.tile.row{r}","color":"black"}}\'',
-    f'scoreboard players set last_column baba -1',
-    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{sprite:"baba"}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.501',
-    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},nbt={{data:{{properties:["select"]}}}}] at @s align xyz run tp @s ~0.5 ~ ~0.502',
-    f'execute positioned {round(float(manager.rows-r-1),1)} 0.0 0.0 as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz={manager.columns},sort=nearest] at @s run function baba:display/check_tile/row{r}',
-    f'scoreboard players set column baba {manager.columns-1}',
-    f'execute if score column baba > last_column baba run function baba:display/add_empty',
-    f'data modify storage baba:main text append value \'{{"translate":"baba.tile.row{r}","color":"black"}}\''
+    f'execute if score row baba matches {r} as @e[type=marker,tag=baba.object,distance=..0.1,sort=nearest] run function baba:display/add_object/row{r}'
   ])
-  if r!=manager.rows-1:
-    text.append('data modify storage baba:main text append value \'{"translate":"baba.row_end"}\'')
-tat.write_lines(text, 'datapack/data/baba/functions/display/update_text.mcfunction')
+  border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#15181f"}}\'')
+  full_border.extend([
+    f'execute if score row baba matches {r+1} as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}}\'',
+    f'execute if score row baba matches {r+1} run data modify storage baba:main text append value \'[{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}},{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}}]\'',
+  ])
+tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')
+tat.write_lines(border, 'datapack/data/baba/functions/display/add_border.mcfunction')
+tat.write_lines(full_border, 'datapack/data/baba/functions/display/add_full_border.mcfunction')
 
 def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
@@ -386,13 +404,9 @@ def note_block(val):
 def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
-tat.delete_folder('datapack/data/baba/functions/display/check_tile')
+tat.delete_folder('datapack/data/baba/functions/display/add_object')
 for r in range(manager.rows):
-  lines = [
-    'execute store result score column baba run data get entity @s Pos[2]',
-    'execute if score column baba > last_column baba run function baba:display/add_empty',
-    'execute store result score last_column baba run data get entity @s Pos[2]',
-  ]
+  lines = []
   subfns = {}
   for o in sprites.objects.values():
     sprs = o.filter_sprites('sprite').items()
@@ -410,9 +424,9 @@ for r in range(manager.rows):
         lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps([{"translate":"baba.overlay"},translate], separators=(",", ":"))}\'')
 
   for name,fn in subfns.items():
-    lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/check_tile/row{r}/{name}')
-    tat.write_lines(fn, f'datapack/data/baba/functions/display/check_tile/row{r}/{name}.mcfunction')
-  tat.write_lines(lines, f'datapack/data/baba/functions/display/check_tile/row{r}.mcfunction')
+    lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
+    tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
+  tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
 
 
 pack_lines = []
@@ -425,9 +439,9 @@ loot_table = []
 get_all = []
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
-tat.delete_folder('datapack/data/baba/functions/io/editor/pack/block')
-tat.delete_folder('datapack/data/baba/functions/io/editor/unpack/block')
-tat.delete_folder('datapack/data/baba/functions/io/editor/pack/block')
+tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
+tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
+tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 
 i = 0
 for o in sorted(sprites.objects.values(), key=lambda x:x.name):
@@ -440,12 +454,12 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
     check_props = sprites.create_storage(s, props, 'check_props')
     if inst not in pack_sub:
       pack_sub[inst] = []
-      pack_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:io/editor/pack/block/{inst}')
+      pack_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:editor/pack/block/{inst}')
     pack_sub[inst].append(f'execute if block ~ ~ ~ note_block[note={note}] run data modify storage baba:main tile append value {{{set_storage}}}')
     if len(sprs) > 1:
       if o.name not in unpack_sub:
         unpack_sub[o.name] = []
-      unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:io/editor/unpack/block/{o.name}')
+      unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:editor/unpack/block/{o.name}')
       unpack_sub[o.name].extend([
         f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]',
         f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~-1 ~ {instrument(inst)}'
@@ -454,11 +468,11 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~-1 ~ {instrument(inst)}')
     placement = manager.placement[s]
-    for g,grids in enumerate(sprites.grids):
+    for g,grids in enumerate(anim_grids):
       if grids[0] == placement[0]:
         break
     uvsize = 16/grids[0].size
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],2),round(uvsize*placement[1],2),round(uvsize*placement[2]+uvsize,2),round(uvsize*placement[1]+uvsize,2)],"texture":"#up"}}}]}
+    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],4),round(uvsize*placement[1],4),round(uvsize*placement[2]+uvsize,4),round(uvsize*placement[1]+uvsize,4)],"texture":"#up"}}}]}
     description = s.display(props, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
@@ -469,18 +483,18 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
 for i,fn in pack_sub.items():
-  tat.write_lines(fn, f'datapack/data/baba/functions/io/editor/pack/block/{i}.mcfunction')
+  tat.write_lines(fn, f'datapack/data/baba/functions/editor/pack/block/{i}.mcfunction')
 for i,fn in unpack_sub.items():
-  tat.write_lines(fn, f'datapack/data/baba/functions/io/editor/unpack/block/{i}.mcfunction')
+  tat.write_lines(fn, f'datapack/data/baba/functions/editor/unpack/block/{i}.mcfunction')
 pack_lines.extend([
-  'execute positioned ~ ~2 ~ if block ~ ~ ~ note_block run function baba:io/editor/pack/block'
+  'execute positioned ~ ~2 ~ if block ~ ~ ~ note_block run function baba:editor/pack/block'
 ])
 unpack_lines.extend([
   'data remove storage baba:main level[0][0][0]',
-  'execute if data storage baba:main level[0][0][0] positioned ~ ~2 ~ run function baba:io/editor/unpack/block',
+  'execute if data storage baba:main level[0][0][0] positioned ~ ~2 ~ run function baba:editor/unpack/block',
 ])
-tat.write_lines(pack_lines, f'datapack/data/baba/functions/io/editor/pack/block.mcfunction')
-tat.write_lines(unpack_lines, f'datapack/data/baba/functions/io/editor/unpack/block.mcfunction')
+tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
+tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')

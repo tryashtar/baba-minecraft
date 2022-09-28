@@ -48,7 +48,7 @@ grids:
         object color: '#ffffff'
         coords: [1, 1]
       - name: keke
-        color: '#ce7b52'
+        color: '#e5533b'
         coords: [1, 751]
       - name: me
         color: '#8e5e9c'
@@ -59,32 +59,31 @@ grids:
       sprites:
       - text
       - permute:
-          facing: ['right', 'up', 'left', 'down']
+          facing: [right, up, left, down]
           walk: [0, 1, 2, 3]
           sleep: [False]
       - permute:
-          facing: ['right', 'up', 'left', 'down']
+          facing: [right, up, left, down]
           sleep: [True]
     
     sprites2:
     - objects:
       - name: belt
-        text color: '#609cd4'
-        object color: '#5f9dd1'
+        color: '#5f9dd1'
         coords: [1, 85]
       sprites:
       - text
       - permute:
-          facing: ['right', 'up', 'left', 'down']
+          facing: [right, up, left, down]
           frame: [0, 1, 2, 3]
     - objects:
       - name: bird
-        color: '#e5533b'
+        color: '#e49950'
         coords: [1, 322]
       - name: bug
         color: '#c29e46'
       - name: crab
-        color: '#82261c'
+        color: '#e5533b'
       - name: rocket
         color: '#737373'
         coords: [1, 847]
@@ -105,10 +104,10 @@ grids:
       sprites:
       - text
       - permute:
-          facing: ['right', 'up', 'left', 'down']
+          facing: [right, up, left, down]
     - objects:
       - name: bat
-        color: '#8c5c9c'
+        color: '#8e5e9c'
         coords: [1, 1081]
       - name: bubble
         color: '#83c8e5'
@@ -124,7 +123,8 @@ grids:
     sprites3:
     - objects:
       - name: algae
-        color: '#5c8339'
+        text color: '#4b5c1c'
+        object color: '#5c8339'
         coords: [1, 1]
       - null
       - null
@@ -140,12 +140,12 @@ grids:
       - null
       - null
       - name: ufo
-        color: '#d9396a'
+        color: '#eb91ca'
       - name: door
         color: '#e5533b'
         coords: [126, 151]
       - name: flower
-        color: '#9183d7'
+        color: '#557ae0'
       - null
       - null
       - null
@@ -172,11 +172,13 @@ grids:
       - name: tree
         color: '#5c8339'
       - name: box
-        color: '#90673e'
+        text color: '#90673e'
+        object color: '#c29e46'
         coords: [751, 1]
       - null
       - name: fire
-        color: '#e49950'
+        text color: '#e5533b'
+        object color: '#e49950'
       - name: gate
         color: '#e5533b'
       - name: jelly
@@ -209,7 +211,8 @@ grids:
       - name: dot
         color: '#ffffff'
       - name: foliage
-        color: '#4b5c1c'
+        text color: '#e49950'
+        object color: '#503f24'
       - null
       - null
       - null
@@ -222,12 +225,15 @@ grids:
       - name: fungus
         color: '#90673e'
       - name: husks
-        color: '#90673e'
+        text color: '#c29e46'
+        object color: '#90673e'
+      - null
       - null
       - null
       - null
       - name: stump
-        color: '#c89c44'
+        text color: '#c29e46'
+        object color: '#90673e'
       sprites:
       - text
       - {}
@@ -293,19 +299,6 @@ grids:
         coords: [51, 1]
         frames: none
       sprites:
-      - type: extra1
-      - type: extra2
-      - type: extra3
-      - type: extra4
-      - type: extra5
-      - type: extra6
-      - type: extra7
-    - objects:
-      - name: icon
-        color: '#ffffff'
-        coords: [1, 76]
-        frames: none
-      sprites:
       - type: a
       - type: b
       - type: c
@@ -315,6 +308,19 @@ grids:
       - type: g
       - type: h
       - type: i
+    - objects:
+      - name: icon
+        color: '#ffffff'
+        coords: [1, 76]
+        frames: none
+      sprites:
+      - type: extra1
+      - type: extra2
+      - type: extra3
+      - type: extra4
+      - type: extra5
+      - type: extra6
+      - type: extra7
     - objects:
       - name: level
         color: '#212734'
@@ -338,7 +344,7 @@ grids:
           part: operator
       - name: text
         color: '#e5533b'
-        coords: [226, 1]
+        coords: [151, 76]
         properties:
           text: not
           part: operator
@@ -360,6 +366,12 @@ grids:
         properties:
           text: facing
           part: infix
+      - name: text
+        color: '#e5533b'
+        coords: [151, 1198]
+        properties:
+          text: lonely
+          part: prefix
       - name: text
         color: '#ffffff'
         coords: [1, 151]
@@ -415,19 +427,19 @@ grids:
           text: push
           part: property
       - name: text
-        color: '#90673e'
+        color: '#c29e46'
         coords: [76, 301]
         properties:
           text: pull
           part: property
       - name: text
-        color: '#a8b43c'
+        color: '#a5b13f'
         coords: [226, 301]
         properties:
           text: move
           part: property
       - name: text
-        color: '#609cd4'
+        color: '#5f9dd1'
         coords: [301, 301]
         properties:
           text: shift
@@ -437,6 +449,24 @@ grids:
         coords: [1, 730]
         properties:
           text: defeat
+          part: property
+      - name: text
+        color: '#e49950'
+        coords: [76, 730]
+        properties:
+          text: hot
+          part: property
+      - name: text
+        color: '#5f9dd1'
+        coords: [151, 730]
+        properties:
+          text: melt
+          part: property
+      - name: text
+        color: '#557ae0'
+        coords: [1, 880]
+        properties:
+          text: hide
           part: property
       - name: text
         color: '#f0e484'
@@ -563,6 +593,30 @@ grids:
         coords: [151, 1873]
         properties:
           text: select
+          part: property
+      - name: text
+        color: '#ede285'
+        coords: [151, 1273]
+        properties:
+          text: best
+          part: property
+      - name: text
+        color: '#d9396a'
+        coords: [226, 1798]
+        properties:
+          text: bonus
+          part: property
+      - name: text
+        color: '#ffffff'
+        coords: [301, 1798]
+        properties:
+          text: end
+          part: property
+      - name: text
+        color: '#ffffff'
+        coords: [1, 1873]
+        properties:
+          text: done
           part: property
       sprites:
       - {}
