@@ -2,8 +2,47 @@
    "pack": {
       "pack_format": 9,
       "description": {
-         "text": "Baba is you",
-         "color": "#8fdff7"
+         "translate": "%2$s%21661093$s",
+         "with": [
+            [
+               {
+                  "translate": "baba.empty_tile",
+                  "font": "baba:anim0"
+               },
+               {
+                  "translate": "baba.text.baba.row0",
+                  "color": "#d9396a"
+               },
+               {
+                  "translate": "baba.empty_tile"
+               },
+               {
+                  "translate": "baba.text.is.row0",
+                  "color": "#ffffff"
+               },
+               {
+                  "translate": "baba.empty_tile"
+               },
+               {
+                  "translate": "baba.text.you.row0",
+                  "color": "#d9396a"
+               }
+            ],
+            [
+               {
+                  "text": "Baba",
+                  "color": "#d9396a"
+               },
+               {
+                  "text": " is ",
+                  "color": "#ffffff"
+               },
+               {
+                  "text": "you",
+                  "color": "#d9396a"
+               }
+            ]
+         ]
       }
    }
 }

@@ -31,7 +31,6 @@ class SpriteCollection:
 
   def generate_grids(self):
     grids = []
-    color_grids = []
     for grid in self.data['grids']:
       # we need a separate grid for each frame of idle animation
       anim_grids = [[] for x in range(self.anim_frames)]
@@ -87,9 +86,9 @@ class SpriteCollection:
               for k,v in spr.items():
                 props[self.properties[k]] = v
               # finalize the sprite and add each anim frame to its respective grid
-              sprite = BabaSprite(adding, props, color)
+              sprite = BabaSprite(adding, None, props, color, width, height)
               adding.sprites.append(sprite)
-              self.add_to_grids(i, sprite, image, anim_grids, colorgrid, coords, framedir, width, height, color)
+              self.add_to_grids(i, sprite, image, anim_grids, coords, framedir)
             for ov in obj.get('overlays', []):
               coords = ov['coords']
               framedir = ov['frames']
@@ -101,32 +100,24 @@ class SpriteCollection:
                 props = {}
                 for k,v in spr.items():
                   props[self.properties[k]] = v
-                overlay = Overlay(ov['name'], baba, props, ov['color'])
+                overlay = Overlay(ov['name'], baba, None, props, ov['color'], width, height)
                 baba.overlays.append(overlay)
-                self.add_to_grids(i, overlay, image, anim_grids, colorgrid, coords, framedir, width, height, ov['color'])
-      color_grids.append(Grid(colorgrid, width, height, grid.get('scale', 1), '#00000000'))
+                self.add_to_grids(i, overlay, image, anim_grids, coords, framedir)
       anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
       grids.append(anim_grids)
-    return (grids, color_grids)
+    return grids
 
-  def add_to_grids(self, i, sprite, image, anim_grids, colorgrid, coords, framedir, width, height, color):
+  def add_to_grids(self, i, sprite, image, anim_grids, coords, framedir):
     for h,g in enumerate(anim_grids):
       x, y = coords
       if framedir == 'down':
-        img = image.crop((x+((width+1)*i),y+((height+1)*h),x+((width+1)*i)+width,y+((height+1)*h)+height))
+        img = image.crop((x+((sprite.width+1)*i),y+((sprite.height+1)*h),x+((sprite.width+1)*i)+sprite.width,y+((sprite.height+1)*h)+sprite.height))
       elif framedir == 'right':
-        img = image.crop((x+((width+1)*h),y+((height+1)*i),x+((width+1)*h)+width,y+((height+1)*i)+height))
+        img = image.crop((x+((sprite.width+1)*h),y+((sprite.height+1)*i),x+((sprite.width+1)*h)+sprite.width,y+((sprite.height+1)*i)+sprite.height))
       elif framedir == 'none':
-        img = image.crop((x,y+((height+1)*i),x+width,y+((height+1)*i)+height))
+        img = image.crop((x,y+((sprite.height+1)*i),x+sprite.width,y+((sprite.height+1)*i)+sprite.height))
+      sprite.image = img
       g.append((sprite, img))
-      if h == 0:
-        rc, gc, bc, ac = img.split()
-        r, g, b = bytes.fromhex(color[1:])
-        rc = rc.point(lambda x: x * r/255)
-        gc = gc.point(lambda x: x * g/255)
-        bc = bc.point(lambda x: x * b/255)
-        color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
-        colorgrid.append((sprite, color_img))
 
   def create_summon(self, sprite):
     types = {}
@@ -210,11 +201,14 @@ class SpriteCollection:
 
 
 class Overlay:
-  def __init__(self, name, obj, properties, color):
+  def __init__(self, name, obj, image, properties, color, width, height):
     self.name = name
     self.parent = obj
+    self.image = image
     self.properties = properties
     self.color = color
+    self.width = width
+    self.height = height
 
   def filter_properties(self, attribute):
     props = self.properties.copy()
@@ -258,10 +252,13 @@ class BabaObject:
     return sprites
 
 class BabaSprite:
-  def __init__(self, obj, properties, color):
+  def __init__(self, obj, image, properties, color, width, height):
     self.parent = obj
+    self.image = image
     self.properties = properties
     self.color = color
+    self.width = width
+    self.height = height
 
   # return a copy of properties, only including metadata with the given attribute
   def filter_properties(self, attribute):
@@ -335,11 +332,13 @@ class Grid:
     self.size = math.ceil(math.sqrt(len(spritelist)))
     self.image = PIL.Image.new('RGBA', (sprite_width*self.size, sprite_height*self.size), color)
     self.sprites = [[None for x in range(self.size)] for x in range(self.size)]
+    self.placements = {}
     x = 0
     y = 0
     for sprite,image in spritelist:
       PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height), image)    
       self.sprites[y][x] = sprite
+      self.placements[sprite] = (y, x)
       x += 1
       if x >= self.size:
         x = 0
@@ -362,12 +361,11 @@ class TileManager:
     self.rows = rows
     self.columns = columns
     self.charmap = {}
-    self.placement = {}
     self.negatives = {}
     self.advances = {}
     self.reverse_advances = {}
     self.providers = [{"type":"space","advances":self.advances}]
-    self.lang = {"baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
+    self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
     negative_px = self.next_char()
     self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
     for r in range(-1,rows+1):
@@ -409,7 +407,6 @@ class TileManager:
             self.charmap[r][c] = self.next_char()
             display = c.display(c.filter_properties('sprite'), '.', '-', '.')
             self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale)+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust)
-          self.placement[c] = (grid, y, x)
 
     for r in range(self.rows):
       self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[r])})
@@ -423,17 +420,15 @@ with open('sprites.yaml', 'r') as data:
 #    print(s.display(props, ' ', '=', ' '))
 
 manager = TileManager(18,33)
-(anim_grids, color_grids) = sprites.grids
+anim_grids = sprites.grids
 for i,grids in enumerate(anim_grids):
   manager.add_grid(grids[0], f'baba:grid{i}_anim0.png')
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
 for i,grids in enumerate(anim_grids):
   for j,grid in enumerate(grids):
     grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{j}.png')
-for i,grid in enumerate(color_grids):
-  grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_color.png')
 
-for j,grid in enumerate(anim_grids[0]):
+for j,grid in enumerate(anim_grids):
   for p in manager.providers:
     if 'file' in p:
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
@@ -529,8 +524,25 @@ tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 
+editor_sprites = {}
+objectlist = sorted(sprites.objects.values(), key=lambda x:x.name)
+for o in objectlist:
+  for spr in o.filter_sprites('editor'):
+    size = (spr.width, spr.height)
+    if size not in editor_sprites:
+      editor_sprites[size] = []
+    rc, gc, bc, ac = spr.image.split()
+    r, g, b = bytes.fromhex(spr.color[1:])
+    rc = rc.point(lambda x: x * r/255)
+    gc = gc.point(lambda x: x * g/255)
+    bc = bc.point(lambda x: x * b/255)
+    color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
+    editor_sprites[size].append((spr, color_img))
+colorgrids = [Grid(x[1], x[0][0], x[0][1], 1, '#00000000') for x in editor_sprites.items()]
+for c,grid in enumerate(colorgrids):
+  grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_color.png')
 i = 0
-for o in sorted(sprites.objects.values(), key=lambda x:x.name):
+for o in objectlist:
   sprs = o.filter_sprites('editor').items()
   for s,props in sprs:
     (inst, note) = note_block(i)
@@ -553,12 +565,12 @@ for o in sorted(sprites.objects.values(), key=lambda x:x.name):
     else:
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~-1 ~ {instrument(inst)}')
-    placement = manager.placement[s]
-    for g,grids in enumerate(anim_grids):
-      if grids[0] == placement[0]:
+    for g,grid in enumerate(colorgrids):
+      if s in grid.placements:
+        placement = grid.placements[s]
+        uvsize = 16/grid.size
         break
-    uvsize = 16/grids[0].size
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[2],4),round(uvsize*placement[1],4),round(uvsize*placement[2]+uvsize,4),round(uvsize*placement[1]+uvsize,4)],"texture":"#up"}}}]}
+    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[1],4),round(uvsize*placement[0],4),round(uvsize*placement[1]+uvsize,4),round(uvsize*placement[0]+uvsize,4)],"texture":"#up"}}}]}
     description = s.display(props, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
