@@ -96,7 +96,7 @@ class SpriteCollection:
                     self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                   props[self.properties[k]] = v
                 # finalize the sprite and add each anim frame to its respective grid
-                sprite = BabaSprite(adding, None, props, color, width, height)
+                sprite = BabaSprite(adding, None, props, color, width, height, obj.get('shift', [0,0]))
                 adding.sprites.append(sprite)
                 self.add_to_grids(i, sprite, image, anim_grids, coords, framedir)
       anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
@@ -216,13 +216,14 @@ class BabaObject:
 
 
 class BabaSprite:
-  def __init__(self, obj, image, properties, color, width, height):
+  def __init__(self, obj, image, properties, color, width, height, shift):
     self.parent = obj
     self.image = image
     self.properties = properties
     self.color = color
     self.width = width
     self.height = height
+    self.shift = shift
 
   # return a copy of properties, only including metadata with the given attribute
   def filter_properties(self, attribute):
@@ -383,7 +384,7 @@ class TileManager:
           for r in range(self.rows):
             self.charmap[r][c] = self.next_char()
             display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-            self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale)+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust)
+            self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale+c.shift[0])+self.charmap[r][c]+self.negatives[c]+self.get_advance(self.scale-3+adjust-c.shift[0])
 
     for r in range(self.rows):
       self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[r])})
@@ -405,7 +406,7 @@ for i,grids in enumerate(anim_grids):
   for j,grid in enumerate(grids):
     grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{j}.png')
 
-for j,grid in enumerate(anim_grids):
+for j,grid in enumerate(anim_grids[0]):
   for p in manager.providers:
     if 'file' in p:
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')

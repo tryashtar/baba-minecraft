@@ -253,15 +253,52 @@ grids:
           part: noun
       sprites:
       - {}
+    - overlays:
+      - name: level_icon
+        color: '#ffffff'
+        coords: [751, 910]
+        frames: none
+      sprites:
+      - style: jelly
+      - style: moon
+    - overlays:
+      - name: level_icon
+        color: '#ffffff'
+        coords: [776, 910]
+        frames: none
+      sprites:
+      - style: island
+      - style: flower
+      - style: abc
+    - overlays:
+      - name: level_icon
+        color: '#ffffff'
+        coords: [801, 910]
+        frames: none
+      sprites:
+      - style: pillar
+      - style: square
+      - style: dust
+    - overlays:
+      - name: level_icon
+        color: '#ffffff'
+        coords: [826, 910]
+        frames: none
+      sprites:
+      - style: leaf
+      - style: skull
+      - style: text
+    - overlays:
+      - name: level_icon
+        color: '#ffffff'
+        coords: [851, 910]
+        frames: none
+      sprites:
+      - style: tree
+      - style: snow
+      - style: dot
 
     extras:
-    - objects:
-      - name: level
-        color: '#212734'
-        coords: [1, 1]
-        overlays: [level_icon]
-      sprites:
-      - {}
     - overlays:
       - name: level_icon
         color: '#ffffff'
@@ -280,7 +317,7 @@ grids:
     - overlays:
       - name: level_icon
         color: '#ffffff'
-        coords: [76, 1]
+        coords: [51, 1]
         frames: none
         properties:
           style: letter
@@ -297,35 +334,9 @@ grids:
     - overlays:
       - name: level_icon
         color: '#ffffff'
-        coords: [101, 1]
+        coords: [26, 1]
         frames: none
-      sprites:
-      - style: jelly
-      - style: island
-      - style: pillar
-      - style: leaf
-      - style: tree
-      - style: snow
-      - style: skull
-      - style: flower
-      - style: moon
-      - style: square
-    - overlays:
-      - name: level_icon
-        color: '#ffffff'
-        coords: [126, 1]
-        frames: none
-      sprites:
-      - style: abc
-      - style: dust
-      - style: text
-      - style: dot
-    - overlays:
-      - name: level_icon
-        color: '#ffffff'
-        coords: [51, 1]
-        frames: none
-        shift: [-4, 0]
+        shift: [-2, 0]
         properties:
           style: digit
       sprites:
@@ -344,7 +355,7 @@ grids:
         color: '#ffffff'
         coords: [26, 1]
         frames: none
-        shift: [4, 0]
+        shift: [2, 0]
         properties:
           style: digit
         modifications:
@@ -362,6 +373,13 @@ grids:
       - first_digit: 7
       - first_digit: 8
       - first_digit: 9
+    - objects:
+      - name: level
+        color: '#212734'
+        coords: [1, 1]
+        overlays: [level_icon]
+      sprites:
+      - {}
 
     text:
     - objects:
