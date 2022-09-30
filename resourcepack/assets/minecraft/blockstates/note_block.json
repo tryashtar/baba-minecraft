@@ -837,27 +837,27 @@
          "y": 90
       },
       "instrument=chime,note=9": {
-         "model": "baba:text.line",
-         "y": 90
-      },
-      "instrument=chime,note=10": {
-         "model": "baba:text.pipe",
-         "y": 90
-      },
-      "instrument=chime,note=11": {
-         "model": "baba:text.rubble",
-         "y": 90
-      },
-      "instrument=chime,note=12": {
-         "model": "baba:text.wall",
-         "y": 90
-      },
-      "instrument=chime,note=13": {
          "model": "baba:text.water",
          "y": 90
       },
-      "instrument=chime,note=14": {
+      "instrument=chime,note=10": {
          "model": "baba:text.bog",
+         "y": 90
+      },
+      "instrument=chime,note=11": {
+         "model": "baba:text.line",
+         "y": 90
+      },
+      "instrument=chime,note=12": {
+         "model": "baba:text.pipe",
+         "y": 90
+      },
+      "instrument=chime,note=13": {
+         "model": "baba:text.rubble",
+         "y": 90
+      },
+      "instrument=chime,note=14": {
+         "model": "baba:text.wall",
          "y": 90
       },
       "instrument=chime,note=15": {

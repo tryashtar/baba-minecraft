@@ -6719,7 +6719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text line",
+                        "text": "text water",
                         "italic": false
                      }
                   },
@@ -6751,7 +6751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pipe",
+                        "text": "text bog",
                         "italic": false
                      }
                   },
@@ -6783,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rubble",
+                        "text": "text line",
                         "italic": false
                      }
                   },
@@ -6815,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text wall",
+                        "text": "text pipe",
                         "italic": false
                      }
                   },
@@ -6847,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text water",
+                        "text": "text rubble",
                         "italic": false
                      }
                   },
@@ -6879,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bog",
+                        "text": "text wall",
                         "italic": false
                      }
                   },

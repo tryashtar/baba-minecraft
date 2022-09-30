@@ -332,47 +332,44 @@ grids:
       - number: 8
       - number: 9
     - overlays:
-      - name: level_icon
-        color: '#ffffff'
+      - shared:
+        - name: level_icon
+          color: '#ffffff'
+          shift: [-2, 0]
+          properties:
+            style: digit
+        - name: level_icon
+          color: '#ffffff'
+          shift: [2, 0]
+          properties:
+            style: digit
+          modifications:
+            first_digit:
+              operation: modulo
+              operands: [number, 10]
         coords: [26, 1]
         frames: none
-        shift: [-2, 0]
-        properties:
-          style: digit
       sprites:
-      - number: [0, 9]
-      - number: [10, 19]
-      - number: [20, 29]
-      - number: [30, 39]
-      - number: [40, 49]
-      - number: [50, 59]
-      - number: [60, 69]
-      - number: [70, 79]
-      - number: [80, 89]
-      - number: [90, 99]
-    - overlays:
-      - name: level_icon
-        color: '#ffffff'
-        coords: [26, 1]
-        frames: none
-        shift: [2, 0]
-        properties:
-          style: digit
-        modifications:
-          first_digit:
-            operation: modulo
-            operands: [number, 10]
-      sprites:
-      - first_digit: 0
-      - first_digit: 1
-      - first_digit: 2
-      - first_digit: 3
-      - first_digit: 4
-      - first_digit: 5
-      - first_digit: 6
-      - first_digit: 7
-      - first_digit: 8
-      - first_digit: 9
+      - - number: [0, 9]
+        - first_digit: 0
+      - - number: [10, 19]
+        - first_digit: 1
+      - - number: [20, 29]
+        - first_digit: 2
+      - - number: [30, 39]
+        - first_digit: 3
+      - - number: [40, 49]
+        - first_digit: 4
+      - - number: [50, 59]
+        - first_digit: 5
+      - - number: [60, 69]
+        - first_digit: 6
+      - - number: [70, 79]
+        - first_digit: 7
+      - - number: [80, 89]
+        - first_digit: 8
+      - - number: [90, 99]
+        - first_digit: 9
     - objects:
       - name: level
         color: '#212734'
@@ -689,8 +686,15 @@ grids:
         color: '#4b5c1c'
       - name: ice
         color: '#5f9dd1'
-      - name: lava
-        color: '#e49950'
+      - shared:
+        - name: lava
+          color: '#e49950'
+        - name: water
+          color: '#5f9dd1'
+          text coords: [1, 1576]
+        - name: bog
+          color: '#5c8339'
+          text coords: [1, 76]
       - name: line
         color: '#ffffff'
       - name: pipe
@@ -704,14 +708,10 @@ grids:
       - name: wall
         text color: '#737373'
         object color: '#293141'
-      - name: water
-        color: '#5f9dd1'
-      - name: bog
-        color: '#5c8339'
-        coords: [1, 76]
       - name: brick
         text color: '#90673e'
         object color: '#362e22'
+        coords: [1, 151]
       - name: cliff
         color: '#90673e'
       properties:

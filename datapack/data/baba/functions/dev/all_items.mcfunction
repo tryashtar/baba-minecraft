@@ -207,12 +207,12 @@ give @s note_block{babatile:1b,CustomModelData:206,BlockStateTag:{instrument:"ch
 give @s note_block{babatile:1b,CustomModelData:207,BlockStateTag:{instrument:"chime",note:"6"},display:{Name:'{"text":"text hedge","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:208,BlockStateTag:{instrument:"chime",note:"7"},display:{Name:'{"text":"text ice","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:209,BlockStateTag:{instrument:"chime",note:"8"},display:{Name:'{"text":"text lava","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:210,BlockStateTag:{instrument:"chime",note:"9"},display:{Name:'{"text":"text line","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:211,BlockStateTag:{instrument:"chime",note:"10"},display:{Name:'{"text":"text pipe","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:212,BlockStateTag:{instrument:"chime",note:"11"},display:{Name:'{"text":"text rubble","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:213,BlockStateTag:{instrument:"chime",note:"12"},display:{Name:'{"text":"text wall","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:214,BlockStateTag:{instrument:"chime",note:"13"},display:{Name:'{"text":"text water","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:215,BlockStateTag:{instrument:"chime",note:"14"},display:{Name:'{"text":"text bog","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:210,BlockStateTag:{instrument:"chime",note:"9"},display:{Name:'{"text":"text water","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:211,BlockStateTag:{instrument:"chime",note:"10"},display:{Name:'{"text":"text bog","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:212,BlockStateTag:{instrument:"chime",note:"11"},display:{Name:'{"text":"text line","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:213,BlockStateTag:{instrument:"chime",note:"12"},display:{Name:'{"text":"text pipe","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:214,BlockStateTag:{instrument:"chime",note:"13"},display:{Name:'{"text":"text rubble","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:215,BlockStateTag:{instrument:"chime",note:"14"},display:{Name:'{"text":"text wall","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:216,BlockStateTag:{instrument:"chime",note:"15"},display:{Name:'{"text":"text brick","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:217,BlockStateTag:{instrument:"chime",note:"16"},display:{Name:'{"text":"text cliff","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:218,BlockStateTag:{instrument:"chime",note:"17"},display:{Name:'{"text":"tile","italic":false}'}}
