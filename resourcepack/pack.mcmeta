@@ -6,26 +6,22 @@
          "with": [
             [
                {
-                  "translate": "baba.empty_tile",
-                  "font": "baba:anim0"
+                  "text": "0",
+                  "color": "#d9396a",
+                  "font": "baba:icon_baba",
+                  "obfuscated": true
                },
                {
-                  "translate": "baba.text.baba.row0",
-                  "color": "#d9396a"
+                  "text": "0",
+                  "color": "#ffffff",
+                  "font": "baba:icon_is",
+                  "obfuscated": true
                },
                {
-                  "translate": "baba.empty_tile"
-               },
-               {
-                  "translate": "baba.text.is.row0",
-                  "color": "#ffffff"
-               },
-               {
-                  "translate": "baba.empty_tile"
-               },
-               {
-                  "translate": "baba.text.you.row0",
-                  "color": "#d9396a"
+                  "text": "0",
+                  "color": "#d9396a",
+                  "font": "baba:icon_you",
+                  "obfuscated": true
                }
             ],
             [

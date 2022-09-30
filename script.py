@@ -19,11 +19,12 @@ class SpriteCollection:
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
     self.grids = self.generate_grids()
 
-  def get_obj(self, name):
-    if name in self.objects:
-      return self.objects[name]
-    obj = BabaObject(name)
-    self.objects[name] = obj
+  def get_obj(self, name, overlay):
+    source = self.overlays if overlay else self.objects
+    if name in source:
+      return source[name]
+    obj = BabaObject(name, overlay)
+    source[name] = obj
     return obj
 
   def permute(self, properties):
@@ -48,61 +49,56 @@ class SpriteCollection:
   
         for config in sheetdata:
           objlist = config.get('objects', [])
-          for obj in objlist:
-            # if coords are unspecified, move to the next row
-            if coords is not None:
-              coords[1] += (height+1) * frames
-            if obj is None:
-              continue
-            coords = obj.get('coords', coords)
-            framedir = obj.get('frames', 'down')
-            frames = 1 if framedir == 'none' else self.anim_frames
-            # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
-            baba = self.get_obj(obj['name'])
-            sprites = []
-            # expand sprite definitions from shorthands to a complete list of all sprites
-            for spr in config['sprites']:
-              if type(spr) is dict and 'permute' in spr:
-                sprites.extend(self.permute(spr['permute']))
-              else:
-                sprites.append(spr)
-            for i,spr in enumerate(sprites):
-              if spr == 'text':
-                adding = self.get_obj('text')
-                color = obj.get('text color', obj.get('color'))
-                spr = {'text': obj['name'], 'part': 'noun'}
-              else:
-                adding = baba
-                color = obj.get('object color', obj.get('color'))
-              # include properties specific to this object, or this sprite
-              if 'properties' in obj:
-                for k,v in obj['properties'].items():
-                  spr[k] = v
-              if 'properties' in config:
-                for k,v in config['properties'].items():
-                  spr[k] = v
-              # make keys the actual metadata objects instead of their names
-              props = {}
-              for k,v in spr.items():
-                props[self.properties[k]] = v
-              # finalize the sprite and add each anim frame to its respective grid
-              sprite = BabaSprite(adding, None, props, color, width, height)
-              adding.sprites.append(sprite)
-              self.add_to_grids(i, sprite, image, anim_grids, coords, framedir)
-            for ov in obj.get('overlays', []):
-              coords = ov['coords']
-              framedir = ov['frames']
+          overlist = config.get('overlays', [])
+          for source in (objlist, overlist):
+            for obj in source:
+              # if coords are unspecified, move to the next row
+              if coords is not None:
+                coords[1] += (height+1) * frames
+              if obj is None:
+                continue
+              coords = obj.get('coords', coords)
+              framedir = obj.get('frames', 'down')
               frames = 1 if framedir == 'none' else self.anim_frames
-              for i,spr in enumerate(ov['sprites']):
-                if 'properties' in ov:
-                  for k,v in ov['properties'].items():
+              # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
+              baba = self.get_obj(obj['name'], source == overlist)
+              if 'overlays' in obj:
+                baba.overlays.extend(obj['overlays'])
+              if 'modifications' in obj:
+                for k,v in obj['modifications'].items():
+                  baba.property_mods[k] = v
+              sprites = []
+              # expand sprite definitions from shorthands to a complete list of all sprites
+              for spr in config['sprites']:
+                if type(spr) is dict and 'permute' in spr:
+                  sprites.extend(self.permute(spr['permute']))
+                else:
+                  sprites.append(spr)
+              for i,spr in enumerate(sprites):
+                if spr == 'text':
+                  adding = self.get_obj('text', False)
+                  color = obj.get('text color', obj.get('color'))
+                  spr = {'text': obj['name'], 'part': 'noun'}
+                else:
+                  adding = baba
+                  color = obj.get('object color', obj.get('color'))
+                # include properties specific to this object, or this sprite
+                if 'properties' in obj:
+                  for k,v in obj['properties'].items():
                     spr[k] = v
+                if 'properties' in config:
+                  for k,v in config['properties'].items():
+                    spr[k] = v
+                # make keys the actual metadata objects instead of their names
                 props = {}
                 for k,v in spr.items():
+                  if k in baba.property_mods and k not in self.properties:
+                    self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                   props[self.properties[k]] = v
-                overlay = Overlay(ov['name'], baba, None, props, ov['color'], width, height)
-                baba.overlays.append(overlay)
-                self.add_to_grids(i, overlay, image, anim_grids, coords, framedir)
+                # finalize the sprite and add each anim frame to its respective grid
+                sprite = BabaSprite(adding, None, props, color, width, height)
+                adding.sprites.append(sprite)
+                self.add_to_grids(i, sprite, image, anim_grids, coords, framedir)
       anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
       grids.append(anim_grids)
     return grids
@@ -200,46 +196,13 @@ class SpriteCollection:
     return ','.join(nbt)
 
 
-class Overlay:
-  def __init__(self, name, obj, image, properties, color, width, height):
-    self.name = name
-    self.parent = obj
-    self.image = image
-    self.properties = properties
-    self.color = color
-    self.width = width
-    self.height = height
-
-  def filter_properties(self, attribute):
-    props = self.properties.copy()
-    for p in self.properties:
-      if attribute not in p.attributes:
-        del props[p]
-    return props
-
-  def display(self, properties, sep1, sep2, sep3):
-    if len(properties) == 0:
-      return self.name
-    result = self.name + sep1
-    for k,v in properties.items():
-      if 'primary' in k.attributes:
-        result += str(v).lower() + sep3
-    for k,v in properties.items():
-      if 'primary' not in k.attributes:
-        if type(v) is dict:
-          v = v['display']+str(v['value'])
-        if type(v) is list:
-          v = v[0]
-        result += k.name + sep2 + str(v).lower() + sep3
-    result = result[:-1]
-    return result
-
-
 class BabaObject:
-  def __init__(self, name):
+  def __init__(self, name, is_overlay):
     self.name = name
     self.sprites = []
     self.overlays = []
+    self.property_mods = {}
+    self.is_overlay = is_overlay
 
   # get sprites that are unique when filtering by an attribute
   # for example, baba has many sprites, but only 4 are unique with respect to the facing property
@@ -250,6 +213,7 @@ class BabaObject:
       if not any(map(lambda x: x == props, sprites.values())):
         sprites[s] = props
     return sprites
+
 
 class BabaSprite:
   def __init__(self, obj, image, properties, color, width, height):
@@ -267,6 +231,14 @@ class BabaSprite:
       if attribute not in p.attributes:
         del props[p]
     return props
+
+  def score_check(self, prop, value):
+    if type(value) is int:
+      return str(value)
+    if type(value) is list:
+      return f'{value[0]}..{value[1]}'
+    if type(value) is str:
+      return str(prop.values.index(value)+1)
 
   # lots of repeated code from create_summon above
   def create_selector(self, properties, include_sprite):
@@ -286,7 +258,7 @@ class BabaSprite:
       if t == 'tag':
         tags.extend([('' if (type(x[1]) is str or x[1]) else '!') + (x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name) for x in vals.items()])
       elif t == 'score':
-        scores.extend([x[0].name+'='+str(x[1] if type(x[1]) is int else (x[0].values.index(x[1])+1) if type(x[1]) is str else (str(x[1][0])+'..'+str(x[1][1]))) for x in vals.items()])
+        scores.extend([x[0].name+'='+self.score_check(x[0], x[1]) for x in vals.items()])
       elif t == 'property':
         trues = list(filter(lambda x: x[1], vals.items()))
         falses = list(filter(lambda x: not x[1], vals.items()))
@@ -312,16 +284,21 @@ class BabaSprite:
       result.append('nbt=!{data:{'+','.join(nbt_false)+'}}')
     return ','.join(result)
 
+  def display_val(self, val):
+    if type(val) is list:
+      return f'{val[0]}-{val[1]}'
+    return str(val).lower()
+
   def display(self, properties, sep1, sep2, sep3):
     if len(properties) == 0:
       return self.parent.name
     result = self.parent.name + sep1
     for k,v in properties.items():
       if 'primary' in k.attributes:
-        result += str(v).lower() + sep3
+        result += self.display_val(v) + sep3
     for k,v in properties.items():
       if 'primary' not in k.attributes:
-        result += k.name + sep2 + str(v).lower() + sep3
+        result += k.name + sep2 + self.display_val(v) + sep3
     result = result[:-1]
     return result
 
@@ -478,36 +455,43 @@ for r in range(manager.rows):
       else:
         selector = s.create_selector(p, True)
         lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
-    special_checks = list(filter(lambda x: type(x[1]) is dict, itertools.chain.from_iterable(map(lambda x: x.properties.items(), o.overlays))))
-    values_needed = set()
-    for spc in special_checks:
-      values_needed.add((spc[1]['operation'], spc[1]['operator'], spc[0].name))
-    for v in values_needed:
-      if v[0] == 'modulo':
-        subfns[o.name].append(f'scoreboard players operation check baba = @s {v[2]}')
-        subfns[o.name].append(f'scoreboard players operation check baba %= #{v[1]} baba')
+
     for ov in o.overlays:
-      props = ov.properties.copy()
-      special = None
-      for p,v in props.copy().items():
-        if any(map(lambda x: x[1] == v, special_checks)):
-          special = v
-          if type(special) is dict:
-            special = special['value']
-          if type(special) is list:
-            special = f'{special[0]}..{special[1]}'
-          del props[p]
-      selector = s.create_selector(props, False)
-      disp = ov.display(ov.properties,".","-",".")
-      if special is not None:
-        subfns[o.name].append(f'execute if score check baba matches {special} if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\'')
-      else:
-        subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\'')
+      overlay = sprites.overlays[ov]
+      for prop,op in overlay.property_mods.items():
+        subfns[o.name].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
+        if op['operation'] == 'modulo':
+          subfns[o.name].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
+      for ovspr in overlay.sprites:
+        props = ovspr.properties.copy()
+        special_checks = []
+        for p,v in props.copy().items():
+          if p.name in overlay.property_mods:
+            special_checks.append((p, props[p]))
+            del props[p]
+        selector = ovspr.create_selector(props, False)
+        disp = ovspr.display(ovspr.properties,".","-",".")
+        final = 'execute '
+        for prop,spec in special_checks:
+          final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '
+        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\''
+        subfns[o.name].append(final)
 
   for name,fn in subfns.items():
     lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
     tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
   tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
+
+for i,grids in enumerate(sprites.grids):
+  for spr,place in grids[0].placements.items():
+    if spr.parent.name == 'text':
+      text = spr.properties[sprites.properties['text']]
+      if text in ('baba','is','you'):
+        providers = []
+        for h in range(len(grids)):
+          chars = [''.join(map(lambda x: str(h) if x == spr else '\u0000', x)) for x in grids[0].sprites]
+          providers.append({"type":"bitmap","file":f"baba:grid{i}_anim{h}.png","height":12,"ascent":8,"chars":chars})
+        tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
 
 
 pack_lines = []
