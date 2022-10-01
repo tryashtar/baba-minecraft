@@ -369,18 +369,19 @@ class TileManager:
     island_width = 4
     island_height = 2
     island_pixels = 870
-    island_translation = ""
-    for y in range(island_height):
-      island_chars = ['\u0000' * island_width for x in range(island_height)]
-      chars = ""
-      for x in range(island_width):
-        char = self.next_char()
-        chars += char
-        island_translation += char + self.get_advance(-1)
-      island_chars[y] = chars
-      self.providers.extend([{"type":"bitmap","file":"baba:island_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
-      island_translation += self.get_advance(-99*island_width)
-    self.lang[f'baba.island'] = island_translation
+    for island in ['island','flower']:
+      island_translation = ""
+      for y in range(island_height):
+        island_chars = ['\u0000' * island_width for x in range(island_height)]
+        chars = ""
+        for x in range(island_width):
+          char = self.next_char()
+          chars += char
+          island_translation += char + self.get_advance(-1)
+        island_chars[y] = chars
+        self.providers.extend([{"type":"bitmap","file":f"baba:{island}_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
+        island_translation += self.get_advance(-99*island_width)
+      self.lang[f'baba.background.{island}'] = island_translation
     for r in range(-1,rows+1):
       self.charmap[r] = {}
       char = self.next_char()
