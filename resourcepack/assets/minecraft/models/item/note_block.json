@@ -952,7 +952,7 @@
          "predicate": {
             "custom_model_data": 159
          },
-         "model": "baba:text.true"
+         "model": "baba:text.on"
       },
       {
          "predicate": {

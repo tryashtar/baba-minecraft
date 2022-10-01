@@ -633,7 +633,7 @@
          "y": 90
       },
       "instrument=bell,note=8": {
-         "model": "baba:text.true",
+         "model": "baba:text.on",
          "y": 90
       },
       "instrument=bell,note=9": {

@@ -5087,7 +5087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text true",
+                        "text": "text on",
                         "italic": false
                      }
                   },

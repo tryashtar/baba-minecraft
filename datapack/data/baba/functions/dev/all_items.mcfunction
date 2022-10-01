@@ -156,7 +156,7 @@ give @s note_block{babatile:1b,CustomModelData:155,BlockStateTag:{instrument:"be
 give @s note_block{babatile:1b,CustomModelData:156,BlockStateTag:{instrument:"bell",note:"5"},display:{Name:'{"text":"text is","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:157,BlockStateTag:{instrument:"bell",note:"6"},display:{Name:'{"text":"text and","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:158,BlockStateTag:{instrument:"bell",note:"7"},display:{Name:'{"text":"text not","italic":false}'}}
-give @s note_block{babatile:1b,CustomModelData:159,BlockStateTag:{instrument:"bell",note:"8"},display:{Name:'{"text":"text true","italic":false}'}}
+give @s note_block{babatile:1b,CustomModelData:159,BlockStateTag:{instrument:"bell",note:"8"},display:{Name:'{"text":"text on","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:160,BlockStateTag:{instrument:"bell",note:"9"},display:{Name:'{"text":"text near","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:161,BlockStateTag:{instrument:"bell",note:"10"},display:{Name:'{"text":"text facing","italic":false}'}}
 give @s note_block{babatile:1b,CustomModelData:162,BlockStateTag:{instrument:"bell",note:"11"},display:{Name:'{"text":"text lonely","italic":false}'}}

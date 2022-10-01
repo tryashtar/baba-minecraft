@@ -108,8 +108,8 @@ execute if data storage baba:main tile{data:{text:"and"}} run setblock ~ ~ ~ not
 execute if data storage baba:main tile{data:{text:"and"}} run setblock ~ ~-1 ~ gold_block
 execute if data storage baba:main tile{data:{text:"not"}} run setblock ~ ~ ~ note_block[instrument=bell,note=7]
 execute if data storage baba:main tile{data:{text:"not"}} run setblock ~ ~-1 ~ gold_block
-execute if data storage baba:main tile{data:{text:1b}} run setblock ~ ~ ~ note_block[instrument=bell,note=8]
-execute if data storage baba:main tile{data:{text:1b}} run setblock ~ ~-1 ~ gold_block
+execute if data storage baba:main tile{data:{text:"on"}} run setblock ~ ~ ~ note_block[instrument=bell,note=8]
+execute if data storage baba:main tile{data:{text:"on"}} run setblock ~ ~-1 ~ gold_block
 execute if data storage baba:main tile{data:{text:"near"}} run setblock ~ ~ ~ note_block[instrument=bell,note=9]
 execute if data storage baba:main tile{data:{text:"near"}} run setblock ~ ~-1 ~ gold_block
 execute if data storage baba:main tile{data:{text:"facing"}} run setblock ~ ~ ~ note_block[instrument=bell,note=10]

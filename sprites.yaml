@@ -402,7 +402,7 @@ grids:
         color: '#ffffff'
         coords: [1, 1273]
         properties:
-          text: on
+          text: 'on'
           part: infix
       - name: text
         color: '#ffffff'
