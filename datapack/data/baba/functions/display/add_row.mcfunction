@@ -1,3 +1,4 @@
+execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,tag=connector] at @s align xyz run tp @s ~0.5 ~ ~0.498
 execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"tile"}}] at @s align xyz run tp @s ~0.5 ~ ~0.499
 execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"baba"}}] at @s align xyz run tp @s ~0.5 ~ ~0.501
 execute as @e[type=marker,tag=baba.object,dx=0.5,dy=1,dz=40,nbt={data:{sprite:"text"}}] at @s align xyz run tp @s ~0.5 ~ ~0.502
