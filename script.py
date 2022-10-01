@@ -366,6 +366,21 @@ class TileManager:
     self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
     negative_px = self.next_char()
     self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
+    island_width = 4
+    island_height = 2
+    island_pixels = 870
+    island_translation = ""
+    for y in range(island_height):
+      island_chars = ['\u0000' * island_width for x in range(island_height)]
+      chars = ""
+      for x in range(island_width):
+        char = self.next_char()
+        chars += char
+        island_translation += char + self.get_advance(-1)
+      island_chars[y] = chars
+      self.providers.extend([{"type":"bitmap","file":"baba:island_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
+      island_translation += self.get_advance(-99*island_width)
+    self.lang[f'baba.island'] = island_translation
     for r in range(-1,rows+1):
       self.charmap[r] = {}
       char = self.next_char()
@@ -436,12 +451,13 @@ for j,grid in enumerate(anim_grids[0]):
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-text = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
+text = ['execute if score level_background baba matches 1.. run data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
 border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,sort=nearest] run function baba:display/add_object/row{r}'
+    f'execute if score level_background baba matches 0 if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#080808"}}\'',
+    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}},sort=nearest] run function baba:display/add_object/row{r}',
   ])
   border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#15181f"}}\'')
   full_border.extend([
