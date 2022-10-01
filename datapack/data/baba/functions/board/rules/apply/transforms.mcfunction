@@ -5,7 +5,7 @@ data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags append from storage
 execute store result score after baba run data get entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags
 execute if score after baba > before baba run data modify entity @s data.transforms append from storage baba:main cache.transforms[0]
 
-# A is A prevents transforms, unless A is not A
+# 'A is A' prevents transforms, unless 'A is not A'
 execute if score after baba > before baba if score different baba matches 0 run data modify entity @s data.transforms set value []
 execute if score after baba > before baba if score different baba matches 0 run data remove storage baba:main cache.transforms
 

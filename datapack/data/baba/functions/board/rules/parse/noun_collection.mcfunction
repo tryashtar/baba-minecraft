@@ -1,4 +1,8 @@
+# parse noun phrases
+# it's a list of (possibly inverted) nouns, separated by ands
 tp @s ~ ~ ~
+# the nouns in this step are a list to support text stacking
+# we only make one pass per verb, so it's important to capture all alternatives
 data modify storage baba:main nouns set value []
 scoreboard players set inverted baba 0
 execute as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/append/noun

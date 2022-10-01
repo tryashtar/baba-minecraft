@@ -10,6 +10,9 @@ execute if entity @s[nbt={data:{sprite:"text"}}] run data modify storage baba:ma
 execute if entity @s[nbt={data:{sprite:"level"}}] run data modify storage baba:main cache.properties append value "stop"
 execute if entity @s[nbt={data:{sprite:"cursor"}}] run data modify storage baba:main cache.properties append value "select"
 
+# my weird way of making 'A is not B' disable 'A is B'
+# add disabled properties to a marker's tags, then try to add enabled properties one by one
+# if the size of the list doesn't change, the property is disabled, so skip adding it
 data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags set from storage baba:main cache.disabled_properties
 execute if data storage baba:main cache.properties[0] run function baba:board/rules/apply/properties
 data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags set from storage baba:main cache.disabled_transforms

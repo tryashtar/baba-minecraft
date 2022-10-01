@@ -1,3 +1,5 @@
+# parse prefix phrases
+# it's a list of (possibly inverted) prefixes, separated by ands
 tp @s ~ ~ ~
 data modify storage baba:main prefixes set value []
 scoreboard players set inverted baba 0

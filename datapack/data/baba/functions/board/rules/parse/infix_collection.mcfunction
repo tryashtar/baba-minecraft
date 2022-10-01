@@ -1,3 +1,5 @@
+# parse infix phrases
+# each is a (possibly inverted) infix, followed by a noun collection, then more infix phrases separated by ands
 tp @s ~ ~ ~
 data modify storage baba:main noun_collection set value []
 function baba:board/rules/parse/noun_collection
