@@ -15,7 +15,7 @@ execute if data storage baba:main rule.affected[0] if data storage baba:main rul
 tp b02ba48c-bd9f-4540-9506-49d08ed95dc8 ~ ~ ~
 execute as b02ba48c-bd9f-4540-9506-49d08ed95dc8 rotated 270 0 positioned ^ ^ ^1 run function baba:board/rules/parse/affected
 tp b02ba48c-bd9f-4540-9506-49d08ed95dc8 ~ ~ ~
-execute as b02ba48c-bd9f-4540-9506-49d08ed95dc8 rotated 0 0 run function baba:board/rules/parse/effects
+execute as b02ba48c-bd9f-4540-9506-49d08ed95dc8 rotated 90 0 run function baba:board/rules/parse/effects
 data modify storage baba:main rule.conditions set from storage baba:main prefix_collection
 data modify storage baba:main rule.conditions append from storage baba:main infix_collection[]
 data modify storage baba:main rule.affected set value []
