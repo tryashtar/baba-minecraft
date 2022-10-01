@@ -512,7 +512,7 @@ for r in range(manager.rows):
             special_checks.append((p, props[p]))
             del props[p]
         selector = ovspr.create_selector(props, False)
-        disp = ovspr.display(ovspr.properties,".","-",".")
+        disp = ovspr.display(ovspr.filter_properties('sprite'),".","-",".")
         final = 'execute '
         for prop,spec in special_checks:
           final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '

@@ -1,3 +1,4 @@
+tag @s add loaded
 data modify storage baba:main level set from entity @s Item.tag.BlockEntityTag.RecordItem.tag.level
 data modify storage baba:main level_metadata set value {}
 data modify storage baba:main level_metadata set from entity @s Item.tag.BlockEntityTag.RecordItem.tag.level_metadata

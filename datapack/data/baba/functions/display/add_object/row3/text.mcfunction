@@ -113,3 +113,4 @@ execute if entity @s[nbt={data:{text:"rubble"}}] run data modify storage baba:ma
 execute if entity @s[nbt={data:{text:"wall"}}] run data modify storage baba:main text append value '{"translate":"baba.text.wall.row3","color":"#737373"}'
 execute if entity @s[nbt={data:{text:"brick"}}] run data modify storage baba:main text append value '{"translate":"baba.text.brick.row3","color":"#90673e"}'
 execute if entity @s[nbt={data:{text:"cliff"}}] run data modify storage baba:main text append value '{"translate":"baba.text.cliff.row3","color":"#90673e"}'
+execute if entity @s[tag=disabled] run data modify storage baba:main text append value '{"translate":"baba.text_disabled.row3","color":"#e5533b"}'
