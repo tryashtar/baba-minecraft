@@ -9,5 +9,6 @@
 #execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"cursor"}}] run data modify entity @s data.properties append value "select"
 #execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"level"}}] run data modify entity @s data.properties append value "stop"
 
-execute as @e[type=marker,tag=baba.object,tag=part.verb,nbt={data:{sprite:"text",text:"is"}}] at @s run function baba:board/rules/property/check
+data modify storage baba:main rules set value []
+execute as @e[type=marker,tag=baba.object,tag=part.verb] at @s run function baba:board/rules/parse
 #execute as @e[type=marker,tag=baba.object,tag=part.verb,nbt={data:{sprite:"text",text:"has"}}] at @s run function baba:board/rules/has/check
