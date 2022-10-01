@@ -325,9 +325,10 @@ class BabaSprite:
 class Grid:
   def __init__(self, spritelist, sprite_width, sprite_height, scale, color):
     self.scale = scale
-    self.size = math.ceil(math.sqrt(len(spritelist)))
-    self.image = PIL.Image.new('RGBA', (sprite_width*self.size, sprite_height*self.size), color)
-    self.sprites = [[[] for x in range(self.size)] for x in range(self.size)]
+    self.width = math.ceil(math.sqrt(len(spritelist)))
+    self.height = math.floor(math.sqrt(len(spritelist)))
+    self.image = PIL.Image.new('RGBA', (sprite_width*self.width, sprite_height*self.height), color)
+    self.sprites = [[[] for x in range(self.width)] for x in range(self.height)]
     self.placements = {}
     x = 0
     y = 0
@@ -337,7 +338,7 @@ class Grid:
       for s in sprites:
         self.placements[s] = (y, x)
       x += 1
-      if x >= self.size:
+      if x >= self.width:
         x = 0
         y += 1
 
@@ -498,7 +499,7 @@ for r in range(manager.rows):
         final = 'execute '
         for prop,spec in special_checks:
           final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '
-        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\''
+        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.color}"}}\''
         subfns[o.name].append(final)
 
   for name,fn in subfns.items():
@@ -576,9 +577,10 @@ for o in objectlist:
     for g,grid in enumerate(colorgrids):
       if s in grid.placements:
         placement = grid.placements[s]
-        uvsize = 16/grid.size
+        x_uvsize = 16/grid.width
+        y_uvsize = 16/grid.height
         break
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(uvsize*placement[1],4),round(uvsize*placement[0],4),round(uvsize*placement[1]+uvsize,4),round(uvsize*placement[0]+uvsize,4)],"texture":"#up"}}}]}
+    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
     description = s.display(props, '.','-','.')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})

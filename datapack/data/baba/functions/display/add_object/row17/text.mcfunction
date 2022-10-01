@@ -49,6 +49,7 @@ execute if entity @s[nbt={data:{text:"dust"}}] run data modify storage baba:main
 execute if entity @s[nbt={data:{text:"fungus"}}] run data modify storage baba:main text append value '{"translate":"baba.text.fungus.row17","color":"#90673e"}'
 execute if entity @s[nbt={data:{text:"husks"}}] run data modify storage baba:main text append value '{"translate":"baba.text.husks.row17","color":"#c29e46"}'
 execute if entity @s[nbt={data:{text:"stump"}}] run data modify storage baba:main text append value '{"translate":"baba.text.stump.row17","color":"#c29e46"}'
+execute if entity @s[nbt={data:{text:"starfish"}}] run data modify storage baba:main text append value '{"translate":"baba.text.starfish.row17","color":"#e49950"}'
 execute if entity @s[nbt={data:{text:"cursor"}}] run data modify storage baba:main text append value '{"translate":"baba.text.cursor.row17","color":"#ede285"}'
 execute if entity @s[nbt={data:{text:"is"}}] run data modify storage baba:main text append value '{"translate":"baba.text.is.row17","color":"#ffffff"}'
 execute if entity @s[nbt={data:{text:"and"}}] run data modify storage baba:main text append value '{"translate":"baba.text.and.row17","color":"#ffffff"}'

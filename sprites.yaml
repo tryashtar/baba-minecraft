@@ -240,10 +240,16 @@ grids:
       - name: stump
         text color: '#c29e46'
         object color: '#90673e'
+      - name: starfish
+        color: '#e49950'
+        coords: [251, 910]
       sprites:
       - text
       - {}
     - objects:
+      - name: blossom
+        color: '#ffffff'
+        coords: [101, 985]
       - name: text
         color: '#ede285'
         coords: [376, 826]
@@ -261,6 +267,7 @@ grids:
       sprites:
       - style: jelly
       - style: moon
+      - style: question_mark
     - overlays:
       - name: level_icon
         color: '#ffffff'
@@ -302,7 +309,7 @@ grids:
     - overlays:
       - name: level_icon
         color: '#ffffff'
-        coords: [1, 76]
+        coords: [76, 1]
         frames: none
         properties:
           style: dice
@@ -314,6 +321,10 @@ grids:
       - number: 5
       - number: 6
       - number: 7
+      - number: 8
+      - number: 9
+      - number: 10
+      - number: 11
     - overlays:
       - name: level_icon
         color: '#ffffff'
@@ -646,7 +657,7 @@ grids:
           part: property
       - name: text
         color: '#ede285'
-        coords: [151, 1273]
+        coords: [151, 1723]
         properties:
           text: best
           part: property
