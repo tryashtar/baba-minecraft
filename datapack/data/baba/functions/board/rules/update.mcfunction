@@ -5,9 +5,17 @@ scoreboard players set text_id baba 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_id 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_batch 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_used 0
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_disabled 0
 tag @e[type=marker,tag=baba.object,tag=disabled] remove disabled
 execute as @e[type=marker,tag=baba.object,tag=part.verb] at @s run function baba:board/rules/parse
-#function baba:board/rules/disabling
+execute as @e[type=marker,tag=baba.object] run data modify entity @s data merge value {transforms:[],properties:[],has:[],make:[]}
+data modify storage baba:main iter_rules set from storage baba:main rules
+execute if data storage baba:main rules[0] run function baba:board/rules/apply_rules
+# bulitin rules
+execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] run data modify entity @s data.properties append value {property:"push",inverted:0b}
+execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"level"}}] run data modify entity @s data.properties append value {property:"stop",inverted:0b}
+execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"cursor"}}] run data modify entity @s data.properties append value {property:"select",inverted:0b}
+execute as @e[type=marker,tag=baba.object] run function baba:board/rules/apply/filter
 #execute as @e[type=marker,tag=baba.object] at @s run function baba:board/rules/apply
 #execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
 ## anything that was transformed needs to re-assign its properties, but not transform again
