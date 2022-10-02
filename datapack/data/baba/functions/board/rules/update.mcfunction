@@ -7,9 +7,9 @@ scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_disabled 0
 tag @e[type=marker,tag=baba.object,tag=disabled] remove disabled
 execute as @e[type=marker,tag=baba.object,tag=part.verb] at @s run function baba:board/rules/parse
-function baba:board/rules/disabling
-execute as @e[type=marker,tag=baba.object] at @s run function baba:board/rules/apply
-execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
-# anything that was transformed needs to re-assign its properties, but not transform again
-execute as @e[type=marker,tag=baba.object,tag=transformed] at @s run function baba:board/rules/apply
+#function baba:board/rules/disabling
+#execute as @e[type=marker,tag=baba.object] at @s run function baba:board/rules/apply
+#execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
+## anything that was transformed needs to re-assign its properties, but not transform again
+#execute as @e[type=marker,tag=baba.object,tag=transformed] at @s run function baba:board/rules/apply
 kill aee4e839-6b46-4f38-97f8-d49dfe743ff1
