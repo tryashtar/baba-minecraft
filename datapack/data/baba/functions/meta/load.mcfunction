@@ -5,6 +5,7 @@ scoreboard objectives add frame dummy
 scoreboard objectives add walk dummy
 scoreboard objectives add number dummy
 scoreboard objectives add text_id dummy
+scoreboard objectives add text_batch dummy
 scoreboard objectives add text_used dummy
 scoreboard objectives add text_disabled dummy
 scoreboard objectives add drop custom:drop

@@ -10,4 +10,4 @@ execute positioned as @s positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag
 # only 'is' and 'write' support properties
 execute positioned as @s[nbt={data:{text:"is"}}] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/after_verb/finalize/property
 execute positioned as @s[nbt={data:{text:"write"}}] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1] run function baba:board/rules/parse/after_verb/finalize/property
-execute if score inverted baba matches 1 positioned as @s positioned ^ ^ ^2 if entity @e[type=marker,tag=baba.object,tag=part.operator,distance=..0.1,nbt={data:{text:"and"}},limit=1] run function baba:board/rules/parse/after_verb/effects
+execute if score found baba matches 1 positioned as @s positioned ^ ^ ^2 if entity @e[type=marker,tag=baba.object,tag=part.operator,distance=..0.1,nbt={data:{text:"and"}},limit=1] run function baba:board/rules/parse/after_verb/effects
