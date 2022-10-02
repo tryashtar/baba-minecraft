@@ -4,6 +4,8 @@ data modify storage baba:main rules set value []
 scoreboard players set text_id baba 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_id 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_used 0
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_disabled 0
+tag @e[type=marker,tag=baba.object,tag=disabled] remove disabled
 execute as @e[type=marker,tag=baba.object,tag=part.verb] at @s run function baba:board/rules/parse
 function baba:board/rules/disabling
 execute as @e[type=marker,tag=baba.object] at @s run function baba:board/rules/apply
