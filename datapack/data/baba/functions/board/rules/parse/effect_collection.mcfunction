@@ -11,4 +11,5 @@ execute positioned as @s[nbt={data:{text:"write"}}] positioned ^ ^ ^1 as @e[type
 execute if data storage baba:main effects[0] store result storage baba:main effects[].inverted byte 1 run scoreboard players get inverted baba
 # unlike the other parsers, there is no meaning of 'alternatives' for effects, so the list can be flat
 data modify storage baba:main effect_collection append from storage baba:main effects[]
+execute if data storage baba:main effects[0] positioned as @s positioned ^ ^ ^2 as @e[type=marker,tag=baba.object,tag=part.operator,distance=..0.1,nbt={data:{text:"and"}},limit=1] run function baba:board/rules/parse/track
 execute if data storage baba:main effects[0] positioned as @s positioned ^ ^ ^2 if entity @e[type=marker,tag=baba.object,tag=part.operator,distance=..0.1,nbt={data:{text:"and"}},limit=1] run function baba:board/rules/parse/effect_collection
