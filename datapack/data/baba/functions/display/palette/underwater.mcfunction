@@ -33,3 +33,5 @@ execute if score @s color matches 32 run data modify storage baba:main object_te
 execute if score @s color matches 33 run data modify storage baba:main object_text set value ['{"color":"#237abb","text":""}','""']
 execute if score @s color matches 34 run data modify storage baba:main object_text set value ['{"color":"#92c759","text":""}','""']
 execute if score @s color matches 35 run data modify storage baba:main object_text set value ['{"color":"#0c1122","text":""}','""']
+execute if entity @s[nbt={data:{properties:["red"]}}] run data modify storage baba:main object_text set value ['{"color":"#c45a75","text":""}','""']
+execute if entity @s[nbt={data:{properties:["blue"]}}] run data modify storage baba:main object_text set value ['{"color":"#1b61a7","text":""}','""']

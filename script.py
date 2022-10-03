@@ -490,6 +490,10 @@ for r in range(manager.rows):
     for cid,color in enumerate(palette):
       color = palette[color]
       plines.append(f'execute if score @s color matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
+    plines.extend([
+      f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
+      f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
+    ])
     tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
     sprs = o.filter_sprites('sprite').items()

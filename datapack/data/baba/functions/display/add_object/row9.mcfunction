@@ -1,5 +1,6 @@
 execute if score palette baba matches 0 run function baba:display/palette/default
-execute if score palette baba matches 1 run function baba:display/palette/ocean
+execute if score palette baba matches 1 run function baba:display/palette/underwater
+execute if score palette baba matches 2 run function baba:display/palette/factory
 execute if entity @s[nbt={data:{sprite:"algae"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.algae.row9"}'
 execute if entity @s[nbt={data:{sprite:"flag"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.flag.row9"}'
 execute if entity @s[nbt={data:{sprite:"key"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.key.row9"}'
