@@ -15,8 +15,10 @@ class SpriteCollection:
     self.objects = {}
     self.overlays = {}
     self.properties = {}
+    self.palettes = data['palettes']
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
+    self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, [])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -94,6 +96,7 @@ class SpriteCollection:
                     adding = baba
                     color = obj.get('object color', obj.get('color'))
                   # include properties specific to this object, or this sprite
+                  spr['color'] = color
                   if 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
@@ -107,7 +110,7 @@ class SpriteCollection:
                       self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                     props[self.properties[k]] = v
                   # finalize the sprite and add each anim frame to its respective grid
-                  sprite = BabaSprite(adding, None, props, color, width, height, obj.get('shift', [0,0]))
+                  sprite = BabaSprite(adding, None, props, width, height, obj.get('shift', [0,0]))
                   adding.sprites.append(sprite)
                   if spr_coords != coords:
                     self.add_to_grids(i, [sprite], image, anim_grids, spr_coords, framedir)
@@ -234,11 +237,10 @@ class BabaObject:
 
 
 class BabaSprite:
-  def __init__(self, obj, image, properties, color, width, height, shift):
+  def __init__(self, obj, image, properties, width, height, shift):
     self.parent = obj
     self.image = image
     self.properties = properties
-    self.color = color
     self.width = width
     self.height = height
     self.shift = shift
@@ -477,26 +479,32 @@ def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
 tat.delete_folder('datapack/data/baba/functions/display/add_object')
+tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
   lines = []
   subfns = {}
+  for pid,(pname,palette) in enumerate(sprites.palettes.items()):
+    lines.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
+    plines = []
+    for cid,color in enumerate(palette):
+      color = palette[color]
+      plines.append(f'execute if score @s color matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
+    tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
     sprs = o.filter_sprites('sprite').items()
     for s,p in sprs:
-      translate = {"translate":f"baba.{s.display(p,'.','-','.')}.row{r}"}
-      if s.color is not None:
-        translate["color"] = s.color
+      display = s.display(p,'.','-','.')
       if len(sprs) > 1 or len(o.overlays) > 0:
         if o.name not in subfns:
           subfns[o.name] = []
         selector = s.create_selector(p, False)
         if len(selector) > 0:
-          subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
+          subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
         else:
-          subfns[o.name].append(f'data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
+          subfns[o.name].append(f'data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
       else:
         selector = s.create_selector(p, True)
-        lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main text append value \'{json.dumps(translate, separators=(",", ":"))}\'')
+        lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
 
     for ov in o.overlays:
       overlay = sprites.overlays[ov]
@@ -516,12 +524,16 @@ for r in range(manager.rows):
         final = 'execute '
         for prop,spec in special_checks:
           final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '
-        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.color}"}}\''
+        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\''
         subfns[o.name].append(final)
 
   for name,fn in subfns.items():
     lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
     tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
+  lines.extend([
+    'item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text',
+    'data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name'
+  ])
   tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
 
 for i,grids in enumerate(sprites.grids):
@@ -558,7 +570,7 @@ for o in objectlist:
     if size not in editor_sprites:
       editor_sprites[size] = []
     rc, gc, bc, ac = spr.image.split()
-    r, g, b = bytes.fromhex(spr.color[1:])
+    r, g, b = bytes.fromhex(spr.properties[sprites.properties['color']][1:])
     rc = rc.point(lambda x: x * r/255)
     gc = gc.point(lambda x: x * g/255)
     bc = bc.point(lambda x: x * b/255)

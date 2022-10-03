@@ -1,3 +1,77 @@
+palettes:
+  default:
+    '#242424': '#242424'
+    '#15181f': '#15181f'
+    '#421910': '#421910'
+    '#603981': '#603981'
+    '#682e4c': '#682e4c'
+    '#303824': '#303824'
+    '#503f24': '#503f24'
+    '#737373': '#737373'
+    '#293141': '#293141'
+    '#82261c': '#82261c'
+    '#8e5e9c': '#8e5e9c'
+    '#d9396a': '#d9396a'
+    '#4b5c1c': '#4b5c1c'
+    '#90673e': '#90673e'
+    '#c3c3c3': '#c3c3c3'
+    '#3e7688': '#3e7688'
+    '#e5533b': '#e5533b'
+    '#4759b1': '#4759b1'
+    '#eb91ca': '#eb91ca'
+    '#5c8339': '#5c8339'
+    '#c29e46': '#c29e46'
+    '#ffffff': '#ffffff'
+    '#5f9dd1': '#5f9dd1'
+    '#e49950': '#e49950'
+    '#557ae0': '#557ae0'
+    '#294891': '#294891'
+    '#a5b13f': '#a5b13f'
+    '#362e22': '#362e22'
+    '#080808': '#080808'
+    '#83c8e5': '#83c8e5'
+    '#ede285': '#ede285'
+    '#ffbd47': '#ffbd47'
+    '#73abf3': '#73abf3'
+    '#b6d340': '#b6d340'
+    '#0b0b0e': '#0b0b0e'
+  ocean:
+    '#242424': '#242424'
+    '#15181f': '#242c47'
+    '#421910': '#58284a'
+    '#603981': '#6c348d'
+    '#682e4c': '#80348d'
+    '#303824': '#2f5134'
+    '#503f24': '#444b3a'
+    '#737373': '#516f94'
+    '#293141': '#2e425c'
+    '#82261c': '#893d5e'
+    '#8e5e9c': '#9f63cd'
+    '#d9396a': '#bf63d9'
+    '#4b5c1c': '#40743c'
+    '#90673e': '#5b6246'
+    '#c3c3c3': '#c3c3c3'
+    '#3e7688': '#293c7f'
+    '#e5533b': '#c45a75'
+    '#4759b1': '#2944a1'
+    '#eb91ca': '#f178f2'
+    '#5c8339': '#549640'
+    '#c29e46': '#84834d'
+    '#ffffff': '#ffffff'
+    '#5f9dd1': '#3461b3'
+    '#e49950': '#e38e59'
+    '#557ae0': '#1b61a7'
+    '#294891': '#2a3e83'
+    '#a5b13f': '#77ab3f'
+    '#362e22': '#2a2f27'
+    '#080808': '#0f1529'
+    '#83c8e5': '#6193d1'
+    '#ede285': '#e0f09d'
+    '#ffbd47': '#f7c56c'
+    '#73abf3': '#237abb'
+    '#b6d340': '#92c759'
+    '#0b0b0e': '#0c1122'
+
 properties:
   facing:
     type: score
@@ -195,16 +269,18 @@ grids:
       - null
       - null
       - name: reed
-        color: '#a58d3e'
+        color: '#c29e46'
       - name: sign
-        color: '#c89c44'
+        text color: '#c29e46'
+        object color: '#90673e'
       - name: sun
         color: '#e49950'
       - name: fungi
-        color: '#c89c44'
+        text color: '#c29e46'
+        object color: '#90673e'
         coords: [501, 226]
       - name: husk
-        color: '#98643c'
+        color: '#90673e'
       - name: leaf
         color: '#ede285'
       - name: orb
@@ -386,7 +462,7 @@ grids:
         - first_digit: 9
     - objects:
       - name: level
-        color: '#212734'
+        color: '#3e7688'
         coords: [1, 1]
         overlays: [level_icon]
       sprites:
@@ -543,7 +619,7 @@ grids:
           text: hide
           part: property
       - name: text
-        color: '#f0e484'
+        color: '#ede285'
         coords: [226, 1123]
         properties:
           text: win
@@ -555,19 +631,19 @@ grids:
           text: stop
           part: property
       - name: text
-        color: '#f0e484'
+        color: '#ede285'
         coords: [226, 730]
         properties:
           text: open
           part: property
       - name: text
-        color: '#e8543c'
+        color: '#e5533b'
         coords: [301, 730]
         properties:
           text: shut
           part: property
       - name: text
-        color: '#88cce4'
+        color: '#83c8e5'
         coords: [226, 805]
         properties:
           text: float
@@ -579,25 +655,25 @@ grids:
           text: sink
           part: property
       - name: text
-        color: '#40748c'
+        color: '#3e7688'
         coords: [151, 1123]
         properties:
           text: weak
           part: property
       - name: text
-        color: '#905c9c'
+        color: '#8e5e9c'
         coords: [1, 1123]
         properties:
           text: swap
           part: property
       - name: text
-        color: '#88cce4'
+        color: '#83c8e5'
         coords: [76, 1123]
         properties:
           text: tele
           part: property
       - name: text
-        color: '#a8b43c'
+        color: '#a5b13f'
         coords: [226, 2407]
         properties:
           text: fall
@@ -615,19 +691,19 @@ grids:
           text: red
           part: property
       - name: text
-        color: '#9183d7'
+        color: '#557ae0'
         coords: [226, 1573]
         properties:
           text: blue
           part: property
       - name: text
-        color: '#88cce4'
+        color: '#83c8e5'
         coords: [1, 955]
         properties:
           text: sleep
           part: property
       - name: text
-        color: '#9183d7'
+        color: '#557ae0'
         coords: [226, 1]
         properties:
           text: group

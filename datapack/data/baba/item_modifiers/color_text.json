@@ -1,0 +1,10 @@
+{
+   "function": "minecraft:set_name",
+   "entity": "this",
+   "name": {
+      "storage": "baba:main",
+      "nbt": "object_text[]",
+      "interpret": true,
+      "separator": ""
+   }
+}
