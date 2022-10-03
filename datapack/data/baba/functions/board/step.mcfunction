@@ -20,6 +20,7 @@ tag @e[type=marker,tag=baba.object,tag=move_done] remove move_done
 
 execute if score direction baba matches 1.. as @e[type=marker,tag=baba.object,nbt={data:{properties:["select"]}}] at @s run function baba:board/movement/select
 
+function baba:board/rules/update
 function baba:board/rules/process_transforms
 
 # each property is checked in turn, not each object
