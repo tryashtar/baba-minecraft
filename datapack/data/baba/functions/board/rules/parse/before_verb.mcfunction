@@ -6,7 +6,9 @@ function baba:board/rules/parse/before_verb/infixes
 # parse the subjects of the rule
 scoreboard players set text_batch baba 0
 execute if data storage baba:main conditions[0] positioned as @s positioned ^ ^ ^1 run function baba:board/rules/parse/before_verb/subjects
-execute unless data storage baba:main conditions[0] run function baba:board/rules/parse/before_verb/subjects
+# if conditions were parsed but no subject was, that means the conditions are incomplete and we should instead parse an adjacent subject like normal
+execute if data storage baba:main conditions[0] unless data storage baba:main pending_rules[0] run function baba:board/rules/parse/before_verb/invalid_conditions
+execute unless data storage baba:main conditions[0] unless data storage baba:main pending_rules[0] run function baba:board/rules/parse/before_verb/subjects
 
 # add prefix conditions
 scoreboard players set text_batch baba -1
