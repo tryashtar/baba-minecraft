@@ -481,7 +481,10 @@ def instrument(inst):
 tat.delete_folder('datapack/data/baba/functions/display/add_object')
 tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
-  lines = []
+  lines = [
+    'scoreboard players operation color baba = @s color',
+    'execute if entity @s[scores={text_used=0}] run function baba:display/disabled_text'
+  ]
   subfns = {}
   overlayfns = {}
   for pid,(pname,palette) in enumerate(sprites.palettes.items()):
@@ -489,7 +492,7 @@ for r in range(manager.rows):
     plines = []
     for cid,color in enumerate(palette):
       color = palette[color]
-      plines.append(f'execute if score @s color matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
+      plines.append(f'execute if score color baba matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
     plines.extend([
       f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
       f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',

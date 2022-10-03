@@ -188,7 +188,8 @@ grids:
     sprites2:
     - objects:
       - name: belt
-        color: '#5f9dd1'
+        text color: '#5f9dd1'
+        object color: '#3e7688'
         coords: [1, 85]
       sprites:
       - text
@@ -259,7 +260,8 @@ grids:
       - null
       - null
       - name: ufo
-        color: '#eb91ca'
+        object color: '#eb91ca'
+        text color: '#d9396a'
       - name: door
         color: '#e5533b'
         coords: [126, 151]
@@ -301,7 +303,7 @@ grids:
       - name: gate
         color: '#e5533b'
       - name: jelly
-        color: '#5f9dd1'
+        color: '#83c8e5'
       - null
       - null
       - name: reed
@@ -310,7 +312,7 @@ grids:
         text color: '#c29e46'
         object color: '#90673e'
       - name: sun
-        color: '#e49950'
+        color: '#ede285'
       - name: fungi
         text color: '#c29e46'
         object color: '#90673e'
@@ -821,7 +823,8 @@ grids:
       - name: hedge
         color: '#4b5c1c'
       - name: ice
-        color: '#5f9dd1'
+        text color: '#5f9dd1'
+        object color: '#3e7688'
       - shared:
         - name: lava
           color: '#e49950'
@@ -829,7 +832,8 @@ grids:
           color: '#5f9dd1'
           text coords: [1, 1576]
         - name: bog
-          color: '#5c8339'
+          text color: '#a5b13f'
+          object color: '#4b5c1c'
           text coords: [1, 76]
       - name: line
         color: '#ffffff'

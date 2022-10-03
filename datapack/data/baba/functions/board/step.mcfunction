@@ -1,7 +1,6 @@
 # rules are parsed multiple times per step, since various actions can move, create, or destroy text
 # however, objects can only transform once per step, to ensure back-and-forth transformations work correctly
 tag @e[type=marker,tag=baba.object,tag=transformed] remove transformed
-function baba:board/rules/update
 
 # process movement in batches: you, then move, then shift
 # if anything in a batch fails to move, try again until everything either succeeds or fails
@@ -32,6 +31,7 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["win"]}}] at @s run function baba:board/interact/win
 
 function baba:board/rules/update
+function baba:board/rules/process_transforms
 
 # graphical updates
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector

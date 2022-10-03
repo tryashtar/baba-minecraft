@@ -8,5 +8,6 @@ execute store result score palette baba run data get storage baba:main level_met
 execute if data storage baba:main level[0] run function baba:editor/load/row
 
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
+function baba:board/rules/update
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 function baba:display/update_text
