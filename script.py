@@ -483,6 +483,7 @@ tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
   lines = []
   subfns = {}
+  overlayfns = {}
   for pid,(pname,palette) in enumerate(sprites.palettes.items()):
     lines.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
     plines = []
@@ -494,7 +495,7 @@ for r in range(manager.rows):
     sprs = o.filter_sprites('sprite').items()
     for s,p in sprs:
       display = s.display(p,'.','-','.')
-      if len(sprs) > 1 or len(o.overlays) > 0:
+      if len(sprs) > 1:
         if o.name not in subfns:
           subfns[o.name] = []
         selector = s.create_selector(p, False)
@@ -508,12 +509,14 @@ for r in range(manager.rows):
 
     for ov in o.overlays:
       overlay = sprites.overlays[ov]
+      if o.name not in overlayfns:
+        overlayfns[o.name] = []
       for prop,op in overlay.property_mods.items():
-        subfns[o.name].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
+        overlayfns[o.name].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
         if op['operation'] == 'modulo':
-          subfns[o.name].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
+          overlayfns[o.name].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
       for ovspr in overlay.sprites:
-        props = ovspr.properties.copy()
+        props = ovspr.filter_properties('sprite')
         special_checks = []
         for p,v in props.copy().items():
           if p.name in overlay.property_mods:
@@ -524,8 +527,8 @@ for r in range(manager.rows):
         final = 'execute '
         for prop,spec in special_checks:
           final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '
-        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}"}}\''
-        subfns[o.name].append(final)
+        final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.properties[sprites.properties["color"]]}"}}\''
+        overlayfns[o.name].append(final)
 
   for name,fn in subfns.items():
     lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
@@ -534,6 +537,9 @@ for r in range(manager.rows):
     'item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text',
     'data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name'
   ])
+  for name,fn in overlayfns.items():
+    lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}.overlay')
+    tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.overlay.mcfunction')
   tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
 
 for i,grids in enumerate(sprites.grids):

@@ -113,4 +113,3 @@ execute if entity @s[nbt={data:{text:"rubble"}}] run data modify storage baba:ma
 execute if entity @s[nbt={data:{text:"wall"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.text.wall.row10"}'
 execute if entity @s[nbt={data:{text:"brick"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.text.brick.row10"}'
 execute if entity @s[nbt={data:{text:"cliff"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.text.cliff.row10"}'
-execute if entity @s[tag=disabled,scores={color=17}] run data modify storage baba:main text append value '{"translate":"baba.text_disabled.row10"}'

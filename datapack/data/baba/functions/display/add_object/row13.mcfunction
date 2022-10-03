@@ -36,6 +36,7 @@ execute if entity @s[nbt={data:{sprite:"husks"}}] run data modify storage baba:m
 execute if entity @s[nbt={data:{sprite:"stump"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.stump.row13"}'
 execute if entity @s[nbt={data:{sprite:"starfish"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.starfish.row13"}'
 execute if entity @s[nbt={data:{sprite:"blossom"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.blossom.row13"}'
+execute if entity @s[nbt={data:{sprite:"level"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.level.row13"}'
 execute if entity @s[nbt={data:{sprite:"cursor"}}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.cursor.row13"}'
 execute if entity @s[nbt={data:{sprite:"baba"}}] run function baba:display/add_object/row13/baba
 execute if entity @s[nbt={data:{sprite:"text"}}] run function baba:display/add_object/row13/text
@@ -55,7 +56,6 @@ execute if entity @s[nbt={data:{sprite:"hand"}}] run function baba:display/add_o
 execute if entity @s[nbt={data:{sprite:"bat"}}] run function baba:display/add_object/row13/bat
 execute if entity @s[nbt={data:{sprite:"bubble"}}] run function baba:display/add_object/row13/bubble
 execute if entity @s[nbt={data:{sprite:"cog"}}] run function baba:display/add_object/row13/cog
-execute if entity @s[nbt={data:{sprite:"level"}}] run function baba:display/add_object/row13/level
 execute if entity @s[nbt={data:{sprite:"cloud"}}] run function baba:display/add_object/row13/cloud
 execute if entity @s[nbt={data:{sprite:"fence"}}] run function baba:display/add_object/row13/fence
 execute if entity @s[nbt={data:{sprite:"grass"}}] run function baba:display/add_object/row13/grass
@@ -72,3 +72,5 @@ execute if entity @s[nbt={data:{sprite:"brick"}}] run function baba:display/add_
 execute if entity @s[nbt={data:{sprite:"cliff"}}] run function baba:display/add_object/row13/cliff
 item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text
 data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name
+execute if entity @s[nbt={data:{sprite:"text"}}] run function baba:display/add_object/row13/text.overlay
+execute if entity @s[nbt={data:{sprite:"level"}}] run function baba:display/add_object/row13/level.overlay
