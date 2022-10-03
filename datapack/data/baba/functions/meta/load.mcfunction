@@ -4,6 +4,7 @@ scoreboard objectives add facing dummy
 scoreboard objectives add frame dummy
 scoreboard objectives add walk dummy
 scoreboard objectives add color dummy
+scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
 scoreboard objectives add text_id dummy
 scoreboard objectives add text_batch dummy
