@@ -483,7 +483,7 @@ tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={text_used=0}] run function baba:display/disabled_text'
+    'execute if entity @s[scores={text_used=0},nbt={data:{sprite:"text"}}] run function baba:display/disabled_text'
   ]
   subfns = {}
   overlayfns = {}

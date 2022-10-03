@@ -1,5 +1,5 @@
 scoreboard players operation color baba = @s color
-execute if entity @s[scores={text_used=0}] run function baba:display/disabled_text
+execute if entity @s[scores={text_used=0},nbt={data:{sprite:"text"}}] run function baba:display/disabled_text
 execute if score palette baba matches 0 run function baba:display/palette/default
 execute if score palette baba matches 1 run function baba:display/palette/underwater
 execute if score palette baba matches 2 run function baba:display/palette/factory
