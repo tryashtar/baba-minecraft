@@ -18,7 +18,7 @@ class SpriteCollection:
     self.palettes = data['palettes']
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
-    self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, [])
+    self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, ['spawn'])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -100,9 +100,10 @@ class SpriteCollection:
                   if 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
-                  if 'properties' in config:
-                    for k,v in config['properties'].items():
-                      spr[k] = v
+                  if sp != 'text':
+                    if 'properties' in config:
+                      for k,v in config['properties'].items():
+                        spr[k] = v
                   # make keys the actual metadata objects instead of their names
                   props = {}
                   for k,v in spr.items():
@@ -136,18 +137,12 @@ class SpriteCollection:
           s.image = img
       g.append((sprites, img))
 
-  def create_summon(self, sprite):
+  def create_summon(self, sprite, properties):
     types = {}
-    for k,v in sprite.properties.items():
+    for k,v in properties.items():
       if k.kind not in types:
         types[k.kind] = {}
       types[k.kind][k] = v
-    for k in self.properties.values():
-      if 'all' in k.attributes:
-        if k.kind not in types:
-          types[k.kind] = {}
-        if k not in types[k.kind]:
-          types[k.kind][k] = k.default
     commands = []
     summon = []
     data = []
@@ -162,8 +157,7 @@ class SpriteCollection:
         for prop,val in vals.items():
           # for scores that are represented with strings, use the index of the values list
           # add 1 because I prefer facing to be 1/2/3/4 instead of 0/1/2/3
-          commands.append(f'scoreboard players set @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] {prop.name} {val if type(val) is int else prop.values.index(val)+1}')
-        commands.append(f'tag @e[type=marker,tag=spawn,y=1,distance=..0.1,limit=1] remove spawn')
+          commands.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {val if type(val) is int else prop.values.index(val)+1}')
       elif t == 'nbt':
         for prop,val in vals.items():
           v = val
@@ -175,7 +169,7 @@ class SpriteCollection:
     if len(tags) > 0:
       summon.append('Tags:['+','.join(['"'+x+'"' for x in tags])+']')
     summon.append('data:{sprite:"'+sprite.parent.name+'"'+(',' if len(data)>0 else '')+','.join(data)+'}')
-    commands.insert(0, 'summon marker ~ 1 ~ {'+','.join(summon)+'}')
+    commands.insert(0, 'summon marker ~ ~ ~ {'+','.join(summon)+'}')
     return commands
 
   def create_storage(self, sprite, properties, mode):
@@ -569,6 +563,7 @@ blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
+spawn = []
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
@@ -578,6 +573,13 @@ tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 editor_sprites = {}
 objectlist = sorted(sprites.objects.values(), key=lambda x:x.name)
 for o in objectlist:
+  for sp, prp in o.filter_sprites('spawn').items():
+    summon = sprites.create_summon(sp, prp)
+    for s in summon:
+      if o.name == 'text':
+        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}",spawn_text:"{prp[sprites.properties["text"]]}"}} run {s}')
+      else:
+        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}"}} run {s}')
   for spr in o.filter_sprites('editor'):
     size = (spr.width, spr.height)
     if size not in editor_sprites:
@@ -647,6 +649,10 @@ unpack_lines.extend([
   'data remove storage baba:main level[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
+for prop in sprites.properties.values():
+  if 'all' in prop.attributes:
+    spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
+tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))

@@ -1,11 +1,10 @@
 # spawn objects in 'spawn' storage as markers
 # used by 'has' verb
-data modify storage baba:main do_spawn set from storage baba:main spawn[0]
-summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}
-scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing = @s facing
-data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main do_spawn
+data modify storage baba:main spawn set from storage baba:main spawn[0]
 # when spawning text, you spawn text of your own kind
-execute if data storage baba:main {do_spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from entity @s data.sprite
+execute if data storage baba:main {spawn:"text"} run data modify storage baba:main spawn_text set from entity @s data.sprite
+function baba:board/spawn
+scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing = @s facing
 tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] remove spawn
 data remove storage baba:main spawn[0]
 execute if data storage baba:main spawn[0] run function baba:board/interact/spawn

@@ -7,9 +7,9 @@ scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_disabled 0
 scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] text_disabled2 0
 tag @e[type=marker,tag=baba.object,tag=disabled] remove disabled
-scoreboard players set reparse baba 0
 # possible optimization: only parse rules when something changed
 # messes with undo, so disabled for now
+#scoreboard players set reparse baba 0
 #execute as @e[type=marker,tag=baba.space,nbt={data:{history:[{top:1b,repeats:1,objects:[{data:{sprite:"text"}}]}]}},limit=1] run scoreboard players set reparse baba 1
 #execute if score reparse baba matches 1 run data modify storage baba:main rules set value []
 #execute if score reparse baba matches 1 as @e[type=marker,tag=baba.object,tag=part.verb] at @s run function baba:board/rules/parse
