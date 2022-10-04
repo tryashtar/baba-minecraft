@@ -144,32 +144,20 @@ class SpriteCollection:
         types[k.kind] = {}
       types[k.kind][k] = v
     commands = []
-    summon = []
-    data = []
-    tags = ["baba.object"]
     for t,vals in types.items():
       if t == 'tag':
         # if the metadata value is set to a bool, we just check for a tag by that name
         # if it's set to a string (like text 'part'), we check for a tag of the form <metadata>.<value>
-        tags.extend(list(map(lambda x: x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name, filter(lambda x: type(x[1]) is str or x[1], vals.items()))))
+        for prop,val in vals.items():
+          if type(val) is bool:
+            commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}')
+          else:
+            commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}.{val}')
       elif t == 'score':
-        tags.append('spawn')
         for prop,val in vals.items():
           # for scores that are represented with strings, use the index of the values list
           # add 1 because I prefer facing to be 1/2/3/4 instead of 0/1/2/3
           commands.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {val if type(val) is int else prop.values.index(val)+1}')
-      elif t == 'nbt':
-        for prop,val in vals.items():
-          v = val
-          if type(v) is bool:
-            v = '1b' if v else '0b'
-          elif type(v) is str:
-            v = '"'+v+'"'
-          data.append(prop.name+':'+v)
-    if len(tags) > 0:
-      summon.append('Tags:['+','.join(['"'+x+'"' for x in tags])+']')
-    summon.append('data:{sprite:"'+sprite.parent.name+'"'+(',' if len(data)>0 else '')+','.join(data)+'}')
-    commands.insert(0, 'summon marker ~ ~ ~ {'+','.join(summon)+'}')
     return commands
 
   def create_storage(self, sprite, properties, mode):
@@ -563,7 +551,11 @@ blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
-spawn = []
+spawn = [
+  'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}',
+  'data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main spawn',
+  'execute if data storage baba:main {spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from storage baba:main spawn_text',
+]
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
