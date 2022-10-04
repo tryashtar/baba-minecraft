@@ -643,7 +643,8 @@ unpack_lines.extend([
 ])
 for prop in sprites.properties.values():
   if 'all' in prop.attributes:
-    spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
+    if prop.kind == 'score':
+      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')

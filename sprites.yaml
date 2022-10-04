@@ -416,13 +416,13 @@ grids:
         coords: [301, 76]
         properties:
           text: and
-          part: operator
+          part: and
       - name: text
         color: '#e5533b'
         coords: [151, 76]
         properties:
           text: not
-          part: operator
+          part: not
       - name: text
         color: '#ffffff'
         coords: [1, 1273]

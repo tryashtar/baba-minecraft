@@ -185,9 +185,9 @@ execute if data storage baba:main {spawn:"text",spawn_text:"cursor"} run tag @e[
 execute if data storage baba:main {spawn:"text",spawn_text:"is"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 22
 execute if data storage baba:main {spawn:"text",spawn_text:"is"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.verb
 execute if data storage baba:main {spawn:"text",spawn_text:"and"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 22
-execute if data storage baba:main {spawn:"text",spawn_text:"and"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.operator
+execute if data storage baba:main {spawn:"text",spawn_text:"and"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.and
 execute if data storage baba:main {spawn:"text",spawn_text:"not"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 17
-execute if data storage baba:main {spawn:"text",spawn_text:"not"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.operator
+execute if data storage baba:main {spawn:"text",spawn_text:"not"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.not
 execute if data storage baba:main {spawn:"text",spawn_text:"on"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 22
 execute if data storage baba:main {spawn:"text",spawn_text:"on"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add part.infix
 execute if data storage baba:main {spawn:"text",spawn_text:"near"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 22
