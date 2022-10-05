@@ -15,3 +15,4 @@ execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={
 
 execute positioned ^ ^ ^1 unless entity @e[type=marker,tag=baba.object,tag=part.and,distance=..0.1,limit=1] run function baba:board/rules/parse/done
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.and,distance=..0.1] run function baba:board/rules/parse/effect_ands
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.and,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
