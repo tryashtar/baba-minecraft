@@ -11,7 +11,7 @@ data modify storage baba:main rules set value []
 execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"text"}}] at @s run function baba:board/rules/parse
 execute as @e[type=marker,tag=baba.object] run data modify entity @s data merge value {transforms:[],properties:[],has:[],make:[]}
 data modify storage baba:main iter_rules set from storage baba:main rules
-execute if data storage baba:main rules[0] run function baba:board/rules/apply_rules
+execute if data storage baba:main rules[0] run function baba:board/rules/apply
 execute as @e[type=marker,tag=baba.object,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
 execute as @e[type=marker,tag=baba.object,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
 # builtin rules

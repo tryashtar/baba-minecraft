@@ -4,4 +4,4 @@ execute as @e[type=marker,tag=baba.object,tag=transformed] at @s run function ba
 execute if entity @e[type=marker,tag=baba.object,tag=affected,limit=1] run function baba:board/rules/apply/objects
 
 data remove storage baba:main iter_rules[0]
-execute if data storage baba:main iter_rules[0] run function baba:board/rules/apply_rules_transformed
+execute if data storage baba:main iter_rules[0] run function baba:board/rules/apply_transformed
