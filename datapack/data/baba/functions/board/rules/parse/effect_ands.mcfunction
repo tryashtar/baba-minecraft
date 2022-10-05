@@ -4,7 +4,8 @@ scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 
-data modify entity @s data.parsing.rules[].text append from storage baba:main text_id
+# not sure if this is a new verb or new effect
+data modify entity @s data.parsing.rules[][].ambiguous append from storage baba:main text_id
 
 data modify storage baba:main parsing set from entity @s data.parsing
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"text"}}] run data modify entity @s data.parsing set from storage baba:main parsing

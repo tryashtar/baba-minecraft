@@ -4,10 +4,10 @@ scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 
-data modify entity @s data.parsing.rules append from entity @s data.parsing.rules[0]
+data modify entity @s data.parsing.rules append from entity @s data.parsing.rules[-1]
 data modify entity @s data.parsing.rules[-1][].text append from storage baba:main text_id
 data modify entity @s data.parsing.rules[-1][].effect.text set from entity @s data.text
-data modify entity @s data.parsing.rules[-1][].subject.inverted set from entity @s data.parsing.inverted
+data modify entity @s data.parsing.rules[-1][].effect.inverted set from entity @s data.parsing.inverted
 data modify entity @s data.parsing.inverted set value 0b
 
 data modify storage baba:main parsing set from entity @s data.parsing
