@@ -9,8 +9,8 @@ data modify storage baba:main parsing.rules[].text append from storage baba:main
 
 execute store success storage baba:main parsing.inverted byte 1 if data storage baba:main parsing{inverted:0b}
 
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"text"}}] run data modify entity @s data.parsing set from storage baba:main parsing
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=is_text,distance=..0.1] run data modify entity @s data.parsing set from storage baba:main parsing
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.not,distance=..0.1] run function baba:board/rules/parse/prefix_nots
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.prefix,distance=..0.1] run function baba:board/rules/parse/prefix
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.prefix,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=is_text,tag=!part.not,tag=!part.prefix,distance=..0.1] run function baba:board/rules/parse/new

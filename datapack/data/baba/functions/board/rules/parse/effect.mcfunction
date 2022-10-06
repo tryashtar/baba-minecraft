@@ -21,8 +21,8 @@ execute if entity @s[tag=part.noun] run data modify storage baba:main parsing.ru
 execute if entity @s[tag=part.property] run data modify storage baba:main parsing.rules[-1][].effect.part set value "property"
 data modify storage baba:main parsing.inverted set value 0b
 
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"text"}}] run data modify entity @s data.parsing set from storage baba:main parsing
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=is_text,distance=..0.1] run data modify entity @s data.parsing set from storage baba:main parsing
 
 execute positioned ^ ^ ^1 unless entity @e[type=marker,tag=baba.object,tag=part.and,distance=..0.1,limit=1] run function baba:board/rules/parse/done
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.and,distance=..0.1] run function baba:board/rules/parse/effect_ands
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.and,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=is_text,tag=!part.and,distance=..0.1] run function baba:board/rules/parse/new

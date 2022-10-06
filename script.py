@@ -19,6 +19,7 @@ class SpriteCollection:
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
     self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, ['spawn'])
+    self.properties['is_text'] = Metadata('is_text', 'tag', None, None, ['spawn'])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -97,6 +98,8 @@ class SpriteCollection:
                     color = obj.get('object color', obj.get('color'))
                   # include properties specific to this object, or this sprite
                   spr['color'] = color
+                  if adding.name == 'text':
+                    spr['is_text'] = True
                   if 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
@@ -465,7 +468,7 @@ tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={text_used=0},nbt={data:{sprite:"text"}}] run function baba:display/disabled_text'
+    'execute if entity @s[tag=is_text,scores={text_used=0}] run function baba:display/disabled_text'
   ]
   subfns = {}
   overlayfns = {}
