@@ -6,6 +6,8 @@ execute store result storage baba:main text_id int 1 run scoreboard players get 
 data modify storage baba:main parsing set from entity @s data.parsing
 execute store result score rule_count baba run data get storage baba:main parsing.rules[0]
 scoreboard players operation @s text_using += rule_count baba
+scoreboard players operation @e[type=marker,tag=baba.object,tag=ambiguous] text_using += rule_count baba
+tag @e[type=marker,tag=baba.object,tag=ambiguous] remove ambiguous
 scoreboard players add @e[type=marker,tag=baba.object,tag=subject] text_using 1
 scoreboard players operation @e[type=marker,tag=baba.object,tag=last_verb] text_using += rule_count baba
 
@@ -15,6 +17,8 @@ data modify storage baba:main parsing.rules[-1][].text append from storage baba:
 data modify storage baba:main parsing.ambiguous set value []
 data modify storage baba:main parsing.rules[-1][].effect.text set from entity @s data.text
 data modify storage baba:main parsing.rules[-1][].effect.inverted set from storage baba:main parsing.inverted
+execute if entity @s[tag=part.noun] run data modify storage baba:main parsing.rules[-1][].effect.part set value "noun"
+execute if entity @s[tag=part.property] run data modify storage baba:main parsing.rules[-1][].effect.part set value "property"
 data modify storage baba:main parsing.inverted set value 0b
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"text"}}] run data modify entity @s data.parsing set from storage baba:main parsing

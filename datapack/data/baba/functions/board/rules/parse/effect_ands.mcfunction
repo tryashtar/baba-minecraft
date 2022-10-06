@@ -11,7 +11,9 @@ execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={
 
 execute positioned ^ ^ ^1 unless entity @e[type=marker,tag=baba.object,tag=part.not,distance=..0.1,limit=1] unless entity @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1,limit=1] unless entity @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1,limit=1] unless entity @e[type=marker,tag=baba.object,tag=part.verb,distance=..0.1,limit=1] run function baba:board/rules/parse/done
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.not,distance=..0.1] run function baba:board/rules/parse/effect_nots
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/effect
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/effect
+execute if entity @e[type=marker,tag=baba.object,tag=last_verb,tag=accepts_noun,limit=1] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/effect
+execute if entity @e[type=marker,tag=baba.object,tag=last_verb,tag=accepts_property,limit=1] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/effect
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.verb,distance=..0.1] run function baba:board/rules/parse/verb
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.noun,tag=!part.property,tag=!part.verb,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute if entity @e[type=marker,tag=baba.object,tag=last_verb,tag=accepts_property,tag=accepts_noun,limit=1] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.noun,tag=!part.property,tag=!part.verb,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute if entity @e[type=marker,tag=baba.object,tag=last_verb,tag=!accepts_property,tag=accepts_noun,limit=1] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.noun,tag=!part.verb,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute if entity @e[type=marker,tag=baba.object,tag=last_verb,tag=accepts_property,tag=!accepts_noun,limit=1] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.property,tag=!part.verb,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new

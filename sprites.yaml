@@ -31,6 +31,12 @@ properties:
   part:
     type: tag
     attributes: [spawn]
+  accepts_noun:
+    type: tag
+    attributes: [spawn]
+  accepts_property:
+    type: tag
+    attributes: [spawn]
   style:
     type: tag
     attributes: [sprite, primary]
@@ -411,6 +417,8 @@ grids:
         properties:
           text: is
           part: verb
+          accepts_noun: true
+          accepts_property: true
       - name: text
         color: '#ffffff'
         coords: [301, 76]
@@ -453,18 +461,22 @@ grids:
         properties:
           text: has
           part: verb
+          accepts_noun: true
       - name: text
         color: '#ffffff'
         coords: [301, 151]
         properties:
           text: make
           part: verb
+          accepts_noun: true
       - name: text
         color: '#ffffff'
         coords: [151, 226]
         properties:
           text: write
           part: verb
+          accepts_noun: true
+          accepts_property: true
       - name: text
         color: '#ffffff'
         coords: [1, 1]

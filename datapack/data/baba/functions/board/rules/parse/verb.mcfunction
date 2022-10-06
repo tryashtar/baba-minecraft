@@ -20,6 +20,8 @@ data modify storage baba:main parsing.split set value 1b
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"text"}}] run data modify entity @s data.parsing set from storage baba:main parsing
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.not,distance=..0.1] run function baba:board/rules/parse/effect_nots
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/effect
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/effect
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.property,tag=!part.noun,distance=..0.1,nbt={data:{sprite:"text"}}] run function baba:board/rules/parse/new
+execute if entity @s[tag=accepts_property] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/effect
+execute if entity @s[tag=accepts_noun] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/effect
+execute if entity @s[tag=accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.property,tag=!part.noun,nbt={data:{sprite:"text"}},distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=accepts_property,tag=!accepts_noun] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,tag=!part.property,nbt={data:{sprite:"text"}},distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=!accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!part.not,nbt={data:{sprite:"text"}},distance=..0.1] run function baba:board/rules/parse/new
