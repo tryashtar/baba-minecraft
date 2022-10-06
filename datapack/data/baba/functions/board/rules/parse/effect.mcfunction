@@ -7,6 +7,8 @@ data modify storage baba:main parsing set from entity @s data.parsing
 
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[-1]
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
+data modify storage baba:main parsing.rules[-1][].text append from storage baba:main parsing.ambiguous[]
+data modify storage baba:main parsing.ambiguous set value []
 data modify storage baba:main parsing.rules[-1][].effect.text set from entity @s data.text
 data modify storage baba:main parsing.rules[-1][].effect.inverted set from storage baba:main parsing.inverted
 data modify storage baba:main parsing.inverted set value 0b
