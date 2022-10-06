@@ -7,7 +7,7 @@ scoreboard objectives add color dummy
 scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
 scoreboard objectives add text_id dummy
-scoreboard objectives add text_batch dummy
+scoreboard objectives add text_using dummy
 scoreboard objectives add text_used dummy
 scoreboard objectives add text_disabled dummy
 scoreboard objectives add text_disabled2 dummy

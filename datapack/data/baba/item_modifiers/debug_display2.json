@@ -1,0 +1,10 @@
+{
+   "function": "minecraft:set_name",
+   "entity": "this",
+   "name": {
+      "score": {
+         "name": "text_id",
+         "objective": "baba"
+      }
+   }
+}

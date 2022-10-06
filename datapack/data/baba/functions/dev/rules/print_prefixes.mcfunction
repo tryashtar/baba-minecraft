@@ -4,4 +4,4 @@ data modify storage baba:main rule append from storage baba:main condition.condi
 
 data remove storage baba:main prefixes[0]
 execute if data storage baba:main prefixes[0] run data modify storage baba:main rule append value "and"
-execute if data storage baba:main prefixes[0] run function baba:dev/print_prefixes
+execute if data storage baba:main prefixes[0] run function baba:dev/rules/print_prefixes
