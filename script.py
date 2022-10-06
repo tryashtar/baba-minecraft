@@ -19,7 +19,6 @@ class SpriteCollection:
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
     self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, ['spawn'])
-    self.properties['is_text'] = Metadata('is_text', 'tag', None, None, ['spawn'])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -98,8 +97,6 @@ class SpriteCollection:
                     color = obj.get('object color', obj.get('color'))
                   # include properties specific to this object, or this sprite
                   spr['color'] = color
-                  if adding.name == 'text':
-                    spr['is_text'] = True
                   if 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
@@ -178,7 +175,11 @@ class SpriteCollection:
             types[k.kind][k] = k.default
     nbt = []
     data = [] if mode == 'check_props' else [f'sprite:"{sprite.parent.name}"']
-    tags = ['baba.object'] if mode == 'create' else []
+    tags = []
+    if mode == 'create':
+      tags.append('baba.object')
+      if sprite.parent.name == 'text':
+        tags.append('is_text')
     for t,vals in types.items():
       if t == 'tag':
         tags.extend(list(map(lambda x: x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name, filter(lambda x: type(x[1]) is str or x[1], vals.items()))))
@@ -558,6 +559,7 @@ spawn = [
   'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}',
   'data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main spawn',
   'execute if data storage baba:main {spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from storage baba:main spawn_text',
+  'execute if data storage baba:main {spawn:"text"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add is_text',
 ]
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')

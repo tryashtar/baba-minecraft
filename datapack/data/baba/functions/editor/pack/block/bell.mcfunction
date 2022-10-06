@@ -1,10 +1,10 @@
-execute if block ~ ~ ~ note_block[note=0] run data modify storage baba:main tile append value {scores:{color:24,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"foliage"}}
-execute if block ~ ~ ~ note_block[note=1] run data modify storage baba:main tile append value {scores:{color:17,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"rose"}}
-execute if block ~ ~ ~ note_block[note=2] run data modify storage baba:main tile append value {scores:{color:31,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"dust"}}
-execute if block ~ ~ ~ note_block[note=3] run data modify storage baba:main tile append value {scores:{color:14,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"fungus"}}
-execute if block ~ ~ ~ note_block[note=4] run data modify storage baba:main tile append value {scores:{color:21,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"husks"}}
-execute if block ~ ~ ~ note_block[note=5] run data modify storage baba:main tile append value {scores:{color:21,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"stump"}}
-execute if block ~ ~ ~ note_block[note=6] run data modify storage baba:main tile append value {scores:{color:24,facing:4},tags:["baba.object","part.noun","is_text"],data:{sprite:"text",text:"starfish"}}
+execute if block ~ ~ ~ note_block[note=0] run data modify storage baba:main tile append value {scores:{color:24,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"foliage"}}
+execute if block ~ ~ ~ note_block[note=1] run data modify storage baba:main tile append value {scores:{color:17,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"rose"}}
+execute if block ~ ~ ~ note_block[note=2] run data modify storage baba:main tile append value {scores:{color:31,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"dust"}}
+execute if block ~ ~ ~ note_block[note=3] run data modify storage baba:main tile append value {scores:{color:14,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"fungus"}}
+execute if block ~ ~ ~ note_block[note=4] run data modify storage baba:main tile append value {scores:{color:21,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"husks"}}
+execute if block ~ ~ ~ note_block[note=5] run data modify storage baba:main tile append value {scores:{color:21,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"stump"}}
+execute if block ~ ~ ~ note_block[note=6] run data modify storage baba:main tile append value {scores:{color:24,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"starfish"}}
 execute if block ~ ~ ~ note_block[note=7] run data modify storage baba:main tile append value {scores:{color:31,facing:4},tags:["baba.object","is_text","part.noun"],data:{sprite:"text",text:"cursor"}}
 execute if block ~ ~ ~ note_block[note=8] run data modify storage baba:main tile append value {scores:{color:22,facing:4},tags:["baba.object","is_text","part.verb","accepts_noun","accepts_property"],data:{sprite:"text",text:"is"}}
 execute if block ~ ~ ~ note_block[note=9] run data modify storage baba:main tile append value {scores:{color:22,facing:4},tags:["baba.object","is_text","part.and"],data:{sprite:"text",text:"and"}}
