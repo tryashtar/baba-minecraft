@@ -19,6 +19,7 @@ class SpriteCollection:
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
     self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, ['spawn'])
+    self.properties['is_text'] = Metadata('is_text', 'tag', None, None, ['spawn'])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -97,6 +98,8 @@ class SpriteCollection:
                     color = obj.get('object color', obj.get('color'))
                   # include properties specific to this object, or this sprite
                   spr['color'] = color
+                  if adding.name == 'text':
+                    spr['is_text'] = True
                   if 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
@@ -465,7 +468,7 @@ tat.delete_folder('datapack/data/baba/functions/display/palette')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={text_used=0},nbt={data:{sprite:"text"}}] run function baba:display/disabled_text'
+    'execute if entity @s[tag=is_text,scores={text_used=0}] run function baba:display/disabled_text'
   ]
   subfns = {}
   overlayfns = {}
@@ -643,7 +646,8 @@ unpack_lines.extend([
 ])
 for prop in sprites.properties.values():
   if 'all' in prop.attributes:
-    spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
+    if prop.kind == 'score':
+      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')

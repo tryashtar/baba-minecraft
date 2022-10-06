@@ -1,4 +1,4 @@
-data modify storage baba:main condition set from storage baba:main conditions[0][0]
+data modify storage baba:main condition set from storage baba:main conditions[0]
 # the condition could be inverted, so this must be checked in its function
 execute if data storage baba:main condition{condition:"lonely"} run function baba:board/rules/apply/check/lonely
 execute if data storage baba:main condition{condition:"near"} run function baba:board/rules/apply/check/near

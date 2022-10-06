@@ -1,0 +1,23 @@
+{
+   "providers": [
+      {
+         "type": "space",
+         "advances": {
+            " ": 4
+         }
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:font.png",
+         "height": 8,
+         "ascent": 6,
+         "chars": [
+            "abcdefghi",
+            "jklmnopqr",
+            "stuvwxyz1",
+            "234567890",
+            "-:',.?!\u0000\u0000"
+         ]
+      }
+   ]
+}
