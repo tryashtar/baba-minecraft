@@ -4,6 +4,10 @@ scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing set from entity @s data.parsing
+execute store result score rule_count baba run data get storage baba:main parsing.rules[0]
+scoreboard players operation @s text_using += rule_count baba
+scoreboard players add @e[type=marker,tag=baba.object,tag=subject] text_using 1
+scoreboard players operation @e[type=marker,tag=baba.object,tag=last_verb] text_using += rule_count baba
 
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[-1]
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
