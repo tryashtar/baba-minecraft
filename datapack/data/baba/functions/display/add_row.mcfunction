@@ -14,4 +14,3 @@ data modify storage baba:main text append value '[{"translate":"baba.overlay"},{
 scoreboard players add row baba 1
 execute as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value '{"translate":"baba.overlay"}'
 execute if score row baba >= level_height baba run function baba:display/add_full_border
-execute if score row baba < level_height baba positioned ~-1 ~ ~ run function baba:display/add_row
