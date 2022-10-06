@@ -8,9 +8,12 @@ execute store result score rule_count baba run data get storage baba:main parsin
 scoreboard players operation @s text_using += rule_count baba
 scoreboard players operation @e[type=marker,tag=baba.object,tag=ambiguous] text_using += rule_count baba
 tag @e[type=marker,tag=baba.object,tag=ambiguous] remove ambiguous
+tag @e[type=marker,tag=baba.object,tag=pending_all_rules] add all_rules
 scoreboard players add @e[type=marker,tag=baba.object,tag=subject] text_using 1
 scoreboard players operation @e[type=marker,tag=baba.object,tag=last_verb] text_using += rule_count baba
 
+data modify storage baba:main parsing.rules[][].text append from storage baba:main parsing.pending[]
+data modify storage baba:main parsing.pending set value []
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[-1]
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main parsing.ambiguous[]

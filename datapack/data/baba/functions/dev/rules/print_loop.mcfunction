@@ -10,7 +10,7 @@ execute if data storage baba:main infixes[0] run function baba:dev/rulesrules/pr
 data modify storage baba:main rule append from storage baba:main iter_rules[0].verb
 execute if data storage baba:main iter_rules[0].effect{inverted:1b} run data modify storage baba:main rule append value "not"
 data modify storage baba:main rule append from storage baba:main iter_rules[0].effect.text
-tellraw @a {"storage":"baba:main","nbt":"rule[]","separator":" "}
+tellraw @a {"storage":"baba:main","nbt":"rule[]","separator":" ","font":"baba:font"}
 
 data remove storage baba:main iter_rules[0]
 execute if data storage baba:main iter_rules[0] run function baba:dev/rules/print_loop
