@@ -14,8 +14,8 @@ execute if data storage baba:main rules[0] run function baba:board/rules/apply
 execute as @e[type=marker,tag=baba.object,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
 execute as @e[type=marker,tag=baba.object,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
 # builtin rules
-execute as @e[type=marker,tag=baba.object,tag=is_text] run data modify entity @s data.properties append value {property:"push",inverted:0b}
-execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"level"}}] run data modify entity @s data.properties append value {property:"stop",inverted:0b}
-execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"cursor"}}] run data modify entity @s data.properties append value {property:"select",inverted:0b}
+execute as @e[type=marker,tag=baba.object,tag=is_text] run data modify entity @s data.properties append value {text:"push",inverted:0b}
+execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"level"}}] run data modify entity @s data.properties append value {text:"stop",inverted:0b}
+execute as @e[type=marker,tag=baba.object,nbt={data:{sprite:"cursor"}}] run data modify entity @s data.properties append value {text:"select",inverted:0b}
 execute as @e[type=marker,tag=baba.object] run function baba:board/rules/apply/filter
 kill aee4e839-6b46-4f38-97f8-d49dfe743ff1
