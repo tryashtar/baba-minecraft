@@ -322,3 +322,4 @@ execute if data storage baba:main {spawn:"wall"} run tag @e[type=marker,tag=spaw
 execute if data storage baba:main {spawn:"water"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 23
 execute if data storage baba:main {spawn:"water"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add connector
 scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing 4
+scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] move_frame 0

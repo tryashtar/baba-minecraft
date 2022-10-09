@@ -49,6 +49,10 @@ properties:
   disabled:
     type: tag
     attributes: [sprite]
+  move_frame:
+    type: score
+    default: 0
+    attributes: [all]
 
 grids:
 - size: [24, 24]

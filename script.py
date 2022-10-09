@@ -248,7 +248,7 @@ class BabaSprite:
       return str(prop.values.index(value)+1)
 
   # lots of repeated code from create_summon above
-  def create_selector(self, properties, include_sprite):
+  def create_selector(self, properties, include_sprite, scores = None):
     types = {}
     for k,v in properties.items():
       if k.kind not in types:
@@ -258,7 +258,7 @@ class BabaSprite:
     nbt_true = []
     nbt_false = []
     tags = []
-    scores = []
+    scores = scores if scores is not None else []
     if include_sprite:
       nbt_true.append('sprite:"'+self.parent.name+'"')
     for t,vals in types.items():
@@ -343,7 +343,7 @@ class Metadata:
 class TileManager:
   def __init__(self, rows, columns):
     self.scale = 12
-    self.char = '\u0900'
+    self.char = 0x0900
     self.rows = rows
     self.columns = columns
     self.charmap = {}
@@ -351,9 +351,7 @@ class TileManager:
     self.advances = {}
     self.reverse_advances = {}
     self.providers = [{"type":"space","advances":self.advances}]
-    self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale)}
-    negative_px = self.next_char()
-    self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
+    self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale),"baba.nudge_left":self.get_advance(-self.scale/2),"baba.nudge_right":self.get_advance(self.scale/2)}
     island_width = 4
     island_height = 2
     island_pixels = 870
@@ -370,8 +368,9 @@ class TileManager:
         self.providers.extend([{"type":"bitmap","file":f"baba:{island}_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
         island_translation += self.get_advance(-99*island_width)
       self.lang[f'baba.background.{island}'] = island_translation
+    negative_px = self.next_char()
+    self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
     for r in range(-1,rows+1):
-      self.charmap[r] = {}
       char = self.next_char()
       self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":self.scale,"ascent":-r*self.scale,"chars":[char]})
       self.lang[f"baba.level_border.row{r}"] = char + self.get_advance(-1)
@@ -387,12 +386,12 @@ class TileManager:
     return char
 
   def next_char(self):
-    i = ord(self.char)
-    i += 1
-    if i>=0x600 and i<=0x6ff:
-      i=0x700
-    self.char = chr(i)
-    return self.char
+    self.char += 1
+    if self.char>=0x600 and self.char<=0x6ff:
+      self.char=0x700
+    if self.char>0xffff:
+      raise Exception("Too many!")
+    return chr(self.char)
 
   def to_char_grid(self, grid, source):
     return [''.join(['\u0000' if len(x) == 0 else source[x[0]] for x in y]) for y in grid.sprites]
@@ -407,15 +406,23 @@ class TileManager:
           c = spriteset[0]
           negative = self.next_char()
           for r in range(self.rows):
-            positive = self.next_char()
+            if (r,False) not in self.charmap:
+              self.charmap[(r,False)] = {}
+              self.charmap[(r,True)] = {}
+            positive1 = self.next_char()
+            positive2 = self.next_char()
             for c in spriteset:
               self.negatives[c] = negative
-              self.charmap[r][c] = positive
+              self.charmap[(r,False)][c] = positive1
+              self.charmap[(r,True)][c] = positive2
               display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale+c.shift[0])+positive+negative+self.get_advance(self.scale-3+adjust-c.shift[0])
+              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale+c.shift[0])+positive1+negative+self.get_advance(self.scale-3+adjust-c.shift[0])
+              if r != self.rows-1:
+                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust-self.scale+c.shift[0])+positive2+negative+self.get_advance(self.scale-3+adjust-c.shift[0])
 
     for r in range(self.rows):
-      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[r])})
+      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)])})
+      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":self.to_char_grid(grid, self.charmap[(r,True)])})
     self.providers.append({"type":"bitmap","file":filename,"height":-height,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
 
 with open('sprites.yaml', 'r') as data:
@@ -445,13 +452,13 @@ border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score level_background baba matches 0 if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#080808"}}\'',
+    f'execute if score level_background baba matches 0 if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#080808"}}\'',
     f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}},sort=nearest] run function baba:display/add_object/row{r}',
   ])
-  border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"#15181f"}}\'')
+  border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#15181f"}}\'')
   full_border.extend([
-    f'execute if score row baba matches {r+1} as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}}\'',
-    f'execute if score row baba matches {r+1} run data modify storage baba:main text append value \'[{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}},{{"translate":"baba.level_border.row{r+1}","color":"#15181f"}}]\'',
+    f'execute if score row baba matches {r+1} as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#15181f"}}\'',
+    f'execute if score row baba matches {r+1} run data modify storage baba:main text append value \'[{{"translate":"baba.empty_tile","color":"#15181f"}},{{"translate":"baba.empty_tile","color":"#15181f"}}]\'',
   ])
 tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')
 tat.write_lines(border, 'datapack/data/baba/functions/display/add_border.mcfunction')
@@ -491,14 +498,22 @@ for r in range(manager.rows):
       if len(sprs) > 1:
         if o.name not in subfns:
           subfns[o.name] = []
-        selector = s.create_selector(p, False)
-        if len(selector) > 0:
-          subfns[o.name].append(f'execute if entity @s[{selector}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+        selector1 = s.create_selector(p, False)
+        selector2 = s.create_selector(p, False, ['move_frame=1..','move_dir=1'])
+        selector3 = s.create_selector(p, False, ['move_frame=1..','move_dir=2'])
+        if len(selector1) > 0:
+          subfns[o.name].append(f'execute if entity @s[{selector1}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+          subfns[o.name].append(f'execute if entity @s[{selector2}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}.down"}}\'')
+          subfns[o.name].append(f'execute if entity @s[{selector3}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r-1}.down"}}\'')
         else:
           subfns[o.name].append(f'data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
       else:
-        selector = s.create_selector(p, True)
-        lines.append(f'execute if entity @s[{selector}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+        selector1 = s.create_selector(p, True)
+        selector2 = s.create_selector(p, True, ['move_frame=1..','move_dir=1'])
+        selector3 = s.create_selector(p, True, ['move_frame=1..','move_dir=2'])
+        lines.append(f'execute if entity @s[{selector1}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+        lines.append(f'execute if entity @s[{selector2}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}.down"}}\'')
+        lines.append(f'execute if entity @s[{selector3}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r-1}.down"}}\'')
 
     for ov in o.overlays:
       overlay = sprites.overlays[ov]
@@ -527,6 +542,10 @@ for r in range(manager.rows):
     lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
     tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
   lines.extend([
+    'execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage baba:main object_text insert 1 value \'{"translate":"baba.nudge_right"}\'',
+    'execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage baba:main object_text append value \'{"translate":"baba.nudge_left"}\'',
+    'execute if entity @s[scores={move_frame=1..,move_dir=4}] run data modify storage baba:main object_text insert 1 value \'{"translate":"baba.nudge_left"}\'',
+    'execute if entity @s[scores={move_frame=1..,move_dir=4}] run data modify storage baba:main object_text append value \'{"translate":"baba.nudge_right"}\'',
     'item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text',
     'data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name'
   ])
@@ -646,10 +665,10 @@ unpack_lines.extend([
   'data remove storage baba:main level[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
-for prop in sprites.properties.values():
-  if 'all' in prop.attributes:
-    if prop.kind == 'score':
-      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.values.index(prop.default)+1}')
+spawn.extend([
+  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing 4',
+  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] move_frame 0',
+])
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')

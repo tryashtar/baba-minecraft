@@ -1,8 +1,11 @@
 bossbar add baba:main ""
+bossbar set baba:main name ""
 scoreboard objectives add baba dummy
 scoreboard objectives add facing dummy
 scoreboard objectives add frame dummy
 scoreboard objectives add walk dummy
+scoreboard objectives add move_dir dummy
+scoreboard objectives add move_frame dummy
 scoreboard objectives add color dummy
 scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
