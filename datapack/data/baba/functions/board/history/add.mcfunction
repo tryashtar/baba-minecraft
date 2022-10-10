@@ -7,3 +7,4 @@ execute store result storage baba:main objects[-1].scores.walk int 1 run scorebo
 execute store result storage baba:main objects[-1].scores.number int 1 run scoreboard players get @s number
 execute store result storage baba:main objects[-1].scores.color int 1 run scoreboard players get @s color
 execute store result storage baba:main objects[-1].scores.text_used int 1 run scoreboard players get @s text_used
+execute store result storage baba:main objects[-1].scores.z_layer int 1 run scoreboard players get @s z_layer

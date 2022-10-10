@@ -97,15 +97,16 @@ class SpriteCollection:
                     color = obj.get('object color', obj.get('color'))
                   # include properties specific to this object, or this sprite
                   spr['color'] = color
-                  if 'properties' in obj:
+                  if sp != 'text' and 'properties' in obj:
                     for k,v in obj['properties'].items():
                       spr[k] = v
-                  if sp != 'text':
-                    if 'properties' in config:
+                  if sp != 'text' and 'properties' in config:
                       for k,v in config['properties'].items():
                         spr[k] = v
                   # make keys the actual metadata objects instead of their names
                   props = {}
+                  if adding.name == 'text':
+                    props[self.properties['z_layer']] = 20
                   for k,v in spr.items():
                     if k in baba.property_mods and k not in self.properties:
                       self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
@@ -451,7 +452,7 @@ border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}},sort=nearest] run function baba:display/add_object/row{r}',
+    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}}] if score @s z_layer = z_layer baba run function baba:display/add_object/row{r}',
   ])
 text.append('data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'')
 tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')

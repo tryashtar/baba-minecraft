@@ -53,6 +53,10 @@ properties:
     type: score
     default: 0
     attributes: [all]
+  z_layer:
+    type: score
+    default: 1
+    attributes: [all]
 
 grids:
 - size: [24, 24]
@@ -63,15 +67,23 @@ grids:
         text color: '#d9396a'
         object color: '#ffffff'
         coords: [1, 1]
+        properties:
+          z_layer: 18
       - name: keke
         color: '#e5533b'
         coords: [1, 751]
+        properties:
+          z_layer: 18
       - name: me
         color: '#8e5e9c'
         coords: [1, 901]
+        properties:
+          z_layer: 18
       - name: robot
         color: '#737373'
         coords: [1, 1051]
+        properties:
+          z_layer: 17
       sprites:
       - text
       - permute:
@@ -88,6 +100,8 @@ grids:
         text color: '#5f9dd1'
         object color: '#3e7688'
         coords: [1, 85]
+        properties:
+          z_layer: 9
       sprites:
       - text
       - permute:
@@ -97,27 +111,45 @@ grids:
       - name: bird
         color: '#e49950'
         coords: [1, 322]
+        properties:
+          z_layer: 17
       - name: bug
         color: '#c29e46'
+        properties:
+          z_layer: 17
       - name: crab
         color: '#e5533b'
+        properties:
+          z_layer: 17
       - name: rocket
         color: '#737373'
         coords: [1, 847]
+        properties:
+          z_layer: 15
       - name: skull
         color: '#82261c'
+        properties:
+          z_layer: 17
       - name: ghost
         color: '#eb91ca'
         coords: [276, 622]
+        properties:
+          z_layer: 17
       - name: statue
         color: '#737373'
         coords: [276, 922]
+        properties:
+          z_layer: 17
       - name: bolt
         color: '#ede285'
         coords: [551, 322]
+        properties:
+          z_layer: 16
       - name: hand
         color: '#ffffff'
         coords: [551, 622]
+        properties:
+          z_layer: 17
       sprites:
       - text
       - permute:
@@ -126,12 +158,18 @@ grids:
       - name: bat
         color: '#8e5e9c'
         coords: [1, 1081]
+        properties:
+          z_layer: 14
       - name: bubble
         color: '#83c8e5'
         coords: [276, 1081]
+        properties:
+          z_layer: 12
       - name: cog
         color: '#737373'
         coords: [1, 1167]
+        properties:
+          z_layer: 16
       sprites:
       - text
       - permute:
@@ -143,15 +181,23 @@ grids:
         text color: '#4b5c1c'
         object color: '#5c8339'
         coords: [1, 1]
+        properties:
+          z_layer: 15
       - null
       - null
       - name: flag
         color: '#ede285'
+        properties:
+          z_layer: 17
       - null
       - name: key
         color: '#ede285'
+        properties:
+          z_layer: 16
       - name: love
         color: '#eb91ca'
+        properties:
+          z_layer: 16
       - null
       - null
       - null
@@ -159,94 +205,152 @@ grids:
       - name: ufo
         object color: '#eb91ca'
         text color: '#d9396a'
+        properties:
+          z_layer: 17
       - name: door
         color: '#e5533b'
         coords: [126, 151]
+        properties:
+          z_layer: 15
       - name: flower
         color: '#557ae0'
+        properties:
+          z_layer: 12
       - null
       - null
       - null
       - name: pillar
         color: '#737373'
+        properties:
+          z_layer: 16
       - name: rock
         text color: '#90673e'
         object color: '#c29e46'
+        properties:
+          z_layer: 16
       - null
       - name: tile
         text color: '#737373'
         object color: '#242424'
+        properties:
+          z_layer: 4
       - name: fruit
         color: '#e5533b'
         coords: [376, 226]
+        properties:
+          z_layer: 16
       - null
       - null
       - name: moon
         color: '#ede285'
+        properties:
+          z_layer: 16
       - null
       - null
       - name: star
         color: '#ede285'
+        properties:
+          z_layer: 16
       - name: tree
         color: '#5c8339'
+        properties:
+          z_layer: 16
       - name: box
         text color: '#90673e'
         object color: '#c29e46'
         coords: [751, 1]
+        properties:
+          z_layer: 16
       - null
       - name: fire
         text color: '#e5533b'
         object color: '#e49950'
+        properties:
+          z_layer: 15
       - name: gate
         color: '#e5533b'
+        properties:
+          z_layer: 15
       - name: jelly
         color: '#83c8e5'
+        properties:
+          z_layer: 17
       - null
       - null
       - name: reed
         color: '#c29e46'
+        properties:
+          z_layer: 16
       - name: sign
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 16
       - name: sun
         color: '#ede285'
+        properties:
+          z_layer: 14
       - name: fungi
         text color: '#c29e46'
         object color: '#90673e'
         coords: [501, 226]
+        properties:
+          z_layer: 8
       - name: husk
         color: '#90673e'
+        properties:
+          z_layer: 15
       - name: leaf
         color: '#ede285'
+        properties:
+          z_layer: 8
       - name: orb
         color: '#d9396a'
+        properties:
+          z_layer: 17
       - null
       - null
       - null
       - name: trees
         color: '#5c8339'
+        properties:
+          z_layer: 9
       - name: cake
         color: '#eb91ca'
         coords: [251, 76]
+        properties:
+          z_layer: 17
       - name: dot
         color: '#ffffff'
+        properties:
+          z_layer: 12
       - name: foliage
         text color: '#e49950'
         object color: '#503f24'
+        properties:
+          z_layer: 17
       - null
       - null
       - null
       - null
       - name: rose
         color: '#e5533b'
+        properties:
+          z_layer: 16
       - name: dust
         color: '#ede285'
         coords: [626, 151]
+        properties:
+          z_layer: 12
       - name: fungus
         color: '#90673e'
+        properties:
+          z_layer: 16
       - name: husks
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 9
       - null
       - null
       - null
@@ -254,9 +358,13 @@ grids:
       - name: stump
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 12
       - name: starfish
         color: '#e49950'
         coords: [251, 910]
+        properties:
+          z_layer: 16
       sprites:
       - text
       - {}
@@ -264,6 +372,8 @@ grids:
       - name: blossom
         color: '#ffffff'
         coords: [101, 985]
+        properties:
+          z_layer: 20
       - name: text
         color: '#ede285'
         coords: [376, 826]
@@ -400,6 +510,8 @@ grids:
         color: '#3e7688'
         coords: [1, 1]
         overlays: [level_icon]
+        properties:
+          z_layer: 17
       sprites:
       - {}
     - overlays:
@@ -717,46 +829,74 @@ grids:
       - name: cloud
         color: '#83c8e5'
         coords: [1, 451]
+        properties:
+          z_layer: 14
       - name: fence
         color: '#90673e'
+        properties:
+          z_layer: 14
       - null
       - name: grass
         text color: '#a5b13f'
         object color: '#303824'
+        properties:
+          z_layer: 10
       - name: hedge
         color: '#4b5c1c'
+        properties:
+          z_layer: 14
       - name: ice
         text color: '#5f9dd1'
         object color: '#3e7688'
+        properties:
+          z_layer: 9
       - shared:
         - name: lava
           color: '#e49950'
+          properties:
+            z_layer: 2
         - name: water
           color: '#5f9dd1'
           text coords: [1, 1576]
+          properties:
+            z_layer: 2
         - name: bog
           text color: '#a5b13f'
           object color: '#4b5c1c'
           text coords: [1, 76]
+          properties:
+            z_layer: 2
       - name: line
         color: '#ffffff'
+        properties:
+          z_layer: 20
       - name: pipe
         color: '#293141'
+        properties:
+          z_layer: 14
       - null
       - null
       - name: rubble
         color: '#503f24'
+        properties:
+          z_layer: 8
       - null
       - null
       - name: wall
         text color: '#737373'
         object color: '#293141'
+        properties:
+          z_layer: 14
       - name: brick
         text color: '#90673e'
         object color: '#362e22'
+        properties:
+          z_layer: 10
         coords: [1, 151]
       - name: cliff
         color: '#90673e'
+        properties:
+          z_layer: 14
       properties:
         connector: true
       sprites:
@@ -786,6 +926,8 @@ grids:
         color: '#eb91ca'
         coords: [376, 851]
         frames: right
+        properties:
+          z_layer: 20
       sprites:
       - {}
 
