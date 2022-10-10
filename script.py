@@ -320,8 +320,13 @@ class Grid:
     self.placements = {}
     x = 0
     y = 0
+    tupcol = PIL.ImageColor.getrgb(color)
     for sprites,image in spritelist:
-      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height), image)    
+      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height), image)
+      if self.image.getpixel((x*sprite_width, y*sprite_height))[3] == 0:
+        self.image.putpixel((x*sprite_width, y*sprite_height), (tupcol[0],tupcol[1],tupcol[2],10))
+      if self.image.getpixel((x*sprite_width+image.width-1, y*sprite_height+image.height-1))[3] == 0:
+        self.image.putpixel((x*sprite_width+image.width-1, y*sprite_height+image.height-1), (tupcol[0],tupcol[1],tupcol[2],10))
       self.sprites[y][x].extend(sprites)
       for s in sprites:
         self.placements[s] = (y, x)
@@ -347,7 +352,6 @@ class TileManager:
     self.rows = rows
     self.columns = columns
     self.charmap = {}
-    self.negatives = {}
     self.advances = {}
     self.reverse_advances = {}
     self.providers = [{"type":"space","advances":self.advances}]
@@ -368,8 +372,6 @@ class TileManager:
         self.providers.extend([{"type":"bitmap","file":f"baba:{island}_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
         island_translation += self.get_advance(-99*island_width)
       self.lang[f'baba.background.{island}'] = island_translation
-    negative_px = self.next_char()
-    self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":-self.scale,"ascent":-32000,"chars":[negative_px]})
     for r in range(-1,rows+1):
       char = self.next_char()
       self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":self.scale,"ascent":-r*self.scale,"chars":[char]})
@@ -404,7 +406,6 @@ class TileManager:
         spriteset = grid.sprites[y][x]
         if len(spriteset) > 0:
           c = spriteset[0]
-          negative = self.next_char()
           for r in range(self.rows):
             if (r,False) not in self.charmap:
               self.charmap[(r,False)] = {}
@@ -412,18 +413,16 @@ class TileManager:
             positive1 = self.next_char()
             positive2 = self.next_char()
             for c in spriteset:
-              self.negatives[c] = negative
               self.charmap[(r,False)][c] = positive1
               self.charmap[(r,True)][c] = positive2
               display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust-self.scale+c.shift[0])+positive1+negative+self.get_advance(self.scale-3+adjust-c.shift[0])
+              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+c.shift[0])+positive1+self.get_advance(-self.scale-1-adjust-c.shift[0])
               if r != self.rows-1:
-                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust-self.scale+c.shift[0])+positive2+negative+self.get_advance(self.scale-3+adjust-c.shift[0])
+                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.get_advance(-self.scale-1-adjust-c.shift[0])
 
     for r in range(self.rows):
       self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)])})
       self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":self.to_char_grid(grid, self.charmap[(r,True)])})
-    self.providers.append({"type":"bitmap","file":filename,"height":-height,"ascent":-32000,"chars":self.to_char_grid(grid, self.negatives)})
 
 with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
@@ -447,13 +446,14 @@ for j,grid in enumerate(anim_grids[0]):
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-text = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
+text = []
 border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
     f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}},sort=nearest] run function baba:display/add_object/row{r}',
   ])
+text.append('data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'')
 tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')
 
 def note_block(val):

@@ -1,4 +1,3 @@
-data modify storage baba:main text append value '{"translate":"baba.empty_tile"}'
 execute if score row baba matches 0 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row0
 execute if score row baba matches 1 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row1
 execute if score row baba matches 2 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row2
@@ -17,3 +16,4 @@ execute if score row baba matches 14 positioned ~ ~ ~-0.05 as @e[type=marker,tag
 execute if score row baba matches 15 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row15
 execute if score row baba matches 16 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row16
 execute if score row baba matches 17 positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{data:{properties:["hide"]}},sort=nearest] run function baba:display/add_object/row17
+data modify storage baba:main text append value '{"translate":"baba.empty_tile"}'
