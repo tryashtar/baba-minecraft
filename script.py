@@ -447,22 +447,14 @@ for j,grid in enumerate(anim_grids[0]):
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-text = ['execute if score level_background baba matches 1.. run data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
+text = ['data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'']
 border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score level_background baba matches 0 if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#080808"}}\'',
     f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}},sort=nearest] run function baba:display/add_object/row{r}',
   ])
-  border.append(f'execute if score row baba matches {r} run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#15181f"}}\'')
-  full_border.extend([
-    f'execute if score row baba matches {r+1} as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.empty_tile","color":"#15181f"}}\'',
-    f'execute if score row baba matches {r+1} run data modify storage baba:main text append value \'[{{"translate":"baba.empty_tile","color":"#15181f"}},{{"translate":"baba.empty_tile","color":"#15181f"}}]\'',
-  ])
 tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')
-tat.write_lines(border, 'datapack/data/baba/functions/display/add_border.mcfunction')
-tat.write_lines(full_border, 'datapack/data/baba/functions/display/add_full_border.mcfunction')
 
 def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
@@ -473,6 +465,28 @@ def instrument(inst):
 
 tat.delete_folder('datapack/data/baba/functions/display/add_object')
 tat.delete_folder('datapack/data/baba/functions/display/palette')
+add_bg = []
+add_br = []
+for pid,(pname,palette) in enumerate(sprites.palettes.items()):
+  add_br.append(f'execute if score palette baba matches {pid} positioned -0.5 -0.5 -0.5 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row-1","color":"{palette["#15181f"]}"}}\'')
+  add_br.append(f'execute if score palette baba matches {pid} run data modify storage baba:main text append value \'[{{"translate":"baba.level_border.row-1","color":"{palette["#15181f"]}"}},{{"translate":"baba.level_border.row-1","color":"{palette["#15181f"]}"}}]\'')
+add_br.append(f'execute positioned -0.5 -0.5 -0.5 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.overlay"}}\'')
+add_br.append(f'data modify storage baba:main text append value \'[{{"translate":"baba.overlay"}},{{"translate":"baba.overlay"}}]\'')
+for pid,(pname,palette) in enumerate(sprites.palettes.items()):
+  for r in range(manager.rows):
+    add_br.append(f'execute if score level_height baba matches {r+1} if score palette baba matches {pid} positioned -0.5 -0.5 -0.5 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r+1}","color":"{palette["#15181f"]}"}}\'')
+    add_br.append(f'execute if score level_height baba matches {r+1} if score palette baba matches {pid} run data modify storage baba:main text append value \'[{{"translate":"baba.level_border.row{r+1}","color":"{palette["#15181f"]}"}},{{"translate":"baba.level_border.row{r+1}","color":"{palette["#15181f"]}"}}]\'')
+    add_bg.append(f'execute if score row baba matches {r} if score palette baba matches {pid} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"{palette["#15181f"]}"}}\'')
+    add_bg.append(f'execute if score row baba matches {r} if score palette baba matches {pid} as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"{palette["#080808"]}"}}\'')
+    add_bg.append(f'execute if score row baba matches {r} if score palette baba matches {pid} run data modify storage baba:main text append value \'{{"translate":"baba.level_border.row{r}","color":"{palette["#15181f"]}"}}\'')
+add_br.append(f'execute positioned -0.5 -0.5 -0.5 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.overlay"}}\'')
+add_br.append(f'data modify storage baba:main text append value \'[{{"translate":"baba.overlay"}},{{"translate":"baba.overlay"}}]\'')
+add_bg.append(f'execute as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value \'{{"translate":"baba.overlay"}}\'')
+add_bg.append(f'data modify storage baba:main text append value \'{{"translate":"baba.overlay"}}\'')
+add_bg.append('scoreboard players add row baba 1')
+add_bg.append(f'execute if score row baba < level_height baba run data modify storage baba:main text append value \'{{"translate":"baba.overlay"}}\'')
+tat.write_lines(add_bg,'datapack/data/baba/functions/display/add_background.mcfunction')
+tat.write_lines(add_br,'datapack/data/baba/functions/display/add_border.mcfunction')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
