@@ -355,8 +355,12 @@ class TileManager:
     self.charmap = {}
     self.advances = {}
     self.reverse_advances = {}
-    self.providers = [{"type":"space","advances":self.advances}]
-    self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.get_advance(self.scale),"baba.overlay":self.get_advance(-self.scale),"baba.nudge_left":self.get_advance(-self.scale/2),"baba.nudge_right":self.get_advance(self.scale/2)}
+    nudge_left = self.next_char()
+    nudge_right = self.next_char()
+    self.forward_ch = self.next_char()
+    self.overlay_ch = self.next_char()
+    self.providers = [{"type":"space","advances":self.advances},{"type":"bitmap","file":"baba:space.png","height":-self.scale/2-2,"ascent":-32000,"chars":[nudge_left]},{"type":"bitmap","file":"baba:space.png","height":self.scale/2-1,"ascent":-32000,"chars":[nudge_right]},{"type":"bitmap","file":"baba:space.png","height":self.scale-1,"ascent":-32000,"chars":[self.forward_ch]},{"type":"bitmap","file":"baba:space.png","height":-self.scale-2,"ascent":-32000,"chars":[self.overlay_ch]}]
+    self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.forward_ch,"baba.overlay":self.overlay_ch,"baba.nudge_left":nudge_left,"baba.nudge_right":nudge_right}
     island_width = 4
     island_height = 2
     island_pixels = 870
@@ -417,9 +421,9 @@ class TileManager:
               self.charmap[(r,False)][c] = positive1
               self.charmap[(r,True)][c] = positive2
               display = c.display(c.filter_properties('sprite'), '.', '-', '.')
-              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+c.shift[0])+positive1+self.get_advance(-self.scale-1-adjust-c.shift[0])
+              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+c.shift[0])+positive1+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
               if r != self.rows-1:
-                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.get_advance(-self.scale-1-adjust-c.shift[0])
+                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
 
     for r in range(self.rows):
       self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)])})
@@ -447,15 +451,23 @@ for j,grid in enumerate(anim_grids[0]):
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
-text = []
+text = [
+  'data modify storage baba:main after_text set value []',
+  'execute store result score row baba run data get entity @s Pos[0]',
+  'scoreboard players operation row baba -= level_height baba',
+  'execute store result score draw_column baba run data get entity @s Pos[2]',
+  'execute if score draw_column baba > column baba run function baba:display/add_spaces',
+  'execute if score draw_column baba < column baba run function baba:display/remove_spaces'
+]
 border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score row baba matches {r} positioned ~ ~ ~-0.05 as @e[type=marker,tag=baba.object,distance=..0.1,nbt=!{{data:{{properties:["hide"]}}}}] if score @s z_layer = z_layer baba run function baba:display/add_object/row{r}',
+    f'execute if score row baba matches {-r-1} run function baba:display/add_object/row{r}',
   ])
-text.append('data modify storage baba:main text append value \'{"translate":"baba.empty_tile"}\'')
-tat.write_lines(text, 'datapack/data/baba/functions/display/add_objects.mcfunction')
+text.append('tag @s add drawn')
+text.append('data modify storage baba:main text append from storage baba:main after_text[]')
+tat.write_lines(text, 'datapack/data/baba/functions/display/add_object.mcfunction')
 
 def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
