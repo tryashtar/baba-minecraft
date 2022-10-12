@@ -349,7 +349,7 @@ class Metadata:
 class TileManager:
   def __init__(self, rows, columns):
     self.scale = 12
-    self.char = 0x0900
+    self.char = 0x0000
     self.rows = rows
     self.columns = columns
     self.charmap = {}
@@ -392,12 +392,11 @@ class TileManager:
     self.advances[char] = width
     return char
 
+  # this even works if we go above 0xffff, cool!
   def next_char(self):
     self.char += 1
-    if self.char>=0x600 and self.char<=0x6ff:
-      self.char=0x700
-    if self.char>0xffff:
-      raise Exception("Too many!")
+    while self.char in [0x0000, 0x000a, 0x00a7, 0x0590, 0x05be, 0x05c0, 0x05c3, 0x05c6, 0x0608, 0x060b, 0x060d, 0x0712, 0x081a, 0x0824, 0x0828, 0x200f, 0xfb1d, 0xfb1f] or (0xd800 <= self.char <= 0xdbff) or (0xdc00 <= self.char <= 0xdfff) or (0x05c8 <= self.char <= 0x05d2) or (0x05e8 <= self.char <= 0x05ff) or (0x061b <= self.char <= 0x0620) or (0x0648 <= self.char <= 0x065f) or (0x066d <= self.char <= 0x066f) or (0x070b <= self.char <= 0x0710) or (0x072d <= self.char <= 0x072f) or (0x074b <= self.char <= 0x074f) or (0x07a4 <= self.char <= 0x07a5) or (0x07b1 <= self.char <= 0x07c2) or (0x07f4 <= self.char <= 0x07f5) or (0x07fa <= self.char <= 0x07fc) or (0x07fe <= self.char <= 0x0800) or (0x082e <= self.char <= 0x0832) or (0x083c <= self.char <= 0x0842) or (0x0856 <= self.char <= 0x0858) or (0x085c <= self.char <= 0x0862) or (0x0868 <= self.char <= 0x0897) or (0x08a0 <= self.char <= 0x08a2) or (0x08b2 <= self.char <= 0x08b8) or (0x08c5 <= self.char <= 0x08c9) or (0xfb34 <= self.char <= 0xfb48) or (0xfbbf <= self.char <= 0xfbd5) or (0xfd8d <= self.char <= 0xfd94) or (0xfdc5 <= self.char <= 0xfdce) or (0xfdf0 <= self.char <= 0xfdf2) or (0xfe72 <= self.char <= 0xfe78) or (0xfefa <= self.char <= 0xfefe):
+      self.char += 1
     return chr(self.char)
 
   def to_char_grid(self, grid, source):
