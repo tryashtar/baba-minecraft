@@ -16,6 +16,7 @@ tag @e[type=marker,tag=baba.object,tag=move_done] remove move_done
 function baba:board/movement/process/shift
 tag @e[type=marker,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=marker,tag=baba.object,tag=move_done] remove move_done
+execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shift"]}}] at @s run scoreboard players operation @e[type=marker,tag=baba.object,distance=..0.1] facing = @s facing
 
 execute if score direction baba matches 1.. as @e[type=marker,tag=baba.object,nbt={data:{properties:["select"]}}] at @s run function baba:board/movement/select
 

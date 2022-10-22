@@ -3,7 +3,6 @@ execute store result score row baba run data get entity @s Pos[0]
 scoreboard players operation row baba -= level_height baba
 execute store result score draw_column baba run data get entity @s Pos[2]
 execute if score draw_column baba > column baba run function baba:display/add_spaces
-execute if score draw_column baba < column baba run function baba:display/remove_spaces
 execute if score row baba matches -1 run function baba:display/add_object/row0
 execute if score row baba matches -2 run function baba:display/add_object/row1
 execute if score row baba matches -3 run function baba:display/add_object/row2
