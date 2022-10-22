@@ -6,7 +6,7 @@ execute if data storage baba:main iter_rules[0].subject{inverted:1b} run data mo
 data modify storage baba:main rule append from storage baba:main iter_rules[0].subject.sprite
 data modify storage baba:main infixes set value []
 data modify storage baba:main infixes append from storage baba:main iter_rules[0].conditions[{parameters:[{}]}]
-execute if data storage baba:main infixes[0] run function baba:dev/rulesrules/print_infixes
+execute if data storage baba:main infixes[0] run function baba:dev/rules/print_infixes
 data modify storage baba:main rule append from storage baba:main iter_rules[0].verb
 execute if data storage baba:main iter_rules[0].effect{inverted:1b} run data modify storage baba:main rule append value "not"
 data modify storage baba:main rule append from storage baba:main iter_rules[0].effect.text

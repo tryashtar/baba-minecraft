@@ -4,5 +4,5 @@ data modify storage baba:main rule append from storage baba:main condition.condi
 function baba:dev/rules/print_params
 
 data remove storage baba:main infixes[0]
-execute if data storage baba:main infixes[0] run data modify storage baba:main rule append value "and"
+execute if data storage baba:main infixes[0] run data modify storage baba:main rule append value "&"
 execute if data storage baba:main infixes[0] run function baba:dev/rules/print_infixes
