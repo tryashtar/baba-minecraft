@@ -42,3 +42,5 @@ execute as @e[type=marker,tag=baba.object] at @s unless block ~ ~-1 ~ black_conc
 function baba:display/update_text
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
+# if nothing changed, don't record this step
+execute unless entity @e[type=marker,tag=baba.space,scores={repeats=1}] run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1
