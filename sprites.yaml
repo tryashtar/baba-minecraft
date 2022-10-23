@@ -25,9 +25,6 @@ properties:
   connector:
     type: tag
     attributes: [spawn]
-  text:
-    type: nbt
-    attributes: [editor, sprite, primary, spawn]
   part:
     type: tag
     attributes: [spawn]
@@ -52,10 +49,6 @@ properties:
   move_frame:
     type: score
     default: 0
-    attributes: [all]
-  z_layer:
-    type: score
-    default: 1
     attributes: [all]
 
 grids:
