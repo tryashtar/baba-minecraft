@@ -19,7 +19,7 @@ class SpriteCollection:
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
-      'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all'])
+      'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
     }
     self.palettes = data['palettes']
     for name,prop in data['properties'].items():
@@ -181,26 +181,29 @@ def create_selector(properties, extra_scores=None):
     result.append('nbt=!{data:{properties:['+f+']}}')
   return ','.join(result)
 
-def create_summon(properties):
-  types = {}
-  for k,v in properties.items():
-    if k.kind not in types:
-      types[k.kind] = {}
-    types[k.kind][k] = v
-  commands = []
-  for t,vals in types.items():
-    if t == 'tag':
-      for prop,val in vals.items():
-        if type(val) is bool:
-          commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}')
-        else:
-          commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}.{val}')
-    elif t == 'score':
-      for prop,val in vals.items():
-        commands.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {prop.convert(val)}')
-  return commands
+def create_summon(properties, extra_data=None):
+  tags = ['baba.object','spawn']
+  data = []
+  scores = []
+  nbt = []
+  for m,val in properties.items():
+    if m.kind == 'tag' and val != False:
+      tags.append(m.convert(val))
+    elif m.kind == 'score':
+      scores.append(f'{m.name}:{m.convert(val)}')
+    else:
+      data.append(f'{m.name}:{m.convert(val)}')
+  if len(tags) > 0:
+    nbt.append('Tags:[' + ','.join([f'"{x}"' for x in tags]) + ']')
+  if extra_data is not None:
+    data.extend(extra_data)
+  if len(scores) > 0:
+    data.append('scores:{' + ','.join(scores) + '}')
+  if len(data) > 0:
+    nbt.append('data:{' + ','.join(data) + '}')
+  return f'summon marker ~ ~ ~ {{{",".join(nbt)}}}'
 
-def create_storage(properties):
+def create_storage(properties, data=None):
   tags = []
   scores = []
   nbt = []
@@ -213,6 +216,8 @@ def create_storage(properties):
     nbt.append('tags:[' + ','.join([f'"{x}"' for x in tags]) + ']')
   if len(scores) > 0:
     nbt.append('scores:{' + ','.join(scores) + '}')
+  if data is not None:
+    nbt.append('data:{' + data + '}')
   return ','.join(nbt)
 
 def hash(string):
@@ -421,13 +426,10 @@ for j,grid in enumerate(anim_grids[0]):
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
 text_map = []
-unhash = []
 for s in sprites.objects['text'].sprites:
   text = s.properties[sprites.properties['text']]
   text_map.append(f'{text}: {hash(text)}')
-  unhash.append(f'execute if score hash baba matches {hash(text)} run data modify storage baba:main object_text set value "{text}"')
 tat.write_lines(text_map, 'text_ids.txt')
-tat.write_lines(unhash, 'datapack/data/baba/functions/dev/rules/unhash.mcfunction')
 
 text = [
   'data modify storage baba:main after_text set value []',
@@ -573,9 +575,8 @@ blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
-spawn = [
-  'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}'
-]
+spawn = []
+spawntext = []
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
@@ -585,13 +586,20 @@ tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 editor_sprites = {}
 objectlist = sorted(sprites.objects.values(), key=lambda x:x.name)
 for o in objectlist:
-  for sp, prp in o.filter_sprites(lambda x: 'spawn' in x.attributes).items():
-    summon = create_summon(prp)
-    for s in summon:
-      if o.name == 'text':
-        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}",spawn_text:"{prp[sprites.properties["text"]]}"}} run {s}')
-      else:
-        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}"}} run {s}')
+  if o.name == 'text':
+    spawn.insert(0, f'execute if score spawn baba matches {o.id} run function baba:board/spawn_text')
+    for spr in o.sprites:
+      spr_text = spr.properties[sprites.properties['text']]
+      props = filter_properties(spr.properties, lambda x: "spawn" in x.attributes)
+      del props[sprites.properties['text']]
+      del props[sprites.properties['sprite']]
+      summon = create_summon(props, [f'text:"{spr_text}"'])
+      spawntext.append(f'execute if score spawn baba_text matches {hash(spr_text)} run {summon}')
+  else:
+    props = next(iter(o.filter_sprites(lambda x: 'spawn' in x.attributes).values()))
+    del props[sprites.properties['sprite']]
+    spawn.append(f'execute if score spawn baba matches {o.id} run {create_summon(props)}')
+
   for spr in o.filter_sprites(lambda x: 'editor' in x.attributes):
     size = (spr.width, spr.height)
     if size not in editor_sprites:
@@ -612,7 +620,8 @@ for o in objectlist:
   for s,props in sprs:
     (inst, note) = note_block(i)
     i += 1
-    set_storage = create_storage(s.properties)
+    text_val = s.properties.get(sprites.properties['text'])
+    set_storage = create_storage(s.properties, None if text_val is None else f'text:"{text_val}"')
     check_all = create_storage(props)
     check_sprite = create_storage(filter_properties(props, lambda x: x.name=='sprite'))
     check_rest = create_storage(filter_properties(props, lambda x: x.name!='sprite'))
@@ -662,11 +671,19 @@ unpack_lines.extend([
   'data remove storage baba:main level[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
-spawn.extend([
-  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing 4',
-  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] move_frame 0',
-])
+spawn.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
+spawntext.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
+for m in sprites.properties.values():
+  if 'spawn' in m.attributes and m.kind == 'score' and m.name not in ('sprite','text'):
+      spawn.append(f'execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s data.scores.{m.name}')
+  if 'all' in m.attributes and 'spawn' not in m.attributes:
+    if m.kind == 'score':
+      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
+    else:
+      raise ValueError(m.name)
+spawn.append('data remove entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.scores')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
+tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))

@@ -6,6 +6,7 @@ execute store result storage baba:main parsing.rules[].text int 1 run scoreboard
 
 data modify storage baba:main parsing.rules[].conditions[-1].parameters append value {}
 execute store result storage baba:main parsing.rules[].conditions[-1].parameters[-1].sprite int 1 run scoreboard players get @s text
+data modify storage baba:main parsing.rules[].conditions[-1].parameters[-1].sprite_text set from entity @s data.text
 data modify storage baba:main parsing.rules[].conditions[-1].parameters[-1].inverted set from storage baba:main parsing.inverted
 data modify storage baba:main parsing.inverted set value 0b
 

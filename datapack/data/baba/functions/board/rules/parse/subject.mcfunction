@@ -8,6 +8,7 @@ data modify storage baba:main parsing set from entity @s data.parsing
 
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
 execute store result storage baba:main parsing.rules[-1].subject.sprite int 1 run scoreboard players get @s text
+data modify storage baba:main parsing.rules[-1].subject.sprite_text set from entity @s data.text
 data modify storage baba:main parsing.rules[-1].subject.inverted set from storage baba:main parsing.inverted
 execute store result storage baba:main parsing.rules[-1].text int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.rules[-1].text append from storage baba:main parsing.ambiguous[]

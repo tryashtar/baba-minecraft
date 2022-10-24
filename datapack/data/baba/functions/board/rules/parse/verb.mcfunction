@@ -12,6 +12,7 @@ execute if data storage baba:main parsing{split:0b} run data modify storage baba
 execute if data storage baba:main parsing{split:1b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
 execute store result storage baba:main parsing.rules[-1][].text int 1 run scoreboard players get @s text_id
 execute store result storage baba:main parsing.rules[-1][].verb int 1 run scoreboard players get @s text
+data modify storage baba:main parsing.rules[-1][].verb_text set from entity @s data.text
 data modify storage baba:main parsing.split set value 1b
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442},distance=..0.1] run data modify entity @s data.parsing set from storage baba:main parsing

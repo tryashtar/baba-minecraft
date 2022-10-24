@@ -1,8 +1,6 @@
 data modify storage baba:main condition set from storage baba:main prefixes[0]
 execute if data storage baba:main condition{inverted:1b} run data modify storage baba:main rule append value "not"
-execute store result score hash baba run data get storage baba:main condition.condition
-function baba:dev/rules/unhash
-data modify storage baba:main rule append from storage baba:main object_text
+data modify storage baba:main rule append from storage baba:main condition.condition_text
 
 data remove storage baba:main prefixes[0]
 execute if data storage baba:main prefixes[0] run data modify storage baba:main rule append value "&"
