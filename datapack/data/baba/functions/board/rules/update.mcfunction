@@ -1,7 +1,7 @@
 # parse text and cache properties in the affected objects
 summon marker ~ ~ ~ {UUID:[I;-1360730055,1799769912,-1745300323,-25935887]}
 scoreboard players set text_id baba 0
-scoreboard players set @e[type=marker,tag=baba.object,scores={sprite=30442}] text_id 0
+execute as @e[type=marker,tag=baba.object,scores={sprite=30442}] store result score @s text_id run scoreboard players add text_id baba 1
 scoreboard players set @e[type=marker,tag=baba.object,scores={sprite=30442}] text_used 0
 scoreboard players set @e[type=marker,tag=baba.object,scores={sprite=30442}] text_disabled 0
 scoreboard players set @e[type=marker,tag=baba.object,scores={sprite=30442}] text_disabled2 0

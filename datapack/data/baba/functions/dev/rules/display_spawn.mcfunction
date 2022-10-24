@@ -1,4 +1,5 @@
 summon area_effect_cloud ~ ~0.25 ~ {Tags:["rule_display","spawn"],Duration:100,CustomNameVisible:1b}
+scoreboard players operation hash baba = @s text
 function baba:dev/rules/unhash
 item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:dev/text_display_name
 execute positioned ~ ~0.25 ~ run data modify entity @e[type=area_effect_cloud,tag=rule_display,tag=spawn,distance=..0.1,limit=1] CustomName set from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name

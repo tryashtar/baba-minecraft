@@ -1,7 +1,5 @@
 # 'and' appearing after an effect
 # valid follows: not, property, noun, verb
-scoreboard players add text_id baba 1
-scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 data modify storage baba:main parsing set from entity @s data.parsing
 tag @s add pending_all_rules
 execute store result storage baba:main parsing.pending int 1 run scoreboard players get @s text_id

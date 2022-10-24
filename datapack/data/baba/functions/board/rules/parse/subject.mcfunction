@@ -1,8 +1,6 @@
 # subject noun
 # valid follows: not, and, infix, verb
 scoreboard players set cleanup baba 1
-scoreboard players add text_id baba 1
-scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 tag @s add subject
 tag @e[type=marker,tag=baba.object,tag=ambiguous] add subject
 tag @e[type=marker,tag=baba.object,tag=ambiguous] remove ambiguous

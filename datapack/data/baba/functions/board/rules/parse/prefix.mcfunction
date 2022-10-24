@@ -1,8 +1,6 @@
 # prefix
 # valid follows: not, and, noun
 scoreboard players set cleanup baba 1
-scoreboard players add text_id baba 1
-scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 tag @s add all_rules
 tag @e[type=marker,tag=baba.object,tag=ambiguous] add all_rules
 tag @e[type=marker,tag=baba.object,tag=ambiguous] remove ambiguous

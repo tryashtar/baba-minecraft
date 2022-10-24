@@ -425,9 +425,9 @@ unhash = []
 for s in sprites.objects['text'].sprites:
   text = s.properties[sprites.properties['text']]
   text_map.append(f'{text}: {hash(text)}')
-  unhash.append(f'execute if score @s text matches {hash(text)} run data modify storage baba:main object_text set value "{text}"')
+  unhash.append(f'execute if score hash baba matches {hash(text)} run data modify storage baba:main object_text set value "{text}"')
 tat.write_lines(text_map, 'text_ids.txt')
-tat.write_lines(unhash, 'datapack/data/functions/baba/dev/rules/unhash.mcfunction')
+tat.write_lines(unhash, 'datapack/data/baba/functions/dev/rules/unhash.mcfunction')
 
 text = [
   'data modify storage baba:main after_text set value []',
@@ -487,9 +487,8 @@ for r in range(manager.rows):
   for pid,(pname,palette) in enumerate(sprites.palettes.items()):
     lines.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
     plines = []
-    for cid,color in enumerate(palette):
-      color = palette[color]
-      plines.append(f'execute if score color baba matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
+    for color in palette.values():
+      plines.append(f'execute if score color baba matches {int(color[1:],16)} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
     plines.extend([
       f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
       f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
