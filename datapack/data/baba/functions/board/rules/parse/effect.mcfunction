@@ -2,7 +2,6 @@
 # valid follows: and
 scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
-execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing set from entity @s data.parsing
 execute store result score rule_count baba run data get storage baba:main parsing.rules[0]
 scoreboard players operation @s text_using += rule_count baba
@@ -15,10 +14,10 @@ scoreboard players operation @e[type=marker,tag=baba.object,tag=last_verb] text_
 data modify storage baba:main parsing.rules[][].text append from storage baba:main parsing.pending[]
 data modify storage baba:main parsing.pending set value []
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[-1]
-data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
+execute store result storage baba:main parsing.rules[-1][].text int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main parsing.ambiguous[]
 data modify storage baba:main parsing.ambiguous set value []
-data modify storage baba:main parsing.rules[-1][].effect.text set from entity @s data.text
+execute store result modify storage baba:main parsing.rules[-1][].effect.text int 1 run scoreboard players get @s text
 data modify storage baba:main parsing.rules[-1][].effect.inverted set from storage baba:main parsing.inverted
 execute if entity @s[tag=part.noun] run data modify storage baba:main parsing.rules[-1][].effect.part set value "noun"
 execute if entity @s[tag=part.property] run data modify storage baba:main parsing.rules[-1][].effect.part set value "property"

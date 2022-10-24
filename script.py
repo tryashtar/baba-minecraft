@@ -421,10 +421,13 @@ for j,grid in enumerate(anim_grids[0]):
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
 
 text_map = []
+unhash = []
 for s in sprites.objects['text'].sprites:
   text = s.properties[sprites.properties['text']]
   text_map.append(f'{text}: {hash(text)}')
+  unhash.append(f'execute if score @s text matches {hash(text)} run data modify storage baba:main object_text set value "{text}"')
 tat.write_lines(text_map, 'text_ids.txt')
+tat.write_lines(unhash, 'datapack/data/functions/baba/dev/rules/unhash.mcfunction')
 
 text = [
   'data modify storage baba:main after_text set value []',

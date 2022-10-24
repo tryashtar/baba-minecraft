@@ -3,10 +3,9 @@
 scoreboard players set cleanup baba 1
 scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
-execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 tag @s add ambiguous
 data modify storage baba:main parsing set from entity @s data.parsing
-data modify storage baba:main parsing.ambiguous append from storage baba:main text_id
+execute store result storage baba:main parsing.ambiguous int 1 run scoreboard players get @s text_id
 
 execute store success storage baba:main parsing.inverted byte 1 if data storage baba:main parsing{inverted:0b}
 

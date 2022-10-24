@@ -3,16 +3,15 @@
 scoreboard players set cleanup baba 1
 scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
-execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 tag @s add subject
 tag @e[type=marker,tag=baba.object,tag=ambiguous] add subject
 tag @e[type=marker,tag=baba.object,tag=ambiguous] remove ambiguous
 data modify storage baba:main parsing set from entity @s data.parsing
 
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
-data modify storage baba:main parsing.rules[-1].subject.sprite set from entity @s data.text
+execute store result storage baba:main parsing.rules[-1].subject.sprite int 1 run scoreboard players get @s text
 data modify storage baba:main parsing.rules[-1].subject.inverted set from storage baba:main parsing.inverted
-data modify storage baba:main parsing.rules[-1].text append from storage baba:main text_id
+execute store result storage baba:main parsing.rules[-1].text int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.rules[-1].text append from storage baba:main parsing.ambiguous[]
 data modify storage baba:main parsing.ambiguous set value []
 data modify storage baba:main parsing.inverted set value 0b

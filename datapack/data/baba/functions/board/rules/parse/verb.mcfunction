@@ -4,7 +4,6 @@ scoreboard players add text_id baba 1
 scoreboard players operation @s[scores={text_id=0}] text_id = text_id baba
 tag @e[type=marker,tag=baba.object,tag=last_verb] remove last_verb
 tag @s add last_verb
-execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing set from entity @s data.parsing
 
 execute if data storage baba:main parsing{split:0b} run data remove storage baba:main parsing.rules[0]
@@ -13,8 +12,8 @@ execute if data storage baba:main parsing{split:0b} run data modify storage baba
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.split_rules
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.split_rules
 execute if data storage baba:main parsing{split:1b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
-data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
-data modify storage baba:main parsing.rules[-1][].verb set from entity @s data.text
+execute store result storage baba:main parsing.rules[-1][].text int 1 run scoreboard players get @s text_id
+execute store result storage baba:main parsing.rules[-1][].verb int 1 run scoreboard players get @s text
 data modify storage baba:main parsing.split set value 1b
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442},distance=..0.1] run data modify entity @s data.parsing set from storage baba:main parsing
