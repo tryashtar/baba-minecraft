@@ -1,7 +1,4 @@
 summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}
-data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main spawn
-execute if data storage baba:main {spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from storage baba:main spawn_text
-execute if data storage baba:main {spawn:"text"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add is_text
 execute if data storage baba:main {spawn:"algae"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite 7620
 execute if data storage baba:main {spawn:"algae"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] color 6062905
 execute if data storage baba:main {spawn:"baba"} run scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite 23193

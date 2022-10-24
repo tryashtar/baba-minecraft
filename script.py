@@ -477,7 +477,7 @@ tat.write_lines(add_br,'datapack/data/baba/functions/display/add_border.mcfuncti
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[tag=is_text,scores={text_used=0}] run function baba:display/disabled_text'
+    'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/disabled_text'
   ]
   subfns = {}
   overlayfns = {}
@@ -572,10 +572,7 @@ custom_model = []
 loot_table = []
 get_all = []
 spawn = [
-  'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}',
-  'data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main spawn',
-  'execute if data storage baba:main {spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from storage baba:main spawn_text',
-  'execute if data storage baba:main {spawn:"text"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add is_text',
+  'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}'
 ]
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
