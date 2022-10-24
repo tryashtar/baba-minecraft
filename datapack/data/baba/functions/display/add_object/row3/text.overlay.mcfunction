@@ -1,1 +1,1 @@
-execute if entity @s[tag=disabled,scores={sprite=40976}] run data modify storage baba:main text append value '{"translate":"baba.text_overlay.disabled-true.row3","color":"#e5533b"}'
+execute if entity @s[tag=disabled] run data modify storage baba:main text append value '{"translate":"baba.text_overlay.disabled-true.row3","color":"#e5533b"}'
