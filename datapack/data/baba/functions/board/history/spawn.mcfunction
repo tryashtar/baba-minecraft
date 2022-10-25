@@ -1,4 +1,6 @@
 summon marker ~ ~ ~ {Tags:["spawn"]}
+execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite run data get storage baba:main previous.objects[0].scores.sprite
+execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] text run data get storage baba:main previous.objects[0].scores.text
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing run data get storage baba:main previous.objects[0].scores.facing
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] walk run data get storage baba:main previous.objects[0].scores.walk
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] number run data get storage baba:main previous.objects[0].scores.number

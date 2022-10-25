@@ -6,6 +6,7 @@ import json
 import yaml
 import os
 import math
+import hashlib
 
 # keeps track of all the object definitions
 class SpriteCollection:
@@ -14,11 +15,15 @@ class SpriteCollection:
     self.anim_frames = anim_frames
     self.objects = {}
     self.overlays = {}
-    self.properties = {}
+    self.properties = {
+      'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
+      'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
+      'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
+      'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
+    }
     self.palettes = data['palettes']
     for name,prop in data['properties'].items():
-      self.properties[name] = Metadata(name, prop['type'], prop.get('values'), prop.get('default'), prop['attributes'])
-    self.properties['color'] = Metadata('color', 'score', list(self.palettes['default'].keys()), None, ['spawn'])
+      self.properties[name] = Metadata(name=name, kind=prop['type'], values=prop.get('values'), default=prop.get('default'), attributes=prop['attributes'])
     self.grids = self.generate_grids()
 
   def get_obj(self, name, overlay):
@@ -104,7 +109,7 @@ class SpriteCollection:
                       for k,v in config['properties'].items():
                         spr[k] = v
                   # make keys the actual metadata objects instead of their names
-                  props = {}
+                  props = {self.properties['sprite']:adding.name}
                   if adding.name == 'text':
                     props[self.properties['z_layer']] = 20
                   for k,v in spr.items():
@@ -112,7 +117,7 @@ class SpriteCollection:
                       self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                     props[self.properties[k]] = v
                   # finalize the sprite and add each anim frame to its respective grid
-                  sprite = BabaSprite(adding, None, props, width, height, obj.get('shift', [0,0]))
+                  sprite = BabaSprite(None, props, width, height, obj.get('shift', [0,0]))
                   adding.sprites.append(sprite)
                   if spr_coords != coords:
                     self.add_to_grids(i, [sprite], image, anim_grids, spr_coords, framedir)
@@ -138,75 +143,91 @@ class SpriteCollection:
           s.image = img
       g.append((sprites, img))
 
-  def create_summon(self, sprite, properties):
-    types = {}
-    for k,v in properties.items():
-      if k.kind not in types:
-        types[k.kind] = {}
-      types[k.kind][k] = v
-    commands = []
-    for t,vals in types.items():
-      if t == 'tag':
-        # if the metadata value is set to a bool, we just check for a tag by that name
-        # if it's set to a string (like text 'part'), we check for a tag of the form <metadata>.<value>
-        for prop,val in vals.items():
-          if type(val) is bool:
-            commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}')
-          else:
-            commands.append(f'tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add {prop.name}.{val}')
-      elif t == 'score':
-        for prop,val in vals.items():
-          # for scores that are represented with strings, use the index of the values list
-          # add 1 because I prefer facing to be 1/2/3/4 instead of 0/1/2/3
-          commands.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {prop.name} {val if type(val) is int else prop.values.index(val)+1}')
-    return commands
 
-  def create_storage(self, sprite, properties, mode):
-    types = {}
-    for k,v in properties.items():
-      if k.kind not in types:
-        types[k.kind] = {}
-      types[k.kind][k] = v
-    if mode == 'create':
-      for k in self.properties.values():
-        if 'all' in k.attributes:
-          if k.kind not in types:
-            types[k.kind] = {}
-          if k not in types[k.kind]:
-            types[k.kind][k] = k.default
-    nbt = []
-    data = [] if mode == 'check_props' else [f'sprite:"{sprite.parent.name}"']
-    tags = []
-    if mode == 'create':
-      tags.append('baba.object')
-      if sprite.parent.name == 'text':
-        tags.append('is_text')
-    for t,vals in types.items():
-      if t == 'tag':
-        tags.extend(list(map(lambda x: x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name, filter(lambda x: type(x[1]) is str or x[1], vals.items()))))
-      elif t == 'score':
-        scores = []
-        for prop,val in vals.items():
-          scores.append(f'{prop.name}:{val if type(val) is int else prop.values.index(val)+1}')
-        nbt.append('scores:{'+','.join(scores)+'}')
-      elif t == 'nbt':
-        for prop,val in vals.items():
-          v = val
-          if type(v) is bool:
-            v = '1b' if v else '0b'
-          elif type(v) is str:
-            v = '"'+v+'"'
-          data.append(prop.name+':'+v)
-    if len(tags) > 0:
-      nbt.append('tags:['+','.join(['"'+x+'"' for x in tags])+']')
-    if len(data) > 0:
-      nbt.append('data:{'+','.join(data)+'}')
-    return ','.join(nbt)
+def filter_properties(properties, check):
+  props = properties.copy()
+  for p in properties:
+    if not check(p):
+      del props[p]
+  return props
+
+def create_selector(properties, extra_scores=None):
+  result = []
+  tags = []
+  nbt_true = []
+  nbt_false = []
+  scores = []
+  for m,val in properties.items():
+    if m.kind == 'tag':
+      tags.append(('!' if val == False else '') + m.convert(val))
+    elif m.kind == 'score':
+      scores.append(m.name+'='+m.convert(val))
+    elif m.kind == 'property':
+      if val:
+        nbt_true.append(f'"{m.name}"')
+      else:
+        nbt_false.append(f'"{m.name}"')
+    else:
+      raise ValueError(m.kind)
+  if len(tags) > 0:
+    result.append(','.join(['tag='+x for x in tags]))
+  if extra_scores is not None:
+    scores.extend(extra_scores)
+  if len(scores) > 0:
+    result.append('scores={'+','.join([x for x in scores])+'}')
+  if len(nbt_true) > 0:
+    result.append('nbt={data:{properties:['+','.join(nbt_true)+']}}')
+  for f in nbt_false:
+    result.append('nbt=!{data:{properties:['+f+']}}')
+  return ','.join(result)
+
+def create_summon(properties, extra_data=None):
+  tags = ['baba.object','spawn']
+  data = []
+  scores = []
+  nbt = []
+  for m,val in properties.items():
+    if m.kind == 'tag' and val != False:
+      tags.append(m.convert(val))
+    elif m.kind == 'score':
+      scores.append(f'{m.name}:{m.convert(val)}')
+    else:
+      data.append(f'{m.name}:{m.convert(val)}')
+  if len(tags) > 0:
+    nbt.append('Tags:[' + ','.join([f'"{x}"' for x in tags]) + ']')
+  if extra_data is not None:
+    data.extend(extra_data)
+  if len(scores) > 0:
+    data.append('scores:{' + ','.join(scores) + '}')
+  if len(data) > 0:
+    nbt.append('data:{' + ','.join(data) + '}')
+  return f'summon marker ~ ~ ~ {{{",".join(nbt)}}}'
+
+def create_storage(properties, data=None):
+  tags = []
+  scores = []
+  nbt = []
+  for m,val in properties.items():
+    if m.kind == 'tag' and val != False:
+      tags.append(m.convert(val))
+    elif m.kind == 'score':
+      scores.append(f'{m.name}:{m.convert(val)}')
+  if len(tags) > 0:
+    nbt.append('tags:[' + ','.join([f'"{x}"' for x in tags]) + ']')
+  if len(scores) > 0:
+    nbt.append('scores:{' + ','.join(scores) + '}')
+  if data is not None:
+    nbt.append('data:{' + data + '}')
+  return ','.join(nbt)
+
+def hash(string):
+  return int(hashlib.sha1(string.encode('utf-8')).hexdigest(), 16) % (2 ** 16)
 
 
 class BabaObject:
   def __init__(self, name, is_overlay):
     self.name = name
+    self.id = hash(name)
     self.sprites = []
     self.overlays = []
     self.property_mods = {}
@@ -214,99 +235,36 @@ class BabaObject:
 
   # get sprites that are unique when filtering by an attribute
   # for example, baba has many sprites, but only 4 are unique with respect to the facing property
-  def filter_sprites(self, attribute):
+  def filter_sprites(self, check):
     sprites = {}
     for s in self.sprites:
-      props = s.filter_properties(attribute)
+      props = filter_properties(s.properties, check)
       if not any(map(lambda x: x == props, sprites.values())):
         sprites[s] = props
     return sprites
 
 
 class BabaSprite:
-  def __init__(self, obj, image, properties, width, height, shift):
-    self.parent = obj
+  def __init__(self, image, properties, width, height, shift):
     self.image = image
     self.properties = properties
     self.width = width
     self.height = height
     self.shift = shift
 
-  # return a copy of properties, only including metadata with the given attribute
-  def filter_properties(self, attribute):
-    props = self.properties.copy()
-    for p in self.properties:
-      if attribute not in p.attributes:
-        del props[p]
-    return props
-
-  def score_check(self, prop, value):
-    if type(value) is int:
-      return str(value)
-    if type(value) is list:
-      return f'{value[0]}..{value[1]}'
-    if type(value) is str:
-      return str(prop.values.index(value)+1)
-
-  # lots of repeated code from create_summon above
-  def create_selector(self, properties, include_sprite, scores = None):
-    types = {}
-    for k,v in properties.items():
-      if k.kind not in types:
-        types[k.kind] = {}
-      types[k.kind][k] = v
-    result = []
-    nbt_true = []
-    nbt_false = []
-    tags = []
-    scores = scores if scores is not None else []
-    if include_sprite:
-      nbt_true.append('sprite:"'+self.parent.name+'"')
-    for t,vals in types.items():
-      if t == 'tag':
-        tags.extend([('' if (type(x[1]) is str or x[1]) else '!') + (x[0].name+'.'+x[1] if type(x[1]) is str else x[0].name) for x in vals.items()])
-      elif t == 'score':
-        scores.extend([x[0].name+'='+self.score_check(x[0], x[1]) for x in vals.items()])
-      elif t == 'property':
-        trues = list(filter(lambda x: x[1], vals.items()))
-        falses = list(filter(lambda x: not x[1], vals.items()))
-        if len(trues) > 0:
-          nbt_true.append('properties:['+','.join(['"'+x.name+'"' for x in vals])+']')
-        if len(falses) > 0:
-          nbt_false.append('properties:['+','.join(['"'+x.name+'"' for x in vals])+']')
-      elif t == 'nbt':
-        for prop,val in vals.items():
-          v = val
-          if type(v) is bool:
-            v = '1b' if v else '0b'
-          elif type(v) is str:
-            v = '"'+v+'"'
-          nbt_true.append(prop.name+':'+v)
-    if len(tags) > 0:
-      result.append(','.join(['tag='+x for x in tags]))
-    if len(scores) > 0:
-      result.append('scores={'+','.join([x for x in scores])+'}')
-    if len(nbt_true) > 0:
-      result.append('nbt={data:{'+','.join(nbt_true)+'}}')
-    if len(nbt_false) > 0:
-      result.append('nbt=!{data:{'+','.join(nbt_false)+'}}')
-    return ','.join(result)
-
   def display_val(self, val):
     if type(val) is list:
       return f'{val[0]}-{val[1]}'
     return str(val).lower()
 
-  def display(self, properties, sep1, sep2, sep3):
-    if len(properties) == 0:
-      return self.parent.name
-    result = self.parent.name + sep1
+  def display(self, properties, sep1, sep2):
+    result = ''
     for k,v in properties.items():
       if 'primary' in k.attributes:
-        result += self.display_val(v) + sep3
+        result += self.display_val(v) + sep1
     for k,v in properties.items():
       if 'primary' not in k.attributes:
-        result += k.name + sep2 + self.display_val(v) + sep3
+        result += k.name + sep2 + self.display_val(v) + sep1
     result = result[:-1]
     return result
 
@@ -338,12 +296,29 @@ class Grid:
 
 
 class Metadata:
-  def __init__(self, name, kind, values, default, attributes):
+  def __init__(self, name, kind, values=None, default=None, attributes=None, converter=None):
     self.name = name
     self.kind = kind
     self.values = values
     self.default = default
-    self.attributes = attributes
+    self.attributes = [] if attributes is None else attributes
+    self.converter = converter
+
+  def convert(self, value):
+    if self.kind == 'tag':
+      if isinstance(value, str):
+        return self.name + '.' + value
+      return self.name
+    if self.kind == 'score':
+      if self.converter == 'hash' and isinstance(value, str):
+        return str(hash(value))
+      if self.converter == 'hex':
+        return str(int(value[1:], 16))
+      if isinstance(value, str):
+        return str(self.values.index(value) + 1)
+      if isinstance(value, list):
+        return f'{value[0]}..{value[1]}'
+    return str(value)
 
 
 class TileManager:
@@ -419,7 +394,7 @@ class TileManager:
             for c in spriteset:
               self.charmap[(r,False)][c] = positive1
               self.charmap[(r,True)][c] = positive2
-              display = c.display(c.filter_properties('sprite'), '.', '-', '.')
+              display = c.display(filter_properties(c.properties, lambda x: 'sprite' in x.attributes), '.', '-')
               self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+c.shift[0])+positive1+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
               if r != self.rows-1:
                 self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
@@ -449,6 +424,12 @@ for j,grid in enumerate(anim_grids[0]):
     if 'file' in p:
       p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
   tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
+
+text_map = []
+for s in sprites.objects['text'].sprites:
+  text = s.properties[sprites.properties['text']]
+  text_map.append(f'{text}: {hash(text)}')
+tat.write_lines(text_map, 'text_ids.txt')
 
 text = [
   'data modify storage baba:main after_text set value []',
@@ -501,70 +482,65 @@ tat.write_lines(add_br,'datapack/data/baba/functions/display/add_border.mcfuncti
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[tag=is_text,scores={text_used=0}] run function baba:display/disabled_text'
+    'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/disabled_text'
   ]
   subfns = {}
   overlayfns = {}
   for pid,(pname,palette) in enumerate(sprites.palettes.items()):
     lines.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
     plines = []
-    for cid,color in enumerate(palette):
-      color = palette[color]
-      plines.append(f'execute if score color baba matches {cid+1} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
+    for color in palette.values():
+      plines.append(f'execute if score color baba matches {int(color[1:],16)} run data modify storage baba:main object_text set value [\'{{"color":"{color}","text":""}}\',\'""\']')
     plines.extend([
       f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
       f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
     ])
     tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
-    sprs = o.filter_sprites('sprite').items()
+    sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
     for s,p in sprs:
-      display = s.display(p,'.','-','.')
+      display = s.display(p,'.','-')
       if len(sprs) > 1:
         if o.name not in subfns:
-          subfns[o.name] = []
-        selector1 = s.create_selector(p, False)
-        selector2 = s.create_selector(p, False, ['move_frame=1..','move_dir=1'])
-        selector3 = s.create_selector(p, False, ['move_frame=1..','move_dir=2'])
-        if len(selector1) > 0:
-          subfns[o.name].append(f'execute if entity @s[{selector1}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
-          subfns[o.name].append(f'execute if entity @s[{selector2}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}.down"}}\'')
-          subfns[o.name].append(f'execute if entity @s[{selector3}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r-1}.down"}}\'')
-        else:
-          subfns[o.name].append(f'data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+          subfns[o.name] = (filter_properties(s.properties, lambda x: x.name=='sprite'),[])
+        p = p.copy()
+        del p[sprites.properties['sprite']]
+        adding_to = subfns[o.name][1]
       else:
-        selector1 = s.create_selector(p, True)
-        selector2 = s.create_selector(p, True, ['move_frame=1..','move_dir=1'])
-        selector3 = s.create_selector(p, True, ['move_frame=1..','move_dir=2'])
-        lines.append(f'execute if entity @s[{selector1}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
-        lines.append(f'execute if entity @s[{selector2}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}.down"}}\'')
-        lines.append(f'execute if entity @s[{selector3}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r-1}.down"}}\'')
+        adding_to = lines
+      selector1 = create_selector(p)
+      selector2 = create_selector(p, ['move_frame=1..','move_dir=1'])
+      selector3 = create_selector(p, ['move_frame=1..','move_dir=2'])
+      adding_to.append(f'execute if entity @s[{selector1}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}"}}\'')
+      adding_to.append(f'execute if entity @s[{selector2}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r}.down"}}\'')
+      adding_to.append(f'execute if entity @s[{selector3}] run data modify storage baba:main object_text[1] set value \'{{"translate":"baba.{display}.row{r-1}.down"}}\'')
 
     for ov in o.overlays:
       overlay = sprites.overlays[ov]
       if o.name not in overlayfns:
-        overlayfns[o.name] = []
+        overlayfns[o.name] = (filter_properties(s.properties, lambda x: x.name=='sprite'),[])
       for prop,op in overlay.property_mods.items():
-        overlayfns[o.name].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
+        overlayfns[o.name][1].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
         if op['operation'] == 'modulo':
-          overlayfns[o.name].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
+          overlayfns[o.name][1].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
       for ovspr in overlay.sprites:
-        props = ovspr.filter_properties('sprite')
+        props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
+        disp = ovspr.display(props,".","-")
         special_checks = []
         for p,v in props.copy().items():
           if p.name in overlay.property_mods:
             special_checks.append((p, props[p]))
             del props[p]
-        selector = ovspr.create_selector(props, False)
-        disp = ovspr.display(ovspr.filter_properties('sprite'),".","-",".")
+        del props[sprites.properties['sprite']]
+        selector = create_selector(props)
         final = 'execute '
         for prop,spec in special_checks:
-          final += f'if score {prop.name} baba matches {ovspr.score_check(prop, spec)} '
+          final += f'if score {prop.name} baba matches {prop.convert(spec)} '
         final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.properties[sprites.properties["color"]]}"}}\''
-        overlayfns[o.name].append(final)
+        overlayfns[o.name][1].append(final)
 
-  for name,fn in subfns.items():
-    lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}')
+  for name,(prp,fn) in subfns.items():
+    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/add_object/row{r}/{name}')
     tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
   lines.extend([
     'execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage baba:main object_text insert 1 value \'{"translate":"baba.nudge_right"}\'',
@@ -574,14 +550,14 @@ for r in range(manager.rows):
     'item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text',
     'data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name'
   ])
-  for name,fn in overlayfns.items():
-    lines.append(f'execute if entity @s[nbt={{data:{{sprite:"{name}"}}}}] run function baba:display/add_object/row{r}/{name}.overlay')
+  for name,(prp,fn) in overlayfns.items():
+    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/add_object/row{r}/{name}.overlay')
     tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.overlay.mcfunction')
   tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
 
 for i,grids in enumerate(sprites.grids):
   for spr,place in grids[0].placements.items():
-    if spr.parent.name == 'text':
+    if spr.properties[sprites.properties['sprite']] == 'text':
       text = spr.properties[sprites.properties['text']]
       if text in ('baba','is','you'):
         providers = []
@@ -599,12 +575,8 @@ blockstate = {}
 custom_model = []
 loot_table = []
 get_all = []
-spawn = [
-  'summon marker ~ ~ ~ {Tags:["baba.object","spawn"]}',
-  'data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.sprite set from storage baba:main spawn',
-  'execute if data storage baba:main {spawn:"text"} run data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.text set from storage baba:main spawn_text',
-  'execute if data storage baba:main {spawn:"text"} run tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add is_text',
-]
+spawn = []
+spawntext = []
 tat.delete_folder('resourcepack/assets/baba/models')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
@@ -614,14 +586,21 @@ tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 editor_sprites = {}
 objectlist = sorted(sprites.objects.values(), key=lambda x:x.name)
 for o in objectlist:
-  for sp, prp in o.filter_sprites('spawn').items():
-    summon = sprites.create_summon(sp, prp)
-    for s in summon:
-      if o.name == 'text':
-        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}",spawn_text:"{prp[sprites.properties["text"]]}"}} run {s}')
-      else:
-        spawn.append(f'execute if data storage baba:main {{spawn:"{o.name}"}} run {s}')
-  for spr in o.filter_sprites('editor'):
+  if o.name == 'text':
+    spawn.insert(0, f'execute if score spawn baba matches {o.id} run function baba:board/spawn_text')
+    for spr in o.sprites:
+      spr_text = spr.properties[sprites.properties['text']]
+      props = filter_properties(spr.properties, lambda x: "spawn" in x.attributes)
+      del props[sprites.properties['text']]
+      del props[sprites.properties['sprite']]
+      summon = create_summon(props, [f'text:"{spr_text}"'])
+      spawntext.append(f'execute if score spawn_text baba matches {hash(spr_text)} run {summon}')
+  else:
+    props = next(iter(o.filter_sprites(lambda x: 'spawn' in x.attributes).values()))
+    del props[sprites.properties['sprite']]
+    spawn.append(f'execute if score spawn baba matches {o.id} run {create_summon(props)}')
+
+  for spr in o.filter_sprites(lambda x: 'editor' in x.attributes):
     size = (spr.width, spr.height)
     if size not in editor_sprites:
       editor_sprites[size] = []
@@ -637,13 +616,15 @@ for c,grid in enumerate(colorgrids):
   grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_color.png')
 i = 0
 for o in objectlist:
-  sprs = o.filter_sprites('editor').items()
+  sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()
   for s,props in sprs:
     (inst, note) = note_block(i)
     i += 1
-    set_storage = sprites.create_storage(s, s.properties, 'create')
-    check_full = sprites.create_storage(s, props, 'check_full')
-    check_props = sprites.create_storage(s, props, 'check_props')
+    text_val = s.properties.get(sprites.properties['text'])
+    set_storage = create_storage(s.properties, None if text_val is None else f'text:"{text_val}"')
+    check_all = create_storage(props)
+    check_sprite = create_storage(filter_properties(props, lambda x: x.name=='sprite'))
+    check_rest = create_storage(filter_properties(props, lambda x: x.name!='sprite'))
     if inst not in pack_sub:
       pack_sub[inst] = []
       pack_lines.append(f'execute if block ~ ~ ~ note_block[instrument={inst}] run function baba:editor/pack/block/{inst}')
@@ -651,14 +632,14 @@ for o in objectlist:
     if len(sprs) > 1:
       if o.name not in unpack_sub:
         unpack_sub[o.name] = []
-        unpack_lines.append(f'execute if data storage baba:main tile{{data:{{sprite:"{o.name}"}}}} run function baba:editor/unpack/block/{o.name}')
+        unpack_lines.append(f'execute if data storage baba:main tile{{{check_sprite}}} run function baba:editor/unpack/block/{o.name}')
       unpack_sub[o.name].extend([
-        f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]',
-        f'execute if data storage baba:main tile{{{check_props}}} run setblock ~ ~-1 ~ {instrument(inst)}'
+        f'execute if data storage baba:main tile{{{check_rest}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]',
+        f'execute if data storage baba:main tile{{{check_rest}}} run setblock ~ ~-1 ~ {instrument(inst)}'
       ])
     else:
-      unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
-      unpack_lines.append(f'execute if data storage baba:main tile{{{check_full}}} run setblock ~ ~-1 ~ {instrument(inst)}')
+      unpack_lines.append(f'execute if data storage baba:main tile{{{check_all}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
+      unpack_lines.append(f'execute if data storage baba:main tile{{{check_all}}} run setblock ~ ~-1 ~ {instrument(inst)}')
     for g,grid in enumerate(colorgrids):
       if s in grid.placements:
         placement = grid.placements[s]
@@ -666,12 +647,12 @@ for o in objectlist:
         y_uvsize = 16/grid.height
         break
     model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
-    description = s.display(props, '.','-','.')
+    description = s.display(props, '.','-')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
     loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
     tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
-    simple_name = s.display(props, ' ','=',' ')
+    simple_name = s.display(props, ' ','=')
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
@@ -690,11 +671,19 @@ unpack_lines.extend([
   'data remove storage baba:main level[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
-spawn.extend([
-  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing 4',
-  'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] move_frame 0',
-])
+spawn.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
+spawntext.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
+for m in sprites.properties.values():
+  if 'spawn' in m.attributes and m.kind == 'score' and m.name not in ('sprite','text'):
+      spawn.append(f'execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s data.scores.{m.name}')
+  if 'all' in m.attributes and 'spawn' not in m.attributes:
+    if m.kind == 'score':
+      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
+    else:
+      raise ValueError(m.name)
+spawn.append('data remove entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.scores')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
+tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
