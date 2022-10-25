@@ -5,10 +5,11 @@
          "advances": {
             "\u0006": -1,
             "\u000b": -396,
-            "\u26af": -2.0,
-            "\u26b0": 1.0,
-            "\u26b1": 2.0,
-            "\u26b2": -3.0
+            "\u0019": -13,
+            "\u26b0": -2.0,
+            "\u26b1": 1.0,
+            "\u26b2": 2.0,
+            "\u26b3": -3.0
          }
       },
       {
@@ -102,7 +103,7 @@
          "height": 12,
          "ascent": 0,
          "chars": [
-            "\u0019"
+            "\u001a"
          ]
       },
       {
@@ -111,7 +112,7 @@
          "height": 12,
          "ascent": -12,
          "chars": [
-            "\u001a"
+            "\u001b"
          ]
       },
       {
@@ -120,7 +121,7 @@
          "height": 12,
          "ascent": -24,
          "chars": [
-            "\u001b"
+            "\u001c"
          ]
       },
       {
@@ -129,7 +130,7 @@
          "height": 12,
          "ascent": -36,
          "chars": [
-            "\u001c"
+            "\u001d"
          ]
       },
       {
@@ -138,7 +139,7 @@
          "height": 12,
          "ascent": -48,
          "chars": [
-            "\u001d"
+            "\u001e"
          ]
       },
       {
@@ -147,7 +148,7 @@
          "height": 12,
          "ascent": -60,
          "chars": [
-            "\u001e"
+            "\u001f"
          ]
       },
       {
@@ -156,7 +157,7 @@
          "height": 12,
          "ascent": -72,
          "chars": [
-            "\u001f"
+            " "
          ]
       },
       {
@@ -165,7 +166,7 @@
          "height": 12,
          "ascent": -84,
          "chars": [
-            " "
+            "!"
          ]
       },
       {
@@ -174,7 +175,7 @@
          "height": 12,
          "ascent": -96,
          "chars": [
-            "!"
+            "\""
          ]
       },
       {
@@ -183,7 +184,7 @@
          "height": 12,
          "ascent": -108,
          "chars": [
-            "\""
+            "#"
          ]
       },
       {
@@ -192,7 +193,7 @@
          "height": 12,
          "ascent": -120,
          "chars": [
-            "#"
+            "$"
          ]
       },
       {
@@ -201,7 +202,7 @@
          "height": 12,
          "ascent": -132,
          "chars": [
-            "$"
+            "%"
          ]
       },
       {
@@ -210,7 +211,7 @@
          "height": 12,
          "ascent": -144,
          "chars": [
-            "%"
+            "&"
          ]
       },
       {
@@ -219,7 +220,7 @@
          "height": 12,
          "ascent": -156,
          "chars": [
-            "&"
+            "'"
          ]
       },
       {
@@ -228,7 +229,7 @@
          "height": 12,
          "ascent": -168,
          "chars": [
-            "'"
+            "("
          ]
       },
       {
@@ -237,7 +238,7 @@
          "height": 12,
          "ascent": -180,
          "chars": [
-            "("
+            ")"
          ]
       },
       {
@@ -246,7 +247,7 @@
          "height": 12,
          "ascent": -192,
          "chars": [
-            ")"
+            "*"
          ]
       },
       {
@@ -255,7 +256,7 @@
          "height": 12,
          "ascent": -204,
          "chars": [
-            "*"
+            "+"
          ]
       },
       {
@@ -264,7 +265,7 @@
          "height": 12,
          "ascent": -216,
          "chars": [
-            "+"
+            ","
          ]
       },
       {
@@ -272,37 +273,6 @@
          "file": "baba:grid0_anim2.png",
          "height": 12,
          "ascent": 0.0,
-         "chars": [
-            ",Pt\u0098\u00bd\u00e1\u0105\u0129\u014d\u0171\u0195\u01b9\u01dd\u0201\u0225\u0249\u026d\u0291\u02b5\u02d9\u02fd\u0321\u0345\u0369",
-            "\u038d\u03b1\u03d5\u03f9\u041d\u0441\u0465\u0489\u04ad\u04d1\u04f5\u0519\u053d\u0561\u0585\u05aa\u05dd\u0622\u0646\u0685\u06a9\u06cd\u06f1\u071c",
-            "\u0743\u076c\u0790\u07c8\u07ec\u0818\u084b\u08ac\u08dc\u0900\u0924\u0948\u096c\u0990\u09b4\u09d8\u09fc\u0a20\u0a44\u0a68\u0a8c\u0ab0\u0ad4\u0af8",
-            "\u0b1c\u0b40\u0b64\u0b88\u0bac\u0bd0\u0bf4\u0c18\u0c3c\u0c60\u0c84\u0ca8\u0ccc\u0cf0\u0d14\u0d38\u0d5c\u0d80\u0da4\u0dc8\u0dec\u0e10\u0e34\u0e58",
-            "\u0e7c\u0ea0\u0ec4\u0ee8\u0f0c\u0f30\u0f54\u0f78\u0f9c\u0fc0\u0fe4\u1008\u102c\u1050\u1074\u1098\u10bc\u10e0\u1104\u1128\u114c\u1170\u1194\u11b8",
-            "\u11dc\u1200\u1224\u1248\u126c\u1290\u12b4\u12d8\u12fc\u1320\u1344\u1368\u138c\u13b0\u13d4\u13f8\u141c\u1440\u1464\u1488\u14ac\u14d0\u14f4\u1518",
-            "\u153c\u1560\u1584\u15a8\u15cc\u15f0\u1614\u1638\u165c\u1680\u16a4\u16c8\u16ec\u1710\u1734\u1758\u177c\u17a0\u17c4\u17e8\u180c\u1830\u1854\u1878",
-            "\u189c\u18c0\u18e4\u1908\u192c\u1950\u1974\u1998\u19bc\u19e0\u1a04\u1a28\u1a4c\u1a70\u1a94\u1ab8\u1adc\u1b00\u1b24\u1b48\u1b6c\u1b90\u1bb4\u1bd8",
-            "\u1bfc\u1c20\u1c44\u1c68\u1c8c\u1cb0\u1cd4\u1cf8\u1d1c\u1d40\u1d64\u1d88\u1dac\u1dd0\u1df4\u1e18\u1e3c\u1e60\u1e84\u1ea8\u1ecc\u1ef0\u1f14\u1f38",
-            "\u1f5c\u1f80\u1fa4\u1fc8\u1fec\u2011\u2035\u2059\u207d\u20a1\u20c5\u20e9\u210d\u2131\u2155\u2179\u219d\u21c1\u21e5\u2209\u222d\u2251\u2275\u2299",
-            "\u22bd\u22e1\u2305\u2329\u234d\u2371\u2395\u23b9\u23dd\u2401\u2425\u2449\u246d\u2491\u24b5\u24d9\u24fd\u2521\u2545\u2569\u258d\u25b1\u25d5\u25f9",
-            "\u261d\u2641\u2665\u2689\u26ad\u26d5\u26f9\u271d\u2741\u2765\u2789\u27ad\u27d1\u27f5\u2819\u283d\u2861\u2885\u28a9\u28cd\u28f1\u2915\u2939\u295d",
-            "\u2981\u29a5\u29c9\u29ed\u2a11\u2a35\u2a59\u2a7d\u2aa1\u2ac5\u2ae9\u2b0d\u2b31\u2b55\u2b79\u2b9d\u2bc1\u2be5\u2c09\u2c2d\u2c51\u2c75\u2c99\u2cbd",
-            "\u2ce1\u2d05\u2d29\u2d4d\u2d71\u2d95\u2db9\u2ddd\u2e01\u2e25\u2e49\u2e6d\u2e91\u2eb5\u2ed9\u2efd\u2f21\u2f45\u2f69\u2f8d\u2fb1\u2fd5\u2ff9\u301d",
-            "\u3041\u3065\u3089\u30ad\u30d1\u30f5\u3119\u313d\u3161\u3185\u31a9\u31cd\u31f1\u3215\u3239\u325d\u3281\u32a5\u32c9\u32ed\u3311\u3335\u3359\u337d",
-            "\u33a1\u33c5\u33e9\u340d\u3431\u3455\u3479\u349d\u34c1\u34e5\u3509\u352d\u3551\u3575\u3599\u35bd\u35e1\u3605\u3629\u364d\u3671\u3695\u36b9\u36dd",
-            "\u3701\u3725\u3749\u376d\u3791\u37b5\u37d9\u37fd\u3821\u3845\u3869\u388d\u38b1\u38d5\u38f9\u391d\u3941\u3965\u3989\u39ad\u39d1\u39f5\u3a19\u3a3d",
-            "\u3a61\u3a85\u3aa9\u3acd\u3af1\u3b15\u3b39\u3b5d\u3b81\u3ba5\u3bc9\u3bed\u3c11\u3c35\u3c59\u3c7d\u3ca1\u3cc5\u3ce9\u3d0d\u3d31\u3d55\u3d79\u3d9d",
-            "\u3dc1\u3de5\u3e09\u3e2d\u3e51\u3e75\u3e99\u3ebd\u3ee1\u3f05\u3f29\u3f4d\u3f71\u3f95\u3fb9\u3fdd\u4001\u4025\u4049\u406d\u4091\u40b5\u40d9\u40fd",
-            "\u4121\u4145\u4169\u418d\u41b1\u41d5\u41f9\u421d\u4241\u4265\u4289\u42ad\u42d1\u42f5\u4319\u433d\u4361\u4385\u43a9\u43cd\u43f1\u4415\u4439\u445d",
-            "\u4481\u44a5\u44c9\u44ed\u4511\u4535\u4559\u457d\u45a1\u45c5\u45e9\u460d\u4631\u4655\u4679\u469d\u46c1\u46e5\u4709\u472d\u4751\u4775\u4799\u47bd",
-            "\u47e1\u4805\u4829\u484d\u4871\u4895\u48b9\u48dd\u4901\u4925\u4949\u496d\u4991\u49b5\u49d9\u49fd\u4a21\u4a45\u4a69\u4a8d\u4ab1\u4ad5\u4af9\u4b1d",
-            "\u4b41\u4b65\u4b89\u4bad\u4bd1\u4bf5\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
-         ]
-      },
-      {
-         "type": "bitmap",
-         "file": "baba:grid0_anim2.png",
-         "height": 12,
-         "ascent": -6.0,
          "chars": [
             "-Qu\u0099\u00be\u00e2\u0106\u012a\u014e\u0172\u0196\u01ba\u01de\u0202\u0226\u024a\u026e\u0292\u02b6\u02da\u02fe\u0322\u0346\u036a",
             "\u038e\u03b2\u03d6\u03fa\u041e\u0442\u0466\u048a\u04ae\u04d2\u04f6\u051a\u053e\u0562\u0586\u05ab\u05de\u0623\u0647\u0686\u06aa\u06ce\u06f2\u071d",
@@ -333,7 +303,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -12.0,
+         "ascent": -6.0,
          "chars": [
             ".Rv\u009a\u00bf\u00e3\u0107\u012b\u014f\u0173\u0197\u01bb\u01df\u0203\u0227\u024b\u026f\u0293\u02b7\u02db\u02ff\u0323\u0347\u036b",
             "\u038f\u03b3\u03d7\u03fb\u041f\u0443\u0467\u048b\u04af\u04d3\u04f7\u051b\u053f\u0563\u0587\u05ac\u05df\u0624\u0660\u0687\u06ab\u06cf\u06f3\u071e",
@@ -346,7 +316,7 @@
             "\u1bfe\u1c22\u1c46\u1c6a\u1c8e\u1cb2\u1cd6\u1cfa\u1d1e\u1d42\u1d66\u1d8a\u1dae\u1dd2\u1df6\u1e1a\u1e3e\u1e62\u1e86\u1eaa\u1ece\u1ef2\u1f16\u1f3a",
             "\u1f5e\u1f82\u1fa6\u1fca\u1fee\u2013\u2037\u205b\u207f\u20a3\u20c7\u20eb\u210f\u2133\u2157\u217b\u219f\u21c3\u21e7\u220b\u222f\u2253\u2277\u229b",
             "\u22bf\u22e3\u2307\u232b\u234f\u2373\u2397\u23bb\u23df\u2403\u2427\u244b\u246f\u2493\u24b7\u24db\u24ff\u2523\u2547\u256b\u258f\u25b3\u25d7\u25fb",
-            "\u261f\u2643\u2667\u268b\u26b3\u26d7\u26fb\u271f\u2743\u2767\u278b\u27af\u27d3\u27f7\u281b\u283f\u2863\u2887\u28ab\u28cf\u28f3\u2917\u293b\u295f",
+            "\u261f\u2643\u2667\u268b\u26af\u26d7\u26fb\u271f\u2743\u2767\u278b\u27af\u27d3\u27f7\u281b\u283f\u2863\u2887\u28ab\u28cf\u28f3\u2917\u293b\u295f",
             "\u2983\u29a7\u29cb\u29ef\u2a13\u2a37\u2a5b\u2a7f\u2aa3\u2ac7\u2aeb\u2b0f\u2b33\u2b57\u2b7b\u2b9f\u2bc3\u2be7\u2c0b\u2c2f\u2c53\u2c77\u2c9b\u2cbf",
             "\u2ce3\u2d07\u2d2b\u2d4f\u2d73\u2d97\u2dbb\u2ddf\u2e03\u2e27\u2e4b\u2e6f\u2e93\u2eb7\u2edb\u2eff\u2f23\u2f47\u2f6b\u2f8f\u2fb3\u2fd7\u2ffb\u301f",
             "\u3043\u3067\u308b\u30af\u30d3\u30f7\u311b\u313f\u3163\u3187\u31ab\u31cf\u31f3\u3217\u323b\u325f\u3283\u32a7\u32cb\u32ef\u3313\u3337\u335b\u337f",
@@ -364,7 +334,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -18.0,
+         "ascent": -12.0,
          "chars": [
             "/Sw\u009b\u00c0\u00e4\u0108\u012c\u0150\u0174\u0198\u01bc\u01e0\u0204\u0228\u024c\u0270\u0294\u02b8\u02dc\u0300\u0324\u0348\u036c",
             "\u0390\u03b4\u03d8\u03fc\u0420\u0444\u0468\u048c\u04b0\u04d4\u04f8\u051c\u0540\u0564\u0588\u05ad\u05e0\u0625\u0661\u0688\u06ac\u06d0\u06f4\u071f",
@@ -395,7 +365,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -24.0,
+         "ascent": -18.0,
          "chars": [
             "0Tx\u009c\u00c1\u00e5\u0109\u012d\u0151\u0175\u0199\u01bd\u01e1\u0205\u0229\u024d\u0271\u0295\u02b9\u02dd\u0301\u0325\u0349\u036d",
             "\u0391\u03b5\u03d9\u03fd\u0421\u0445\u0469\u048d\u04b1\u04d5\u04f9\u051d\u0541\u0565\u0589\u05ae\u05e1\u0626\u0662\u0689\u06ad\u06d1\u06f5\u0720",
@@ -426,7 +396,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -30.0,
+         "ascent": -24.0,
          "chars": [
             "1Uy\u009d\u00c2\u00e6\u010a\u012e\u0152\u0176\u019a\u01be\u01e2\u0206\u022a\u024e\u0272\u0296\u02ba\u02de\u0302\u0326\u034a\u036e",
             "\u0392\u03b6\u03da\u03fe\u0422\u0446\u046a\u048e\u04b2\u04d6\u04fa\u051e\u0542\u0566\u058a\u05af\u05e2\u0627\u0663\u068a\u06ae\u06d2\u06f6\u0721",
@@ -457,7 +427,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -36.0,
+         "ascent": -30.0,
          "chars": [
             "2Vz\u009e\u00c3\u00e7\u010b\u012f\u0153\u0177\u019b\u01bf\u01e3\u0207\u022b\u024f\u0273\u0297\u02bb\u02df\u0303\u0327\u034b\u036f",
             "\u0393\u03b7\u03db\u03ff\u0423\u0447\u046b\u048f\u04b3\u04d7\u04fb\u051f\u0543\u0567\u058b\u05b0\u05e3\u0628\u0664\u068b\u06af\u06d3\u06f7\u0722",
@@ -488,7 +458,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -42.0,
+         "ascent": -36.0,
          "chars": [
             "3W{\u009f\u00c4\u00e8\u010c\u0130\u0154\u0178\u019c\u01c0\u01e4\u0208\u022c\u0250\u0274\u0298\u02bc\u02e0\u0304\u0328\u034c\u0370",
             "\u0394\u03b8\u03dc\u0400\u0424\u0448\u046c\u0490\u04b4\u04d8\u04fc\u0520\u0544\u0568\u058c\u05b1\u05e4\u0629\u0665\u068c\u06b0\u06d4\u06f8\u0723",
@@ -519,7 +489,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -48.0,
+         "ascent": -42.0,
          "chars": [
             "4X|\u00a0\u00c5\u00e9\u010d\u0131\u0155\u0179\u019d\u01c1\u01e5\u0209\u022d\u0251\u0275\u0299\u02bd\u02e1\u0305\u0329\u034d\u0371",
             "\u0395\u03b9\u03dd\u0401\u0425\u0449\u046d\u0491\u04b5\u04d9\u04fd\u0521\u0545\u0569\u058d\u05b2\u05e5\u062a\u0666\u068d\u06b1\u06d5\u06f9\u0724",
@@ -550,7 +520,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -54.0,
+         "ascent": -48.0,
          "chars": [
             "5Y}\u00a1\u00c6\u00ea\u010e\u0132\u0156\u017a\u019e\u01c2\u01e6\u020a\u022e\u0252\u0276\u029a\u02be\u02e2\u0306\u032a\u034e\u0372",
             "\u0396\u03ba\u03de\u0402\u0426\u044a\u046e\u0492\u04b6\u04da\u04fe\u0522\u0546\u056a\u058e\u05b3\u05e6\u062b\u0667\u068e\u06b2\u06d6\u06fa\u0725",
@@ -581,7 +551,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -60.0,
+         "ascent": -54.0,
          "chars": [
             "6Z~\u00a2\u00c7\u00eb\u010f\u0133\u0157\u017b\u019f\u01c3\u01e7\u020b\u022f\u0253\u0277\u029b\u02bf\u02e3\u0307\u032b\u034f\u0373",
             "\u0397\u03bb\u03df\u0403\u0427\u044b\u046f\u0493\u04b7\u04db\u04ff\u0523\u0547\u056b\u058f\u05b4\u05e7\u062c\u0668\u068f\u06b3\u06d7\u06fb\u0726",
@@ -612,7 +582,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -66.0,
+         "ascent": -60.0,
          "chars": [
             "7[\u007f\u00a3\u00c8\u00ec\u0110\u0134\u0158\u017c\u01a0\u01c4\u01e8\u020c\u0230\u0254\u0278\u029c\u02c0\u02e4\u0308\u032c\u0350\u0374",
             "\u0398\u03bc\u03e0\u0404\u0428\u044c\u0470\u0494\u04b8\u04dc\u0500\u0524\u0548\u056c\u0591\u05b5\u0600\u062d\u0669\u0690\u06b4\u06d8\u06fc\u0727",
@@ -643,7 +613,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -72.0,
+         "ascent": -66.0,
          "chars": [
             "8\\\u0080\u00a4\u00c9\u00ed\u0111\u0135\u0159\u017d\u01a1\u01c5\u01e9\u020d\u0231\u0255\u0279\u029d\u02c1\u02e5\u0309\u032d\u0351\u0375",
             "\u0399\u03bd\u03e1\u0405\u0429\u044d\u0471\u0495\u04b9\u04dd\u0501\u0525\u0549\u056d\u0592\u05b6\u0601\u062e\u066a\u0691\u06b5\u06d9\u06fd\u0728",
@@ -674,7 +644,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -78.0,
+         "ascent": -72.0,
          "chars": [
             "9]\u0081\u00a5\u00ca\u00ee\u0112\u0136\u015a\u017e\u01a2\u01c6\u01ea\u020e\u0232\u0256\u027a\u029e\u02c2\u02e6\u030a\u032e\u0352\u0376",
             "\u039a\u03be\u03e2\u0406\u042a\u044e\u0472\u0496\u04ba\u04de\u0502\u0526\u054a\u056e\u0593\u05b7\u0602\u062f\u066b\u0692\u06b6\u06da\u06fe\u0729",
@@ -705,7 +675,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -84.0,
+         "ascent": -78.0,
          "chars": [
             ":^\u0082\u00a6\u00cb\u00ef\u0113\u0137\u015b\u017f\u01a3\u01c7\u01eb\u020f\u0233\u0257\u027b\u029f\u02c3\u02e7\u030b\u032f\u0353\u0377",
             "\u039b\u03bf\u03e3\u0407\u042b\u044f\u0473\u0497\u04bb\u04df\u0503\u0527\u054b\u056f\u0594\u05b8\u0603\u0630\u066c\u0693\u06b7\u06db\u06ff\u072a",
@@ -736,7 +706,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -90.0,
+         "ascent": -84.0,
          "chars": [
             ";_\u0083\u00a8\u00cc\u00f0\u0114\u0138\u015c\u0180\u01a4\u01c8\u01ec\u0210\u0234\u0258\u027c\u02a0\u02c4\u02e8\u030c\u0330\u0354\u0378",
             "\u039c\u03c0\u03e4\u0408\u042c\u0450\u0474\u0498\u04bc\u04e0\u0504\u0528\u054c\u0570\u0595\u05b9\u0604\u0631\u0670\u0694\u06b8\u06dc\u0700\u072b",
@@ -767,7 +737,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -96.0,
+         "ascent": -90.0,
          "chars": [
             "<`\u0084\u00a9\u00cd\u00f1\u0115\u0139\u015d\u0181\u01a5\u01c9\u01ed\u0211\u0235\u0259\u027d\u02a1\u02c5\u02e9\u030d\u0331\u0355\u0379",
             "\u039d\u03c1\u03e5\u0409\u042d\u0451\u0475\u0499\u04bd\u04e1\u0505\u0529\u054d\u0571\u0596\u05ba\u0605\u0632\u0671\u0695\u06b9\u06dd\u0701\u072c",
@@ -798,7 +768,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -102.0,
+         "ascent": -96.0,
          "chars": [
             "=a\u0085\u00aa\u00ce\u00f2\u0116\u013a\u015e\u0182\u01a6\u01ca\u01ee\u0212\u0236\u025a\u027e\u02a2\u02c6\u02ea\u030e\u0332\u0356\u037a",
             "\u039e\u03c2\u03e6\u040a\u042e\u0452\u0476\u049a\u04be\u04e2\u0506\u052a\u054e\u0572\u0597\u05bb\u0606\u0633\u0672\u0696\u06ba\u06de\u0702\u0730",
@@ -829,7 +799,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -108.0,
+         "ascent": -102.0,
          "chars": [
             ">b\u0086\u00ab\u00cf\u00f3\u0117\u013b\u015f\u0183\u01a7\u01cb\u01ef\u0213\u0237\u025b\u027f\u02a3\u02c7\u02eb\u030f\u0333\u0357\u037b",
             "\u039f\u03c3\u03e7\u040b\u042f\u0453\u0477\u049b\u04bf\u04e3\u0507\u052b\u054f\u0573\u0598\u05bc\u0607\u0634\u0673\u0697\u06bb\u06df\u0703\u0731",
@@ -860,7 +830,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -114.0,
+         "ascent": -108.0,
          "chars": [
             "?c\u0087\u00ac\u00d0\u00f4\u0118\u013c\u0160\u0184\u01a8\u01cc\u01f0\u0214\u0238\u025c\u0280\u02a4\u02c8\u02ec\u0310\u0334\u0358\u037c",
             "\u03a0\u03c4\u03e8\u040c\u0430\u0454\u0478\u049c\u04c0\u04e4\u0508\u052c\u0550\u0574\u0599\u05bd\u0609\u0635\u0674\u0698\u06bc\u06e0\u0704\u0732",
@@ -891,7 +861,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -120.0,
+         "ascent": -114.0,
          "chars": [
             "@d\u0088\u00ad\u00d1\u00f5\u0119\u013d\u0161\u0185\u01a9\u01cd\u01f1\u0215\u0239\u025d\u0281\u02a5\u02c9\u02ed\u0311\u0335\u0359\u037d",
             "\u03a1\u03c5\u03e9\u040d\u0431\u0455\u0479\u049d\u04c1\u04e5\u0509\u052d\u0551\u0575\u059a\u05bf\u060a\u0636\u0675\u0699\u06bd\u06e1\u0705\u0733",
@@ -922,7 +892,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -126.0,
+         "ascent": -120.0,
          "chars": [
             "Ae\u0089\u00ae\u00d2\u00f6\u011a\u013e\u0162\u0186\u01aa\u01ce\u01f2\u0216\u023a\u025e\u0282\u02a6\u02ca\u02ee\u0312\u0336\u035a\u037e",
             "\u03a2\u03c6\u03ea\u040e\u0432\u0456\u047a\u049e\u04c2\u04e6\u050a\u052e\u0552\u0576\u059b\u05c1\u060c\u0637\u0676\u069a\u06be\u06e2\u0706\u0734",
@@ -953,7 +923,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -132.0,
+         "ascent": -126.0,
          "chars": [
             "Bf\u008a\u00af\u00d3\u00f7\u011b\u013f\u0163\u0187\u01ab\u01cf\u01f3\u0217\u023b\u025f\u0283\u02a7\u02cb\u02ef\u0313\u0337\u035b\u037f",
             "\u03a3\u03c7\u03eb\u040f\u0433\u0457\u047b\u049f\u04c3\u04e7\u050b\u052f\u0553\u0577\u059c\u05c2\u060e\u0638\u0677\u069b\u06bf\u06e3\u0707\u0735",
@@ -984,7 +954,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -138.0,
+         "ascent": -132.0,
          "chars": [
             "Cg\u008b\u00b0\u00d4\u00f8\u011c\u0140\u0164\u0188\u01ac\u01d0\u01f4\u0218\u023c\u0260\u0284\u02a8\u02cc\u02f0\u0314\u0338\u035c\u0380",
             "\u03a4\u03c8\u03ec\u0410\u0434\u0458\u047c\u04a0\u04c4\u04e8\u050c\u0530\u0554\u0578\u059d\u05c4\u060f\u0639\u0678\u069c\u06c0\u06e4\u0708\u0736",
@@ -1015,7 +985,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -144.0,
+         "ascent": -138.0,
          "chars": [
             "Dh\u008c\u00b1\u00d5\u00f9\u011d\u0141\u0165\u0189\u01ad\u01d1\u01f5\u0219\u023d\u0261\u0285\u02a9\u02cd\u02f1\u0315\u0339\u035d\u0381",
             "\u03a5\u03c9\u03ed\u0411\u0435\u0459\u047d\u04a1\u04c5\u04e9\u050d\u0531\u0555\u0579\u059e\u05c5\u0610\u063a\u0679\u069d\u06c1\u06e5\u0709\u0737",
@@ -1046,7 +1016,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -150.0,
+         "ascent": -144.0,
          "chars": [
             "Ei\u008d\u00b2\u00d6\u00fa\u011e\u0142\u0166\u018a\u01ae\u01d2\u01f6\u021a\u023e\u0262\u0286\u02aa\u02ce\u02f2\u0316\u033a\u035e\u0382",
             "\u03a6\u03ca\u03ee\u0412\u0436\u045a\u047e\u04a2\u04c6\u04ea\u050e\u0532\u0556\u057a\u059f\u05c7\u0611\u063b\u067a\u069e\u06c2\u06e6\u070a\u0738",
@@ -1077,7 +1047,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -156.0,
+         "ascent": -150.0,
          "chars": [
             "Fj\u008e\u00b3\u00d7\u00fb\u011f\u0143\u0167\u018b\u01af\u01d3\u01f7\u021b\u023f\u0263\u0287\u02ab\u02cf\u02f3\u0317\u033b\u035f\u0383",
             "\u03a7\u03cb\u03ef\u0413\u0437\u045b\u047f\u04a3\u04c7\u04eb\u050f\u0533\u0557\u057b\u05a0\u05d3\u0612\u063c\u067b\u069f\u06c3\u06e7\u0711\u0739",
@@ -1108,7 +1078,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -162.0,
+         "ascent": -156.0,
          "chars": [
             "Gk\u008f\u00b4\u00d8\u00fc\u0120\u0144\u0168\u018c\u01b0\u01d4\u01f8\u021c\u0240\u0264\u0288\u02ac\u02d0\u02f4\u0318\u033c\u0360\u0384",
             "\u03a8\u03cc\u03f0\u0414\u0438\u045c\u0480\u04a4\u04c8\u04ec\u0510\u0534\u0558\u057c\u05a1\u05d4\u0613\u063d\u067c\u06a0\u06c4\u06e8\u0713\u073a",
@@ -1139,7 +1109,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -168.0,
+         "ascent": -162.0,
          "chars": [
             "Hl\u0090\u00b5\u00d9\u00fd\u0121\u0145\u0169\u018d\u01b1\u01d5\u01f9\u021d\u0241\u0265\u0289\u02ad\u02d1\u02f5\u0319\u033d\u0361\u0385",
             "\u03a9\u03cd\u03f1\u0415\u0439\u045d\u0481\u04a5\u04c9\u04ed\u0511\u0535\u0559\u057d\u05a2\u05d5\u0614\u063e\u067d\u06a1\u06c5\u06e9\u0714\u073b",
@@ -1170,7 +1140,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -174.0,
+         "ascent": -168.0,
          "chars": [
             "Im\u0091\u00b6\u00da\u00fe\u0122\u0146\u016a\u018e\u01b2\u01d6\u01fa\u021e\u0242\u0266\u028a\u02ae\u02d2\u02f6\u031a\u033e\u0362\u0386",
             "\u03aa\u03ce\u03f2\u0416\u043a\u045e\u0482\u04a6\u04ca\u04ee\u0512\u0536\u055a\u057e\u05a3\u05d6\u0615\u063f\u067e\u06a2\u06c6\u06ea\u0715\u073c",
@@ -1201,7 +1171,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -180.0,
+         "ascent": -174.0,
          "chars": [
             "Jn\u0092\u00b7\u00db\u00ff\u0123\u0147\u016b\u018f\u01b3\u01d7\u01fb\u021f\u0243\u0267\u028b\u02af\u02d3\u02f7\u031b\u033f\u0363\u0387",
             "\u03ab\u03cf\u03f3\u0417\u043b\u045f\u0483\u04a7\u04cb\u04ef\u0513\u0537\u055b\u057f\u05a4\u05d7\u0616\u0640\u067f\u06a3\u06c7\u06eb\u0716\u073d",
@@ -1232,7 +1202,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -186.0,
+         "ascent": -180.0,
          "chars": [
             "Ko\u0093\u00b8\u00dc\u0100\u0124\u0148\u016c\u0190\u01b4\u01d8\u01fc\u0220\u0244\u0268\u028c\u02b0\u02d4\u02f8\u031c\u0340\u0364\u0388",
             "\u03ac\u03d0\u03f4\u0418\u043c\u0460\u0484\u04a8\u04cc\u04f0\u0514\u0538\u055c\u0580\u05a5\u05d8\u0617\u0641\u0680\u06a4\u06c8\u06ec\u0717\u073e",
@@ -1263,7 +1233,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -192.0,
+         "ascent": -186.0,
          "chars": [
             "Lp\u0094\u00b9\u00dd\u0101\u0125\u0149\u016d\u0191\u01b5\u01d9\u01fd\u0221\u0245\u0269\u028d\u02b1\u02d5\u02f9\u031d\u0341\u0365\u0389",
             "\u03ad\u03d1\u03f5\u0419\u043d\u0461\u0485\u04a9\u04cd\u04f1\u0515\u0539\u055d\u0581\u05a6\u05d9\u0618\u0642\u0681\u06a5\u06c9\u06ed\u0718\u073f",
@@ -1294,7 +1264,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -198.0,
+         "ascent": -192.0,
          "chars": [
             "Mq\u0095\u00ba\u00de\u0102\u0126\u014a\u016e\u0192\u01b6\u01da\u01fe\u0222\u0246\u026a\u028e\u02b2\u02d6\u02fa\u031e\u0342\u0366\u038a",
             "\u03ae\u03d2\u03f6\u041a\u043e\u0462\u0486\u04aa\u04ce\u04f2\u0516\u053a\u055e\u0582\u05a7\u05da\u0619\u0643\u0682\u06a6\u06ca\u06ee\u0719\u0740",
@@ -1325,7 +1295,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -204.0,
+         "ascent": -198.0,
          "chars": [
             "Nr\u0096\u00bb\u00df\u0103\u0127\u014b\u016f\u0193\u01b7\u01db\u01ff\u0223\u0247\u026b\u028f\u02b3\u02d7\u02fb\u031f\u0343\u0367\u038b",
             "\u03af\u03d3\u03f7\u041b\u043f\u0463\u0487\u04ab\u04cf\u04f3\u0517\u053b\u055f\u0583\u05a8\u05db\u061a\u0644\u0683\u06a7\u06cb\u06ef\u071a\u0741",
@@ -1356,7 +1326,7 @@
          "type": "bitmap",
          "file": "baba:grid0_anim2.png",
          "height": 12,
-         "ascent": -210.0,
+         "ascent": -204.0,
          "chars": [
             "Os\u0097\u00bc\u00e0\u0104\u0128\u014c\u0170\u0194\u01b8\u01dc\u0200\u0224\u0248\u026c\u0290\u02b4\u02d8\u02fc\u0320\u0344\u0368\u038c",
             "\u03b0\u03d4\u03f8\u041c\u0440\u0464\u0488\u04ac\u04d0\u04f4\u0518\u053c\u0560\u0584\u05a9\u05dc\u0621\u0645\u0684\u06a8\u06cc\u06f0\u071b\u0742",
@@ -1385,18 +1355,40 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:grid1_anim2.png",
-         "height": 16.0,
-         "ascent": 2.0,
+         "file": "baba:grid0_anim2.png",
+         "height": 12,
+         "ascent": -210.0,
          "chars": [
-            "\u4c19"
+            "Pt\u0098\u00bd\u00e1\u0105\u0129\u014d\u0171\u0195\u01b9\u01dd\u0201\u0225\u0249\u026d\u0291\u02b5\u02d9\u02fd\u0321\u0345\u0369\u038d",
+            "\u03b1\u03d5\u03f9\u041d\u0441\u0465\u0489\u04ad\u04d1\u04f5\u0519\u053d\u0561\u0585\u05aa\u05dd\u0622\u0646\u0685\u06a9\u06cd\u06f1\u071c\u0743",
+            "\u076c\u0790\u07c8\u07ec\u0818\u084b\u08ac\u08dc\u0900\u0924\u0948\u096c\u0990\u09b4\u09d8\u09fc\u0a20\u0a44\u0a68\u0a8c\u0ab0\u0ad4\u0af8\u0b1c",
+            "\u0b40\u0b64\u0b88\u0bac\u0bd0\u0bf4\u0c18\u0c3c\u0c60\u0c84\u0ca8\u0ccc\u0cf0\u0d14\u0d38\u0d5c\u0d80\u0da4\u0dc8\u0dec\u0e10\u0e34\u0e58\u0e7c",
+            "\u0ea0\u0ec4\u0ee8\u0f0c\u0f30\u0f54\u0f78\u0f9c\u0fc0\u0fe4\u1008\u102c\u1050\u1074\u1098\u10bc\u10e0\u1104\u1128\u114c\u1170\u1194\u11b8\u11dc",
+            "\u1200\u1224\u1248\u126c\u1290\u12b4\u12d8\u12fc\u1320\u1344\u1368\u138c\u13b0\u13d4\u13f8\u141c\u1440\u1464\u1488\u14ac\u14d0\u14f4\u1518\u153c",
+            "\u1560\u1584\u15a8\u15cc\u15f0\u1614\u1638\u165c\u1680\u16a4\u16c8\u16ec\u1710\u1734\u1758\u177c\u17a0\u17c4\u17e8\u180c\u1830\u1854\u1878\u189c",
+            "\u18c0\u18e4\u1908\u192c\u1950\u1974\u1998\u19bc\u19e0\u1a04\u1a28\u1a4c\u1a70\u1a94\u1ab8\u1adc\u1b00\u1b24\u1b48\u1b6c\u1b90\u1bb4\u1bd8\u1bfc",
+            "\u1c20\u1c44\u1c68\u1c8c\u1cb0\u1cd4\u1cf8\u1d1c\u1d40\u1d64\u1d88\u1dac\u1dd0\u1df4\u1e18\u1e3c\u1e60\u1e84\u1ea8\u1ecc\u1ef0\u1f14\u1f38\u1f5c",
+            "\u1f80\u1fa4\u1fc8\u1fec\u2011\u2035\u2059\u207d\u20a1\u20c5\u20e9\u210d\u2131\u2155\u2179\u219d\u21c1\u21e5\u2209\u222d\u2251\u2275\u2299\u22bd",
+            "\u22e1\u2305\u2329\u234d\u2371\u2395\u23b9\u23dd\u2401\u2425\u2449\u246d\u2491\u24b5\u24d9\u24fd\u2521\u2545\u2569\u258d\u25b1\u25d5\u25f9\u261d",
+            "\u2641\u2665\u2689\u26ad\u26d5\u26f9\u271d\u2741\u2765\u2789\u27ad\u27d1\u27f5\u2819\u283d\u2861\u2885\u28a9\u28cd\u28f1\u2915\u2939\u295d\u2981",
+            "\u29a5\u29c9\u29ed\u2a11\u2a35\u2a59\u2a7d\u2aa1\u2ac5\u2ae9\u2b0d\u2b31\u2b55\u2b79\u2b9d\u2bc1\u2be5\u2c09\u2c2d\u2c51\u2c75\u2c99\u2cbd\u2ce1",
+            "\u2d05\u2d29\u2d4d\u2d71\u2d95\u2db9\u2ddd\u2e01\u2e25\u2e49\u2e6d\u2e91\u2eb5\u2ed9\u2efd\u2f21\u2f45\u2f69\u2f8d\u2fb1\u2fd5\u2ff9\u301d\u3041",
+            "\u3065\u3089\u30ad\u30d1\u30f5\u3119\u313d\u3161\u3185\u31a9\u31cd\u31f1\u3215\u3239\u325d\u3281\u32a5\u32c9\u32ed\u3311\u3335\u3359\u337d\u33a1",
+            "\u33c5\u33e9\u340d\u3431\u3455\u3479\u349d\u34c1\u34e5\u3509\u352d\u3551\u3575\u3599\u35bd\u35e1\u3605\u3629\u364d\u3671\u3695\u36b9\u36dd\u3701",
+            "\u3725\u3749\u376d\u3791\u37b5\u37d9\u37fd\u3821\u3845\u3869\u388d\u38b1\u38d5\u38f9\u391d\u3941\u3965\u3989\u39ad\u39d1\u39f5\u3a19\u3a3d\u3a61",
+            "\u3a85\u3aa9\u3acd\u3af1\u3b15\u3b39\u3b5d\u3b81\u3ba5\u3bc9\u3bed\u3c11\u3c35\u3c59\u3c7d\u3ca1\u3cc5\u3ce9\u3d0d\u3d31\u3d55\u3d79\u3d9d\u3dc1",
+            "\u3de5\u3e09\u3e2d\u3e51\u3e75\u3e99\u3ebd\u3ee1\u3f05\u3f29\u3f4d\u3f71\u3f95\u3fb9\u3fdd\u4001\u4025\u4049\u406d\u4091\u40b5\u40d9\u40fd\u4121",
+            "\u4145\u4169\u418d\u41b1\u41d5\u41f9\u421d\u4241\u4265\u4289\u42ad\u42d1\u42f5\u4319\u433d\u4361\u4385\u43a9\u43cd\u43f1\u4415\u4439\u445d\u4481",
+            "\u44a5\u44c9\u44ed\u4511\u4535\u4559\u457d\u45a1\u45c5\u45e9\u460d\u4631\u4655\u4679\u469d\u46c1\u46e5\u4709\u472d\u4751\u4775\u4799\u47bd\u47e1",
+            "\u4805\u4829\u484d\u4871\u4895\u48b9\u48dd\u4901\u4925\u4949\u496d\u4991\u49b5\u49d9\u49fd\u4a21\u4a45\u4a69\u4a8d\u4ab1\u4ad5\u4af9\u4b1d\u4b41",
+            "\u4b65\u4b89\u4bad\u4bd1\u4bf5\u4c19\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
          ]
       },
       {
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -4.0,
+         "ascent": 2.0,
          "chars": [
             "\u4c1a"
          ]
@@ -1405,7 +1397,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -10.0,
+         "ascent": -4.0,
          "chars": [
             "\u4c1b"
          ]
@@ -1414,7 +1406,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -16.0,
+         "ascent": -10.0,
          "chars": [
             "\u4c1c"
          ]
@@ -1423,7 +1415,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -22.0,
+         "ascent": -16.0,
          "chars": [
             "\u4c1d"
          ]
@@ -1432,7 +1424,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -28.0,
+         "ascent": -22.0,
          "chars": [
             "\u4c1e"
          ]
@@ -1441,7 +1433,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -34.0,
+         "ascent": -28.0,
          "chars": [
             "\u4c1f"
          ]
@@ -1450,7 +1442,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -40.0,
+         "ascent": -34.0,
          "chars": [
             "\u4c20"
          ]
@@ -1459,7 +1451,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -46.0,
+         "ascent": -40.0,
          "chars": [
             "\u4c21"
          ]
@@ -1468,7 +1460,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -52.0,
+         "ascent": -46.0,
          "chars": [
             "\u4c22"
          ]
@@ -1477,7 +1469,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -58.0,
+         "ascent": -52.0,
          "chars": [
             "\u4c23"
          ]
@@ -1486,7 +1478,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -64.0,
+         "ascent": -58.0,
          "chars": [
             "\u4c24"
          ]
@@ -1495,7 +1487,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -70.0,
+         "ascent": -64.0,
          "chars": [
             "\u4c25"
          ]
@@ -1504,7 +1496,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -76.0,
+         "ascent": -70.0,
          "chars": [
             "\u4c26"
          ]
@@ -1513,7 +1505,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -82.0,
+         "ascent": -76.0,
          "chars": [
             "\u4c27"
          ]
@@ -1522,7 +1514,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -88.0,
+         "ascent": -82.0,
          "chars": [
             "\u4c28"
          ]
@@ -1531,7 +1523,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -94.0,
+         "ascent": -88.0,
          "chars": [
             "\u4c29"
          ]
@@ -1540,7 +1532,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -100.0,
+         "ascent": -94.0,
          "chars": [
             "\u4c2a"
          ]
@@ -1549,7 +1541,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -106.0,
+         "ascent": -100.0,
          "chars": [
             "\u4c2b"
          ]
@@ -1558,7 +1550,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -112.0,
+         "ascent": -106.0,
          "chars": [
             "\u4c2c"
          ]
@@ -1567,7 +1559,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -118.0,
+         "ascent": -112.0,
          "chars": [
             "\u4c2d"
          ]
@@ -1576,7 +1568,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -124.0,
+         "ascent": -118.0,
          "chars": [
             "\u4c2e"
          ]
@@ -1585,7 +1577,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -130.0,
+         "ascent": -124.0,
          "chars": [
             "\u4c2f"
          ]
@@ -1594,7 +1586,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -136.0,
+         "ascent": -130.0,
          "chars": [
             "\u4c30"
          ]
@@ -1603,7 +1595,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -142.0,
+         "ascent": -136.0,
          "chars": [
             "\u4c31"
          ]
@@ -1612,7 +1604,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -148.0,
+         "ascent": -142.0,
          "chars": [
             "\u4c32"
          ]
@@ -1621,7 +1613,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -154.0,
+         "ascent": -148.0,
          "chars": [
             "\u4c33"
          ]
@@ -1630,7 +1622,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -160.0,
+         "ascent": -154.0,
          "chars": [
             "\u4c34"
          ]
@@ -1639,7 +1631,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -166.0,
+         "ascent": -160.0,
          "chars": [
             "\u4c35"
          ]
@@ -1648,7 +1640,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -172.0,
+         "ascent": -166.0,
          "chars": [
             "\u4c36"
          ]
@@ -1657,7 +1649,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -178.0,
+         "ascent": -172.0,
          "chars": [
             "\u4c37"
          ]
@@ -1666,7 +1658,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -184.0,
+         "ascent": -178.0,
          "chars": [
             "\u4c38"
          ]
@@ -1675,7 +1667,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -190.0,
+         "ascent": -184.0,
          "chars": [
             "\u4c39"
          ]
@@ -1684,7 +1676,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -196.0,
+         "ascent": -190.0,
          "chars": [
             "\u4c3a"
          ]
@@ -1693,7 +1685,7 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -202.0,
+         "ascent": -196.0,
          "chars": [
             "\u4c3b"
          ]
@@ -1702,9 +1694,18 @@
          "type": "bitmap",
          "file": "baba:grid1_anim2.png",
          "height": 16.0,
-         "ascent": -208.0,
+         "ascent": -202.0,
          "chars": [
             "\u4c3c"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:grid1_anim2.png",
+         "height": 16.0,
+         "ascent": -208.0,
+         "chars": [
+            "\u4c3d"
          ]
       }
    ]

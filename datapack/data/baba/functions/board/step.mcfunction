@@ -21,7 +21,7 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shift"]}}] at 
 execute if score direction baba matches 1.. as @e[type=marker,tag=baba.object,nbt={data:{properties:["select"]}}] at @s run function baba:board/movement/select
 
 function baba:board/rules/update
-execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
+execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms:[{}]}}] at @s run function baba:board/rules/transform
 execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # each property is checked in turn, not each object
@@ -33,7 +33,7 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["win"]}}] at @s run function baba:board/interact/win
 
 function baba:board/rules/update
-execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
+execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms:[{}]}}] at @s run function baba:board/rules/transform
 execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # graphical updates
@@ -41,7 +41,7 @@ execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba
 execute as @e[type=marker,tag=baba.object,nbt=!{data:{properties:["sleep"]}}] run function baba:board/graphics/frame
 execute as @e[type=marker,tag=baba.object] at @s unless block ~ ~-1 ~ black_concrete run function baba:board/interact/destroy
 
-function baba:display/update_text
+execute unless entity @e[type=marker,tag=baba.object,scores={move_frame=0..}] run function baba:display/update_text
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 # if nothing changed, don't record this step
