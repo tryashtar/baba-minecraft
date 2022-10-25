@@ -1,12 +1,6 @@
-execute if score direction baba matches 1 positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"line"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 1 positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"level"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 1 positioned ~1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["you"]}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 2 positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"line"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 2 positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"level"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 2 positioned ~-1 ~ ~ if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["you"]}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 3 positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"line"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 3 positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"level"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 3 positioned ~ ~ ~-1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["you"]}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 4 positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"line"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 4 positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{sprite:"level"}},limit=1] run tp @s ~ ~ ~
-execute if score direction baba matches 4 positioned ~ ~ ~1 if entity @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["you"]}},limit=1] run tp @s ~ ~ ~
+execute if score direction baba matches 1 rotated 270 0 positioned ^ ^ ^1 run function baba:board/movement/select_move
+execute if score direction baba matches 2 rotated 90 0 positioned ^ ^ ^1 run function baba:board/movement/select_move
+execute if score direction baba matches 3 rotated 180 0 positioned ^ ^ ^1 run function baba:board/movement/select_move
+execute if score direction baba matches 4 rotated 0 0 positioned ^ ^ ^1 run function baba:board/movement/select_move
+scoreboard players operation @s facing = direction baba
+scoreboard players operation @s move_dir = direction baba

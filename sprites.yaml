@@ -25,9 +25,6 @@ properties:
   connector:
     type: tag
     attributes: [spawn]
-  text:
-    type: nbt
-    attributes: [editor, sprite, primary, spawn]
   part:
     type: tag
     attributes: [spawn]
@@ -49,6 +46,10 @@ properties:
   disabled:
     type: tag
     attributes: [sprite]
+  move_frame:
+    type: score
+    default: 0
+    attributes: [all]
 
 grids:
 - size: [24, 24]
@@ -59,15 +60,23 @@ grids:
         text color: '#d9396a'
         object color: '#ffffff'
         coords: [1, 1]
+        properties:
+          z_layer: 18
       - name: keke
         color: '#e5533b'
         coords: [1, 751]
+        properties:
+          z_layer: 18
       - name: me
         color: '#8e5e9c'
         coords: [1, 901]
+        properties:
+          z_layer: 18
       - name: robot
         color: '#737373'
         coords: [1, 1051]
+        properties:
+          z_layer: 17
       sprites:
       - text
       - permute:
@@ -84,6 +93,8 @@ grids:
         text color: '#5f9dd1'
         object color: '#3e7688'
         coords: [1, 85]
+        properties:
+          z_layer: 9
       sprites:
       - text
       - permute:
@@ -93,27 +104,45 @@ grids:
       - name: bird
         color: '#e49950'
         coords: [1, 322]
+        properties:
+          z_layer: 17
       - name: bug
         color: '#c29e46'
+        properties:
+          z_layer: 17
       - name: crab
         color: '#e5533b'
+        properties:
+          z_layer: 17
       - name: rocket
         color: '#737373'
         coords: [1, 847]
+        properties:
+          z_layer: 15
       - name: skull
         color: '#82261c'
+        properties:
+          z_layer: 17
       - name: ghost
         color: '#eb91ca'
         coords: [276, 622]
+        properties:
+          z_layer: 17
       - name: statue
         color: '#737373'
         coords: [276, 922]
+        properties:
+          z_layer: 17
       - name: bolt
         color: '#ede285'
         coords: [551, 322]
+        properties:
+          z_layer: 16
       - name: hand
         color: '#ffffff'
         coords: [551, 622]
+        properties:
+          z_layer: 17
       sprites:
       - text
       - permute:
@@ -122,12 +151,18 @@ grids:
       - name: bat
         color: '#8e5e9c'
         coords: [1, 1081]
+        properties:
+          z_layer: 14
       - name: bubble
         color: '#83c8e5'
         coords: [276, 1081]
+        properties:
+          z_layer: 12
       - name: cog
         color: '#737373'
         coords: [1, 1167]
+        properties:
+          z_layer: 16
       sprites:
       - text
       - permute:
@@ -139,15 +174,23 @@ grids:
         text color: '#4b5c1c'
         object color: '#5c8339'
         coords: [1, 1]
+        properties:
+          z_layer: 15
       - null
       - null
       - name: flag
         color: '#ede285'
+        properties:
+          z_layer: 17
       - null
       - name: key
         color: '#ede285'
+        properties:
+          z_layer: 16
       - name: love
         color: '#eb91ca'
+        properties:
+          z_layer: 16
       - null
       - null
       - null
@@ -155,94 +198,152 @@ grids:
       - name: ufo
         object color: '#eb91ca'
         text color: '#d9396a'
+        properties:
+          z_layer: 17
       - name: door
         color: '#e5533b'
         coords: [126, 151]
+        properties:
+          z_layer: 15
       - name: flower
         color: '#557ae0'
+        properties:
+          z_layer: 12
       - null
       - null
       - null
       - name: pillar
         color: '#737373'
+        properties:
+          z_layer: 16
       - name: rock
         text color: '#90673e'
         object color: '#c29e46'
+        properties:
+          z_layer: 16
       - null
       - name: tile
         text color: '#737373'
         object color: '#242424'
+        properties:
+          z_layer: 4
       - name: fruit
         color: '#e5533b'
         coords: [376, 226]
+        properties:
+          z_layer: 16
       - null
       - null
       - name: moon
         color: '#ede285'
+        properties:
+          z_layer: 16
       - null
       - null
       - name: star
         color: '#ede285'
+        properties:
+          z_layer: 16
       - name: tree
         color: '#5c8339'
+        properties:
+          z_layer: 16
       - name: box
         text color: '#90673e'
         object color: '#c29e46'
         coords: [751, 1]
+        properties:
+          z_layer: 16
       - null
       - name: fire
         text color: '#e5533b'
         object color: '#e49950'
+        properties:
+          z_layer: 15
       - name: gate
         color: '#e5533b'
+        properties:
+          z_layer: 15
       - name: jelly
         color: '#83c8e5'
+        properties:
+          z_layer: 17
       - null
       - null
       - name: reed
         color: '#c29e46'
+        properties:
+          z_layer: 16
       - name: sign
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 16
       - name: sun
         color: '#ede285'
+        properties:
+          z_layer: 14
       - name: fungi
         text color: '#c29e46'
         object color: '#90673e'
         coords: [501, 226]
+        properties:
+          z_layer: 8
       - name: husk
         color: '#90673e'
+        properties:
+          z_layer: 15
       - name: leaf
         color: '#ede285'
+        properties:
+          z_layer: 8
       - name: orb
         color: '#d9396a'
+        properties:
+          z_layer: 17
       - null
       - null
       - null
       - name: trees
         color: '#5c8339'
+        properties:
+          z_layer: 9
       - name: cake
         color: '#eb91ca'
         coords: [251, 76]
+        properties:
+          z_layer: 17
       - name: dot
         color: '#ffffff'
+        properties:
+          z_layer: 12
       - name: foliage
         text color: '#e49950'
         object color: '#503f24'
+        properties:
+          z_layer: 17
       - null
       - null
       - null
       - null
       - name: rose
         color: '#e5533b'
+        properties:
+          z_layer: 16
       - name: dust
         color: '#ede285'
         coords: [626, 151]
+        properties:
+          z_layer: 12
       - name: fungus
         color: '#90673e'
+        properties:
+          z_layer: 16
       - name: husks
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 9
       - null
       - null
       - null
@@ -250,9 +351,13 @@ grids:
       - name: stump
         text color: '#c29e46'
         object color: '#90673e'
+        properties:
+          z_layer: 12
       - name: starfish
         color: '#e49950'
         coords: [251, 910]
+        properties:
+          z_layer: 16
       sprites:
       - text
       - {}
@@ -260,6 +365,8 @@ grids:
       - name: blossom
         color: '#ffffff'
         coords: [101, 985]
+        properties:
+          z_layer: 20
       - name: text
         color: '#ede285'
         coords: [376, 826]
@@ -396,6 +503,8 @@ grids:
         color: '#3e7688'
         coords: [1, 1]
         overlays: [level_icon]
+        properties:
+          z_layer: 17
       sprites:
       - {}
     - overlays:
@@ -713,46 +822,74 @@ grids:
       - name: cloud
         color: '#83c8e5'
         coords: [1, 451]
+        properties:
+          z_layer: 14
       - name: fence
         color: '#90673e'
+        properties:
+          z_layer: 14
       - null
       - name: grass
         text color: '#a5b13f'
         object color: '#303824'
+        properties:
+          z_layer: 10
       - name: hedge
         color: '#4b5c1c'
+        properties:
+          z_layer: 14
       - name: ice
         text color: '#5f9dd1'
         object color: '#3e7688'
+        properties:
+          z_layer: 9
       - shared:
         - name: lava
           color: '#e49950'
+          properties:
+            z_layer: 2
         - name: water
           color: '#5f9dd1'
           text coords: [1, 1576]
+          properties:
+            z_layer: 2
         - name: bog
           text color: '#a5b13f'
           object color: '#4b5c1c'
           text coords: [1, 76]
+          properties:
+            z_layer: 2
       - name: line
         color: '#ffffff'
+        properties:
+          z_layer: 20
       - name: pipe
         color: '#293141'
+        properties:
+          z_layer: 14
       - null
       - null
       - name: rubble
         color: '#503f24'
+        properties:
+          z_layer: 8
       - null
       - null
       - name: wall
         text color: '#737373'
         object color: '#293141'
+        properties:
+          z_layer: 14
       - name: brick
         text color: '#90673e'
         object color: '#362e22'
+        properties:
+          z_layer: 10
         coords: [1, 151]
       - name: cliff
         color: '#90673e'
+        properties:
+          z_layer: 14
       properties:
         connector: true
       sprites:
@@ -782,46 +919,48 @@ grids:
         color: '#eb91ca'
         coords: [376, 851]
         frames: right
+        properties:
+          z_layer: 20
       sprites:
       - {}
 
 palettes:
   default:
-    '#242424': '#242424' # 1
-    '#15181f': '#15181f' # 2
-    '#421910': '#421910' # 3
-    '#603981': '#603981' # 4
-    '#682e4c': '#682e4c' # 5
-    '#303824': '#303824' # 6
-    '#503f24': '#503f24' # 7
-    '#737373': '#737373' # 8
-    '#293141': '#293141' # 9
-    '#82261c': '#82261c' # 10
-    '#8e5e9c': '#8e5e9c' # 11
-    '#d9396a': '#d9396a' # 12
-    '#4b5c1c': '#4b5c1c' # 13
-    '#90673e': '#90673e' # 14
-    '#c3c3c3': '#c3c3c3' # 15
-    '#3e7688': '#3e7688' # 16
-    '#e5533b': '#e5533b' # 17
-    '#4759b1': '#4759b1' # 18
-    '#eb91ca': '#eb91ca' # 19
-    '#5c8339': '#5c8339' # 20
-    '#c29e46': '#c29e46' # 21
-    '#ffffff': '#ffffff' # 22
-    '#5f9dd1': '#5f9dd1' # 23
-    '#e49950': '#e49950' # 24
-    '#557ae0': '#557ae0' # 25
-    '#294891': '#294891' # 26
-    '#a5b13f': '#a5b13f' # 27
-    '#362e22': '#362e22' # 28
-    '#080808': '#080808' # 29
-    '#83c8e5': '#83c8e5' # 30
-    '#ede285': '#ede285' # 31
-    '#ffbd47': '#ffbd47' # 32
-    '#73abf3': '#73abf3' # 33
-    '#b6d340': '#b6d340' # 34
-    '#0b0b0e': '#0b0b0e' # 35
+    '#242424': '#242424' # 1 / 2368548
+    '#15181f': '#15181f' # 2 / 1382431
+    '#421910': '#421910' # 3 / 4331792
+    '#603981': '#603981' # 4 / 6306177
+    '#682e4c': '#682e4c' # 5 / 6827596
+    '#303824': '#303824' # 6 / 3160100
+    '#503f24': '#503f24' # 7 / 5259044
+    '#737373': '#737373' # 8 / 7566195
+    '#293141': '#293141' # 9 / 2699585
+    '#82261c': '#82261c' # 10 / 8529436
+    '#8e5e9c': '#8e5e9c' # 11 / 9330332
+    '#d9396a': '#d9396a' # 12 / 14236010
+    '#4b5c1c': '#4b5c1c' # 13 / 4938780
+    '#90673e': '#90673e' # 14 / 9463614
+    '#c3c3c3': '#c3c3c3' # 15 / 12829635
+    '#3e7688': '#3e7688' # 16 / 4093576
+    '#e5533b': '#e5533b' # 17 / 15029051
+    '#4759b1': '#4759b1' # 18 / 4676017
+    '#eb91ca': '#eb91ca' # 19 / 15438282
+    '#5c8339': '#5c8339' # 20 / 6062905
+    '#c29e46': '#c29e46' # 21 / 12754502
+    '#ffffff': '#ffffff' # 22 / 16777215
+    '#5f9dd1': '#5f9dd1' # 23 / 6266321
+    '#e49950': '#e49950' # 24 / 14981456
+    '#557ae0': '#557ae0' # 25 / 5602016
+    '#294891': '#294891' # 26 / 2705553
+    '#a5b13f': '#a5b13f' # 27 / 10858815
+    '#362e22': '#362e22' # 28 / 3550754
+    '#080808': '#080808' # 29 / 526344
+    '#83c8e5': '#83c8e5' # 30 / 8636645
+    '#ede285': '#ede285' # 31 / 15590021
+    '#ffbd47': '#ffbd47' # 32 / 16760135
+    '#73abf3': '#73abf3' # 33 / 7580659
+    '#b6d340': '#b6d340' # 34 / 11981632
+    '#0b0b0e': '#0b0b0e' # 35 / 723726
   underwater:
     '#242424': '#242424'
     '#15181f': '#242c47'

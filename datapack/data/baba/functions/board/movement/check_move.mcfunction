@@ -1,10 +1,10 @@
 # this function adds the 'can_move' tag to the current object and anything it will push, if there is room to move
 tag @s add can_move
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["push"]}}] run function baba:board/movement/check_move
+execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=!move_success,distance=..0.1,nbt={data:{properties:["push"]}}] run function baba:board/movement/check_move
 
 # if anything pushable in front of you can't move, then NOTHING in front of you can move, and you can't either
-execute positioned ^ ^ ^1 if entity @e[type=marker,tag=baba.object,tag=!can_move,distance=..0.1,nbt={data:{properties:["push"]}},limit=1] run tag @s remove can_move
-execute positioned ^ ^ ^1 if entity @e[type=marker,tag=baba.object,tag=!can_move,distance=..0.1,nbt={data:{properties:["push"]}},limit=1] run tag @e[type=marker,tag=baba.object,tag=can_move,distance=..0.1,nbt={data:{properties:["push"]}}] remove can_move
+execute positioned ^ ^ ^1 if entity @e[type=marker,tag=baba.object,tag=!move_success,tag=!can_move,distance=..0.1,nbt={data:{properties:["push"]}},limit=1] run tag @s remove can_move
+execute positioned ^ ^ ^1 if entity @e[type=marker,tag=baba.object,tag=!move_success,tag=!can_move,distance=..0.1,nbt={data:{properties:["push"]}},limit=1] run tag @e[type=marker,tag=baba.object,tag=can_move,distance=..0.1,nbt={data:{properties:["push"]}}] remove can_move
 
 # anything can move onto a weak object, even if stop
 # open objects can move onto shut objects, even if stop, and vice versa

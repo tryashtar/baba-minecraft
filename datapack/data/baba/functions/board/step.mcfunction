@@ -16,11 +16,13 @@ tag @e[type=marker,tag=baba.object,tag=move_done] remove move_done
 function baba:board/movement/process/shift
 tag @e[type=marker,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=marker,tag=baba.object,tag=move_done] remove move_done
+execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shift"]}}] at @s run scoreboard players operation @e[type=marker,tag=baba.object,distance=..0.1] facing = @s facing
 
 execute if score direction baba matches 1.. as @e[type=marker,tag=baba.object,nbt={data:{properties:["select"]}}] at @s run function baba:board/movement/select
 
 function baba:board/rules/update
-function baba:board/rules/process_transforms
+execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
+execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # each property is checked in turn, not each object
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["sink"]}}] at @s run function baba:board/interact/sink
@@ -31,7 +33,8 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["win"]}}] at @s run function baba:board/interact/win
 
 function baba:board/rules/update
-function baba:board/rules/process_transforms
+execute as @e[type=marker,tag=baba.object,tag=!transformed] at @s if data entity @s data.transforms[0] run function baba:board/rules/transform
+execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # graphical updates
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
@@ -41,3 +44,5 @@ execute as @e[type=marker,tag=baba.object] at @s unless block ~ ~-1 ~ black_conc
 function baba:display/update_text
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
+# if nothing changed, don't record this step
+execute unless entity @e[type=marker,tag=baba.space,scores={repeats=1}] run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1
