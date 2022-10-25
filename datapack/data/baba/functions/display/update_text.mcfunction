@@ -1,6 +1,8 @@
 data modify storage baba:main text set value ['""']
-scoreboard players set column baba 0
-execute positioned 0.0 0.0 0.0 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run function baba:display/add_background
+function baba:display/background
+data modify storage baba:main text append from storage baba:main end_column
+execute positioned 0.0 0.0 0.0 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append from storage baba:main column
+data modify storage baba:main text append from storage baba:main end_column
 execute positioned 0.0 0.0 0.0 as @e[type=marker,tag=baba.space,dx=0.5,dy=1,dz=40] run data modify storage baba:main text append value '{"translate":"baba.overlay"}'
 data modify storage baba:main text append value '{"translate":"baba.overlay"}'
 execute if score level_background baba matches 1 run data modify storage baba:main text append value '{"translate":"baba.background.island"}'

@@ -457,24 +457,25 @@ def instrument(inst):
 
 tat.delete_folder('datapack/data/baba/functions/display/add_object')
 tat.delete_folder('datapack/data/baba/functions/display/palette')
-add_bg = ['scoreboard players add column baba 1']
+tat.delete_folder('datapack/data/baba/functions/display/background')
+add_bg = []
 for pid,(pname,palette) in enumerate(sprites.palettes.items()):
-  for h in range(1, manager.columns):
-    jsons1=[]
-    jsons2=[]
+  add_bg.append(f'execute if score palette baba matches {pid} run function baba:display/background/{pname}')
+  pbg = []
+  for h in range(1, manager.columns+1):
+    jsons1=[{"translate":f"baba.level_border.row-1","color":palette["#15181f"]}]
+    jsons2=[{"translate":f"baba.level_border.row-1","color":palette["#15181f"]}]
     for r in range(h):
       jsons1.append({"translate":f"baba.level_border.row{r}","color":palette["#080808"]})
-      jsons2.append({"translate":f"baba.level_border.row{r}","color":palette["#15181f"]})
-    jsons1.append({"translate":f"baba.level_border.row-1","color":palette["#15181f"]})
+      jsons2.append({"translate":f"baba.level_border.row{r}","color":palette["#15181f"]})    
     jsons1.append({"translate":f"baba.level_border.row{h}","color":palette["#15181f"]})
-    jsons2.append({"translate":f"baba.level_border.row-1","color":palette["#15181f"]})
     jsons2.append({"translate":f"baba.level_border.row{h}","color":palette["#15181f"]})
     jsons1.append({"translate":f"baba.empty_tile"})
     jsons2.append({"translate":f"baba.empty_tile"})
-    add_bg.append(f'execute if score palette baba matches {pid} if score column baba matches 1 if score level_height baba matches {h} run data modify storage baba:main text append value \'{json.dumps(jsons2, separators=(",",":"))}\'')
-    add_bg.append(f'execute if score palette baba matches {pid} if score level_height baba matches {h} run data modify storage baba:main text append value \'{json.dumps(jsons1, separators=(",",":"))}\'')
-    add_bg.append(f'execute if score palette baba matches {pid} if score column baba = level_width baba if score level_height baba matches {h} run data modify storage baba:main text append value \'{json.dumps(jsons2, separators=(",",":"))}\'')
-tat.write_lines(add_bg,'datapack/data/baba/functions/display/add_background.mcfunction')
+    pbg.append(f'execute if score level_height baba matches {h} run data modify storage baba:main column set value \'{json.dumps(jsons1, separators=(",",":"))}\'')
+    pbg.append(f'execute if score level_height baba matches {h} run data modify storage baba:main end_column set value \'{json.dumps(jsons2, separators=(",",":"))}\'')
+  tat.write_lines(pbg, f'datapack/data/baba/functions/display/background/{pname}.mcfunction')
+tat.write_lines(add_bg,'datapack/data/baba/functions/display/background.mcfunction')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
