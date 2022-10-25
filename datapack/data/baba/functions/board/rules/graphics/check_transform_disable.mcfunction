@@ -1,3 +1,3 @@
-data modify storage baba:main sprite set from storage baba:main rule.subject.sprite
-execute store success score different baba run data modify storage baba:main sprite set from storage baba:main rule.effect.text
-execute if score different baba matches 0 run function baba:board/rules/graphics/transform_disabling
+execute store result score subject baba run data get storage baba:main rule.subject.sprite
+execute store result score effect baba run data get storage baba:main rule.effect.text
+execute if score subject baba = effect baba run function baba:board/rules/graphics/transform_disabling

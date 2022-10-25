@@ -164,9 +164,9 @@ def create_selector(properties, extra_scores=None):
       scores.append(m.name+'='+m.convert(val))
     elif m.kind == 'property':
       if val:
-        nbt_true.append(str(hash(m.name)))
+        nbt_true.append(f'"{m.name}"')
       else:
-        nbt_false.append(str(hash(m.name)))
+        nbt_false.append(f'"{m.name}"')
     else:
       raise ValueError(m.kind)
   if len(tags) > 0:

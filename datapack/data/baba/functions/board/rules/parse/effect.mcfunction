@@ -12,7 +12,8 @@ scoreboard players operation @e[type=marker,tag=baba.object,tag=last_verb] text_
 data modify storage baba:main parsing.rules[][].text append from storage baba:main parsing.pending[]
 data modify storage baba:main parsing.pending set value []
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[-1]
-execute store result storage baba:main parsing.rules[-1][].text int 1 run scoreboard players get @s text_id
+execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
+data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
 data modify storage baba:main parsing.rules[-1][].text append from storage baba:main parsing.ambiguous[]
 data modify storage baba:main parsing.ambiguous set value []
 execute store result storage baba:main parsing.rules[-1][].effect.text int 1 run scoreboard players get @s text

@@ -2,8 +2,8 @@ data modify storage baba:main transform set from entity @s data.transforms[0]
 execute store result score spawn baba run data get storage baba:main transform.text
 # when transforming into text, you transform into text of your own kind
 execute store result score spawn_text baba run data get entity @s data.sprite
-execute if data storage baba:main transform{verb:45138} run scoreboard players set spawn baba 30442
-execute if data storage baba:main transform{verb:45138} store result score spawn_text baba run data get storage baba:main transform.text
+execute if data storage baba:main transform{verb_text:"write"} run scoreboard players set spawn baba 30442
+execute if data storage baba:main transform{verb_text:"write"} store result score spawn_text baba run data get storage baba:main transform.text
 function baba:board/spawn
 tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] add transformed
 scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing = @s facing

@@ -2,7 +2,8 @@
 # valid follows: and, verb
 data modify storage baba:main parsing set from entity @s data.parsing
 tag @s add all_rules
-execute store result storage baba:main parsing.rules[].text int 1 run scoreboard players get @s text_id
+execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
+data modify storage baba:main parsing.rules[].text append from storage baba:main text_id
 
 data modify storage baba:main parsing.rules[].conditions[-1].parameters append value {}
 execute store result storage baba:main parsing.rules[].conditions[-1].parameters[-1].sprite int 1 run scoreboard players get @s text

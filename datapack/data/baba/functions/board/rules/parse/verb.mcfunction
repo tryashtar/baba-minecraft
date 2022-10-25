@@ -10,8 +10,8 @@ execute if data storage baba:main parsing{split:0b} run data modify storage baba
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.split_rules
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.split_rules
 execute if data storage baba:main parsing{split:1b} run data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
-execute store result storage baba:main parsing.rules[-1][].text int 1 run scoreboard players get @s text_id
-execute store result storage baba:main parsing.rules[-1][].verb int 1 run scoreboard players get @s text
+execute store result storage baba:main text_id int 1 run scoreboard players get @s text_id
+data modify storage baba:main parsing.rules[-1][].text append from storage baba:main text_id
 data modify storage baba:main parsing.rules[-1][].verb_text set from entity @s data.text
 data modify storage baba:main parsing.split set value 1b
 
