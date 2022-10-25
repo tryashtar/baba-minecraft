@@ -564,7 +564,7 @@ for i,grids in enumerate(sprites.grids):
         tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
 
 
-pack_lines = []
+pack_lines = ['clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force']
 unpack_lines = ['data modify storage baba:main tile set from storage baba:main level[0][0][0]']
 pack_sub = {}
 unpack_sub = {}

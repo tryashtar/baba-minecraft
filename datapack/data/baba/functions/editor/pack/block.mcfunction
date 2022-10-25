@@ -1,3 +1,4 @@
+clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force
 execute if block ~ ~ ~ note_block[instrument=harp] run function baba:editor/pack/block/harp
 execute if block ~ ~ ~ note_block[instrument=basedrum] run function baba:editor/pack/block/basedrum
 execute if block ~ ~ ~ note_block[instrument=snare] run function baba:editor/pack/block/snare
