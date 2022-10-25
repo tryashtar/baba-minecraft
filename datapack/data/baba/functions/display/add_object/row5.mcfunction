@@ -3,6 +3,8 @@ execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:displa
 execute if score palette baba matches 0 run function baba:display/palette/default
 execute if score palette baba matches 1 run function baba:display/palette/underwater
 execute if score palette baba matches 2 run function baba:display/palette/factory
+execute if score palette baba matches 3 run function baba:display/palette/ruins
+execute if score palette baba matches 4 run function baba:display/palette/autumn
 execute if entity @s[scores={sprite=7620}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.algae.row5"}'
 execute if entity @s[scores={sprite=7620,move_frame=1..,move_dir=1}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.algae.row5.down"}'
 execute if entity @s[scores={sprite=7620,move_frame=1..,move_dir=2}] run data modify storage baba:main object_text[1] set value '{"translate":"baba.algae.row4.down"}'
