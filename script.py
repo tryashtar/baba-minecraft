@@ -594,7 +594,7 @@ for o in objectlist:
       del props[sprites.properties['text']]
       del props[sprites.properties['sprite']]
       summon = create_summon(props, [f'text:"{spr_text}"'])
-      spawntext.append(f'execute if score spawn baba_text matches {hash(spr_text)} run {summon}')
+      spawntext.append(f'execute if score spawn_text baba matches {hash(spr_text)} run {summon}')
   else:
     props = next(iter(o.filter_sprites(lambda x: 'spawn' in x.attributes).values()))
     del props[sprites.properties['sprite']]
