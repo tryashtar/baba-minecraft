@@ -34,6 +34,9 @@ properties:
   accepts_property:
     type: tag
     attributes: [spawn]
+  direction:
+    type: score
+    attributes: [spawn]
   style:
     type: tag
     attributes: [sprite, primary]
@@ -760,24 +763,28 @@ grids:
         properties:
           text: right
           part: property
+          direction: 4
       - name: text
         color: '#83c8e5'
         coords: [76, 376]
         properties:
           text: up
           part: property
+          direction: 1
       - name: text
         color: '#83c8e5'
         coords: [151, 376]
         properties:
           text: left
           part: property
+          direction: 3
       - name: text
         color: '#83c8e5'
         coords: [226, 376]
         properties:
           text: down
           part: property
+          direction: 2
       - name: text
         color: '#ffffff'
         coords: [1, 1198]

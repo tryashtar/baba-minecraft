@@ -25,6 +25,10 @@ execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms
 execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # each property is checked in turn, not each object
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{properties:["up"]}}] facing 1
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{properties:["down"]}}] facing 2
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{properties:["left"]}}] facing 3
+scoreboard players set @e[type=marker,tag=baba.object,nbt={data:{properties:["right"]}}] facing 4
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["sink"]}}] at @s run function baba:board/interact/sink
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["weak"]}}] at @s run function baba:board/interact/weak
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["hot"]}}] at @s run function baba:board/interact/hot

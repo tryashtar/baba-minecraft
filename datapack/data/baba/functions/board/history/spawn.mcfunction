@@ -7,6 +7,7 @@ execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] numb
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] color run data get storage baba:main previous.objects[0].scores.color
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] text_used run data get storage baba:main previous.objects[0].scores.text_used
 execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] z_layer run data get storage baba:main previous.objects[0].scores.z_layer
+execute store result score @e[type=marker,tag=spawn,distance=..0.1,limit=1] direction run data get storage baba:main previous.objects[0].scores.direction
 scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] frame 0
 data modify entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data set from storage baba:main previous.objects[0].data
 # this removes the spawn tag and applies the baba.object tag

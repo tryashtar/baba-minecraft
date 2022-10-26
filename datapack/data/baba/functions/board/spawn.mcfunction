@@ -72,5 +72,6 @@ scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sp
 execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s color run data get entity @s data.scores.color
 execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s data.scores.z_layer
 scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] facing 4
+execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s data.scores.direction
 scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] move_frame 0
 data remove entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.scores

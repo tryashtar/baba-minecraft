@@ -6,8 +6,9 @@ execute store result storage baba:main text_id int 1 run scoreboard players get 
 data modify storage baba:main parsing.rules[].text append from storage baba:main text_id
 
 data modify storage baba:main parsing.rules[].conditions[-1].parameters append value {}
-execute store result storage baba:main parsing.rules[].conditions[-1].parameters[-1].sprite int 1 run scoreboard players get @s text
-data modify storage baba:main parsing.rules[].conditions[-1].parameters[-1].sprite_text set from entity @s data.text
+execute if entity @s[scores={direction=1..}] store result storage baba:main parsing.rules[].conditions[-1].parameters[-1].direction int 1 run scoreboard players get @s direction
+execute store result storage baba:main parsing.rules[].conditions[-1].parameters[-1].text int 1 run scoreboard players get @s text
+data modify storage baba:main parsing.rules[].conditions[-1].parameters[-1].text_text set from entity @s data.text
 data modify storage baba:main parsing.rules[].conditions[-1].parameters[-1].inverted set from storage baba:main parsing.inverted
 data modify storage baba:main parsing.inverted set value 0b
 

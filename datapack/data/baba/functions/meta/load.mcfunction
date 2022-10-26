@@ -4,6 +4,7 @@ scoreboard objectives add baba dummy
 scoreboard objectives add sprite dummy
 scoreboard objectives add text dummy
 scoreboard objectives add facing dummy
+scoreboard objectives add direction dummy
 scoreboard objectives add frame dummy
 scoreboard objectives add walk dummy
 scoreboard objectives add move_dir dummy

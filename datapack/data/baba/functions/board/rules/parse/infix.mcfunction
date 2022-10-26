@@ -14,4 +14,6 @@ execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442
 
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.not,distance=..0.1] run function baba:board/rules/parse/infix_param_nots
 execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/infix_param
-execute positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442},tag=!part.not,tag=!part.noun,distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[nbt={data:{text:"facing"}}] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={direction=1..},distance=..0.1] run function baba:board/rules/parse/infix_param
+execute if entity @s[nbt={data:{text:"facing"}}] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442},tag=!part.not,tag=!part.noun,distance=..0.1] unless score @s direction matches 1.. run function baba:board/rules/parse/new
+execute if entity @s[nbt=!{data:{text:"facing"}}] positioned ^ ^ ^1 as @e[type=marker,tag=baba.object,scores={sprite=30442},tag=!part.not,tag=!part.noun,distance=..0.1] run function baba:board/rules/parse/new
