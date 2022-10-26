@@ -5,4 +5,4 @@ execute if data storage baba:main condition.parameters[0].direction run function
 execute unless data storage baba:main condition.parameters[0].direction run function baba:board/rules/apply/check/facing_sprite
 
 data remove storage baba:main condition.parameters[0]
-execute if score passed baba matches 0 if data storage baba:main condition.parameters[0] run function baba:board/rules/apply/check/facing
+execute if score passed baba matches 1 if data storage baba:main condition.parameters[0] run function baba:board/rules/apply/check/facing
