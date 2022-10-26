@@ -177,16 +177,16 @@ def create_selector(properties, extra_scores=None):
   if len(scores) > 0:
     result.append('scores={'+','.join([x for x in scores])+'}')
   if len(nbt_true) > 0:
-    result.append('nbt={data:{properties:['+','.join(nbt_true)+']}}')
+    result.append('nbt={HandItems:[{tag:{properties:['+','.join(nbt_true)+']}}]}')
   for f in nbt_false:
-    result.append('nbt=!{data:{properties:['+f+']}}')
+    result.append('nbt=!{HandItems:[{tag:{properties:['+f+']}}]}')
   return ','.join(result)
 
 def create_summon(properties, extra_data=None):
   tags = ['baba.object','spawn']
   data = []
   scores = []
-  nbt = []
+  nbt = ['Marker:1b','Invisible:1b','NoGravity:1b','ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b}]']
   for m,val in properties.items():
     if m.kind == 'tag' and val != False:
       tags.append(m.convert(val))
@@ -201,8 +201,10 @@ def create_summon(properties, extra_data=None):
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
   if len(data) > 0:
-    nbt.append('data:{' + ','.join(data) + '}')
-  return f'summon marker ~ ~ ~ {{{",".join(nbt)}}}'
+    nbt.append('HandItems:[{id:"minecraft:tnt",Count:1b,tag:{' + ','.join(data) + '}}]')
+  else:
+    nbt.append('HandItems:[{id:"minecraft:tnt",Count:1b}]')
+  return f'summon armor_stand ~ ~ ~ {{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):
   tags = []
@@ -274,7 +276,7 @@ class Grid:
   def __init__(self, spritelist, sprite_width, sprite_height, scale, color):
     self.scale = scale
     self.width = math.ceil(math.sqrt(len(spritelist)))
-    self.height = math.floor(math.sqrt(len(spritelist)))
+    self.height = self.width-1 if self.width*(self.width-1) >= len(spritelist) else self.width
     self.image = PIL.Image.new('RGBA', (sprite_width*self.width, sprite_height*self.height), color)
     self.sprites = [[[] for x in range(self.width)] for x in range(self.height)]
     self.placements = {}
@@ -407,10 +409,6 @@ class TileManager:
 with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
 
-#for o in sprites.objects.values():
-#  for s,props in o.filter_sprites('editor').items():
-#    print(s.display(props, ' ', '=', ' '))
-
 manager = TileManager(18,33)
 anim_grids = sprites.grids
 for i,grids in enumerate(anim_grids):
@@ -490,8 +488,8 @@ for r in range(manager.rows):
     for color1,color2 in palette.items():
       plines.append(f'execute if score color baba matches {int(color1[1:],16)} run data modify storage baba:main object_text set value [\'{{"color":"{color2}","text":""}}\',\'""\']')
     plines.extend([
-      f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
-      f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
+      f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["red"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
+      f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["blue"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
     ])
     tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
@@ -571,11 +569,13 @@ pack_sub = {}
 unpack_sub = {}
 blockstate = {}
 custom_model = []
+custom_model2 = []
 loot_table = []
 get_all = []
 spawn = []
 spawntext = []
-tat.delete_folder('resourcepack/assets/baba/models')
+tat.delete_folder('resourcepack/assets/baba/models/editor')
+tat.delete_folder('resourcepack/assets/baba/models/sprite')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
@@ -613,7 +613,23 @@ colorgrids = [Grid(x[1], x[0][0], x[0][1], 1, '#00000000') for x in editor_sprit
 for c,grid in enumerate(colorgrids):
   grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_color.png')
 i = 0
+j = 0
+pot_fn = []
 for o in objectlist:
+  pot_sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
+  for s,props in pot_sprs:
+    j += 1
+    for g,grid in enumerate(anim_grids[0]):
+      if s in grid.placements:
+        placement = grid.placements[s]
+        x_uvsize = 16/grid.width
+        y_uvsize = 16/grid.height
+        break
+    description = s.display(props, '.','-')
+    model = {"parent":"baba:sprite_display","textures":{"up":f"baba:grid{g}_anim0"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
+    custom_model2.append({'predicate':{'custom_model_data':j},'model':f'baba:sprite/{description}'})
+    pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
+    tat.write_json(model, f'resourcepack/assets/baba/models/sprite/{description}.json')
   sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()
   for s,props in sprs:
     (inst, note) = note_block(i)
@@ -644,12 +660,12 @@ for o in objectlist:
         x_uvsize = 16/grid.width
         y_uvsize = 16/grid.height
         break
-    model = {"parent":"baba:parent_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
+    model = {"parent":"baba:editor_display","textures":{"up":f"baba:grid{g}_color"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
     description = s.display(props, '.','-')
-    blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:{description}','y':90}
-    custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:{description}'})
+    blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:editor/{description}','y':90}
+    custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:editor/{description}'})
     loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
-    tat.write_json(model, f'resourcepack/assets/baba/models/{description}.json')
+    tat.write_json(model, f'resourcepack/assets/baba/models/editor/{description}.json')
     simple_name = s.display(props, ' ','=')
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
@@ -666,27 +682,29 @@ unpack_lines.extend([
   'execute if data storage baba:main level[0][0][1] run setblock ~ ~1 ~ glass',
   'execute if data storage baba:main tile.extra run setblock ~ ~1 ~ jukebox{RecordItem:{id:"minecraft:tnt",Count:1b}}',
   'execute if data storage baba:main tile.extra run data modify block ~ ~1 ~ RecordItem.tag.extra set from storage baba:main tile.extra',
-  'data remove storage baba:main level[0][0][0]',
+  'data remove storage baba:main leatevel[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
-spawn.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
-spawntext.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
+spawn.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
+spawntext.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
 for m in sprites.properties.values():
   if 'spawn' in m.attributes and m.kind == 'score' and m.name not in ('sprite','text'):
-      spawn.append(f'execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s data.scores.{m.name}')
+      spawn.append(f'execute as @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s HandItems[0].tag.scores.{m.name}')
   if 'all' in m.attributes and 'spawn' not in m.attributes:
     if m.kind == 'score':
-      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
+      spawn.append(f'scoreboard players set @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
     else:
       raise ValueError(m.name)
-spawn.append('data remove entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.scores')
+spawn.append('data remove entity @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] HandItems[0].tag.scores')
+tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/update_head.mcfunction')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
+custom_model2 = list(sorted(custom_model2, key=lambda x: x['predicate']['custom_model_data']))
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
-tat.write_json({"gui_light":"front","display":{"firstperson_righthand":{"rotation":[90,0,0],"translation":[0,0,-5]},"gui":{"rotation":[90,0,0]}}}, 'resourcepack/assets/baba/models/parent_display.json')
 tat.write_json({"overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
+tat.write_json({"overrides":custom_model2}, f'resourcepack/assets/minecraft/models/item/potion.json')
 tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
 tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":"minecraft:note_block","properties":["instrument","note"]}],"pools":loot_table}, f'datapack/data/minecraft/loot_tables/blocks/note_block.json')

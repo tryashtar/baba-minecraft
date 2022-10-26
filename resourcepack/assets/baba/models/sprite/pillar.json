@@ -1,0 +1,31 @@
+{
+   "parent": "baba:sprite_display",
+   "textures": {
+      "up": "baba:grid0_anim0"
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            0,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  6.0,
+                  4.8696,
+                  6.6667,
+                  5.5652
+               ],
+               "texture": "#up"
+            }
+         }
+      }
+   ]
+}
