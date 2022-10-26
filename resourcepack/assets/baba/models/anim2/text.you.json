@@ -1,0 +1,50 @@
+{
+   "textures": {
+      "up": "baba:grid0_anim2"
+   },
+   "display": {
+      "head": {
+         "rotation": [
+            0,
+            90,
+            0
+         ],
+         "translation": [
+            0,
+            -30,
+            0
+         ],
+         "scale": [
+            1.6,
+            1.6,
+            1.6
+         ]
+      }
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            0,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  4.6667,
+                  8.3478,
+                  5.3333,
+                  9.0435
+               ],
+               "texture": "#up",
+               "tintindex": 0
+            }
+         }
+      }
+   ]
+}

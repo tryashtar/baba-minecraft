@@ -1,0 +1,16 @@
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 259
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 260
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 261
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 262
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 263
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 264
+execute if entity @s[tag=up,tag=!down,tag=left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 265
+execute if entity @s[tag=up,tag=!down,tag=left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 266
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 267
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 268
+execute if entity @s[tag=up,tag=down,tag=!left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 269
+execute if entity @s[tag=up,tag=down,tag=!left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 270
+execute if entity @s[tag=!up,tag=down,tag=left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 271
+execute if entity @s[tag=!up,tag=down,tag=left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 272
+execute if entity @s[tag=up,tag=down,tag=left,tag=!right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 273
+execute if entity @s[tag=up,tag=down,tag=left,tag=right] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 274

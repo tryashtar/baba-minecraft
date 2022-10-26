@@ -1,0 +1,31 @@
+{
+   "parent": "baba:editor_display",
+   "textures": {
+      "up": "baba:grid0_color"
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            0,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  13.0,
+                  1.0667,
+                  14.0,
+                  2.1333
+               ],
+               "texture": "#up"
+            }
+         }
+      }
+   ]
+}
