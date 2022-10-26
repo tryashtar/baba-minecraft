@@ -14,7 +14,7 @@ execute unless score subject1 baba = subject2 baba if data storage baba:main {ru
 # 'not A is not text' disables 'not A write C'
 execute if score subject1 baba = subject2 baba if data storage baba:main {rule:{subject:{inverted:1b},verb_text:"is",effect:{text_text:"text"}},normal_rule:{subject:{inverted:1b},verb_text:"write"}} run function baba:board/rules/graphics/disable
 # 'A is not A' enables 'A is B' if disabled by 'A is A'
-execute if score subject1 baba = effect1 baba if score subject1 baba = subject2 baba if data storage baba:main {rule:{subject:{inverted:0b}},normal_rule:{subject:{inverted:0b},verb_text:"is",effect:{part:"noun"}}} run function baba:board/rules/graphics/enable
+execute if score subject1 baba = effect1 baba if score subject1 baba = subject2 baba unless score effect1 baba = effect2 baba if data storage baba:main {rule:{subject:{inverted:0b}},normal_rule:{subject:{inverted:0b},verb_text:"is",effect:{part:"noun"}}} run function baba:board/rules/graphics/enable
 # 'A is not A' enables 'A write B' if disabled by 'A is A'
 execute if score subject1 baba = effect1 baba if score subject1 baba = subject2 baba if data storage baba:main {rule:{subject:{inverted:0b}},normal_rule:{subject:{inverted:0b},verb_text:"write",effect:{part:"noun"}}} run function baba:board/rules/graphics/enable
 # 'A verb not B' disables 'A verb B'

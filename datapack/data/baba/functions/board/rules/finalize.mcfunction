@@ -2,7 +2,7 @@ execute if data entity @s data.parsing.writes[0] run data modify entity @s data.
 execute if data entity @s data.parsing.transforms[{inverted:1b,text_text:"text"}] run data remove entity @s data.parsing.writes
 execute if data entity @s data.parsing{delete:0b,block_transforms:1b} run data remove entity @s data.parsing.writes[]
 execute if data entity @s data.parsing{delete:0b,block_transforms:1b} run data remove entity @s data.parsing.transforms[]
-execute if data entity @s data.parsing{delete:1b} unless data entity @s data.parsing.transforms[0] run kill @s
+execute if data entity @s data.parsing{delete:1b} unless data entity @s data.parsing.transforms[{inverted:0b}] run kill @s
 
 data modify entity @s data merge value {transforms:[],properties:[],has:[],make:[]}
 data modify entity @s data.properties append from entity @s data.parsing.properties[{inverted:0b}].text_text
