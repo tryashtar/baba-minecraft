@@ -435,17 +435,17 @@ text = [
   'execute store result score row baba run data get entity @s Pos[0]',
   'scoreboard players operation row baba -= level_height baba',
   'execute store result score draw_column baba run data get entity @s Pos[2]',
-  'execute if score draw_column baba > column baba run function baba:display/add_spaces'
+  'execute if score draw_column baba > column baba run function baba:display/text/spaces'
 ]
 border = []
 full_border = []
 for r in range(manager.rows):
   text.extend([
-    f'execute if score row baba matches {-r-1} run function baba:display/add_object/row{r}',
+    f'execute if score row baba matches {-r-1} run function baba:display/text/object/row{r}',
   ])
 text.append('tag @s add drawn')
 text.append('data modify storage baba:main text append from storage baba:main after_text[]')
-tat.write_lines(text, 'datapack/data/baba/functions/display/add_object.mcfunction')
+tat.write_lines(text, 'datapack/data/baba/functions/display/text/object.mcfunction')
 
 def note_block(val):
   instrument = ['harp','basedrum','snare','hat','bass','flute','bell','guitar','chime','xylophone','iron_xylophone','cow_bell','didgeridoo','bit','banjo','pling'][val//25]
@@ -454,12 +454,14 @@ def note_block(val):
 def instrument(inst):
   return {'harp':'dirt','basedrum':'stone','snare':'sand','hat':'glass','bass':'oak_planks','flute':'clay','bell':'gold_block','guitar':'white_wool','chime':'packed_ice','xylophone':'bone_block','iron_xylophone':'iron_block','cow_bell':'soul_sand','didgeridoo':'pumpkin','bit':'emerald_block','banjo':'hay_block','pling':'glowstone'}[inst]
 
-tat.delete_folder('datapack/data/baba/functions/display/add_object')
-tat.delete_folder('datapack/data/baba/functions/display/palette')
-tat.delete_folder('datapack/data/baba/functions/display/background')
+tat.delete_folder('datapack/data/baba/functions/display/text/object')
+tat.delete_folder('datapack/data/baba/functions/display/text/palette')
+tat.delete_folder('datapack/data/baba/functions/display/stand/object')
+tat.delete_folder('datapack/data/baba/functions/display/stand/palette')
+tat.delete_folder('datapack/data/baba/functions/display/text/background')
 add_bg = []
 for pid,(pname,palette) in enumerate(sprites.palettes.items()):
-  add_bg.append(f'execute if score palette baba matches {pid} run function baba:display/background/{pname}')
+  add_bg.append(f'execute if score palette baba matches {pid} run function baba:display/text/background/{pname}')
   pbg = []
   for h in range(1, manager.columns+1):
     jsons1=[{"translate":f"baba.level_border.row-1","color":palette["#15181f"]}]
@@ -473,17 +475,17 @@ for pid,(pname,palette) in enumerate(sprites.palettes.items()):
     jsons2.append({"translate":f"baba.empty_tile"})
     pbg.append(f'execute if score level_height baba matches {h} run data modify storage baba:main column set value \'{json.dumps(jsons1, separators=(",",":"))}\'')
     pbg.append(f'execute if score level_height baba matches {h} run data modify storage baba:main end_column set value \'{json.dumps(jsons2, separators=(",",":"))}\'')
-  tat.write_lines(pbg, f'datapack/data/baba/functions/display/background/{pname}.mcfunction')
-tat.write_lines(add_bg,'datapack/data/baba/functions/display/background.mcfunction')
+  tat.write_lines(pbg, f'datapack/data/baba/functions/display/text/background/{pname}.mcfunction')
+tat.write_lines(add_bg,'datapack/data/baba/functions/display/text/background.mcfunction')
 for r in range(manager.rows):
   lines = [
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/disabled_text'
+    'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text'
   ]
   subfns = {}
   overlayfns = {}
   for pid,(pname,palette) in enumerate(sprites.palettes.items()):
-    lines.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
+    lines.append(f'execute if score palette baba matches {pid} run function baba:display/text/palette/{pname}')
     plines = []
     for color1,color2 in palette.items():
       plines.append(f'execute if score color baba matches {int(color1[1:],16)} run data modify storage baba:main object_text set value [\'{{"color":"{color2}","text":""}}\',\'""\']')
@@ -491,7 +493,7 @@ for r in range(manager.rows):
       f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["red"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
       f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["blue"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
     ])
-    tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
+    tat.write_lines(plines, f'datapack/data/baba/functions/display/text/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
     sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
     for s,p in sprs:
@@ -536,8 +538,8 @@ for r in range(manager.rows):
         overlayfns[o.name][1].append(final)
 
   for name,(prp,fn) in subfns.items():
-    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/add_object/row{r}/{name}')
-    tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.mcfunction')
+    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/text/object/row{r}/{name}')
+    tat.write_lines(fn, f'datapack/data/baba/functions/display/text/object/row{r}/{name}.mcfunction')
   lines.extend([
     'execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage baba:main object_text insert 1 value \'{"translate":"baba.nudge_right"}\'',
     'execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage baba:main object_text append value \'{"translate":"baba.nudge_left"}\'',
@@ -547,9 +549,9 @@ for r in range(manager.rows):
     'data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name'
   ])
   for name,(prp,fn) in overlayfns.items():
-    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/add_object/row{r}/{name}.overlay')
-    tat.write_lines(fn, f'datapack/data/baba/functions/display/add_object/row{r}/{name}.overlay.mcfunction')
-  tat.write_lines(lines, f'datapack/data/baba/functions/display/add_object/row{r}.mcfunction')
+    lines.append(f'execute if entity @s[{create_selector(prp)}] run function baba:display/text/object/row{r}/{name}.overlay')
+    tat.write_lines(fn, f'datapack/data/baba/functions/display/text/object/row{r}/{name}.overlay.mcfunction')
+  tat.write_lines(lines, f'datapack/data/baba/functions/display/text/object/row{r}.mcfunction')
 
 for i,grids in enumerate(sprites.grids):
   for spr,place in grids[0].placements.items():
@@ -614,6 +616,8 @@ i = 0
 j = 0
 anim_models = {}
 pot_fn = ['execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer','execute at @s run tp @s ~ ~1 ~']
+pot_sub = {}
+pot_ov = {}
 for a,anim in enumerate(anim_grids[0]):
   tat.delete_folder(f'resourcepack/assets/baba/models/anim{a}')
   anim_models[a] = []
@@ -632,8 +636,39 @@ for o in objectlist:
       scale1 = round(1.6*anim.scale,3)
       model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,-30,0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
       anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
-      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
       tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
+    if len(pot_sprs) > 1:
+      if o.name not in pot_sub:
+        pot_sub[o.name] = []
+        pot_fn.append(f'execute if entity @s[{create_selector(filter_properties(props, lambda x: x.name=="sprite"))}] run function baba:display/stand/object/{o.name}')
+      pot_sub[o.name].append(f'execute if entity @s[{create_selector(filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
+    else:
+      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
+
+  #for ov in o.overlays:
+  #  overlay = sprites.overlays[ov]
+  #  if o.name not in pot_ov:
+  #    pot_ov[o.name] = (filter_properties(s.properties, lambda x: x.name=='sprite'),[])
+  #  for prop,op in overlay.property_mods.items():
+  #    pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
+  #    if op['operation'] == 'modulo':
+  #      pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
+  #  for ovspr in overlay.sprites:
+  #    props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
+  #    disp = ovspr.display(props,".","-")
+  #    special_checks = []
+  #    for p,v in props.copy().items():
+  #      if p.name in overlay.property_mods:
+  #        special_checks.append((p, props[p]))
+  #        del props[p]
+  #    del props[sprites.properties['sprite']]
+  #    selector = create_selector(props)
+  #    final = 'execute '
+  #    for prop,spec in special_checks:
+  #      final += f'if score {prop.name} baba matches {prop.convert(spec)} '
+  #    final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.properties[sprites.properties["color"]]}"}}\''
+  #    pot_ov[o.name][1].append(final)
+
   sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()
   for s,props in sprs:
     (inst, note) = note_block(i)
@@ -674,6 +709,8 @@ for o in objectlist:
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
+for i,fn in pot_sub.items():
+  tat.write_lines(fn, f'datapack/data/baba/functions/display/stand/object/{i}.mcfunction')
 for i,fn in pack_sub.items():
   tat.write_lines(fn, f'datapack/data/baba/functions/editor/pack/block/{i}.mcfunction')
 for i,fn in unpack_sub.items():
@@ -700,10 +737,17 @@ for m in sprites.properties.values():
     else:
       raise ValueError(m.name)
 spawn.append('data remove entity @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] HandItems[0].tag.scores')
+pot_fn.append('scoreboard players operation color baba = @s color')
 for pid,(pname,palette) in enumerate(sprites.palettes.items()):
-  for color1,color2 in palette.items():
-    pot_fn.append(f'execute if score palette baba matches {pid} if entity @s[scores={{color={int(color1[1:],16)}}}] run data modify entity @s ArmorItems[3].tag.CustomPotionColor set value {int(color2[1:],16)}')
-tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/update_head.mcfunction')
+  if pid != 0:
+    pot_fn.append(f'execute if score palette baba matches {pid} run function baba:display/stand/palette/{pname}')
+    pfn = []
+    for color1,color2 in palette.items():
+      pfn.append(f'execute if entity @s[scores={{color={int(color1[1:],16)}}}] run scoreboard players set color baba {int(color2[1:],16)}')
+    tat.write_lines(pfn, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
+pot_fn.append('execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text')
+pot_fn.append('execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba')
+tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/stand/update.mcfunction')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
