@@ -1,1 +1,1 @@
-execute as @e[type=armor_stand,tag=baba.object,distance=..0.1,nbt={HandItems:[{tag:{properties:["melt"]}}]}] run function baba:board/interact/destroy
+execute as @e[type=marker,tag=baba.object,distance=..0.1,nbt={data:{properties:["melt"]}}] run function baba:board/interact/destroy
