@@ -177,16 +177,16 @@ def create_selector(properties, extra_scores=None):
   if len(scores) > 0:
     result.append('scores={'+','.join([x for x in scores])+'}')
   if len(nbt_true) > 0:
-    result.append('nbt={data:{properties:['+','.join(nbt_true)+']}}')
+    result.append('nbt={HandItems:[{tag:{properties:['+','.join(nbt_true)+']}}]}')
   for f in nbt_false:
-    result.append('nbt=!{data:{properties:['+f+']}}')
+    result.append('nbt=!{HandItems:[{tag:{properties:['+f+']}}]}')
   return ','.join(result)
 
 def create_summon(properties, extra_data=None):
   tags = ['baba.object','spawn']
   data = []
   scores = []
-  nbt = []
+  nbt = ['Marker:1b','Invisible:1b','NoGravity:1b','ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b}]']
   for m,val in properties.items():
     if m.kind == 'tag' and val != False:
       tags.append(m.convert(val))
@@ -201,8 +201,10 @@ def create_summon(properties, extra_data=None):
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
   if len(data) > 0:
-    nbt.append('data:{' + ','.join(data) + '}')
-  return f'summon marker ~ ~ ~ {{{",".join(nbt)}}}'
+    nbt.append('HandItems:[{id:"minecraft:potion",Count:1b,tag:{' + ','.join(data) + '}}]')
+  else:
+    nbt.append('HandItems:[{id:"minecraft:potion",Count:1b}]')
+  return f'summon armor_stand ~ ~ ~ {{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):
   tags = []
@@ -486,8 +488,8 @@ for r in range(manager.rows):
     for color1,color2 in palette.items():
       plines.append(f'execute if score color baba matches {int(color1[1:],16)} run data modify storage baba:main object_text set value [\'{{"color":"{color2}","text":""}}\',\'""\']')
     plines.extend([
-      f'execute if entity @s[nbt={{data:{{properties:["red"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
-      f'execute if entity @s[nbt={{data:{{properties:["blue"]}}}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
+      f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["red"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#e5533b"]}","text":""}}\',\'""\']',
+      f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["blue"]}}}}]}}] run data modify storage baba:main object_text set value [\'{{"color":"{palette["#557ae0"]}","text":""}}\',\'""\']',
     ])
     tat.write_lines(plines, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   for o in sprites.objects.values():
@@ -611,7 +613,7 @@ for c,grid in enumerate(colorgrids):
 i = 0
 j = 0
 anim_models = {}
-pot_fn = []
+pot_fn = ['execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer','execute at @s run tp @s ~ ~1 ~']
 for a,anim in enumerate(anim_grids[0]):
   tat.delete_folder(f'resourcepack/assets/baba/models/anim{a}')
   anim_models[a] = []
@@ -630,7 +632,7 @@ for o in objectlist:
       scale1 = round(1.6*anim.scale,3)
       model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,-30,0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
       anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
-      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run summon armor_stand ~ ~ ~ {{Tags:["spawn"],ArmorItems:[{{}},{{}},{{}},{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{j}}}}}]}}')
+      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
       tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
   sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()
   for s,props in sprs:
@@ -684,20 +686,20 @@ unpack_lines.extend([
   'execute if data storage baba:main level[0][0][1] run setblock ~ ~1 ~ glass',
   'execute if data storage baba:main tile.extra run setblock ~ ~1 ~ jukebox{RecordItem:{id:"minecraft:tnt",Count:1b}}',
   'execute if data storage baba:main tile.extra run data modify block ~ ~1 ~ RecordItem.tag.extra set from storage baba:main tile.extra',
-  'data remove storage baba:main level[0][0][0]',
+  'data remove storage baba:main leatevel[0][0][0]',
   'execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block',
 ])
-spawn.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
-spawntext.append('scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
+spawn.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
+spawntext.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
 for m in sprites.properties.values():
   if 'spawn' in m.attributes and m.kind == 'score' and m.name not in ('sprite','text'):
-      spawn.append(f'execute as @e[type=marker,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s data.scores.{m.name}')
+      spawn.append(f'execute as @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s HandItems[0].tag.scores.{m.name}')
   if 'all' in m.attributes and 'spawn' not in m.attributes:
     if m.kind == 'score':
-      spawn.append(f'scoreboard players set @e[type=marker,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
+      spawn.append(f'scoreboard players set @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] {m.name} {m.convert(m.default)}')
     else:
       raise ValueError(m.name)
-spawn.append('data remove entity @e[type=marker,tag=spawn,distance=..0.1,limit=1] data.scores')
+spawn.append('data remove entity @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] HandItems[0].tag.scores')
 for pid,(pname,palette) in enumerate(sprites.palettes.items()):
   for color1,color2 in palette.items():
     pot_fn.append(f'execute if score palette baba matches {pid} if entity @s[scores={{color={int(color1[1:],16)}}}] run data modify entity @s ArmorItems[3].tag.CustomPotionColor set value {int(color2[1:],16)}')

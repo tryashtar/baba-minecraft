@@ -9,6 +9,6 @@ execute unless score last_anim baba = anim baba if score anim baba matches 1 as 
 execute unless score last_anim baba = anim baba if score anim baba matches 2 as @e[type=armor_stand,tag=baba.object] run data modify entity @s ArmorItems[3].id set value "minecraft:lingering_potion"
 scoreboard players remove move_cooldown baba 1
 execute as @a[nbt={abilities:{flying:0b}}] at @s run function baba:input/check
-execute if entity @e[type=marker,tag=baba.object,scores={move_frame=0..}] run function baba:display/update
-scoreboard players remove @e[type=marker,tag=baba.object,scores={move_frame=0..}] move_frame 1
+execute if entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/update
+scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] move_frame 1
 item modify entity @a[predicate=baba:holding_tile] weapon.mainhand baba:infinite_tiles
