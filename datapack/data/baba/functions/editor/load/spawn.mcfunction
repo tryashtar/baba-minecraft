@@ -1,4 +1,4 @@
-summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b}],HandItems:[{id:"minecraft:tnt",Count:1b}],Tags:["baba.object","spawn"]}
+summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b}],HandItems:[{id:"minecraft:potion",Count:1b}],Tags:["baba.object","spawn"]}
 data modify storage baba:main level[0][0][0].tags append from storage baba:main level[0][0][0].extra.tags[]
 data remove storage baba:main level[0][0][0].extra.tags
 data modify storage baba:main level[0][0][0] merge from storage baba:main level[0][0][0].extra
