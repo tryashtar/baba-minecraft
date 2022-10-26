@@ -634,7 +634,7 @@ for o in objectlist:
     for a,anim in enumerate(grid):
       description = s.display(props, '.','-')
       scale1 = round(1.6*anim.scale,3)
-      model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,-30,0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
+      model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,round(13*anim.scale-43,2),0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
       anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
       tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
     if len(pot_sprs) > 1:

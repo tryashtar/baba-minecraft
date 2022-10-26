@@ -1,4 +1,3 @@
-tp @s -1.5 2 2.5 -90 90
 scoreboard players set @s drop 0
 item replace entity @s weapon.mainhand with diamond
 kill @e[type=item]
