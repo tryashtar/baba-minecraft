@@ -7,7 +7,7 @@ execute if data entity @s data.parsing{delete:1b} unless data entity @s data.par
 data modify entity @s data merge value {transforms:[],properties:[],has:[],make:[]}
 data modify entity @s data.properties append from entity @s data.parsing.properties[{inverted:0b}].text_text
 data modify entity @s data.has append from entity @s data.parsing.has[{inverted:0b}].text_text
-data modify entity @s data.make append from entity @s data.parsing.make[{inverted:0b}].text_text
+data modify entity @s data.make append from entity @s data.parsing.make[{inverted:0b}].text
 data modify entity @s data.transforms append from entity @s data.parsing.transforms[{inverted:0b}]
 data modify entity @s data.transforms append from entity @s data.parsing.writes[{inverted:0b}]
 

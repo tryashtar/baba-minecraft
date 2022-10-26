@@ -13,4 +13,4 @@ tag @e[type=marker,tag=spawn,distance=..0.1,limit=1] remove spawn
 data remove entity @s data.transforms[0]
 # only kill when all transformations are done, because killing removes scores
 execute unless data entity @s data.transforms[0] run kill @s
-execute if data entity @s data.transforms[0] run function baba:board/rules/transform
+execute if data entity @s data.transforms[0] run function baba:board/interact/transform

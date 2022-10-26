@@ -21,7 +21,7 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shift"]}}] at 
 execute if score direction baba matches 1.. as @e[type=marker,tag=baba.object,nbt={data:{properties:["select"]}}] at @s run function baba:board/movement/select
 
 function baba:board/rules/update
-execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms:[{}]}}] at @s run function baba:board/rules/transform
+execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms:[{}]}}] at @s run function baba:board/interact/transform
 execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # each property is checked in turn, not each object
@@ -34,11 +34,10 @@ execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["weak"]}}] at @
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["hot"]}}] at @s run function baba:board/interact/hot
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["defeat"]}}] at @s run function baba:board/interact/defeat
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["shut"]}}] at @s run function baba:board/interact/shut
+execute as @e[type=marker,tag=baba.object] if data entity @s data.make[0] at @s run function baba:board/interact/make
 execute as @e[type=marker,tag=baba.object,nbt={data:{properties:["win"]}}] at @s run function baba:board/interact/win
 
 function baba:board/rules/update
-execute as @e[type=marker,tag=baba.object,tag=!transformed,nbt={data:{transforms:[{}]}}] at @s run function baba:board/rules/transform
-execute if entity @e[type=marker,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
 # graphical updates
 execute as @e[type=marker,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
