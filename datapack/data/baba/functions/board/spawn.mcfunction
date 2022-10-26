@@ -41,7 +41,7 @@ execute if score spawn baba matches 45087 run summon marker ~ ~ ~ {Tags:["baba.o
 execute if score spawn baba matches 30686 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:15590021,z_layer:16}}}
 execute if score spawn baba matches 28861 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","connector"],data:{scores:{color:14981456,z_layer:2}}}
 execute if score spawn baba matches 23508 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:15590021,z_layer:8}}}
-execute if score spawn baba matches 26837 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:4093576,z_layer:17}}}
+execute if score spawn baba matches 26837 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","not_all"],data:{scores:{color:4093576,z_layer:17}}}
 execute if score spawn baba matches 60823 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","connector"],data:{scores:{color:16777215,z_layer:20}}}
 execute if score spawn baba matches 1043 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:15438282,z_layer:16}}}
 execute if score spawn baba matches 61656 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:9330332,z_layer:18}}}

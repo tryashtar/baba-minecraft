@@ -34,6 +34,9 @@ properties:
   accepts_property:
     type: tag
     attributes: [spawn]
+  not_all:
+    type: tag
+    attributes: [spawn]
   direction:
     type: score
     attributes: [spawn]
@@ -215,6 +218,7 @@ grids:
             z_layer: 12
         - name: violet
           color: '#4759b1'
+          text color: '#557ae0'
           text coords: [626, 910]
           properties:
             z_layer: 12
@@ -514,6 +518,7 @@ grids:
         overlays: [level_icon]
         properties:
           z_layer: 17
+          not_all: true
       sprites:
       - {}
     - overlays:

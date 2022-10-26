@@ -112,6 +112,7 @@ class SpriteCollection:
                   props = {self.properties['sprite']:adding.name}
                   if adding.name == 'text':
                     props[self.properties['z_layer']] = 20
+                    props[self.properties['not_all']] = True
                   for k,v in spr.items():
                     if k in baba.property_mods and k not in self.properties:
                       self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
