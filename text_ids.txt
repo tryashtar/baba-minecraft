@@ -22,6 +22,7 @@ love: 1043
 ufo: 49848
 door: 54021
 flower: 61188
+violet: 34898
 pillar: 22457
 rock: 13704
 tile: 29188
@@ -57,7 +58,7 @@ not: 39747
 on: 41746
 near: 52390
 facing: 20119
-lonely: 59882
+without: 27691
 has: 46949
 make: 441
 write: 45138
@@ -94,6 +95,10 @@ up: 28192
 left: 55766
 down: 34491
 word: 3763
+idle: 3295
+lonely: 59882
+often: 64800
+seldom: 59630
 select: 4679
 best: 19737
 bonus: 53212

@@ -4159,7 +4159,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pillar",
+                        "text": "text violet",
                         "italic": false
                      }
                   },
@@ -4191,7 +4191,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rock",
+                        "text": "text pillar",
                         "italic": false
                      }
                   },
@@ -4223,7 +4223,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tile",
+                        "text": "text rock",
                         "italic": false
                      }
                   },
@@ -4255,7 +4255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fruit",
+                        "text": "text tile",
                         "italic": false
                      }
                   },
@@ -4287,7 +4287,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text moon",
+                        "text": "text fruit",
                         "italic": false
                      }
                   },
@@ -4319,7 +4319,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text star",
+                        "text": "text moon",
                         "italic": false
                      }
                   },
@@ -4351,7 +4351,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tree",
+                        "text": "text star",
                         "italic": false
                      }
                   },
@@ -4383,7 +4383,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text box",
+                        "text": "text tree",
                         "italic": false
                      }
                   },
@@ -4415,7 +4415,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fire",
+                        "text": "text box",
                         "italic": false
                      }
                   },
@@ -4447,7 +4447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text gate",
+                        "text": "text fire",
                         "italic": false
                      }
                   },
@@ -4479,7 +4479,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text jelly",
+                        "text": "text gate",
                         "italic": false
                      }
                   },
@@ -4511,7 +4511,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text reed",
+                        "text": "text jelly",
                         "italic": false
                      }
                   },
@@ -4543,7 +4543,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sign",
+                        "text": "text reed",
                         "italic": false
                      }
                   },
@@ -4575,7 +4575,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sun",
+                        "text": "text sign",
                         "italic": false
                      }
                   },
@@ -4607,7 +4607,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungi",
+                        "text": "text sun",
                         "italic": false
                      }
                   },
@@ -4639,7 +4639,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text husk",
+                        "text": "text fungi",
                         "italic": false
                      }
                   },
@@ -4671,7 +4671,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text leaf",
+                        "text": "text husk",
                         "italic": false
                      }
                   },
@@ -4703,7 +4703,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text orb",
+                        "text": "text leaf",
                         "italic": false
                      }
                   },
@@ -4735,7 +4735,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text trees",
+                        "text": "text orb",
                         "italic": false
                      }
                   },
@@ -4767,7 +4767,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cake",
+                        "text": "text trees",
                         "italic": false
                      }
                   },
@@ -4799,7 +4799,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dot",
+                        "text": "text cake",
                         "italic": false
                      }
                   },
@@ -4831,7 +4831,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text foliage",
+                        "text": "text dot",
                         "italic": false
                      }
                   },
@@ -4863,7 +4863,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rose",
+                        "text": "text foliage",
                         "italic": false
                      }
                   },
@@ -4895,7 +4895,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dust",
+                        "text": "text rose",
                         "italic": false
                      }
                   },
@@ -4927,7 +4927,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungus",
+                        "text": "text dust",
                         "italic": false
                      }
                   },
@@ -4959,7 +4959,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text husks",
+                        "text": "text fungus",
                         "italic": false
                      }
                   },
@@ -4991,7 +4991,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stump",
+                        "text": "text husks",
                         "italic": false
                      }
                   },
@@ -5023,7 +5023,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text starfish",
+                        "text": "text stump",
                         "italic": false
                      }
                   },
@@ -5055,7 +5055,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cursor",
+                        "text": "text starfish",
                         "italic": false
                      }
                   },
@@ -5087,7 +5087,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text is",
+                        "text": "text cursor",
                         "italic": false
                      }
                   },
@@ -5119,7 +5119,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text and",
+                        "text": "text is",
                         "italic": false
                      }
                   },
@@ -5151,7 +5151,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text not",
+                        "text": "text and",
                         "italic": false
                      }
                   },
@@ -5183,7 +5183,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text on",
+                        "text": "text not",
                         "italic": false
                      }
                   },
@@ -5215,7 +5215,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text near",
+                        "text": "text on",
                         "italic": false
                      }
                   },
@@ -5247,7 +5247,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text facing",
+                        "text": "text near",
                         "italic": false
                      }
                   },
@@ -5279,7 +5279,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text lonely",
+                        "text": "text facing",
                         "italic": false
                      }
                   },
@@ -5311,7 +5311,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text has",
+                        "text": "text without",
                         "italic": false
                      }
                   },
@@ -5343,7 +5343,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text make",
+                        "text": "text has",
                         "italic": false
                      }
                   },
@@ -5375,7 +5375,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text write",
+                        "text": "text make",
                         "italic": false
                      }
                   },
@@ -5407,7 +5407,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text all",
+                        "text": "text write",
                         "italic": false
                      }
                   },
@@ -5439,7 +5439,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text empty",
+                        "text": "text all",
                         "italic": false
                      }
                   },
@@ -5471,7 +5471,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text text",
+                        "text": "text empty",
                         "italic": false
                      }
                   },
@@ -5503,7 +5503,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text level",
+                        "text": "text text",
                         "italic": false
                      }
                   },
@@ -5535,7 +5535,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text you",
+                        "text": "text level",
                         "italic": false
                      }
                   },
@@ -5567,7 +5567,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text push",
+                        "text": "text you",
                         "italic": false
                      }
                   },
@@ -5599,7 +5599,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pull",
+                        "text": "text push",
                         "italic": false
                      }
                   },
@@ -5631,7 +5631,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text move",
+                        "text": "text pull",
                         "italic": false
                      }
                   },
@@ -5663,7 +5663,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text shift",
+                        "text": "text move",
                         "italic": false
                      }
                   },
@@ -5695,7 +5695,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text defeat",
+                        "text": "text shift",
                         "italic": false
                      }
                   },
@@ -5727,7 +5727,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text hot",
+                        "text": "text defeat",
                         "italic": false
                      }
                   },
@@ -5759,7 +5759,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text melt",
+                        "text": "text hot",
                         "italic": false
                      }
                   },
@@ -5791,7 +5791,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text hide",
+                        "text": "text melt",
                         "italic": false
                      }
                   },
@@ -5823,7 +5823,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text win",
+                        "text": "text hide",
                         "italic": false
                      }
                   },
@@ -5855,7 +5855,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stop",
+                        "text": "text win",
                         "italic": false
                      }
                   },
@@ -5887,7 +5887,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text open",
+                        "text": "text stop",
                         "italic": false
                      }
                   },
@@ -5919,7 +5919,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text shut",
+                        "text": "text open",
                         "italic": false
                      }
                   },
@@ -5951,7 +5951,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text float",
+                        "text": "text shut",
                         "italic": false
                      }
                   },
@@ -5983,7 +5983,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sink",
+                        "text": "text float",
                         "italic": false
                      }
                   },
@@ -6015,7 +6015,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text weak",
+                        "text": "text sink",
                         "italic": false
                      }
                   },
@@ -6047,7 +6047,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text swap",
+                        "text": "text weak",
                         "italic": false
                      }
                   },
@@ -6079,7 +6079,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tele",
+                        "text": "text swap",
                         "italic": false
                      }
                   },
@@ -6111,7 +6111,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fall",
+                        "text": "text tele",
                         "italic": false
                      }
                   },
@@ -6143,7 +6143,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text more",
+                        "text": "text fall",
                         "italic": false
                      }
                   },
@@ -6175,7 +6175,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text red",
+                        "text": "text more",
                         "italic": false
                      }
                   },
@@ -6207,7 +6207,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text blue",
+                        "text": "text red",
                         "italic": false
                      }
                   },
@@ -6239,7 +6239,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sleep",
+                        "text": "text blue",
                         "italic": false
                      }
                   },
@@ -6271,7 +6271,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text group",
+                        "text": "text sleep",
                         "italic": false
                      }
                   },
@@ -6303,7 +6303,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text right",
+                        "text": "text group",
                         "italic": false
                      }
                   },
@@ -6335,7 +6335,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text up",
+                        "text": "text right",
                         "italic": false
                      }
                   },
@@ -6367,7 +6367,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text left",
+                        "text": "text up",
                         "italic": false
                      }
                   },
@@ -6399,7 +6399,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text down",
+                        "text": "text left",
                         "italic": false
                      }
                   },
@@ -6431,7 +6431,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text word",
+                        "text": "text down",
                         "italic": false
                      }
                   },
@@ -6463,7 +6463,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text select",
+                        "text": "text word",
                         "italic": false
                      }
                   },
@@ -6495,7 +6495,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text best",
+                        "text": "text idle",
                         "italic": false
                      }
                   },
@@ -6527,7 +6527,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bonus",
+                        "text": "text lonely",
                         "italic": false
                      }
                   },
@@ -6559,7 +6559,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text end",
+                        "text": "text often",
                         "italic": false
                      }
                   },
@@ -6591,7 +6591,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text done",
+                        "text": "text seldom",
                         "italic": false
                      }
                   },
@@ -6623,7 +6623,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cloud",
+                        "text": "text select",
                         "italic": false
                      }
                   },
@@ -6655,7 +6655,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fence",
+                        "text": "text best",
                         "italic": false
                      }
                   },
@@ -6687,7 +6687,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text grass",
+                        "text": "text bonus",
                         "italic": false
                      }
                   },
@@ -6719,7 +6719,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text hedge",
+                        "text": "text end",
                         "italic": false
                      }
                   },
@@ -6751,7 +6751,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text ice",
+                        "text": "text done",
                         "italic": false
                      }
                   },
@@ -6783,7 +6783,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text lava",
+                        "text": "text cloud",
                         "italic": false
                      }
                   },
@@ -6815,7 +6815,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text water",
+                        "text": "text fence",
                         "italic": false
                      }
                   },
@@ -6847,7 +6847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text bog",
+                        "text": "text grass",
                         "italic": false
                      }
                   },
@@ -6879,7 +6879,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text line",
+                        "text": "text hedge",
                         "italic": false
                      }
                   },
@@ -6911,7 +6911,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text pipe",
+                        "text": "text ice",
                         "italic": false
                      }
                   },
@@ -6943,7 +6943,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rubble",
+                        "text": "text lava",
                         "italic": false
                      }
                   },
@@ -6975,7 +6975,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text wall",
+                        "text": "text water",
                         "italic": false
                      }
                   },
@@ -7007,7 +7007,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text brick",
+                        "text": "text bog",
                         "italic": false
                      }
                   },
@@ -7039,7 +7039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cliff",
+                        "text": "text line",
                         "italic": false
                      }
                   },
@@ -7071,7 +7071,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tile",
+                        "text": "text pipe",
                         "italic": false
                      }
                   },
@@ -7103,7 +7103,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tree",
+                        "text": "text rubble",
                         "italic": false
                      }
                   },
@@ -7135,7 +7135,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "trees",
+                        "text": "text wall",
                         "italic": false
                      }
                   },
@@ -7167,7 +7167,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "ufo",
+                        "text": "text brick",
                         "italic": false
                      }
                   },
@@ -7199,7 +7199,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "wall",
+                        "text": "text cliff",
                         "italic": false
                      }
                   },
@@ -7231,13 +7231,205 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "water",
+                        "text": "tile",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:226}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 1
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "tree",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:227}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 2
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "trees",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:228}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 3
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "ufo",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:229}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 4
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "violet",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:230}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 5
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "wall",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:231}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:note_block",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:note_block",
+                     "properties": {
+                        "instrument": "xylophone",
+                        "note": 6
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "water",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:232}"
                   }
                ]
             }

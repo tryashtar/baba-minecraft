@@ -208,10 +208,16 @@ grids:
         coords: [126, 151]
         properties:
           z_layer: 15
-      - name: flower
-        color: '#557ae0'
-        properties:
-          z_layer: 12
+      - shared:
+        - name: flower
+          color: '#557ae0'
+          properties:
+            z_layer: 12
+        - name: violet
+          color: '#4759b1'
+          text coords: [626, 910]
+          properties:
+            z_layer: 12
       - null
       - null
       - null
@@ -562,11 +568,11 @@ grids:
           text: facing
           part: infix
       - name: text
-        color: '#e5533b'
-        coords: [151, 1198]
+        color: '#ffffff'
+        coords: [1, 1348]
         properties:
-          text: lonely
-          part: prefix
+          text: without
+          part: infix
       - name: text
         color: '#ffffff'
         coords: [1, 151]
@@ -791,6 +797,30 @@ grids:
         properties:
           text: word
           part: property
+      - name: text
+        color: '#e49950'
+        coords: [76, 1198]
+        properties:
+          text: idle
+          part: prefix
+      - name: text
+        color: '#e5533b'
+        coords: [151, 1198]
+        properties:
+          text: lonely
+          part: prefix
+      - name: text
+        color: '#a5b13f'
+        coords: [226, 1198]
+        properties:
+          text: often
+          part: prefix
+      - name: text
+        color: '#557ae0'
+        coords: [301, 1198]
+        properties:
+          text: seldom
+          part: prefix
       - name: text
         color: '#ede285'
         coords: [151, 1873]

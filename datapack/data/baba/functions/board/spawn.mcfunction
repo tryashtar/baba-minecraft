@@ -66,6 +66,7 @@ execute if score spawn baba matches 29188 run summon marker ~ ~ ~ {Tags:["baba.o
 execute if score spawn baba matches 2451 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:6062905,z_layer:16}}}
 execute if score spawn baba matches 32385 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:6062905,z_layer:9}}}
 execute if score spawn baba matches 49848 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:15438282,z_layer:17}}}
+execute if score spawn baba matches 34898 run summon marker ~ ~ ~ {Tags:["baba.object","spawn"],data:{scores:{color:4676017,z_layer:12}}}
 execute if score spawn baba matches 49468 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","connector"],data:{scores:{color:2699585,z_layer:14}}}
 execute if score spawn baba matches 42043 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","connector"],data:{scores:{color:6266321,z_layer:2}}}
 scoreboard players operation @e[type=marker,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba

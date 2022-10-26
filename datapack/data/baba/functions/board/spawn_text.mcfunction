@@ -22,6 +22,7 @@ execute if score spawn_text baba matches 1043 run summon marker ~ ~ ~ {Tags:["ba
 execute if score spawn_text baba matches 49848 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"ufo",scores:{z_layer:20,color:14236010}}}
 execute if score spawn_text baba matches 54021 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"door",scores:{z_layer:20,color:15029051}}}
 execute if score spawn_text baba matches 61188 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"flower",scores:{z_layer:20,color:5602016}}}
+execute if score spawn_text baba matches 34898 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"violet",scores:{z_layer:20,color:4676017}}}
 execute if score spawn_text baba matches 22457 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"pillar",scores:{z_layer:20,color:7566195}}}
 execute if score spawn_text baba matches 13704 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"rock",scores:{z_layer:20,color:9463614}}}
 execute if score spawn_text baba matches 29188 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.noun"],data:{text:"tile",scores:{z_layer:20,color:7566195}}}
@@ -57,7 +58,7 @@ execute if score spawn_text baba matches 39747 run summon marker ~ ~ ~ {Tags:["b
 execute if score spawn_text baba matches 41746 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.infix"],data:{text:"on",scores:{z_layer:20,color:16777215}}}
 execute if score spawn_text baba matches 52390 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.infix"],data:{text:"near",scores:{z_layer:20,color:16777215}}}
 execute if score spawn_text baba matches 20119 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.infix"],data:{text:"facing",scores:{z_layer:20,color:16777215}}}
-execute if score spawn_text baba matches 59882 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.prefix"],data:{text:"lonely",scores:{z_layer:20,color:15029051}}}
+execute if score spawn_text baba matches 27691 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.infix"],data:{text:"without",scores:{z_layer:20,color:16777215}}}
 execute if score spawn_text baba matches 46949 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.verb","accepts_noun"],data:{text:"has",scores:{z_layer:20,color:16777215}}}
 execute if score spawn_text baba matches 441 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.verb","accepts_noun"],data:{text:"make",scores:{z_layer:20,color:16777215}}}
 execute if score spawn_text baba matches 45138 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.verb","accepts_noun","accepts_property"],data:{text:"write",scores:{z_layer:20,color:16777215}}}
@@ -94,6 +95,10 @@ execute if score spawn_text baba matches 28192 run summon marker ~ ~ ~ {Tags:["b
 execute if score spawn_text baba matches 55766 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"left",scores:{z_layer:20,color:8636645,direction:3}}}
 execute if score spawn_text baba matches 34491 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"down",scores:{z_layer:20,color:8636645,direction:2}}}
 execute if score spawn_text baba matches 3763 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"word",scores:{z_layer:20,color:16777215}}}
+execute if score spawn_text baba matches 3295 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.prefix"],data:{text:"idle",scores:{z_layer:20,color:14981456}}}
+execute if score spawn_text baba matches 59882 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.prefix"],data:{text:"lonely",scores:{z_layer:20,color:15029051}}}
+execute if score spawn_text baba matches 64800 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.prefix"],data:{text:"often",scores:{z_layer:20,color:10858815}}}
+execute if score spawn_text baba matches 59630 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.prefix"],data:{text:"seldom",scores:{z_layer:20,color:5602016}}}
 execute if score spawn_text baba matches 4679 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"select",scores:{z_layer:20,color:15590021}}}
 execute if score spawn_text baba matches 19737 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"best",scores:{z_layer:20,color:15590021}}}
 execute if score spawn_text baba matches 53212 run summon marker ~ ~ ~ {Tags:["baba.object","spawn","part.property"],data:{text:"bonus",scores:{z_layer:20,color:14236010}}}
