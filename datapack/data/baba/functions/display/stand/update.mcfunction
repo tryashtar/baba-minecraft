@@ -72,9 +72,11 @@ execute if entity @s[scores={sprite=34898}] run data modify entity @s ArmorItems
 execute if entity @s[scores={sprite=49468}] run function baba:display/stand/object/wall
 execute if entity @s[scores={sprite=42043}] run function baba:display/stand/object/water
 scoreboard players operation color baba = @s color
+execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text
+execute if entity @s[nbt={HandItems:[{tag:{properties:["red"]}}]}] run scoreboard players set color baba 15029051
+execute if entity @s[nbt={HandItems:[{tag:{properties:["blue"]}}]}] run scoreboard players set color baba 5602016
 execute if score palette baba matches 1 run function baba:display/stand/palette/underwater
 execute if score palette baba matches 2 run function baba:display/stand/palette/factory
 execute if score palette baba matches 3 run function baba:display/stand/palette/ruins
 execute if score palette baba matches 4 run function baba:display/stand/palette/autumn
-execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text
 execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba

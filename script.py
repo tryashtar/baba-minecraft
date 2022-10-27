@@ -200,10 +200,7 @@ def create_summon(properties, extra_data=None):
     data.extend(extra_data)
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
-  if len(data) > 0:
-    nbt.append('HandItems:[{id:"minecraft:potion",Count:1b,tag:{' + ','.join(data) + '}}]')
-  else:
-    nbt.append('HandItems:[{id:"minecraft:potion",Count:1b}]')
+  nbt.append('HandItems:[{id:"minecraft:tnt",Count:1b,tag:{' + ','.join(data) + '}}]')
   return f'summon armor_stand ~ ~ ~ {{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):
@@ -737,15 +734,20 @@ for m in sprites.properties.values():
     else:
       raise ValueError(m.name)
 spawn.append('data remove entity @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] HandItems[0].tag.scores')
-pot_fn.append('scoreboard players operation color baba = @s color')
+pot_fn.extend([
+  'scoreboard players operation color baba = @s color',
+  'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text',
+  f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["red"]}}}}]}}] run scoreboard players set color baba {int("e5533b",16)}',
+  f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["blue"]}}}}]}}] run scoreboard players set color baba {int("557ae0",16)}',
+])
 for pid,(pname,palette) in enumerate(sprites.palettes.items()):
   if pid != 0:
     pot_fn.append(f'execute if score palette baba matches {pid} run function baba:display/stand/palette/{pname}')
     pfn = []
     for color1,color2 in palette.items():
-      pfn.append(f'execute if entity @s[scores={{color={int(color1[1:],16)}}}] run scoreboard players set color baba {int(color2[1:],16)}')
+      if color1!=color2:
+        pfn.append(f'execute if score color baba matches {int(color1[1:],16)} run scoreboard players set color baba {int(color2[1:],16)}')
     tat.write_lines(pfn, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
-pot_fn.append('execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text')
 pot_fn.append('execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba')
 tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/stand/update.mcfunction')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
@@ -755,8 +757,9 @@ tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
 for a,model in anim_models.items():
   m = list(sorted(model, key=lambda x: x['predicate']['custom_model_data']))
-  tat.write_json({"overrides":m}, f'resourcepack/assets/minecraft/models/item/{("potion","splash_potion","lingering_potion")[a]}.json')
+  pot = ("potion","splash_potion","lingering_potion")[a]
+  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/{pot}"},"overrides":m}, f'resourcepack/assets/minecraft/models/item/{pot}.json')
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
-tat.write_json({"overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
+tat.write_json({"parent": "minecraft:block/note_block","overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
 tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
 tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":"minecraft:note_block","properties":["instrument","note"]}],"pools":loot_table}, f'datapack/data/minecraft/loot_tables/blocks/note_block.json')

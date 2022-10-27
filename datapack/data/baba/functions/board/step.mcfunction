@@ -44,7 +44,8 @@ execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function
 execute as @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["sleep"]}}]}] run function baba:board/graphics/frame
 execute as @e[type=armor_stand,tag=baba.object] at @s unless block ~ ~-1 ~ black_concrete run function baba:board/interact/destroy
 
-execute unless entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/update
+execute if score text_enabled baba matches 1 unless entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
+execute as @e[type=armor_stand,tag=baba.object] run function baba:display/stand/update
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 # if nothing changed, don't record this step

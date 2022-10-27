@@ -1,35 +1,32 @@
-execute if entity @s[scores={color=2368548}] run scoreboard players set color baba 2368548
-execute if entity @s[scores={color=1382431}] run scoreboard players set color baba 2370631
-execute if entity @s[scores={color=4331792}] run scoreboard players set color baba 5777482
-execute if entity @s[scores={color=6306177}] run scoreboard players set color baba 7091341
-execute if entity @s[scores={color=6827596}] run scoreboard players set color baba 8402061
-execute if entity @s[scores={color=3160100}] run scoreboard players set color baba 3100980
-execute if entity @s[scores={color=5259044}] run scoreboard players set color baba 4475706
-execute if entity @s[scores={color=7566195}] run scoreboard players set color baba 5336980
-execute if entity @s[scores={color=2699585}] run scoreboard players set color baba 3031644
-execute if entity @s[scores={color=8529436}] run scoreboard players set color baba 8994142
-execute if entity @s[scores={color=9330332}] run scoreboard players set color baba 10445773
-execute if entity @s[scores={color=14236010}] run scoreboard players set color baba 12542937
-execute if entity @s[scores={color=4938780}] run scoreboard players set color baba 4224060
-execute if entity @s[scores={color=9463614}] run scoreboard players set color baba 5988934
-execute if entity @s[scores={color=12829635}] run scoreboard players set color baba 12829635
-execute if entity @s[scores={color=4093576}] run scoreboard players set color baba 2702463
-execute if entity @s[scores={color=15029051}] run scoreboard players set color baba 12868213
-execute if entity @s[scores={color=4676017}] run scoreboard players set color baba 2704545
-execute if entity @s[scores={color=15438282}] run scoreboard players set color baba 15825138
-execute if entity @s[scores={color=6062905}] run scoreboard players set color baba 5543488
-execute if entity @s[scores={color=12754502}] run scoreboard players set color baba 8684365
-execute if entity @s[scores={color=16777215}] run scoreboard players set color baba 16777215
-execute if entity @s[scores={color=6266321}] run scoreboard players set color baba 3432883
-execute if entity @s[scores={color=14981456}] run scoreboard players set color baba 14913113
-execute if entity @s[scores={color=5602016}] run scoreboard players set color baba 1794471
-execute if entity @s[scores={color=2705553}] run scoreboard players set color baba 2768515
-execute if entity @s[scores={color=10858815}] run scoreboard players set color baba 7842623
-execute if entity @s[scores={color=3550754}] run scoreboard players set color baba 2764583
-execute if entity @s[scores={color=526344}] run scoreboard players set color baba 988457
-execute if entity @s[scores={color=8636645}] run scoreboard players set color baba 6394833
-execute if entity @s[scores={color=15590021}] run scoreboard players set color baba 14741661
-execute if entity @s[scores={color=16760135}] run scoreboard players set color baba 16237932
-execute if entity @s[scores={color=7580659}] run scoreboard players set color baba 2325179
-execute if entity @s[scores={color=11981632}] run scoreboard players set color baba 9619289
-execute if entity @s[scores={color=723726}] run scoreboard players set color baba 790818
+execute if score color baba matches 1382431 run scoreboard players set color baba 2370631
+execute if score color baba matches 4331792 run scoreboard players set color baba 5777482
+execute if score color baba matches 6306177 run scoreboard players set color baba 7091341
+execute if score color baba matches 6827596 run scoreboard players set color baba 8402061
+execute if score color baba matches 3160100 run scoreboard players set color baba 3100980
+execute if score color baba matches 5259044 run scoreboard players set color baba 4475706
+execute if score color baba matches 7566195 run scoreboard players set color baba 5336980
+execute if score color baba matches 2699585 run scoreboard players set color baba 3031644
+execute if score color baba matches 8529436 run scoreboard players set color baba 8994142
+execute if score color baba matches 9330332 run scoreboard players set color baba 10445773
+execute if score color baba matches 14236010 run scoreboard players set color baba 12542937
+execute if score color baba matches 4938780 run scoreboard players set color baba 4224060
+execute if score color baba matches 9463614 run scoreboard players set color baba 5988934
+execute if score color baba matches 4093576 run scoreboard players set color baba 2702463
+execute if score color baba matches 15029051 run scoreboard players set color baba 12868213
+execute if score color baba matches 4676017 run scoreboard players set color baba 2704545
+execute if score color baba matches 15438282 run scoreboard players set color baba 15825138
+execute if score color baba matches 6062905 run scoreboard players set color baba 5543488
+execute if score color baba matches 12754502 run scoreboard players set color baba 8684365
+execute if score color baba matches 6266321 run scoreboard players set color baba 3432883
+execute if score color baba matches 14981456 run scoreboard players set color baba 14913113
+execute if score color baba matches 5602016 run scoreboard players set color baba 1794471
+execute if score color baba matches 2705553 run scoreboard players set color baba 2768515
+execute if score color baba matches 10858815 run scoreboard players set color baba 7842623
+execute if score color baba matches 3550754 run scoreboard players set color baba 2764583
+execute if score color baba matches 526344 run scoreboard players set color baba 988457
+execute if score color baba matches 8636645 run scoreboard players set color baba 6394833
+execute if score color baba matches 15590021 run scoreboard players set color baba 14741661
+execute if score color baba matches 16760135 run scoreboard players set color baba 16237932
+execute if score color baba matches 7580659 run scoreboard players set color baba 2325179
+execute if score color baba matches 11981632 run scoreboard players set color baba 9619289
+execute if score color baba matches 723726 run scoreboard players set color baba 790818
