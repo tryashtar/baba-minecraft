@@ -44,8 +44,10 @@ execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function
 execute as @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["sleep"]}}]}] run function baba:board/graphics/frame
 execute as @e[type=armor_stand,tag=baba.object] at @s unless block ~ ~-1 ~ black_concrete run function baba:board/interact/destroy
 
+scoreboard players add @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["float"]}}]}] z_layer 100
 execute if score text_enabled baba matches 1 unless entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
 execute as @e[type=armor_stand,tag=baba.object] run function baba:display/stand/update
+scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 # if nothing changed, don't record this step

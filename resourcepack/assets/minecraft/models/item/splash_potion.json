@@ -4,6 +4,15 @@
       "layer0": "minecraft:item/potion_overlay",
       "layer1": "minecraft:item/splash_potion"
    },
+   "display": {
+      "head": {
+         "scale": [
+            0,
+            0,
+            0
+         ]
+      }
+   },
    "overrides": [
       {
          "predicate": {

@@ -758,7 +758,7 @@ custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_mo
 for a,model in anim_models.items():
   m = list(sorted(model, key=lambda x: x['predicate']['custom_model_data']))
   pot = ("potion","splash_potion","lingering_potion")[a]
-  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/{pot}"},"overrides":m}, f'resourcepack/assets/minecraft/models/item/{pot}.json')
+  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/{pot}"},"display":{"head":{"scale":[0,0,0]}},"overrides":m}, f'resourcepack/assets/minecraft/models/item/{pot}.json')
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"parent": "minecraft:block/note_block","overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
 tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
