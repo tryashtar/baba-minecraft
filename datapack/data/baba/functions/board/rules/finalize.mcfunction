@@ -2,7 +2,7 @@ execute if data entity @s HandItems[0].tag.parsing.writes[0] run data modify ent
 execute if data entity @s HandItems[0].tag.parsing.transforms[{inverted:1b,text_text:"text"}] run data remove entity @s HandItems[0].tag.parsing.writes
 execute if data entity @s HandItems[0].tag.parsing{delete:0b,block_transforms:1b} run data remove entity @s HandItems[0].tag.parsing.writes[]
 execute if data entity @s HandItems[0].tag.parsing{delete:0b,block_transforms:1b} run data remove entity @s HandItems[0].tag.parsing.transforms[]
-execute if data entity @s HandItems[0].tag.parsing{delete:1b} unless data entity @s HandItems[0].tag.parsing.transforms[{inverted:0b}] run kill @s
+execute if data entity @s HandItems[0].tag.parsing{delete:1b} unless data entity @s HandItems[0].tag.parsing.transforms[{inverted:0b}] run function baba:board/interact/remove
 
 data modify entity @s HandItems[0].tag merge value {transforms:[],properties:[],has:[],make:[]}
 data modify entity @s HandItems[0].tag.properties append from entity @s HandItems[0].tag.parsing.properties[{inverted:0b}].text_text

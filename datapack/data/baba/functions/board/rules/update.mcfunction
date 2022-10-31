@@ -1,12 +1,10 @@
 # parse text and cache properties in the affected objects
-scoreboard players set text_id baba 0
-execute as @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] store result score @s text_id run scoreboard players add text_id baba 1
-scoreboard players set @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] text_used 0
-scoreboard players set @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] text_disabled 0
-scoreboard players set @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] text_disabled2 0
+execute as @e[type=armor_stand,tag=baba.object,tag=reparse] at @s as @e[type=armor_stand,tag=baba.object,tag=!reparse,scores={sprite=30442},distance=..1.01] at @s run function baba:board/rules/try_invalidate
+scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_used 0
+scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled 0
+scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled2 0
 tag @e[type=armor_stand,tag=baba.object,tag=disabled] remove disabled
-data modify storage baba:main rules set value []
-execute as @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] at @s run function baba:board/rules/parse
+execute as @e[type=armor_stand,tag=baba.object,tag=reparse] at @s run function baba:board/rules/parse
 
 execute as @e[type=armor_stand,tag=baba.object] run data modify entity @s HandItems[0].tag.parsing set value {delete:0b,block_transforms:0b,transforms:[],writes:[],properties:[],has:[],make:[]}
 data modify storage baba:main negative_rules set from storage baba:main rules
@@ -21,3 +19,5 @@ execute as @e[type=armor_stand,tag=baba.object] run function baba:board/rules/fi
 
 execute as @e[type=armor_stand,tag=baba.object,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
 execute as @e[type=armor_stand,tag=baba.object,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
+
+tag @e[type=armor_stand,tag=baba.object,tag=reparse] remove reparse

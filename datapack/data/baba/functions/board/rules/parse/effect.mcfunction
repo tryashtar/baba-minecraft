@@ -23,8 +23,8 @@ execute if entity @s[tag=part.noun] run data modify storage baba:main parsing.ru
 execute if entity @s[tag=part.property] run data modify storage baba:main parsing.rules[-1][].effect.part set value "property"
 data modify storage baba:main parsing.inverted set value 0b
 
-execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},distance=..0.1] run data modify entity @s HandItems[0].tag.parsing set from storage baba:main parsing
+execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,distance=..0.1] run data modify entity @s HandItems[0].tag.parsing set from storage baba:main parsing
 
 execute positioned ^ ^ ^1 unless entity @e[type=armor_stand,tag=baba.object,tag=part.and,distance=..0.1,limit=1] run function baba:board/rules/parse/done
 execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=part.and,distance=..0.1] run function baba:board/rules/parse/effect_ands
-execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},tag=!part.and,distance=..0.1] run function baba:board/rules/parse/new
+execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,tag=!part.and,distance=..0.1] run function baba:board/rules/parse/new

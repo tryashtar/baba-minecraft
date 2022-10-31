@@ -20,7 +20,7 @@ execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:
 
 execute if score direction baba matches 1.. as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["select"]}}]}] at @s run function baba:board/movement/select
 
-function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
 execute as @e[type=armor_stand,tag=baba.object,tag=!transformed,nbt={HandItems:[{tag:{transforms:[{}]}}]}] at @s run function baba:board/interact/transform
 execute if entity @e[type=armor_stand,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 
@@ -35,9 +35,10 @@ execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["defeat"]}}]}] at @s run function baba:board/interact/defeat
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["shut"]}}]}] at @s run function baba:board/interact/shut
 execute as @e[type=armor_stand,tag=baba.object] if data entity @s HandItems[0].tag.make[0] at @s run function baba:board/interact/make
+execute if entity @e[type=armor_stand,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["win"]}}]}] at @s run function baba:board/interact/win
 
-function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
 
 # graphical updates
 execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector

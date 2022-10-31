@@ -113,6 +113,7 @@ class SpriteCollection:
                   if adding.name == 'text':
                     props[self.properties['z_layer']] = 20
                     props[self.properties['not_all']] = True
+                    props[self.properties['reparse']] = True
                   for k,v in spr.items():
                     if k in baba.property_mods and k not in self.properties:
                       self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
@@ -608,7 +609,7 @@ for o in objectlist:
     editor_sprites[size].append(([spr], color_img))
 colorgrids = [Grid(x[1], x[0][0], x[0][1], 1, '#00000000') for x in editor_sprites.items()]
 for c,grid in enumerate(colorgrids):
-  grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_color.png')
+  grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_editor.png')
 i = 0
 j = 0
 anim_models = {}
@@ -725,6 +726,8 @@ unpack_lines.extend([
 ])
 spawn.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba')
 spawntext.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba')
+spawntext.append('scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text_id > @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] text_id')
+spawntext.append('scoreboard players add @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text_id 1')
 for m in sprites.properties.values():
   if 'spawn' in m.attributes and m.kind == 'score' and m.name not in ('sprite','text'):
       spawn.append(f'execute as @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] store result score @s {m.name} run data get entity @s HandItems[0].tag.scores.{m.name}')

@@ -15,11 +15,11 @@ data modify storage baba:main parsing.rules[-1][].text append from storage baba:
 data modify storage baba:main parsing.rules[-1][].verb_text set from entity @s HandItems[0].tag.text
 data modify storage baba:main parsing.split set value 1b
 
-execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},distance=..0.1] run data modify entity @s HandItems[0].tag.parsing set from storage baba:main parsing
+execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,distance=..0.1] run data modify entity @s HandItems[0].tag.parsing set from storage baba:main parsing
 
 execute positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=part.not,distance=..0.1] run function baba:board/rules/parse/effect_nots
 execute if entity @s[tag=accepts_property] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=part.property,distance=..0.1] run function baba:board/rules/parse/effect
 execute if entity @s[tag=accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=part.noun,distance=..0.1] run function baba:board/rules/parse/effect
-execute if entity @s[tag=accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},tag=!part.not,tag=!part.property,tag=!part.noun,distance=..0.1] run function baba:board/rules/parse/new
-execute if entity @s[tag=accepts_property,tag=!accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},tag=!part.not,tag=!part.property,distance=..0.1] run function baba:board/rules/parse/new
-execute if entity @s[tag=!accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,scores={sprite=30442},tag=!part.not,distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,tag=!part.not,tag=!part.property,tag=!part.noun,distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=accepts_property,tag=!accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,tag=!part.not,tag=!part.property,distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=!accepts_property,tag=accepts_noun] positioned ^ ^ ^1 as @e[type=armor_stand,tag=baba.object,tag=reparse,tag=!part.not,distance=..0.1] run function baba:board/rules/parse/new

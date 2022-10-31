@@ -40,6 +40,9 @@ properties:
   direction:
     type: score
     attributes: [spawn]
+  reparse:
+    type: tag
+    attributes: [spawn]
   style:
     type: tag
     attributes: [sprite, primary]
