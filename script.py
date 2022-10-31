@@ -707,7 +707,8 @@ for o in objectlist:
         x_uvsize = 16/grid.width
         y_uvsize = 16/grid.height
         break
-    model = {"parent":"baba:editor_display","textures":{"up":f"baba:grid{g}_editor"},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up"}}}]}
+    face = {"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#face"}
+    model = {"parent":"baba:editor_display","textures":{"face":f"baba:grid{g}_editor"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
     description = s.display(props, '.','-')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:editor/{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:editor/{description}'})

@@ -1,7 +1,7 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "up": "baba:grid0_editor"
+      "face": "baba:grid0_editor"
    },
    "elements": [
       {
@@ -12,7 +12,7 @@
          ],
          "to": [
             16,
-            0,
+            16,
             16
          ],
          "faces": {
@@ -23,7 +23,52 @@
                   9.0,
                   6.4
                ],
-               "texture": "#up"
+               "texture": "#face"
+            },
+            "down": {
+               "uv": [
+                  8.0,
+                  5.3333,
+                  9.0,
+                  6.4
+               ],
+               "texture": "#face"
+            },
+            "north": {
+               "uv": [
+                  8.0,
+                  5.3333,
+                  9.0,
+                  6.4
+               ],
+               "texture": "#face"
+            },
+            "south": {
+               "uv": [
+                  8.0,
+                  5.3333,
+                  9.0,
+                  6.4
+               ],
+               "texture": "#face"
+            },
+            "east": {
+               "uv": [
+                  8.0,
+                  5.3333,
+                  9.0,
+                  6.4
+               ],
+               "texture": "#face"
+            },
+            "west": {
+               "uv": [
+                  8.0,
+                  5.3333,
+                  9.0,
+                  6.4
+               ],
+               "texture": "#face"
             }
          }
       }
