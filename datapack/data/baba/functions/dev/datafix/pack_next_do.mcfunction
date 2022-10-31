@@ -1,7 +1,13 @@
 scoreboard players add packed baba 1
 function baba:editor/pack
-setblock ~-1 ~-1 ~1 air
+fill ~-2 ~-1 ~ ~-1 ~ ~2 air
 setblock ~-1 ~-1 ~1 jukebox
+setblock ~-1 ~-1 ~ command_block[facing=west]{Command:"execute positioned ~1 ~1 ~ run function baba:editor/unpack"}
+setblock ~-1 ~ ~ stone_button[face=floor,facing=east]
+setblock ~-2 ~-1 ~ oak_wall_sign[facing=west]{Color:"black",GlowingText:1b,Text2:'"unpack"'}
+setblock ~-1 ~-1 ~2 command_block[facing=west]{Command:"execute positioned ~1 ~1 ~-2 run function baba:editor/pack"}
+setblock ~-1 ~ ~2 stone_button[face=floor,facing=east]
+setblock ~-2 ~-1 ~2 oak_wall_sign[facing=west]{Color:"black",GlowingText:1b,Text2:'"pack"'}
 data modify block ~-1 ~-1 ~1 {} merge from entity @e[type=item,tag=level,distance=..0.1,limit=1] Item.tag.BlockEntityTag
 kill @e[type=item,tag=level,distance=..0.1,limit=1]
 execute store result score width baba run data get block ~-1 ~-1 ~1 RecordItem.tag.level[0]
