@@ -616,25 +616,30 @@ anim_models = {}
 pot_fn = ['execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer','execute at @s run tp @s ~ ~1 ~']
 pot_sub = {}
 pot_ov = {}
+povcmd = {}
 for a,anim in enumerate(anim_grids[0]):
   tat.delete_folder(f'resourcepack/assets/baba/models/anim{a}')
   anim_models[a] = []
+
+def add_model(s,props):
+  for g,grid in enumerate(anim_grids):
+    if s in grid[0].placements:
+      placement = grid[0].placements[s]
+      x_uvsize = 16/grid[0].width
+      y_uvsize = 16/grid[0].height
+      break
+  for a,anim in enumerate(grid):
+    description = s.display(props, '.','-')
+    scale1 = round(1.6*anim.scale,3)
+    model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,round(13*anim.scale-43,2),0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
+    anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
+    tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
+
 for o in objectlist:
   pot_sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
   for s,props in pot_sprs:
     j += 1
-    for g,grid in enumerate(anim_grids):
-      if s in grid[0].placements:
-        placement = grid[0].placements[s]
-        x_uvsize = 16/grid[0].width
-        y_uvsize = 16/grid[0].height
-        break
-    for a,anim in enumerate(grid):
-      description = s.display(props, '.','-')
-      scale1 = round(1.6*anim.scale,3)
-      model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[0,round(13*anim.scale-43,2),0],"scale":[scale1,scale1,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
-      anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
-      tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
+    add_model(s,props)
     if len(pot_sprs) > 1:
       if o.name not in pot_sub:
         pot_sub[o.name] = []
@@ -643,29 +648,33 @@ for o in objectlist:
     else:
       pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
 
-  #for ov in o.overlays:
-  #  overlay = sprites.overlays[ov]
-  #  if o.name not in pot_ov:
-  #    pot_ov[o.name] = (filter_properties(s.properties, lambda x: x.name=='sprite'),[])
-  #  for prop,op in overlay.property_mods.items():
-  #    pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
-  #    if op['operation'] == 'modulo':
-  #      pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
-  #  for ovspr in overlay.sprites:
-  #    props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
-  #    disp = ovspr.display(props,".","-")
-  #    special_checks = []
-  #    for p,v in props.copy().items():
-  #      if p.name in overlay.property_mods:
-  #        special_checks.append((p, props[p]))
-  #        del props[p]
-  #    del props[sprites.properties['sprite']]
-  #    selector = create_selector(props)
-  #    final = 'execute '
-  #    for prop,spec in special_checks:
-  #      final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-  #    final += f'if entity @s[{selector}] run data modify storage baba:main text append value \'{{"translate":"baba.{disp}.row{r}","color":"{ovspr.properties[sprites.properties["color"]]}"}}\''
-  #    pot_ov[o.name][1].append(final)
+  for ov in o.overlays:
+    overlay = sprites.overlays[ov]
+    if o.name not in pot_ov:
+      pot_ov[o.name] = (filter_properties(s.properties, lambda x: x.name=='sprite'),[])
+    for prop,op in overlay.property_mods.items():
+      pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba = @s {op["operands"][0]}')
+      if op['operation'] == 'modulo':
+        pot_ov[o.name][1].append(f'scoreboard players operation {prop} baba %= #{op["operands"][1]} baba')
+    for ovspr in overlay.sprites:
+      props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
+      if ovspr not in povcmd:
+        j += 1
+        add_model(ovspr,props)
+        povcmd[ovspr] = j
+      disp = ovspr.display(props,".","-")
+      special_checks = []
+      for p,v in props.copy().items():
+        if p.name in overlay.property_mods:
+          special_checks.append((p, props[p]))
+          del props[p]
+      del props[sprites.properties['sprite']]
+      selector = create_selector(props)
+      final = 'execute '
+      for prop,spec in special_checks:
+        final += f'if score {prop.name} baba matches {prop.convert(spec)} '
+      final += f'if entity @s[{selector}] run summon armor_stand ~ ~0.01 ~ {{Marker:1b,Invisible:1b,NoGravity:1b,ArmorItems:[{{}},{{}},{{}},{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{povcmd[ovspr]},CustomPotionColor:{int(ovspr.properties[sprites.properties["color"]][1:],16)}}}}}],Tags:["baba.overlay"]}}'
+      pot_ov[o.name][1].append(final)
 
   sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()
   for s,props in sprs:
@@ -707,6 +716,7 @@ for o in objectlist:
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
+
 for i,fn in pot_sub.items():
   tat.write_lines(fn, f'datapack/data/baba/functions/display/stand/object/{i}.mcfunction')
 for i,fn in pack_sub.items():
@@ -752,7 +762,10 @@ for pid,(pname,palette) in enumerate(sprites.palettes.items()):
         pfn.append(f'execute if score color baba matches {int(color1[1:],16)} run scoreboard players set color baba {int(color2[1:],16)}')
     tat.write_lines(pfn, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
 pot_fn.append('execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba')
-tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/stand/update.mcfunction')
+for name,(prp,fn) in pot_ov.items():
+  pot_fn.append(f'execute at @s[{create_selector(prp)}] run function baba:display/stand/object/{name}.overlay')
+  tat.write_lines(fn, f'datapack/data/baba/functions/display/stand/object/{name}.overlay.mcfunction')
+tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/stand/object.mcfunction')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')
 tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfunction')
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')

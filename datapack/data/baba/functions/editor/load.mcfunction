@@ -19,5 +19,5 @@ execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/
 
 scoreboard players add @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["float"]}}]}] z_layer 100
 execute if score text_enabled baba matches 1 run function baba:display/text/update
-execute as @e[type=armor_stand,tag=baba.object] run function baba:display/stand/update
+function baba:display/stand/update
 scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={z_layer=100..}] z_layer 100
