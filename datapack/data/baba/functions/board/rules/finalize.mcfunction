@@ -1,3 +1,4 @@
+tag @s remove assign
 execute if data entity @s HandItems[0].tag.parsing.writes[0] run data modify entity @s HandItems[0].tag.parsing.writes[].write set value 1b
 execute if data entity @s HandItems[0].tag.parsing.transforms[{inverted:1b,text_text:"text"}] run data remove entity @s HandItems[0].tag.parsing.writes
 execute if data entity @s HandItems[0].tag.parsing{delete:0b,block_transforms:1b} run data remove entity @s HandItems[0].tag.parsing.writes[]
