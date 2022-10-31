@@ -14,6 +14,7 @@ scoreboard players set text_id baba 0
 execute as @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] store result score @s text_id run scoreboard players add text_id baba 1
 data modify storage baba:main rules set value []
 function baba:board/rules/update
+function baba:board/rules/assign
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 
 scoreboard players add @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["float"]}}]}] z_layer 100
