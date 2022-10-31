@@ -1,7 +1,7 @@
 # effect noun or property
 # valid follows: and
 data modify storage baba:main parsing set from entity @s HandItems[0].tag.parsing
-execute store result score rule_count baba run data get storage baba:main parsing.rules[0]
+execute store result score rule_count baba if data storage baba:main parsing.rules[0][]
 scoreboard players operation @s text_using += rule_count baba
 scoreboard players operation @e[type=armor_stand,tag=baba.object,tag=ambiguous] text_using += rule_count baba
 tag @e[type=armor_stand,tag=baba.object,tag=ambiguous] remove ambiguous

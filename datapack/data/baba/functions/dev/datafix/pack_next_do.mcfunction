@@ -10,8 +10,8 @@ setblock ~-1 ~ ~2 stone_button[face=floor,facing=east]
 setblock ~-2 ~-1 ~2 oak_wall_sign[facing=west]{Color:"black",GlowingText:1b,Text2:'"pack"'}
 data modify block ~-1 ~-1 ~1 {} merge from entity @e[type=item,tag=level,distance=..0.1,limit=1] Item.tag.BlockEntityTag
 kill @e[type=item,tag=level,distance=..0.1,limit=1]
-execute store result score width baba run data get block ~-1 ~-1 ~1 RecordItem.tag.level[0]
-execute store result score height baba run data get block ~-1 ~-1 ~1 RecordItem.tag.level
+execute store result score height baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[]
+execute store result score width baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[0][]
 execute store result score saved baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[][][]
 execute store result score x baba run data get entity @s Pos[0]
 execute store result score z baba run data get entity @s Pos[2]
