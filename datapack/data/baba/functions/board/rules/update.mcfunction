@@ -1,5 +1,5 @@
 # parse text and cache properties in the affected objects
-execute as @e[type=armor_stand,tag=baba.object,tag=reparse] at @s as @e[type=armor_stand,tag=baba.object,tag=!reparse,scores={sprite=30442},distance=..1.01] at @s run function baba:board/rules/try_invalidate
+execute as @e[type=armor_stand,tag=baba.object,tag=reparse] run function baba:board/rules/invalidate
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_used 0
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled 0
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled2 0
