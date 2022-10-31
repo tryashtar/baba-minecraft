@@ -129,5 +129,5 @@ execute if data storage baba:main tile{scores:{sprite:42043}} run setblock ~ ~-1
 execute if data storage baba:main level[0][0][1] run setblock ~ ~1 ~ glass
 execute if data storage baba:main tile.extra run setblock ~ ~1 ~ jukebox{RecordItem:{id:"minecraft:tnt",Count:1b}}
 execute if data storage baba:main tile.extra run data modify block ~ ~1 ~ RecordItem.tag.extra set from storage baba:main tile.extra
-data remove storage baba:main leatevel[0][0][0]
+data remove storage baba:main level[0][0][0]
 execute if data storage baba:main level[0][0][0] positioned ~ ~3 ~ run function baba:editor/unpack/block

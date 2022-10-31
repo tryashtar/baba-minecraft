@@ -1,8 +1,8 @@
 scoreboard players add packed baba 1
 clone ~-1 ~-1 ~1 ~-1 ~-1 ~1 ~ ~ ~
 function baba:editor/unpack/grid
-execute store result score width baba run data get block ~-1 ~-1 ~1 RecordItem.tag.level[0]
-execute store result score height baba run data get block ~-1 ~-1 ~1 RecordItem.tag.level
+execute store result score height baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[]
+execute store result score width baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[0][]
 execute store result score saved baba if data block ~-1 ~-1 ~1 RecordItem.tag.level[][][]
 execute store result score x baba run data get entity @s Pos[0]
 execute store result score z baba run data get entity @s Pos[2]

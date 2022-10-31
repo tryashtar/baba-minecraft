@@ -40,6 +40,13 @@ properties:
   direction:
     type: score
     attributes: [spawn]
+  reparse:
+    type: tag
+    attributes: [spawn]
+  assign:
+    type: tag
+    default: true
+    attributes: [spawn, all]
   style:
     type: tag
     attributes: [sprite, primary]

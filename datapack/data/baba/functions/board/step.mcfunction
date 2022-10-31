@@ -20,9 +20,11 @@ execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:
 
 execute if score direction baba matches 1.. as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["select"]}}]}] at @s run function baba:board/movement/select
 
-function baba:board/rules/update
+tag @e[type=armor_stand,tag=baba.object,tag=assign_always] add assign
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 execute as @e[type=armor_stand,tag=baba.object,tag=!transformed,nbt={HandItems:[{tag:{transforms:[{}]}}]}] at @s run function baba:board/interact/transform
-execute if entity @e[type=armor_stand,tag=baba.object,tag=transformed,limit=1] run function baba:board/rules/update_transformed
+execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 # each property is checked in turn, not each object
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["up"]}}]}] facing 1
@@ -35,9 +37,11 @@ execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["defeat"]}}]}] at @s run function baba:board/interact/defeat
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["shut"]}}]}] at @s run function baba:board/interact/shut
 execute as @e[type=armor_stand,tag=baba.object] if data entity @s HandItems[0].tag.make[0] at @s run function baba:board/interact/make
+execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["win"]}}]}] at @s run function baba:board/interact/win
 
-function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 # graphical updates
 execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
@@ -46,7 +50,7 @@ execute as @e[type=armor_stand,tag=baba.object] at @s unless block ~ ~-1 ~ black
 
 scoreboard players add @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["float"]}}]}] z_layer 100
 execute if score text_enabled baba matches 1 unless entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
-execute as @e[type=armor_stand,tag=baba.object] run function baba:display/stand/update
+function baba:display/stand/update
 scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
