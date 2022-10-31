@@ -1,7 +1,7 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "up": "baba:grid0_color"
+      "up": "baba:grid0_editor"
    },
    "elements": [
       {
