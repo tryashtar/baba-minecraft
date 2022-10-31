@@ -1,6 +1,7 @@
 summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:potion",Count:1b}],HandItems:[{id:"minecraft:tnt",Count:1b}],Tags:["spawn"]}
 execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] sprite run data get storage baba:main previous.objects[0].scores.sprite
 execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text run data get storage baba:main previous.objects[0].scores.text
+execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] text_id run data get storage baba:main previous.objects[0].scores.text_id
 execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] facing run data get storage baba:main previous.objects[0].scores.facing
 execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] walk run data get storage baba:main previous.objects[0].scores.walk
 execute store result score @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] number run data get storage baba:main previous.objects[0].scores.number
