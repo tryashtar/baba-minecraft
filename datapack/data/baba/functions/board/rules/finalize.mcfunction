@@ -6,7 +6,7 @@ execute if data entity @s HandItems[0].tag.parsing{delete:1b} unless data entity
 
 data modify entity @s HandItems[0].tag merge value {transforms:[],properties:[],has:[],make:[]}
 data modify entity @s HandItems[0].tag.properties append from entity @s HandItems[0].tag.parsing.properties[{inverted:0b}].text_text
-data modify entity @s HandItems[0].tag.has append from entity @s HandItems[0].tag.parsing.has[{inverted:0b}].text_text
+data modify entity @s HandItems[0].tag.has append from entity @s HandItems[0].tag.parsing.has[{inverted:0b}].text
 data modify entity @s HandItems[0].tag.make append from entity @s HandItems[0].tag.parsing.make[{inverted:0b}].text
 data modify entity @s HandItems[0].tag.transforms append from entity @s HandItems[0].tag.parsing.transforms[{inverted:0b}]
 data modify entity @s HandItems[0].tag.transforms append from entity @s HandItems[0].tag.parsing.writes[{inverted:0b}]
