@@ -10,7 +10,7 @@ execute if score direction baba matches 1.. run function baba:board/movement/pro
 tag @e[type=armor_stand,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
 function baba:board/movement/process/move
-execute as @e[type=armor_stand,tag=baba.object,tag=!move_success,nbt={HandItems:[{tag:{properties:["move"]}}]}] at @s run function baba:board/movement/attempt/move_turnaround
+execute as @e[type=armor_stand,tag=baba.object,tag=!move_success,nbt={HandItems:[{tag:{properties:["move"]}}]},nbt=!{HandItems:[{tag:{properties:["sleep"]}}]}] at @s run function baba:board/movement/attempt/move_turnaround
 tag @e[type=armor_stand,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
 function baba:board/movement/process/shift
