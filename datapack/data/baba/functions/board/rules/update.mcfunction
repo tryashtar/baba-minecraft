@@ -16,3 +16,4 @@ execute as @e[type=armor_stand,tag=baba.object,tag=reparse,scores={text_used=1..
 tag @e[type=armor_stand,tag=baba.object,tag=reparse] remove reparse
 execute if score rules2 baba < rules1 baba run tag @e[type=armor_stand,tag=baba.object] add assign
 execute if score rules3 baba > rules2 baba run tag @e[type=armor_stand,tag=baba.object] add assign
+execute if score rules3 baba > rules2 baba as @a at @s run playsound baba:form_rule master @s

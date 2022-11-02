@@ -7,4 +7,5 @@ execute if score move_cooldown baba matches ..0 run scoreboard players add @e[ty
 execute if score move_cooldown baba matches ..0 if score text_enabled baba matches 1 run function baba:display/text/update
 execute if score move_cooldown baba matches ..0 run function baba:display/stand/update
 execute if score move_cooldown baba matches ..0 run scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={z_layer=100..}] z_layer 100
+execute if score move_cooldown baba matches ..0 as @a at @s run playsound baba:undo master @s
 execute if score move_cooldown baba matches ..0 run scoreboard players set move_cooldown baba 2

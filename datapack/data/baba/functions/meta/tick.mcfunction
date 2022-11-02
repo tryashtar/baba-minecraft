@@ -11,4 +11,3 @@ execute if score text_enabled baba matches 1 if entity @e[type=armor_stand,tag=b
 execute if score text_enabled baba matches 1 if entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
 execute if score text_enabled baba matches 1 if entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={z_layer=100..}] z_layer 100
 scoreboard players remove @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] move_frame 1
-item modify entity @a[predicate=baba:holding_tile] weapon.mainhand baba:infinite_tiles

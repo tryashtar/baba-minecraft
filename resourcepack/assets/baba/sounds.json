@@ -17,5 +17,67 @@
          "baba:open3",
          "baba:open4"
       ]
+   },
+   "defeat": {
+      "sounds": [
+         "baba:defeat1",
+         "baba:defeat2",
+         "baba:defeat3",
+         "baba:defeat4"
+      ]
+   },
+   "teleport": {
+      "sounds": [
+         "baba:teleport1",
+         "baba:teleport2",
+         "baba:teleport3",
+         "baba:teleport4"
+      ]
+   },
+   "melt": {
+      "sounds": [
+         "baba:melt1",
+         "baba:melt2",
+         "baba:melt3",
+         "baba:melt4",
+         "baba:melt5",
+         "baba:melt6",
+         "baba:melt7",
+         "baba:melt8",
+         "baba:melt9",
+         "baba:melt10",
+         "baba:melt11",
+         "baba:melt12"
+      ]
+   },
+   "form_rule": {
+      "sounds": [
+         "baba:form_rule1",
+         "baba:form_rule2",
+         "baba:form_rule3",
+         "baba:form_rule4",
+         "baba:form_rule5"
+      ]
+   },
+   "move": {
+      "sounds": [
+         "baba:move1",
+         "baba:move2",
+         "baba:move3",
+         "baba:move4",
+         "baba:move5",
+         "baba:move6",
+         "baba:move7",
+         "baba:move8"
+      ]
+   },
+   "undo": {
+      "sounds": [
+         "baba:undo1",
+         "baba:undo2",
+         "baba:undo3",
+         "baba:undo4",
+         "baba:undo5"
+      ]
    }
 }

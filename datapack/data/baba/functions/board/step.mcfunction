@@ -1,11 +1,8 @@
-# rules are parsed multiple times per step, since various actions can move, create, or destroy text
-# however, objects can only transform once per step, to ensure back-and-forth transformations work correctly
-tag @e[type=armor_stand,tag=baba.object,tag=transformed] remove transformed
-
 # process movement in batches: you, then move, then shift
 # if anything in a batch fails to move, try again until everything either succeeds or fails
 # additionally, anything can only move once per batch
 # these ensure that, for example, a plus sign of moving objects with 'push' or 'stop' move correctly
+scoreboard players set moved baba 0
 execute if score direction baba matches 1.. run function baba:board/movement/process/you
 tag @e[type=armor_stand,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
@@ -19,6 +16,7 @@ tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["shift"]}}]}] at @s run scoreboard players operation @e[type=armor_stand,tag=baba.object,distance=..0.1] facing = @s facing
 
 execute if score direction baba matches 1.. as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["select"]}}]}] at @s run function baba:board/movement/select
+execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s
 
 tag @e[type=armor_stand,tag=baba.object,tag=assign_always] add assign
 execute if score direction baba matches 0 run tag @e[type=armor_stand,tag=baba.object,tag=assign_idle] add assign
