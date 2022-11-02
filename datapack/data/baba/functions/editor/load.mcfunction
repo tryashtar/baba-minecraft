@@ -7,6 +7,13 @@ execute store result score level_background baba run data get storage baba:main 
 execute store result score palette baba run data get storage baba:main level_metadata.palette
 execute if data storage baba:main level[0] run function baba:editor/load/row
 
+data modify storage baba:main all_list set value []
+function baba:board/find_all
+data modify storage baba:main all_write_list set from storage baba:main all_list
+data modify storage baba:main all_write_list[].write set value 1b
+tag @e[type=armor_stand,tag=baba.object,tag=found] remove found
+tag @e[type=armor_stand,tag=baba.object,tag=found_text] remove found_text
+
 execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 # don't trigger idle condition when loading
 scoreboard players set direction baba -1

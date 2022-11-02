@@ -28,6 +28,9 @@ properties:
   part:
     type: tag
     attributes: [spawn]
+  special:
+    type: tag
+    attributes: [spawn]
   accepts_noun:
     type: tag
     attributes: [spawn]
@@ -613,12 +616,14 @@ grids:
         properties:
           text: all
           part: noun
+          special: true
       - name: text
         color: '#ffffff'
         coords: [76, 76]
         properties:
           text: empty
           part: noun
+          special: true
       - name: text
         color: '#d9396a'
         coords: [76, 1]
