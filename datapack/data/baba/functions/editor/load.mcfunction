@@ -7,6 +7,7 @@ execute store result score level_background baba run data get storage baba:main 
 execute store result score palette baba run data get storage baba:main level_metadata.palette
 execute if data storage baba:main level[0] run function baba:editor/load/row
 
+# get all the objects that 'all' should represent, in a form ready for embedding for 'is' and 'write'
 data modify storage baba:main all_list set value []
 function baba:board/find_all
 data modify storage baba:main all_write_list set from storage baba:main all_list
@@ -14,11 +15,12 @@ data modify storage baba:main all_write_list[].write set value 1b
 tag @e[type=armor_stand,tag=baba.object,tag=found] remove found
 tag @e[type=armor_stand,tag=baba.object,tag=found_text] remove found_text
 
+# process some things before the first step
 execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
-# don't trigger idle condition when loading
-scoreboard players set direction baba -1
 scoreboard players set text_id baba 0
 execute as @e[type=armor_stand,tag=baba.object,scores={sprite=30442}] store result score @s text_id run scoreboard players add text_id baba 1
+# don't trigger 'idle' conditions
+scoreboard players set direction baba -1
 data modify storage baba:main rules set value []
 function baba:board/rules/update
 function baba:board/rules/assign

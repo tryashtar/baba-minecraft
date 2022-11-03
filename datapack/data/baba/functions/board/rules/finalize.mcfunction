@@ -1,3 +1,5 @@
+# the entity's property data aren't yet in the format we like, in order for the 'Tags' trick to work
+# here, we merge 'writes' with 'transforms', handle 'A is A' and 'A is not A', and throw away inverted properties
 tag @s remove assign
 execute if data entity @s HandItems[0].tag.parsing.writes[0] run data modify entity @s HandItems[0].tag.parsing.writes[].write set value 1b
 execute if data entity @s HandItems[0].tag.parsing.transforms[0] run data modify entity @s HandItems[0].tag.parsing.transforms[].write set value 0b
@@ -17,9 +19,12 @@ execute if data entity @s HandItems[0].tag.transforms[{inverted:0b,write:1b,text
 data modify entity @s HandItems[0].tag.transforms append from entity @s HandItems[0].tag.transforms[].all[]
 data remove entity @s HandItems[0].tag.transforms[{inverted:0b,text_text:"all",write:0b}]
 
+# builtin rules: 'text is push', 'level is stop', 'cursor is select'
+# can be disabled by inverted rules
 execute if entity @s[scores={sprite=30442},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"push"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "push"
 execute if entity @s[scores={sprite=26837},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"stop"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "stop"
 execute if entity @s[scores={sprite=2526},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"select"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "select"
 
+# cache float level in a score so we can compare it with /scoreboard players operation
 scoreboard players set @s float_level 0
 scoreboard players set @s[nbt={HandItems:[{tag:{properties:["float"]}}]}] float_level 1

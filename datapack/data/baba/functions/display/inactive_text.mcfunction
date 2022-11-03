@@ -1,3 +1,5 @@
+# in the real game, not all text of a certain color looks the same when disabled
+# it's just a few odd ones though
 execute if score @s color matches 7566195 run scoreboard players set color baba 2699585
 execute if score @s color matches 8529436 run scoreboard players set color baba 4331792
 execute if score @s color matches 9330332 run scoreboard players set color baba 6306177

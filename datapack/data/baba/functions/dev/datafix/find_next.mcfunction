@@ -1,3 +1,4 @@
+# clone in-place to load chunks
 clone ~ ~1 ~ ~ ~1 ~ ~ ~1 ~ replace force
 clone ~ ~1 ~3 ~ ~1 ~3 ~ ~1 ~3 replace force
 execute if block ~ ~-1 ~1 air if block ~ ~-1 ~2 white_concrete run tp @s ~ ~ ~2

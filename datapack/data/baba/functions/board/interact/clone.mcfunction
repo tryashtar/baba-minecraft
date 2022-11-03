@@ -1,4 +1,5 @@
 scoreboard players set clone baba 1
+# not the same as blocker, 'more' does not spread onto objects that are both weak and stop
 execute if entity @e[type=armor_stand,tag=baba.object,distance=..0.1,nbt={HandItems:[{tag:{properties:["stop"]}}]},limit=1] run scoreboard players set clone baba 0
 execute if entity @e[type=armor_stand,tag=baba.object,distance=..0.1,nbt={HandItems:[{tag:{properties:["push"]}}]},limit=1] run scoreboard players set clone baba 0
 execute if entity @e[type=armor_stand,tag=baba.object,distance=..0.1,nbt={HandItems:[{tag:{properties:["pull"]}}]},limit=1] run scoreboard players set clone baba 0

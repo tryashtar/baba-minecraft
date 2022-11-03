@@ -6,6 +6,8 @@ tag @e[type=armor_stand,tag=baba.object,tag=ambiguous] add subject
 tag @e[type=armor_stand,tag=baba.object,tag=ambiguous] remove ambiguous
 data modify storage baba:main parsing set from entity @s HandItems[0].tag.parsing
 
+# the first rule is a template that contains prefix data, if any
+# copy it and add subject-specific data
 data modify storage baba:main parsing.rules append from storage baba:main parsing.rules[0]
 execute store result storage baba:main parsing.rules[-1].subject.sprite int 1 run scoreboard players get @s text
 data modify storage baba:main parsing.rules[-1].subject.sprite_text set from entity @s HandItems[0].tag.text

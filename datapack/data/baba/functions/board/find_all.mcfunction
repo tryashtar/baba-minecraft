@@ -1,3 +1,5 @@
+# any objects or text are added to the global palette, which is what 'X is all' creates
+# 'text' and 'level' are excluded
 scoreboard players set sprite baba 0
 scoreboard players operation sprite baba > @e[type=armor_stand,tag=baba.object,tag=!found] sprite
 scoreboard players operation sprite baba > @e[type=armor_stand,tag=baba.object,tag=part.noun,tag=!special,tag=!found_text] text

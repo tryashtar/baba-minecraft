@@ -4,6 +4,8 @@ tag @s remove left
 tag @s remove right
 scoreboard players operation sprite baba = @s sprite
 
+# connect to objects of the same type
+# lines also connect to levels
 scoreboard players set connect baba 0
 execute positioned ~1 ~ ~ as @e[type=armor_stand,tag=baba.object,tag=connector,distance=..0.1] if score @s sprite = sprite baba run scoreboard players set connect baba 1
 execute if score connect baba matches 1 run tag @s add up

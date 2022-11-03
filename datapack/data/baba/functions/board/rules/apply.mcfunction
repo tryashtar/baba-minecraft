@@ -1,5 +1,6 @@
 data modify storage baba:main rule set from storage baba:main iter_rules[0]
 
+# if this rule's subject matches the object, proceed to check conditions
 execute store result score subject baba run data get storage baba:main rule.subject.sprite
 execute if data storage baba:main rule.subject{sprite_text:"all",inverted:0b} as @e[type=armor_stand,tag=baba.object,tag=!not_all] at @s run function baba:board/rules/apply/check
 execute if data storage baba:main rule.subject{sprite_text:"all",inverted:1b} as @e[type=armor_stand,tag=baba.object,tag=not_all] at @s run function baba:board/rules/apply/check

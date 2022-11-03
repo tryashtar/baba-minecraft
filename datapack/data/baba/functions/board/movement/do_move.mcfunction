@@ -1,3 +1,4 @@
+# move everything that was marked as able to move at once
 execute as @e[type=armor_stand,tag=baba.object,tag=destroy] at @s run function baba:board/interact/destroy
 scoreboard players add @e[type=armor_stand,tag=baba.object,tag=can_move] walk 1
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=can_move,scores={walk=4..}] walk 0

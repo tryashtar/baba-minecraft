@@ -1,3 +1,6 @@
+# copy data and scores of all objects on this tile
+# if it's the same as the last time record was called, just increment a count
+# if it's different, append it to the list with a count
 data modify storage baba:main objects set value []
 execute as @e[type=armor_stand,tag=baba.object,distance=..0.1] run function baba:board/history/add
 data modify storage baba:main previous set value 1b

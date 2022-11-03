@@ -6,4 +6,4 @@ tag @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] add assign
 scoreboard players operation @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] facing = @s facing
 tag @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] remove spawn
 data remove entity @s HandItems[0].tag.has[0]
-execute if data entity @s HandItems[0].tag.has[0] run function baba:board/interact/has
+execute if data entity @s HandItems[0].tag.has[0] run function baba:board/interact/spawn

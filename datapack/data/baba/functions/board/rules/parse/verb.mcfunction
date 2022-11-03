@@ -4,6 +4,8 @@ tag @e[type=armor_stand,tag=baba.object,tag=last_verb] remove last_verb
 tag @s add last_verb
 data modify storage baba:main parsing set from entity @s HandItems[0].tag.parsing
 
+# if this is the first verb, we need to change the structure of the parsing context
+# it's now a list of lists, since every effect applies to every subject
 execute if data storage baba:main parsing{split:0b} run data remove storage baba:main parsing.rules[0]
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.split_rules set from storage baba:main parsing.rules
 execute if data storage baba:main parsing{split:0b} run data modify storage baba:main parsing.rules set value []
