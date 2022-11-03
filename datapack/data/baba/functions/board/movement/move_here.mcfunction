@@ -1,6 +1,6 @@
 tag @s add moving
-execute if entity @s[tag=!teleported,tag=!swap] run tag @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
-execute if entity @s[tag=!teleported,tag=!swap,nbt={HandItems:[{tag:{properties:["swap"]}}]}] run tag @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
+execute if entity @s[tag=!teleported,tag=!swap,tag=!falling] run tag @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
+execute if entity @s[tag=!teleported,tag=!swap,tag=!falling,nbt={HandItems:[{tag:{properties:["swap"]}}]}] run tag @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
 execute at @s as @e[type=armor_stand,tag=baba.object,tag=swap,tag=!moving] run function baba:board/movement/move_here
 tag @e[type=armor_stand,tag=baba.object,tag=swap] remove swap
 execute at @s run tag @e[type=armor_stand,tag=baba.object,tag=assign_move,distance=..1.1] add assign

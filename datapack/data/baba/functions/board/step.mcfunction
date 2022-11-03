@@ -13,22 +13,26 @@ tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
 function baba:board/movement/process/shift
 tag @e[type=armor_stand,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=armor_stand,tag=baba.object,tag=move_done] remove move_done
-execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["shift"]}}]}] at @s run function baba:board/movement/process/shift_dir
-
-execute if score direction baba matches 1.. as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["select"]}}]}] at @s run function baba:board/movement/select
-execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s
 
 tag @e[type=armor_stand,tag=baba.object,tag=assign_always] add assign
 execute if score direction baba matches 0 run tag @e[type=armor_stand,tag=baba.object,tag=assign_idle] add assign
 execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
 execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 execute as @e[type=armor_stand,tag=baba.object,tag=!transformed,nbt={HandItems:[{tag:{transforms:[{}]}}]}] at @s run function baba:board/interact/transform
+
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
 execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 tag @e[type=armor_stand,tag=baba.object,tag=teleported] remove teleported
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["tele"]}}]}] at @s run function baba:board/interact/teleport
+execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["shift"]}}]}] at @s run function baba:board/movement/process/shift_dir
+execute if score direction baba matches 1.. as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["select"]}}]}] at @s run function baba:board/movement/select
+execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["fall"]}}]}] at @s run function baba:board/interact/fall
+execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s
 
-# each property is checked in turn, not each object
+execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
+execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
+
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["up"]}}]}] facing 1
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["down"]}}]}] facing 2
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["left"]}}]}] facing 3
