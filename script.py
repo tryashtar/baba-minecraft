@@ -750,6 +750,7 @@ for m in sprites.properties.values():
       raise ValueError(m.name)
 spawn.append('data remove entity @e[type=armor_stand,tag=spawn,distance=..0.1,limit=1] HandItems[0].tag.scores')
 pot_fn.extend([
+  'item replace entity @s[nbt={HandItems:[{tag:{properties:["hide"]}}]}] armor.head with potion',
   'scoreboard players operation color baba = @s color',
   'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text',
   f'execute if entity @s[nbt={{HandItems:[{{tag:{{properties:["red"]}}}}]}}] run scoreboard players set color baba {int("e5533b",16)}',
@@ -765,7 +766,7 @@ for pid,(pname,palette) in enumerate(sprites.palettes.items()):
     tat.write_lines(pfn, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
 pot_fn.append('execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba')
 for name,(prp,fn) in pot_ov.items():
-  pot_fn.append(f'execute at @s[{create_selector(prp)}] run function baba:display/stand/object/{name}.overlay')
+  pot_fn.append(f'execute at @s[{create_selector(prp)},nbt=!{{HandItems:[{{tag:{{properties:["hide"]}}}}]}}] run function baba:display/stand/object/{name}.overlay')
   tat.write_lines(fn, f'datapack/data/baba/functions/display/stand/object/{name}.overlay.mcfunction')
 tat.write_lines(pot_fn, f'datapack/data/baba/functions/display/stand/object.mcfunction')
 tat.write_lines(spawn, f'datapack/data/baba/functions/board/spawn.mcfunction')

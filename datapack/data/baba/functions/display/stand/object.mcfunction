@@ -71,6 +71,7 @@ execute if entity @s[scores={sprite=49848}] run data modify entity @s ArmorItems
 execute if entity @s[scores={sprite=34898}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value 551
 execute if entity @s[scores={sprite=49468}] run function baba:display/stand/object/wall
 execute if entity @s[scores={sprite=42043}] run function baba:display/stand/object/water
+item replace entity @s[nbt={HandItems:[{tag:{properties:["hide"]}}]}] armor.head with potion
 scoreboard players operation color baba = @s color
 execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text
 execute if entity @s[nbt={HandItems:[{tag:{properties:["red"]}}]}] run scoreboard players set color baba 15029051
@@ -80,5 +81,5 @@ execute if score palette baba matches 2 run function baba:display/stand/palette/
 execute if score palette baba matches 3 run function baba:display/stand/palette/ruins
 execute if score palette baba matches 4 run function baba:display/stand/palette/autumn
 execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba
-execute at @s[scores={sprite=26837}] run function baba:display/stand/object/level.overlay
-execute at @s[scores={sprite=30442}] run function baba:display/stand/object/text.overlay
+execute at @s[scores={sprite=26837},nbt=!{HandItems:[{tag:{properties:["hide"]}}]}] run function baba:display/stand/object/level.overlay
+execute at @s[scores={sprite=30442},nbt=!{HandItems:[{tag:{properties:["hide"]}}]}] run function baba:display/stand/object/text.overlay
