@@ -1,6 +1,7 @@
 execute store result score rules1 baba if data storage baba:main rules[]
 execute as @e[type=armor_stand,tag=baba.object,tag=reparse] at @s run function baba:board/rules/invalidate
 execute store result score rules2 baba if data storage baba:main rules[]
+tag @e[type=armor_stand,tag=baba.object,tag=reparse,scores={text_used=0}] add unused
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_used 0
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled 0
 scoreboard players set @e[type=armor_stand,tag=baba.object,tag=reparse] text_disabled2 0
@@ -16,4 +17,6 @@ execute as @e[type=armor_stand,tag=baba.object,tag=reparse,scores={text_used=1..
 tag @e[type=armor_stand,tag=baba.object,tag=reparse] remove reparse
 execute if score rules2 baba < rules1 baba run tag @e[type=armor_stand,tag=baba.object] add assign
 execute if score rules3 baba > rules2 baba run tag @e[type=armor_stand,tag=baba.object] add assign
-execute if score rules3 baba > rules2 baba as @a at @s run playsound baba:form_rule master @s
+
+execute if entity @e[type=armor_stand,tag=baba.object,tag=unused,scores={text_used=1..}] as @a at @s run playsound baba:form_rule master @s
+tag @e[type=armor_stand,tag=baba.object,tag=unused] remove unused
