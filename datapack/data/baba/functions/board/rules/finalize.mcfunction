@@ -20,3 +20,6 @@ data remove entity @s HandItems[0].tag.transforms[{inverted:0b,text_text:"all",w
 execute if entity @s[scores={sprite=30442},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"push"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "push"
 execute if entity @s[scores={sprite=26837},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"stop"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "stop"
 execute if entity @s[scores={sprite=2526},nbt=!{HandItems:[{tag:{parsing:{properties:[{inverted:1b,text_text:"select"}]}}}]}] run data modify entity @s HandItems[0].tag.properties append value "select"
+
+scoreboard players set @s float_level 0
+scoreboard players set @s[nbt={HandItems:[{tag:{properties:["float"]}}]}] float_level 1
