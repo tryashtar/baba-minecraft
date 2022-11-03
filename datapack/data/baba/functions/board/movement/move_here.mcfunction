@@ -1,3 +1,8 @@
+tag @s add moving
+execute if entity @s[tag=!teleported,tag=!swap] run tag @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
+execute if entity @s[tag=!teleported,tag=!swap,nbt={HandItems:[{tag:{properties:["swap"]}}]}] run tag @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["swap"]}}]},distance=..0.1] add swap
+execute at @s as @e[type=armor_stand,tag=baba.object,tag=swap,tag=!moving] run function baba:board/movement/move_here
+tag @e[type=armor_stand,tag=baba.object,tag=swap] remove swap
 execute at @s run tag @e[type=armor_stand,tag=baba.object,tag=assign_move,distance=..1.1] add assign
 execute at @s[scores={sprite=30442}] run tag @e[type=armor_stand,tag=baba.object,scores={sprite=30442},distance=..1.1] add reparse
 tp @s ~ ~ ~
@@ -5,3 +10,4 @@ tag @s[tag=assign_move] add assign
 tag @s[scores={sprite=30442}] add reparse
 scoreboard players set @s move_frame 2
 scoreboard players add moved baba 1
+tag @s remove moving
