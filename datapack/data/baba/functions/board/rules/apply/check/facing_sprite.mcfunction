@@ -9,4 +9,4 @@ execute if entity @s[scores={facing=4}] rotated 0 0 positioned ^ ^ ^1 if score i
 execute if entity @s[scores={facing=4}] rotated 0 0 positioned ^ ^ ^1 if score inverted baba matches 1 as @e[type=armor_stand,tag=baba.object,tag=!self,tag=!used,tag=!not_all,distance=..0.1] unless score @s sprite = check_sprite baba run tag @s add found
 execute if entity @e[type=armor_stand,tag=baba.object,tag=found,limit=1] run scoreboard players set passed baba 1
 tag @e[type=armor_stand,tag=baba.object,tag=found,limit=1] add used
-tag @e[type=armor_stand,tag=baba.object,tag=found,limit=1] remove found
+tag @e[type=armor_stand,tag=baba.object,tag=found] remove found

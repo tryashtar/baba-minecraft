@@ -27,4 +27,4 @@ execute positioned ^ ^ ^1 unless block ~ ~-1 ~ black_concrete run tag @s remove 
 tag @s[tag=!can_move,tag=!auto_move,nbt={HandItems:[{tag:{properties:["weak"]}}]}] add destroy
 
 # if you can't move, you can't push or pull
-execute if entity @s[tag=!can_move,tag=!destroy] run tag @e[type=armor_stand,tag=baba.object,tag=can_move] remove can_move
+execute if entity @s[tag=!can_move] run tag @e[type=armor_stand,tag=baba.object,tag=can_move] remove can_move

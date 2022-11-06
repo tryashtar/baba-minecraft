@@ -21,7 +21,7 @@ tag @e[type=armor_stand,tag=baba.object,tag=assign_always] add assign
 execute if score direction baba matches 0 run tag @e[type=armor_stand,tag=baba.object,tag=assign_idle] add assign
 execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
 execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
-execute as @e[type=armor_stand,tag=baba.object,tag=!transformed,nbt={HandItems:[{tag:{transforms:[{}]}}]}] at @s run function baba:board/interact/transform
+execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{transforms:[{}]}}]}] at @s run function baba:board/interact/transform
 
 # parse and assign again if anything transformed, possibly into text
 execute if entity @e[type=armor_stand,tag=baba.object,tag=reparse,limit=1] run function baba:board/rules/update
