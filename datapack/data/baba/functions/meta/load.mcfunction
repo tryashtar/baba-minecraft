@@ -14,6 +14,7 @@ scoreboard objectives add z_layer dummy
 scoreboard objectives add color dummy
 scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
+scoreboard objectives add win dummy
 scoreboard objectives add text_id dummy
 scoreboard objectives add text_using dummy
 scoreboard objectives add text_used dummy

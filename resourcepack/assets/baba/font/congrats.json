@@ -1,0 +1,33 @@
+{
+   "providers": [
+      {
+         "type": "space",
+         "advances": {
+            " ": -1
+         }
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:congrats.png",
+         "height": 24,
+         "ascent": 12,
+         "chars": [
+            "ab",
+            "cd",
+            "ef",
+            "gh",
+            "ij",
+            "kl",
+            "mn",
+            "op",
+            "qr",
+            "st",
+            "uv",
+            "wx",
+            "yz",
+            "12",
+            "34"
+         ]
+      }
+   ]
+}

@@ -6,6 +6,7 @@ scoreboard players operation anim baba %= #3 baba
 execute if score text_enabled baba matches 1 unless score last_anim baba = anim baba run function baba:display/text/anim
 execute unless score last_anim baba = anim baba run function baba:display/stand/anim
 scoreboard players remove move_cooldown baba 1
+execute as @a[scores={win=1..}] run function baba:progress/win
 execute as @a[nbt={OnGround:1b}] at @s run function baba:input/check
 execute if score text_enabled baba matches 1 if entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run scoreboard players add @e[type=armor_stand,tag=baba.object,scores={float_level=1..}] z_layer 100
 execute if score text_enabled baba matches 1 if entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
