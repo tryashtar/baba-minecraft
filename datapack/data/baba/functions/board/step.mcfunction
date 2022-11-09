@@ -46,6 +46,11 @@ scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["left"]}}]}] facing 3
 scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["right"]}}]}] facing 4
 
+# cache float level in a score so we can compare it with /scoreboard players operation
+# very obscure interactions require this to go here
+scoreboard players set @e[type=armor_stand,tag=baba.object] float_level 0
+scoreboard players set @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["float"]}}]}] float_level 1
+
 # assign again if anything is created by 'more', but don't parse text
 execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:["more"]}}]}] at @s run function baba:board/interact/more
 execute if entity @e[type=armor_stand,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign

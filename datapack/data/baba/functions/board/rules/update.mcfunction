@@ -19,6 +19,7 @@ function baba:board/rules/graphics/full_disabling
 execute as @e[type=armor_stand,tag=baba.object,tag=reparse,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
 execute as @e[type=armor_stand,tag=baba.object,tag=reparse,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
 
+execute as @e[type=armor_stand,tag=baba.object,tag=reparse] run function baba:board/rules/parse/reset
 tag @e[type=armor_stand,tag=baba.object,tag=reparse] remove reparse
 execute if score rules2 baba < rules1 baba run tag @e[type=armor_stand,tag=baba.object] add assign
 execute if score rules3 baba > rules2 baba run tag @e[type=armor_stand,tag=baba.object] add assign
