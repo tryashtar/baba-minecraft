@@ -5,7 +5,10 @@ execute store result score level_height baba if data storage baba:main level[]
 execute store result score level_width baba if data storage baba:main level[0][]
 execute store result score level_background baba run data get storage baba:main level_metadata.background
 execute store result score palette baba run data get storage baba:main level_metadata.palette
+scoreboard players set row baba 0
 execute if data storage baba:main level[0] run function baba:editor/load/row
+execute if score level_background baba matches 1 run function baba:editor/load/background/island
+execute if score level_background baba matches 2 run function baba:editor/load/background/flower
 
 # get all the objects that 'all' should represent, in a form ready for embedding for 'is' and 'write'
 data modify storage baba:main all_list set value []

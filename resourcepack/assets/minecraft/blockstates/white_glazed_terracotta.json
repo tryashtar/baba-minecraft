@@ -1,0 +1,20 @@
+{
+   "variants": {
+      "facing=north": {
+         "model": "baba:background/default_floor",
+         "y": 90
+      },
+      "facing=south": {
+         "model": "baba:background/underwater_floor",
+         "y": 90
+      },
+      "facing=east": {
+         "model": "baba:background/factory_floor",
+         "y": 90
+      },
+      "facing=west": {
+         "model": "baba:background/ruins_floor",
+         "y": 90
+      }
+   }
+}

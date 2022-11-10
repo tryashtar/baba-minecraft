@@ -1,5 +1,6 @@
 import tryashtools as tat
 import PIL.Image
+import PIL.ImageColor
 import itertools
 import numpy as np
 import json
@@ -454,26 +455,62 @@ for s in sprites.objects['text'].sprites:
 tat.write_lines(text_map, 'text_ids.txt')
 
 def shroom_state(val):
+  dir = ['up','down','north','south','east','west']
   result = []
-  bits = "{0:07b}".format(val)
-  for i,dir in enumerate(['up','down','north','south','east','west']):
-    result.append(f'{dir}={str(bits[i+1]=="1").lower()}')
-  return ('brown_mushroom_block' if bits[0]=="1" else 'red_mushroom_block', ','.join(result))
+  for i,m in enumerate(dir):
+    result.append(f'{m}={str(val%2==1).lower()}')
+    val = val // 2
+  block = ['brown_mushroom_block', 'red_mushroom_block', 'mushroom_stem'][val%3]
+  return (block, ','.join(result))
+
+def terracotta_state(val, half):
+  dir = ['north','south','east','west']
+  state = f'facing={dir[val%len(dir)]}'
+  val = val // len(dir)
+  blocks = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray'] if half else ['light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
+  block = blocks[val%len(blocks)]+'_glazed_terracotta'
+  val = val // len(blocks)
+  return (block, state)
 
 blockstates = {}
-place = []
-for x in range(0,11):
-  for y in range(0,6):
-    (shroom, state) = shroom_state(x*6+y)
-    place.append(f'setblock {16-(3*y)} 0 {1+(3*x)} {shroom}[{state}]')
-    if shroom not in blockstates:
-      blockstates[shroom] = {}
-    blockstates[shroom][state] = {"model":f"baba:background/island.{x}.{y}","y":90}
-    model = {"textures":{"up":"baba:island"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
-    tat.write_json(model, f'resourcepack/assets/baba/models/background/island.{x}.{y}.json')
+shroom_id = 0
+terra_id = 0
+for bg in ['island', 'flower']:
+  img = PIL.Image.open(f'resourcepack/assets/baba/textures/{bg}.png')
+  place = []
+  for x in range(0,11):
+    for y in range(0,6):
+      (shroom, state) = shroom_state(shroom_id)
+      place.append(f'setblock ~{16-(3*y)} ~-1 ~{1+(3*x)} {shroom}[{state}]')
+      if shroom not in blockstates:
+        blockstates[shroom] = {}
+      blockstates[shroom][state] = {"model":f"baba:background/{bg}/{x}.{y}","y":90}
+      model = {"textures":{"up":f"baba:{bg}"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
+      tat.write_json(model, f'resourcepack/assets/baba/models/background/{bg}/{x}.{y}.json')
+      shroom_id += 1
+  tat.write_lines(place, f'datapack/data/baba/functions/editor/load/background/{bg}.mcfunction')
+palette_place = []
+texture = PIL.Image.new('RGBA', (2,len(sprites.palettes)))
+for j,t in enumerate(['floor','wall']):
+  background = []
+  for i,(n,p) in enumerate(sprites.palettes.items()):
+    color = p[['#080808','#15181f'][j]]
+    texture.putpixel((j,i),PIL.ImageColor.getrgb(color))
+    uv = [round(j/2*16,3),round(i/len(sprites.palettes)*16,3),round((j+1)/2*16,3),round((i+1)/len(sprites.palettes)*16,3)]
+    model = {"parent":"minecraft:block/block","textures":{"all":"baba:background"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all"},"down":{"uv":uv,"texture":"#all"},"north":{"uv":uv,"texture":"#all"},"south":{"uv":uv,"texture":"#all"},"east":{"uv":uv,"texture":"#all"},"west":{"uv":uv,"texture":"#all"}}}]}
+    tat.write_json(model, f'resourcepack/assets/baba/models/background/{n}_{t}.json')
+    (block, state) = terracotta_state(terra_id, t=='floor')
+    if block not in blockstates:
+      blockstates[block] = {}
+    terra_id += 1
+    blockstates[block][state] = {"model":f"baba:background/{n}_{t}","y":90}
+    background.append(f'execute if score palette baba matches {i} run setblock ~ ~-1 ~ {block}[{state}]')
+  if t == 'floor':
+    background.append(f'execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
+  tat.write_lines(background, f'datapack/data/baba/functions/editor/load/background/{t}.mcfunction')
+texture.save(f'resourcepack/assets/baba/textures/background.png')
 for k,v in blockstates.items():
   tat.write_json({"variants":v}, f'resourcepack/assets/minecraft/blockstates/{k}.json')
-tat.write_lines(place, f'datapack/data/baba/functions/dev/island_background.mcfunction')
 
 text = [
   'data modify storage baba:main after_text set value []',

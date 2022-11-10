@@ -2,6 +2,15 @@
    "values": [
       "barrier",
       "brown_mushroom_block",
-      "red_mushroom_block"
+      "red_mushroom_block",
+      "mushroom_stem",
+      "white_glazed_terracotta",
+      "orange_glazed_terracotta",
+      "magenta_glazed_terracotta",
+      "light_blue_glazed_terracotta",
+      "yellow_glazed_terracotta",
+      "lime_glazed_terracotta",
+      "pink_glazed_terracotta",
+      "gray_glazed_terracotta"
    ]
 }

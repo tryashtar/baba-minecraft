@@ -1,0 +1,8 @@
+{
+   "variants": {
+      "facing=north": {
+         "model": "baba:background/autumn_floor",
+         "y": 90
+      }
+   }
+}

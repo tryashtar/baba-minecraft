@@ -1,0 +1,76 @@
+{
+   "parent": "minecraft:block/block",
+   "textures": {
+      "all": "baba:background"
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            16,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            },
+            "down": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            },
+            "north": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            },
+            "south": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            },
+            "east": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            },
+            "west": {
+               "uv": [
+                  8.0,
+                  12.8,
+                  16.0,
+                  16.0
+               ],
+               "texture": "#all"
+            }
+         }
+      }
+   ]
+}
