@@ -428,6 +428,28 @@ for s in sprites.objects['text'].sprites:
   text_map.append(f'{text}: {hash(text)}')
 tat.write_lines(text_map, 'text_ids.txt')
 
+def shroom_state(val):
+  result = []
+  bits = "{0:07b}".format(val)
+  for i,dir in enumerate(['up','down','north','south','east','west']):
+    result.append(f'{dir}={str(bits[i+1]=="1").lower()}')
+  return ('brown_mushroom_block' if bits[0]=="1" else 'red_mushroom_block', ','.join(result))
+
+blockstates = {}
+place = []
+for x in range(0,11):
+  for y in range(0,6):
+    (shroom, state) = shroom_state(x*6+y)
+    place.append(f'setblock {16-(3*y)} 0 {1+(3*x)} {shroom}[{state}]')
+    if shroom not in blockstates:
+      blockstates[shroom] = {}
+    blockstates[shroom][state] = {"model":f"baba:background/island.{x}.{y}","y":90}
+    model = {"textures":{"up":"baba:island_anim0"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
+    tat.write_json(model, f'resourcepack/assets/baba/models/background/island.{x}.{y}.json')
+for k,v in blockstates.items():
+  tat.write_json({"variants":v}, f'resourcepack/assets/minecraft/blockstates/{k}.json')
+tat.write_lines(place, f'datapack/data/baba/functions/dev/island_background.mcfunction')
+
 text = [
   'data modify storage baba:main after_text set value []',
   'execute store result score row baba run data get entity @s Pos[0]',

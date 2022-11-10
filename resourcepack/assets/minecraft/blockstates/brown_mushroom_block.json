@@ -1,0 +1,12 @@
+{
+   "variants": {
+      "up=false,down=false,north=false,south=false,east=false,west=false": {
+         "model": "baba:background/island.10.4",
+         "y": 90
+      },
+      "up=false,down=false,north=false,south=false,east=false,west=true": {
+         "model": "baba:background/island.10.5",
+         "y": 90
+      }
+   }
+}
