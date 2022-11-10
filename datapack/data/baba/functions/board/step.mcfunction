@@ -70,7 +70,7 @@ execute as @e[type=armor_stand,tag=baba.object,nbt={HandItems:[{tag:{properties:
 # graphical updates
 execute as @e[type=armor_stand,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 execute as @e[type=armor_stand,tag=baba.object,nbt=!{HandItems:[{tag:{properties:["sleep"]}}]}] run function baba:board/graphics/frame
-execute as @e[type=armor_stand,tag=baba.object] at @s unless block ~ ~-1 ~ black_concrete run function baba:board/interact/destroy
+execute as @e[type=armor_stand,tag=baba.object] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
 
 scoreboard players add @e[type=armor_stand,tag=baba.object,scores={float_level=1..}] z_layer 100
 execute if score text_enabled baba matches 1 unless entity @e[type=armor_stand,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update

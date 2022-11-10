@@ -9,6 +9,6 @@ execute as @e[type=armor_stand,tag=baba.object,tag=!falling,distance=..0.1,nbt={
 
 # recurse until we find a blocker or the edge of the level
 execute positioned ~-1 ~ ~ as @e[type=armor_stand,tag=baba.object,tag=!can_move,distance=..0.1] run function baba:board/movement/check_blocker
-execute unless block ~-1 ~-1 ~ black_concrete unless entity @e[type=armor_stand,tag=baba.object,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
-execute if block ~-1 ~-1 ~ black_concrete positioned ~-1 ~ ~ if entity @e[type=armor_stand,tag=baba.object,tag=blocker,distance=..0.1,limit=1] positioned ~1 ~ ~ unless entity @e[type=armor_stand,tag=baba.object,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
-execute if entity @s[tag=!removed] if block ~-1 ~-1 ~ black_concrete positioned ~-1 ~ ~ unless entity @e[type=armor_stand,tag=baba.object,tag=blocker,distance=..0.1,limit=1] run function baba:board/interact/fall_loop
+execute unless block ~-1 ~-1 ~ #baba:board unless entity @e[type=armor_stand,tag=baba.object,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
+execute if block ~-1 ~-1 ~ #baba:board positioned ~-1 ~ ~ if entity @e[type=armor_stand,tag=baba.object,tag=blocker,distance=..0.1,limit=1] positioned ~1 ~ ~ unless entity @e[type=armor_stand,tag=baba.object,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
+execute if entity @s[tag=!removed] if block ~-1 ~-1 ~ #baba:board positioned ~-1 ~ ~ unless entity @e[type=armor_stand,tag=baba.object,tag=blocker,distance=..0.1,limit=1] run function baba:board/interact/fall_loop

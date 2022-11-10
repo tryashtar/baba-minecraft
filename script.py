@@ -277,6 +277,8 @@ class Grid:
     self.height = self.width-1 if self.width*(self.width-1) >= len(spritelist) else self.width
     self.image = PIL.Image.new('RGBA', (sprite_width*self.width, sprite_height*self.height), color)
     self.sprites = [[[] for x in range(self.width)] for x in range(self.height)]
+    self.sprite_width = sprite_width
+    self.sprite_height = sprite_height
     self.placements = {}
     x = 0
     y = 0
@@ -323,7 +325,7 @@ class Metadata:
 
 
 class TileManager:
-  def __init__(self, rows, columns):
+  def __init__(self, rows, columns, frames):
     self.scale = 12
     self.char = 0x0000
     self.rows = rows
@@ -335,7 +337,9 @@ class TileManager:
     nudge_right = self.next_char()
     self.forward_ch = self.next_char()
     self.overlay_ch = self.next_char()
-    self.providers = [{"type":"space","advances":self.advances},{"type":"bitmap","file":"baba:space.png","height":-self.scale/2-2,"ascent":-32000,"chars":[nudge_left]},{"type":"bitmap","file":"baba:space.png","height":self.scale/2-1,"ascent":-32000,"chars":[nudge_right]},{"type":"bitmap","file":"baba:space.png","height":self.scale-1,"ascent":-32000,"chars":[self.forward_ch]},{"type":"bitmap","file":"baba:space.png","height":-self.scale-2,"ascent":-32000,"chars":[self.overlay_ch]}]
+    self.fonts = []
+    for i in range(frames):
+      self.fonts.append([{"type":"space","advances":self.advances},{"type":"bitmap","file":"baba:space.png","height":-self.scale/2-2,"ascent":-32000,"chars":[nudge_left]},{"type":"bitmap","file":"baba:space.png","height":self.scale/2-1,"ascent":-32000,"chars":[nudge_right]},{"type":"bitmap","file":"baba:space.png","height":self.scale-1,"ascent":-32000,"chars":[self.forward_ch]},{"type":"bitmap","file":"baba:space.png","height":-self.scale-2,"ascent":-32000,"chars":[self.overlay_ch]}])
     self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.forward_ch,"baba.overlay":self.overlay_ch,"baba.nudge_left":nudge_left,"baba.nudge_right":nudge_right}
     island_width = 4
     island_height = 2
@@ -350,13 +354,21 @@ class TileManager:
           chars += char
           island_translation += char + self.get_advance(-1)
         island_chars[y] = chars
-        self.providers.extend([{"type":"bitmap","file":f"baba:{island}_anim0.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":island_chars}])
+        for i in range(frames):
+          final_chars = ['\u0000' * island_width for x in range(island_height)]*i
+          final_chars.extend(island_chars)
+          final_chars.extend(['\u0000' * island_width for x in range(island_height)]*(frames-i-1))
+          self.fonts[i].append({"type":"bitmap","file":f"baba:{island}.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":final_chars})
         island_translation += self.get_advance(-99*island_width)
       self.lang[f'baba.background.{island}'] = island_translation
     for r in range(-1,rows+1):
       char = self.next_char()
-      self.providers.append({"type":"bitmap","file":"baba:pixel.png","height":self.scale,"ascent":-r*self.scale,"chars":[char]})
+      self.add_to_all({"type":"bitmap","file":"baba:pixel.png","height":self.scale,"ascent":-r*self.scale,"chars":[char]})
       self.lang[f"baba.level_border.row{r}"] = char + self.get_advance(-1-self.scale)
+
+  def add_to_all(self, provider):
+    for f in self.fonts:
+      f.append(provider)
 
   def get_advance(self, width):
     if width == 0:
@@ -375,10 +387,19 @@ class TileManager:
       self.char += 1
     return chr(self.char)
 
-  def to_char_grid(self, grid, source):
-    return [''.join(['\u0000' if len(x) == 0 else source[x[0]] for x in y]) for y in grid.sprites]
+  def to_char_grid(self, grid, source, frame):
+    full = [''.join(['\u0000' if len(x) == 0 else source[x[0]] for x in y]) for y in grid.sprites]
+    empty = [''.join(['\u0000' for x in y]) for y in grid.sprites]
+    final = []
+    for i in range(len(self.fonts)):
+      if i == frame:
+        final.extend(full)
+      else:
+        final.extend(empty)
+    return final
 
-  def add_grid(self, grid, filename):
+  def add_grid(self, data):
+    grid = data["frames"][0]
     height = round(self.scale*grid.scale, 2)
     adjust = round((height-self.scale)/2,2)
     for y in range(len(grid.sprites)):
@@ -401,26 +422,30 @@ class TileManager:
                 self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
 
     for r in range(self.rows):
-      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)])})
-      self.providers.append({"type":"bitmap","file":filename,"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":self.to_char_grid(grid, self.charmap[(r,True)])})
+      for i,f in enumerate(self.fonts):
+        f.append({"type":"bitmap","file":f'baba:{data["name"]}.png',"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)], i)})
+        f.append({"type":"bitmap","file":f'baba:{data["name"]}.png',"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":self.to_char_grid(grid, self.charmap[(r,True)], i)})
 
 with open('sprites.yaml', 'r') as data:
   sprites = SpriteCollection(yaml.safe_load(data), 3)
 
-manager = TileManager(18,33)
-anim_grids = sprites.grids
-for i,grids in enumerate(anim_grids):
-  manager.add_grid(grids[0], f'baba:grid{i}_anim0.png')
-tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
-for i,grids in enumerate(anim_grids):
-  for j,grid in enumerate(grids):
-    grid.image.save(f'resourcepack/assets/baba/textures/grid{i}_anim{j}.png')
+manager = TileManager(18,33,sprites.anim_frames)
+grid_data = []
+for grids in sprites.grids:
+  img = PIL.Image.new("RGBA", (grids[0].image.width, grids[0].image.height*len(grids)))
+  for i,g in enumerate(grids):
+    img.paste(g.image, (0,i*grids[0].image.height))
+  name = f'grid{grids[0].sprite_width}x{grids[1].sprite_height}'
+  img.save(f'resourcepack/assets/baba/textures/{name}.png')
+  tat.write_json({"animation":{"frametime":4,"width":grids[0].image.width,"height":grids[0].image.height}}, f'resourcepack/assets/baba/textures/{name}.png.mcmeta')
+  data = {"image":img, "frames": grids, "name": name}
+  grid_data.append(data)
+  manager.add_grid(data)
 
-for j,grid in enumerate(anim_grids[0]):
-  for p in manager.providers:
-    if 'file' in p:
-      p['file'] = p['file'].replace(f'anim{j-1}', f'anim{j}')
-  tat.write_json({"providers":manager.providers}, f'resourcepack/assets/baba/font/anim{j}.json')
+tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
+
+for i,p in enumerate(manager.fonts):
+  tat.write_json({"providers":p}, f'resourcepack/assets/baba/font/anim{i}.json')
 
 text_map = []
 for s in sprites.objects['text'].sprites:
@@ -444,7 +469,7 @@ for x in range(0,11):
     if shroom not in blockstates:
       blockstates[shroom] = {}
     blockstates[shroom][state] = {"model":f"baba:background/island.{x}.{y}","y":90}
-    model = {"textures":{"up":"baba:island_anim0"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
+    model = {"textures":{"up":"baba:island"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
     tat.write_json(model, f'resourcepack/assets/baba/models/background/island.{x}.{y}.json')
 for k,v in blockstates.items():
   tat.write_json({"variants":v}, f'resourcepack/assets/minecraft/blockstates/{k}.json')
@@ -631,32 +656,29 @@ for o in objectlist:
     editor_sprites[size].append(([spr], color_img))
 colorgrids = [Grid(x[1], x[0][0], x[0][1], 1, '#00000000') for x in editor_sprites.items()]
 for c,grid in enumerate(colorgrids):
-  grid.image.save(f'resourcepack/assets/baba/textures/grid{c}_editor.png')
+  grid.image.save(f'resourcepack/assets/baba/textures/grid{grid.sprite_width}x{grid.sprite_height}_editor.png')
 i = 0
 j = 0
-anim_models = {}
+anim_models = []
 pot_fn = ['execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer','execute at @s run tp @s ~ ~1 ~']
 pot_sub = {}
 pot_ov = {}
 povcmd = {}
-for a,anim in enumerate(anim_grids[0]):
-  tat.delete_folder(f'resourcepack/assets/baba/models/anim{a}')
-  anim_models[a] = []
 
 def add_model(s,props):
-  for g,grid in enumerate(anim_grids):
-    if s in grid[0].placements:
-      placement = grid[0].placements[s]
-      x_uvsize = 16/grid[0].width
-      y_uvsize = 16/grid[0].height
+  for grid in grid_data:
+    g = grid["frames"][0]
+    if s in g.placements:
+      placement = g.placements[s]
+      x_uvsize = 16/g.width
+      y_uvsize = 16/g.height
       break
-  for a,anim in enumerate(grid):
-    description = s.display(props, '.','-')
-    scale1 = round(1.6*anim.scale,3)
-    one_px = 16 / anim.width * 1.6
-    model = {"textures":{"up":f"baba:grid{g}_anim{a}"},"display":{"head":{"rotation":[0,90,0],"translation":[round(2*one_px*-s.shift[1],2),-43,round(2*one_px*-s.shift[0],2)],"scale":[scale1,0.001,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
-    anim_models[a].append({'predicate':{'custom_model_data':j},'model':f'baba:anim{a}/{description}'})
-    tat.write_json(model, f'resourcepack/assets/baba/models/anim{a}/{description}.json')
+  description = s.display(props, '.','-')
+  scale1 = round(1.6*g.scale,3)
+  one_px = 16 / g.width * 1.6
+  model = {"textures":{"up":f"baba:{grid['name']}"},"display":{"head":{"rotation":[0,90,0],"translation":[round(2*one_px*-s.shift[1],2),-43,round(2*one_px*-s.shift[0],2)],"scale":[scale1,0.001,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
+  anim_models.append({'predicate':{'custom_model_data':j},'model':f'baba:objects/{description}'})
+  tat.write_json(model, f'resourcepack/assets/baba/models/objects/{description}.json')
 
 for o in objectlist:
   pot_sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
@@ -730,7 +752,7 @@ for o in objectlist:
         y_uvsize = 16/grid.height
         break
     face = {"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#face"}
-    model = {"parent":"baba:editor_display","textures":{"face":f"baba:grid{g}_editor"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
+    model = {"parent":"baba:editor_display","textures":{"face":f"baba:grid{grid.sprite_width}x{grid.sprite_height}_editor"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
     description = s.display(props, '.','-')
     blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:editor/{description}','y':90}
     custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:editor/{description}'})
@@ -796,10 +818,8 @@ tat.write_lines(spawntext, f'datapack/data/baba/functions/board/spawn_text.mcfun
 tat.write_lines(pack_lines, f'datapack/data/baba/functions/editor/pack/block.mcfunction')
 tat.write_lines(unpack_lines, f'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 custom_model = list(sorted(custom_model, key=lambda x: x['predicate']['custom_model_data']))
-for a,model in anim_models.items():
-  m = list(sorted(model, key=lambda x: x['predicate']['custom_model_data']))
-  pot = ("potion","splash_potion","lingering_potion")[a]
-  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/{pot}"},"display":{"head":{"scale":[0,0,0]}},"overrides":m}, f'resourcepack/assets/minecraft/models/item/{pot}.json')
+m = list(sorted(anim_models, key=lambda x: x['predicate']['custom_model_data']))
+tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"head":{"scale":[0,0,0]}},"overrides":m}, f'resourcepack/assets/minecraft/models/item/potion.json')
 tat.write_json({"variants":blockstate}, f'resourcepack/assets/minecraft/blockstates/note_block.json')
 tat.write_json({"parent": "minecraft:block/note_block","overrides":custom_model}, f'resourcepack/assets/minecraft/models/item/note_block.json')
 tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')

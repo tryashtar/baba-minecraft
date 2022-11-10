@@ -1,7 +1,7 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:grid0_editor"
+      "face": "baba:grid24x24_editor"
    },
    "elements": [
       {

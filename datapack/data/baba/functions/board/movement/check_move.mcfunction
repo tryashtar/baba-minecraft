@@ -20,7 +20,7 @@ execute if entity @s[tag=can_move] positioned ^ ^ ^1 if entity @e[type=armor_sta
 tag @e[type=armor_stand,tag=baba.object,tag=blocker] remove blocker
 
 # can't move out of bounds
-execute positioned ^ ^ ^1 unless block ~ ~-1 ~ black_concrete run tag @s remove can_move
+execute positioned ^ ^ ^1 unless block ~ ~-1 ~ #baba:board run tag @s remove can_move
 
 # weak objects that try to move and can't get destroyed
 # objects with both 'move' and 'weak' won't willingly walk into walls, they turn around like normal
