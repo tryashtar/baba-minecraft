@@ -89,6 +89,10 @@ with open(in_path, 'rb') as file:
   for n,o in enumerate(shader_offsets):
     file.seek(o)
     length = struct.unpack('<I', file.read(4))[0]
-    print(f'  Shader {n}: {length} bytes')
-    with open(os.path.join(out_path, 'shaders', f'{n}.hlsl'), 'wb') as shader:
+    print(f'  Vertex Shader {n}: {length} bytes')
+    with open(os.path.join(out_path, 'shaders', f'{n}_vert.hlsl'), 'wb') as shader:
+      shader.write(file.read(length))
+    length = struct.unpack('<I', file.read(4))[0]
+    print(f'  Fragment Shader {n}: {length} bytes')
+    with open(os.path.join(out_path, 'shaders', f'{n}_frag.hlsl'), 'wb') as shader:
       shader.write(file.read(length))
