@@ -973,6 +973,8 @@ sprites:
     - {up: true, down: true, left: true, right: true}
 
 - sheet: sprites3
+  size: [32, 32]
+  scale: 1.3333
   entries:
   - objects:
     - name: cursor

@@ -186,7 +186,7 @@ def create_summon(properties, extra_data=None):
   tags = ['baba.object','spawn']
   data = []
   scores = []
-  nbt = ['width:1f','height:0.1f']
+  nbt = ['width:1f','height:0.1f','item_display:"fixed"']
   for m,val in properties.items():
     if m.kind == 'tag' and val != False:
       tags.append(m.convert(val))
@@ -438,7 +438,7 @@ blockstates = {}
 shroom_id = 0
 terra_id = 0
 for bg in ['island', 'flower']:
-  img = PIL.Image.open(f'resourcepack/assets/baba/textures/{bg}.png')
+  img = PIL.Image.open(f'resourcepack/assets/baba/textures/background/{bg}.png')
   place = []
   for x in range(0,11):
     for y in range(0,6):
@@ -447,7 +447,7 @@ for bg in ['island', 'flower']:
       if shroom not in blockstates:
         blockstates[shroom] = {}
       blockstates[shroom][state] = {"model":f"baba:background/{bg}/{x}.{y}","y":90}
-      model = {"textures":{"up":f"baba:{bg}"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
+      model = {"textures":{"up":f"baba:background/{bg}"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
       tat.write_json(model, f'resourcepack/assets/baba/models/background/{bg}/{x}.{y}.json')
       shroom_id += 1
   tat.write_lines(place, f'datapack/data/baba/functions/editor/load/background/{bg}.mcfunction')
@@ -459,7 +459,7 @@ for j,t in enumerate(['floor','wall']):
     color = p[['#080808','#15181f'][j]]
     texture.putpixel((j,i),PIL.ImageColor.getrgb(color))
     uv = [round(j/2*16,3),round(i/len(sprites.palettes)*16,3),round((j+1)/2*16,3),round((i+1)/len(sprites.palettes)*16,3)]
-    model = {"parent":"minecraft:block/block","textures":{"all":"baba:background"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all"},"down":{"uv":uv,"texture":"#all"},"north":{"uv":uv,"texture":"#all"},"south":{"uv":uv,"texture":"#all"},"east":{"uv":uv,"texture":"#all"},"west":{"uv":uv,"texture":"#all"}}}]}
+    model = {"parent":"minecraft:block/block","textures":{"all":"baba:background/background"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all","cullface":"up"},"down":{"uv":uv,"texture":"#all","cullface":"down"},"north":{"uv":uv,"texture":"#all","cullface":"north"},"south":{"uv":uv,"texture":"#all","cullface":"south"},"east":{"uv":uv,"texture":"#all","cullface":"east"},"west":{"uv":uv,"texture":"#all","cullface":"west"}}}]}
     tat.write_json(model, f'resourcepack/assets/baba/models/background/{n}_{t}.json')
     (block, state) = terracotta_state(terra_id, t=='floor')
     if block not in blockstates:
@@ -470,7 +470,7 @@ for j,t in enumerate(['floor','wall']):
   if t == 'floor':
     background.append(f'execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
   tat.write_lines(background, f'datapack/data/baba/functions/editor/load/background/{t}.mcfunction')
-texture.save(f'resourcepack/assets/baba/textures/background.png')
+texture.save(f'resourcepack/assets/baba/textures/background/background.png')
 for k,v in blockstates.items():
   tat.write_json({"variants":v}, f'resourcepack/assets/minecraft/blockstates/{k}.json')
 
@@ -623,7 +623,7 @@ spawntext = []
 editortx = 'resourcepack/assets/baba/textures/editor'
 tat.delete_folder(editortx)
 tat.delete_folder('resourcepack/assets/baba/models/editor')
-tat.delete_folder('resourcepack/assets/baba/models/objects')
+tat.delete_folder('resourcepack/assets/baba/models/sprites')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
@@ -675,19 +675,17 @@ pot_sub = {}
 pot_ov = {}
 povcmd = {}
 
-def add_model(obj, spr, props, fil):
+def add_model(obj, spr, props, fil, cmd):
   name = resource_name(obj, spr, props, len(fil) == 1)
-  scale1 = round(1.6*spr.scale,3)
-  one_px = 16
-  model = {"textures":{"up":f'baba:sprites/{name}'},"display":{"head":{"rotation":[0,90,0],"translation":[round(2*one_px*-spr.shift[1],2),-43,round(2*one_px*-spr.shift[0],2)],"scale":[scale1,0.001,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[0,0,16,16],"texture":"#up","tintindex":0}}}]}
-  anim_models.append({'predicate':{'custom_model_data':j},'model':f'baba:objects/{name}'})
-  tat.write_json(model, f'resourcepack/assets/baba/models/objects/{name}.json')
+  model = {"textures":{"up":f'baba:sprites/{name}'},"display":{"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[0,0,16,16],"texture":"#up","tintindex":0}}}]}
+  anim_models.append({'predicate':{'custom_model_data':cmd},'model':f'baba:sprites/{name}'})
+  tat.write_json(model, f'resourcepack/assets/baba/models/sprites/{name}.json')
 
 for o in objectlist:
   pot_sprs = list(o.filter_sprites(lambda x: 'sprite' in x.attributes).items())
   for s,props in pot_sprs:
     j += 1
-    add_model(o,s,props, pot_sprs)
+    add_model(o,s,props, pot_sprs, j)
     if len(pot_sprs) > 1:
       if o.name not in pot_sub:
         pot_sub[o.name] = []
@@ -708,7 +706,7 @@ for o in objectlist:
       props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
       if ovspr not in povcmd:
         j += 1
-        add_model(o,ovspr,props,o.overlays)
+        add_model(o,ovspr,props,o.overlays, j)
         povcmd[ovspr] = j
       disp = ovspr.display(props,".","-")
       special_checks = []
@@ -721,7 +719,7 @@ for o in objectlist:
       final = 'execute '
       for prop,spec in special_checks:
         final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-      final += f'if entity @s[{selector}] run summon item_display ~ ~0.01 ~ {{width:1f,height:0.1f,item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{povcmd[ovspr]},CustomPotionColor:{int(ovspr.properties[sprites.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
+      final += f'if entity @s[{selector}] run summon item_display ~ ~0.01 ~ {{width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{povcmd[ovspr]},CustomPotionColor:{int(ovspr.properties[sprites.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
       pot_ov[o.name][1].append(final)
 
   sprs = o.filter_sprites(lambda x: 'editor' in x.attributes).items()

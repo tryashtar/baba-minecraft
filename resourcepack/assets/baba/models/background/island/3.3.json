@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:island"
+      "up": "baba:background/island"
    },
    "elements": [
       {

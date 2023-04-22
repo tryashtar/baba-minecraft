@@ -1,0 +1,45 @@
+{
+   "textures": {
+      "up": "baba:sprites/bird/facing-up"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [
+            0,
+            90,
+            0
+         ],
+         "scale": [
+            1,
+            0.001,
+            1
+         ]
+      }
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            0,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#up",
+               "tintindex": 0
+            }
+         }
+      }
+   ]
+}

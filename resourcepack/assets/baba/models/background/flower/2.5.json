@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:flower"
+      "up": "baba:background/flower"
    },
    "elements": [
       {
