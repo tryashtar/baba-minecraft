@@ -1,0 +1,14 @@
+{
+   "sources": [
+      {
+         "type": "directory",
+         "source": "sprites",
+         "prefix": "sprites/"
+      },
+      {
+         "type": "directory",
+         "source": "editor",
+         "prefix": "editor/"
+      }
+   ]
+}

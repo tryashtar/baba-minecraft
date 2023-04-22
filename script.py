@@ -11,9 +11,8 @@ import hashlib
 
 # keeps track of all the object definitions
 class SpriteCollection:
-  def __init__(self, data, anim_frames):
+  def __init__(self, data):
     self.data = data
-    self.anim_frames = anim_frames
     self.objects = {}
     self.overlays = {}
     self.properties = {
@@ -25,7 +24,7 @@ class SpriteCollection:
     self.palettes = data['palettes']
     for name,prop in data['properties'].items():
       self.properties[name] = Metadata(name=name, kind=prop['type'], values=prop.get('values'), default=prop.get('default'), attributes=prop['attributes'])
-    self.grids = self.generate_grids()
+    self.load_sprites()
 
   def get_obj(self, name, overlay):
     source = self.overlays if overlay else self.objects
@@ -38,113 +37,105 @@ class SpriteCollection:
   def permute(self, properties):
     return list(dict(zip(properties, x)) for x in itertools.product(*properties.values()))
 
-  def generate_grids(self):
-    grids = []
-    for grid in self.data['grids']:
-      # we need a separate grid for each frame of idle animation
-      anim_grids = [[] for x in range(self.anim_frames)]
+  def load_sprites(self):
+    size = None
+    scale = 1
+    frame_num = 1
+    for spritesheet in self.data['sprites']:
       coords = None
-      (width, height) = grid['size']
-      colorgrid = []
-      for sheetname, sheetdata in grid['sheets'].items():
-        # load the spritesheet PNG and filter out the background color
-        image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
-        array = np.array(image, dtype=np.ubyte)
-        mask = (array[:,:,:3] == (84, 165, 75)).all(axis=2)
-        alpha = np.where(mask, 0, 255)
-        array[:,:,-1] = alpha
-        image = PIL.Image.fromarray(np.ubyte(array))
-  
-        for config in sheetdata:
-          objlist = config.get('objects', [])
-          overlist = config.get('overlays', [])
-          for source in (objlist, overlist):
-            for obj in source:
-              # if coords are unspecified, move to the next row
-              if coords is not None:
-                coords[1] += (height+1) * frames
-              if obj is None:
-                continue
-              coords = obj.get('coords', coords)
-              framedir = obj.get('frames', 'down')
-              frames = 1 if framedir == 'none' else self.anim_frames
-              shared  = obj.get('shared', [obj])
-              # expand sprite definitions from shorthands to a complete list of all sprites
-              sprites = []
-              for spr in config['sprites']:
-                if type(spr) is dict and 'permute' in spr:
-                  sprites.extend(self.permute(spr['permute']))
-                else:
-                  sprites.append(spr)
-              for obj in shared:
-                # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
+      size = spritesheet.get('size', size)
+      scale = spritesheet.get('scale', scale)
+      frame_num = spritesheet.get('frames', frame_num)
+      width, height = size
+      sheetname = spritesheet['sheet']
+      # load the spritesheet PNG and filter out the background color
+      image = PIL.Image.open(os.path.join('sprites', sheetname+'.png')).convert('RGBA')
+      array = np.array(image, dtype=np.ubyte)
+      mask = (array[:,:,:3] == (84, 165, 75)).all(axis=2)
+      alpha = np.where(mask, 0, 255)
+      array[:,:,-1] = alpha
+      image = PIL.Image.fromarray(np.ubyte(array))
+      for entry in spritesheet['entries']:
+        objlist = entry.get('objects', [])
+        overlist = entry.get('overlays', [])
+        for source in (objlist, overlist):
+          for obj in source:
+            # if coords are unspecified, move to the next row
+            if coords is not None:
+              coords[1] += (height+1) * framecount
+            if obj is None:
+              continue
+            coords = obj.get('coords', coords)
+            framedir = obj.get('frames', 'down')
+            framecount = 1 if framedir == 'none' else frame_num
+            shared  = obj.get('shared', [obj])
+            # expand sprite definitions from shorthands to a complete list of all sprites
+            sprites = []
+            for spr in entry['sprites']:
+              if type(spr) is dict and 'permute' in spr:
+                sprites.extend(self.permute(spr['permute']))
+              else:
+                sprites.append(spr)
+            for obj in shared:
+              # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
+              baba = self.get_obj(obj['name'], source == overlist)
+              if 'overlays' in obj:
+                baba.overlays.extend(obj['overlays'])
+              if 'modifications' in obj:
+                for k,v in obj['modifications'].items():
+                  baba.property_mods[k] = v
+
+            for i,sp in enumerate(sprites):
+              for objid, obj in enumerate(shared):
+                spr = sp if type(sp) is str else sp.copy()
+                if type(sp) is list:
+                  spr = sp[objid].copy()
                 baba = self.get_obj(obj['name'], source == overlist)
-                if 'overlays' in obj:
-                  baba.overlays.extend(obj['overlays'])
-                if 'modifications' in obj:
-                  for k,v in obj['modifications'].items():
-                    baba.property_mods[k] = v
-
-              for i,sp in enumerate(sprites):
-                spriteset = []
-                for objid, obj in enumerate(shared):
-                  spr = sp if type(sp) is str else sp.copy()
-                  if type(sp) is list:
-                    spr = sp[objid].copy()
-                  baba = self.get_obj(obj['name'], source == overlist)
-                  spr_coords = coords
-                  if spr == 'text':
-                    adding = self.get_obj('text', False)
-                    color = obj.get('text color', obj.get('color'))
-                    spr = {'text': obj['name'], 'part': 'noun'}
-                    spr_coords = obj.get('text coords', spr_coords)
-                  else:
-                    adding = baba
-                    color = obj.get('object color', obj.get('color'))
-                  # include properties specific to this object, or this sprite
-                  spr['color'] = color
-                  if sp != 'text' and 'properties' in obj:
-                    for k,v in obj['properties'].items():
+                spr_coords = coords
+                if spr == 'text':
+                  adding = self.get_obj('text', False)
+                  color = obj.get('text color', obj.get('color'))
+                  spr = {'text': obj['name'], 'part': 'noun'}
+                  spr_coords = obj.get('text coords', spr_coords)
+                else:
+                  adding = baba
+                  color = obj.get('object color', obj.get('color'))
+                # include properties specific to this object, or this sprite
+                spr['color'] = color
+                if sp != 'text' and 'properties' in obj:
+                  for k,v in obj['properties'].items():
+                    spr[k] = v
+                if sp != 'text' and 'properties' in entry:
+                    for k,v in entry['properties'].items():
                       spr[k] = v
-                  if sp != 'text' and 'properties' in config:
-                      for k,v in config['properties'].items():
-                        spr[k] = v
-                  # make keys the actual metadata objects instead of their names
-                  props = {self.properties['sprite']:adding.name}
-                  if adding.name == 'text':
-                    props[self.properties['z_layer']] = 20
-                    props[self.properties['not_all']] = True
-                    props[self.properties['reparse']] = True
-                  for k,v in spr.items():
-                    if k in baba.property_mods and k not in self.properties:
-                      self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
-                    props[self.properties[k]] = v
-                  # finalize the sprite and add each anim frame to its respective grid
-                  sprite = BabaSprite(None, props, width, height, obj.get('shift', [0,0]))
-                  adding.sprites.append(sprite)
-                  if spr_coords != coords:
-                    self.add_to_grids(i, [sprite], image, anim_grids, spr_coords, framedir)
-                  else:
-                    spriteset.append(sprite)
-                self.add_to_grids(i, spriteset, image, anim_grids, coords, framedir)
-      anim_grids = [Grid(x, width, height, grid.get('scale', 1), '#00000000') for x in anim_grids]
-      grids.append(anim_grids)
-    return grids
+                # make keys the actual metadata objects instead of their names
+                props = {self.properties['sprite']:adding.name}
+                if adding.name == 'text':
+                  props[self.properties['z_layer']] = 20
+                  props[self.properties['not_all']] = True
+                  props[self.properties['reparse']] = True
+                for k,v in spr.items():
+                  if k in baba.property_mods and k not in self.properties:
+                    self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
+                  props[self.properties[k]] = v
+                # finalize the sprite and add each anim frame to its respective grid
+                imgframes = self.get_frames(i, image, framecount, coords, size, framedir)
+                sprite = BabaSprite(imgframes, props, width, height, obj.get('shift', [0,0]), scale)
+                adding.sprites.append(sprite)
 
-  def add_to_grids(self, i, sprites, image, anim_grids, coords, framedir):
-    for n,g in enumerate(anim_grids):
-      x, y = coords
-      w, h = (sprites[0].width, sprites[0].height)
+  def get_frames(self, i, image, framecount, coords, size, framedir):
+    x, y = coords
+    w, h = size
+    result = []
+    for n in range(framecount):
       if framedir == 'down':
         img = image.crop((x+((w+1)*i),y+((h+1)*n),x+((w+1)*i)+w,y+((h+1)*n)+h))
       elif framedir == 'right':
         img = image.crop((x+((w+1)*n),y+((h+1)*i),x+((w+1)*n)+w,y+((h+1)*i)+h))
       elif framedir == 'none':
         img = image.crop((x,y+((h+1)*i),x+w,y+((h+1)*i)+h))
-      if n == 0:
-        for s in sprites:
-          s.image = img
-      g.append((sprites, img))
+      result.append(img)
+    return result
 
 
 def filter_properties(properties, check):
@@ -153,6 +144,13 @@ def filter_properties(properties, check):
     if not check(p):
       del props[p]
   return props
+
+def resource_name(obj, spr, props, single):
+  if single or len(props) == 0:
+    return obj.name
+  else:
+    display = spr.display(props, '.', '-')
+    return obj.name + '/' + display[len(obj.name)+1:]
 
 def create_selector(properties, extra_scores=None):
   result = []
@@ -247,12 +245,13 @@ class BabaObject:
 
 
 class BabaSprite:
-  def __init__(self, image, properties, width, height, shift):
-    self.image = image
+  def __init__(self, image_frames, properties, width, height, shift, scale):
+    self.image_frames = image_frames
     self.properties = properties
     self.width = width
     self.height = height
     self.shift = shift
+    self.scale = scale
 
   def display_val(self, val):
     if type(val) is list:
@@ -269,34 +268,6 @@ class BabaSprite:
         result += k.name + sep2 + self.display_val(v) + sep1
     result = result[:-1]
     return result
-
-
-class Grid:
-  def __init__(self, spritelist, sprite_width, sprite_height, scale, color):
-    self.scale = scale
-    self.width = math.ceil(math.sqrt(len(spritelist)))
-    self.height = self.width-1 if self.width*(self.width-1) >= len(spritelist) else self.width
-    self.image = PIL.Image.new('RGBA', (sprite_width*self.width, sprite_height*self.height), color)
-    self.sprites = [[[] for x in range(self.width)] for x in range(self.height)]
-    self.sprite_width = sprite_width
-    self.sprite_height = sprite_height
-    self.placements = {}
-    x = 0
-    y = 0
-    tupcol = PIL.ImageColor.getrgb(color)
-    for sprites,image in spritelist:
-      PIL.Image.Image.paste(self.image, image, (x*sprite_width, y*sprite_height), image)
-      if self.image.getpixel((x*sprite_width, y*sprite_height))[3] == 0:
-        self.image.putpixel((x*sprite_width, y*sprite_height), (tupcol[0],tupcol[1],tupcol[2],10))
-      if self.image.getpixel((x*sprite_width+image.width-1, y*sprite_height+image.height-1))[3] == 0:
-        self.image.putpixel((x*sprite_width+image.width-1, y*sprite_height+image.height-1), (tupcol[0],tupcol[1],tupcol[2],10))
-      self.sprites[y][x].extend(sprites)
-      for s in sprites:
-        self.placements[s] = (y, x)
-      x += 1
-      if x >= self.width:
-        x = 0
-        y += 1
 
 
 class Metadata:
@@ -326,7 +297,7 @@ class Metadata:
 
 
 class TileManager:
-  def __init__(self, rows, columns, frames):
+  def __init__(self, rows, columns, max_frames):
     self.scale = 12
     self.char = 0x0000
     self.rows = rows
@@ -339,7 +310,7 @@ class TileManager:
     self.forward_ch = self.next_char()
     self.overlay_ch = self.next_char()
     self.fonts = []
-    for i in range(frames):
+    for i in range(max_frames):
       self.fonts.append([{"type":"space","advances":self.advances},{"type":"bitmap","file":"baba:space.png","height":-self.scale/2-2,"ascent":-32000,"chars":[nudge_left]},{"type":"bitmap","file":"baba:space.png","height":self.scale/2-1,"ascent":-32000,"chars":[nudge_right]},{"type":"bitmap","file":"baba:space.png","height":self.scale-1,"ascent":-32000,"chars":[self.forward_ch]},{"type":"bitmap","file":"baba:space.png","height":-self.scale-2,"ascent":-32000,"chars":[self.overlay_ch]}])
     self.lang = {"%2$s%21661093$s":"%1$s", "baba.empty_tile":self.forward_ch,"baba.overlay":self.overlay_ch,"baba.nudge_left":nudge_left,"baba.nudge_right":nudge_right}
     island_width = 4
@@ -350,15 +321,15 @@ class TileManager:
       for y in range(island_height):
         island_chars = ['\u0000' * island_width for x in range(island_height)]
         chars = ""
-        for x in range(island_width):
+        for _ in range(island_width):
           char = self.next_char()
           chars += char
           island_translation += char + self.get_advance(-1)
         island_chars[y] = chars
-        for i in range(frames):
+        for i in range(max_frames):
           final_chars = ['\u0000' * island_width for x in range(island_height)]*i
           final_chars.extend(island_chars)
-          final_chars.extend(['\u0000' * island_width for x in range(island_height)]*(frames-i-1))
+          final_chars.extend(['\u0000' * island_width for x in range(island_height)]*(max_frames-i-1))
           self.fonts[i].append({"type":"bitmap","file":f"baba:{island}.png","height":island_pixels/island_width/2,"ascent":-island_pixels/island_width/2*y,"chars":final_chars})
         island_translation += self.get_advance(-99*island_width)
       self.lang[f'baba.background.{island}'] = island_translation
@@ -388,63 +359,54 @@ class TileManager:
       self.char += 1
     return chr(self.char)
 
-  def to_char_grid(self, grid, source, frame):
-    full = [''.join(['\u0000' if len(x) == 0 else source[x[0]] for x in y]) for y in grid.sprites]
-    empty = [''.join(['\u0000' for x in y]) for y in grid.sprites]
-    final = []
-    for i in range(len(self.fonts)):
-      if i == frame:
-        final.extend(full)
-      else:
-        final.extend(empty)
-    return final
-
-  def add_grid(self, data):
-    grid = data["frames"][0]
-    height = round(self.scale*grid.scale, 2)
+  def add_sprite(self, resource, sprite):
+    height = round(self.scale*sprite.scale, 2)
     adjust = round((height-self.scale)/2,2)
-    for y in range(len(grid.sprites)):
-      for x in range(len(grid.sprites[y])):
-        spriteset = grid.sprites[y][x]
-        if len(spriteset) > 0:
-          c = spriteset[0]
-          for r in range(self.rows):
-            if (r,False) not in self.charmap:
-              self.charmap[(r,False)] = {}
-              self.charmap[(r,True)] = {}
-            positive1 = self.next_char()
-            positive2 = self.next_char()
-            for c in spriteset:
-              self.charmap[(r,False)][c] = positive1
-              self.charmap[(r,True)][c] = positive2
-              display = c.display(filter_properties(c.properties, lambda x: 'sprite' in x.attributes), '.', '-')
-              self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+c.shift[0])+positive1+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
-              if r != self.rows-1:
-                self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+c.shift[0])+positive2+self.overlay_ch+self.get_advance(-1-adjust-c.shift[0])
-
     for r in range(self.rows):
+      if (r,False) not in self.charmap:
+        self.charmap[(r,False)] = {}
+        self.charmap[(r,True)] = {}
+      positive1 = self.next_char()
+      positive2 = self.next_char()
+      self.charmap[(r,False)][sprite] = positive1
+      self.charmap[(r,True)][sprite] = positive2
+      display = sprite.display(filter_properties(sprite.properties, lambda x: 'sprite' in x.attributes), '.', '-')
+      self.lang[f'baba.{display}.row{r}'] = self.get_advance(-adjust+sprite.shift[0])+positive1+self.overlay_ch+self.get_advance(-1-adjust-sprite.shift[0])
+      if r != self.rows-1:
+        self.lang[f'baba.{display}.row{r}.down'] = self.get_advance(-adjust+sprite.shift[0])+positive2+self.overlay_ch+self.get_advance(-1-adjust-sprite.shift[0])
       for i,f in enumerate(self.fonts):
-        f.append({"type":"bitmap","file":f'baba:{data["name"]}.png',"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":self.to_char_grid(grid, self.charmap[(r,False)], i)})
-        f.append({"type":"bitmap","file":f'baba:{data["name"]}.png',"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":self.to_char_grid(grid, self.charmap[(r,True)], i)})
+        chargrid = ['\u0000'] * len(sprite.image_frames)
+        chargrid[i % len(sprite.image_frames)] = positive1
+        f.append({"type":"bitmap","file":resource,"height":height,"ascent":round(-r*self.scale+adjust,2),"chars":chargrid})
+        chargrid = ['\u0000'] * len(sprite.image_frames)
+        chargrid[i % len(sprite.image_frames)] = positive2
+        f.append({"type":"bitmap","file":resource,"height":height,"ascent":round(-r*self.scale+adjust-self.scale/2,2),"chars":chargrid})
 
 with open('sprites.yaml', 'r') as data:
-  sprites = SpriteCollection(yaml.safe_load(data), 3)
+  sprites = SpriteCollection(yaml.safe_load(data))
 
-manager = TileManager(18,33,sprites.anim_frames)
-grid_data = []
-for grids in sprites.grids:
-  img = PIL.Image.new("RGBA", (grids[0].image.width, grids[0].image.height*len(grids)))
-  for i,g in enumerate(grids):
-    img.paste(g.image, (0,i*grids[0].image.height))
-  name = f'grid{grids[0].sprite_width}x{grids[1].sprite_height}'
-  img.save(f'resourcepack/assets/baba/textures/{name}.png')
-  tat.write_json({"animation":{"frametime":4,"width":grids[0].image.width,"height":grids[0].image.height}}, f'resourcepack/assets/baba/textures/{name}.png.mcmeta')
-  data = {"image":img, "frames": grids, "name": name}
-  grid_data.append(data)
-  manager.add_grid(data)
+max_frames = 1
+obj_texture_folder = 'resourcepack/assets/baba/textures/sprites'
+tat.delete_folder(obj_texture_folder)
+all_sprites = []
+for obj in sprites.objects.values():
+  filtered = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes))
+  for spr in filtered:
+    display = resource_name(obj, spr, filter_properties(spr.properties, lambda x: 'sprite' in x.attributes), len(filtered) == 1) + '.png'
+    path = os.path.join(obj_texture_folder, display)
+    tat.setup_path(path)
+    img = PIL.Image.new("RGBA", (spr.width, spr.height * len(spr.image_frames)), '#00000000')
+    for i,f in enumerate(spr.image_frames):
+      PIL.Image.Image.paste(img, f, (0, i*spr.height), f)
+    img.save(path)
+    tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
+    max_frames = max(max_frames, len(spr.image_frames))
+    all_sprites.append((f'baba:sprites/{display}', spr))
 
+manager = TileManager(18, 33, max_frames)
+#for path,spr in all_sprites:
+#  manager.add_sprite(path, spr)
 tat.write_json(manager.lang, 'resourcepack/assets/baba/lang/en_us.json')
-
 for i,p in enumerate(manager.fonts):
   tat.write_json({"providers":p}, f'resourcepack/assets/baba/font/anim{i}.json')
 
@@ -635,16 +597,16 @@ for r in range(manager.rows):
     tat.write_lines(fn, f'datapack/data/baba/functions/display/text/object/row{r}/{name}.overlay.mcfunction')
   tat.write_lines(lines, f'datapack/data/baba/functions/display/text/object/row{r}.mcfunction')
 
-for i,grids in enumerate(sprites.grids):
-  for spr,place in grids[0].placements.items():
-    if spr.properties[sprites.properties['sprite']] == 'text':
-      text = spr.properties[sprites.properties['text']]
-      if text in ('baba','is','you'):
-        providers = []
-        for h in range(len(grids)):
-          chars = [''.join(map(lambda x: str(h) if spr in x else '\u0000', x)) for x in grids[0].sprites]
-          providers.append({"type":"bitmap","file":f"baba:grid{i}_anim{h}.png","height":12,"ascent":8,"chars":chars})
-        tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
+for path,spr in all_sprites:
+  if spr.properties[sprites.properties['sprite']] == 'text':
+    text = spr.properties[sprites.properties['text']]
+    if text in ('baba','is','you'):
+      providers = []
+      for h in range(len(spr.image_frames)):
+        chars = ['\u0000'] * len(spr.image_frames)
+        chars[h] = str(h)
+        providers.append({"type":"bitmap","file":path,"height":12,"ascent":8,"chars":chars})
+      tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
 
 
 pack_lines = ['clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force']
@@ -657,7 +619,11 @@ loot_table = []
 get_all = []
 spawn = []
 spawntext = []
+
+editortx = 'resourcepack/assets/baba/textures/editor'
+tat.delete_folder(editortx)
 tat.delete_folder('resourcepack/assets/baba/models/editor')
+tat.delete_folder('resourcepack/assets/baba/models/objects')
 tat.delete_folder('datapack/data/baba/functions/dev/give')
 tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
 tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
@@ -680,20 +646,27 @@ for o in objectlist:
     del props[sprites.properties['sprite']]
     spawn.append(f'execute if score spawn baba matches {o.id} run {create_summon(props)}')
 
-  for spr in o.filter_sprites(lambda x: 'editor' in x.attributes):
+  filtered = list(o.filter_sprites(lambda x: 'editor' in x.attributes))
+  for spr in filtered:
     size = (spr.width, spr.height)
     if size not in editor_sprites:
       editor_sprites[size] = []
-    rc, gc, bc, ac = spr.image.split()
-    r, g, b = bytes.fromhex(spr.properties[sprites.properties['color']][1:])
-    rc = rc.point(lambda x: x * r/255)
-    gc = gc.point(lambda x: x * g/255)
-    bc = bc.point(lambda x: x * b/255)
-    color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
-    editor_sprites[size].append(([spr], color_img))
-colorgrids = [Grid(x[1], x[0][0], x[0][1], 1, '#00000000') for x in editor_sprites.items()]
-for c,grid in enumerate(colorgrids):
-  grid.image.save(f'resourcepack/assets/baba/textures/grid{grid.sprite_width}x{grid.sprite_height}_editor.png')
+    
+    display = resource_name(o, spr, filter_properties(spr.properties, lambda x: 'editor' in x.attributes), len(filtered) == 1) + '.png'
+    path = os.path.join(editortx, display)
+    tat.setup_path(path)
+    img = PIL.Image.new("RGBA", (spr.width, spr.height * len(spr.image_frames)), '#00000000')
+    for i,f in enumerate(spr.image_frames):
+      rc, gc, bc, ac = f.split()
+      r, g, b = bytes.fromhex(spr.properties[sprites.properties['color']][1:])
+      rc = rc.point(lambda x: x * r/255)
+      gc = gc.point(lambda x: x * g/255)
+      bc = bc.point(lambda x: x * b/255)
+      color_img = PIL.Image.merge('RGBA', (rc, gc, bc, ac))
+      editor_sprites[size].append(([spr], color_img))
+      PIL.Image.Image.paste(img, color_img, (0, i*spr.height), f)
+    img.save(path)
+    tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
 i = 0
 j = 0
 anim_models = []
@@ -702,33 +675,26 @@ pot_sub = {}
 pot_ov = {}
 povcmd = {}
 
-def add_model(s,props):
-  for grid in grid_data:
-    g = grid["frames"][0]
-    if s in g.placements:
-      placement = g.placements[s]
-      x_uvsize = 16/g.width
-      y_uvsize = 16/g.height
-      break
-  description = s.display(props, '.','-')
-  scale1 = round(1.6*g.scale,3)
-  one_px = 16 / g.width * 1.6
-  model = {"textures":{"up":f"baba:{grid['name']}"},"display":{"head":{"rotation":[0,90,0],"translation":[round(2*one_px*-s.shift[1],2),-43,round(2*one_px*-s.shift[0],2)],"scale":[scale1,0.001,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#up","tintindex":0}}}]}
-  anim_models.append({'predicate':{'custom_model_data':j},'model':f'baba:objects/{description}'})
-  tat.write_json(model, f'resourcepack/assets/baba/models/objects/{description}.json')
+def add_model(obj, spr, props, fil):
+  name = resource_name(obj, spr, props, len(fil) == 1)
+  scale1 = round(1.6*spr.scale,3)
+  one_px = 16
+  model = {"textures":{"up":f'baba:sprites/{name}'},"display":{"head":{"rotation":[0,90,0],"translation":[round(2*one_px*-spr.shift[1],2),-43,round(2*one_px*-spr.shift[0],2)],"scale":[scale1,0.001,scale1]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[0,0,16,16],"texture":"#up","tintindex":0}}}]}
+  anim_models.append({'predicate':{'custom_model_data':j},'model':f'baba:objects/{name}'})
+  tat.write_json(model, f'resourcepack/assets/baba/models/objects/{name}.json')
 
 for o in objectlist:
-  pot_sprs = o.filter_sprites(lambda x: 'sprite' in x.attributes).items()
+  pot_sprs = list(o.filter_sprites(lambda x: 'sprite' in x.attributes).items())
   for s,props in pot_sprs:
     j += 1
-    add_model(s,props)
+    add_model(o,s,props, pot_sprs)
     if len(pot_sprs) > 1:
       if o.name not in pot_sub:
         pot_sub[o.name] = []
         pot_fn.append(f'execute if entity @s[{create_selector(filter_properties(props, lambda x: x.name=="sprite"))}] run function baba:display/stand/object/{o.name}')
-      pot_sub[o.name].append(f'execute if entity @s[{create_selector(filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
+      pot_sub[o.name].append(f'execute if entity @s[{create_selector(filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s item.tag.CustomModelData set value {j}')
     else:
-      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s ArmorItems[3].tag.CustomModelData set value {j}')
+      pot_fn.append(f'execute if entity @s[{create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {j}')
 
   for ov in o.overlays:
     overlay = sprites.overlays[ov]
@@ -742,7 +708,7 @@ for o in objectlist:
       props = filter_properties(ovspr.properties, lambda x: 'sprite' in x.attributes)
       if ovspr not in povcmd:
         j += 1
-        add_model(ovspr,props)
+        add_model(o,ovspr,props,o.overlays)
         povcmd[ovspr] = j
       disp = ovspr.display(props,".","-")
       special_checks = []
@@ -782,19 +748,14 @@ for o in objectlist:
     else:
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_all}}} run setblock ~ ~ ~ note_block[instrument={inst},note={note}]')
       unpack_lines.append(f'execute if data storage baba:main tile{{{check_all}}} run setblock ~ ~-1 ~ {instrument(inst)}')
-    for g,grid in enumerate(colorgrids):
-      if s in grid.placements:
-        placement = grid.placements[s]
-        x_uvsize = 16/grid.width
-        y_uvsize = 16/grid.height
-        break
-    face = {"uv":[round(x_uvsize*placement[1],4),round(y_uvsize*placement[0],4),round(x_uvsize*placement[1]+x_uvsize,4),round(y_uvsize*placement[0]+y_uvsize,4)],"texture":"#face"}
-    model = {"parent":"baba:editor_display","textures":{"face":f"baba:grid{grid.sprite_width}x{grid.sprite_height}_editor"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
-    description = s.display(props, '.','-')
-    blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:editor/{description}','y':90}
-    custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:editor/{description}'})
-    loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":f'{description.replace("."," ").replace("_"," ")}',"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
-    tat.write_json(model, f'resourcepack/assets/baba/models/editor/{description}.json')
+    face = {"uv":[0,0,16,16],"texture":"#face"}
+    name = resource_name(o, s, props, len(sprs) == 1)
+    description = s.display(props, '.', '-')
+    model = {"parent":"baba:editor_display","textures":{"face":f'baba:editor/{name}'},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
+    blockstate[f'instrument={inst},note={note}'] = {'model': f'baba:editor/{name}','y':90}
+    custom_model.append({'predicate':{'custom_model_data':i},'model':f'baba:editor/{name}'})
+    loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:note_block","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:note_block","properties":{"instrument":inst,"note":note}}],"functions":[{"function":"set_name","name":{"text":description.replace('_', ' ').replace('.', ' '),"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{i}}}"}]}]})
+    tat.write_json(model, f'resourcepack/assets/baba/models/editor/{name}.json')
     simple_name = s.display(props, ' ','=')
     cmd = f'give @s note_block{{babatile:1b,CustomModelData:{i},BlockStateTag:{{instrument:"{inst}",note:"{note}"}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
@@ -845,7 +806,7 @@ for pid,(pname,palette) in enumerate(sprites.palettes.items()):
       if color1!=color2:
         pfn.append(f'execute if score color baba matches {int(color1[1:],16)} run scoreboard players set color baba {int(color2[1:],16)}')
     tat.write_lines(pfn, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
-pot_fn.append('execute store result entity @s ArmorItems[3].tag.CustomPotionColor int 1 run scoreboard players get color baba')
+pot_fn.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba')
 for name,(prp,fn) in pot_ov.items():
   pot_fn.append(f'execute at @s[{create_selector(prp)},nbt=!{{item:{{tag:{{properties:["hide"]}}}}}}] run function baba:display/stand/object/{name}.overlay')
   tat.write_lines(fn, f'datapack/data/baba/functions/display/stand/object/{name}.overlay.mcfunction')

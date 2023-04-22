@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:grid24x24"
+      "up": "baba:sprites/reed"
    },
    "display": {
       "head": {
@@ -10,9 +10,9 @@
             0
          ],
          "translation": [
-            0.0,
+            0,
             -43,
-            0.0
+            0
          ],
          "scale": [
             1.6,
@@ -36,10 +36,10 @@
          "faces": {
             "up": {
                "uv": [
-                  4.6667,
-                  5.5652,
-                  5.3333,
-                  6.2609
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#up",
                "tintindex": 0

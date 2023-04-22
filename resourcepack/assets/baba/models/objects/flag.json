@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:grid24x24"
+      "up": "baba:sprites/flag"
    },
    "display": {
       "head": {
@@ -10,9 +10,9 @@
             0
          ],
          "translation": [
-            0.0,
+            0,
             -43,
-            0.0
+            0
          ],
          "scale": [
             1.6,
@@ -36,10 +36,10 @@
          "faces": {
             "up": {
                "uv": [
-                  13.3333,
-                  4.1739,
-                  14.0,
-                  4.8696
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#up",
                "tintindex": 0

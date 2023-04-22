@@ -1,7 +1,7 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:grid24x24_editor"
+      "face": "baba:editor/sun"
    },
    "elements": [
       {
@@ -18,55 +18,55 @@
          "faces": {
             "up": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "down": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "north": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "south": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "east": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "west": {
                "uv": [
-                  7.0,
-                  6.4,
-                  8.0,
-                  7.4667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             }

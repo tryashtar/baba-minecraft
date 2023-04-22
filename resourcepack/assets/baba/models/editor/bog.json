@@ -1,7 +1,7 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:grid24x24_editor"
+      "face": "baba:editor/bog"
    },
    "elements": [
       {
@@ -18,55 +18,55 @@
          "faces": {
             "up": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "down": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "north": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "south": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "east": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "west": {
                "uv": [
-                  15.0,
-                  0.0,
-                  16.0,
-                  1.0667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             }

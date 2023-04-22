@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:grid24x24"
+      "up": "baba:sprites/tile"
    },
    "display": {
       "head": {
@@ -10,9 +10,9 @@
             0
          ],
          "translation": [
-            0.0,
+            0,
             -43,
-            0.0
+            0
          ],
          "scale": [
             1.6,
@@ -36,10 +36,10 @@
          "faces": {
             "up": {
                "uv": [
-                  8.6667,
-                  4.8696,
-                  9.3333,
-                  5.5652
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#up",
                "tintindex": 0

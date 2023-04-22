@@ -1,6 +1,6 @@
 {
    "textures": {
-      "up": "baba:grid32x32"
+      "up": "baba:sprites/cursor"
    },
    "display": {
       "head": {
@@ -10,14 +10,14 @@
             0
          ],
          "translation": [
-            0.0,
+            0,
             -43,
-            0.0
+            0
          ],
          "scale": [
-            2.133,
+            1.6,
             0.001,
-            2.133
+            1.6
          ]
       }
    },
@@ -36,10 +36,10 @@
          "faces": {
             "up": {
                "uv": [
-                  0.0,
-                  0.0,
-                  16.0,
-                  16.0
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#up",
                "tintindex": 0

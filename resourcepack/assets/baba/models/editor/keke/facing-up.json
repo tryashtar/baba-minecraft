@@ -1,0 +1,76 @@
+{
+   "parent": "baba:editor_display",
+   "textures": {
+      "face": "baba:editor/keke/facing-up"
+   },
+   "elements": [
+      {
+         "from": [
+            0,
+            0,
+            0
+         ],
+         "to": [
+            16,
+            16,
+            16
+         ],
+         "faces": {
+            "up": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            },
+            "down": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            },
+            "north": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            },
+            "south": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            },
+            "east": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            },
+            "west": {
+               "uv": [
+                  0,
+                  0,
+                  16,
+                  16
+               ],
+               "texture": "#face"
+            }
+         }
+      }
+   ]
+}
