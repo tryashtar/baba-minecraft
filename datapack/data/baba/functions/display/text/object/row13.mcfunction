@@ -159,6 +159,6 @@ execute if entity @s[scores={move_frame=1..,move_dir=3}] run data modify storage
 execute if entity @s[scores={move_frame=1..,move_dir=4}] run data modify storage baba:main object_text insert 1 value '{"translate":"baba.nudge_left"}'
 execute if entity @s[scores={move_frame=1..,move_dir=4}] run data modify storage baba:main object_text append value '{"translate":"baba.nudge_right"}'
 item modify entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c weapon.mainhand baba:color_text
-data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c HandItems[0].tag.display.Name
+data modify storage baba:main text append from entity 89fd5d65-fc19-4848-8c51-e72ea0c1d85c item.tag.display.Name
 execute if entity @s[scores={sprite=30442}] run function baba:display/text/object/row13/text.overlay
 execute if entity @s[scores={sprite=26837}] run function baba:display/text/object/row13/level.overlay

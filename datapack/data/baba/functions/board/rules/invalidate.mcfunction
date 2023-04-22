@@ -102,4 +102,4 @@ execute if score @s text_id matches 100 run data remove storage baba:main rules[
 # if there is more than 100 text, just wipe everything and accept that the game is going to be insanely slow
 execute if score @s text_id matches 101.. run data modify storage baba:main rules set value []
 execute if score @s text_id matches 101.. run tag @e[tag=baba.object,tag=!reparse,scores={sprite=30442}] add reparse
-execute as @e[type=armor_stand,tag=baba.object,tag=!reparse,scores={sprite=30442},distance=..1.1] at @s run function baba:board/rules/try_invalidate
+execute as @e[type=item_display,tag=baba.object,tag=!reparse,scores={sprite=30442},distance=..1.1] at @s run function baba:board/rules/try_invalidate

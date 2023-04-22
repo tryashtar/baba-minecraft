@@ -33,5 +33,5 @@ execute if score color baba matches 16760135 run data modify storage baba:main o
 execute if score color baba matches 7580659 run data modify storage baba:main object_text set value ['{"color":"#73abf3","text":""}','""']
 execute if score color baba matches 11981632 run data modify storage baba:main object_text set value ['{"color":"#b6d340","text":""}','""']
 execute if score color baba matches 723726 run data modify storage baba:main object_text set value ['{"color":"#0b0b0e","text":""}','""']
-execute if entity @s[nbt={HandItems:[{tag:{properties:["red"]}}]}] run data modify storage baba:main object_text set value ['{"color":"#e5533b","text":""}','""']
-execute if entity @s[nbt={HandItems:[{tag:{properties:["blue"]}}]}] run data modify storage baba:main object_text set value ['{"color":"#557ae0","text":""}','""']
+execute if entity @s[nbt={item:{tag:{properties:["red"]}}}] run data modify storage baba:main object_text set value ['{"color":"#e5533b","text":""}','""']
+execute if entity @s[nbt={item:{tag:{properties:["blue"]}}}] run data modify storage baba:main object_text set value ['{"color":"#557ae0","text":""}','""']
