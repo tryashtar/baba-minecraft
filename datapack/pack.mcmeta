@@ -2,7 +2,8 @@
    "pack": {
       "pack_format": 14,
       "description": {
-         "translate": "%2$s%21661093$s",
+         "translate": "baba.translate",
+         "fallback": "%2$s",
          "with": [
             [
                {

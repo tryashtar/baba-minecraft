@@ -73,7 +73,6 @@ execute as @e[type=item_display,tag=baba.object,nbt=!{item:{tag:{properties:["sl
 execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
 
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
-execute if score text_enabled baba matches 1 unless entity @e[type=item_display,tag=baba.object,scores={move_frame=0..}] run function baba:display/text/update
 function baba:display/stand/update
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
 

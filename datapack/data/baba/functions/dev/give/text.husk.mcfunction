@@ -1,1 +1,1 @@
-give @s note_block{babatile:1b,CustomModelData:146,BlockStateTag:{instrument:"flute",note:"20"},display:{Name:'{"text":"text husk","italic":false}'}}
+give @s chiseled_bookshelf{babatile:1b,CustomModelData:45,BlockStateTag:{slot_0_occupied:"false",slot_1_occupied:"false",slot_2_occupied:"true",slot_3_occupied:"true",slot_4_occupied:"false",slot_5_occupied:"true",facing:"north"},display:{Name:'{"text":"text husk","italic":false}'}}
