@@ -1,5 +1,5 @@
-execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer
-execute at @s run tp @s ~ ~1 ~
+execute store result entity @s Pos[1] double 0.00001 run scoreboard players get @s z_layer
+execute at @s run tp @s ~ ~1.001 ~
 execute if entity @s[scores={sprite=23193}] run function baba:display/stand/object/baba
 execute if entity @s[scores={sprite=30442}] run function baba:display/stand/object/text
 execute if entity @s[scores={sprite=45087}] run function baba:display/stand/object/keke

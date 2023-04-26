@@ -491,12 +491,12 @@ sprites:
     - shared:
       - name: level_icon
         color: '#ffffff'
-        shift: [-2, 0]
+        shift: [-4, 0]
         properties:
           style: digit
       - name: level_icon
         color: '#ffffff'
-        shift: [2, 0]
+        shift: [4, 0]
         properties:
           style: digit
         modifications:

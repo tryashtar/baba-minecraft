@@ -42,7 +42,11 @@ def save_image(spr, images, path):
     tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
 
 def save_model(spr, texture_resource, path):
-  model = {"textures":{"up":texture_resource},"display":{"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[0,0,16,16],"texture":"#up","tintindex":0}}}]}
+  t1 = round(-16*spr.scale*spr.shift[1]/24,2)
+  t2 = round(-16*spr.scale*spr.shift[0]/24,2)
+  model = {"textures":{"up":texture_resource},"display":{"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, 0, t2]}},"elements":[{"from":[0,0,0],"to":[16,0,16],"faces":{"up":{"uv":[0,0,16,16],"texture":"#up","tintindex":0}}}]}
+  if (t1, t2) == (0, 0):
+    del model['display']['fixed']['translation']
   tat.write_json(model, path)
 
 def save_editor_model(spr, texture_resource, path):

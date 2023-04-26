@@ -42,7 +42,7 @@ def generate_packing_functions(source, blockstates):
         dir_checks[direction] = []
         pack_lines.append(f'execute if block ~ ~ ~ chiseled_bookshelf[facing={direction}] run function baba:editor/pack/block/{direction}')
       del this_state['facing']
-      dir_checks[direction].append(f'execute if block ~ ~ ~ chiseled_bookshelf[{state_str}] run data modify storage baba:main tile append value {{{set_storage}}}')
+      dir_checks[direction].append(f'execute if block ~ ~ ~ chiseled_bookshelf[{ops.state_string(this_state)}] run data modify storage baba:main tile append value {{{set_storage}}}')
       if len(spritelist) == 1:
         unpack_lines.append(f'execute if data storage baba:main {check_sprite} run setblock ~ ~ ~ chiseled_bookshelf[{ops.state_string(blockstates[spritelist[0][0]])}]')
       else:
@@ -136,8 +136,8 @@ def generate_wiggle_fonts(source, resources):
 def generate_update_function(source, resources):
   tat.delete_folder('datapack/data/baba/functions/display/stand/object')
   update_obj = [
-    'execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer',
-    'execute at @s run tp @s ~ ~1 ~'
+    'execute store result entity @s Pos[1] double 0.00001 run scoreboard players get @s z_layer',
+    'execute at @s run tp @s ~ ~1.001 ~'
   ]
   for obj in source.objects.values():
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
@@ -168,7 +168,7 @@ def generate_update_function(source, resources):
       final = 'execute '
       for prop,spec in special_checks:
         final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-      final += f'if entity @s[{selector}] run summon item_display ~ ~0.01 ~ {{width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{resources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
+      final += f'if entity @s[{selector}] run summon item_display ~ ~0.0002 ~ {{width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{resources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
       lines.append(final)
       tat.write_lines(lines, f'datapack/data/baba/functions/display/stand/object/{overlay.name}.mcfunction')
   for obj in source.objects.values():
