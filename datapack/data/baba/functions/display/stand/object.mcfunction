@@ -1,5 +1,5 @@
 execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer
-execute at @s run tp @s ~ ~1.001 ~
+execute at @s run tp @s ~ ~1 ~
 execute if entity @s[scores={sprite=23193}] run function baba:display/stand/object/baba
 execute if entity @s[scores={sprite=30442}] run function baba:display/stand/object/text
 execute if entity @s[scores={sprite=45087}] run function baba:display/stand/object/keke
@@ -71,8 +71,8 @@ execute if entity @s[scores={sprite=49468}] run function baba:display/stand/obje
 execute if entity @s[scores={sprite=41172}] run function baba:display/stand/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/stand/object/cliff
 execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 527
-execute at @s[scores={sprite=7142},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/level_icon
-execute at @s[scores={sprite=40976},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/text_overlay
+execute at @s[scores={sprite=30442},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/text_overlay
+execute at @s[scores={sprite=26837},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/level_icon
 item replace entity @s[nbt={item:{tag:{properties:["hide"]}}}] armor.head with potion
 scoreboard players operation color baba = @s color
 execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text

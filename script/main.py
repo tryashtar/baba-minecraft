@@ -171,7 +171,9 @@ def generate_update_function(source, resources):
       final += f'if entity @s[{selector}] run summon item_display ~ ~0.01 ~ {{width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{resources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
       lines.append(final)
       tat.write_lines(lines, f'datapack/data/baba/functions/display/stand/object/{overlay.name}.mcfunction')
-    update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(overlay.name)}}},nbt=!{{item:{{tag:{{properties:["hide"]}}}}}}] run function baba:display/stand/object/{overlay.name}')
+  for obj in source.objects.values():
+    for overlay in obj.overlays:
+      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},nbt=!{{item:{{tag:{{properties:["hide"]}}}}}}] run function baba:display/stand/object/{overlay}')
   update_obj.extend([
     'item replace entity @s[nbt={item:{tag:{properties:["hide"]}}}] armor.head with potion',
     'scoreboard players operation color baba = @s color',
