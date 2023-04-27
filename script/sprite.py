@@ -116,7 +116,7 @@ class SpriteCollection:
                     self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                   props[self.properties[k]] = v
                 # finalize the sprite and add each anim frame to its respective grid
-                imgframes = list(self.get_frames(i, image, framecount, coords, size, framedir))
+                imgframes = list(self.get_frames(i, image, framecount, spr_coords, size, framedir))
                 sprite = BabaSprite(imgframes, props, width, height, obj.get('shift', [0,0]), scale)
                 adding.sprites.append(sprite)
 
