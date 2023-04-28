@@ -61,17 +61,16 @@ execute if entity @s[scores={sprite=26472}] run function baba:display/stand/obje
 execute if entity @s[scores={sprite=30894}] run function baba:display/stand/object/grass
 execute if entity @s[scores={sprite=52941}] run function baba:display/stand/object/hedge
 execute if entity @s[scores={sprite=26372}] run function baba:display/stand/object/ice
-execute if entity @s[scores={sprite=28861}] run function baba:display/stand/object/lava
-execute if entity @s[scores={sprite=42043}] run function baba:display/stand/object/water
-execute if entity @s[scores={sprite=58667}] run function baba:display/stand/object/bog
 execute if entity @s[scores={sprite=60823}] run function baba:display/stand/object/line
 execute if entity @s[scores={sprite=40985}] run function baba:display/stand/object/pipe
 execute if entity @s[scores={sprite=27096}] run function baba:display/stand/object/rubble
 execute if entity @s[scores={sprite=49468}] run function baba:display/stand/object/wall
+execute if entity @s[scores={sprite=42043}] run function baba:display/stand/object/water
+execute if entity @s[scores={sprite=28861}] run function baba:display/stand/object/lava
+execute if entity @s[scores={sprite=58667}] run function baba:display/stand/object/bog
 execute if entity @s[scores={sprite=41172}] run function baba:display/stand/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/stand/object/cliff
 execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 527
-execute at @s[scores={sprite=30442},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/text_overlay
 execute at @s[scores={sprite=26837},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/level_icon
 item replace entity @s[nbt={item:{tag:{properties:["hide"]}}}] armor.head with potion
 scoreboard players operation color baba = @s color

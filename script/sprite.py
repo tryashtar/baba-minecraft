@@ -39,7 +39,7 @@ class SpriteCollection:
     scale = 1
     frame_num = 1
     for spritesheet in self.data['sprites']:
-      coords = None
+      coords = [0, 0]
       size = spritesheet.get('size', size)
       scale = spritesheet.get('scale', scale)
       frame_num = spritesheet.get('frames', frame_num)
@@ -53,72 +53,73 @@ class SpriteCollection:
       array[:,:,-1] = alpha
       image = PIL.Image.fromarray(np.ubyte(array))
       for entry in spritesheet['entries']:
-        objlist = entry.get('objects', [])
-        overlist = entry.get('overlays', [])
-        for source in (objlist, overlist):
-          for obj in source:
-            # if coords are unspecified, move to the next row
-            if coords is not None:
-              coords[1] += (height+1) * framecount
-            if obj is None:
-              continue
-            coords = obj.get('coords', coords)
-            framedir = obj.get('frames', 'down')
-            framecount = 1 if framedir == 'none' else frame_num
-            shared  = obj.get('shared', [obj])
-            # expand sprite definitions from shorthands to a complete list of all sprites
-            sprites = []
-            for spr in entry['sprites']:
-              if type(spr) is dict and 'permute' in spr:
-                sprites.extend(self.permute(spr['permute']))
-              else:
-                sprites.append(spr)
-            for obj in shared:
+        sprite_configs = []
+        for spr_data in entry['sprites']:
+          if 'permute' in spr_data:
+            sprite_configs.extend(self.permute(spr_data['permute']))
+          else:
+            sprite_configs.append(spr_data)
+        if 'objects' in entry:
+          source = entry['objects']
+          is_overlay = False
+        else:
+          source = entry['overlays']
+          is_overlay = True
+        framecount = 1
+        for obj_data in source:
+          if obj_data is not None and 'coords' in obj_data:
+            coords = obj_data['coords']
+          else:
+            coords[1] += (height+1) * framecount
+          if obj_data is None:
+            continue
+          shared = obj_data.get('shared', [obj_data])
+          framedir = obj_data.get('frames', 'down')
+          framecount = 1 if framedir == 'none' else frame_num
+          for sprite_index,raw_cfg in enumerate(sprite_configs):
+            obj_frames = ImageFrames(list(self.get_frames(sprite_index, image, framecount, coords, size, framedir)))
+            for obj_index,obj_data in enumerate(shared):
               # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
-              baba = self.get_or_create_obj(obj['name'], source == overlist)
-              if 'overlays' in obj:
-                baba.overlays.extend(obj['overlays'])
-              if 'modifications' in obj:
-                for k,v in obj['modifications'].items():
+              baba = self.get_or_create_obj(obj_data['name'], is_overlay)
+              if 'overlays' in obj_data:
+                baba.overlays.extend(obj_data['overlays'])
+              if 'modifications' in obj_data:
+                for k,v in obj_data['modifications'].items():
                   baba.property_mods[k] = v
-
-            for i,sp in enumerate(sprites):
-              for objid, obj in enumerate(shared):
-                spr = sp if type(sp) is str else sp.copy()
-                if type(sp) is list:
-                  spr = sp[objid].copy()
-                baba = self.get_or_create_obj(obj['name'], source == overlist)
-                spr_coords = coords
-                if spr == 'text':
-                  adding = self.get_or_create_obj('text', False)
-                  color = obj.get('text color', obj.get('color'))
-                  spr = {'text': obj['name'], 'part': 'noun'}
-                  spr_coords = obj.get('text coords', spr_coords)
-                else:
-                  adding = baba
-                  color = obj.get('object color', obj.get('color'))
-                # include properties specific to this object, or this sprite
-                spr['color'] = color
-                if sp != 'text' and 'properties' in obj:
-                  for k,v in obj['properties'].items():
-                    spr[k] = v
-                if sp != 'text' and 'properties' in entry:
-                    for k,v in entry['properties'].items():
-                      spr[k] = v
-                # make keys the actual metadata objects instead of their names
-                props = {self.properties['sprite']:adding.name}
-                if adding.name == 'text':
-                  props[self.properties['z_layer']] = 20
-                  props[self.properties['not_all']] = True
-                  props[self.properties['reparse']] = True
-                for k,v in spr.items():
-                  if k in baba.property_mods and k not in self.properties:
-                    self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
-                  props[self.properties[k]] = v
-                # finalize the sprite and add each anim frame to its respective grid
-                imgframes = list(self.get_frames(i, image, framecount, spr_coords, size, framedir))
-                sprite = BabaSprite(imgframes, props, width, height, obj.get('shift', [0,0]), scale)
-                adding.sprites.append(sprite)
+              adding_frames = obj_frames
+              if raw_cfg == 'text':
+                if 'text coords' in obj_data:
+                  adding_frames = ImageFrames(list(self.get_frames(sprite_index, image, framecount, obj_data['text coords'], size, framedir)))
+                adding = self.get_or_create_obj('text', False)
+                color = obj_data.get('text color', obj_data.get('color'))
+                cfg = {'text': obj_data['name'], 'part': 'noun'}
+              else:
+                adding_frames = obj_frames
+                adding = baba
+                color = obj_data.get('object color', obj_data.get('color'))
+                cfg = raw_cfg.copy()
+                if isinstance(cfg, list):
+                  cfg = cfg[obj_index]
+              # include properties specific to this object, or this sprite
+              cfg['color'] = color
+              if raw_cfg != 'text' and 'properties' in obj_data:
+                for k,v in obj_data['properties'].items():
+                  cfg[k] = v
+              if raw_cfg != 'text' and 'properties' in entry:
+                  for k,v in entry['properties'].items():
+                    cfg[k] = v
+              # make keys the actual metadata objects instead of their names
+              props = {self.properties['sprite']:adding.name}
+              if adding.name == 'text':
+                props[self.properties['z_layer']] = 20
+                props[self.properties['not_all']] = True
+                props[self.properties['reparse']] = True
+              for k,v in cfg.items():
+                if k in baba.property_mods and k not in self.properties:
+                  self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
+                props[self.properties[k]] = v
+              sprite = BabaSprite(adding_frames, props, width, height, obj_data.get('shift', [0,0]), scale)
+              adding.sprites.append(sprite)
 
   def get_frames(self, i, image, framecount, coords, size, framedir):
     x, y = coords
@@ -130,6 +131,8 @@ class SpriteCollection:
         yield image.crop((x+((w+1)*n),y+((h+1)*i),x+((w+1)*n)+w,y+((h+1)*i)+h))
       elif framedir == 'none':
         yield image.crop((x,y+((h+1)*i),x+w,y+((h+1)*i)+h))
+      else:
+        raise ValueError(framedir)
 
 
 class BabaObject:
@@ -152,9 +155,14 @@ class BabaObject:
     return sprites
 
 
+class ImageFrames:
+  def __init__(self, frames):
+    self.frames = frames
+
+
 class BabaSprite:
-  def __init__(self, image_frames, properties, width, height, shift, scale):
-    self.image_frames = image_frames
+  def __init__(self, image, properties, width, height, shift, scale):
+    self.image = image
     self.properties = properties
     self.width = width
     self.height = height

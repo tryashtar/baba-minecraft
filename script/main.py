@@ -126,8 +126,8 @@ def generate_wiggle_fonts(source, resources):
     text = spr.properties[source.properties['text']]
     if text in ('baba','is','you'):
       providers = []
-      for h in range(len(spr.image_frames)):
-        chars = ['\u0000'] * len(spr.image_frames)
+      for h in range(len(spr.image.frames)):
+        chars = ['\u0000'] * len(spr.image.frames)
         chars[h] = str(h)
         path = resources[spr].texture_resource + '.png'
         providers.append({"type":"bitmap","file":path,"height":12,"ascent":8,"chars":chars})

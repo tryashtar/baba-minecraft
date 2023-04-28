@@ -695,43 +695,43 @@
          "predicate": {
             "custom_model_data": 116
          },
-         "model": "baba:editor/text/lava"
+         "model": "baba:editor/text/line"
       },
       {
          "predicate": {
             "custom_model_data": 117
          },
-         "model": "baba:editor/text/water"
+         "model": "baba:editor/text/pipe"
       },
       {
          "predicate": {
             "custom_model_data": 118
          },
-         "model": "baba:editor/text/bog"
+         "model": "baba:editor/text/rubble"
       },
       {
          "predicate": {
             "custom_model_data": 119
          },
-         "model": "baba:editor/text/line"
+         "model": "baba:editor/text/wall"
       },
       {
          "predicate": {
             "custom_model_data": 120
          },
-         "model": "baba:editor/text/pipe"
+         "model": "baba:editor/text/water"
       },
       {
          "predicate": {
             "custom_model_data": 121
          },
-         "model": "baba:editor/text/rubble"
+         "model": "baba:editor/text/lava"
       },
       {
          "predicate": {
             "custom_model_data": 122
          },
-         "model": "baba:editor/text/wall"
+         "model": "baba:editor/text/bog"
       },
       {
          "predicate": {
@@ -1337,43 +1337,43 @@
          "predicate": {
             "custom_model_data": 223
          },
-         "model": "baba:editor/lava"
+         "model": "baba:editor/line"
       },
       {
          "predicate": {
             "custom_model_data": 224
          },
-         "model": "baba:editor/water"
+         "model": "baba:editor/pipe"
       },
       {
          "predicate": {
             "custom_model_data": 225
          },
-         "model": "baba:editor/bog"
+         "model": "baba:editor/rubble"
       },
       {
          "predicate": {
             "custom_model_data": 226
          },
-         "model": "baba:editor/line"
+         "model": "baba:editor/wall"
       },
       {
          "predicate": {
             "custom_model_data": 227
          },
-         "model": "baba:editor/pipe"
+         "model": "baba:editor/water"
       },
       {
          "predicate": {
             "custom_model_data": 228
          },
-         "model": "baba:editor/rubble"
+         "model": "baba:editor/lava"
       },
       {
          "predicate": {
             "custom_model_data": 229
          },
-         "model": "baba:editor/wall"
+         "model": "baba:editor/bog"
       },
       {
          "predicate": {

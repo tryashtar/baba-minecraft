@@ -109,12 +109,12 @@ fence: 26472
 grass: 30894
 hedge: 52941
 ice: 26372
-lava: 28861
-water: 42043
-bog: 58667
 line: 60823
 pipe: 40985
 rubble: 27096
 wall: 49468
+water: 42043
+lava: 28861
+bog: 58667
 brick: 41172
 cliff: 32467

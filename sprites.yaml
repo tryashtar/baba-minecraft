@@ -491,11 +491,6 @@ sprites:
     - shared:
       - name: level_icon
         color: '#ffffff'
-        shift: [-4, 0]
-        properties:
-          style: digit
-      - name: level_icon
-        color: '#ffffff'
         shift: [4, 0]
         properties:
           style: digit
@@ -503,29 +498,34 @@ sprites:
           first_digit:
             operation: modulo
             operands: [number, 10]
+      - name: level_icon
+        color: '#ffffff'
+        shift: [-4, 0]
+        properties:
+          style: digit
       coords: [26, 1]
       frames: none
     sprites:
-    - - number: [0, 9]
-      - first_digit: 0
-    - - number: [10, 19]
-      - first_digit: 1
-    - - number: [20, 29]
-      - first_digit: 2
-    - - number: [30, 39]
-      - first_digit: 3
-    - - number: [40, 49]
-      - first_digit: 4
-    - - number: [50, 59]
-      - first_digit: 5
-    - - number: [60, 69]
-      - first_digit: 6
-    - - number: [70, 79]
-      - first_digit: 7
-    - - number: [80, 89]
-      - first_digit: 8
-    - - number: [90, 99]
-      - first_digit: 9
+    - - first_digit: 0
+      - number: [0, 9]
+    - - first_digit: 1
+      - number: [10, 19]
+    - - first_digit: 2
+      - number: [20, 29]
+    - - first_digit: 3
+      - number: [30, 39]
+    - - first_digit: 4
+      - number: [40, 49]
+    - - first_digit: 5
+      - number: [50, 59]
+    - - first_digit: 6
+      - number: [60, 69]
+    - - first_digit: 7
+      - number: [70, 79]
+    - - first_digit: 8
+      - number: [80, 89]
+    - - first_digit: 9
+      - number: [90, 99]
   - objects:
     - name: level
       color: '#3e7688'
@@ -904,22 +904,7 @@ sprites:
       object color: '#3e7688'
       properties:
         z_layer: 9
-    - shared:
-      - name: lava
-        color: '#e49950'
-        properties:
-          z_layer: 2
-      - name: water
-        color: '#5f9dd1'
-        text coords: [1, 1576]
-        properties:
-          z_layer: 2
-      - name: bog
-        text color: '#a5b13f'
-        object color: '#4b5c1c'
-        text coords: [1, 76]
-        properties:
-          z_layer: 2
+    - null
     - name: line
       color: '#ffffff'
       properties:
@@ -941,6 +926,22 @@ sprites:
       object color: '#293141'
       properties:
         z_layer: 14
+    - shared:
+      - name: water
+        color: '#5f9dd1'
+        properties:
+          z_layer: 2
+      - name: lava
+        color: '#e49950'
+        text coords: [1, 901]
+        properties:
+          z_layer: 2
+      - name: bog
+        text color: '#a5b13f'
+        object color: '#4b5c1c'
+        text coords: [1, 76]
+        properties:
+          z_layer: 2
     - name: brick
       text color: '#90673e'
       object color: '#362e22'

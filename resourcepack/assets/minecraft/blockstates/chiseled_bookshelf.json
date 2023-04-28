@@ -461,31 +461,31 @@
          "y": 90
       },
       "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
-         "model": "baba:editor/text/lava",
-         "y": 90
-      },
-      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
-         "model": "baba:editor/text/water",
-         "y": 90
-      },
-      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
-         "model": "baba:editor/text/bog",
-         "y": 90
-      },
-      "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
          "model": "baba:editor/text/line",
          "y": 90
       },
-      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
          "model": "baba:editor/text/pipe",
          "y": 90
       },
-      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
          "model": "baba:editor/text/rubble",
          "y": 90
       },
-      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+      "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
          "model": "baba:editor/text/wall",
+         "y": 90
+      },
+      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+         "model": "baba:editor/text/water",
+         "y": 90
+      },
+      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+         "model": "baba:editor/text/lava",
+         "y": 90
+      },
+      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
+         "model": "baba:editor/text/bog",
          "y": 90
       },
       "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=south": {
@@ -889,31 +889,31 @@
          "y": 90
       },
       "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west": {
-         "model": "baba:editor/lava",
-         "y": 90
-      },
-      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west": {
-         "model": "baba:editor/water",
-         "y": 90
-      },
-      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
-         "model": "baba:editor/bog",
-         "y": 90
-      },
-      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
          "model": "baba:editor/line",
          "y": 90
       },
-      "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west": {
          "model": "baba:editor/pipe",
          "y": 90
       },
-      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
          "model": "baba:editor/rubble",
          "y": 90
       },
-      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+      "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
          "model": "baba:editor/wall",
+         "y": 90
+      },
+      "slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+         "model": "baba:editor/water",
+         "y": 90
+      },
+      "slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+         "model": "baba:editor/lava",
+         "y": 90
+      },
+      "slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {
+         "model": "baba:editor/bog",
          "y": 90
       },
       "slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west": {

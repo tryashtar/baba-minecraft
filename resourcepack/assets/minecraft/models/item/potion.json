@@ -804,43 +804,43 @@
          "predicate": {
             "custom_model_data": 132
          },
-         "model": "baba:sprites/text/lava"
+         "model": "baba:sprites/text/line"
       },
       {
          "predicate": {
             "custom_model_data": 133
          },
-         "model": "baba:sprites/text/water"
+         "model": "baba:sprites/text/pipe"
       },
       {
          "predicate": {
             "custom_model_data": 134
          },
-         "model": "baba:sprites/text/bog"
+         "model": "baba:sprites/text/rubble"
       },
       {
          "predicate": {
             "custom_model_data": 135
          },
-         "model": "baba:sprites/text/line"
+         "model": "baba:sprites/text/wall"
       },
       {
          "predicate": {
             "custom_model_data": 136
          },
-         "model": "baba:sprites/text/pipe"
+         "model": "baba:sprites/text/water"
       },
       {
          "predicate": {
             "custom_model_data": 137
          },
-         "model": "baba:sprites/text/rubble"
+         "model": "baba:sprites/text/lava"
       },
       {
          "predicate": {
             "custom_model_data": 138
          },
-         "model": "baba:sprites/text/wall"
+         "model": "baba:sprites/text/bog"
       },
       {
          "predicate": {
@@ -1644,7 +1644,7 @@
          "predicate": {
             "custom_model_data": 272
          },
-         "model": "baba:sprites/violet"
+         "model": "baba:sprites/flower"
       },
       {
          "predicate": {
@@ -2310,673 +2310,673 @@
          "predicate": {
             "custom_model_data": 383
          },
-         "model": "baba:sprites/lava/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/line/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 384
          },
-         "model": "baba:sprites/lava/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/line/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 385
          },
-         "model": "baba:sprites/lava/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/line/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 386
          },
-         "model": "baba:sprites/lava/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/line/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 387
          },
-         "model": "baba:sprites/lava/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/line/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 388
          },
-         "model": "baba:sprites/lava/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/line/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 389
          },
-         "model": "baba:sprites/lava/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/line/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 390
          },
-         "model": "baba:sprites/lava/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/line/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 391
          },
-         "model": "baba:sprites/lava/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/line/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 392
          },
-         "model": "baba:sprites/lava/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/line/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 393
          },
-         "model": "baba:sprites/lava/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/line/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 394
          },
-         "model": "baba:sprites/lava/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/line/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 395
          },
-         "model": "baba:sprites/lava/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/line/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 396
          },
-         "model": "baba:sprites/lava/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/line/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 397
          },
-         "model": "baba:sprites/lava/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/line/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 398
          },
-         "model": "baba:sprites/lava/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/line/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 399
          },
-         "model": "baba:sprites/water/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 400
          },
-         "model": "baba:sprites/water/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 401
          },
-         "model": "baba:sprites/water/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 402
          },
-         "model": "baba:sprites/water/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 403
          },
-         "model": "baba:sprites/water/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 404
          },
-         "model": "baba:sprites/water/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 405
          },
-         "model": "baba:sprites/water/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 406
          },
-         "model": "baba:sprites/water/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 407
          },
-         "model": "baba:sprites/water/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 408
          },
-         "model": "baba:sprites/water/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 409
          },
-         "model": "baba:sprites/water/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 410
          },
-         "model": "baba:sprites/water/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 411
          },
-         "model": "baba:sprites/water/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 412
          },
-         "model": "baba:sprites/water/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 413
          },
-         "model": "baba:sprites/water/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 414
          },
-         "model": "baba:sprites/water/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 415
          },
-         "model": "baba:sprites/bog/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 416
          },
-         "model": "baba:sprites/bog/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 417
          },
-         "model": "baba:sprites/bog/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 418
          },
-         "model": "baba:sprites/bog/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 419
          },
-         "model": "baba:sprites/bog/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 420
          },
-         "model": "baba:sprites/bog/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 421
          },
-         "model": "baba:sprites/bog/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 422
          },
-         "model": "baba:sprites/bog/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 423
          },
-         "model": "baba:sprites/bog/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 424
          },
-         "model": "baba:sprites/bog/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 425
          },
-         "model": "baba:sprites/bog/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 426
          },
-         "model": "baba:sprites/bog/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 427
          },
-         "model": "baba:sprites/bog/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 428
          },
-         "model": "baba:sprites/bog/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 429
          },
-         "model": "baba:sprites/bog/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 430
          },
-         "model": "baba:sprites/bog/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 431
          },
-         "model": "baba:sprites/line/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/wall/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 432
          },
-         "model": "baba:sprites/line/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/wall/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 433
          },
-         "model": "baba:sprites/line/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/wall/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 434
          },
-         "model": "baba:sprites/line/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/wall/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 435
          },
-         "model": "baba:sprites/line/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/wall/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 436
          },
-         "model": "baba:sprites/line/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/wall/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 437
          },
-         "model": "baba:sprites/line/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/wall/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 438
          },
-         "model": "baba:sprites/line/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/wall/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 439
          },
-         "model": "baba:sprites/line/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/wall/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 440
          },
-         "model": "baba:sprites/line/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/wall/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 441
          },
-         "model": "baba:sprites/line/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/wall/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 442
          },
-         "model": "baba:sprites/line/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/wall/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 443
          },
-         "model": "baba:sprites/line/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/wall/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 444
          },
-         "model": "baba:sprites/line/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/wall/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 445
          },
-         "model": "baba:sprites/line/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/wall/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 446
          },
-         "model": "baba:sprites/line/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/wall/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 447
          },
-         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 448
          },
-         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 449
          },
-         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 450
          },
-         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 451
          },
-         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 452
          },
-         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 453
          },
-         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 454
          },
-         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 455
          },
-         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 456
          },
-         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 457
          },
-         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 458
          },
-         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 459
          },
-         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 460
          },
-         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 461
          },
-         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 462
          },
-         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 463
          },
-         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 464
          },
-         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 465
          },
-         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 466
          },
-         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 467
          },
-         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 468
          },
-         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 469
          },
-         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 470
          },
-         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 471
          },
-         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 472
          },
-         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 473
          },
-         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 474
          },
-         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 475
          },
-         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 476
          },
-         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 477
          },
-         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 478
          },
-         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 479
          },
-         "model": "baba:sprites/wall/up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 480
          },
-         "model": "baba:sprites/wall/up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 481
          },
-         "model": "baba:sprites/wall/up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 482
          },
-         "model": "baba:sprites/wall/up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 483
          },
-         "model": "baba:sprites/wall/up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 484
          },
-         "model": "baba:sprites/wall/up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 485
          },
-         "model": "baba:sprites/wall/up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 486
          },
-         "model": "baba:sprites/wall/up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 487
          },
-         "model": "baba:sprites/wall/up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 488
          },
-         "model": "baba:sprites/wall/up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 489
          },
-         "model": "baba:sprites/wall/up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 490
          },
-         "model": "baba:sprites/wall/up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 491
          },
-         "model": "baba:sprites/wall/up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 492
          },
-         "model": "baba:sprites/wall/up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 493
          },
-         "model": "baba:sprites/wall/up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 494
          },
-         "model": "baba:sprites/wall/up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
@@ -3390,7 +3390,7 @@
          "predicate": {
             "custom_model_data": 563
          },
-         "model": "baba:sprites/level_icon/digit.number-0-9"
+         "model": "baba:sprites/level_icon/digit.first_digit-0"
       },
       {
          "predicate": {
@@ -3402,7 +3402,7 @@
          "predicate": {
             "custom_model_data": 565
          },
-         "model": "baba:sprites/level_icon/digit.number-10-19"
+         "model": "baba:sprites/level_icon/digit.first_digit-1"
       },
       {
          "predicate": {
@@ -3414,7 +3414,7 @@
          "predicate": {
             "custom_model_data": 567
          },
-         "model": "baba:sprites/level_icon/digit.number-20-29"
+         "model": "baba:sprites/level_icon/digit.first_digit-2"
       },
       {
          "predicate": {
@@ -3426,7 +3426,7 @@
          "predicate": {
             "custom_model_data": 569
          },
-         "model": "baba:sprites/level_icon/digit.number-30-39"
+         "model": "baba:sprites/level_icon/digit.first_digit-3"
       },
       {
          "predicate": {
@@ -3438,7 +3438,7 @@
          "predicate": {
             "custom_model_data": 571
          },
-         "model": "baba:sprites/level_icon/digit.number-40-49"
+         "model": "baba:sprites/level_icon/digit.first_digit-4"
       },
       {
          "predicate": {
@@ -3450,7 +3450,7 @@
          "predicate": {
             "custom_model_data": 573
          },
-         "model": "baba:sprites/level_icon/digit.number-50-59"
+         "model": "baba:sprites/level_icon/digit.first_digit-5"
       },
       {
          "predicate": {
@@ -3462,7 +3462,7 @@
          "predicate": {
             "custom_model_data": 575
          },
-         "model": "baba:sprites/level_icon/digit.number-60-69"
+         "model": "baba:sprites/level_icon/digit.first_digit-6"
       },
       {
          "predicate": {
@@ -3474,7 +3474,7 @@
          "predicate": {
             "custom_model_data": 577
          },
-         "model": "baba:sprites/level_icon/digit.number-70-79"
+         "model": "baba:sprites/level_icon/digit.first_digit-7"
       },
       {
          "predicate": {
@@ -3486,7 +3486,7 @@
          "predicate": {
             "custom_model_data": 579
          },
-         "model": "baba:sprites/level_icon/digit.number-80-89"
+         "model": "baba:sprites/level_icon/digit.first_digit-8"
       },
       {
          "predicate": {
@@ -3498,7 +3498,7 @@
          "predicate": {
             "custom_model_data": 581
          },
-         "model": "baba:sprites/level_icon/digit.number-90-99"
+         "model": "baba:sprites/level_icon/digit.first_digit-9"
       },
       {
          "predicate": {
