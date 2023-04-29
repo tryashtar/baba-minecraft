@@ -67,7 +67,6 @@ def create_sprite_resources(source, resource_pack, namespace):
   for obj in list(source.objects.values()) + list(source.overlays.values()):
     filtered = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     for spr,props in filtered:
-      sprite_id += 1
       display = sprite_name(obj, spr, props, len(filtered) == 1)
       if spr.image in cached_images:
         texture_path = cached_images[spr.image]
@@ -77,13 +76,15 @@ def create_sprite_resources(source, resource_pack, namespace):
         cached_images[spr.image] = texture_path
       model_key = f'{spr.image}.{spr.scale}.{spr.shift}'
       if model_key in cached_models:
-        model_path = cached_models[model_key]
+        (model_path, custom_model_data) = cached_models[model_key]
       else:
+        sprite_id += 1
+        custom_model_data = sprite_id
         model_path = os.path.join(model_folder, display + '.json')
         save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path))
-        cached_models[model_key] = model_path
-      overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
-      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
+        cached_models[model_key] = (model_path, custom_model_data)
+        overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
+      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)
   tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"head":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
   return sprite_info
 

@@ -25,37 +25,37 @@ execute if entity @s[scores={sprite=1043}] run data modify entity @s item.tag.Cu
 execute if entity @s[scores={sprite=49848}] run data modify entity @s item.tag.CustomModelData set value 269
 execute if entity @s[scores={sprite=54021}] run data modify entity @s item.tag.CustomModelData set value 270
 execute if entity @s[scores={sprite=61188}] run data modify entity @s item.tag.CustomModelData set value 271
-execute if entity @s[scores={sprite=34898}] run data modify entity @s item.tag.CustomModelData set value 272
-execute if entity @s[scores={sprite=22457}] run data modify entity @s item.tag.CustomModelData set value 273
-execute if entity @s[scores={sprite=13704}] run data modify entity @s item.tag.CustomModelData set value 274
-execute if entity @s[scores={sprite=29188}] run data modify entity @s item.tag.CustomModelData set value 275
-execute if entity @s[scores={sprite=3475}] run data modify entity @s item.tag.CustomModelData set value 276
-execute if entity @s[scores={sprite=50707}] run data modify entity @s item.tag.CustomModelData set value 277
-execute if entity @s[scores={sprite=21096}] run data modify entity @s item.tag.CustomModelData set value 278
-execute if entity @s[scores={sprite=2451}] run data modify entity @s item.tag.CustomModelData set value 279
-execute if entity @s[scores={sprite=12661}] run data modify entity @s item.tag.CustomModelData set value 280
-execute if entity @s[scores={sprite=56535}] run data modify entity @s item.tag.CustomModelData set value 281
-execute if entity @s[scores={sprite=58060}] run data modify entity @s item.tag.CustomModelData set value 282
-execute if entity @s[scores={sprite=49201}] run data modify entity @s item.tag.CustomModelData set value 283
-execute if entity @s[scores={sprite=55367}] run data modify entity @s item.tag.CustomModelData set value 284
-execute if entity @s[scores={sprite=64585}] run data modify entity @s item.tag.CustomModelData set value 285
-execute if entity @s[scores={sprite=33356}] run data modify entity @s item.tag.CustomModelData set value 286
-execute if entity @s[scores={sprite=1108}] run data modify entity @s item.tag.CustomModelData set value 287
-execute if entity @s[scores={sprite=18040}] run data modify entity @s item.tag.CustomModelData set value 288
-execute if entity @s[scores={sprite=23508}] run data modify entity @s item.tag.CustomModelData set value 289
-execute if entity @s[scores={sprite=39810}] run data modify entity @s item.tag.CustomModelData set value 290
-execute if entity @s[scores={sprite=32385}] run data modify entity @s item.tag.CustomModelData set value 291
-execute if entity @s[scores={sprite=20568}] run data modify entity @s item.tag.CustomModelData set value 292
-execute if entity @s[scores={sprite=58614}] run data modify entity @s item.tag.CustomModelData set value 293
-execute if entity @s[scores={sprite=28145}] run data modify entity @s item.tag.CustomModelData set value 294
-execute if entity @s[scores={sprite=31241}] run data modify entity @s item.tag.CustomModelData set value 295
-execute if entity @s[scores={sprite=42872}] run data modify entity @s item.tag.CustomModelData set value 296
-execute if entity @s[scores={sprite=59074}] run data modify entity @s item.tag.CustomModelData set value 297
-execute if entity @s[scores={sprite=40563}] run data modify entity @s item.tag.CustomModelData set value 298
-execute if entity @s[scores={sprite=58937}] run data modify entity @s item.tag.CustomModelData set value 299
-execute if entity @s[scores={sprite=60402}] run data modify entity @s item.tag.CustomModelData set value 300
-execute if entity @s[scores={sprite=42294}] run data modify entity @s item.tag.CustomModelData set value 301
-execute if entity @s[scores={sprite=26837}] run data modify entity @s item.tag.CustomModelData set value 302
+execute if entity @s[scores={sprite=34898}] run data modify entity @s item.tag.CustomModelData set value 271
+execute if entity @s[scores={sprite=22457}] run data modify entity @s item.tag.CustomModelData set value 272
+execute if entity @s[scores={sprite=13704}] run data modify entity @s item.tag.CustomModelData set value 273
+execute if entity @s[scores={sprite=29188}] run data modify entity @s item.tag.CustomModelData set value 274
+execute if entity @s[scores={sprite=3475}] run data modify entity @s item.tag.CustomModelData set value 275
+execute if entity @s[scores={sprite=50707}] run data modify entity @s item.tag.CustomModelData set value 276
+execute if entity @s[scores={sprite=21096}] run data modify entity @s item.tag.CustomModelData set value 277
+execute if entity @s[scores={sprite=2451}] run data modify entity @s item.tag.CustomModelData set value 278
+execute if entity @s[scores={sprite=12661}] run data modify entity @s item.tag.CustomModelData set value 279
+execute if entity @s[scores={sprite=56535}] run data modify entity @s item.tag.CustomModelData set value 280
+execute if entity @s[scores={sprite=58060}] run data modify entity @s item.tag.CustomModelData set value 281
+execute if entity @s[scores={sprite=49201}] run data modify entity @s item.tag.CustomModelData set value 282
+execute if entity @s[scores={sprite=55367}] run data modify entity @s item.tag.CustomModelData set value 283
+execute if entity @s[scores={sprite=64585}] run data modify entity @s item.tag.CustomModelData set value 284
+execute if entity @s[scores={sprite=33356}] run data modify entity @s item.tag.CustomModelData set value 285
+execute if entity @s[scores={sprite=1108}] run data modify entity @s item.tag.CustomModelData set value 286
+execute if entity @s[scores={sprite=18040}] run data modify entity @s item.tag.CustomModelData set value 287
+execute if entity @s[scores={sprite=23508}] run data modify entity @s item.tag.CustomModelData set value 288
+execute if entity @s[scores={sprite=39810}] run data modify entity @s item.tag.CustomModelData set value 289
+execute if entity @s[scores={sprite=32385}] run data modify entity @s item.tag.CustomModelData set value 290
+execute if entity @s[scores={sprite=20568}] run data modify entity @s item.tag.CustomModelData set value 291
+execute if entity @s[scores={sprite=58614}] run data modify entity @s item.tag.CustomModelData set value 292
+execute if entity @s[scores={sprite=28145}] run data modify entity @s item.tag.CustomModelData set value 293
+execute if entity @s[scores={sprite=31241}] run data modify entity @s item.tag.CustomModelData set value 294
+execute if entity @s[scores={sprite=42872}] run data modify entity @s item.tag.CustomModelData set value 295
+execute if entity @s[scores={sprite=59074}] run data modify entity @s item.tag.CustomModelData set value 296
+execute if entity @s[scores={sprite=40563}] run data modify entity @s item.tag.CustomModelData set value 297
+execute if entity @s[scores={sprite=58937}] run data modify entity @s item.tag.CustomModelData set value 298
+execute if entity @s[scores={sprite=60402}] run data modify entity @s item.tag.CustomModelData set value 299
+execute if entity @s[scores={sprite=42294}] run data modify entity @s item.tag.CustomModelData set value 300
+execute if entity @s[scores={sprite=26837}] run data modify entity @s item.tag.CustomModelData set value 301
 execute if entity @s[scores={sprite=48700}] run function baba:display/stand/object/cloud
 execute if entity @s[scores={sprite=26472}] run function baba:display/stand/object/fence
 execute if entity @s[scores={sprite=30894}] run function baba:display/stand/object/grass
@@ -70,7 +70,7 @@ execute if entity @s[scores={sprite=28861}] run function baba:display/stand/obje
 execute if entity @s[scores={sprite=58667}] run function baba:display/stand/object/bog
 execute if entity @s[scores={sprite=41172}] run function baba:display/stand/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/stand/object/cliff
-execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 527
+execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 494
 execute at @s[scores={sprite=26837},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/level_icon
 item replace entity @s[nbt={item:{tag:{properties:["hide"]}}}] armor.head with potion
 scoreboard players operation color baba = @s color
