@@ -25,6 +25,6 @@ def create_blockstates(resources, resource_pack):
     state_model[ops.state_string(state)] = {'model': data.model_resource, 'y':90}
     item_model.append({"predicate":{"custom_model_data":data.custom_model_data},"model":data.model_resource})
   tat.write_json({"variants":state_model}, os.path.join(resource_pack, 'assets/minecraft/blockstates/chiseled_bookshelf.json'))
-  tat.write_json({"parent": "minecraft:block/chiseled_bookshelf","overrides":item_model}, os.path.join(resource_pack, 'assets/minecraft/models/item/chiseled_bookshelf.json'))
+  tat.write_json({"parent": "minecraft:block/chiseled_bookshelf_inventory","overrides":item_model}, os.path.join(resource_pack, 'assets/minecraft/models/item/chiseled_bookshelf.json'))
 
   return blockstates

@@ -26,4 +26,3 @@ scoreboard players set #6 baba 6
 scoreboard players set #4 baba 4
 scoreboard players set #3 baba 3
 scoreboard players set #2 baba 2
-summon armor_stand 0 0 0 {UUID:[I;-1979884187,-65451960,-1940789458,-1597908900],Marker:1b,Invisible:1b,NoGravity:1b,HandItems:[{id:"minecraft:tnt",Count:1b}]}

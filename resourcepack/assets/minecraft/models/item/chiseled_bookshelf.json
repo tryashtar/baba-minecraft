@@ -1,5 +1,5 @@
 {
-   "parent": "minecraft:block/chiseled_bookshelf",
+   "parent": "minecraft:block/chiseled_bookshelf_inventory",
    "overrides": [
       {
          "predicate": {
