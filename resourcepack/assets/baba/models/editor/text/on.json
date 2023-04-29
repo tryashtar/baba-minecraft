@@ -1,7 +1,8 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:editor/text/on"
+      "face": "baba:editor/text/on",
+      "particle": "#face"
    },
    "elements": [
       {

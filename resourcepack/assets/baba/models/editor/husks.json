@@ -1,7 +1,8 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:editor/husks"
+      "face": "baba:editor/husks",
+      "particle": "#face"
    },
    "elements": [
       {

@@ -39,7 +39,7 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
         if shroom not in blockstates:
           blockstates[shroom] = {}
         blockstates[shroom][state] = {"model":f"{namespace}:background/{bg}/{x}.{y}","y":90}
-        model = {"textures":{"up":f"{namespace}:background/{bg}"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
+        model = {"textures":{"up":f"{namespace}:background/{bg}","particle":"#up"},"elements":[{"from":[-16,0,-16],"to":[32,16,32],"faces":{"up":{"uv":[round(x/11*16,3),round(y/6*16,3),round((x+1)/11*16,3),round((y+1)/6*16,3)],"texture":"#up"}}}]}
         tat.write_json(model, os.path.join(model_folder, f'{bg}/{x}.{y}.json'))
         shroom_id += 1
     tat.write_lines(place, os.path.join(background_load, f'{bg}.mcfunction'))
@@ -50,7 +50,7 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
       color = p[['#080808','#15181f'][j]]
       texture.putpixel((j,i),PIL.ImageColor.getrgb(color))
       uv = [round(j/2*16,3),round(i/len(palettes)*16,3),round((j+1)/2*16,3),round((i+1)/len(palettes)*16,3)]
-      model = {"parent":"minecraft:block/block","textures":{"all":f"{namespace}:background/background"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all","cullface":"up"},"down":{"uv":uv,"texture":"#all","cullface":"down"},"north":{"uv":uv,"texture":"#all","cullface":"north"},"south":{"uv":uv,"texture":"#all","cullface":"south"},"east":{"uv":uv,"texture":"#all","cullface":"east"},"west":{"uv":uv,"texture":"#all","cullface":"west"}}}]}
+      model = {"parent":"minecraft:block/block","textures":{"all":f"{namespace}:background/background","particle":"#all"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all","cullface":"up"},"down":{"uv":uv,"texture":"#all","cullface":"down"},"north":{"uv":uv,"texture":"#all","cullface":"north"},"south":{"uv":uv,"texture":"#all","cullface":"south"},"east":{"uv":uv,"texture":"#all","cullface":"east"},"west":{"uv":uv,"texture":"#all","cullface":"west"}}}]}
       tat.write_json(model, os.path.join(model_folder, f'{n}_{t}.json'))
       (block, state) = terracotta_state(terra_id, t=='floor')
       if block not in blockstates:

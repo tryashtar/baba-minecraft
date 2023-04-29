@@ -51,7 +51,7 @@ def save_model(spr, texture_resource, path):
 
 def save_editor_model(spr, texture_resource, path):
   face = {"uv":[0,0,16,16],"texture":"#face"}
-  model = {"parent":"baba:editor_display","textures":{"face":texture_resource},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
+  model = {"parent":"baba:editor_display","textures":{"face":texture_resource,"particle":"#face"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":face,"down":face,"north":face,"south":face,"east":face,"west":face}}]}
   tat.write_json(model, path)
 
 def create_sprite_resources(source, resource_pack, namespace):
