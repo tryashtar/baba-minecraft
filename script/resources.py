@@ -57,7 +57,8 @@ def save_editor_model(spr, texture_resource, path):
 def create_sprite_resources(source, resource_pack, namespace):
   sprite_info = {}
   overrides = []
-  cached_resources = {}
+  cached_images = {}
+  cached_models = {}
   texture_folder = os.path.join('assets', namespace, 'textures/sprites')
   model_folder = os.path.join('assets', namespace, 'models/sprites')
   tat.delete_folder(os.path.join(resource_pack, texture_folder))
@@ -67,16 +68,20 @@ def create_sprite_resources(source, resource_pack, namespace):
     filtered = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     for spr,props in filtered:
       sprite_id += 1
-      cache_key = spr.image
-      if cache_key in cached_resources:
-        texture_path, model_path = cached_resources[cache_key]
+      display = sprite_name(obj, spr, props, len(filtered) == 1)
+      if spr.image in cached_images:
+        texture_path = cached_images[spr.image]
       else:
-        display = sprite_name(obj, spr, props, len(filtered) == 1)
         texture_path = os.path.join(texture_folder, display + '.png')
-        model_path = os.path.join(model_folder, display + '.json')
         save_image(spr, spr.image.frames, os.path.join(resource_pack, texture_path))
+        cached_images[spr.image] = texture_path
+      model_key = f'{spr.image}.{spr.scale}.{spr.shift}'
+      if model_key in cached_models:
+        model_path = cached_models[model_key]
+      else:
+        model_path = os.path.join(model_folder, display + '.json')
         save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path))
-        cached_resources[cache_key] = (texture_path, model_path)
+        cached_models[model_key] = model_path
       overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
   tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"head":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
