@@ -1,5 +1,3 @@
-bossbar add baba:main ""
-bossbar set baba:main name ""
 scoreboard objectives add baba dummy
 scoreboard objectives add sprite dummy
 scoreboard objectives add text dummy
@@ -22,7 +20,3 @@ scoreboard objectives add text_disabled dummy
 scoreboard objectives add text_disabled2 dummy
 scoreboard objectives add drop dropped:diamond
 scoreboard players set #10 baba 10
-scoreboard players set #6 baba 6
-scoreboard players set #4 baba 4
-scoreboard players set #3 baba 3
-scoreboard players set #2 baba 2
