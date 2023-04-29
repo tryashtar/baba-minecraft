@@ -5,7 +5,7 @@
       "layer1": "minecraft:item/potion"
    },
    "display": {
-      "head": {
+      "fixed": {
          "scale": [
             0,
             0,

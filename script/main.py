@@ -143,7 +143,7 @@ def generate_update_function(source, resources):
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     if len(spritelist) == 1:
       spr,props = spritelist[0]
-      update_obj.append(f'execute if entity @s[{ops.create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
+      update_obj.append(f'data modify entity @s[{ops.create_selector(props)}] item.tag.CustomModelData set value {resources[spr].custom_model_data}')
     else:
       lines = []
       for spr,props in spritelist:
@@ -175,7 +175,7 @@ def generate_update_function(source, resources):
     for overlay in obj.overlays:
       update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},nbt=!{{item:{{tag:{{properties:["hide"]}}}}}}] run function baba:display/stand/object/{overlay}')
   update_obj.extend([
-    'item replace entity @s[nbt={item:{tag:{properties:["hide"]}}}] armor.head with potion',
+    'data modify entity @s[nbt={item:{tag:{properties:["hide"]}}}] item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
     'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text',
     f'execute if entity @s[nbt={{item:{{tag:{{properties:["red"]}}}}}}] run scoreboard players set color baba {int("e5533b",16)}',

@@ -85,7 +85,7 @@ def create_sprite_resources(source, resource_pack, namespace):
         cached_models[model_key] = (model_path, custom_model_data)
         overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)
-  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"head":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
+  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
   return sprite_info
 
 def colorize_frames(images, color):
