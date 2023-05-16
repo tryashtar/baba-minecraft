@@ -72,7 +72,8 @@ execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run f
 execute as @e[type=item_display,tag=baba.object,tag=prop.win] at @s run function baba:board/interact/win
 
 # graphical updates
-execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
+execute at @e[type=item_display,tag=baba.object,tag=dirty] run tag @e[type=item_display,tag=baba.object,tag=connector,tag=!dirty,distance=..1.1] add dirty
+execute as @e[type=item_display,tag=baba.object,tag=connector,tag=dirty] at @s run function baba:board/graphics/connector
 execute as @e[type=item_display,tag=baba.object,tag=!prop.sleep,tag=has_frames] run function baba:board/graphics/frame
 execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
 
