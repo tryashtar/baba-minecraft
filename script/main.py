@@ -174,13 +174,13 @@ def generate_update_function(source, resources):
       tat.write_lines(lines, f'datapack/data/baba/functions/display/stand/object/{overlay.name}.mcfunction')
   for obj in source.objects.values():
     for overlay in obj.overlays:
-      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},nbt=!{{item:{{tag:{{properties:["hide"]}}}}}}] run function baba:display/stand/object/{overlay}')
+      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/stand/object/{overlay}')
   update_obj.extend([
-    'data modify entity @s[nbt={item:{tag:{properties:["hide"]}}}] item.tag.CustomModelData set value 0',
+    'data modify entity @s[tag=prop.hide] item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
     'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text',
-    f'execute if entity @s[nbt={{item:{{tag:{{properties:["red"]}}}}}}] run scoreboard players set color baba {int("e5533b",16)}',
-    f'execute if entity @s[nbt={{item:{{tag:{{properties:["blue"]}}}}}}] run scoreboard players set color baba {int("557ae0",16)}',
+    f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
+    f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
   ])
   tat.delete_folder('datapack/data/baba/functions/display/stand/palette')
   for pid,(pname,palette) in enumerate(source.palettes.items()):

@@ -71,12 +71,12 @@ execute if entity @s[scores={sprite=58667}] run function baba:display/stand/obje
 execute if entity @s[scores={sprite=41172}] run function baba:display/stand/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/stand/object/cliff
 execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 494
-execute at @s[scores={sprite=26837},nbt=!{item:{tag:{properties:["hide"]}}}] run function baba:display/stand/object/level_icon
-data modify entity @s[nbt={item:{tag:{properties:["hide"]}}}] item.tag.CustomModelData set value 0
+execute at @s[scores={sprite=26837},tag=!prop.hide] run function baba:display/stand/object/level_icon
+data modify entity @s[tag=prop.hide] item.tag.CustomModelData set value 0
 scoreboard players operation color baba = @s color
 execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text
-execute if entity @s[nbt={item:{tag:{properties:["red"]}}}] run scoreboard players set color baba 15029051
-execute if entity @s[nbt={item:{tag:{properties:["blue"]}}}] run scoreboard players set color baba 5602016
+execute if entity @s[tag=prop.red] run scoreboard players set color baba 15029051
+execute if entity @s[tag=prop.blue] run scoreboard players set color baba 5602016
 execute if score palette baba matches 1 run function baba:display/stand/palette/underwater
 execute if score palette baba matches 2 run function baba:display/stand/palette/factory
 execute if score palette baba matches 3 run function baba:display/stand/palette/ruins
