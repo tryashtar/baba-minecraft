@@ -15,3 +15,6 @@ execute if data storage baba:main iter_rules[0] run function baba:board/rules/ap
 kill aee4e839-6b46-4f38-97f8-d49dfe743ff1
 
 execute as @e[type=item_display,tag=baba.object,tag=assign] run function baba:board/rules/finalize
+tag @e[type=item_display,tag=baba.object,tag=assign] add dirty
+execute at @e[type=item_display,tag=baba.object,tag=assign] run tag @e[type=marker,tag=baba.space,tag=!dirty,distance=..0.1,limit=1] add dirty
+tag @e[type=item_display,tag=baba.object,tag=assign] remove assign

@@ -74,9 +74,12 @@ execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #bab
 
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
 function baba:display/stand/update
+tag @e[type=item_display,tag=baba.object] remove dirty
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 # save undo history
 # if nothing changed, don't record this step
-execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
+execute as @e[type=marker,tag=baba.space,tag=dirty] at @s run function baba:board/history/record
+scoreboard players add @e[type=marker,tag=baba.space,tag=!dirty] repeats 1
+tag @e[type=marker,tag=baba.space,tag=dirty] remove dirty
 execute unless entity @e[type=marker,tag=baba.space,scores={repeats=1}] run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1

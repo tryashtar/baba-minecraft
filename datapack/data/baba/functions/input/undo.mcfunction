@@ -1,7 +1,8 @@
 scoreboard players set @s drop 0
 item replace entity @s weapon.mainhand with diamond
 kill @e[type=item,distance=..2]
-execute if score move_cooldown baba matches ..0 as @e[type=marker,tag=baba.space] at @s run function baba:board/history/undo
+execute if score move_cooldown baba matches ..0 run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1
+execute if score move_cooldown baba matches ..0 as @e[type=marker,tag=baba.space,scores={repeats=0}] at @s run function baba:board/history/pop
 execute if score move_cooldown baba matches ..0 run tag @e[type=item_display,tag=baba.object,scores={sprite=30442}] add reparse
 execute if score move_cooldown baba matches ..0 run function baba:board/rules/update
 execute if score move_cooldown baba matches ..0 run function baba:board/rules/assign

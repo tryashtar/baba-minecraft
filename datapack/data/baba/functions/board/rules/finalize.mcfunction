@@ -1,7 +1,6 @@
 # the entity's property data aren't yet in the format we like, in order for the 'Tags' trick to work
 # here, we merge 'writes' with 'transforms', handle 'A is A' and 'A is not A', and throw away inverted properties
 data modify storage baba:main rule_data set from entity @s item.tag
-tag @s[tag=assign] remove assign
 execute if data storage baba:main rule_data.parsing.writes[0] run data modify storage baba:main rule_data.parsing.writes[].write set value 1b
 execute if data storage baba:main rule_data.parsing.transforms[0] run data modify storage baba:main rule_data.parsing.transforms[].write set value 0b
 execute if data storage baba:main rule_data.parsing.transforms[{inverted:1b,text_text:"text"}] run data remove storage baba:main rule_data.parsing.writes
