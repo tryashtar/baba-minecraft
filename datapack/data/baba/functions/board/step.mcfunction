@@ -73,12 +73,12 @@ execute as @e[type=item_display,tag=baba.object,tag=prop.win] at @s run function
 
 # graphical updates
 execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
-execute as @e[type=item_display,tag=baba.object,tag=!prop.sleep] run function baba:board/graphics/frame
+execute as @e[type=item_display,tag=baba.object,tag=!prop.sleep,tag=has_frames] run function baba:board/graphics/frame
 execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
 
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
 function baba:display/stand/update
-tag @e[type=item_display,tag=baba.object] remove dirty
+tag @e[type=item_display,tag=baba.object,tag=dirty] remove dirty
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 # save undo history

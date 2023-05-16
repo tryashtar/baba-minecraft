@@ -19,6 +19,9 @@ properties:
   frame:
     type: score
     attributes: [sprite]
+  has_frames:
+    type: tag
+    attributes: [spawn]
   walk:
     type: score
     attributes: [sprite]
@@ -96,10 +99,10 @@ sprites:
     - permute:
         facing: [right, up, left, down]
         walk: [0, 1, 2, 3]
-        sleep: [False]
+        sleep: [false]
     - permute:
         facing: [right, up, left, down]
-        sleep: [True]
+        sleep: [true]
   
 - sheet: sprites2
   entries:
@@ -115,6 +118,7 @@ sprites:
     - permute:
         facing: [right, up, left, down]
         frame: [0, 1, 2, 3]
+        has_frames: [true]
   - objects:
     - name: bird
       color: '#e49950'
@@ -182,6 +186,7 @@ sprites:
     - text
     - permute:
         frame: [0, 1, 2, 3]
+        has_frames: [true]
   
 - sheet: sprites3
   entries:
