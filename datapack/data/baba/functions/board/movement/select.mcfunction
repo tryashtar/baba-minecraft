@@ -5,3 +5,4 @@ execute if score direction baba matches 4 rotated 0 0 positioned ^ ^ ^1 run func
 scoreboard players operation @s facing = direction baba
 scoreboard players operation @s move_dir = direction baba
 tag @s remove can_move
+tag @s add dirty

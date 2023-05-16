@@ -176,7 +176,7 @@ def generate_update_function(source, resources):
     for overlay in obj.overlays:
       update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/stand/object/{overlay}')
   update_obj.extend([
-    'data modify entity @s[tag=prop.hide] item.tag.CustomModelData set value 0',
+    'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
     'execute if entity @s[scores={sprite=30442,text_used=0}] run function baba:display/inactive_text',
     f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',

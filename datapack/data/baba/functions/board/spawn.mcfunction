@@ -74,5 +74,4 @@ execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result s
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s item.tag.scores.z_layer
 scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing 4
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s item.tag.scores.direction
-scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] move_frame 0
 data remove entity @e[type=item_display,tag=spawn,distance=..0.1,limit=1] item.tag.scores

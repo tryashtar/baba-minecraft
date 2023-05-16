@@ -45,6 +45,10 @@ scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.up] facing 
 scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.down] facing 2
 scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.left] facing 3
 scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.right] facing 4
+tag @e[type=item_display,tag=baba.object,tag=prop.up] add dirty
+tag @e[type=item_display,tag=baba.object,tag=prop.down] add dirty
+tag @e[type=item_display,tag=baba.object,tag=prop.left] add dirty
+tag @e[type=item_display,tag=baba.object,tag=prop.right] add dirty
 
 # cache float level in a score so we can compare it with /scoreboard players operation
 # very obscure interactions require this to go here

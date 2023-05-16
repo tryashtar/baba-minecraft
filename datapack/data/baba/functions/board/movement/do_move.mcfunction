@@ -6,4 +6,5 @@ execute as @e[type=item_display,tag=baba.object,tag=can_move] positioned as @s p
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=can_move] facing = @s facing
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=can_move] move_dir = @s facing
 tag @e[type=item_display,tag=baba.object,tag=can_move] add move_success
+tag @e[type=item_display,tag=baba.object,tag=can_move] add dirty
 tag @e[type=item_display,tag=baba.object,tag=can_move] remove can_move
