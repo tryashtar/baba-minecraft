@@ -139,11 +139,12 @@ def generate_update_function(source, resources):
     'execute store result entity @s Pos[1] double 0.00001 run scoreboard players get @s z_layer',
     'execute at @s run tp @s ~ ~1.001 ~'
   ]
+  # yes, the "execute if entity" is faster
   for obj in source.objects.values():
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     if len(spritelist) == 1:
       spr,props = spritelist[0]
-      update_obj.append(f'data modify entity @s[{ops.create_selector(props)}] item.tag.CustomModelData set value {resources[spr].custom_model_data}')
+      update_obj.append(f'execute if entity @s[{ops.create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
     else:
       lines = []
       for spr,props in spritelist:
