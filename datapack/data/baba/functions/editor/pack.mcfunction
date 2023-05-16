@@ -1,4 +1,4 @@
-# packs note blocks into jukebox
+# packs bookshelves into jukebox
 data modify storage baba:main level set value []
 data modify storage baba:main level_metadata set value {}
 function baba:editor/pack/search

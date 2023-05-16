@@ -1,8 +1,4 @@
-execute if data storage baba:main tile{scores:{facing:4}} run setblock ~ ~ ~ note_block[instrument=hat,note=18]
-execute if data storage baba:main tile{scores:{facing:4}} run setblock ~ ~-1 ~ glass
-execute if data storage baba:main tile{scores:{facing:1}} run setblock ~ ~ ~ note_block[instrument=hat,note=19]
-execute if data storage baba:main tile{scores:{facing:1}} run setblock ~ ~-1 ~ glass
-execute if data storage baba:main tile{scores:{facing:3}} run setblock ~ ~ ~ note_block[instrument=hat,note=20]
-execute if data storage baba:main tile{scores:{facing:3}} run setblock ~ ~-1 ~ glass
-execute if data storage baba:main tile{scores:{facing:2}} run setblock ~ ~ ~ note_block[instrument=hat,note=21]
-execute if data storage baba:main tile{scores:{facing:2}} run setblock ~ ~-1 ~ glass
+execute if data storage baba:main tile{scores:{facing:4}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=east]
+execute if data storage baba:main tile{scores:{facing:1}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=east]
+execute if data storage baba:main tile{scores:{facing:3}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=east]
+execute if data storage baba:main tile{scores:{facing:2}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=east]

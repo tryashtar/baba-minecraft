@@ -5,7 +5,7 @@
       "layer1": "minecraft:item/potion"
    },
    "display": {
-      "head": {
+      "fixed": {
          "scale": [
             0,
             0,
@@ -18,3499 +18,3301 @@
          "predicate": {
             "custom_model_data": 1
          },
-         "model": "baba:objects/algae"
+         "model": "baba:sprites/baba/facing-right.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 2
          },
-         "model": "baba:objects/baba.facing-right.walk-0.sleep-false"
+         "model": "baba:sprites/baba/facing-right.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 3
          },
-         "model": "baba:objects/baba.facing-right.walk-1.sleep-false"
+         "model": "baba:sprites/baba/facing-right.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 4
          },
-         "model": "baba:objects/baba.facing-right.walk-2.sleep-false"
+         "model": "baba:sprites/baba/facing-right.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 5
          },
-         "model": "baba:objects/baba.facing-right.walk-3.sleep-false"
+         "model": "baba:sprites/baba/facing-up.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 6
          },
-         "model": "baba:objects/baba.facing-up.walk-0.sleep-false"
+         "model": "baba:sprites/baba/facing-up.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 7
          },
-         "model": "baba:objects/baba.facing-up.walk-1.sleep-false"
+         "model": "baba:sprites/baba/facing-up.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 8
          },
-         "model": "baba:objects/baba.facing-up.walk-2.sleep-false"
+         "model": "baba:sprites/baba/facing-up.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 9
          },
-         "model": "baba:objects/baba.facing-up.walk-3.sleep-false"
+         "model": "baba:sprites/baba/facing-left.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 10
          },
-         "model": "baba:objects/baba.facing-left.walk-0.sleep-false"
+         "model": "baba:sprites/baba/facing-left.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 11
          },
-         "model": "baba:objects/baba.facing-left.walk-1.sleep-false"
+         "model": "baba:sprites/baba/facing-left.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 12
          },
-         "model": "baba:objects/baba.facing-left.walk-2.sleep-false"
+         "model": "baba:sprites/baba/facing-left.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 13
          },
-         "model": "baba:objects/baba.facing-left.walk-3.sleep-false"
+         "model": "baba:sprites/baba/facing-down.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 14
          },
-         "model": "baba:objects/baba.facing-down.walk-0.sleep-false"
+         "model": "baba:sprites/baba/facing-down.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 15
          },
-         "model": "baba:objects/baba.facing-down.walk-1.sleep-false"
+         "model": "baba:sprites/baba/facing-down.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 16
          },
-         "model": "baba:objects/baba.facing-down.walk-2.sleep-false"
+         "model": "baba:sprites/baba/facing-down.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 17
          },
-         "model": "baba:objects/baba.facing-down.walk-3.sleep-false"
+         "model": "baba:sprites/baba/facing-right.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 18
          },
-         "model": "baba:objects/baba.facing-right.sleep-true"
+         "model": "baba:sprites/baba/facing-up.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 19
          },
-         "model": "baba:objects/baba.facing-up.sleep-true"
+         "model": "baba:sprites/baba/facing-left.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 20
          },
-         "model": "baba:objects/baba.facing-left.sleep-true"
+         "model": "baba:sprites/baba/facing-down.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 21
          },
-         "model": "baba:objects/baba.facing-down.sleep-true"
+         "model": "baba:sprites/text/baba"
       },
       {
          "predicate": {
             "custom_model_data": 22
          },
-         "model": "baba:objects/bat.frame-0"
+         "model": "baba:sprites/text/keke"
       },
       {
          "predicate": {
             "custom_model_data": 23
          },
-         "model": "baba:objects/bat.frame-1"
+         "model": "baba:sprites/text/me"
       },
       {
          "predicate": {
             "custom_model_data": 24
          },
-         "model": "baba:objects/bat.frame-2"
+         "model": "baba:sprites/text/robot"
       },
       {
          "predicate": {
             "custom_model_data": 25
          },
-         "model": "baba:objects/bat.frame-3"
+         "model": "baba:sprites/text/belt"
       },
       {
          "predicate": {
             "custom_model_data": 26
          },
-         "model": "baba:objects/belt.facing-right.frame-0"
+         "model": "baba:sprites/text/bird"
       },
       {
          "predicate": {
             "custom_model_data": 27
          },
-         "model": "baba:objects/belt.facing-right.frame-1"
+         "model": "baba:sprites/text/bug"
       },
       {
          "predicate": {
             "custom_model_data": 28
          },
-         "model": "baba:objects/belt.facing-right.frame-2"
+         "model": "baba:sprites/text/crab"
       },
       {
          "predicate": {
             "custom_model_data": 29
          },
-         "model": "baba:objects/belt.facing-right.frame-3"
+         "model": "baba:sprites/text/rocket"
       },
       {
          "predicate": {
             "custom_model_data": 30
          },
-         "model": "baba:objects/belt.facing-up.frame-0"
+         "model": "baba:sprites/text/skull"
       },
       {
          "predicate": {
             "custom_model_data": 31
          },
-         "model": "baba:objects/belt.facing-up.frame-1"
+         "model": "baba:sprites/text/ghost"
       },
       {
          "predicate": {
             "custom_model_data": 32
          },
-         "model": "baba:objects/belt.facing-up.frame-2"
+         "model": "baba:sprites/text/statue"
       },
       {
          "predicate": {
             "custom_model_data": 33
          },
-         "model": "baba:objects/belt.facing-up.frame-3"
+         "model": "baba:sprites/text/bolt"
       },
       {
          "predicate": {
             "custom_model_data": 34
          },
-         "model": "baba:objects/belt.facing-left.frame-0"
+         "model": "baba:sprites/text/hand"
       },
       {
          "predicate": {
             "custom_model_data": 35
          },
-         "model": "baba:objects/belt.facing-left.frame-1"
+         "model": "baba:sprites/text/bat"
       },
       {
          "predicate": {
             "custom_model_data": 36
          },
-         "model": "baba:objects/belt.facing-left.frame-2"
+         "model": "baba:sprites/text/bubble"
       },
       {
          "predicate": {
             "custom_model_data": 37
          },
-         "model": "baba:objects/belt.facing-left.frame-3"
+         "model": "baba:sprites/text/cog"
       },
       {
          "predicate": {
             "custom_model_data": 38
          },
-         "model": "baba:objects/belt.facing-down.frame-0"
+         "model": "baba:sprites/text/algae"
       },
       {
          "predicate": {
             "custom_model_data": 39
          },
-         "model": "baba:objects/belt.facing-down.frame-1"
+         "model": "baba:sprites/text/flag"
       },
       {
          "predicate": {
             "custom_model_data": 40
          },
-         "model": "baba:objects/belt.facing-down.frame-2"
+         "model": "baba:sprites/text/key"
       },
       {
          "predicate": {
             "custom_model_data": 41
          },
-         "model": "baba:objects/belt.facing-down.frame-3"
+         "model": "baba:sprites/text/love"
       },
       {
          "predicate": {
             "custom_model_data": 42
          },
-         "model": "baba:objects/bird.facing-right"
+         "model": "baba:sprites/text/ufo"
       },
       {
          "predicate": {
             "custom_model_data": 43
          },
-         "model": "baba:objects/bird.facing-up"
+         "model": "baba:sprites/text/door"
       },
       {
          "predicate": {
             "custom_model_data": 44
          },
-         "model": "baba:objects/bird.facing-left"
+         "model": "baba:sprites/text/flower"
       },
       {
          "predicate": {
             "custom_model_data": 45
          },
-         "model": "baba:objects/bird.facing-down"
+         "model": "baba:sprites/text/violet"
       },
       {
          "predicate": {
             "custom_model_data": 46
          },
-         "model": "baba:objects/blossom"
+         "model": "baba:sprites/text/pillar"
       },
       {
          "predicate": {
             "custom_model_data": 47
          },
-         "model": "baba:objects/bog.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/text/rock"
       },
       {
          "predicate": {
             "custom_model_data": 48
          },
-         "model": "baba:objects/bog.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/text/tile"
       },
       {
          "predicate": {
             "custom_model_data": 49
          },
-         "model": "baba:objects/bog.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/text/fruit"
       },
       {
          "predicate": {
             "custom_model_data": 50
          },
-         "model": "baba:objects/bog.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/text/moon"
       },
       {
          "predicate": {
             "custom_model_data": 51
          },
-         "model": "baba:objects/bog.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/text/star"
       },
       {
          "predicate": {
             "custom_model_data": 52
          },
-         "model": "baba:objects/bog.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/text/tree"
       },
       {
          "predicate": {
             "custom_model_data": 53
          },
-         "model": "baba:objects/bog.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/text/box"
       },
       {
          "predicate": {
             "custom_model_data": 54
          },
-         "model": "baba:objects/bog.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/text/fire"
       },
       {
          "predicate": {
             "custom_model_data": 55
          },
-         "model": "baba:objects/bog.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/text/gate"
       },
       {
          "predicate": {
             "custom_model_data": 56
          },
-         "model": "baba:objects/bog.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/text/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 57
          },
-         "model": "baba:objects/bog.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/text/reed"
       },
       {
          "predicate": {
             "custom_model_data": 58
          },
-         "model": "baba:objects/bog.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/text/sign"
       },
       {
          "predicate": {
             "custom_model_data": 59
          },
-         "model": "baba:objects/bog.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/text/sun"
       },
       {
          "predicate": {
             "custom_model_data": 60
          },
-         "model": "baba:objects/bog.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/text/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 61
          },
-         "model": "baba:objects/bog.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/text/husk"
       },
       {
          "predicate": {
             "custom_model_data": 62
          },
-         "model": "baba:objects/bog.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/text/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 63
          },
-         "model": "baba:objects/bolt.facing-right"
+         "model": "baba:sprites/text/orb"
       },
       {
          "predicate": {
             "custom_model_data": 64
          },
-         "model": "baba:objects/bolt.facing-up"
+         "model": "baba:sprites/text/trees"
       },
       {
          "predicate": {
             "custom_model_data": 65
          },
-         "model": "baba:objects/bolt.facing-left"
+         "model": "baba:sprites/text/cake"
       },
       {
          "predicate": {
             "custom_model_data": 66
          },
-         "model": "baba:objects/bolt.facing-down"
+         "model": "baba:sprites/text/dot"
       },
       {
          "predicate": {
             "custom_model_data": 67
          },
-         "model": "baba:objects/box"
+         "model": "baba:sprites/text/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 68
          },
-         "model": "baba:objects/brick.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/text/rose"
       },
       {
          "predicate": {
             "custom_model_data": 69
          },
-         "model": "baba:objects/brick.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/text/dust"
       },
       {
          "predicate": {
             "custom_model_data": 70
          },
-         "model": "baba:objects/brick.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/text/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 71
          },
-         "model": "baba:objects/brick.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/text/husks"
       },
       {
          "predicate": {
             "custom_model_data": 72
          },
-         "model": "baba:objects/brick.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/text/stump"
       },
       {
          "predicate": {
             "custom_model_data": 73
          },
-         "model": "baba:objects/brick.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/text/starfish"
       },
       {
          "predicate": {
             "custom_model_data": 74
          },
-         "model": "baba:objects/brick.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/text/cursor"
       },
       {
          "predicate": {
             "custom_model_data": 75
          },
-         "model": "baba:objects/brick.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/text/is"
       },
       {
          "predicate": {
             "custom_model_data": 76
          },
-         "model": "baba:objects/brick.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/text/and"
       },
       {
          "predicate": {
             "custom_model_data": 77
          },
-         "model": "baba:objects/brick.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/text/not"
       },
       {
          "predicate": {
             "custom_model_data": 78
          },
-         "model": "baba:objects/brick.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/text/on"
       },
       {
          "predicate": {
             "custom_model_data": 79
          },
-         "model": "baba:objects/brick.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/text/near"
       },
       {
          "predicate": {
             "custom_model_data": 80
          },
-         "model": "baba:objects/brick.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/text/facing"
       },
       {
          "predicate": {
             "custom_model_data": 81
          },
-         "model": "baba:objects/brick.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/text/without"
       },
       {
          "predicate": {
             "custom_model_data": 82
          },
-         "model": "baba:objects/brick.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/text/has"
       },
       {
          "predicate": {
             "custom_model_data": 83
          },
-         "model": "baba:objects/brick.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/text/make"
       },
       {
          "predicate": {
             "custom_model_data": 84
          },
-         "model": "baba:objects/bubble.frame-0"
+         "model": "baba:sprites/text/write"
       },
       {
          "predicate": {
             "custom_model_data": 85
          },
-         "model": "baba:objects/bubble.frame-1"
+         "model": "baba:sprites/text/all"
       },
       {
          "predicate": {
             "custom_model_data": 86
          },
-         "model": "baba:objects/bubble.frame-2"
+         "model": "baba:sprites/text/empty"
       },
       {
          "predicate": {
             "custom_model_data": 87
          },
-         "model": "baba:objects/bubble.frame-3"
+         "model": "baba:sprites/text/text"
       },
       {
          "predicate": {
             "custom_model_data": 88
          },
-         "model": "baba:objects/bug.facing-right"
+         "model": "baba:sprites/text/level"
       },
       {
          "predicate": {
             "custom_model_data": 89
          },
-         "model": "baba:objects/bug.facing-up"
+         "model": "baba:sprites/text/you"
       },
       {
          "predicate": {
             "custom_model_data": 90
          },
-         "model": "baba:objects/bug.facing-left"
+         "model": "baba:sprites/text/push"
       },
       {
          "predicate": {
             "custom_model_data": 91
          },
-         "model": "baba:objects/bug.facing-down"
+         "model": "baba:sprites/text/pull"
       },
       {
          "predicate": {
             "custom_model_data": 92
          },
-         "model": "baba:objects/cake"
+         "model": "baba:sprites/text/move"
       },
       {
          "predicate": {
             "custom_model_data": 93
          },
-         "model": "baba:objects/cliff.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/text/shift"
       },
       {
          "predicate": {
             "custom_model_data": 94
          },
-         "model": "baba:objects/cliff.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/text/defeat"
       },
       {
          "predicate": {
             "custom_model_data": 95
          },
-         "model": "baba:objects/cliff.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/text/hot"
       },
       {
          "predicate": {
             "custom_model_data": 96
          },
-         "model": "baba:objects/cliff.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/text/melt"
       },
       {
          "predicate": {
             "custom_model_data": 97
          },
-         "model": "baba:objects/cliff.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/text/hide"
       },
       {
          "predicate": {
             "custom_model_data": 98
          },
-         "model": "baba:objects/cliff.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/text/win"
       },
       {
          "predicate": {
             "custom_model_data": 99
          },
-         "model": "baba:objects/cliff.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/text/stop"
       },
       {
          "predicate": {
             "custom_model_data": 100
          },
-         "model": "baba:objects/cliff.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/text/open"
       },
       {
          "predicate": {
             "custom_model_data": 101
          },
-         "model": "baba:objects/cliff.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/text/shut"
       },
       {
          "predicate": {
             "custom_model_data": 102
          },
-         "model": "baba:objects/cliff.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/text/float"
       },
       {
          "predicate": {
             "custom_model_data": 103
          },
-         "model": "baba:objects/cliff.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/text/sink"
       },
       {
          "predicate": {
             "custom_model_data": 104
          },
-         "model": "baba:objects/cliff.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/text/weak"
       },
       {
          "predicate": {
             "custom_model_data": 105
          },
-         "model": "baba:objects/cliff.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/text/swap"
       },
       {
          "predicate": {
             "custom_model_data": 106
          },
-         "model": "baba:objects/cliff.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/text/tele"
       },
       {
          "predicate": {
             "custom_model_data": 107
          },
-         "model": "baba:objects/cliff.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/text/fall"
       },
       {
          "predicate": {
             "custom_model_data": 108
          },
-         "model": "baba:objects/cliff.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/text/more"
       },
       {
          "predicate": {
             "custom_model_data": 109
          },
-         "model": "baba:objects/cloud.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/text/red"
       },
       {
          "predicate": {
             "custom_model_data": 110
          },
-         "model": "baba:objects/cloud.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/text/blue"
       },
       {
          "predicate": {
             "custom_model_data": 111
          },
-         "model": "baba:objects/cloud.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/text/sleep"
       },
       {
          "predicate": {
             "custom_model_data": 112
          },
-         "model": "baba:objects/cloud.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/text/group"
       },
       {
          "predicate": {
             "custom_model_data": 113
          },
-         "model": "baba:objects/cloud.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/text/right"
       },
       {
          "predicate": {
             "custom_model_data": 114
          },
-         "model": "baba:objects/cloud.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/text/up"
       },
       {
          "predicate": {
             "custom_model_data": 115
          },
-         "model": "baba:objects/cloud.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/text/left"
       },
       {
          "predicate": {
             "custom_model_data": 116
          },
-         "model": "baba:objects/cloud.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/text/down"
       },
       {
          "predicate": {
             "custom_model_data": 117
          },
-         "model": "baba:objects/cloud.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/text/word"
       },
       {
          "predicate": {
             "custom_model_data": 118
          },
-         "model": "baba:objects/cloud.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/text/idle"
       },
       {
          "predicate": {
             "custom_model_data": 119
          },
-         "model": "baba:objects/cloud.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/text/lonely"
       },
       {
          "predicate": {
             "custom_model_data": 120
          },
-         "model": "baba:objects/cloud.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/text/often"
       },
       {
          "predicate": {
             "custom_model_data": 121
          },
-         "model": "baba:objects/cloud.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/text/seldom"
       },
       {
          "predicate": {
             "custom_model_data": 122
          },
-         "model": "baba:objects/cloud.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/text/select"
       },
       {
          "predicate": {
             "custom_model_data": 123
          },
-         "model": "baba:objects/cloud.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/text/best"
       },
       {
          "predicate": {
             "custom_model_data": 124
          },
-         "model": "baba:objects/cloud.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/text/bonus"
       },
       {
          "predicate": {
             "custom_model_data": 125
          },
-         "model": "baba:objects/cog.frame-0"
+         "model": "baba:sprites/text/end"
       },
       {
          "predicate": {
             "custom_model_data": 126
          },
-         "model": "baba:objects/cog.frame-1"
+         "model": "baba:sprites/text/done"
       },
       {
          "predicate": {
             "custom_model_data": 127
          },
-         "model": "baba:objects/cog.frame-2"
+         "model": "baba:sprites/text/cloud"
       },
       {
          "predicate": {
             "custom_model_data": 128
          },
-         "model": "baba:objects/cog.frame-3"
+         "model": "baba:sprites/text/fence"
       },
       {
          "predicate": {
             "custom_model_data": 129
          },
-         "model": "baba:objects/crab.facing-right"
+         "model": "baba:sprites/text/grass"
       },
       {
          "predicate": {
             "custom_model_data": 130
          },
-         "model": "baba:objects/crab.facing-up"
+         "model": "baba:sprites/text/hedge"
       },
       {
          "predicate": {
             "custom_model_data": 131
          },
-         "model": "baba:objects/crab.facing-left"
+         "model": "baba:sprites/text/ice"
       },
       {
          "predicate": {
             "custom_model_data": 132
          },
-         "model": "baba:objects/crab.facing-down"
+         "model": "baba:sprites/text/line"
       },
       {
          "predicate": {
             "custom_model_data": 133
          },
-         "model": "baba:objects/cursor"
+         "model": "baba:sprites/text/pipe"
       },
       {
          "predicate": {
             "custom_model_data": 134
          },
-         "model": "baba:objects/door"
+         "model": "baba:sprites/text/rubble"
       },
       {
          "predicate": {
             "custom_model_data": 135
          },
-         "model": "baba:objects/dot"
+         "model": "baba:sprites/text/wall"
       },
       {
          "predicate": {
             "custom_model_data": 136
          },
-         "model": "baba:objects/dust"
+         "model": "baba:sprites/text/water"
       },
       {
          "predicate": {
             "custom_model_data": 137
          },
-         "model": "baba:objects/fence.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/text/lava"
       },
       {
          "predicate": {
             "custom_model_data": 138
          },
-         "model": "baba:objects/fence.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/text/bog"
       },
       {
          "predicate": {
             "custom_model_data": 139
          },
-         "model": "baba:objects/fence.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/text/brick"
       },
       {
          "predicate": {
             "custom_model_data": 140
          },
-         "model": "baba:objects/fence.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/text/cliff"
       },
       {
          "predicate": {
             "custom_model_data": 141
          },
-         "model": "baba:objects/fence.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/keke/facing-right.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 142
          },
-         "model": "baba:objects/fence.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/keke/facing-right.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 143
          },
-         "model": "baba:objects/fence.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/keke/facing-right.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 144
          },
-         "model": "baba:objects/fence.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/keke/facing-right.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 145
          },
-         "model": "baba:objects/fence.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/keke/facing-up.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 146
          },
-         "model": "baba:objects/fence.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/keke/facing-up.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 147
          },
-         "model": "baba:objects/fence.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/keke/facing-up.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 148
          },
-         "model": "baba:objects/fence.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/keke/facing-up.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 149
          },
-         "model": "baba:objects/fence.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/keke/facing-left.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 150
          },
-         "model": "baba:objects/fence.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/keke/facing-left.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 151
          },
-         "model": "baba:objects/fence.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/keke/facing-left.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 152
          },
-         "model": "baba:objects/fence.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/keke/facing-left.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 153
          },
-         "model": "baba:objects/fire"
+         "model": "baba:sprites/keke/facing-down.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 154
          },
-         "model": "baba:objects/flag"
+         "model": "baba:sprites/keke/facing-down.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 155
          },
-         "model": "baba:objects/flower"
+         "model": "baba:sprites/keke/facing-down.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 156
          },
-         "model": "baba:objects/foliage"
+         "model": "baba:sprites/keke/facing-down.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 157
          },
-         "model": "baba:objects/fruit"
+         "model": "baba:sprites/keke/facing-right.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 158
          },
-         "model": "baba:objects/fungi"
+         "model": "baba:sprites/keke/facing-up.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 159
          },
-         "model": "baba:objects/fungus"
+         "model": "baba:sprites/keke/facing-left.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 160
          },
-         "model": "baba:objects/gate"
+         "model": "baba:sprites/keke/facing-down.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 161
          },
-         "model": "baba:objects/ghost.facing-right"
+         "model": "baba:sprites/me/facing-right.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 162
          },
-         "model": "baba:objects/ghost.facing-up"
+         "model": "baba:sprites/me/facing-right.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 163
          },
-         "model": "baba:objects/ghost.facing-left"
+         "model": "baba:sprites/me/facing-right.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 164
          },
-         "model": "baba:objects/ghost.facing-down"
+         "model": "baba:sprites/me/facing-right.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 165
          },
-         "model": "baba:objects/grass.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/me/facing-up.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 166
          },
-         "model": "baba:objects/grass.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/me/facing-up.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 167
          },
-         "model": "baba:objects/grass.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/me/facing-up.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 168
          },
-         "model": "baba:objects/grass.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/me/facing-up.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 169
          },
-         "model": "baba:objects/grass.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/me/facing-left.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 170
          },
-         "model": "baba:objects/grass.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/me/facing-left.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 171
          },
-         "model": "baba:objects/grass.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/me/facing-left.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 172
          },
-         "model": "baba:objects/grass.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/me/facing-left.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 173
          },
-         "model": "baba:objects/grass.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/me/facing-down.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 174
          },
-         "model": "baba:objects/grass.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/me/facing-down.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 175
          },
-         "model": "baba:objects/grass.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/me/facing-down.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 176
          },
-         "model": "baba:objects/grass.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/me/facing-down.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 177
          },
-         "model": "baba:objects/grass.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/me/facing-right.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 178
          },
-         "model": "baba:objects/grass.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/me/facing-up.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 179
          },
-         "model": "baba:objects/grass.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/me/facing-left.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 180
          },
-         "model": "baba:objects/grass.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/me/facing-down.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 181
          },
-         "model": "baba:objects/hand.facing-right"
+         "model": "baba:sprites/robot/facing-right.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 182
          },
-         "model": "baba:objects/hand.facing-up"
+         "model": "baba:sprites/robot/facing-right.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 183
          },
-         "model": "baba:objects/hand.facing-left"
+         "model": "baba:sprites/robot/facing-right.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 184
          },
-         "model": "baba:objects/hand.facing-down"
+         "model": "baba:sprites/robot/facing-right.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 185
          },
-         "model": "baba:objects/hedge.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/robot/facing-up.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 186
          },
-         "model": "baba:objects/hedge.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/robot/facing-up.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 187
          },
-         "model": "baba:objects/hedge.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/robot/facing-up.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 188
          },
-         "model": "baba:objects/hedge.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/robot/facing-up.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 189
          },
-         "model": "baba:objects/hedge.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/robot/facing-left.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 190
          },
-         "model": "baba:objects/hedge.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/robot/facing-left.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 191
          },
-         "model": "baba:objects/hedge.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/robot/facing-left.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 192
          },
-         "model": "baba:objects/hedge.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/robot/facing-left.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 193
          },
-         "model": "baba:objects/hedge.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/robot/facing-down.walk-0.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 194
          },
-         "model": "baba:objects/hedge.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/robot/facing-down.walk-1.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 195
          },
-         "model": "baba:objects/hedge.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/robot/facing-down.walk-2.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 196
          },
-         "model": "baba:objects/hedge.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/robot/facing-down.walk-3.sleep-false"
       },
       {
          "predicate": {
             "custom_model_data": 197
          },
-         "model": "baba:objects/hedge.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/robot/facing-right.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 198
          },
-         "model": "baba:objects/hedge.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/robot/facing-up.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 199
          },
-         "model": "baba:objects/hedge.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/robot/facing-left.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 200
          },
-         "model": "baba:objects/hedge.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/robot/facing-down.sleep-true"
       },
       {
          "predicate": {
             "custom_model_data": 201
          },
-         "model": "baba:objects/husk"
+         "model": "baba:sprites/belt/facing-right.frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 202
          },
-         "model": "baba:objects/husks"
+         "model": "baba:sprites/belt/facing-right.frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 203
          },
-         "model": "baba:objects/ice.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/belt/facing-right.frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 204
          },
-         "model": "baba:objects/ice.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/belt/facing-right.frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 205
          },
-         "model": "baba:objects/ice.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/belt/facing-up.frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 206
          },
-         "model": "baba:objects/ice.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/belt/facing-up.frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 207
          },
-         "model": "baba:objects/ice.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/belt/facing-up.frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 208
          },
-         "model": "baba:objects/ice.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/belt/facing-up.frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 209
          },
-         "model": "baba:objects/ice.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/belt/facing-left.frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 210
          },
-         "model": "baba:objects/ice.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/belt/facing-left.frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 211
          },
-         "model": "baba:objects/ice.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/belt/facing-left.frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 212
          },
-         "model": "baba:objects/ice.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/belt/facing-left.frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 213
          },
-         "model": "baba:objects/ice.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/belt/facing-down.frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 214
          },
-         "model": "baba:objects/ice.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/belt/facing-down.frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 215
          },
-         "model": "baba:objects/ice.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/belt/facing-down.frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 216
          },
-         "model": "baba:objects/ice.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/belt/facing-down.frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 217
          },
-         "model": "baba:objects/ice.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/bird/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 218
          },
-         "model": "baba:objects/ice.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/bird/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 219
          },
-         "model": "baba:objects/jelly"
+         "model": "baba:sprites/bird/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 220
          },
-         "model": "baba:objects/keke.facing-right.walk-0.sleep-false"
+         "model": "baba:sprites/bird/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 221
          },
-         "model": "baba:objects/keke.facing-right.walk-1.sleep-false"
+         "model": "baba:sprites/bug/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 222
          },
-         "model": "baba:objects/keke.facing-right.walk-2.sleep-false"
+         "model": "baba:sprites/bug/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 223
          },
-         "model": "baba:objects/keke.facing-right.walk-3.sleep-false"
+         "model": "baba:sprites/bug/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 224
          },
-         "model": "baba:objects/keke.facing-up.walk-0.sleep-false"
+         "model": "baba:sprites/bug/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 225
          },
-         "model": "baba:objects/keke.facing-up.walk-1.sleep-false"
+         "model": "baba:sprites/crab/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 226
          },
-         "model": "baba:objects/keke.facing-up.walk-2.sleep-false"
+         "model": "baba:sprites/crab/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 227
          },
-         "model": "baba:objects/keke.facing-up.walk-3.sleep-false"
+         "model": "baba:sprites/crab/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 228
          },
-         "model": "baba:objects/keke.facing-left.walk-0.sleep-false"
+         "model": "baba:sprites/crab/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 229
          },
-         "model": "baba:objects/keke.facing-left.walk-1.sleep-false"
+         "model": "baba:sprites/rocket/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 230
          },
-         "model": "baba:objects/keke.facing-left.walk-2.sleep-false"
+         "model": "baba:sprites/rocket/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 231
          },
-         "model": "baba:objects/keke.facing-left.walk-3.sleep-false"
+         "model": "baba:sprites/rocket/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 232
          },
-         "model": "baba:objects/keke.facing-down.walk-0.sleep-false"
+         "model": "baba:sprites/rocket/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 233
          },
-         "model": "baba:objects/keke.facing-down.walk-1.sleep-false"
+         "model": "baba:sprites/skull/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 234
          },
-         "model": "baba:objects/keke.facing-down.walk-2.sleep-false"
+         "model": "baba:sprites/skull/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 235
          },
-         "model": "baba:objects/keke.facing-down.walk-3.sleep-false"
+         "model": "baba:sprites/skull/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 236
          },
-         "model": "baba:objects/keke.facing-right.sleep-true"
+         "model": "baba:sprites/skull/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 237
          },
-         "model": "baba:objects/keke.facing-up.sleep-true"
+         "model": "baba:sprites/ghost/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 238
          },
-         "model": "baba:objects/keke.facing-left.sleep-true"
+         "model": "baba:sprites/ghost/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 239
          },
-         "model": "baba:objects/keke.facing-down.sleep-true"
+         "model": "baba:sprites/ghost/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 240
          },
-         "model": "baba:objects/key"
+         "model": "baba:sprites/ghost/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 241
          },
-         "model": "baba:objects/lava.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/statue/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 242
          },
-         "model": "baba:objects/lava.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/statue/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 243
          },
-         "model": "baba:objects/lava.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/statue/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 244
          },
-         "model": "baba:objects/lava.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/statue/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 245
          },
-         "model": "baba:objects/lava.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/bolt/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 246
          },
-         "model": "baba:objects/lava.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/bolt/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 247
          },
-         "model": "baba:objects/lava.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/bolt/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 248
          },
-         "model": "baba:objects/lava.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/bolt/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 249
          },
-         "model": "baba:objects/lava.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/hand/facing-right"
       },
       {
          "predicate": {
             "custom_model_data": 250
          },
-         "model": "baba:objects/lava.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/hand/facing-up"
       },
       {
          "predicate": {
             "custom_model_data": 251
          },
-         "model": "baba:objects/lava.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/hand/facing-left"
       },
       {
          "predicate": {
             "custom_model_data": 252
          },
-         "model": "baba:objects/lava.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/hand/facing-down"
       },
       {
          "predicate": {
             "custom_model_data": 253
          },
-         "model": "baba:objects/lava.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/bat/frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 254
          },
-         "model": "baba:objects/lava.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/bat/frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 255
          },
-         "model": "baba:objects/lava.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/bat/frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 256
          },
-         "model": "baba:objects/lava.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/bat/frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 257
          },
-         "model": "baba:objects/leaf"
+         "model": "baba:sprites/bubble/frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 258
          },
-         "model": "baba:objects/level"
+         "model": "baba:sprites/bubble/frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 259
          },
-         "model": "baba:objects/level_icon.jelly"
+         "model": "baba:sprites/bubble/frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 260
          },
-         "model": "baba:objects/level_icon.moon"
+         "model": "baba:sprites/bubble/frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 261
          },
-         "model": "baba:objects/level_icon.question_mark"
+         "model": "baba:sprites/cog/frame-0"
       },
       {
          "predicate": {
             "custom_model_data": 262
          },
-         "model": "baba:objects/level_icon.island"
+         "model": "baba:sprites/cog/frame-1"
       },
       {
          "predicate": {
             "custom_model_data": 263
          },
-         "model": "baba:objects/level_icon.flower"
+         "model": "baba:sprites/cog/frame-2"
       },
       {
          "predicate": {
             "custom_model_data": 264
          },
-         "model": "baba:objects/level_icon.abc"
+         "model": "baba:sprites/cog/frame-3"
       },
       {
          "predicate": {
             "custom_model_data": 265
          },
-         "model": "baba:objects/level_icon.pillar"
+         "model": "baba:sprites/algae"
       },
       {
          "predicate": {
             "custom_model_data": 266
          },
-         "model": "baba:objects/level_icon.square"
+         "model": "baba:sprites/flag"
       },
       {
          "predicate": {
             "custom_model_data": 267
          },
-         "model": "baba:objects/level_icon.dust"
+         "model": "baba:sprites/key"
       },
       {
          "predicate": {
             "custom_model_data": 268
          },
-         "model": "baba:objects/level_icon.leaf"
+         "model": "baba:sprites/love"
       },
       {
          "predicate": {
             "custom_model_data": 269
          },
-         "model": "baba:objects/level_icon.skull"
+         "model": "baba:sprites/ufo"
       },
       {
          "predicate": {
             "custom_model_data": 270
          },
-         "model": "baba:objects/level_icon.text"
+         "model": "baba:sprites/door"
       },
       {
          "predicate": {
             "custom_model_data": 271
          },
-         "model": "baba:objects/level_icon.tree"
+         "model": "baba:sprites/flower"
       },
       {
          "predicate": {
             "custom_model_data": 272
          },
-         "model": "baba:objects/level_icon.snow"
+         "model": "baba:sprites/pillar"
       },
       {
          "predicate": {
             "custom_model_data": 273
          },
-         "model": "baba:objects/level_icon.dot"
+         "model": "baba:sprites/rock"
       },
       {
          "predicate": {
             "custom_model_data": 274
          },
-         "model": "baba:objects/level_icon.dice.number-1"
+         "model": "baba:sprites/tile"
       },
       {
          "predicate": {
             "custom_model_data": 275
          },
-         "model": "baba:objects/level_icon.dice.number-2"
+         "model": "baba:sprites/fruit"
       },
       {
          "predicate": {
             "custom_model_data": 276
          },
-         "model": "baba:objects/level_icon.dice.number-3"
+         "model": "baba:sprites/moon"
       },
       {
          "predicate": {
             "custom_model_data": 277
          },
-         "model": "baba:objects/level_icon.dice.number-4"
+         "model": "baba:sprites/star"
       },
       {
          "predicate": {
             "custom_model_data": 278
          },
-         "model": "baba:objects/level_icon.dice.number-5"
+         "model": "baba:sprites/tree"
       },
       {
          "predicate": {
             "custom_model_data": 279
          },
-         "model": "baba:objects/level_icon.dice.number-6"
+         "model": "baba:sprites/box"
       },
       {
          "predicate": {
             "custom_model_data": 280
          },
-         "model": "baba:objects/level_icon.dice.number-7"
+         "model": "baba:sprites/fire"
       },
       {
          "predicate": {
             "custom_model_data": 281
          },
-         "model": "baba:objects/level_icon.dice.number-8"
+         "model": "baba:sprites/gate"
       },
       {
          "predicate": {
             "custom_model_data": 282
          },
-         "model": "baba:objects/level_icon.dice.number-9"
+         "model": "baba:sprites/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 283
          },
-         "model": "baba:objects/level_icon.dice.number-10"
+         "model": "baba:sprites/reed"
       },
       {
          "predicate": {
             "custom_model_data": 284
          },
-         "model": "baba:objects/level_icon.dice.number-11"
+         "model": "baba:sprites/sign"
       },
       {
          "predicate": {
             "custom_model_data": 285
          },
-         "model": "baba:objects/level_icon.letter.number-1"
+         "model": "baba:sprites/sun"
       },
       {
          "predicate": {
             "custom_model_data": 286
          },
-         "model": "baba:objects/level_icon.letter.number-2"
+         "model": "baba:sprites/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 287
          },
-         "model": "baba:objects/level_icon.letter.number-3"
+         "model": "baba:sprites/husk"
       },
       {
          "predicate": {
             "custom_model_data": 288
          },
-         "model": "baba:objects/level_icon.letter.number-4"
+         "model": "baba:sprites/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 289
          },
-         "model": "baba:objects/level_icon.letter.number-5"
+         "model": "baba:sprites/orb"
       },
       {
          "predicate": {
             "custom_model_data": 290
          },
-         "model": "baba:objects/level_icon.letter.number-6"
+         "model": "baba:sprites/trees"
       },
       {
          "predicate": {
             "custom_model_data": 291
          },
-         "model": "baba:objects/level_icon.letter.number-7"
+         "model": "baba:sprites/cake"
       },
       {
          "predicate": {
             "custom_model_data": 292
          },
-         "model": "baba:objects/level_icon.letter.number-8"
+         "model": "baba:sprites/dot"
       },
       {
          "predicate": {
             "custom_model_data": 293
          },
-         "model": "baba:objects/level_icon.letter.number-9"
+         "model": "baba:sprites/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 294
          },
-         "model": "baba:objects/level_icon.digit.number-0-9"
+         "model": "baba:sprites/rose"
       },
       {
          "predicate": {
             "custom_model_data": 295
          },
-         "model": "baba:objects/level_icon.digit.first_digit-0"
+         "model": "baba:sprites/dust"
       },
       {
          "predicate": {
             "custom_model_data": 296
          },
-         "model": "baba:objects/level_icon.digit.number-10-19"
+         "model": "baba:sprites/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 297
          },
-         "model": "baba:objects/level_icon.digit.first_digit-1"
+         "model": "baba:sprites/husks"
       },
       {
          "predicate": {
             "custom_model_data": 298
          },
-         "model": "baba:objects/level_icon.digit.number-20-29"
+         "model": "baba:sprites/stump"
       },
       {
          "predicate": {
             "custom_model_data": 299
          },
-         "model": "baba:objects/level_icon.digit.first_digit-2"
+         "model": "baba:sprites/starfish"
       },
       {
          "predicate": {
             "custom_model_data": 300
          },
-         "model": "baba:objects/level_icon.digit.number-30-39"
+         "model": "baba:sprites/blossom"
       },
       {
          "predicate": {
             "custom_model_data": 301
          },
-         "model": "baba:objects/level_icon.digit.first_digit-3"
+         "model": "baba:sprites/level"
       },
       {
          "predicate": {
             "custom_model_data": 302
          },
-         "model": "baba:objects/level_icon.digit.number-40-49"
+         "model": "baba:sprites/cloud/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 303
          },
-         "model": "baba:objects/level_icon.digit.first_digit-4"
+         "model": "baba:sprites/cloud/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 304
          },
-         "model": "baba:objects/level_icon.digit.number-50-59"
+         "model": "baba:sprites/cloud/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 305
          },
-         "model": "baba:objects/level_icon.digit.first_digit-5"
+         "model": "baba:sprites/cloud/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 306
          },
-         "model": "baba:objects/level_icon.digit.number-60-69"
+         "model": "baba:sprites/cloud/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 307
          },
-         "model": "baba:objects/level_icon.digit.first_digit-6"
+         "model": "baba:sprites/cloud/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 308
          },
-         "model": "baba:objects/level_icon.digit.number-70-79"
+         "model": "baba:sprites/cloud/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 309
          },
-         "model": "baba:objects/level_icon.digit.first_digit-7"
+         "model": "baba:sprites/cloud/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 310
          },
-         "model": "baba:objects/level_icon.digit.number-80-89"
+         "model": "baba:sprites/cloud/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 311
          },
-         "model": "baba:objects/level_icon.digit.first_digit-8"
+         "model": "baba:sprites/cloud/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 312
          },
-         "model": "baba:objects/level_icon.digit.number-90-99"
+         "model": "baba:sprites/cloud/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 313
          },
-         "model": "baba:objects/level_icon.digit.first_digit-9"
+         "model": "baba:sprites/cloud/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 314
          },
-         "model": "baba:objects/line.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/cloud/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 315
          },
-         "model": "baba:objects/line.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/cloud/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 316
          },
-         "model": "baba:objects/line.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/cloud/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 317
          },
-         "model": "baba:objects/line.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/cloud/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 318
          },
-         "model": "baba:objects/line.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/fence/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 319
          },
-         "model": "baba:objects/line.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/fence/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 320
          },
-         "model": "baba:objects/line.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/fence/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 321
          },
-         "model": "baba:objects/line.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/fence/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 322
          },
-         "model": "baba:objects/line.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/fence/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 323
          },
-         "model": "baba:objects/line.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/fence/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 324
          },
-         "model": "baba:objects/line.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/fence/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 325
          },
-         "model": "baba:objects/line.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/fence/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 326
          },
-         "model": "baba:objects/line.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/fence/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 327
          },
-         "model": "baba:objects/line.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/fence/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 328
          },
-         "model": "baba:objects/line.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/fence/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 329
          },
-         "model": "baba:objects/line.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/fence/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 330
          },
-         "model": "baba:objects/love"
+         "model": "baba:sprites/fence/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 331
          },
-         "model": "baba:objects/me.facing-right.walk-0.sleep-false"
+         "model": "baba:sprites/fence/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 332
          },
-         "model": "baba:objects/me.facing-right.walk-1.sleep-false"
+         "model": "baba:sprites/fence/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 333
          },
-         "model": "baba:objects/me.facing-right.walk-2.sleep-false"
+         "model": "baba:sprites/fence/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 334
          },
-         "model": "baba:objects/me.facing-right.walk-3.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 335
          },
-         "model": "baba:objects/me.facing-up.walk-0.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 336
          },
-         "model": "baba:objects/me.facing-up.walk-1.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 337
          },
-         "model": "baba:objects/me.facing-up.walk-2.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 338
          },
-         "model": "baba:objects/me.facing-up.walk-3.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 339
          },
-         "model": "baba:objects/me.facing-left.walk-0.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 340
          },
-         "model": "baba:objects/me.facing-left.walk-1.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 341
          },
-         "model": "baba:objects/me.facing-left.walk-2.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 342
          },
-         "model": "baba:objects/me.facing-left.walk-3.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 343
          },
-         "model": "baba:objects/me.facing-down.walk-0.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 344
          },
-         "model": "baba:objects/me.facing-down.walk-1.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 345
          },
-         "model": "baba:objects/me.facing-down.walk-2.sleep-false"
+         "model": "baba:sprites/grass/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 346
          },
-         "model": "baba:objects/me.facing-down.walk-3.sleep-false"
+         "model": "baba:sprites/grass/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 347
          },
-         "model": "baba:objects/me.facing-right.sleep-true"
+         "model": "baba:sprites/grass/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 348
          },
-         "model": "baba:objects/me.facing-up.sleep-true"
+         "model": "baba:sprites/grass/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 349
          },
-         "model": "baba:objects/me.facing-left.sleep-true"
+         "model": "baba:sprites/grass/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 350
          },
-         "model": "baba:objects/me.facing-down.sleep-true"
+         "model": "baba:sprites/hedge/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 351
          },
-         "model": "baba:objects/moon"
+         "model": "baba:sprites/hedge/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 352
          },
-         "model": "baba:objects/orb"
+         "model": "baba:sprites/hedge/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 353
          },
-         "model": "baba:objects/pillar"
+         "model": "baba:sprites/hedge/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 354
          },
-         "model": "baba:objects/pipe.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/hedge/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 355
          },
-         "model": "baba:objects/pipe.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/hedge/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 356
          },
-         "model": "baba:objects/pipe.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/hedge/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 357
          },
-         "model": "baba:objects/pipe.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/hedge/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 358
          },
-         "model": "baba:objects/pipe.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/hedge/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 359
          },
-         "model": "baba:objects/pipe.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/hedge/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 360
          },
-         "model": "baba:objects/pipe.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/hedge/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 361
          },
-         "model": "baba:objects/pipe.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/hedge/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 362
          },
-         "model": "baba:objects/pipe.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/hedge/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 363
          },
-         "model": "baba:objects/pipe.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/hedge/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 364
          },
-         "model": "baba:objects/pipe.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/hedge/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 365
          },
-         "model": "baba:objects/pipe.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/hedge/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 366
          },
-         "model": "baba:objects/pipe.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/ice/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 367
          },
-         "model": "baba:objects/pipe.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/ice/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 368
          },
-         "model": "baba:objects/pipe.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/ice/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 369
          },
-         "model": "baba:objects/pipe.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/ice/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 370
          },
-         "model": "baba:objects/reed"
+         "model": "baba:sprites/ice/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 371
          },
-         "model": "baba:objects/robot.facing-right.walk-0.sleep-false"
+         "model": "baba:sprites/ice/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 372
          },
-         "model": "baba:objects/robot.facing-right.walk-1.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 373
          },
-         "model": "baba:objects/robot.facing-right.walk-2.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 374
          },
-         "model": "baba:objects/robot.facing-right.walk-3.sleep-false"
+         "model": "baba:sprites/ice/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 375
          },
-         "model": "baba:objects/robot.facing-up.walk-0.sleep-false"
+         "model": "baba:sprites/ice/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 376
          },
-         "model": "baba:objects/robot.facing-up.walk-1.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 377
          },
-         "model": "baba:objects/robot.facing-up.walk-2.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 378
          },
-         "model": "baba:objects/robot.facing-up.walk-3.sleep-false"
+         "model": "baba:sprites/ice/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 379
          },
-         "model": "baba:objects/robot.facing-left.walk-0.sleep-false"
+         "model": "baba:sprites/ice/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 380
          },
-         "model": "baba:objects/robot.facing-left.walk-1.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 381
          },
-         "model": "baba:objects/robot.facing-left.walk-2.sleep-false"
+         "model": "baba:sprites/ice/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 382
          },
-         "model": "baba:objects/robot.facing-left.walk-3.sleep-false"
+         "model": "baba:sprites/line/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 383
          },
-         "model": "baba:objects/robot.facing-down.walk-0.sleep-false"
+         "model": "baba:sprites/line/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 384
          },
-         "model": "baba:objects/robot.facing-down.walk-1.sleep-false"
+         "model": "baba:sprites/line/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 385
          },
-         "model": "baba:objects/robot.facing-down.walk-2.sleep-false"
+         "model": "baba:sprites/line/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 386
          },
-         "model": "baba:objects/robot.facing-down.walk-3.sleep-false"
+         "model": "baba:sprites/line/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 387
          },
-         "model": "baba:objects/robot.facing-right.sleep-true"
+         "model": "baba:sprites/line/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 388
          },
-         "model": "baba:objects/robot.facing-up.sleep-true"
+         "model": "baba:sprites/line/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 389
          },
-         "model": "baba:objects/robot.facing-left.sleep-true"
+         "model": "baba:sprites/line/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 390
          },
-         "model": "baba:objects/robot.facing-down.sleep-true"
+         "model": "baba:sprites/line/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 391
          },
-         "model": "baba:objects/rock"
+         "model": "baba:sprites/line/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 392
          },
-         "model": "baba:objects/rocket.facing-right"
+         "model": "baba:sprites/line/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 393
          },
-         "model": "baba:objects/rocket.facing-up"
+         "model": "baba:sprites/line/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 394
          },
-         "model": "baba:objects/rocket.facing-left"
+         "model": "baba:sprites/line/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 395
          },
-         "model": "baba:objects/rocket.facing-down"
+         "model": "baba:sprites/line/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 396
          },
-         "model": "baba:objects/rose"
+         "model": "baba:sprites/line/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 397
          },
-         "model": "baba:objects/rubble.up-false.down-false.left-false.right-false"
+         "model": "baba:sprites/line/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 398
          },
-         "model": "baba:objects/rubble.up-false.down-false.left-false.right-true"
+         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 399
          },
-         "model": "baba:objects/rubble.up-true.down-false.left-false.right-false"
+         "model": "baba:sprites/pipe/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 400
          },
-         "model": "baba:objects/rubble.up-true.down-false.left-false.right-true"
+         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 401
          },
-         "model": "baba:objects/rubble.up-false.down-false.left-true.right-false"
+         "model": "baba:sprites/pipe/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 402
          },
-         "model": "baba:objects/rubble.up-false.down-false.left-true.right-true"
+         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 403
          },
-         "model": "baba:objects/rubble.up-true.down-false.left-true.right-false"
+         "model": "baba:sprites/pipe/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 404
          },
-         "model": "baba:objects/rubble.up-true.down-false.left-true.right-true"
+         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 405
          },
-         "model": "baba:objects/rubble.up-false.down-true.left-false.right-false"
+         "model": "baba:sprites/pipe/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 406
          },
-         "model": "baba:objects/rubble.up-false.down-true.left-false.right-true"
+         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 407
          },
-         "model": "baba:objects/rubble.up-true.down-true.left-false.right-false"
+         "model": "baba:sprites/pipe/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 408
          },
-         "model": "baba:objects/rubble.up-true.down-true.left-false.right-true"
+         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 409
          },
-         "model": "baba:objects/rubble.up-false.down-true.left-true.right-false"
+         "model": "baba:sprites/pipe/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 410
          },
-         "model": "baba:objects/rubble.up-false.down-true.left-true.right-true"
+         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 411
          },
-         "model": "baba:objects/rubble.up-true.down-true.left-true.right-false"
+         "model": "baba:sprites/pipe/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 412
          },
-         "model": "baba:objects/rubble.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 413
          },
-         "model": "baba:objects/sign"
+         "model": "baba:sprites/pipe/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 414
          },
-         "model": "baba:objects/skull.facing-right"
+         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 415
          },
-         "model": "baba:objects/skull.facing-up"
+         "model": "baba:sprites/rubble/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 416
          },
-         "model": "baba:objects/skull.facing-left"
+         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 417
          },
-         "model": "baba:objects/skull.facing-down"
+         "model": "baba:sprites/rubble/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 418
          },
-         "model": "baba:objects/star"
+         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 419
          },
-         "model": "baba:objects/starfish"
+         "model": "baba:sprites/rubble/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 420
          },
-         "model": "baba:objects/statue.facing-right"
+         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 421
          },
-         "model": "baba:objects/statue.facing-up"
+         "model": "baba:sprites/rubble/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 422
          },
-         "model": "baba:objects/statue.facing-left"
+         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 423
          },
-         "model": "baba:objects/statue.facing-down"
+         "model": "baba:sprites/rubble/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 424
          },
-         "model": "baba:objects/stump"
+         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 425
          },
-         "model": "baba:objects/sun"
+         "model": "baba:sprites/rubble/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 426
          },
-         "model": "baba:objects/text.baba"
+         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 427
          },
-         "model": "baba:objects/text.keke"
+         "model": "baba:sprites/rubble/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 428
          },
-         "model": "baba:objects/text.me"
+         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 429
          },
-         "model": "baba:objects/text.robot"
+         "model": "baba:sprites/rubble/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 430
          },
-         "model": "baba:objects/text.belt"
+         "model": "baba:sprites/wall/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 431
          },
-         "model": "baba:objects/text.bird"
+         "model": "baba:sprites/wall/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 432
          },
-         "model": "baba:objects/text.bug"
+         "model": "baba:sprites/wall/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 433
          },
-         "model": "baba:objects/text.crab"
+         "model": "baba:sprites/wall/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 434
          },
-         "model": "baba:objects/text.rocket"
+         "model": "baba:sprites/wall/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 435
          },
-         "model": "baba:objects/text.skull"
+         "model": "baba:sprites/wall/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 436
          },
-         "model": "baba:objects/text.ghost"
+         "model": "baba:sprites/wall/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 437
          },
-         "model": "baba:objects/text.statue"
+         "model": "baba:sprites/wall/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 438
          },
-         "model": "baba:objects/text.bolt"
+         "model": "baba:sprites/wall/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 439
          },
-         "model": "baba:objects/text.hand"
+         "model": "baba:sprites/wall/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 440
          },
-         "model": "baba:objects/text.bat"
+         "model": "baba:sprites/wall/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 441
          },
-         "model": "baba:objects/text.bubble"
+         "model": "baba:sprites/wall/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 442
          },
-         "model": "baba:objects/text.cog"
+         "model": "baba:sprites/wall/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 443
          },
-         "model": "baba:objects/text.algae"
+         "model": "baba:sprites/wall/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 444
          },
-         "model": "baba:objects/text.flag"
+         "model": "baba:sprites/wall/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 445
          },
-         "model": "baba:objects/text.key"
+         "model": "baba:sprites/wall/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 446
          },
-         "model": "baba:objects/text.love"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 447
          },
-         "model": "baba:objects/text.ufo"
+         "model": "baba:sprites/water/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 448
          },
-         "model": "baba:objects/text.door"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 449
          },
-         "model": "baba:objects/text.flower"
+         "model": "baba:sprites/water/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 450
          },
-         "model": "baba:objects/text.violet"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 451
          },
-         "model": "baba:objects/text.pillar"
+         "model": "baba:sprites/water/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 452
          },
-         "model": "baba:objects/text.rock"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 453
          },
-         "model": "baba:objects/text.tile"
+         "model": "baba:sprites/water/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 454
          },
-         "model": "baba:objects/text.fruit"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 455
          },
-         "model": "baba:objects/text.moon"
+         "model": "baba:sprites/water/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 456
          },
-         "model": "baba:objects/text.star"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 457
          },
-         "model": "baba:objects/text.tree"
+         "model": "baba:sprites/water/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 458
          },
-         "model": "baba:objects/text.box"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 459
          },
-         "model": "baba:objects/text.fire"
+         "model": "baba:sprites/water/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 460
          },
-         "model": "baba:objects/text.gate"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 461
          },
-         "model": "baba:objects/text.jelly"
+         "model": "baba:sprites/water/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 462
          },
-         "model": "baba:objects/text.reed"
+         "model": "baba:sprites/brick/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 463
          },
-         "model": "baba:objects/text.sign"
+         "model": "baba:sprites/brick/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 464
          },
-         "model": "baba:objects/text.sun"
+         "model": "baba:sprites/brick/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 465
          },
-         "model": "baba:objects/text.fungi"
+         "model": "baba:sprites/brick/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 466
          },
-         "model": "baba:objects/text.husk"
+         "model": "baba:sprites/brick/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 467
          },
-         "model": "baba:objects/text.leaf"
+         "model": "baba:sprites/brick/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 468
          },
-         "model": "baba:objects/text.orb"
+         "model": "baba:sprites/brick/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 469
          },
-         "model": "baba:objects/text.trees"
+         "model": "baba:sprites/brick/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 470
          },
-         "model": "baba:objects/text.cake"
+         "model": "baba:sprites/brick/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 471
          },
-         "model": "baba:objects/text.dot"
+         "model": "baba:sprites/brick/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 472
          },
-         "model": "baba:objects/text.foliage"
+         "model": "baba:sprites/brick/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 473
          },
-         "model": "baba:objects/text.rose"
+         "model": "baba:sprites/brick/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 474
          },
-         "model": "baba:objects/text.dust"
+         "model": "baba:sprites/brick/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 475
          },
-         "model": "baba:objects/text.fungus"
+         "model": "baba:sprites/brick/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 476
          },
-         "model": "baba:objects/text.husks"
+         "model": "baba:sprites/brick/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 477
          },
-         "model": "baba:objects/text.stump"
+         "model": "baba:sprites/brick/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 478
          },
-         "model": "baba:objects/text.starfish"
+         "model": "baba:sprites/cliff/up-false.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 479
          },
-         "model": "baba:objects/text.cursor"
+         "model": "baba:sprites/cliff/up-false.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 480
          },
-         "model": "baba:objects/text.is"
+         "model": "baba:sprites/cliff/up-true.down-false.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 481
          },
-         "model": "baba:objects/text.and"
+         "model": "baba:sprites/cliff/up-true.down-false.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 482
          },
-         "model": "baba:objects/text.not"
+         "model": "baba:sprites/cliff/up-false.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 483
          },
-         "model": "baba:objects/text.on"
+         "model": "baba:sprites/cliff/up-false.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 484
          },
-         "model": "baba:objects/text.near"
+         "model": "baba:sprites/cliff/up-true.down-false.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 485
          },
-         "model": "baba:objects/text.facing"
+         "model": "baba:sprites/cliff/up-true.down-false.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 486
          },
-         "model": "baba:objects/text.without"
+         "model": "baba:sprites/cliff/up-false.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 487
          },
-         "model": "baba:objects/text.has"
+         "model": "baba:sprites/cliff/up-false.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 488
          },
-         "model": "baba:objects/text.make"
+         "model": "baba:sprites/cliff/up-true.down-true.left-false.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 489
          },
-         "model": "baba:objects/text.write"
+         "model": "baba:sprites/cliff/up-true.down-true.left-false.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 490
          },
-         "model": "baba:objects/text.all"
+         "model": "baba:sprites/cliff/up-false.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 491
          },
-         "model": "baba:objects/text.empty"
+         "model": "baba:sprites/cliff/up-false.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 492
          },
-         "model": "baba:objects/text.text"
+         "model": "baba:sprites/cliff/up-true.down-true.left-true.right-false"
       },
       {
          "predicate": {
             "custom_model_data": 493
          },
-         "model": "baba:objects/text.level"
+         "model": "baba:sprites/cliff/up-true.down-true.left-true.right-true"
       },
       {
          "predicate": {
             "custom_model_data": 494
          },
-         "model": "baba:objects/text.you"
+         "model": "baba:sprites/cursor"
       },
       {
          "predicate": {
             "custom_model_data": 495
          },
-         "model": "baba:objects/text.push"
+         "model": "baba:sprites/level_icon/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 496
          },
-         "model": "baba:objects/text.pull"
+         "model": "baba:sprites/level_icon/moon"
       },
       {
          "predicate": {
             "custom_model_data": 497
          },
-         "model": "baba:objects/text.move"
+         "model": "baba:sprites/level_icon/question_mark"
       },
       {
          "predicate": {
             "custom_model_data": 498
          },
-         "model": "baba:objects/text.shift"
+         "model": "baba:sprites/level_icon/island"
       },
       {
          "predicate": {
             "custom_model_data": 499
          },
-         "model": "baba:objects/text.defeat"
+         "model": "baba:sprites/level_icon/flower"
       },
       {
          "predicate": {
             "custom_model_data": 500
          },
-         "model": "baba:objects/text.hot"
+         "model": "baba:sprites/level_icon/abc"
       },
       {
          "predicate": {
             "custom_model_data": 501
          },
-         "model": "baba:objects/text.melt"
+         "model": "baba:sprites/level_icon/pillar"
       },
       {
          "predicate": {
             "custom_model_data": 502
          },
-         "model": "baba:objects/text.hide"
+         "model": "baba:sprites/level_icon/square"
       },
       {
          "predicate": {
             "custom_model_data": 503
          },
-         "model": "baba:objects/text.win"
+         "model": "baba:sprites/level_icon/dust"
       },
       {
          "predicate": {
             "custom_model_data": 504
          },
-         "model": "baba:objects/text.stop"
+         "model": "baba:sprites/level_icon/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 505
          },
-         "model": "baba:objects/text.open"
+         "model": "baba:sprites/level_icon/skull"
       },
       {
          "predicate": {
             "custom_model_data": 506
          },
-         "model": "baba:objects/text.shut"
+         "model": "baba:sprites/level_icon/text"
       },
       {
          "predicate": {
             "custom_model_data": 507
          },
-         "model": "baba:objects/text.float"
+         "model": "baba:sprites/level_icon/tree"
       },
       {
          "predicate": {
             "custom_model_data": 508
          },
-         "model": "baba:objects/text.sink"
+         "model": "baba:sprites/level_icon/snow"
       },
       {
          "predicate": {
             "custom_model_data": 509
          },
-         "model": "baba:objects/text.weak"
+         "model": "baba:sprites/level_icon/dot"
       },
       {
          "predicate": {
             "custom_model_data": 510
          },
-         "model": "baba:objects/text.swap"
+         "model": "baba:sprites/level_icon/dice.number-1"
       },
       {
          "predicate": {
             "custom_model_data": 511
          },
-         "model": "baba:objects/text.tele"
+         "model": "baba:sprites/level_icon/dice.number-2"
       },
       {
          "predicate": {
             "custom_model_data": 512
          },
-         "model": "baba:objects/text.fall"
+         "model": "baba:sprites/level_icon/dice.number-3"
       },
       {
          "predicate": {
             "custom_model_data": 513
          },
-         "model": "baba:objects/text.more"
+         "model": "baba:sprites/level_icon/dice.number-4"
       },
       {
          "predicate": {
             "custom_model_data": 514
          },
-         "model": "baba:objects/text.red"
+         "model": "baba:sprites/level_icon/dice.number-5"
       },
       {
          "predicate": {
             "custom_model_data": 515
          },
-         "model": "baba:objects/text.blue"
+         "model": "baba:sprites/level_icon/dice.number-6"
       },
       {
          "predicate": {
             "custom_model_data": 516
          },
-         "model": "baba:objects/text.sleep"
+         "model": "baba:sprites/level_icon/dice.number-7"
       },
       {
          "predicate": {
             "custom_model_data": 517
          },
-         "model": "baba:objects/text.group"
+         "model": "baba:sprites/level_icon/dice.number-8"
       },
       {
          "predicate": {
             "custom_model_data": 518
          },
-         "model": "baba:objects/text.right"
+         "model": "baba:sprites/level_icon/dice.number-9"
       },
       {
          "predicate": {
             "custom_model_data": 519
          },
-         "model": "baba:objects/text.up"
+         "model": "baba:sprites/level_icon/dice.number-10"
       },
       {
          "predicate": {
             "custom_model_data": 520
          },
-         "model": "baba:objects/text.left"
+         "model": "baba:sprites/level_icon/dice.number-11"
       },
       {
          "predicate": {
             "custom_model_data": 521
          },
-         "model": "baba:objects/text.down"
+         "model": "baba:sprites/level_icon/letter.number-1"
       },
       {
          "predicate": {
             "custom_model_data": 522
          },
-         "model": "baba:objects/text.word"
+         "model": "baba:sprites/level_icon/letter.number-2"
       },
       {
          "predicate": {
             "custom_model_data": 523
          },
-         "model": "baba:objects/text.idle"
+         "model": "baba:sprites/level_icon/letter.number-3"
       },
       {
          "predicate": {
             "custom_model_data": 524
          },
-         "model": "baba:objects/text.lonely"
+         "model": "baba:sprites/level_icon/letter.number-4"
       },
       {
          "predicate": {
             "custom_model_data": 525
          },
-         "model": "baba:objects/text.often"
+         "model": "baba:sprites/level_icon/letter.number-5"
       },
       {
          "predicate": {
             "custom_model_data": 526
          },
-         "model": "baba:objects/text.seldom"
+         "model": "baba:sprites/level_icon/letter.number-6"
       },
       {
          "predicate": {
             "custom_model_data": 527
          },
-         "model": "baba:objects/text.select"
+         "model": "baba:sprites/level_icon/letter.number-7"
       },
       {
          "predicate": {
             "custom_model_data": 528
          },
-         "model": "baba:objects/text.best"
+         "model": "baba:sprites/level_icon/letter.number-8"
       },
       {
          "predicate": {
             "custom_model_data": 529
          },
-         "model": "baba:objects/text.bonus"
+         "model": "baba:sprites/level_icon/letter.number-9"
       },
       {
          "predicate": {
             "custom_model_data": 530
          },
-         "model": "baba:objects/text.end"
+         "model": "baba:sprites/level_icon/digit.first_digit-0"
       },
       {
          "predicate": {
             "custom_model_data": 531
          },
-         "model": "baba:objects/text.done"
+         "model": "baba:sprites/level_icon/digit.number-0-9"
       },
       {
          "predicate": {
             "custom_model_data": 532
          },
-         "model": "baba:objects/text.cloud"
+         "model": "baba:sprites/level_icon/digit.first_digit-1"
       },
       {
          "predicate": {
             "custom_model_data": 533
          },
-         "model": "baba:objects/text.fence"
+         "model": "baba:sprites/level_icon/digit.number-10-19"
       },
       {
          "predicate": {
             "custom_model_data": 534
          },
-         "model": "baba:objects/text.grass"
+         "model": "baba:sprites/level_icon/digit.first_digit-2"
       },
       {
          "predicate": {
             "custom_model_data": 535
          },
-         "model": "baba:objects/text.hedge"
+         "model": "baba:sprites/level_icon/digit.number-20-29"
       },
       {
          "predicate": {
             "custom_model_data": 536
          },
-         "model": "baba:objects/text.ice"
+         "model": "baba:sprites/level_icon/digit.first_digit-3"
       },
       {
          "predicate": {
             "custom_model_data": 537
          },
-         "model": "baba:objects/text.lava"
+         "model": "baba:sprites/level_icon/digit.number-30-39"
       },
       {
          "predicate": {
             "custom_model_data": 538
          },
-         "model": "baba:objects/text.water"
+         "model": "baba:sprites/level_icon/digit.first_digit-4"
       },
       {
          "predicate": {
             "custom_model_data": 539
          },
-         "model": "baba:objects/text.bog"
+         "model": "baba:sprites/level_icon/digit.number-40-49"
       },
       {
          "predicate": {
             "custom_model_data": 540
          },
-         "model": "baba:objects/text.line"
+         "model": "baba:sprites/level_icon/digit.first_digit-5"
       },
       {
          "predicate": {
             "custom_model_data": 541
          },
-         "model": "baba:objects/text.pipe"
+         "model": "baba:sprites/level_icon/digit.number-50-59"
       },
       {
          "predicate": {
             "custom_model_data": 542
          },
-         "model": "baba:objects/text.rubble"
+         "model": "baba:sprites/level_icon/digit.first_digit-6"
       },
       {
          "predicate": {
             "custom_model_data": 543
          },
-         "model": "baba:objects/text.wall"
+         "model": "baba:sprites/level_icon/digit.number-60-69"
       },
       {
          "predicate": {
             "custom_model_data": 544
          },
-         "model": "baba:objects/text.brick"
+         "model": "baba:sprites/level_icon/digit.first_digit-7"
       },
       {
          "predicate": {
             "custom_model_data": 545
          },
-         "model": "baba:objects/text.cliff"
+         "model": "baba:sprites/level_icon/digit.number-70-79"
       },
       {
          "predicate": {
             "custom_model_data": 546
          },
-         "model": "baba:objects/text_overlay.disabled-true"
+         "model": "baba:sprites/level_icon/digit.first_digit-8"
       },
       {
          "predicate": {
             "custom_model_data": 547
          },
-         "model": "baba:objects/tile"
+         "model": "baba:sprites/level_icon/digit.number-80-89"
       },
       {
          "predicate": {
             "custom_model_data": 548
          },
-         "model": "baba:objects/tree"
+         "model": "baba:sprites/level_icon/digit.first_digit-9"
       },
       {
          "predicate": {
             "custom_model_data": 549
          },
-         "model": "baba:objects/trees"
+         "model": "baba:sprites/level_icon/digit.number-90-99"
       },
       {
          "predicate": {
             "custom_model_data": 550
          },
-         "model": "baba:objects/ufo"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 551
-         },
-         "model": "baba:objects/violet"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 552
-         },
-         "model": "baba:objects/wall.up-false.down-false.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 553
-         },
-         "model": "baba:objects/wall.up-false.down-false.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 554
-         },
-         "model": "baba:objects/wall.up-true.down-false.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 555
-         },
-         "model": "baba:objects/wall.up-true.down-false.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 556
-         },
-         "model": "baba:objects/wall.up-false.down-false.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 557
-         },
-         "model": "baba:objects/wall.up-false.down-false.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 558
-         },
-         "model": "baba:objects/wall.up-true.down-false.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 559
-         },
-         "model": "baba:objects/wall.up-true.down-false.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 560
-         },
-         "model": "baba:objects/wall.up-false.down-true.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 561
-         },
-         "model": "baba:objects/wall.up-false.down-true.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 562
-         },
-         "model": "baba:objects/wall.up-true.down-true.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 563
-         },
-         "model": "baba:objects/wall.up-true.down-true.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 564
-         },
-         "model": "baba:objects/wall.up-false.down-true.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 565
-         },
-         "model": "baba:objects/wall.up-false.down-true.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 566
-         },
-         "model": "baba:objects/wall.up-true.down-true.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 567
-         },
-         "model": "baba:objects/wall.up-true.down-true.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 568
-         },
-         "model": "baba:objects/water.up-false.down-false.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 569
-         },
-         "model": "baba:objects/water.up-false.down-false.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 570
-         },
-         "model": "baba:objects/water.up-true.down-false.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 571
-         },
-         "model": "baba:objects/water.up-true.down-false.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 572
-         },
-         "model": "baba:objects/water.up-false.down-false.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 573
-         },
-         "model": "baba:objects/water.up-false.down-false.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 574
-         },
-         "model": "baba:objects/water.up-true.down-false.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 575
-         },
-         "model": "baba:objects/water.up-true.down-false.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 576
-         },
-         "model": "baba:objects/water.up-false.down-true.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 577
-         },
-         "model": "baba:objects/water.up-false.down-true.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 578
-         },
-         "model": "baba:objects/water.up-true.down-true.left-false.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 579
-         },
-         "model": "baba:objects/water.up-true.down-true.left-false.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 580
-         },
-         "model": "baba:objects/water.up-false.down-true.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 581
-         },
-         "model": "baba:objects/water.up-false.down-true.left-true.right-true"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 582
-         },
-         "model": "baba:objects/water.up-true.down-true.left-true.right-false"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 583
-         },
-         "model": "baba:objects/water.up-true.down-true.left-true.right-true"
+         "model": "baba:sprites/text_overlay"
       }
    ]
 }

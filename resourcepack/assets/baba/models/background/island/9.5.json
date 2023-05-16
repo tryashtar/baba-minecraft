@@ -1,6 +1,7 @@
 {
    "textures": {
-      "up": "baba:island"
+      "up": "baba:background/island",
+      "particle": "#up"
    },
    "elements": [
       {

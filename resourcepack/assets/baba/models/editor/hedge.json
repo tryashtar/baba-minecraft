@@ -1,7 +1,8 @@
 {
    "parent": "baba:editor_display",
    "textures": {
-      "face": "baba:grid24x24_editor"
+      "face": "baba:editor/hedge",
+      "particle": "#face"
    },
    "elements": [
       {
@@ -18,55 +19,55 @@
          "faces": {
             "up": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "down": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "north": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "south": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "east": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             },
             "west": {
                "uv": [
-                  8.0,
-                  3.2,
-                  9.0,
-                  4.2667
+                  0,
+                  0,
+                  16,
+                  16
                ],
                "texture": "#face"
             }

@@ -1,1 +1,1 @@
-give @s note_block{babatile:1b,CustomModelData:8,BlockStateTag:{instrument:"harp",note:"7"},display:{Name:'{"text":"belt facing=up","italic":false}'}}
+give @s chiseled_bookshelf{babatile:1b,CustomModelData:138,BlockStateTag:{slot_0_occupied:"true",slot_1_occupied:"false",slot_2_occupied:"false",slot_3_occupied:"true",slot_4_occupied:"false",slot_5_occupied:"false",facing:"east"},display:{Name:'{"text":"belt facing=up","italic":false}'}}

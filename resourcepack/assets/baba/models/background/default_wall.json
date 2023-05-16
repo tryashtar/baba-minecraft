@@ -1,7 +1,8 @@
 {
    "parent": "minecraft:block/block",
    "textures": {
-      "all": "baba:background"
+      "all": "baba:background/background",
+      "particle": "#all"
    },
    "elements": [
       {
@@ -23,7 +24,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "up"
             },
             "down": {
                "uv": [
@@ -32,7 +34,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "down"
             },
             "north": {
                "uv": [
@@ -41,7 +44,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "north"
             },
             "south": {
                "uv": [
@@ -50,7 +54,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "south"
             },
             "east": {
                "uv": [
@@ -59,7 +64,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "east"
             },
             "west": {
                "uv": [
@@ -68,7 +74,8 @@
                   16.0,
                   3.2
                ],
-               "texture": "#all"
+               "texture": "#all",
+               "cullface": "west"
             }
          }
       }
