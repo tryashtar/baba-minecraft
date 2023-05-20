@@ -6,7 +6,6 @@ execute if data storage baba:main transform{write:1b} run scoreboard players set
 execute if data storage baba:main transform{write:1b} store result score spawn_text baba run data get storage baba:main transform.text
 function baba:board/spawn
 tag @e[type=item_display,tag=spawn,distance=..0.1,limit=1] add assign
-tag @e[type=item_display,tag=baba.object,tag=assign_move,distance=..1.5] add assign
 scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing = @s facing
 scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] walk = @s walk
 scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] frame = @s frame

@@ -79,7 +79,6 @@ execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #bab
 
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
 function baba:display/stand/update
-tag @e[type=item_display,tag=baba.object,tag=dirty] remove dirty
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 # save undo history
