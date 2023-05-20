@@ -11,7 +11,7 @@ tag @e[type=item_display,tag=baba.object,tag=swap] remove swap
 # moving objects need to be re-assigned rules if they have a condition based on location
 # moving text needs to be reparsed
 # both of these include nearby objects before the move
-execute at @s run tag @e[type=item_display,tag=baba.object,tag=assign_move,distance=..1.1] add assign
+execute at @s run tag @e[type=item_display,tag=baba.object,tag=assign_move,distance=..1.5] add assign
 execute at @s[scores={sprite=30442}] run tag @e[type=item_display,tag=baba.object,scores={sprite=30442},distance=..1.1] add reparse
 tp @s ~ ~ ~
 tag @s[tag=assign_move] add assign
