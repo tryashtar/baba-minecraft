@@ -12,12 +12,12 @@ scoreboard players set @e[type=item_display,tag=baba.object,tag=reparse] text_di
 tag @e[type=item_display,tag=baba.object,tag=reparse,tag=disabled] remove disabled
 
 # parse left-to-right text
-execute rotated 0 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^-1 run function baba:board/rules/parse/new
+execute rotated 0 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
 execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] run function baba:board/rules/parse/right
 
 # parse up-to-down text
 scoreboard players set first_word baba 2
-execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^-1 run function baba:board/rules/parse/new
+execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
 execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] run function baba:board/rules/parse/down
 
 # text gets the X overlay if all rules it's part of are disabled
