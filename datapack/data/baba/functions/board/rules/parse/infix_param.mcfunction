@@ -16,4 +16,4 @@ execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,di
 
 execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=part.and,distance=..0.1] run function baba:board/rules/parse/infix_ands
 execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=part.verb,distance=..0.1] run function baba:board/rules/parse/verb
-execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,tag=!part.and,tag=!part.verb,distance=..0.1] run function baba:board/rules/parse/new
+execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,tag=!part.and,tag=!part.verb,distance=..0.1] add first_word

@@ -27,4 +27,4 @@ execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,di
 
 execute positioned ^ ^ ^1 unless entity @e[type=item_display,tag=baba.object,tag=part.and,distance=..0.1,limit=1] run function baba:board/rules/parse/done
 execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=part.and,distance=..0.1] run function baba:board/rules/parse/effect_ands
-execute unless entity @s[tag=part.noun] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,tag=!part.and,distance=..0.1] run function baba:board/rules/parse/new
+execute positioned ^ ^ ^1 unless entity @e[type=item_display,tag=baba.object,tag=part.and,distance=..0.1,limit=1] run tag @s add first_word

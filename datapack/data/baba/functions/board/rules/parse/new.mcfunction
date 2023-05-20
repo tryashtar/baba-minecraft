@@ -2,6 +2,7 @@
 # valid parts: not, prefix, noun
 execute if score cleanup baba matches 1 as @e[type=item_display,tag=baba.object,tag=reparse] run function baba:board/rules/parse/reset
 scoreboard players set cleanup baba 0
+tag @s remove first_word
 
 # for every word, the parsing context is pulled into storage, modified, then embedded into subsequent words' entity data
 # this is because text stacking allows for splitting of execution of these functions
@@ -12,4 +13,4 @@ execute if entity @s[tag=part.prefix] run function baba:board/rules/parse/prefix
 execute if entity @s[tag=part.noun] run function baba:board/rules/parse/subject
 
 # any time the following text is not of the expected part, try starting a new rule there
-execute if entity @s[tag=!part.not,tag=!part.prefix,tag=!part.noun] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1] run function baba:board/rules/parse/new
+execute if entity @s[tag=!part.not,tag=!part.prefix,tag=!part.noun] positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1] add first_word
