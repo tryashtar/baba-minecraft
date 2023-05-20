@@ -71,6 +71,7 @@ execute if entity @s[scores={sprite=58667}] run function baba:display/stand/obje
 execute if entity @s[scores={sprite=41172}] run function baba:display/stand/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/stand/object/cliff
 execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 494
+execute at @s[scores={sprite=30442},tag=!prop.hide] run function baba:display/stand/object/text_overlay
 execute at @s[scores={sprite=26837},tag=!prop.hide] run function baba:display/stand/object/level_icon
 execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0
 scoreboard players operation color baba = @s color

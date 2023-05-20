@@ -402,6 +402,7 @@ sprites:
       properties:
         text: cursor
         part: noun
+      overlays: [text_overlay]
     sprites:
     - {}
   - overlays:
@@ -543,10 +544,6 @@ sprites:
       coords: [1, 76]
     sprites:
     - disabled: true
-  - objects:
-    - name: text
-      overlays: [text_overlay]
-    sprites: []
 
 - sheet: text
   entries:

@@ -1,6 +1,7 @@
 # unpacks level storage into entities
 kill @e[type=marker,tag=baba.space]
 kill @e[type=item_display,tag=baba.object]
+kill @e[type=item_display,tag=baba.overlay]
 execute store result score level_height baba run data get storage baba:main level
 execute store result score level_width baba run data get storage baba:main level[0]
 execute store result score level_background baba run data get storage baba:main level_metadata.background
