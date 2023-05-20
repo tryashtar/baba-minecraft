@@ -1,45 +1,6 @@
 {
+   "parent": "baba:sprite",
    "textures": {
       "up": "baba:sprites/water/up-false.down-false.left-true.right-true"
-   },
-   "display": {
-      "fixed": {
-         "rotation": [
-            0,
-            90,
-            0
-         ],
-         "scale": [
-            1,
-            0.001,
-            1
-         ]
-      }
-   },
-   "elements": [
-      {
-         "from": [
-            0,
-            0,
-            0
-         ],
-         "to": [
-            16,
-            0,
-            16
-         ],
-         "faces": {
-            "up": {
-               "uv": [
-                  0,
-                  0,
-                  16,
-                  16
-               ],
-               "texture": "#up",
-               "tintindex": 0
-            }
-         }
-      }
-   ]
+   }
 }

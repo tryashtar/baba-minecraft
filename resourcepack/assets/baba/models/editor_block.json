@@ -1,0 +1,45 @@
+{
+   "parent": "minecraft:block/block",
+   "gui_light": "front",
+   "display": {
+      "firstperson_righthand": {
+         "rotation": [-10, -35, 0],
+         "translation": [16, 0, -20]
+      },
+      "gui": {
+         "rotation": [90, 0, 0]
+      }
+   },
+   "elements": [
+      {
+         "from": [0, 0, 0],
+         "to": [16, 16, 16],
+         "faces": {
+            "up": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            },
+            "down": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            },
+            "north": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            },
+            "south": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            },
+            "east": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            },
+            "west": {
+               "uv": [0, 0, 16, 16],
+               "texture": "#face"
+            }
+         }
+      }
+   ]
+}
