@@ -15,4 +15,4 @@ tag @e[type=item_display,tag=baba.object,distance=..0.1] add assign
 tag @e[type=item_display,tag=baba.object,tag=assign_move,distance=..1.5] add assign
 function baba:board/rules/update
 function baba:board/rules/assign
-execute as @e[type=item_display,tag=baba.object,distance=..0.1] run function baba:display/stand/object
+execute as @e[type=item_display,tag=baba.object,distance=..0.1] run function baba:display/object

@@ -134,7 +134,7 @@ def generate_wiggle_fonts(source, resources):
       tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
 
 def generate_update_function(source, resources):
-  tat.delete_folder('datapack/data/baba/functions/display/stand/object')
+  tat.delete_folder('datapack/data/baba/functions/display/object')
   update_obj = [
     'execute store result entity @s Pos[1] double 0.00001 run scoreboard players get @s z_layer',
     'execute at @s run tp @s ~ ~1.001 ~'
@@ -149,8 +149,8 @@ def generate_update_function(source, resources):
       lines = []
       for spr,props in spritelist:
         lines.append(f'execute if entity @s[{ops.create_selector(ops.filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
-      tat.write_lines(lines, f'datapack/data/baba/functions/display/stand/object/{obj.name}.mcfunction')
-      update_obj.append(f'execute if entity @s[scores={{sprite={ops.id_hash(obj.name)}}}] run function baba:display/stand/object/{obj.name}')
+      tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{obj.name}.mcfunction')
+      update_obj.append(f'execute if entity @s[scores={{sprite={ops.id_hash(obj.name)}}}] run function baba:display/object/{obj.name}')
   for overlay in source.overlays.values():
     lines = []
     for prop,op in overlay.property_mods.items():
@@ -172,10 +172,10 @@ def generate_update_function(source, resources):
       final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{resources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
       lines.append(final)
     lines.append('execute as @e[type=item_display,tag=baba.overlay,distance=..0.001] run ride @s mount @e[type=item_display,tag=baba.object,distance=..0.001,limit=1]')
-    tat.write_lines(lines, f'datapack/data/baba/functions/display/stand/object/{overlay.name}.mcfunction')
+    tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{overlay.name}.mcfunction')
   for obj in source.objects.values():
     for overlay in obj.overlays:
-      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/stand/object/{overlay}')
+      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
   update_obj.extend([
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
@@ -183,18 +183,18 @@ def generate_update_function(source, resources):
     f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
     f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
   ])
-  tat.delete_folder('datapack/data/baba/functions/display/stand/palette')
+  tat.delete_folder('datapack/data/baba/functions/display/palette')
   for pid,(pname,palette) in enumerate(source.palettes.items()):
     if pid == 0:
       continue
-    update_obj.append(f'execute if score palette baba matches {pid} run function baba:display/stand/palette/{pname}')
+    update_obj.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
     function = []
     for color1,color2 in palette.items():
       if color1!=color2:
         function.append(f'execute if score color baba matches {int(color1[1:],16)} run scoreboard players set color baba {int(color2[1:],16)}')
-    tat.write_lines(function, f'datapack/data/baba/functions/display/stand/palette/{pname}.mcfunction')
+    tat.write_lines(function, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   update_obj.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba')
-  tat.write_lines(update_obj, 'datapack/data/baba/functions/display/stand/object.mcfunction')
+  tat.write_lines(update_obj, 'datapack/data/baba/functions/display/object.mcfunction')
 
 
 if __name__ == '__main__':

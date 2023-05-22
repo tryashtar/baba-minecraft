@@ -31,5 +31,5 @@ function baba:board/rules/assign
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
-function baba:display/stand/update
+function baba:display/update
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
