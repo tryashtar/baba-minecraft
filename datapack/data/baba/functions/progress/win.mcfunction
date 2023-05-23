@@ -16,4 +16,4 @@ title @s[scores={win=27}] title {"text":"1 2","font":"baba:congrats"}
 title @s[scores={win=29}] title {"text":"3 4","font":"baba:congrats"}
 
 scoreboard players add @s win 1
-
+execute if score @s win matches 31.. run function baba:progress/level_complete

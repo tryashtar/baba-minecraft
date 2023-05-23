@@ -2,5 +2,24 @@
    "parent": "baba:sprite",
    "textures": {
       "up": "baba:sprites/level_icon/question_mark"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [
+            0,
+            90,
+            0
+         ],
+         "scale": [
+            1,
+            0.001,
+            1
+         ],
+         "translation": [
+            0.0,
+            0.005,
+            0.0
+         ]
+      }
    }
 }

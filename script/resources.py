@@ -41,12 +41,12 @@ def save_image(spr, images, path):
   if len(images) > 1:
     tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
 
-def save_model(spr, texture_resource, path):
+def save_model(spr, texture_resource, path, y):
   t1 = round(-16*spr.scale*spr.shift[1]/24,2)
   t2 = round(-16*spr.scale*spr.shift[0]/24,2)
   model = {"parent":"baba:sprite","textures":{"up":texture_resource}}
-  if (t1, t2) != (0, 0):
-    model['display'] = {"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, 0, t2]}}
+  if (t1, y, t2) != (0, 0, 0) or spr.scale != 1:
+    model['display'] = {"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, y, t2]}}
   tat.write_json(model, path)
 
 def save_editor_model(spr, texture_resource, path):
@@ -80,7 +80,8 @@ def create_sprite_resources(source, resource_pack, namespace):
         sprite_id += 1
         custom_model_data = sprite_id
         model_path = os.path.join(model_folder, display + '.json')
-        save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path))
+        y = 0.005 if obj.is_overlay else 0
+        save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path), y)
         cached_models[model_key] = (model_path, custom_model_data)
         overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)

@@ -2,5 +2,24 @@
    "parent": "baba:sprite",
    "textures": {
       "up": "baba:sprites/cursor"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [
+            0,
+            90,
+            0
+         ],
+         "scale": [
+            1.3333,
+            0.001,
+            1.3333
+         ],
+         "translation": [
+            -0.0,
+            0,
+            -0.0
+         ]
+      }
    }
 }

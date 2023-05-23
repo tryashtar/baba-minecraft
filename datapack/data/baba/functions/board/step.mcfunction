@@ -33,6 +33,7 @@ execute as @e[type=item_display,tag=baba.object,tag=prop.tele] at @s run functio
 # shift changes the facing direction of objects both when pushing and when landing
 execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/movement/process/shift_dir
 execute if score direction baba matches 1.. as @e[type=item_display,tag=baba.object,tag=prop.select] at @s run function baba:board/movement/select
+execute if score direction baba matches 0 as @e[type=item_display,tag=baba.object,tag=prop.select] at @s as @e[type=item_display,tag=baba.object,distance=..0.1,nbt={item:{tag:{level_data:{}}}},limit=1] run function baba:progress/enter_level
 execute as @e[type=item_display,tag=baba.object,tag=prop.fall] at @s run function baba:board/interact/fall
 execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s
 
