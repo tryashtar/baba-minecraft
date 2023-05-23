@@ -53,6 +53,9 @@ properties:
     type: tag
     default: true
     attributes: [spawn, all]
+  complete:
+    type: tag
+    attributes: [sprite]
   style:
     type: tag
     attributes: [sprite, primary]
@@ -456,7 +459,7 @@ sprites:
   - overlays:
     - name: level_icon
       color: '#ffffff'
-      coords: [76, 1]
+      coords: [101, 1]
       frames: none
       properties:
         style: dice
@@ -475,7 +478,7 @@ sprites:
   - overlays:
     - name: level_icon
       color: '#ffffff'
-      coords: [51, 1]
+      coords: [76, 1]
       frames: none
       properties:
         style: letter
@@ -505,7 +508,7 @@ sprites:
         shift: [-4, 0]
         properties:
           style: digit
-      coords: [26, 1]
+      coords: [51, 1]
       frames: none
     sprites:
     - - first_digit: 0
@@ -537,11 +540,12 @@ sprites:
         z_layer: 17
         not_all: true
     sprites:
-    - {}
+    - complete: false
+    - complete: true
   - overlays:
     - name: text_overlay
       color: '#e5533b'
-      coords: [1, 76]
+      coords: [26, 76]
     sprites:
     - disabled: true
 

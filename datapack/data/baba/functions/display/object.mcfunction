@@ -55,7 +55,7 @@ execute if entity @s[scores={sprite=40563}] run data modify entity @s item.tag.C
 execute if entity @s[scores={sprite=58937}] run data modify entity @s item.tag.CustomModelData set value 298
 execute if entity @s[scores={sprite=60402}] run data modify entity @s item.tag.CustomModelData set value 299
 execute if entity @s[scores={sprite=42294}] run data modify entity @s item.tag.CustomModelData set value 300
-execute if entity @s[scores={sprite=26837}] run data modify entity @s item.tag.CustomModelData set value 301
+execute if entity @s[scores={sprite=26837}] run function baba:display/object/level
 execute if entity @s[scores={sprite=48700}] run function baba:display/object/cloud
 execute if entity @s[scores={sprite=26472}] run function baba:display/object/fence
 execute if entity @s[scores={sprite=30894}] run function baba:display/object/grass
@@ -70,7 +70,7 @@ execute if entity @s[scores={sprite=28861}] run function baba:display/object/lav
 execute if entity @s[scores={sprite=58667}] run function baba:display/object/bog
 execute if entity @s[scores={sprite=41172}] run function baba:display/object/brick
 execute if entity @s[scores={sprite=32467}] run function baba:display/object/cliff
-execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 494
+execute if entity @s[scores={sprite=2526}] run data modify entity @s item.tag.CustomModelData set value 495
 execute at @s[scores={sprite=30442},tag=!prop.hide] run function baba:display/object/text_overlay
 execute at @s[scores={sprite=26837},tag=!prop.hide] run function baba:display/object/level_icon
 execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0

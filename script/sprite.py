@@ -82,7 +82,9 @@ class SpriteCollection:
               # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
               baba = self.get_or_create_obj(obj_data['name'], is_overlay)
               if 'overlays' in obj_data:
-                baba.overlays.extend(obj_data['overlays'])
+                for o in obj_data['overlays']:
+                  if o not in baba.overlays:
+                    baba.overlays.append(o)
               if 'modifications' in obj_data:
                 for k,v in obj_data['modifications'].items():
                   baba.property_mods[k] = v
