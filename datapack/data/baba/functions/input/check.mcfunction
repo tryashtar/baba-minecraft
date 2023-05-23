@@ -13,3 +13,4 @@ execute at @s run summon marker ~1 ~ ~ {Tags:["baba.input","dir","up"]}
 execute at @s run summon marker ~-1 ~ ~ {Tags:["baba.input","dir","down"]}
 execute at @s run summon marker ~ ~ ~-1 {Tags:["baba.input","dir","left"]}
 execute at @s run summon marker ~ ~ ~1 {Tags:["baba.input","dir","right"]}
+execute if entity @s[predicate=baba:holding_rules] run title @s actionbar {"entity":"@s","nbt":"SelectedItem.tag.display.Lore[]","interpret":true,"separator":", "}

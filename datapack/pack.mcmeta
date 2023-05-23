@@ -51,6 +51,10 @@
          {
             "namespace": "^minecraft$",
             "path": "^recipes/.*"
+         },
+         {
+            "namespace": "^minecraft$",
+            "path": "^loot_tables/.*"
          }
       ]
    }

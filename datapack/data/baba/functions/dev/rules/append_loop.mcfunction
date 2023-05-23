@@ -10,7 +10,7 @@ execute if data storage baba:main infixes[0] run function baba:dev/rules/append_
 data modify storage baba:main rule append from storage baba:main iter_rules[0].verb_text
 execute if data storage baba:main iter_rules[0].effect{inverted:1b} run data modify storage baba:main rule append value "not"
 data modify storage baba:main rule append from storage baba:main iter_rules[0].effect.text_text
-tellraw @a {"storage":"baba:main","nbt":"rule[]","separator":" ","color":"yellow"}
+item modify entity @s hotbar.8 baba:append_rule
 
 data remove storage baba:main iter_rules[0]
-execute if data storage baba:main iter_rules[0] run function baba:dev/rules/print_loop
+execute if data storage baba:main iter_rules[0] run function baba:dev/rules/append_loop
