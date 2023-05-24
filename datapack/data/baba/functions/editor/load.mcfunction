@@ -31,6 +31,9 @@ scoreboard players set direction baba -1
 data modify storage baba:main rules set value []
 function baba:board/rules/update
 function baba:board/rules/assign
+
+execute as @e[type=item_display,tag=baba.object,scores={sprite=26837},nbt={item:{tag:{level_data:{}}}}] run function baba:progress/check_completed
+
 execute as @e[type=item_display,tag=baba.object,tag=prop.select] at @s run function baba:progress/show_name
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 
