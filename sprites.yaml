@@ -217,7 +217,10 @@ sprites:
         z_layer: 16
     - null
     - null
-    - null
+    - name: spike
+      color: '#293141'
+      properties:
+        z_layer: 10
     - null
     - name: ufo
       object color: '#eb91ca'

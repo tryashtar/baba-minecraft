@@ -19,6 +19,7 @@ algae: 7620
 flag: 14151
 key: 30686
 love: 1043
+spike: 51368
 ufo: 49848
 door: 54021
 flower: 61188

@@ -29,6 +29,7 @@ execute as @e[type=item_display,tag=baba.object,scores={sprite=30442}] store res
 # don't trigger 'idle' conditions
 scoreboard players set direction baba -1
 data modify storage baba:main rules set value []
+tag @e[type=item_display,tag=baba.object] add assign
 function baba:board/rules/update
 function baba:board/rules/assign
 
