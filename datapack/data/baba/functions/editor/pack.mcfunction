@@ -1,7 +1,5 @@
 # packs bookshelves into jukebox
-data modify storage baba:main level set value []
-data modify storage baba:main level_metadata set value {}
-function baba:editor/pack/search
-summon item ~ ~ ~ {NoGravity:1b,Age:5980,Tags:["level"],Item:{id:"minecraft:jukebox",Count:1b,tag:{BlockEntityTag:{id:"minecraft:jukebox",RecordItem:{id:"minecraft:tnt",Count:1b}}}}}
-data modify entity @e[type=item,tag=level,distance=..0.1,limit=1] Item.tag.BlockEntityTag.RecordItem.tag.level set from storage baba:main level
-data modify entity @e[type=item,tag=level,distance=..0.1,limit=1] Item.tag.BlockEntityTag.RecordItem.tag.level_metadata set from storage baba:main level_metadata
+data modify storage baba:main level set value {tiles:[],metadata:{}}
+data modify storage baba:main level.metadata set from block ~ ~-2 ~ RecordItem.tag
+execute if block ~-1 ~-2 ~ #signs run data modify storage baba:main level.metadata.name set from block ~-1 ~-2 ~ front_text.messages[0]
+function baba:editor/pack/grid

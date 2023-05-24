@@ -25,7 +25,7 @@ def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
   tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
   pack_lines = ['clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force']
-  unpack_lines = ['data modify storage baba:main tile set from storage baba:main level[0][0][0]']
+  unpack_lines = ['data modify storage baba:main tile set from storage baba:main level.tiles[0][0][0]']
   dir_checks = {}
   for obj in source.objects.values():
     spritelist = list(obj.filter_sprites(lambda x: 'editor' in x.attributes).items())
@@ -59,8 +59,8 @@ def generate_packing_functions(source, blockstates):
   unpack_lines.extend([
     'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items set value [{id:"book",Count:1b}]',
     'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].tag.extra set from storage baba:main tile.extra',
-    'data remove storage baba:main level[0][0][0]',
-    'execute if data storage baba:main level[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block',
+    'data remove storage baba:main level.tiles[0][0][0]',
+    'execute if data storage baba:main level.tiles[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block',
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/functions/editor/pack/block.mcfunction')
   tat.write_lines(unpack_lines, 'datapack/data/baba/functions/editor/unpack/block.mcfunction')

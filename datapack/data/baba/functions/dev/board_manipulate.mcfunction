@@ -1,7 +1,7 @@
 data modify storage baba:main tile set value []
-data modify storage baba:main level set value [[[{}]]]
+data modify storage baba:main level set value {tiles:[[[{}]]]}
 function baba:editor/pack/block
-data modify storage baba:main level[0][0][0] set from storage baba:main tile[0]
+data modify storage baba:main level.tiles[0][0][0] set from storage baba:main tile[0]
 function baba:editor/load/spawn
 setblock ~ ~ ~ air
 

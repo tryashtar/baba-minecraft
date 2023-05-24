@@ -3,12 +3,12 @@ kill @e[type=marker,tag=baba.space]
 kill @e[type=item_display,tag=baba.object]
 kill @e[type=item_display,tag=baba.overlay]
 kill @e[type=text_display,tag=baba.text]
-execute store result score level_height baba run data get storage baba:main level
-execute store result score level_width baba run data get storage baba:main level[0]
-execute store result score level_background baba run data get storage baba:main level_metadata.background
-execute store result score palette baba run data get storage baba:main level_metadata.palette
+execute store result score level_height baba run data get storage baba:main level.tiles
+execute store result score level_width baba run data get storage baba:main level.tiles[0]
+execute store result score level_background baba run data get storage baba:main level.metadata.background
+execute store result score palette baba run data get storage baba:main level.metadata.palette
 scoreboard players set row baba 0
-execute if data storage baba:main level[0] run function baba:editor/load/row
+execute if data storage baba:main level.tiles[0] run function baba:editor/load/row
 execute if score level_background baba matches 1 run function baba:editor/load/background/island
 execute if score level_background baba matches 2 run function baba:editor/load/background/flower
 summon text_display 0 1 0 {Tags:["baba.text"],Rotation:[90f,-90f],alignment:"left",background:0,transformation:{scale:[4f,4f,4f],translation:[18.9f,-1f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}

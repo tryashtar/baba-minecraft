@@ -1,4 +1,4 @@
-data modify storage baba:main tile set from storage baba:main level[0][0][0]
+data modify storage baba:main tile set from storage baba:main level.tiles[0][0][0]
 execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
 execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
 execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
@@ -235,5 +235,5 @@ execute if data storage baba:main tile{scores:{sprite:32467}} run setblock ~ ~ ~
 execute if data storage baba:main tile{scores:{sprite:2526}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=true,facing=west]
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items set value [{id:"book",Count:1b}]
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].tag.extra set from storage baba:main tile.extra
-data remove storage baba:main level[0][0][0]
-execute if data storage baba:main level[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block
+data remove storage baba:main level.tiles[0][0][0]
+execute if data storage baba:main level.tiles[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block
