@@ -22,7 +22,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "up"
@@ -32,7 +32,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "down"
@@ -42,7 +42,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "north"
@@ -52,7 +52,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "south"
@@ -62,7 +62,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "east"
@@ -72,7 +72,7 @@
                   8.0,
                   0.0,
                   16.0,
-                  3.2
+                  1.0
                ],
                "texture": "#all",
                "cullface": "west"
