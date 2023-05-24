@@ -17,6 +17,8 @@ tellraw @a [{"text":"Packed ","color":"yellow"},{"score":{"name":"width","object
 scoreboard players operation z baba += width baba
 execute store result entity @s Pos[2] double 1 run scoreboard players get z baba
 execute at @s run tp @s ~ ~ ~1
+execute as @e[type=marker,tag=baba.storage] at @s run tp @s ~1 ~ ~
+execute at @s unless block ~ ~-1 ~ #baba:editor_floor as @e[type=marker,tag=baba.storage] at @s run tp @s 0 ~1 ~
 execute at @s unless block ~ ~-1 ~ #baba:editor_floor run tp @s ~30 ~ 50
 execute at @s run forceload add ~ ~ ~17 ~32
 forceload remove ~ ~ ~17 ~32
