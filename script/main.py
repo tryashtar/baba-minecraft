@@ -24,7 +24,7 @@ def main():
 def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
   tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
-  pack_lines = ['clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force']
+  pack_lines = []
   unpack_lines = ['data modify storage baba:main tile set from storage baba:main level.tiles[0][0][0]']
   dir_checks = {}
   for obj in source.objects.values():

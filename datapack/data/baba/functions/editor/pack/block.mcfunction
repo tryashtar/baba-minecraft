@@ -1,4 +1,3 @@
-clone ~ ~ ~ ~ ~ ~ ~ ~ ~ replace force
 execute if block ~ ~ ~ chiseled_bookshelf[facing=north] run function baba:editor/pack/block/north
 execute if block ~ ~ ~ chiseled_bookshelf[facing=south] run function baba:editor/pack/block/south
 execute if block ~ ~ ~ chiseled_bookshelf[facing=east] run function baba:editor/pack/block/east
