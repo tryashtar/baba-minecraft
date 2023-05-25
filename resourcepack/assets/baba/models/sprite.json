@@ -1,8 +1,12 @@
 {
+   "gui_light": "front",
    "display": {
       "fixed": {
          "rotation": [0, 90, 0],
          "scale": [1, 0.001, 1]
+      },
+      "gui": {
+         "rotation": [90, 0, 0]
       }
    },
    "elements": [

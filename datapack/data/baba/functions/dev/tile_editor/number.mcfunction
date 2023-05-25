@@ -1,0 +1,65 @@
+tag @s add edit_number
+execute store result score number baba run data get block ~ ~ ~ Items[0].tag.extra.scores.number
+
+execute if score number baba matches ..1 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 1
+execute if score number baba matches 2 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 2
+execute if score number baba matches 3 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 3
+execute if score number baba matches 4 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 4
+execute if score number baba matches 5 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 5
+execute if score number baba matches 6 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 6
+execute if score number baba matches 7 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 7
+execute if score number baba matches 8 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 8
+execute if score number baba matches 9 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 9
+execute if score number baba matches 10 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 10
+execute if score number baba matches 11 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 11
+execute if score number baba matches 12 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 12
+execute if score number baba matches 13 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 13
+execute if score number baba matches 14 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 14
+execute if score number baba matches 15 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 15
+execute if score number baba matches 16 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 16
+execute if score number baba matches 17 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 17
+execute if score number baba matches 18 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 18
+execute if score number baba matches 19 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 19
+execute if score number baba matches 20 run item replace entity @s hotbar.0 with honeycomb{number:1b,style:"style.number",display:{Name:'{"text":"Number","italic":false}'}} 20
+
+execute if score number baba matches ..1 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 1
+execute if score number baba matches 2 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 2
+execute if score number baba matches 3 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 3
+execute if score number baba matches 4 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 4
+execute if score number baba matches 5 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 5
+execute if score number baba matches 6 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 6
+execute if score number baba matches 7 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 7
+execute if score number baba matches 8 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 8
+execute if score number baba matches 9 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 9
+execute if score number baba matches 10 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 10
+execute if score number baba matches 11 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 11
+execute if score number baba matches 12 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 12
+execute if score number baba matches 13 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 13
+execute if score number baba matches 14 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 14
+execute if score number baba matches 15 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 15
+execute if score number baba matches 16 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 16
+execute if score number baba matches 17 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 17
+execute if score number baba matches 18 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 18
+execute if score number baba matches 19 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 19
+execute if score number baba matches 20 run item replace entity @s hotbar.1 with snowball{number:1b,style:"style.dice",display:{Name:'{"text":"Dice","italic":false}'}} 20
+
+execute if score number baba matches ..1 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 1
+execute if score number baba matches 2 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 2
+execute if score number baba matches 3 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 3
+execute if score number baba matches 4 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 4
+execute if score number baba matches 5 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 5
+execute if score number baba matches 6 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 6
+execute if score number baba matches 7 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 7
+execute if score number baba matches 8 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 8
+execute if score number baba matches 9 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 9
+execute if score number baba matches 10 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 10
+execute if score number baba matches 11 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 11
+execute if score number baba matches 12 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 12
+execute if score number baba matches 13 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 13
+execute if score number baba matches 14 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 14
+execute if score number baba matches 15 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 15
+execute if score number baba matches 16 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 16
+execute if score number baba matches 17 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 17
+execute if score number baba matches 18 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 18
+execute if score number baba matches 19 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 19
+execute if score number baba matches 20 run item replace entity @s hotbar.2 with book{number:1b,style:"style.letter",display:{Name:'{"text":"Letter","italic":false}'}} 20
