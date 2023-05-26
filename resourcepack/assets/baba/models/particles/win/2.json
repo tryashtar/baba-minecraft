@@ -1,0 +1,12 @@
+{
+   "parent": "baba:sprite",
+   "textures": {
+      "up": "baba:particles/win/2"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [0, 90, 0],
+         "scale": [0.666, 0.001, 0.666]
+      }
+   }
+}

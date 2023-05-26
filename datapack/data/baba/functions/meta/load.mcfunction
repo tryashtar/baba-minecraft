@@ -17,5 +17,6 @@ scoreboard objectives add text_using dummy
 scoreboard objectives add text_used dummy
 scoreboard objectives add text_disabled dummy
 scoreboard objectives add text_disabled2 dummy
+scoreboard objectives add life dummy
 scoreboard objectives add drop dropped:diamond
 scoreboard players set #10 baba 10
