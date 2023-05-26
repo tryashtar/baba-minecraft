@@ -80,7 +80,7 @@ def create_sprite_resources(source, resource_pack, namespace):
         sprite_id += 1
         custom_model_data = sprite_id
         model_path = os.path.join(model_folder, display + '.json')
-        y = 0.005 if obj.is_overlay else 0
+        y = 0.01 if obj.is_overlay else 0
         save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path), y)
         cached_models[model_key] = (model_path, custom_model_data)
         overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
