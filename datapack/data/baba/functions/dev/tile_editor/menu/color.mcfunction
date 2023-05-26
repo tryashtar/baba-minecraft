@@ -72,7 +72,7 @@ summon item_display ~-0.5 ~1.8 ~1.2 {transformation:{translation:[0f,0f,0f],scal
 summon interaction ~-0.1 ~1.6 ~1.2 {response:1b,width:0.4f,height:0.4f,Tags:["tile_editor_menu","interact_color_set","color35"]}
 
 data modify storage baba:main item set from entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item
-execute store result score color baba run data get entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item.tag.CustomPotionColor
+scoreboard players operation color baba = @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] color
 execute as @e[type=item_display,tag=tile_editor_menu] run data modify entity @s item set from storage baba:main item
 
 scoreboard players set @e[tag=color1] color 2368548
