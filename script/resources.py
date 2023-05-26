@@ -113,7 +113,7 @@ def create_editor_resources(source, resource_pack, namespace):
       texture_path = os.path.join(texture_folder, display + '.png')
       model_path = os.path.join(model_folder, display + '.json')
       frames = list(colorize_frames(spr.image.frames, bytes.fromhex(spr.properties[source.properties['color']][1:])))
-      save_image(spr, frames, os.path.join(resource_pack, texture_path))
+      save_image(spr, [frames[0]], os.path.join(resource_pack, texture_path))
       save_editor_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path))
       overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
