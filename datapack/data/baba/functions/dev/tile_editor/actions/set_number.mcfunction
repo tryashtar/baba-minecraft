@@ -4,6 +4,7 @@ execute if entity @s[tag=down] run scoreboard players remove @e[type=item_displa
 execute if entity @s[tag=style] as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run tag @s[tag=style.digit] add new_style.letter
 execute if entity @s[tag=style] as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run tag @s[tag=style.letter] add new_style.dice
 execute if entity @s[tag=style] as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run tag @s[tag=style.dice] add new_style.digit
+execute if entity @s[tag=style] as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run tag @s[tag=!style.digit,tag=!style.letter,tag=!style.dice] add new_style.digit
 execute if entity @s[tag=style] run tag @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] remove style.digit
 execute if entity @s[tag=style] run tag @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] remove style.letter
 execute if entity @s[tag=style] run tag @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] remove style.dice
