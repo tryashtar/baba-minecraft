@@ -13,7 +13,7 @@ execute if score color baba matches 9463614 run scoreboard players set color bab
 execute if score color baba matches 4093576 run scoreboard players set color baba 16711680
 execute if score color baba matches 15029051 run scoreboard players set color baba 16711680
 execute if score color baba matches 4676017 run scoreboard players set color baba 6381921
-execute if score color baba matches 15438282 run scoreboard players set color baba 16777215
+execute if score color baba matches 15438282 run scoreboard players set color baba -16777215
 execute if score color baba matches 6062905 run scoreboard players set color baba 16711680
 execute if score color baba matches 12754502 run scoreboard players set color baba 16711680
 execute if score color baba matches 16777215 run scoreboard players set color baba 16711680
@@ -23,8 +23,9 @@ execute if score color baba matches 5602016 run scoreboard players set color bab
 execute if score color baba matches 2705553 run scoreboard players set color baba 2763306
 execute if score color baba matches 10858815 run scoreboard players set color baba 14211288
 execute if score color baba matches 3550754 run scoreboard players set color baba 1644825
-execute if score color baba matches 8636645 run scoreboard players set color baba 16777215
-execute if score color baba matches 15590021 run scoreboard players set color baba 16777215
+execute if score color baba matches 8636645 run scoreboard players set color baba -16777215
+execute if score color baba matches 15590021 run scoreboard players set color baba -16777215
 execute if score color baba matches 16760135 run scoreboard players set color baba 14211288
 execute if score color baba matches 7580659 run scoreboard players set color baba 12829635
-execute if score color baba matches 11981632 run scoreboard players set color baba 16777215
+execute if score color baba matches 11981632 run scoreboard players set color baba -16777215
+execute if score color baba matches ..-1 run scoreboard players operation color baba *= #-1 baba
