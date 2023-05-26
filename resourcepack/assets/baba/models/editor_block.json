@@ -17,27 +17,33 @@
          "faces": {
             "up": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "up"
             },
             "down": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "down"
             },
             "north": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "north"
             },
             "south": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "south"
             },
             "east": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "east"
             },
             "west": {
                "uv": [0, 0, 16, 16],
-               "texture": "#face"
+               "texture": "#face",
+               "cullface": "west"
             }
          }
       }
