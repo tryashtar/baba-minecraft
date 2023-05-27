@@ -120,5 +120,5 @@ execute if score spawn_text baba matches 4421 run summon item_display ~ ~ ~ {wid
 execute if score spawn_text baba matches 4610763 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","not_all","reparse","part.noun"],item:{id:"minecraft:potion",Count:1b,tag:{text:"brick",scores:{z_layer:20,color:9463614}}}}
 execute if score spawn_text baba matches 2378456 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","not_all","reparse","part.noun"],item:{id:"minecraft:potion",Count:1b,tag:{text:"cliff",scores:{z_layer:20,color:9463614}}}}
 scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] text = spawn_text baba
-scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] text_id > @e[type=item_display,tag=baba.object,scores={sprite=30442}] text_id
+scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] text_id > @e[type=item_display,tag=baba.object,scores={sprite=349615}] text_id
 scoreboard players add @e[type=item_display,tag=spawn,distance=..0.1,limit=1] text_id 1
