@@ -258,7 +258,7 @@ sprites:
     - null
     - name: tile
       text color: '#737373'
-      object color: '#242424'
+      object color: '#15181f'
       properties:
         z_layer: 4
     - name: fruit
@@ -991,6 +991,22 @@ sprites:
         z_layer: 20
     sprites:
     - {}
+
+particles:
+- name: win
+  color: '#ede285'
+  scale: 0.666666
+  interpolate: 15
+  life: 12
+- name: melt
+  color: '#737373'
+  interpolate: 20
+  life: 18
+- name: sink
+  color: preset
+  scale: 0.666666
+  interpolate: 10
+  life: 10
 
 palettes:
   default:

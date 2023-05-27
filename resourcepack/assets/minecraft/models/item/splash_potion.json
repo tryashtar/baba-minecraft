@@ -6,7 +6,11 @@
    },
    "display": {
       "fixed": {
-         "scale": [0, 0, 0]
+         "scale": [
+            0,
+            0,
+            0
+         ]
       }
    },
    "overrides": [
@@ -99,6 +103,24 @@
             "custom_model_data": 15
          },
          "model": "baba:particles/melt/9"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 16
+         },
+         "model": "baba:particles/sink/1"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 17
+         },
+         "model": "baba:particles/sink/2"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 18
+         },
+         "model": "baba:particles/sink/3"
       }
    ]
 }

@@ -1,4 +1,5 @@
 import os
+import math
 import tryashtools as tat
 import sprite
 import resources
@@ -20,6 +21,59 @@ def main():
   generate_update_function(source, sprite_resources)
   generate_give_commands(editor_resources, blockstates)
   generate_packing_functions(source, blockstates)
+  generate_particles(sprite_data['particles'])
+
+def generate_particles(particles):
+  cmd = 1
+  model = []
+  tat.delete_folder('datapack/data/baba/functions/display/particle/init')
+  tat.delete_folder('datapack/data/baba/functions/display/particle/tick')
+  tat.delete_folder(f'resourcepack/assets/baba/models/particles')
+  parent_init = ['tag @s add init']
+  parent_tick = [
+    'scoreboard players remove @s life 1',
+    'kill @s[scores={life=..0}]'
+  ]
+  for particle in particles:
+    name = particle['name']
+    scale = particle.get('scale', 1)
+    interp = particle['interpolate']
+    life = particle['life']
+    parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
+    parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
+    init_lines = [
+      f'item replace entity @s container.0 with splash_potion{{CustomModelData:{cmd}}}'
+    ]
+    tick_lines = []
+    if color := particle.get('color'):
+      if color == 'preset':
+        init_lines.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get @s color')
+      else:
+        init_lines.extend([
+          f'scoreboard players set color baba {int(color[1:],16)}',
+          'execute if score palette baba matches 1.. run function baba:display/palette',
+          'execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba'
+        ])
+    init_lines.extend([
+      'execute summon marker run function baba:display/particle/random',
+      f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{interp},transformation:{{translation:[0f,0f,0f]}}}}',
+      'execute store result storage baba:main merge.transformation.translation[0] float 0.0000000005 run data get storage baba:main random[0]',
+      'execute store result storage baba:main merge.transformation.translation[2] float 0.0000000005 run data get storage baba:main random[1]',
+      'data modify entity @s {} merge from storage baba:main merge',
+      f'scoreboard players set @s life {life}',
+    ])
+    tat.write_lines(init_lines, f'datapack/data/baba/functions/display/particle/init/{name}.mcfunction')
+    textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{name}')), key=int))
+    for i,tx in enumerate(textures):
+      model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
+      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{name}/{tx}.json')
+      if i > 0:
+        tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run data modify entity @s item.tag.CustomModelData set value {cmd}')
+      cmd += 1
+    tat.write_lines(tick_lines, f'datapack/data/baba/functions/display/particle/tick/{name}.mcfunction')
+  tat.write_lines(parent_init, 'datapack/data/baba/functions/display/particle/init.mcfunction')
+  tat.write_lines(parent_tick, 'datapack/data/baba/functions/display/particle/tick.mcfunction')
+  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":"minecraft:item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json')
 
 def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/functions/editor/pack/block')

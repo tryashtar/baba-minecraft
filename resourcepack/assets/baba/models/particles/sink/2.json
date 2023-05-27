@@ -1,7 +1,7 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:particles/win/4"
+      "up": "baba:particles/sink/2"
    },
    "display": {
       "fixed": {
