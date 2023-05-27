@@ -75,5 +75,13 @@ def create_storage(properties, data=None):
     nbt.append('data:{' + data + '}')
   return ','.join(nbt)
 
+too_big = {}
 def id_hash(string):
-  return int(hashlib.sha1(string.encode('utf-8')).hexdigest(), 16) % (2 ** 16)
+  total = 0
+  for i,c in enumerate(string):
+    total += 26**i * (ord(c) - 97)
+  if total > 2147483647:
+    if string not in too_big:
+      too_big[string] = -len(too_big) - 1
+    return too_big[string]
+  return total

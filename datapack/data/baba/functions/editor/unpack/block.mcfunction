@@ -1,238 +1,238 @@
 data modify storage baba:main tile set from storage baba:main level.tiles[0][0][0]
-execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
-execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
-execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
-execute if data storage baba:main tile{scores:{sprite:23193}} run function baba:editor/unpack/block/baba
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:30442}} run function baba:editor/unpack/block/text
-execute if data storage baba:main tile{scores:{sprite:45087}} run function baba:editor/unpack/block/keke
-execute if data storage baba:main tile{scores:{sprite:45087}} run function baba:editor/unpack/block/keke
-execute if data storage baba:main tile{scores:{sprite:45087}} run function baba:editor/unpack/block/keke
-execute if data storage baba:main tile{scores:{sprite:45087}} run function baba:editor/unpack/block/keke
-execute if data storage baba:main tile{scores:{sprite:61656}} run function baba:editor/unpack/block/me
-execute if data storage baba:main tile{scores:{sprite:61656}} run function baba:editor/unpack/block/me
-execute if data storage baba:main tile{scores:{sprite:61656}} run function baba:editor/unpack/block/me
-execute if data storage baba:main tile{scores:{sprite:61656}} run function baba:editor/unpack/block/me
-execute if data storage baba:main tile{scores:{sprite:8465}} run function baba:editor/unpack/block/robot
-execute if data storage baba:main tile{scores:{sprite:8465}} run function baba:editor/unpack/block/robot
-execute if data storage baba:main tile{scores:{sprite:8465}} run function baba:editor/unpack/block/robot
-execute if data storage baba:main tile{scores:{sprite:8465}} run function baba:editor/unpack/block/robot
-execute if data storage baba:main tile{scores:{sprite:35402}} run function baba:editor/unpack/block/belt
-execute if data storage baba:main tile{scores:{sprite:35402}} run function baba:editor/unpack/block/belt
-execute if data storage baba:main tile{scores:{sprite:35402}} run function baba:editor/unpack/block/belt
-execute if data storage baba:main tile{scores:{sprite:35402}} run function baba:editor/unpack/block/belt
-execute if data storage baba:main tile{scores:{sprite:33425}} run function baba:editor/unpack/block/bird
-execute if data storage baba:main tile{scores:{sprite:33425}} run function baba:editor/unpack/block/bird
-execute if data storage baba:main tile{scores:{sprite:33425}} run function baba:editor/unpack/block/bird
-execute if data storage baba:main tile{scores:{sprite:33425}} run function baba:editor/unpack/block/bird
-execute if data storage baba:main tile{scores:{sprite:65488}} run function baba:editor/unpack/block/bug
-execute if data storage baba:main tile{scores:{sprite:65488}} run function baba:editor/unpack/block/bug
-execute if data storage baba:main tile{scores:{sprite:65488}} run function baba:editor/unpack/block/bug
-execute if data storage baba:main tile{scores:{sprite:65488}} run function baba:editor/unpack/block/bug
-execute if data storage baba:main tile{scores:{sprite:23664}} run function baba:editor/unpack/block/crab
-execute if data storage baba:main tile{scores:{sprite:23664}} run function baba:editor/unpack/block/crab
-execute if data storage baba:main tile{scores:{sprite:23664}} run function baba:editor/unpack/block/crab
-execute if data storage baba:main tile{scores:{sprite:23664}} run function baba:editor/unpack/block/crab
-execute if data storage baba:main tile{scores:{sprite:20987}} run function baba:editor/unpack/block/rocket
-execute if data storage baba:main tile{scores:{sprite:20987}} run function baba:editor/unpack/block/rocket
-execute if data storage baba:main tile{scores:{sprite:20987}} run function baba:editor/unpack/block/rocket
-execute if data storage baba:main tile{scores:{sprite:20987}} run function baba:editor/unpack/block/rocket
-execute if data storage baba:main tile{scores:{sprite:61583}} run function baba:editor/unpack/block/skull
-execute if data storage baba:main tile{scores:{sprite:61583}} run function baba:editor/unpack/block/skull
-execute if data storage baba:main tile{scores:{sprite:61583}} run function baba:editor/unpack/block/skull
-execute if data storage baba:main tile{scores:{sprite:61583}} run function baba:editor/unpack/block/skull
-execute if data storage baba:main tile{scores:{sprite:44713}} run function baba:editor/unpack/block/ghost
-execute if data storage baba:main tile{scores:{sprite:44713}} run function baba:editor/unpack/block/ghost
-execute if data storage baba:main tile{scores:{sprite:44713}} run function baba:editor/unpack/block/ghost
-execute if data storage baba:main tile{scores:{sprite:44713}} run function baba:editor/unpack/block/ghost
-execute if data storage baba:main tile{scores:{sprite:25730}} run function baba:editor/unpack/block/statue
-execute if data storage baba:main tile{scores:{sprite:25730}} run function baba:editor/unpack/block/statue
-execute if data storage baba:main tile{scores:{sprite:25730}} run function baba:editor/unpack/block/statue
-execute if data storage baba:main tile{scores:{sprite:25730}} run function baba:editor/unpack/block/statue
-execute if data storage baba:main tile{scores:{sprite:45408}} run function baba:editor/unpack/block/bolt
-execute if data storage baba:main tile{scores:{sprite:45408}} run function baba:editor/unpack/block/bolt
-execute if data storage baba:main tile{scores:{sprite:45408}} run function baba:editor/unpack/block/bolt
-execute if data storage baba:main tile{scores:{sprite:45408}} run function baba:editor/unpack/block/bolt
-execute if data storage baba:main tile{scores:{sprite:11302}} run function baba:editor/unpack/block/hand
-execute if data storage baba:main tile{scores:{sprite:11302}} run function baba:editor/unpack/block/hand
-execute if data storage baba:main tile{scores:{sprite:11302}} run function baba:editor/unpack/block/hand
-execute if data storage baba:main tile{scores:{sprite:11302}} run function baba:editor/unpack/block/hand
-execute if data storage baba:main tile{scores:{sprite:54043}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:17246}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:22412}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:7620}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:14151}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:30686}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:1043}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:51368}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:49848}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:54021}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:61188}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:34898}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:22457}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:13704}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:29188}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
-execute if data storage baba:main tile{scores:{sprite:3475}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:50707}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:21096}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:2451}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:12661}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:56535}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:58060}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:49201}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:55367}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:64585}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:33356}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:1108}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:18040}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:23508}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:39810}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:32385}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:20568}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:58614}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:28145}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:31241}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:42872}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:59074}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:40563}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:58937}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:60402}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:42294}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:26837}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:48700}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:26472}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:30894}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:52941}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:26372}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
-execute if data storage baba:main tile{scores:{sprite:60823}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:40985}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:27096}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:49468}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:42043}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:28861}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:58667}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:41172}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:32467}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=true,facing=west]
-execute if data storage baba:main tile{scores:{sprite:2526}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:677}} run function baba:editor/unpack/block/baba
+execute if data storage baba:main tile{scores:{sprite:677}} run function baba:editor/unpack/block/baba
+execute if data storage baba:main tile{scores:{sprite:677}} run function baba:editor/unpack/block/baba
+execute if data storage baba:main tile{scores:{sprite:677}} run function baba:editor/unpack/block/baba
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:349615}} run function baba:editor/unpack/block/text
+execute if data storage baba:main tile{scores:{sprite:77178}} run function baba:editor/unpack/block/keke
+execute if data storage baba:main tile{scores:{sprite:77178}} run function baba:editor/unpack/block/keke
+execute if data storage baba:main tile{scores:{sprite:77178}} run function baba:editor/unpack/block/keke
+execute if data storage baba:main tile{scores:{sprite:77178}} run function baba:editor/unpack/block/keke
+execute if data storage baba:main tile{scores:{sprite:116}} run function baba:editor/unpack/block/me
+execute if data storage baba:main tile{scores:{sprite:116}} run function baba:editor/unpack/block/me
+execute if data storage baba:main tile{scores:{sprite:116}} run function baba:editor/unpack/block/me
+execute if data storage baba:main tile{scores:{sprite:116}} run function baba:editor/unpack/block/me
+execute if data storage baba:main tile{scores:{sprite:8929665}} run function baba:editor/unpack/block/robot
+execute if data storage baba:main tile{scores:{sprite:8929665}} run function baba:editor/unpack/block/robot
+execute if data storage baba:main tile{scores:{sprite:8929665}} run function baba:editor/unpack/block/robot
+execute if data storage baba:main tile{scores:{sprite:8929665}} run function baba:editor/unpack/block/robot
+execute if data storage baba:main tile{scores:{sprite:341485}} run function baba:editor/unpack/block/belt
+execute if data storage baba:main tile{scores:{sprite:341485}} run function baba:editor/unpack/block/belt
+execute if data storage baba:main tile{scores:{sprite:341485}} run function baba:editor/unpack/block/belt
+execute if data storage baba:main tile{scores:{sprite:341485}} run function baba:editor/unpack/block/belt
+execute if data storage baba:main tile{scores:{sprite:64429}} run function baba:editor/unpack/block/bird
+execute if data storage baba:main tile{scores:{sprite:64429}} run function baba:editor/unpack/block/bird
+execute if data storage baba:main tile{scores:{sprite:64429}} run function baba:editor/unpack/block/bird
+execute if data storage baba:main tile{scores:{sprite:64429}} run function baba:editor/unpack/block/bird
+execute if data storage baba:main tile{scores:{sprite:4577}} run function baba:editor/unpack/block/bug
+execute if data storage baba:main tile{scores:{sprite:4577}} run function baba:editor/unpack/block/bug
+execute if data storage baba:main tile{scores:{sprite:4577}} run function baba:editor/unpack/block/bug
+execute if data storage baba:main tile{scores:{sprite:4577}} run function baba:editor/unpack/block/bug
+execute if data storage baba:main tile{scores:{sprite:18020}} run function baba:editor/unpack/block/crab
+execute if data storage baba:main tile{scores:{sprite:18020}} run function baba:editor/unpack/block/crab
+execute if data storage baba:main tile{scores:{sprite:18020}} run function baba:editor/unpack/block/crab
+execute if data storage baba:main tile{scores:{sprite:18020}} run function baba:editor/unpack/block/crab
+execute if data storage baba:main tile{scores:{sprite:227751541}} run function baba:editor/unpack/block/rocket
+execute if data storage baba:main tile{scores:{sprite:227751541}} run function baba:editor/unpack/block/rocket
+execute if data storage baba:main tile{scores:{sprite:227751541}} run function baba:editor/unpack/block/rocket
+execute if data storage baba:main tile{scores:{sprite:227751541}} run function baba:editor/unpack/block/rocket
+execute if data storage baba:main tile{scores:{sprite:5233870}} run function baba:editor/unpack/block/skull
+execute if data storage baba:main tile{scores:{sprite:5233870}} run function baba:editor/unpack/block/skull
+execute if data storage baba:main tile{scores:{sprite:5233870}} run function baba:editor/unpack/block/skull
+execute if data storage baba:main tile{scores:{sprite:5233870}} run function baba:editor/unpack/block/skull
+execute if data storage baba:main tile{scores:{sprite:9008564}} run function baba:editor/unpack/block/ghost
+execute if data storage baba:main tile{scores:{sprite:9008564}} run function baba:editor/unpack/block/ghost
+execute if data storage baba:main tile{scores:{sprite:9008564}} run function baba:editor/unpack/block/ghost
+execute if data storage baba:main tile{scores:{sprite:9008564}} run function baba:editor/unpack/block/ghost
+execute if data storage baba:main tile{scores:{sprite:56999480}} run function baba:editor/unpack/block/statue
+execute if data storage baba:main tile{scores:{sprite:56999480}} run function baba:editor/unpack/block/statue
+execute if data storage baba:main tile{scores:{sprite:56999480}} run function baba:editor/unpack/block/statue
+execute if data storage baba:main tile{scores:{sprite:56999480}} run function baba:editor/unpack/block/statue
+execute if data storage baba:main tile{scores:{sprite:341745}} run function baba:editor/unpack/block/bolt
+execute if data storage baba:main tile{scores:{sprite:341745}} run function baba:editor/unpack/block/bolt
+execute if data storage baba:main tile{scores:{sprite:341745}} run function baba:editor/unpack/block/bolt
+execute if data storage baba:main tile{scores:{sprite:341745}} run function baba:editor/unpack/block/bolt
+execute if data storage baba:main tile{scores:{sprite:61523}} run function baba:editor/unpack/block/hand
+execute if data storage baba:main tile{scores:{sprite:61523}} run function baba:editor/unpack/block/hand
+execute if data storage baba:main tile{scores:{sprite:61523}} run function baba:editor/unpack/block/hand
+execute if data storage baba:main tile{scores:{sprite:61523}} run function baba:editor/unpack/block/hand
+execute if data storage baba:main tile{scores:{sprite:12845}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:52571013}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:4422}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:1832246}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:105747}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:16338}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:84875}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:2009480}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:9614}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:308623}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:204207723}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:227777077}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:202184387}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:177493}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:77967}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=true,facing=east]
+execute if data storage baba:main tile{scores:{sprite:8837119}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:238328}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:299304}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:73469}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:15913}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:82009}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:83154}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:11168309}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:55553}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:232770}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:9326}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:3770577}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:188455}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:87995}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:1132}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:8299037}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:77066}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:13211}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:1307099773}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:82853}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:346635}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:223119057}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:8414023}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:7079584}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:-1}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:-2}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:5111351}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:1732200}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:1871953}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:8542384}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:1935499}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:2764}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=true,slot_4_occupied=true,slot_5_occupied=false,facing=west]
+execute if data storage baba:main tile{scores:{sprite:79311}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:80667}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:52571029}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:200794}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:7851762}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:14207}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:4421}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:4610763}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=true,slot_2_occupied=true,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:2378456}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=true,facing=west]
+execute if data storage baba:main tile{scores:{sprite:208709438}} run setblock ~ ~ ~ chiseled_bookshelf[slot_0_occupied=true,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=true,slot_4_occupied=false,slot_5_occupied=true,facing=west]
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items set value [{id:"book",Count:1b}]
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].tag.extra set from storage baba:main tile.extra
 data remove storage baba:main level.tiles[0][0][0]
