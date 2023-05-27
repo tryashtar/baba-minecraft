@@ -37,7 +37,7 @@ def generate_particles(particles):
   for particle in particles:
     name = particle['name']
     scale = particle.get('scale', 1)
-    interp = particle['interpolate']
+    speed = particle['speed']
     life = particle['life']
     parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
     parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
@@ -56,9 +56,9 @@ def generate_particles(particles):
         ])
     init_lines.extend([
       'execute summon marker run function baba:display/particle/random',
-      f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{interp},transformation:{{translation:[0f,0f,0f]}}}}',
-      'execute store result storage baba:main merge.transformation.translation[0] float 0.0000000005 run data get storage baba:main random[0]',
-      'execute store result storage baba:main merge.transformation.translation[2] float 0.0000000005 run data get storage baba:main random[1]',
+      f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
+      f'execute store result storage baba:main merge.transformation.translation[0] float {speed/2147483647:.20f} run data get storage baba:main random[0]',
+      f'execute store result storage baba:main merge.transformation.translation[2] float {speed/2147483647:.20f} run data get storage baba:main random[1]',
       'data modify entity @s {} merge from storage baba:main merge',
       f'scoreboard players set @s life {life}',
     ])

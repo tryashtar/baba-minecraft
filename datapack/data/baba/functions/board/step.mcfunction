@@ -29,7 +29,9 @@ execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run f
 
 # properties are checked in batches
 tag @e[type=item_display,tag=baba.object,tag=teleported] remove teleported
+scoreboard players set teleported baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.tele] at @s run function baba:board/interact/teleport
+execute if score teleported baba matches 1.. as @a at @s run playsound baba:teleport master @s
 # shift changes the facing direction of objects both when pushing and when landing
 execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/movement/process/shift_dir
 execute if score direction baba matches 1.. as @e[type=item_display,tag=baba.object,tag=prop.select] at @s run function baba:board/movement/select

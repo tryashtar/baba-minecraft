@@ -996,17 +996,22 @@ particles:
 - name: win
   color: '#ede285'
   scale: 0.666666
-  interpolate: 15
+  speed: 1
   life: 12
 - name: melt
   color: '#737373'
-  interpolate: 20
+  speed: 1
   life: 18
 - name: sink
   color: preset
   scale: 0.666666
-  interpolate: 10
+  speed: 0.8
   life: 10
+- name: tele
+  color: '#83c8e5'
+  scale: 0.333333
+  speed: 1.5
+  life: 12
 
 palettes:
   default:

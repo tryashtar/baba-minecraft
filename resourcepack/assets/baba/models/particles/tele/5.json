@@ -1,0 +1,20 @@
+{
+   "parent": "baba:sprite",
+   "textures": {
+      "up": "baba:particles/tele/5"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [
+            0,
+            90,
+            0
+         ],
+         "scale": [
+            0.333333,
+            0.001,
+            0.333333
+         ]
+      }
+   }
+}

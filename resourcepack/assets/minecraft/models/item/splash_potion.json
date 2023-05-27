@@ -121,6 +121,36 @@
             "custom_model_data": 18
          },
          "model": "baba:particles/sink/3"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 19
+         },
+         "model": "baba:particles/tele/1"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 20
+         },
+         "model": "baba:particles/tele/2"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 21
+         },
+         "model": "baba:particles/tele/3"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 22
+         },
+         "model": "baba:particles/tele/4"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 23
+         },
+         "model": "baba:particles/tele/5"
       }
    ]
 }

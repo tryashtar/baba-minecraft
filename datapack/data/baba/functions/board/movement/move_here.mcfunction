@@ -16,5 +16,5 @@ execute at @s[scores={sprite=30442}] run tag @e[type=item_display,tag=baba.objec
 tp @s ~ ~ ~
 tag @s[tag=assign_move] add assign
 tag @s[scores={sprite=30442}] add reparse
-scoreboard players add moved baba 1
+execute if entity @s[tag=!teleported] run scoreboard players add moved baba 1
 tag @s remove moving
