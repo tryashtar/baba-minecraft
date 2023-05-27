@@ -1,0 +1,12 @@
+{
+   "parent": "baba:sprite",
+   "textures": {
+      "up": "baba:particles/melt/8"
+   },
+   "display": {
+      "fixed": {
+         "rotation": [0, 90, 0],
+         "scale": [1, 0.001, 1]
+      }
+   }
+}

@@ -45,6 +45,60 @@
             "custom_model_data": 6
          },
          "model": "baba:particles/win/6"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 7
+         },
+         "model": "baba:particles/melt/1"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 8
+         },
+         "model": "baba:particles/melt/2"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 9
+         },
+         "model": "baba:particles/melt/3"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 10
+         },
+         "model": "baba:particles/melt/4"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 11
+         },
+         "model": "baba:particles/melt/5"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 12
+         },
+         "model": "baba:particles/melt/6"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 13
+         },
+         "model": "baba:particles/melt/7"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 14
+         },
+         "model": "baba:particles/melt/8"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 15
+         },
+         "model": "baba:particles/melt/9"
       }
    ]
 }

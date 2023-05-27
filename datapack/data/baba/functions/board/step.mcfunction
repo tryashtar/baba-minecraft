@@ -62,7 +62,9 @@ execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run f
 
 execute as @e[type=item_display,tag=baba.object,tag=prop.sink] at @s run function baba:board/interact/sink
 execute as @e[type=item_display,tag=baba.object,tag=prop.weak] at @s run function baba:board/interact/weak
+scoreboard players set melted baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.hot] at @s run function baba:board/interact/hot
+execute if score melted baba matches 1.. as @a at @s run playsound baba:melt master @s
 execute as @e[type=item_display,tag=baba.object,tag=prop.defeat] at @s run function baba:board/interact/defeat
 execute as @e[type=item_display,tag=baba.object,tag=prop.shut] at @s run function baba:board/interact/shut
 

@@ -10,8 +10,9 @@ execute if entity @e[type=marker,tag=baba.input,tag=chosen,tag=down,limit=1] run
 execute if entity @e[type=marker,tag=baba.input,tag=chosen,tag=left,limit=1] run scoreboard players set @s facing 3
 execute if entity @e[type=marker,tag=baba.input,tag=chosen,tag=right,limit=1] run scoreboard players set @s facing 4
 execute unless entity @e[type=marker,tag=baba.input,tag=chosen,limit=1] if score @s buffer matches 0 run scoreboard players set @s facing 0
-execute if entity @s[scores={move_cooldown=0,win=0,facing=1..}] run function baba:input/move
-execute if entity @s[scores={move_cooldown=0,win=0,facing=0},predicate=baba:sneaking] unless entity @e[type=marker,tag=baba.input,tag=chosen,limit=1] run function baba:input/wait
+execute if entity @s[scores={drop=0,move_cooldown=0,win=0,facing=1..}] run function baba:input/move
+execute if entity @s[scores={drop=0,move_cooldown=0,win=0,facing=0},predicate=baba:sneaking] unless entity @e[type=marker,tag=baba.input,tag=chosen,limit=1] run function baba:input/wait
+execute if entity @s[scores={drop=1..,win=0}] run function baba:input/undo
 tag @e[type=marker,tag=baba.input,tag=chosen] remove chosen
 scoreboard players remove @s[scores={move_cooldown=1..}] move_cooldown 1
 scoreboard players remove @s[scores={buffer=1..}] buffer 1
