@@ -215,7 +215,7 @@ class Metadata:
       if self.converter == 'hex':
         return str(int(value[1:], 16))
       if self.converter == 'letter':
-        return str(ord(value) - 97)
+        return str(ord(value) - 96)
       if isinstance(value, str):
         return str(self.values.index(value) + 1)
       if isinstance(value, list):

@@ -79,7 +79,7 @@ too_big = {}
 def id_hash(string):
   total = 0
   for i,c in enumerate(string):
-    total += 26**i * (ord(c) - 97)
+    total += 27**i * (ord(c) - 96)
   if total > 2147483647:
     if string not in too_big:
       too_big[string] = -len(too_big) - 1
