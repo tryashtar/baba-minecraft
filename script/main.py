@@ -87,7 +87,13 @@ def generate_packing_functions(source, blockstates):
     lines = []
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
-      set_storage = ops.create_storage(spr.properties, None if text_val is None else f'text:"{text_val}"')
+      letter_val = props.get(source.properties['letter'])
+      extra_data = None
+      if text_val is not None:
+        extra_data = f'text:"{text_val}"'
+      if letter_val is not None:
+        extra_data = f'text:"{letter_val}"'
+      set_storage = ops.create_storage(spr.properties, extra_data)
       check_rest = ops.create_storage(ops.filter_properties(props, lambda x: x.name!='sprite'))
       block,state = blockstates[spr]
       this_state = state.copy()
