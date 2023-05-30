@@ -1,6 +1,7 @@
 scoreboard objectives add baba dummy
 scoreboard objectives add sprite dummy
 scoreboard objectives add text dummy
+scoreboard objectives add letter dummy
 scoreboard objectives add facing dummy
 scoreboard objectives add direction dummy
 scoreboard objectives add frame dummy

@@ -1,0 +1,20 @@
+{
+   "variants": {
+      "honey_level=0,facing=north": {
+         "model": "baba:editor/bog",
+         "y": 90
+      },
+      "honey_level=1,facing=north": {
+         "model": "baba:editor/brick",
+         "y": 90
+      },
+      "honey_level=2,facing=north": {
+         "model": "baba:editor/cliff",
+         "y": 90
+      },
+      "honey_level=3,facing=north": {
+         "model": "baba:editor/cursor",
+         "y": 90
+      }
+   }
+}
