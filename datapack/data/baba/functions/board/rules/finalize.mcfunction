@@ -21,9 +21,9 @@ data remove storage baba:main rule_data.transforms[{inverted:0b,text_text:"all",
 
 # builtin rules: 'text is push', 'level is stop', 'cursor is select'
 # can be disabled by inverted rules
-execute if entity @s[scores={sprite=349615}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"push"}] run data modify storage baba:main rule_data.properties append value "push"
-execute if entity @s[scores={sprite=5111351}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"stop"}] run data modify storage baba:main rule_data.properties append value "stop"
-execute if entity @s[scores={sprite=208709438}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"select"}] run data modify storage baba:main rule_data.properties append value "select"
+execute if entity @s[scores={sprite=411311}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"push"}] run data modify storage baba:main rule_data.properties append value "push"
+execute if entity @s[scores={sprite=6491892}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"stop"}] run data modify storage baba:main rule_data.properties append value "stop"
+execute if entity @s[scores={sprite=266639610}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text_text:"select"}] run data modify storage baba:main rule_data.properties append value "select"
 
 data modify entity @s item.tag set from storage baba:main rule_data
 
