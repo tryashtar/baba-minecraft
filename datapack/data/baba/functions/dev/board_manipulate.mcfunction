@@ -5,9 +5,9 @@ data modify storage baba:main level.tiles[0][0][0] set from storage baba:main ti
 function baba:editor/load/spawn
 setblock ~ ~ ~ air
 
-scoreboard players add @e[type=item_display,tag=baba.object,scores={sprite=411311},distance=..0.1] text_id 0
-tag @e[type=item_display,tag=baba.object,scores={sprite=411311,text_id=0},distance=..0.1] add new_text
-scoreboard players operation @e[type=item_display,tag=baba.object,tag=new_text,distance=..0.1] text_id > @e[type=item_display,tag=baba.object,scores={sprite=411311}] text_id
+scoreboard players add @e[type=item_display,tag=baba.object,scores={sprite=397973},distance=..0.1] text_id 0
+tag @e[type=item_display,tag=baba.object,scores={sprite=397973,text_id=0},distance=..0.1] add new_text
+scoreboard players operation @e[type=item_display,tag=baba.object,tag=new_text,distance=..0.1] text_id > @e[type=item_display,tag=baba.object,scores={sprite=397973}] text_id
 scoreboard players add @e[type=item_display,tag=baba.object,tag=new_text,distance=..0.1] text_id 1
 tag @e[type=item_display,tag=baba.object,tag=new_text,distance=..0.1] remove new_text
 

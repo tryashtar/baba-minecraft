@@ -25,7 +25,7 @@ tag @e[type=item_display,tag=baba.object,tag=found_text] remove found_text
 # process some things before the first step
 execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 scoreboard players set text_id baba 0
-execute as @e[type=item_display,tag=baba.object,scores={sprite=411311}] store result score @s text_id run scoreboard players add text_id baba 1
+execute as @e[type=item_display,tag=baba.object,scores={sprite=397973}] store result score @s text_id run scoreboard players add text_id baba 1
 # don't trigger 'idle' conditions
 scoreboard players set direction baba -1
 data modify storage baba:main rules set value []
