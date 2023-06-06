@@ -17,6 +17,7 @@
 #     - text: ID of parameter (noun/property)
 #     - text_text: string array for parameter
 #     - inverted: 1b for "not" parameters
+# - text_ids (list): IDs of text objects that participate in this rule
 
 # rules (as they appear in the rule list) have exactly one subject, verb, and effect
 # however, sentences (sequences of text objects) can use "and" to have multiple of these
