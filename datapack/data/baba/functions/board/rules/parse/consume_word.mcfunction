@@ -1,5 +1,6 @@
 scoreboard players operation word baba = @s text
-data modify storage baba:main word set from entity @s item.tag.text
+data modify storage baba:main parsing.word_text set value []
+data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 data modify storage baba:main parsing.ids set value [0]
 execute store result storage baba:main parsing.ids[0] int 1 run scoreboard players get @s text_id
 

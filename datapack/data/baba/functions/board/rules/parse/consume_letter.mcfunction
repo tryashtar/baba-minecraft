@@ -1,7 +1,6 @@
 execute store result score word baba run data get storage baba:main parsing.word 27
 execute store result storage baba:main parsing.word int 1 run scoreboard players operation word baba += @s letter
-# to do: form text from multiple letters
-data modify storage baba:main word set from entity @s item.tag.text
+data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 execute store result storage baba:main id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.ids append from storage baba:main id
 
