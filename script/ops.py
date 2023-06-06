@@ -85,3 +85,10 @@ def id_hash(string):
       too_big[string] = -len(too_big) - 1
     return too_big[string]
   return total
+
+def reverse_hash(num):
+  result = ""
+  while num > 0:
+    num,r = divmod(num, 27)
+    result += chr(r + 96)
+  return result[::-1]

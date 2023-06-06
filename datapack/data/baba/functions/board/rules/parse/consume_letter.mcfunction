@@ -1,10 +1,14 @@
 # letters are trickier, we need to assemble the word ID and string one character at a time
 # even more strangely, only words present in the "level palette" can be parsed
+
+# we can shift the current word over to fit the new letter at the same time as fetching it from storage
+# conveniently, this also clamps instead of overflowing, preventing a bug where large words like "kbhuzow" would wrap to the same ID as "baba"
+tag @s add current_word
 execute store result score word baba run data get storage baba:main parsing.word 27
 execute store result storage baba:main parsing.word int 1 run scoreboard players operation word baba += @s letter
 data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 execute store result storage baba:main id int 1 run scoreboard players get @s text_id
-data modify storage baba:main parsing.ids append from storage baba:main id
+data modify storage baba:main parsing.word_ids append from storage baba:main id
 
 # these parts of speech only have one possible word, so a simple palette check
 execute if score word baba matches 10631 if data storage baba:main words{not:[10631]} run function baba:board/rules/parse/part/not

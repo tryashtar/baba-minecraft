@@ -15,7 +15,7 @@ class SpriteCollection:
     self.properties = {
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
-      'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='letter'),
+      'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
       'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
     }
@@ -214,8 +214,6 @@ class Metadata:
         return str(ops.id_hash(value))
       if self.converter == 'hex':
         return str(int(value[1:], 16))
-      if self.converter == 'letter':
-        return str(ord(value) - 96)
       if isinstance(value, str):
         return str(self.values.index(value) + 1)
       if isinstance(value, list):

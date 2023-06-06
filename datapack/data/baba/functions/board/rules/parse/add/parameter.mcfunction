@@ -1,4 +1,7 @@
-data modify storage baba:main parsing.rules2[].text_ids append from storage baba:main parsing.ids[]
+tag @e[type=item_display,tag=current_word] add all_rules
+tag @e[type=item_display,tag=current_not] add all_rules
+tag @e[type=item_display,tag=current_not] remove current_not
+data modify storage baba:main parsing.rules2[].text_ids append from storage baba:main parsing.word_ids[]
 data modify storage baba:main parsing.rules2[].text_ids append from storage baba:main parsing.not_ids[]
 data modify storage baba:main parsing.not_ids set value []
 data modify storage baba:main parsing.rules2[].conditions[-1].parameters append value {}

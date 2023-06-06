@@ -1,9 +1,11 @@
 # full words are easy; we already know the part of speech, full word ID and string text
+tag @e[type=item_display,tag=current_word] remove current_word
+tag @s add current_word
 scoreboard players operation word baba = @s text
 data modify storage baba:main parsing.word_text set value []
 data modify storage baba:main parsing.word_text append from entity @s item.tag.text
-data modify storage baba:main parsing.ids set value [0]
-execute store result storage baba:main parsing.ids[0] int 1 run scoreboard players get @s text_id
+data modify storage baba:main parsing.word_ids set value [0]
+execute store result storage baba:main parsing.word_ids[0] int 1 run scoreboard players get @s text_id
 
 # each of these check the parsing context "state" to see if this part of speech is expected
 # if so, it will be parsed and modify the state accordingly
