@@ -1,6 +1,5 @@
-data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags set value []
-data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags append from entity @s item.tag.parsing.make[].text_text
-execute store result score before baba run data get entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags
-data modify entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags append from storage baba:main rule.effect.text_text
-execute store result score after baba run data get entity aee4e839-6b46-4f38-97f8-d49dfe743ff1 Tags
-execute if score after baba > before baba run data modify entity @s item.tag.parsing.make append from storage baba:main rule.effect
+data modify storage baba:main check set value []
+data modify storage baba:main check append from entity @s item.tag.parsing.make[].text
+execute store result score size baba run data get storage baba:main check
+execute store result score changed baba run data modify storage baba:main check[] set from storage baba:main rule.effect.text
+execute if score changed baba >= size baba run data modify entity @s item.tag.parsing.make append from storage baba:main rule.effect

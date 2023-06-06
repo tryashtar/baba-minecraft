@@ -6,7 +6,7 @@ scoreboard players set passed baba 0
 # so we mark the object for re-assign if it changes in certain ways next step
 execute if data storage baba:main condition{condition:180392} if score direction baba matches 0 run scoreboard players set passed baba 1
 execute if data storage baba:main condition{condition:180392} run tag @s add assign_idle
-execute if data storage baba:main condition{condition:180438055} if entity @e[type=item_display,tag=baba.object,tag=!self,distance=..0.1] run scoreboard players set passed baba 1
+execute if data storage baba:main condition{condition:180438055} unless entity @e[type=item_display,tag=baba.object,tag=!self,distance=..0.1] run scoreboard players set passed baba 1
 execute if data storage baba:main condition{condition:180438055} run tag @s add assign_move
 execute if data storage baba:main condition{condition:8104442} if predicate baba:often run scoreboard players set passed baba 1
 execute if data storage baba:main condition{condition:8104442} run tag @s add assign_always

@@ -9,6 +9,7 @@
 #   - text: ID of effect (noun/property)
 #   - text_text: string array for effect
 #   - inverted: 1b for "not" effects
+#   - part: "noun" or "property"
 # - conditions (list):
 #   - condition: ID of condition
 #   - condition_text: string array for condition
@@ -29,6 +30,6 @@
 # lastly, each effect in the sentence adds this list of templates to 'rules3', then applies its own data to each
 
 tag @s remove first_word
-data modify storage baba:main parsing_stack set value [{inverted:0b,state:{noun:"subject",verb:"none",property:"none",and:"none",not:"self",prefix:"ready",infix:"none"},rules1:{}}]
+data modify storage baba:main parsing_stack set value [{inverted:0b,state:{noun:"subject",verb:"none",property:"none",and:"none",not:"self",prefix:"ready",infix:"none"},rules1:{conditions:[]}}]
 
 function baba:board/rules/parse/consume
