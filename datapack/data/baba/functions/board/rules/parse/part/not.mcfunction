@@ -1,4 +1,4 @@
-execute if data storage baba:main parsing.state{not:"none"} run function baba:board/rules/parse/unexpected
+execute if data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.finished set value 1b
 execute unless data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.not_ids append from storage baba:main parsing.ids[]
 execute unless data storage baba:main parsing.state{not:"none"} store success storage baba:main parsing.inverted byte 1 unless data storage baba:main parsing{inverted:1b}
 execute if data storage baba:main parsing.state{not:"subject"} run data modify storage baba:main parsing.state set value {noun:"subject",verb:"none",property:"none",and:"none",not:"self",prefix:"none",infix:"none"}

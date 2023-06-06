@@ -1,3 +1,4 @@
+data modify storage baba:main parsing.complete set value 1b
 data modify storage baba:main parsing.effects[-1].effects append value {}
 data modify storage baba:main parsing.effects[-1].text_ids append from storage baba:main parsing.ids[]
 data modify storage baba:main parsing.effects[-1].text_ids append from storage baba:main parsing.not_ids[]
