@@ -22,3 +22,13 @@ data modify storage baba:main check_words set from storage baba:main words
 execute store result score props baba run data get storage baba:main check_words.property
 execute store result score changed baba run data modify storage baba:main check_words.property[].id set from storage baba:main parsing.word
 execute if score props baba > changed baba if data storage baba:main words.property[0] run function baba:board/rules/parse/part/property
+
+data modify storage baba:main check_words set from storage baba:main words
+execute store result score infix baba run data get storage baba:main check_words.infix
+execute store result score changed baba run data modify storage baba:main check_words.infix[].id set from storage baba:main parsing.word
+execute if score props baba > changed baba if data storage baba:main words.infix[0] run function baba:board/rules/parse/part/infix
+
+data modify storage baba:main check_words set from storage baba:main words
+execute store result score prefix baba run data get storage baba:main check_words.prefix
+execute store result score changed baba run data modify storage baba:main check_words.prefix[].id set from storage baba:main parsing.word
+execute if score props baba > changed baba if data storage baba:main words.prefix[0] run function baba:board/rules/parse/part/prefix
