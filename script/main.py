@@ -33,7 +33,7 @@ def generate_make_palette(source):
     if obj.name not in ('text', 'level'):
       fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
       fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={obj.id}}},limit=1] unless data storage baba:main all_list[{{sprite:{obj.id}}}] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
-      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main words.noun append value {{id:{obj.id},text:"{obj.name}"}}')
+      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main words.noun append value {obj.id}')
   text_prop = source.properties['text']
   part_prop = source.properties['part']
   for spr in source.objects['text'].sprites:
@@ -42,9 +42,9 @@ def generate_make_palette(source):
       part = spr.properties[part_prop]
       id = ops.id_hash(text)
       if text in source.objects:
-        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] unless data storage baba:main words.{part}[{{id:{id}}}] run data modify storage baba:main words.{part} append value {{id:{id},text:"{text}"}}')
+        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] unless data storage baba:main words{{{part}:[{id}]}} run data modify storage baba:main words.{part} append value {id}')
       else:
-        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] run data modify storage baba:main words.{part} append value {{id:{id},text:"{text}"}}')
+        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] run data modify storage baba:main words.{part} append value {id}')
   fn.append('data modify storage baba:main all_write_list set from storage baba:main all_list')
   fn.append('data modify storage baba:main all_write_list[].write set value 1b')
   tat.write_lines(fn, 'datapack/data/baba/functions/board/populate_palette.mcfunction')
