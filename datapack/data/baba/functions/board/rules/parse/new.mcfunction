@@ -29,8 +29,8 @@
 # infix conditions can be directly applied to everything in 'rules2' as they are read
 # lastly, each effect in the sentence adds this list of templates to 'rules3', then applies its own data to each
 
-tag @s remove first_word
 data modify storage baba:main parsing_stack set value [{inverted:0b,state:{noun:"subject",verb:"none",property:"none",and:"none",not:"self",prefix:"ready",infix:"none"},rules1:{conditions:[]}}]
 
 function baba:board/rules/parse/consume
 function baba:board/rules/parse/cleanup
+tag @s remove first_word
