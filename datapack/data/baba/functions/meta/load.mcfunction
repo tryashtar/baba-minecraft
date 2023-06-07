@@ -1,6 +1,7 @@
 scoreboard objectives add baba dummy
 scoreboard objectives add sprite dummy
 scoreboard objectives add text dummy
+scoreboard objectives add letter dummy
 scoreboard objectives add facing dummy
 scoreboard objectives add direction dummy
 scoreboard objectives add frame dummy
@@ -13,7 +14,6 @@ scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
 scoreboard objectives add win dummy
 scoreboard objectives add text_id dummy
-scoreboard objectives add text_using dummy
 scoreboard objectives add text_used dummy
 scoreboard objectives add text_disabled dummy
 scoreboard objectives add text_disabled2 dummy
@@ -24,3 +24,4 @@ scoreboard objectives add buffer dummy
 scoreboard objectives add drop dropped:diamond
 scoreboard players set #-1 baba -1
 scoreboard players set #10 baba 10
+scoreboard players set #27 baba 27

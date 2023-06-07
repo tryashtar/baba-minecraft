@@ -1,0 +1,29 @@
+{
+   "parent": "minecraft:block/beehive",
+   "overrides": [
+      {
+         "predicate": {
+            "custom_model_data": 257
+         },
+         "model": "baba:editor/bog"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 258
+         },
+         "model": "baba:editor/brick"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 259
+         },
+         "model": "baba:editor/cliff"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 260
+         },
+         "model": "baba:editor/cursor"
+      }
+   ]
+}

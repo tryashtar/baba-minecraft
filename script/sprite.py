@@ -15,6 +15,7 @@ class SpriteCollection:
     self.properties = {
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
+      'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
       'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
     }
@@ -112,7 +113,7 @@ class SpriteCollection:
                     cfg[k] = v
               # make keys the actual metadata objects instead of their names
               props = {self.properties['sprite']:adding.name}
-              if adding.name == 'text':
+              if adding.name in ('text','letter'):
                 props[self.properties['z_layer']] = 20
                 props[self.properties['not_all']] = True
                 props[self.properties['reparse']] = True
@@ -180,7 +181,10 @@ class BabaSprite:
     result = ''
     for k,v in properties.items():
       if 'primary' in k.attributes:
-        result += self.display_val(v) + sep1
+        if k.name == 'sprite' and any(map(lambda x: x.name == 'letter', properties.keys())):
+          result += 'letter' + sep1
+        else:
+          result += self.display_val(v) + sep1
     for k,v in properties.items():
       if 'primary' not in k.attributes:
         result += k.name + sep2 + self.display_val(v) + sep1
@@ -196,6 +200,9 @@ class Metadata:
     self.default = default
     self.attributes = [] if attributes is None else attributes
     self.converter = converter
+
+  def __repr__(self):
+    return self.name
 
   def convert(self, value):
     if self.kind == 'tag':

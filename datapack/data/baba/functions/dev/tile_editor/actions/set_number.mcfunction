@@ -24,10 +24,17 @@ execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nea
 
 # update block
 execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Items[0] run data modify block ~ ~-1 ~ Items append value {id:"book",Count:1b}
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Bees[0] run data modify block ~ ~-1 ~ Bees append value {EntityData:{}}
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s store result block ~ ~-1 ~ Items[0].tag.extra.scores.number int 1 run scoreboard players get @s number
+execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s store result block ~ ~-1 ~ Bees[0].EntityData.extra.scores.number int 1 run scoreboard players get @s number
 execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Items[0].tag.extra.tags run data modify block ~ ~-1 ~ Items[0].tag.extra.tags set value []
-execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] store result score loop baba run data get block ~ ~-1 ~ Items[0].tag.extra.tags
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Bees[0].EntityData.extra.tags run data modify block ~ ~-1 ~ Bees[0].EntityData.extra.tags set value []
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] if data block ~ ~-1 ~ Items[0] store result score loop baba run data get block ~ ~-1 ~ Items[0].tag.extra.tags
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] if data block ~ ~-1 ~ Bees[0] store result score loop baba run data get block ~ ~-1 ~ Bees[0].EntityData.extra.tags
 execute if score loop baba matches 1.. as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s run function baba:dev/tile_editor/actions/remove_style
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.digit] run data modify block ~ ~-1 ~ Items[0].tag.extra.tags append value "style.digit"
+execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.digit] run data modify block ~ ~-1 ~ Bees[0].EntityData.extra.tags append value "style.digit"
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.letter] run data modify block ~ ~-1 ~ Items[0].tag.extra.tags append value "style.letter"
+execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.letter] run data modify block ~ ~-1 ~ Bees[0].EntityData.extra.tags append value "style.letter"
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.dice] run data modify block ~ ~-1 ~ Items[0].tag.extra.tags append value "style.dice"
+execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s[tag=style.dice] run data modify block ~ ~-1 ~ Bees[0].EntityData.extra.tags append value "style.dice"

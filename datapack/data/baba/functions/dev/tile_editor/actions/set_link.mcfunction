@@ -15,4 +15,6 @@ data modify entity @e[type=text_display,tag=name,sort=nearest,limit=1] text set 
 
 # update block
 execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Items[0] run data modify block ~ ~-1 ~ Items append value {id:"book",Count:1b}
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Bees[0] run data modify block ~ ~-1 ~ Bees append value {EntityData:{}}
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s run data modify block ~ ~-1 ~ Items[0].tag.extra.data.level_data.link set from entity @s item.tag.level_data.link
+execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s run data modify block ~ ~-1 ~ Bees[0].EntityData.extra.data.level_data.link set from entity @s item.tag.level_data.link

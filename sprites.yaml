@@ -34,12 +34,6 @@ properties:
   special:
     type: tag
     attributes: [spawn]
-  accepts_noun:
-    type: tag
-    attributes: [spawn]
-  accepts_property:
-    type: tag
-    attributes: [spawn]
   not_all:
     type: tag
     attributes: [spawn]
@@ -561,8 +555,6 @@ sprites:
       properties:
         text: is
         part: verb
-        accepts_noun: true
-        accepts_property: true
     - name: text
       color: '#ffffff'
       coords: [301, 76]
@@ -605,22 +597,18 @@ sprites:
       properties:
         text: has
         part: verb
-        accepts_noun: true
     - name: text
       color: '#ffffff'
       coords: [301, 151]
       properties:
         text: make
         part: verb
-        accepts_noun: true
     - name: text
       color: '#ffffff'
       coords: [151, 226]
       properties:
         text: write
         part: verb
-        accepts_noun: true
-        accepts_property: true
     - name: text
       color: '#ffffff'
       coords: [1, 1]
@@ -881,7 +869,164 @@ sprites:
         part: property
     sprites:
     - {}
-  
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [1, 1948]
+    sprites:
+     - letter: a
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [51, 1948]
+    sprites:
+     - letter: b
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [101, 1948]
+    sprites:
+     - letter: c
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [151, 1948]
+    sprites:
+     - letter: d
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [201, 1948]
+    sprites:
+     - letter: e
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [251, 1948]
+    sprites:
+     - letter: f
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [301, 1948]
+    sprites:
+     - letter: g
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [1, 2023]
+    sprites:
+     - letter: h
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [51, 2023]
+    sprites:
+     - letter: i
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [101, 2023]
+    sprites:
+     - letter: j
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [151, 2023]
+    sprites:
+     - letter: k
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [201, 2023]
+    sprites:
+     - letter: l
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [251, 2023]
+    sprites:
+     - letter: m
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [301, 2023]
+    sprites:
+     - letter: 'n'
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [1, 2098]
+    sprites:
+     - letter: o
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [51, 2098]
+    sprites:
+     - letter: p
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [101, 2098]
+    sprites:
+     - letter: q
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [151, 2098]
+    sprites:
+     - letter: r
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [201, 2098]
+    sprites:
+     - letter: s
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [251, 2098]
+    sprites:
+     - letter: t
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [301, 2098]
+    sprites:
+     - letter: u
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [1, 2173]
+    sprites:
+     - letter: v
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [51, 2173]
+    sprites:
+     - letter: w
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [101, 2173]
+    sprites:
+     - letter: x
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [151, 2173]
+    sprites:
+     - letter: 'y'
+  - objects:
+     - name: text
+       color: '#ffffff'
+       coords: [201, 2173]
+    sprites:
+     - letter: z
+
+
 - sheet: tiles
   entries:
   - objects:

@@ -78,10 +78,17 @@ def create_storage(properties, data=None):
 too_big = {}
 def id_hash(string):
   total = 0
-  for i,c in enumerate(string):
-    total += 26**i * (ord(c) - 97)
+  for i,c in enumerate(reversed(string)):
+    total += 27**i * (ord(c) - 96)
   if total > 2147483647:
     if string not in too_big:
       too_big[string] = -len(too_big) - 1
     return too_big[string]
   return total
+
+def reverse_hash(num):
+  result = ""
+  while num > 0:
+    num,r = divmod(num, 27)
+    result += chr(r + 96)
+  return result[::-1]

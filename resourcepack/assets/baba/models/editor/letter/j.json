@@ -1,0 +1,7 @@
+{
+   "parent": "baba:editor_block",
+   "textures": {
+      "face": "baba:editor/letter/j",
+      "particle": "#face"
+   }
+}

@@ -6,7 +6,7 @@
       {
          "storage": "baba:main",
          "nbt": "rule[]",
-         "separator": " ",
+         "separator": "",
          "font": "baba:font",
          "color": "white",
          "italic": false

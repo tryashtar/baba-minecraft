@@ -2,29 +2,48 @@ import os
 import tryashtools as tat
 import ops
 
-def bookshelf_state(val):
-  og_val = val
+def block_state(val):
   result = {}
-  for i in range(6):
-    result[f'slot_{i}_occupied'] = val % 2 == 1
-    val //= 2
+  if val < 256:
+    for i in range(6):
+      result[f'slot_{i}_occupied'] = val % 2 == 1
+      val //= 2
+    dir = ['north','south','east','west']
+    result['facing'] = dir[val%len(dir)]
+    val //= len(dir)
+    return ('chiseled_bookshelf', result)
+  val -= 256
+  honey = [0, 1, 2, 3, 4, 5]
   dir = ['north','south','east','west']
+  result['honey_level'] = honey[val%len(honey)]
+  val //= len(honey)
   result['facing'] = dir[val%len(dir)]
   val //= len(dir)
-  if val > 0:
-    raise ValueError(og_val)
-  return result
+  if val == 0:
+    return ('beehive', result)
+  elif val == 1:
+    return ('bee_nest', result)
+  else:
+    raise ValueError(val)
 
 def create_blockstates(resources, resource_pack):
   blockstates = {}
-  state_model = {}
-  item_model = []
+  state_models = {}
+  item_models = {}
   for i,data in enumerate(resources.values()):
-    state = bookshelf_state(i)
-    blockstates[data.sprite] = state
-    state_model[ops.state_string(state)] = {'model': data.model_resource, 'y':90}
-    item_model.append({"predicate":{"custom_model_data":data.custom_model_data},"model":data.model_resource})
-  tat.write_json({"variants":state_model}, os.path.join(resource_pack, 'assets/minecraft/blockstates/chiseled_bookshelf.json'))
-  tat.write_json({"parent": "minecraft:block/chiseled_bookshelf_inventory","overrides":item_model}, os.path.join(resource_pack, 'assets/minecraft/models/item/chiseled_bookshelf.json'))
-
+    block,state = block_state(i)
+    blockstates[data.sprite] = (block, state)
+    if block not in state_models:
+      state_models[block] = {}
+      item_models[block] = []
+    state_models[block][ops.state_string(state)] = {'model': data.model_resource, 'y':90}
+    item_models[block].append({"predicate":{"custom_model_data":data.custom_model_data},"model":data.model_resource})
+  for block,parent in [('chiseled_bookshelf', 'minecraft:block/chiseled_bookshelf_inventory'), ('beehive','minecraft:block/beehive'), ('bee_nest', 'minecraft:block/bee_nest')]:
+    state_path = os.path.join(resource_pack, f'assets/minecraft/blockstates/{block}.json')
+    item_path = os.path.join(resource_pack, f'assets/minecraft/models/item/{block}.json')
+    tat.delete_file(state_path)
+    tat.delete_file(item_path)
+    if block in state_models:
+      tat.write_json({"variants":state_models[block]}, state_path)
+      tat.write_json({"parent":parent,"overrides":item_models[block]}, item_path)
   return blockstates

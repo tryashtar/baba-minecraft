@@ -22,6 +22,32 @@ def main():
   generate_give_commands(editor_resources, blockstates)
   generate_packing_functions(source, blockstates)
   generate_particles(sprite_data['particles'])
+  generate_make_palette(source)
+
+def generate_make_palette(source):
+  fn = [
+    'data modify storage baba:main all_list set value []',
+    'data modify storage baba:main words set value {noun:[],property:[],verb:[],infix:[],prefix:[],and:[],not:[]}'
+  ]
+  for obj in source.objects.values():
+    if obj.name not in ('text', 'level'):
+      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
+      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={obj.id}}},limit=1] unless data storage baba:main all_list[{{sprite:{obj.id}}}] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
+      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main words.noun append value {obj.id}')
+  text_prop = source.properties['text']
+  part_prop = source.properties['part']
+  for spr in source.objects['text'].sprites:
+    if text_prop in spr.properties and part_prop in spr.properties:
+      text = spr.properties[text_prop]
+      part = spr.properties[part_prop]
+      id = ops.id_hash(text)
+      if text in source.objects:
+        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] unless data storage baba:main words{{{part}:[{id}]}} run data modify storage baba:main words.{part} append value {id}')
+      else:
+        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] run data modify storage baba:main words.{part} append value {id}')
+  fn.append('data modify storage baba:main all_write_list set from storage baba:main all_list')
+  fn.append('data modify storage baba:main all_write_list[].write set value 1b')
+  tat.write_lines(fn, 'datapack/data/baba/functions/board/populate_palette.mcfunction')
 
 def generate_particles(particles):
   cmd = 1
@@ -87,32 +113,45 @@ def generate_packing_functions(source, blockstates):
     lines = []
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
-      set_storage = ops.create_storage(spr.properties, None if text_val is None else f'text:"{text_val}"')
+      letter_val = props.get(source.properties['letter'])
+      extra_data = None
+      if text_val is not None:
+        extra_data = f'text:"{text_val}"'
+      if letter_val is not None:
+        extra_data = f'text:"{letter_val}"'
+      set_storage = ops.create_storage(spr.properties, extra_data)
       check_rest = ops.create_storage(ops.filter_properties(props, lambda x: x.name!='sprite'))
-      this_state = blockstates[spr].copy()
+      block,state = blockstates[spr]
+      this_state = state.copy()
       state_str = ops.state_string(this_state)
       direction = this_state['facing']
       if direction not in dir_checks:
         dir_checks[direction] = []
-        pack_lines.append(f'execute if block ~ ~ ~ chiseled_bookshelf[facing={direction}] run function baba:editor/pack/block/{direction}')
+        pack_lines.append(f'execute if block ~ ~ ~ #baba:editor_blocks[facing={direction}] run function baba:editor/pack/block/{direction}')
       del this_state['facing']
-      dir_checks[direction].append(f'execute if block ~ ~ ~ chiseled_bookshelf[{ops.state_string(this_state)}] run data modify storage baba:main tile append value {{{set_storage}}}')
+      dir_checks[direction].append(f'execute if block ~ ~ ~ {block}[{ops.state_string(this_state)}] run data modify storage baba:main tile append value {{{set_storage}}}')
       if len(spritelist) == 1:
-        unpack_lines.append(f'execute if data storage baba:main {check_sprite} run setblock ~ ~ ~ chiseled_bookshelf[{ops.state_string(blockstates[spritelist[0][0]])}]')
+        b,s = blockstates[spritelist[0][0]]
+        unpack_lines.append(f'execute if data storage baba:main {check_sprite} run setblock ~ ~ ~ {b}[{ops.state_string(s)}]')
       else:
-        lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run setblock ~ ~ ~ chiseled_bookshelf[{state_str}]',)
-        unpack_lines.append(f'execute if data storage baba:main {check_sprite} run function baba:editor/unpack/block/{obj.name}')
+        lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run setblock ~ ~ ~ {block}[{state_str}]',)
+        unpack_line = f'execute if data storage baba:main {check_sprite} run function baba:editor/unpack/block/{obj.name}'
+        if unpack_line not in unpack_lines:
+          unpack_lines.append(unpack_line)
     if len(lines) > 0:
       tat.write_lines(lines, f'datapack/data/baba/functions/editor/unpack/block/{obj.name}.mcfunction')
     for dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/functions/editor/pack/block/{dir}.mcfunction')
   pack_lines.extend([
     'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].tag.extra',
-    'execute positioned ~ ~1 ~ if block ~ ~ ~ chiseled_bookshelf run function baba:editor/pack/block'
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Bees[0].EntityData.extra',
+    'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
   unpack_lines.extend([
     'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items set value [{id:"book",Count:1b}]',
+    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Bees set value [{EntityData:{}}]',
     'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].tag.extra set from storage baba:main tile.extra',
+    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Bees[0].EntityData.extra set from storage baba:main tile.extra',
     'data remove storage baba:main level.tiles[0][0][0]',
     'execute if data storage baba:main level.tiles[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block',
   ])
@@ -122,20 +161,28 @@ def generate_packing_functions(source, blockstates):
 def generate_give_commands(resources, blockstates):
   tat.delete_folder('datapack/data/baba/functions/dev/give')
   get_all = []
-  loot_table = []
+  loot_tables = {}
   for data in resources.values():
-    state = blockstates[data.sprite]
+    block,state = blockstates[data.sprite]
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
     description = data.sprite.display(data.properties, '.', '-')
     simple_name = data.sprite.display(data.properties, ' ', '=')
-    cmd = f'give @s chiseled_bookshelf{{babatile:1b,CustomModelData:{data.custom_model_data},BlockStateTag:{{{state_str}}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
+    cmd = f'give @s {block}{{babatile:1b,CustomModelData:{data.custom_model_data},BlockStateTag:{{{state_str}}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
-    loot_table.append({"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:chiseled_bookshelf","conditions":[{"condition":"minecraft:block_state_property","block":"minecraft:chiseled_bookshelf","properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{data.custom_model_data}}}"}]}]})
+    if block not in loot_tables:
+      loot_tables[block] = (list(state.keys()), [])
+    loot_tables[block][1].append({"rolls":1,"entries":[{"type":"minecraft:item","name":f"minecraft:{block}","conditions":[{"condition":"minecraft:block_state_property","block":f"minecraft:{block}","properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{data.custom_model_data}}}"}]}]})
   tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
-  tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":"minecraft:chiseled_bookshelf","properties":["facing","slot_0_occupied","slot_1_occupied","slot_2_occupied","slot_3_occupied","slot_4_occupied","slot_5_occupied"]}],"pools":loot_table}, f'datapack/data/minecraft/loot_tables/blocks/chiseled_bookshelf.json')
+  for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
+    path = f'datapack/data/minecraft/loot_tables/blocks/{block}.json'
+    tat.delete_file(path)
+    if block in loot_tables:
+      keys, table = loot_tables[block]
+      tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":f"minecraft:{block}","properties":keys}],"pools":table}, path)
 
 def generate_spawn_functions(source):
+  text_prop = source.properties['text']
   spawn = []
   spawntext = []
   objectlist = source.objects.values()
@@ -143,7 +190,9 @@ def generate_spawn_functions(source):
     if obj.name == 'text':
       spawn.insert(0, f'execute if score spawn baba matches {obj.id} run function baba:board/spawn_text')
       for spr in obj.sprites:
-        spr_text = spr.properties[source.properties['text']]
+        if text_prop not in spr.properties:
+          continue
+        spr_text = spr.properties[text_prop]
         props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))
         summon = ops.create_summon(props, [f'text:"{spr_text}"'])
         spawntext.append(f'execute if score spawn_text baba matches {ops.id_hash(spr_text)} run {summon}')
@@ -154,7 +203,7 @@ def generate_spawn_functions(source):
   newspawn = '@e[type=item_display,tag=spawn,distance=..0.1,limit=1]'
   spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
   spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')
-  spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,scores={{sprite=349615}}] text_id')
+  spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,scores={{sprite=397973}}] text_id')
   spawntext.append(f'scoreboard players add {newspawn} text_id 1')
   for prop in source.properties.values():
     if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text'):
@@ -170,14 +219,19 @@ def generate_spawn_functions(source):
 
 def generate_reference_ids(source):
   text_map = []
+  text_prop = source.properties['text']
   for spr in source.objects['text'].sprites:
-    text = spr.properties[source.properties['text']]
-    text_map.append(f'{text}: {ops.id_hash(text)}')
+    if text_prop in spr.properties:
+      text = spr.properties[text_prop]
+      text_map.append(f'{text}: {ops.id_hash(text)}')
   tat.write_lines(text_map, 'text_ids.txt')
 
 def generate_wiggle_fonts(source, resources):
+  text_prop = source.properties['text']
   for spr in source.objects['text'].sprites:
-    text = spr.properties[source.properties['text']]
+    if text_prop not in spr.properties:
+      continue
+    text = spr.properties[text_prop]
     if text in ('baba','is','you'):
       providers = []
       for h in range(len(spr.image.frames)):
@@ -235,7 +289,7 @@ def generate_update_function(source, resources):
   update_obj.extend([
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={sprite=349615,text_used=0}] run function baba:display/inactive_text',
+    'execute if entity @s[scores={sprite=397973,text_used=0}] run function baba:display/inactive_text',
     f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
     f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
     'execute if score palette baba matches 1.. run function baba:display/palette'

@@ -29,8 +29,7 @@ def sprite_name(obj, spr, props, single):
   if single:
     return obj.name
   else:
-    display = spr.display(props, '.', '-')
-    return obj.name + '/' + display[len(obj.name)+1:]
+    return spr.display(props, '.', '-').replace('.','/', 1)
 
 def save_image(spr, images, path):
   tat.setup_path(path)
