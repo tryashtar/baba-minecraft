@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/spike",
-      "particle": "#face"
+      "all": "baba:editor/spike"
    }
 }

@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/bolt/facing-up",
-      "particle": "#face"
+      "all": "baba:editor/bolt/facing-up"
    }
 }

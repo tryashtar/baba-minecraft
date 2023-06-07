@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/robot/facing-left",
-      "particle": "#face"
+      "all": "baba:editor/robot/facing-left"
    }
 }

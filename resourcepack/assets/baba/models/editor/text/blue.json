@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/text/blue",
-      "particle": "#face"
+      "all": "baba:editor/text/blue"
    }
 }

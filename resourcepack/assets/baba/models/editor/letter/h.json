@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/letter/h",
-      "particle": "#face"
+      "all": "baba:editor/letter/h"
    }
 }

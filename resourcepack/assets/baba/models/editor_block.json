@@ -1,5 +1,5 @@
 {
-   "parent": "minecraft:block/block",
+   "parent": "minecraft:block/cube_all",
    "gui_light": "front",
    "display": {
       "firstperson_righthand": {
@@ -9,43 +9,5 @@
       "gui": {
          "rotation": [90, 0, 0]
       }
-   },
-   "elements": [
-      {
-         "from": [0, 0, 0],
-         "to": [16, 16, 16],
-         "faces": {
-            "up": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "up"
-            },
-            "down": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "down"
-            },
-            "north": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "north"
-            },
-            "south": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "south"
-            },
-            "east": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "east"
-            },
-            "west": {
-               "uv": [0, 0, 16, 16],
-               "texture": "#face",
-               "cullface": "west"
-            }
-         }
-      }
-   ]
+   }
 }

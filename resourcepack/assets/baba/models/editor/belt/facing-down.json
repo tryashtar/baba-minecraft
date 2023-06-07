@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/belt/facing-down",
-      "particle": "#face"
+      "all": "baba:editor/belt/facing-down"
    }
 }

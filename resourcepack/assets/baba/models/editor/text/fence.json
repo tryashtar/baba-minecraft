@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/text/fence",
-      "particle": "#face"
+      "all": "baba:editor/text/fence"
    }
 }

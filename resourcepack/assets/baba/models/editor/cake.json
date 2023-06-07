@@ -1,7 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "face": "baba:editor/cake",
-      "particle": "#face"
+      "all": "baba:editor/cake"
    }
 }

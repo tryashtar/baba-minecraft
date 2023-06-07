@@ -49,7 +49,7 @@ def save_model(spr, texture_resource, path, y):
   tat.write_json(model, path)
 
 def save_editor_model(spr, texture_resource, path):
-  model = {"parent":"baba:editor_block","textures":{"face":texture_resource,"particle":"#face"}}
+  model = {"parent":"baba:editor_block","textures":{"all":texture_resource}}
   tat.write_json(model, path)
 
 def create_sprite_resources(source, resource_pack, namespace):

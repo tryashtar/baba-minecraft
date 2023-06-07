@@ -43,14 +43,13 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
         tat.write_json(model, os.path.join(model_folder, f'{bg}/{x}.{y}.json'))
         shroom_id += 1
     tat.write_lines(place, os.path.join(background_load, f'{bg}.mcfunction'))
-  texture = PIL.Image.new('RGBA', (2,len(palettes)))
   for j,t in enumerate(['floor','wall']):
     background = []
     for i,(n,p) in enumerate(palettes.items()):
       color = p[['#080808','#15181f'][j]]
-      texture.putpixel((j,i),PIL.ImageColor.getrgb(color))
-      uv = [round(j/2*16,3),round(i/len(palettes)*16,3),round((j+1)/2*16,3),round((i+1)/len(palettes)*16,3)]
-      model = {"parent":"minecraft:block/block","textures":{"all":f"{namespace}:background/background","particle":"#all"},"elements":[{"from":[0,0,0],"to":[16,16,16],"faces":{"up":{"uv":uv,"texture":"#all","cullface":"up"},"down":{"uv":uv,"texture":"#all","cullface":"down"},"north":{"uv":uv,"texture":"#all","cullface":"north"},"south":{"uv":uv,"texture":"#all","cullface":"south"},"east":{"uv":uv,"texture":"#all","cullface":"east"},"west":{"uv":uv,"texture":"#all","cullface":"west"}}}]}
+      texture = PIL.Image.new('RGB', (1,1), PIL.ImageColor.getrgb(color))
+      texture.save(os.path.join(texture_folder, f'{n}_{t}.png'))
+      model = {"parent":"baba:background_block","textures":{"all":f"{namespace}:background/{n}_{t}"}}
       tat.write_json(model, os.path.join(model_folder, f'{n}_{t}.json'))
       (block, state) = terracotta_state(terra_id, t=='floor')
       if block not in blockstates:
@@ -61,6 +60,5 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
     if t == 'floor':
       background.append(f'execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
     tat.write_lines(background, os.path.join(background_load, f'{t}.mcfunction'))
-  texture.save(os.path.join(texture_folder, 'background.png'))
   for k,v in blockstates.items():
     tat.write_json({"variants":v}, os.path.join(resource_pack, f'assets/minecraft/blockstates/{k}.json'))
