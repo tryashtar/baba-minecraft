@@ -10,4 +10,9 @@ data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].tex
 data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].inverted set from storage baba:main parsing.inverted
 data modify storage baba:main parsing.inverted set value 0b
 
+execute if score word baba matches 583 run data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].direction set value 1
+execute if score word baba matches 90302 run data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].direction set value 2
+execute if score word baba matches 240023 run data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].direction set value 3
+execute if score word baba matches 9748424 run data modify storage baba:main parsing.rules2[].conditions[-1].parameters[-1].direction set value 4
+
 data modify storage baba:main parsing.state set value {noun:"none",verb:"ready",property:"none",and:"parameter",not:"none",prefix:"none",infix:"none"}

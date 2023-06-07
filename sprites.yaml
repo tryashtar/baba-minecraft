@@ -34,12 +34,6 @@ properties:
   special:
     type: tag
     attributes: [spawn]
-  accepts_noun:
-    type: tag
-    attributes: [spawn]
-  accepts_property:
-    type: tag
-    attributes: [spawn]
   not_all:
     type: tag
     attributes: [spawn]
@@ -561,8 +555,6 @@ sprites:
       properties:
         text: is
         part: verb
-        accepts_noun: true
-        accepts_property: true
     - name: text
       color: '#ffffff'
       coords: [301, 76]
@@ -605,22 +597,18 @@ sprites:
       properties:
         text: has
         part: verb
-        accepts_noun: true
     - name: text
       color: '#ffffff'
       coords: [301, 151]
       properties:
         text: make
         part: verb
-        accepts_noun: true
     - name: text
       color: '#ffffff'
       coords: [151, 226]
       properties:
         text: write
         part: verb
-        accepts_noun: true
-        accepts_property: true
     - name: text
       color: '#ffffff'
       coords: [1, 1]
