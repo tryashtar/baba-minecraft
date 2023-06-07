@@ -18,6 +18,7 @@ scoreboard objectives add text_used dummy
 scoreboard objectives add text_disabled dummy
 scoreboard objectives add text_disabled2 dummy
 scoreboard objectives add life dummy
+scoreboard objectives add color_anim dummy
 scoreboard objectives add move_cooldown dummy
 scoreboard objectives add buffer dummy
 scoreboard objectives add drop dropped:diamond

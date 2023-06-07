@@ -6,6 +6,7 @@ scoreboard players add float_anim baba 1
 execute if score float_anim baba matches 1 as @e[type=item_display,tag=baba.object,tag=prop.float] run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{translation:[0.2f,0f,0f]}}
 execute if score float_anim baba matches 35 as @e[type=item_display,tag=baba.object,tag=prop.float] run data merge entity @s {start_interpolation:0,interpolation_duration:20,transformation:{translation:[0f,0f,0f]}}
 execute if score float_anim baba matches 70.. run scoreboard players set float_anim baba 0
+execute as @e[type=item_display,tag=baba.object,tag=prop.red,tag=prop.blue] run function baba:display/color_anim
 
 execute as @a[scores={win=1..}] run function baba:progress/win
 execute as @a at @s run function baba:input/check
