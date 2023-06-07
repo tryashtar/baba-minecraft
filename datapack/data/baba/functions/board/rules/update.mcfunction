@@ -21,12 +21,8 @@ execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] r
 
 # text gets the X overlay if all rules it's part of are disabled
 execute store result score rules3 baba run data get storage baba:main rules
-data modify storage baba:main iter_rules set from storage baba:main rules
-function baba:board/rules/graphics/full_disabling
-execute as @e[type=item_display,tag=baba.object,tag=reparse,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
-execute as @e[type=item_display,tag=baba.object,tag=reparse,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
+function baba:board/rules/disabling/find
 
-execute as @e[type=item_display,tag=baba.object,tag=reparse] run function baba:board/rules/parse/reset
 tag @e[type=item_display,tag=baba.object,tag=reparse] remove reparse
 execute if score rules2 baba < rules1 baba run tag @e[type=item_display,tag=baba.object] add assign
 execute if score rules3 baba > rules2 baba run tag @e[type=item_display,tag=baba.object] add assign

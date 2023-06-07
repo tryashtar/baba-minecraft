@@ -16,7 +16,6 @@ data modify storage baba:main parsing.rules3[-1][].text_ids append from storage 
 data modify storage baba:main parsing.rules3[-1][].text_ids append from storage baba:main parsing.not_ids[]
 data modify storage baba:main parsing.rules3[-1][].text_ids append from storage baba:main parsing.verb_ids[]
 data modify storage baba:main parsing.not_ids set value []
-data modify storage baba:main parsing.verb_ids set value []
 data modify storage baba:main parsing.rules3[-1][].verb set from storage baba:main parsing.verb
 data modify storage baba:main parsing.rules3[-1][].verb_text set from storage baba:main parsing.verb_text
 execute store result storage baba:main parsing.rules3[-1][].effect.text int 1 run scoreboard players get word baba
