@@ -1,6 +1,6 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:sprites/flower"
+      "up": "baba:sprites/flower/normal"
    }
 }

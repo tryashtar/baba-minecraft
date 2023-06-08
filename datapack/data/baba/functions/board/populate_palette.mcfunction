@@ -48,10 +48,6 @@ execute if entity @e[type=item_display,tag=baba.object,scores={sprite=15486},lim
 execute if entity @e[type=item_display,tag=baba.object,scores={text=15486},limit=1] unless data storage baba:main all_list[{sprite:15486}] run data modify storage baba:main all_list append value {sprite:15486,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=90090},limit=1] run data modify storage baba:main all_list append value {sprite:90090,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={text=90090},limit=1] unless data storage baba:main all_list[{sprite:90090}] run data modify storage baba:main all_list append value {sprite:90090,inverted:0b}
-execute if entity @e[type=item_display,tag=baba.object,scores={sprite=92782899},limit=1] run data modify storage baba:main all_list append value {sprite:92782899,inverted:0b}
-execute if entity @e[type=item_display,tag=baba.object,scores={text=92782899},limit=1] unless data storage baba:main all_list[{sprite:92782899}] run data modify storage baba:main all_list append value {sprite:92782899,inverted:0b}
-execute if entity @e[type=item_display,tag=baba.object,scores={sprite=320763071},limit=1] run data modify storage baba:main all_list append value {sprite:320763071,inverted:0b}
-execute if entity @e[type=item_display,tag=baba.object,scores={text=320763071},limit=1] unless data storage baba:main all_list[{sprite:320763071}] run data modify storage baba:main all_list append value {sprite:320763071,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=234610470},limit=1] run data modify storage baba:main all_list append value {sprite:234610470,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={text=234610470},limit=1] unless data storage baba:main all_list[{sprite:234610470}] run data modify storage baba:main all_list append value {sprite:234610470,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=365321},limit=1] run data modify storage baba:main all_list append value {sprite:365321,inverted:0b}
@@ -108,6 +104,8 @@ execute if entity @e[type=item_display,tag=baba.object,scores={sprite=955387723}
 execute if entity @e[type=item_display,tag=baba.object,scores={text=955387723},limit=1] unless data storage baba:main all_list[{sprite:955387723}] run data modify storage baba:main all_list append value {sprite:955387723,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=388602},limit=1] run data modify storage baba:main all_list append value {sprite:388602,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={text=388602},limit=1] unless data storage baba:main all_list[{sprite:388602}] run data modify storage baba:main all_list append value {sprite:388602,inverted:0b}
+execute if entity @e[type=item_display,tag=baba.object,scores={sprite=92782899},limit=1] run data modify storage baba:main all_list append value {sprite:92782899,inverted:0b}
+execute if entity @e[type=item_display,tag=baba.object,scores={text=92782899},limit=1] unless data storage baba:main all_list[{sprite:92782899}] run data modify storage baba:main all_list append value {sprite:92782899,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=1842025},limit=1] run data modify storage baba:main all_list append value {sprite:1842025,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={text=1842025},limit=1] unless data storage baba:main all_list[{sprite:1842025}] run data modify storage baba:main all_list append value {sprite:1842025,inverted:0b}
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=3297353},limit=1] run data modify storage baba:main all_list append value {sprite:3297353,inverted:0b}
@@ -186,10 +184,6 @@ execute if entity @e[type=item_display,tag=baba.object,scores={sprite=15486},lim
 execute if entity @e[type=item_display,tag=baba.object,scores={text=15486},limit=1] unless data storage baba:main words{noun:[15486]} run data modify storage baba:main words.noun append value 15486
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=90090},limit=1] run data modify storage baba:main words.noun append value 90090
 execute if entity @e[type=item_display,tag=baba.object,scores={text=90090},limit=1] unless data storage baba:main words{noun:[90090]} run data modify storage baba:main words.noun append value 90090
-execute if entity @e[type=item_display,tag=baba.object,scores={sprite=92782899},limit=1] run data modify storage baba:main words.noun append value 92782899
-execute if entity @e[type=item_display,tag=baba.object,scores={text=92782899},limit=1] unless data storage baba:main words{noun:[92782899]} run data modify storage baba:main words.noun append value 92782899
-execute if entity @e[type=item_display,tag=baba.object,scores={sprite=320763071},limit=1] run data modify storage baba:main words.noun append value 320763071
-execute if entity @e[type=item_display,tag=baba.object,scores={text=320763071},limit=1] unless data storage baba:main words{noun:[320763071]} run data modify storage baba:main words.noun append value 320763071
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=234610470},limit=1] run data modify storage baba:main words.noun append value 234610470
 execute if entity @e[type=item_display,tag=baba.object,scores={text=234610470},limit=1] unless data storage baba:main words{noun:[234610470]} run data modify storage baba:main words.noun append value 234610470
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=365321},limit=1] run data modify storage baba:main words.noun append value 365321
@@ -246,8 +240,8 @@ execute if entity @e[type=item_display,tag=baba.object,scores={sprite=54575550},
 execute if entity @e[type=item_display,tag=baba.object,scores={text=54575550},limit=1] unless data storage baba:main words{noun:[54575550]} run data modify storage baba:main words.noun append value 54575550
 execute if entity @e[type=item_display,tag=baba.object,scores={sprite=388602},limit=1] run data modify storage baba:main words.noun append value 388602
 execute if entity @e[type=item_display,tag=baba.object,scores={text=388602},limit=1] unless data storage baba:main words{noun:[388602]} run data modify storage baba:main words.noun append value 388602
-execute if entity @e[type=item_display,tag=baba.object,scores={sprite=388602},limit=1] run data modify storage baba:main words.noun append value 388602
-execute if entity @e[type=item_display,tag=baba.object,scores={text=388602},limit=1] unless data storage baba:main words{noun:[388602]} run data modify storage baba:main words.noun append value 388602
+execute if entity @e[type=item_display,tag=baba.object,scores={sprite=92782899},limit=1] run data modify storage baba:main words.noun append value 92782899
+execute if entity @e[type=item_display,tag=baba.object,scores={text=92782899},limit=1] unless data storage baba:main words{noun:[92782899]} run data modify storage baba:main words.noun append value 92782899
 execute if entity @e[type=item_display,tag=baba.object,scores={text=262},limit=1] run data modify storage baba:main words.verb append value 262
 execute if entity @e[type=item_display,tag=baba.object,scores={text=1111},limit=1] run data modify storage baba:main words.and append value 1111
 execute if entity @e[type=item_display,tag=baba.object,scores={text=10631},limit=1] run data modify storage baba:main words.not append value 10631

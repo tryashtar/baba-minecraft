@@ -65,7 +65,7 @@ properties:
   variant:
     type: score
     attributes: [sprite, editor, primary, spawn]
-    values: [normal, [starfish]]
+    values: [normal, [starfish, violet]]
 
 sprites:
 - sheet: sprites1
@@ -230,17 +230,7 @@ sprites:
       coords: [126, 151]
       properties:
         z_layer: 15
-    - shared:
-      - name: flower
-        color: '#557ae0'
-        properties:
-          z_layer: 12
-      - name: violet
-        color: '#4759b1'
-        text color: '#557ae0'
-        text coords: [626, 910]
-        properties:
-          z_layer: 12
+    - null
     - null
     - null
     - null
@@ -425,6 +415,32 @@ sprites:
           text: star
           part: noun
           variant: starfish
+    - coords: [151, 226]
+      shared:
+      - name: flower
+        color: '#557ae0'
+        properties:
+          z_layer: 12
+          variant: normal
+      - name: flower
+        color: '#4759b1'
+        properties:
+          z_layer: 12
+          variant: violet
+    - name: text
+      coords: [126, 226]
+      color: '#557ae0'
+      properties:
+        text: flower
+        part: noun
+        variant: normal
+    - name: text
+      coords: [626, 910]
+      color: '#557ae0'
+      properties:
+        text: flower
+        part: noun
+        variant: violet
     sprites:
     - {}
   - overlays:

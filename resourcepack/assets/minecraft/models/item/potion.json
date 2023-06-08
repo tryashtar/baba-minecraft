@@ -282,181 +282,181 @@
          "predicate": {
             "custom_model_data": 45
          },
-         "model": "baba:sprites/text/flower"
+         "model": "baba:sprites/text/pillar"
       },
       {
          "predicate": {
             "custom_model_data": 46
          },
-         "model": "baba:sprites/text/violet"
+         "model": "baba:sprites/text/rock"
       },
       {
          "predicate": {
             "custom_model_data": 47
          },
-         "model": "baba:sprites/text/pillar"
+         "model": "baba:sprites/text/tile"
       },
       {
          "predicate": {
             "custom_model_data": 48
          },
-         "model": "baba:sprites/text/rock"
+         "model": "baba:sprites/text/fruit"
       },
       {
          "predicate": {
             "custom_model_data": 49
          },
-         "model": "baba:sprites/text/tile"
+         "model": "baba:sprites/text/moon"
       },
       {
          "predicate": {
             "custom_model_data": 50
          },
-         "model": "baba:sprites/text/fruit"
+         "model": "baba:sprites/text/tree"
       },
       {
          "predicate": {
             "custom_model_data": 51
          },
-         "model": "baba:sprites/text/moon"
+         "model": "baba:sprites/text/box"
       },
       {
          "predicate": {
             "custom_model_data": 52
          },
-         "model": "baba:sprites/text/tree"
+         "model": "baba:sprites/text/fire"
       },
       {
          "predicate": {
             "custom_model_data": 53
          },
-         "model": "baba:sprites/text/box"
+         "model": "baba:sprites/text/gate"
       },
       {
          "predicate": {
             "custom_model_data": 54
          },
-         "model": "baba:sprites/text/fire"
+         "model": "baba:sprites/text/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 55
          },
-         "model": "baba:sprites/text/gate"
+         "model": "baba:sprites/text/reed"
       },
       {
          "predicate": {
             "custom_model_data": 56
          },
-         "model": "baba:sprites/text/jelly"
+         "model": "baba:sprites/text/sign"
       },
       {
          "predicate": {
             "custom_model_data": 57
          },
-         "model": "baba:sprites/text/reed"
+         "model": "baba:sprites/text/sun"
       },
       {
          "predicate": {
             "custom_model_data": 58
          },
-         "model": "baba:sprites/text/sign"
+         "model": "baba:sprites/text/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 59
          },
-         "model": "baba:sprites/text/sun"
+         "model": "baba:sprites/text/husk"
       },
       {
          "predicate": {
             "custom_model_data": 60
          },
-         "model": "baba:sprites/text/fungi"
+         "model": "baba:sprites/text/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 61
          },
-         "model": "baba:sprites/text/husk"
+         "model": "baba:sprites/text/orb"
       },
       {
          "predicate": {
             "custom_model_data": 62
          },
-         "model": "baba:sprites/text/leaf"
+         "model": "baba:sprites/text/trees"
       },
       {
          "predicate": {
             "custom_model_data": 63
          },
-         "model": "baba:sprites/text/orb"
+         "model": "baba:sprites/text/cake"
       },
       {
          "predicate": {
             "custom_model_data": 64
          },
-         "model": "baba:sprites/text/trees"
+         "model": "baba:sprites/text/dot"
       },
       {
          "predicate": {
             "custom_model_data": 65
          },
-         "model": "baba:sprites/text/cake"
+         "model": "baba:sprites/text/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 66
          },
-         "model": "baba:sprites/text/dot"
+         "model": "baba:sprites/text/rose"
       },
       {
          "predicate": {
             "custom_model_data": 67
          },
-         "model": "baba:sprites/text/foliage"
+         "model": "baba:sprites/text/dust"
       },
       {
          "predicate": {
             "custom_model_data": 68
          },
-         "model": "baba:sprites/text/rose"
+         "model": "baba:sprites/text/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 69
          },
-         "model": "baba:sprites/text/dust"
+         "model": "baba:sprites/text/husks"
       },
       {
          "predicate": {
             "custom_model_data": 70
          },
-         "model": "baba:sprites/text/fungus"
+         "model": "baba:sprites/text/stump"
       },
       {
          "predicate": {
             "custom_model_data": 71
          },
-         "model": "baba:sprites/text/husks"
+         "model": "baba:sprites/text/cursor"
       },
       {
          "predicate": {
             "custom_model_data": 72
          },
-         "model": "baba:sprites/text/stump"
+         "model": "baba:sprites/text/star.normal"
       },
       {
          "predicate": {
             "custom_model_data": 73
          },
-         "model": "baba:sprites/text/cursor"
+         "model": "baba:sprites/text/flower.normal"
       },
       {
          "predicate": {
             "custom_model_data": 74
          },
-         "model": "baba:sprites/text/star.normal"
+         "model": "baba:sprites/text/flower.violet"
       },
       {
          "predicate": {
@@ -1800,181 +1800,181 @@
          "predicate": {
             "custom_model_data": 298
          },
-         "model": "baba:sprites/flower"
+         "model": "baba:sprites/pillar"
       },
       {
          "predicate": {
             "custom_model_data": 299
          },
-         "model": "baba:sprites/pillar"
+         "model": "baba:sprites/rock"
       },
       {
          "predicate": {
             "custom_model_data": 300
          },
-         "model": "baba:sprites/rock"
+         "model": "baba:sprites/tile"
       },
       {
          "predicate": {
             "custom_model_data": 301
          },
-         "model": "baba:sprites/tile"
+         "model": "baba:sprites/fruit"
       },
       {
          "predicate": {
             "custom_model_data": 302
          },
-         "model": "baba:sprites/fruit"
+         "model": "baba:sprites/moon"
       },
       {
          "predicate": {
             "custom_model_data": 303
          },
-         "model": "baba:sprites/moon"
+         "model": "baba:sprites/tree"
       },
       {
          "predicate": {
             "custom_model_data": 304
          },
-         "model": "baba:sprites/tree"
+         "model": "baba:sprites/box"
       },
       {
          "predicate": {
             "custom_model_data": 305
          },
-         "model": "baba:sprites/box"
+         "model": "baba:sprites/fire"
       },
       {
          "predicate": {
             "custom_model_data": 306
          },
-         "model": "baba:sprites/fire"
+         "model": "baba:sprites/gate"
       },
       {
          "predicate": {
             "custom_model_data": 307
          },
-         "model": "baba:sprites/gate"
+         "model": "baba:sprites/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 308
          },
-         "model": "baba:sprites/jelly"
+         "model": "baba:sprites/reed"
       },
       {
          "predicate": {
             "custom_model_data": 309
          },
-         "model": "baba:sprites/reed"
+         "model": "baba:sprites/sign"
       },
       {
          "predicate": {
             "custom_model_data": 310
          },
-         "model": "baba:sprites/sign"
+         "model": "baba:sprites/sun"
       },
       {
          "predicate": {
             "custom_model_data": 311
          },
-         "model": "baba:sprites/sun"
+         "model": "baba:sprites/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 312
          },
-         "model": "baba:sprites/fungi"
+         "model": "baba:sprites/husk"
       },
       {
          "predicate": {
             "custom_model_data": 313
          },
-         "model": "baba:sprites/husk"
+         "model": "baba:sprites/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 314
          },
-         "model": "baba:sprites/leaf"
+         "model": "baba:sprites/orb"
       },
       {
          "predicate": {
             "custom_model_data": 315
          },
-         "model": "baba:sprites/orb"
+         "model": "baba:sprites/trees"
       },
       {
          "predicate": {
             "custom_model_data": 316
          },
-         "model": "baba:sprites/trees"
+         "model": "baba:sprites/cake"
       },
       {
          "predicate": {
             "custom_model_data": 317
          },
-         "model": "baba:sprites/cake"
+         "model": "baba:sprites/dot"
       },
       {
          "predicate": {
             "custom_model_data": 318
          },
-         "model": "baba:sprites/dot"
+         "model": "baba:sprites/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 319
          },
-         "model": "baba:sprites/foliage"
+         "model": "baba:sprites/rose"
       },
       {
          "predicate": {
             "custom_model_data": 320
          },
-         "model": "baba:sprites/rose"
+         "model": "baba:sprites/dust"
       },
       {
          "predicate": {
             "custom_model_data": 321
          },
-         "model": "baba:sprites/dust"
+         "model": "baba:sprites/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 322
          },
-         "model": "baba:sprites/fungus"
+         "model": "baba:sprites/husks"
       },
       {
          "predicate": {
             "custom_model_data": 323
          },
-         "model": "baba:sprites/husks"
+         "model": "baba:sprites/stump"
       },
       {
          "predicate": {
             "custom_model_data": 324
          },
-         "model": "baba:sprites/stump"
+         "model": "baba:sprites/blossom"
       },
       {
          "predicate": {
             "custom_model_data": 325
          },
-         "model": "baba:sprites/blossom"
+         "model": "baba:sprites/star/normal"
       },
       {
          "predicate": {
             "custom_model_data": 326
          },
-         "model": "baba:sprites/star/normal"
+         "model": "baba:sprites/star/starfish"
       },
       {
          "predicate": {
             "custom_model_data": 327
          },
-         "model": "baba:sprites/star/starfish"
+         "model": "baba:sprites/flower/normal"
       },
       {
          "predicate": {

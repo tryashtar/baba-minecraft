@@ -22,8 +22,6 @@ love: 247730
 spike: 10419170
 ufo: 15486
 door: 90090
-flower: 92782899
-violet: 320763071
 pillar: 234610470
 rock: 365321
 tile: 400550
@@ -52,7 +50,7 @@ husks: 4679038
 stump: 10506715
 cursor: 54575550
 star: 388602
-star: 388602
+flower: 92782899
 is: 262
 and: 1111
 not: 10631

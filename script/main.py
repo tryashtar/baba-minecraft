@@ -35,7 +35,7 @@ def generate_make_palette(source):
       fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={obj.id}}},limit=1] unless data storage baba:main all_list[{{sprite:{obj.id}}}] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
   text_prop = source.properties['text']
   part_prop = source.properties['part']
-  for spr in source.objects['text'].sprites:
+  for spr in source.objects['text'].filter_sprites(lambda x: x == text_prop):
     if text_prop in spr.properties and part_prop in spr.properties:
       text = spr.properties[text_prop]
       part = spr.properties[part_prop]
@@ -234,7 +234,7 @@ def generate_spawn_functions(source):
 def generate_reference_ids(source):
   text_map = []
   text_prop = source.properties['text']
-  for spr in source.objects['text'].sprites:
+  for spr in source.objects['text'].filter_sprites(lambda x: x == text_prop):
     if text_prop in spr.properties:
       text = spr.properties[text_prop]
       text_map.append(f'{text}: {ops.id_hash(text)}')
