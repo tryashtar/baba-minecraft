@@ -196,7 +196,12 @@ class Metadata:
   def __init__(self, name, kind, values=None, default=None, attributes=None, converter=None):
     self.name = name
     self.kind = kind
-    self.values = values
+    self.id_map = {}
+    if values is not None:
+      for i,v in enumerate(values):
+        same = v if isinstance(v, list) else [v]
+        for s in same:
+          self.id_map[s] = i + 1
     self.default = default
     self.attributes = [] if attributes is None else attributes
     self.converter = converter
@@ -215,7 +220,7 @@ class Metadata:
       if self.converter == 'hex':
         return str(int(value[1:], 16))
       if isinstance(value, str):
-        return str(self.values.index(value) + 1)
+        return str(self.id_map[value])
       if isinstance(value, list):
         return f'{value[0]}..{value[1]}'
     return str(value)

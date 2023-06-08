@@ -29,7 +29,6 @@ rock: 365321
 tile: 400550
 fruit: 3558512
 moon: 267233
-star: 388602
 tree: 406922
 box: 1887
 fire: 125150
@@ -51,8 +50,9 @@ dust: 94574
 fungus: 97534954
 husks: 4679038
 stump: 10506715
-starfish: -2
 cursor: 54575550
+star: 388602
+star: 388602
 is: 262
 and: 1111
 not: 10631

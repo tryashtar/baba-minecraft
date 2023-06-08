@@ -33,7 +33,6 @@ def generate_make_palette(source):
     if obj.name not in ('text', 'level'):
       fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
       fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={obj.id}}},limit=1] unless data storage baba:main all_list[{{sprite:{obj.id}}}] run data modify storage baba:main all_list append value {{sprite:{obj.id},inverted:0b}}')
-      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main words.noun append value {obj.id}')
   text_prop = source.properties['text']
   part_prop = source.properties['part']
   for spr in source.objects['text'].sprites:
@@ -41,7 +40,8 @@ def generate_make_palette(source):
       text = spr.properties[text_prop]
       part = spr.properties[part_prop]
       id = ops.id_hash(text)
-      if text in source.objects:
+      if part == 'noun' and text in source.objects:
+        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={id}}},limit=1] run data modify storage baba:main words.{part} append value {id}')
         fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] unless data storage baba:main words{{{part}:[{id}]}} run data modify storage baba:main words.{part} append value {id}')
       else:
         fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={id}}},limit=1] run data modify storage baba:main words.{part} append value {id}')
@@ -183,6 +183,8 @@ def generate_give_commands(resources, blockstates):
 
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
+  var_prop = source.properties['variant']
+  sprite_prop = source.properties['sprite']
   spawn = []
   spawntext = []
   objectlist = source.objects.values()
@@ -193,20 +195,32 @@ def generate_spawn_functions(source):
         if text_prop not in spr.properties:
           continue
         spr_text = spr.properties[text_prop]
-        props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))
+        props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite','variant'))
         summon = ops.create_summon(props, [f'text:"{spr_text}"'])
-        spawntext.append(f'execute if score spawn_text baba matches {ops.id_hash(spr_text)} run {summon}')
+        conditions = f'if score spawn_text baba matches {ops.id_hash(spr_text)}'
+        if var_prop in spr.properties:
+          var_val = spr.properties[var_prop]
+          conditions += f' if score spawn_variant baba matches {var_prop.convert(var_val)}'
+        spawntext.append(f'execute {conditions} run {summon}')
     else:
-      props = next(iter(obj.filter_sprites(lambda x: 'spawn' in x.attributes).values()))
-      del props[source.properties['sprite']]
-      spawn.append(f'execute if score spawn baba matches {obj.id} run {ops.create_summon(props)}')
+      vars = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
+      for spr,props in vars.items():
+        if sprite_prop in props:
+          del props[sprite_prop]
+        conditions = f'if score spawn baba matches {obj.id}'
+        if var_prop in spr.properties:
+          var_val = spr.properties[var_prop]
+          conditions += f' if score spawn_variant baba matches {var_prop.convert(var_val)}'
+          del props[var_prop]
+        spawn.append(f'execute {conditions} run {ops.create_summon(props)}')
   newspawn = '@e[type=item_display,tag=spawn,distance=..0.1,limit=1]'
   spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
+  spawn.append(f'scoreboard players operation {newspawn} variant = spawn_variant baba')
   spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')
   spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,scores={{sprite=397973}}] text_id')
   spawntext.append(f'scoreboard players add {newspawn} text_id 1')
   for prop in source.properties.values():
-    if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text'):
+    if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text','variant'):
       spawn.append(f'execute as {newspawn} store result score @s {prop.name} run data get entity @s item.tag.scores.{prop.name}')
     if 'all' in prop.attributes and 'spawn' not in prop.attributes:
       if prop.kind == 'score':

@@ -215,145 +215,145 @@
          "predicate": {
             "custom_model_data": 36
          },
-         "model": "baba:editor/text/star"
+         "model": "baba:editor/text/tree"
       },
       {
          "predicate": {
             "custom_model_data": 37
          },
-         "model": "baba:editor/text/tree"
+         "model": "baba:editor/text/box"
       },
       {
          "predicate": {
             "custom_model_data": 38
          },
-         "model": "baba:editor/text/box"
+         "model": "baba:editor/text/fire"
       },
       {
          "predicate": {
             "custom_model_data": 39
          },
-         "model": "baba:editor/text/fire"
+         "model": "baba:editor/text/gate"
       },
       {
          "predicate": {
             "custom_model_data": 40
          },
-         "model": "baba:editor/text/gate"
+         "model": "baba:editor/text/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 41
          },
-         "model": "baba:editor/text/jelly"
+         "model": "baba:editor/text/reed"
       },
       {
          "predicate": {
             "custom_model_data": 42
          },
-         "model": "baba:editor/text/reed"
+         "model": "baba:editor/text/sign"
       },
       {
          "predicate": {
             "custom_model_data": 43
          },
-         "model": "baba:editor/text/sign"
+         "model": "baba:editor/text/sun"
       },
       {
          "predicate": {
             "custom_model_data": 44
          },
-         "model": "baba:editor/text/sun"
+         "model": "baba:editor/text/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 45
          },
-         "model": "baba:editor/text/fungi"
+         "model": "baba:editor/text/husk"
       },
       {
          "predicate": {
             "custom_model_data": 46
          },
-         "model": "baba:editor/text/husk"
+         "model": "baba:editor/text/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 47
          },
-         "model": "baba:editor/text/leaf"
+         "model": "baba:editor/text/orb"
       },
       {
          "predicate": {
             "custom_model_data": 48
          },
-         "model": "baba:editor/text/orb"
+         "model": "baba:editor/text/trees"
       },
       {
          "predicate": {
             "custom_model_data": 49
          },
-         "model": "baba:editor/text/trees"
+         "model": "baba:editor/text/cake"
       },
       {
          "predicate": {
             "custom_model_data": 50
          },
-         "model": "baba:editor/text/cake"
+         "model": "baba:editor/text/dot"
       },
       {
          "predicate": {
             "custom_model_data": 51
          },
-         "model": "baba:editor/text/dot"
+         "model": "baba:editor/text/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 52
          },
-         "model": "baba:editor/text/foliage"
+         "model": "baba:editor/text/rose"
       },
       {
          "predicate": {
             "custom_model_data": 53
          },
-         "model": "baba:editor/text/rose"
+         "model": "baba:editor/text/dust"
       },
       {
          "predicate": {
             "custom_model_data": 54
          },
-         "model": "baba:editor/text/dust"
+         "model": "baba:editor/text/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 55
          },
-         "model": "baba:editor/text/fungus"
+         "model": "baba:editor/text/husks"
       },
       {
          "predicate": {
             "custom_model_data": 56
          },
-         "model": "baba:editor/text/husks"
+         "model": "baba:editor/text/stump"
       },
       {
          "predicate": {
             "custom_model_data": 57
          },
-         "model": "baba:editor/text/stump"
+         "model": "baba:editor/text/cursor"
       },
       {
          "predicate": {
             "custom_model_data": 58
          },
-         "model": "baba:editor/text/starfish"
+         "model": "baba:editor/text/star.normal"
       },
       {
          "predicate": {
             "custom_model_data": 59
          },
-         "model": "baba:editor/text/cursor"
+         "model": "baba:editor/text/star.starfish"
       },
       {
          "predicate": {
@@ -1325,145 +1325,145 @@
          "predicate": {
             "custom_model_data": 221
          },
-         "model": "baba:editor/star"
+         "model": "baba:editor/tree"
       },
       {
          "predicate": {
             "custom_model_data": 222
          },
-         "model": "baba:editor/tree"
+         "model": "baba:editor/box"
       },
       {
          "predicate": {
             "custom_model_data": 223
          },
-         "model": "baba:editor/box"
+         "model": "baba:editor/fire"
       },
       {
          "predicate": {
             "custom_model_data": 224
          },
-         "model": "baba:editor/fire"
+         "model": "baba:editor/gate"
       },
       {
          "predicate": {
             "custom_model_data": 225
          },
-         "model": "baba:editor/gate"
+         "model": "baba:editor/jelly"
       },
       {
          "predicate": {
             "custom_model_data": 226
          },
-         "model": "baba:editor/jelly"
+         "model": "baba:editor/reed"
       },
       {
          "predicate": {
             "custom_model_data": 227
          },
-         "model": "baba:editor/reed"
+         "model": "baba:editor/sign"
       },
       {
          "predicate": {
             "custom_model_data": 228
          },
-         "model": "baba:editor/sign"
+         "model": "baba:editor/sun"
       },
       {
          "predicate": {
             "custom_model_data": 229
          },
-         "model": "baba:editor/sun"
+         "model": "baba:editor/fungi"
       },
       {
          "predicate": {
             "custom_model_data": 230
          },
-         "model": "baba:editor/fungi"
+         "model": "baba:editor/husk"
       },
       {
          "predicate": {
             "custom_model_data": 231
          },
-         "model": "baba:editor/husk"
+         "model": "baba:editor/leaf"
       },
       {
          "predicate": {
             "custom_model_data": 232
          },
-         "model": "baba:editor/leaf"
+         "model": "baba:editor/orb"
       },
       {
          "predicate": {
             "custom_model_data": 233
          },
-         "model": "baba:editor/orb"
+         "model": "baba:editor/trees"
       },
       {
          "predicate": {
             "custom_model_data": 234
          },
-         "model": "baba:editor/trees"
+         "model": "baba:editor/cake"
       },
       {
          "predicate": {
             "custom_model_data": 235
          },
-         "model": "baba:editor/cake"
+         "model": "baba:editor/dot"
       },
       {
          "predicate": {
             "custom_model_data": 236
          },
-         "model": "baba:editor/dot"
+         "model": "baba:editor/foliage"
       },
       {
          "predicate": {
             "custom_model_data": 237
          },
-         "model": "baba:editor/foliage"
+         "model": "baba:editor/rose"
       },
       {
          "predicate": {
             "custom_model_data": 238
          },
-         "model": "baba:editor/rose"
+         "model": "baba:editor/dust"
       },
       {
          "predicate": {
             "custom_model_data": 239
          },
-         "model": "baba:editor/dust"
+         "model": "baba:editor/fungus"
       },
       {
          "predicate": {
             "custom_model_data": 240
          },
-         "model": "baba:editor/fungus"
+         "model": "baba:editor/husks"
       },
       {
          "predicate": {
             "custom_model_data": 241
          },
-         "model": "baba:editor/husks"
+         "model": "baba:editor/stump"
       },
       {
          "predicate": {
             "custom_model_data": 242
          },
-         "model": "baba:editor/stump"
+         "model": "baba:editor/blossom"
       },
       {
          "predicate": {
             "custom_model_data": 243
          },
-         "model": "baba:editor/starfish"
+         "model": "baba:editor/star/normal"
       },
       {
          "predicate": {
             "custom_model_data": 244
          },
-         "model": "baba:editor/blossom"
+         "model": "baba:editor/star/starfish"
       },
       {
          "predicate": {

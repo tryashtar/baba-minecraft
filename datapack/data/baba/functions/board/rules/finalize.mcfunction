@@ -10,8 +10,8 @@ execute if data storage baba:main rule_data.parsing{delete:1b} unless data stora
 
 data modify storage baba:main rule_data merge value {transforms:[],properties:[],has:[],make:[]}
 data modify storage baba:main rule_data.properties append from storage baba:main rule_data.parsing.properties[{inverted:0b}].text
-data modify storage baba:main rule_data.has append from storage baba:main rule_data.parsing.has[{inverted:0b}].text
-data modify storage baba:main rule_data.make append from storage baba:main rule_data.parsing.make[{inverted:0b}].text
+data modify storage baba:main rule_data.has append from storage baba:main rule_data.parsing.has[{inverted:0b}]
+data modify storage baba:main rule_data.make append from storage baba:main rule_data.parsing.make[{inverted:0b}]
 data modify storage baba:main rule_data.transforms append from storage baba:main rule_data.parsing.transforms[{inverted:0b}]
 data modify storage baba:main rule_data.transforms append from storage baba:main rule_data.parsing.writes[{inverted:0b}]
 execute if data storage baba:main rule_data.transforms[{inverted:0b,write:0b,text:1065}] run data modify storage baba:main rule_data.transforms[{inverted:0b,write:0b,text:1065}].all set from storage baba:main all_list

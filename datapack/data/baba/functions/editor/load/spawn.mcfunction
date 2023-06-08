@@ -3,6 +3,7 @@ data modify storage baba:main level.tiles[0][0][0].tags append from storage baba
 data remove storage baba:main level.tiles[0][0][0].extra.tags
 data modify storage baba:main level.tiles[0][0][0] merge from storage baba:main level.tiles[0][0][0].extra
 execute store result score @e[type=item_display,tag=spawn,distance=..0.1,limit=1] sprite run data get storage baba:main level.tiles[0][0][0].scores.sprite
+execute store result score @e[type=item_display,tag=spawn,distance=..0.1,limit=1] variant run data get storage baba:main level.tiles[0][0][0].scores.variant
 execute store result score @e[type=item_display,tag=spawn,distance=..0.1,limit=1] text run data get storage baba:main level.tiles[0][0][0].scores.text
 execute store result score @e[type=item_display,tag=spawn,distance=..0.1,limit=1] letter run data get storage baba:main level.tiles[0][0][0].scores.letter
 execute store result score @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing run data get storage baba:main level.tiles[0][0][0].scores.facing

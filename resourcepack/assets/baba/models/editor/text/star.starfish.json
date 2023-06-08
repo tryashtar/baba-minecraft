@@ -1,6 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "all": "baba:editor/star"
+      "all": "baba:editor/text/star.starfish"
    }
 }

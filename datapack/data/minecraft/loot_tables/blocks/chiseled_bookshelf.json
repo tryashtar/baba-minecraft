@@ -1336,7 +1336,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text star",
+                        "text": "text tree",
                         "italic": false
                      }
                   },
@@ -1373,7 +1373,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text tree",
+                        "text": "text box",
                         "italic": false
                      }
                   },
@@ -1410,7 +1410,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text box",
+                        "text": "text fire",
                         "italic": false
                      }
                   },
@@ -1447,7 +1447,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fire",
+                        "text": "text gate",
                         "italic": false
                      }
                   },
@@ -1484,7 +1484,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text gate",
+                        "text": "text jelly",
                         "italic": false
                      }
                   },
@@ -1521,7 +1521,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text jelly",
+                        "text": "text reed",
                         "italic": false
                      }
                   },
@@ -1558,7 +1558,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text reed",
+                        "text": "text sign",
                         "italic": false
                      }
                   },
@@ -1595,7 +1595,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sign",
+                        "text": "text sun",
                         "italic": false
                      }
                   },
@@ -1632,7 +1632,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text sun",
+                        "text": "text fungi",
                         "italic": false
                      }
                   },
@@ -1669,7 +1669,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungi",
+                        "text": "text husk",
                         "italic": false
                      }
                   },
@@ -1706,7 +1706,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text husk",
+                        "text": "text leaf",
                         "italic": false
                      }
                   },
@@ -1743,7 +1743,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text leaf",
+                        "text": "text orb",
                         "italic": false
                      }
                   },
@@ -1780,7 +1780,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text orb",
+                        "text": "text trees",
                         "italic": false
                      }
                   },
@@ -1817,7 +1817,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text trees",
+                        "text": "text cake",
                         "italic": false
                      }
                   },
@@ -1854,7 +1854,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cake",
+                        "text": "text dot",
                         "italic": false
                      }
                   },
@@ -1891,7 +1891,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dot",
+                        "text": "text foliage",
                         "italic": false
                      }
                   },
@@ -1928,7 +1928,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text foliage",
+                        "text": "text rose",
                         "italic": false
                      }
                   },
@@ -1965,7 +1965,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text rose",
+                        "text": "text dust",
                         "italic": false
                      }
                   },
@@ -2002,7 +2002,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text dust",
+                        "text": "text fungus",
                         "italic": false
                      }
                   },
@@ -2039,7 +2039,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text fungus",
+                        "text": "text husks",
                         "italic": false
                      }
                   },
@@ -2076,7 +2076,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text husks",
+                        "text": "text stump",
                         "italic": false
                      }
                   },
@@ -2113,7 +2113,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text stump",
+                        "text": "text cursor",
                         "italic": false
                      }
                   },
@@ -2150,7 +2150,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text starfish",
+                        "text": "text star normal",
                         "italic": false
                      }
                   },
@@ -2187,7 +2187,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text cursor",
+                        "text": "text star starfish",
                         "italic": false
                      }
                   },
@@ -8181,7 +8181,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "star",
+                        "text": "tree",
                         "italic": false
                      }
                   },
@@ -8218,7 +8218,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "tree",
+                        "text": "box",
                         "italic": false
                      }
                   },
@@ -8255,7 +8255,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "box",
+                        "text": "fire",
                         "italic": false
                      }
                   },
@@ -8292,7 +8292,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fire",
+                        "text": "gate",
                         "italic": false
                      }
                   },
@@ -8329,7 +8329,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "gate",
+                        "text": "jelly",
                         "italic": false
                      }
                   },
@@ -8366,7 +8366,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "jelly",
+                        "text": "reed",
                         "italic": false
                      }
                   },
@@ -8403,7 +8403,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "reed",
+                        "text": "sign",
                         "italic": false
                      }
                   },
@@ -8440,7 +8440,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "sign",
+                        "text": "sun",
                         "italic": false
                      }
                   },
@@ -8477,7 +8477,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "sun",
+                        "text": "fungi",
                         "italic": false
                      }
                   },
@@ -8514,7 +8514,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fungi",
+                        "text": "husk",
                         "italic": false
                      }
                   },
@@ -8551,7 +8551,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "husk",
+                        "text": "leaf",
                         "italic": false
                      }
                   },
@@ -8588,7 +8588,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "leaf",
+                        "text": "orb",
                         "italic": false
                      }
                   },
@@ -8625,7 +8625,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "orb",
+                        "text": "trees",
                         "italic": false
                      }
                   },
@@ -8662,7 +8662,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "trees",
+                        "text": "cake",
                         "italic": false
                      }
                   },
@@ -8699,7 +8699,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cake",
+                        "text": "dot",
                         "italic": false
                      }
                   },
@@ -8736,7 +8736,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "dot",
+                        "text": "foliage",
                         "italic": false
                      }
                   },
@@ -8773,7 +8773,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "foliage",
+                        "text": "rose",
                         "italic": false
                      }
                   },
@@ -8810,7 +8810,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "rose",
+                        "text": "dust",
                         "italic": false
                      }
                   },
@@ -8847,7 +8847,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "dust",
+                        "text": "fungus",
                         "italic": false
                      }
                   },
@@ -8884,7 +8884,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "fungus",
+                        "text": "husks",
                         "italic": false
                      }
                   },
@@ -8921,7 +8921,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "husks",
+                        "text": "stump",
                         "italic": false
                      }
                   },
@@ -8958,7 +8958,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "stump",
+                        "text": "blossom",
                         "italic": false
                      }
                   },
@@ -8995,7 +8995,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "starfish",
+                        "text": "star normal",
                         "italic": false
                      }
                   },
@@ -9032,7 +9032,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "blossom",
+                        "text": "star starfish",
                         "italic": false
                      }
                   },
