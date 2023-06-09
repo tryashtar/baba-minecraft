@@ -5,8 +5,8 @@
    "lore": [
       {
          "storage": "baba:main",
-         "nbt": "rule[]",
-         "separator": "",
+         "nbt": "text_rules[0]",
+         "interpret": true,
          "font": "baba:font",
          "color": "white",
          "italic": false

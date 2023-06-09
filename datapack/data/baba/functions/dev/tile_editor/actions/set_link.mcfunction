@@ -11,7 +11,7 @@ execute if entity @s[tag=left] store result entity @e[type=item_display,tag=baba
 data modify storage baba:main link set value [-1,-1]
 data modify storage baba:main level_name set value '[{"text":"[","color":"red"},{"score":{"name":"y","objective":"baba"}},",",{"score":{"name":"x","objective":"baba"}},"]"]'
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run function baba:progress/get_name
-data modify entity @e[type=text_display,tag=name,sort=nearest,limit=1] text set value '{"nbt":"level_name","storage":"baba:main","interpret":true}'
+data modify entity @e[type=text_display,tag=name,sort=nearest,limit=1] text set value '{"storage":"baba:main","nbt":"level_name","interpret":true}'
 
 # update block
 execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Items[0] run data modify block ~ ~-1 ~ Items append value {id:"book",Count:1b}
