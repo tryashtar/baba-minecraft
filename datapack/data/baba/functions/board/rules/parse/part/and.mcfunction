@@ -1,3 +1,4 @@
+scoreboard players set parsed baba 1
 tag @e[type=item_display,tag=current_word] add maybe_all_rules
 execute if data storage baba:main parsing.state{and:"none"} run data modify storage baba:main parsing.unexpected set value 1b
 execute unless data storage baba:main parsing.state{and:"none"} run data modify storage baba:main parsing.maybe_all_ids append from storage baba:main parsing.word_ids[]

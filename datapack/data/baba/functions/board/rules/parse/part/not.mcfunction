@@ -1,3 +1,4 @@
+scoreboard players set parsed baba 1
 tag @e[type=item_display,tag=current_word] add current_not
 execute if data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.unexpected set value 1b
 execute unless data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.not_ids append from storage baba:main parsing.word_ids[]

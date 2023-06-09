@@ -3,7 +3,7 @@
 
 # we can shift the current word over to fit the new letter at the same time as fetching it from storage
 # conveniently, this also clamps instead of overflowing, preventing a bug where large words like "kbhuzow" would wrap to the same ID as "baba"
-execute if entity @s[tag=first_word] positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] add first_word
+execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] add first_word
 execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=current_word] remove current_word
 execute if data storage baba:main parsing{current:"word"} run data modify storage baba:main parsing merge value {current:"letter",word:0,word_text:[],word_ids:[]}
 tag @s add current_word
@@ -42,3 +42,5 @@ data modify storage baba:main check_words set from storage baba:main words
 execute store result score prefix baba run data get storage baba:main check_words.prefix
 execute store result score changed baba run data modify storage baba:main check_words.prefix[] set from storage baba:main parsing.word
 execute if score prefix baba > changed baba run function baba:board/rules/parse/part/prefix
+
+execute if score parsed baba matches 1 run data modify storage baba:main parsing.current set value "word"

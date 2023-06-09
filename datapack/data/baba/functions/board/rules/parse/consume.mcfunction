@@ -1,5 +1,6 @@
 data modify storage baba:main parsing set from storage baba:main parsing_stack[-1]
 data remove storage baba:main parsing_stack[-1]
+scoreboard players set parsed baba 0
 execute if score @s letter matches 1.. run function baba:board/rules/parse/consume_letter
 execute unless score @s letter matches 1.. run function baba:board/rules/parse/consume_word
 

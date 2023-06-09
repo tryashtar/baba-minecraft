@@ -1,3 +1,4 @@
+scoreboard players set parsed baba 1
 execute if data storage baba:main parsing.state{property:"none"} run data modify storage baba:main parsing.unexpected set value 1b
 execute if data storage baba:main parsing{allow_properties:0b,state:{property:"effect"}} run data modify storage baba:main parsing.unexpected set value 1b
 execute if data storage baba:main parsing{allow_properties:1b,state:{property:"effect"}} run data modify storage baba:main parsing.effect_part set value "property"
