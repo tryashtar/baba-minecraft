@@ -17,8 +17,10 @@ function baba:board/populate_palette
 
 # process some things before the first step
 execute store success score empty baba if data storage baba:main words{noun:[2925313]}
-execute if score empty baba matches 1 at @e[type=marker,tag=baba.space] unless entity @e[type=item_display,tag=baba.object,distance=..0.1,limit=1] run summon item_display ~ ~ ~ {width:0f,height:0f,Tags:["baba.object","not_all","empty","assign"]}
-execute if score empty baba matches 1 run scoreboard players set @e[type=item_display,tag=empty] sprite 2925313
+execute if score empty baba matches 1 at @e[type=marker,tag=baba.space] unless entity @e[type=item_display,tag=baba.object,distance=..0.1,limit=1] run summon item_display ~ ~ ~ {width:0f,height:0f,Tags:["baba.object","not_all","empty","spawn","assign"]}
+execute if score empty baba matches 1 run scoreboard players set @e[type=item_display,tag=empty,tag=spawn] sprite 2925313
+execute if score empty baba matches 1 as @e[type=item_display,tag=empty,tag=spawn] store result score @s facing run loot spawn ~ ~ ~ loot baba:random_4
+execute if score empty baba matches 1 run tag @e[type=item_display,tag=empty,tag=spawn] remove spawn
 
 execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 scoreboard players set text_id baba 0
