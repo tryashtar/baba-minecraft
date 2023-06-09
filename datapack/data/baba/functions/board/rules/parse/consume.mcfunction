@@ -14,4 +14,6 @@ execute if data storage baba:main parsing{complete:1b} unless data storage baba:
 # however, by the time the first one is done, the context will have changed and the old one will be lost
 # therefore, we maintain an explicit stack of context, with each word pushing before its turn and popping during
 execute unless data storage baba:main parsing{unexpected:1b} positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1] run data modify storage baba:main parsing_stack append from storage baba:main parsing
+execute if score parsed baba matches 2 positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] run data modify storage baba:main parsing_stack append from storage baba:main alt_parsing
+execute if score parsed baba matches 2 positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] run function baba:board/rules/parse/consume
 execute unless data storage baba:main parsing{unexpected:1b} positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1] run function baba:board/rules/parse/consume

@@ -13,6 +13,8 @@ data modify storage baba:main parsing.word_text append from entity @s item.tag.t
 execute store result storage baba:main id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.word_ids append from storage baba:main id
 
+data modify storage baba:main alt_parsing set from storage baba:main parsing
+
 # these parts of speech only have one possible word, so a simple palette check
 execute if score word baba matches 10631 if data storage baba:main words{not:[10631]} run function baba:board/rules/parse/part/not
 execute if score word baba matches 1111 if data storage baba:main words{and:[1111]} run function baba:board/rules/parse/part/and
@@ -44,3 +46,4 @@ execute store result score changed baba run data modify storage baba:main check_
 execute if score prefix baba > changed baba run function baba:board/rules/parse/part/prefix
 
 execute if score parsed baba matches 1 run data modify storage baba:main parsing.current set value "word"
+execute if score parsed baba matches 1 run scoreboard players set parsed baba 2
