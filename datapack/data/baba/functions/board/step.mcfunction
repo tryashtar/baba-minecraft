@@ -5,15 +5,15 @@
 # it also allows objects with 'push' to stack when two 'shift' objects send them to the same tile
 scoreboard players set moved baba 0
 execute if score direction baba matches 1.. run function baba:board/movement/process/you
-tag @e[type=item_display,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
+execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
 function baba:board/movement/process/move
 execute as @e[type=item_display,tag=baba.object,tag=!move_success,tag=prop.move,tag=!prop.sleep] at @s run function baba:board/movement/attempt/move_turnaround
-tag @e[type=item_display,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
+execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
 function baba:board/movement/process/shift
-tag @e[type=item_display,tag=baba.object,tag=move_success] remove move_success
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
+execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
 
 # first rule parsing and assignment, along with transforms
 # rules with certain conditions cause all affected objects to re-assign every step
