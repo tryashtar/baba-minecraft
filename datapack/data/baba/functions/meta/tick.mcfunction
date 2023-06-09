@@ -1,3 +1,5 @@
+execute if score tick_success baba matches 0 run tellraw @a {"text":"Previous tick failed!","color":"red"}
+scoreboard players set tick_success baba 0
 execute as @e[type=item_display,tag=particle,tag=!init] run function baba:display/particle/init
 execute as @e[type=item_display,tag=particle] run function baba:display/particle/tick
 execute at @e[type=item_display,tag=baba.object,tag=prop.win] if predicate baba:10_percent run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["particle","win_particle"]}
@@ -10,3 +12,4 @@ execute as @e[type=item_display,tag=baba.object,tag=prop.red,tag=prop.blue] run 
 
 execute as @a[scores={win=1..}] run function baba:progress/win
 execute as @a at @s run function baba:input/check
+scoreboard players set tick_success baba 1
