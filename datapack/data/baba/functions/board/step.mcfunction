@@ -6,14 +6,17 @@
 scoreboard players set moved baba 0
 execute if score direction baba matches 1.. run function baba:board/movement/process/you
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
+execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
 function baba:board/movement/process/move
-execute as @e[type=item_display,tag=baba.object,tag=!move_success,tag=prop.move,tag=!prop.sleep] at @s run function baba:board/movement/attempt/move_turnaround
+tag @e[type=item_display,tag=baba.object,tag=prop.move,tag=!prop.sleep,tag=!has_moved] add do_turnaround
+execute as @e[type=item_display,tag=baba.object,tag=do_turnaround] run function baba:board/movement/turn_around
+function baba:board/movement/process/move_turnaround
+tag @e[type=item_display,tag=baba.object,tag=do_turnaround] remove do_turnaround
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
+execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
 function baba:board/movement/process/shift
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=move_success,limit=1] run function baba:board/post_movement
+execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
 
 # first rule parsing and assignment, along with transforms
 # rules with certain conditions cause all affected objects to re-assign every step
@@ -33,7 +36,7 @@ scoreboard players set teleported baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.tele] at @s run function baba:board/interact/teleport
 execute if score teleported baba matches 1.. as @a at @s run playsound baba:teleport master @s
 # shift changes the facing direction of objects both when pushing and when landing
-execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/movement/process/shift_dir
+execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/interact/shift_dir
 execute if score direction baba matches 1.. as @e[type=item_display,tag=baba.object,tag=prop.select] at @s run function baba:board/movement/select
 execute as @e[type=item_display,tag=baba.object,tag=prop.fall] at @s run function baba:board/interact/fall
 execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s

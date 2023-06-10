@@ -3,9 +3,9 @@ execute at @s run tag @e[type=marker,tag=baba.space,tag=!dirty,distance=..0.1,li
 tag @e[type=marker,tag=baba.space,tag=!dirty,distance=..0.1,limit=1] add dirty
 tag @s add moving
 # things without 'swap' trade places with things with 'swap' and vice versa
-execute if entity @s[tag=!teleported,tag=!swap,tag=!falling] run tag @e[type=item_display,tag=baba.object,tag=prop.swap,distance=..0.1] add swap
-execute if entity @s[tag=!teleported,tag=!swap,tag=!falling,tag=prop.swap] run tag @e[type=item_display,tag=baba.object,tag=!prop.swap,distance=..0.1] add swap
-execute at @s as @e[type=item_display,tag=baba.object,tag=swap,tag=!moving] run function baba:board/movement/move_here
+execute if entity @s[tag=!prop.swap,tag=!teleported,tag=!swap,tag=!falling] run tag @e[type=item_display,tag=baba.object,tag=prop.swap,distance=..0.1] add swap
+execute if entity @s[tag=prop.swap,tag=!teleported,tag=!swap,tag=!falling] run tag @e[type=item_display,tag=baba.object,tag=!prop.swap,distance=..0.1] add swap
+execute at @s as @e[type=item_display,tag=baba.object,tag=swap,tag=!moving,tag=!can_move] run function baba:board/movement/move_here
 tag @e[type=item_display,tag=baba.object,tag=swap] remove swap
 
 # moving objects need to be re-assigned rules if they have a condition based on location

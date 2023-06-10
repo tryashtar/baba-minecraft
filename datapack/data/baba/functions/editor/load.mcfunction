@@ -37,6 +37,8 @@ execute as @e[type=item_display,tag=baba.object,scores={sprite=6491892},nbt={ite
 execute as @e[type=item_display,tag=baba.object,tag=prop.select] at @s run function baba:progress/show_name
 execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
 
+scoreboard players set @e[type=item_display,tag=baba.object] float_level 0
+scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.float] float_level 1
 scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
 function baba:display/update
 scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100

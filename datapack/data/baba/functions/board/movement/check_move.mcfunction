@@ -4,19 +4,19 @@ tag @s add can_move
 # run this recursively on pushable objects ahead and pullable objects behind
 # swap property prevents pushing but not pulling
 # anything that's already moved this step is ignored
-execute positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=!move_success,distance=..0.1,tag=prop.push,tag=!prop.swap] run function baba:board/movement/check_move
-execute positioned ^ ^ ^-1 as @e[type=item_display,tag=baba.object,tag=!move_success,distance=..0.1,tag=prop.pull] run function baba:board/movement/check_move
+execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=prop.push,tag=!prop.swap,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move
+execute positioned ^ ^ ^-1 as @e[type=item_display,tag=baba.object,tag=prop.pull,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move
 
 # if anything pushable in front of you can't move, then you can't either
-execute positioned ^ ^ ^1 if entity @e[type=item_display,tag=baba.object,tag=!move_success,tag=!can_move,distance=..0.1,tag=prop.push,tag=!prop.swap,limit=1] run tag @s remove can_move
+execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 if entity @e[type=item_display,tag=baba.object,tag=prop.push,tag=!has_moved,tag=!can_move,tag=!prop.swap,distance=..0.1,limit=1] run tag @s remove can_move
 
 # if any object in front of you is a 'blocker', you can't move
 scoreboard players operation float baba = @s float_level
 scoreboard players set open baba 0
 execute if entity @s[tag=prop.open] run scoreboard players set open baba 1
 execute if entity @s[tag=prop.shut] run scoreboard players set open baba 2
-execute if entity @s[tag=can_move] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=!can_move,distance=..0.1] run function baba:board/movement/check_blocker
-execute if entity @s[tag=can_move] positioned ^ ^ ^1 if entity @e[type=item_display,tag=baba.object,tag=blocker,distance=..0.1,limit=1] run tag @s remove can_move
+execute if entity @s[tag=can_move,tag=!prop.swap] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=!can_move,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_blocker
+execute if entity @s[tag=can_move,tag=!prop.swap] positioned ^ ^ ^1 if entity @e[type=item_display,tag=baba.object,tag=blocker,distance=..0.1,limit=1] run tag @s remove can_move
 tag @e[type=item_display,tag=baba.object,tag=blocker] remove blocker
 
 # can't move out of bounds
