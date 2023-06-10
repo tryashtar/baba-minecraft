@@ -1,4 +1,5 @@
 title @s[scores={win=1}] times 0 10 0
+execute at @s[scores={win=1}] run playsound baba:win master @s
 title @s[scores={win=1}] title {"text":"a b","font":"baba:congrats"}
 title @s[scores={win=3}] title {"text":"c d","font":"baba:congrats"}
 title @s[scores={win=5}] title {"text":"e f","font":"baba:congrats"}
