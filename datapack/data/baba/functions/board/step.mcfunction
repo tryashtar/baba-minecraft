@@ -4,19 +4,26 @@
 # these ensure that, for example, a plus sign of moving objects with 'push' or 'stop' move correctly
 # it also allows objects with 'push' to stack when two 'shift' objects send them to the same tile
 scoreboard players set moved baba 0
-execute if score direction baba matches 1.. run function baba:board/movement/process/you
+
+execute if score direction baba matches 1.. run function baba:board/movement/batch/you
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
+tag @e[type=item_display,tag=baba.object,tag=has_moved] remove has_moved
+execute if score empty baba matches 1 run function baba:board/update_empty
+
+execute as @e[type=item_display,tag=baba.object,tag=prop.move,tag=!prop.sleep] run scoreboard players operation @s life = @s move_stacks
 function baba:board/movement/process/move
-tag @e[type=item_display,tag=baba.object,tag=prop.move,tag=!prop.sleep,tag=!has_moved] add do_turnaround
-execute as @e[type=item_display,tag=baba.object,tag=do_turnaround] run function baba:board/movement/turn_around
-function baba:board/movement/process/move_turnaround
-tag @e[type=item_display,tag=baba.object,tag=do_turnaround] remove do_turnaround
+execute as @e[type=item_display,tag=baba.object,tag=prop.move,tag=!prop.sleep,tag=!move_done] run function baba:board/movement/turn_around
+function baba:board/movement/process/move
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
+tag @e[type=item_display,tag=baba.object,tag=has_moved] remove has_moved
+execute if score empty baba matches 1 run function baba:board/update_empty
+
+execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/movement/process/setup_shift
 function baba:board/movement/process/shift
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
-execute if entity @e[type=item_display,tag=baba.object,tag=has_moved,limit=1] run function baba:board/post_movement
+tag @e[type=item_display,tag=baba.object,tag=has_moved] remove has_moved
+tag @e[type=item_display,tag=baba.object,tag=shifting] remove shifting
+execute if score empty baba matches 1 run function baba:board/update_empty
 
 # first rule parsing and assignment, along with transforms
 # rules with certain conditions cause all affected objects to re-assign every step

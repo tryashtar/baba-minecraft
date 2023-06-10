@@ -1,5 +1,7 @@
 # re-assign rules to any objects that need them
 execute as @e[type=item_display,tag=baba.object,tag=assign] run data modify entity @s item.tag.parsing set value {delete:0b,block_transforms:0b,transforms:[],writes:[],properties:[],has:[],make:[]}
+scoreboard players set @e[type=item_display,tag=baba.object,tag=assign] move_stacks 0
+scoreboard players set @e[type=item_display,tag=baba.object,tag=assign] shift_stacks 0
 tag @e[type=item_display,tag=baba.object,tag=assign_move] remove assign_move
 tag @e[type=item_display,tag=baba.object,tag=assign_idle] remove assign_idle
 tag @e[type=item_display,tag=baba.object,tag=assign_always] remove assign_always

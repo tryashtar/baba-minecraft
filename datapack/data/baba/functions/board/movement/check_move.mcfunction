@@ -4,7 +4,7 @@ tag @s add can_move
 # run this recursively on pushable objects ahead and pullable objects behind
 # swap property prevents pushing but not pulling
 # anything that's already moved this step is ignored
-execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=prop.push,tag=!prop.swap,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move
+execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 as @e[type=item_display,tag=baba.object,tag=prop.push,tag=!prop.swap,tag=!has_moved,tag=!can_move,distance=..0.1] run function baba:board/movement/check_move
 execute positioned ^ ^ ^-1 as @e[type=item_display,tag=baba.object,tag=prop.pull,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move
 
 # if anything pushable in front of you can't move, then you can't either
