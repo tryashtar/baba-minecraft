@@ -8,6 +8,7 @@ execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_d
 execute if data storage baba:main parsing{current:"word"} run data modify storage baba:main parsing merge value {current:"letter",word:0,word_text:[],word_ids:[]}
 tag @s add current_word
 execute store result score word baba run data get storage baba:main parsing.word 27
+execute if score @s letter matches 27.. run scoreboard players operation word baba *= #27 baba
 execute store result storage baba:main parsing.word int 1 run scoreboard players operation word baba += @s letter
 data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 execute store result storage baba:main id int 1 run scoreboard players get @s text_id

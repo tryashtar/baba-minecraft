@@ -5,23 +5,35 @@
          "predicate": {
             "custom_model_data": 257
          },
-         "model": "baba:editor/bog"
+         "model": "baba:editor/water"
       },
       {
          "predicate": {
             "custom_model_data": 258
          },
-         "model": "baba:editor/brick"
+         "model": "baba:editor/lava"
       },
       {
          "predicate": {
             "custom_model_data": 259
          },
-         "model": "baba:editor/cliff"
+         "model": "baba:editor/bog"
       },
       {
          "predicate": {
             "custom_model_data": 260
+         },
+         "model": "baba:editor/brick"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 261
+         },
+         "model": "baba:editor/cliff"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 262
          },
          "model": "baba:editor/cursor"
       }

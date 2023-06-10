@@ -31,7 +31,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "bog",
+                        "text": "water",
                         "italic": false
                      }
                   },
@@ -63,7 +63,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "brick",
+                        "text": "lava",
                         "italic": false
                      }
                   },
@@ -95,7 +95,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cliff",
+                        "text": "bog",
                         "italic": false
                      }
                   },
@@ -127,13 +127,77 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cursor",
+                        "text": "brick",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_nbt",
                      "tag": "{babatile:1b,CustomModelData:260}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:beehive",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:beehive",
+                     "properties": {
+                        "honey_level": 4,
+                        "facing": "north"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "cliff",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:261}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "minecraft:item",
+               "name": "minecraft:beehive",
+               "conditions": [
+                  {
+                     "condition": "minecraft:block_state_property",
+                     "block": "minecraft:beehive",
+                     "properties": {
+                        "honey_level": 5,
+                        "facing": "north"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "cursor",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_nbt",
+                     "tag": "{babatile:1b,CustomModelData:262}"
                   }
                ]
             }

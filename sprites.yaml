@@ -1063,7 +1063,18 @@ sprites:
        coords: [201, 2173]
     sprites:
      - letter: z
-
+  - objects:
+     - name: text
+       color: '#d9396a'
+       coords: [76, 2407]
+    sprites:
+     - letter: ab
+  - objects:
+     - name: text
+       color: '#d9396a'
+       coords: [151, 2407]
+    sprites:
+     - letter: ba
 
 - sheet: tiles
   entries:

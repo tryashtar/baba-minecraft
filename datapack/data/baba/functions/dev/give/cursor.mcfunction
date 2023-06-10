@@ -1,1 +1,1 @@
-give @s beehive{babatile:1b,CustomModelData:260,BlockStateTag:{honey_level:"3",facing:"north"},display:{Name:'{"text":"cursor","italic":false}'}}
+give @s beehive{babatile:1b,CustomModelData:262,BlockStateTag:{honey_level:"5",facing:"north"},display:{Name:'{"text":"cursor","italic":false}'}}
