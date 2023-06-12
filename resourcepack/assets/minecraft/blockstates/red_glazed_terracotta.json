@@ -5,11 +5,11 @@
          "y": 90
       },
       "facing=south": {
-         "model": "baba:background/ominous_wall",
+         "model": "baba:background/test_wall",
          "y": 90
       },
       "facing=east": {
-         "model": "baba:background/fiery_wall",
+         "model": "baba:background/volcano_wall",
          "y": 90
       },
       "facing=west": {

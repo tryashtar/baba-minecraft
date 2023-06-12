@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/cold_floor"
+      "all": "baba:background/variant_wall"
    }
 }

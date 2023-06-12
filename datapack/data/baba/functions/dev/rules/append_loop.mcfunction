@@ -12,7 +12,10 @@ data modify storage baba:main rule append from storage baba:main iter_rules[0].v
 data modify storage baba:main rule append value " "
 execute if data storage baba:main iter_rules[0].effect{inverted:1b} run data modify storage baba:main rule append value "not "
 data modify storage baba:main rule append from storage baba:main iter_rules[0].effect.text_text[]
-execute summon text_display run function baba:dev/rules/render_single
+# I would use /execute summon here, but it spams log with "Not a string" unless you assign to alignment when summoning
+summon text_display ~ ~ ~ {UUID:[I;0,0,0,1],alignment:"center"}
+execute as 0-0-0-0-1 run function baba:dev/rules/render_single
+kill 0-0-0-0-1
 
 data remove storage baba:main iter_rules[0]
 execute if data storage baba:main iter_rules[0] run function baba:dev/rules/append_loop

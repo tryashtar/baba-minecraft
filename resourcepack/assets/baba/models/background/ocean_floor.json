@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/fiery_wall"
+      "all": "baba:background/ocean_floor"
    }
 }

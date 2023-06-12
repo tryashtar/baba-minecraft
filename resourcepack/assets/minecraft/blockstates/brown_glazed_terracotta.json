@@ -5,7 +5,7 @@
          "y": 90
       },
       "facing=south": {
-         "model": "baba:background/underwater_wall",
+         "model": "baba:background/ocean_wall",
          "y": 90
       },
       "facing=east": {

@@ -1,11 +1,11 @@
 {
    "variants": {
       "facing=north": {
-         "model": "baba:background/fluffy_wall",
+         "model": "baba:background/marshmallow_wall",
          "y": 90
       },
       "facing=south": {
-         "model": "baba:background/cold_wall",
+         "model": "baba:background/mountain_wall",
          "y": 90
       },
       "facing=east": {
@@ -13,7 +13,7 @@
          "y": 90
       },
       "facing=west": {
-         "model": "baba:background/vibrant_wall",
+         "model": "baba:background/variant_wall",
          "y": 90
       }
    }

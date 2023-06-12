@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/underwater_wall"
+      "all": "baba:background/marshmallow_floor"
    }
 }

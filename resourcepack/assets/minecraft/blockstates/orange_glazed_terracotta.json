@@ -5,7 +5,7 @@
          "y": 90
       },
       "facing=south": {
-         "model": "baba:background/green_floor",
+         "model": "baba:background/abstract_floor",
          "y": 90
       },
       "facing=east": {
@@ -13,7 +13,7 @@
          "y": 90
       },
       "facing=west": {
-         "model": "baba:background/greyscale_floor",
+         "model": "baba:background/mono_floor",
          "y": 90
       }
    }

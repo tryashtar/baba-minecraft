@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/ominous_floor"
+      "all": "baba:background/test_wall"
    }
 }

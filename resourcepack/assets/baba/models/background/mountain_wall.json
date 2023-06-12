@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/fluffy_floor"
+      "all": "baba:background/mountain_wall"
    }
 }

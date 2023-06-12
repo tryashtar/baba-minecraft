@@ -1,6 +1,6 @@
 {
    "parent": "baba:background_block",
    "textures": {
-      "all": "baba:background/greyscale_wall"
+      "all": "baba:background/mono_wall"
    }
 }
