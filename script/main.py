@@ -218,7 +218,11 @@ def generate_spawn_functions(source):
         spawn.append(f'scoreboard players set {newspawn} {prop.name} {prop.convert(prop.default)}')
       else:
         raise ValueError(prop.name)
-  spawn.append(f'data remove entity {newspawn} item.tag.scores')
+  spawn.extend([
+    f'data remove entity {newspawn} item.tag.scores',
+    'execute unless score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0}] if score @s sprite = spawn baba run function baba:board/spawn_convert',
+    'execute if score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973}] if score @s text = spawn_text baba run function baba:board/spawn_convert',
+  ])
   tat.write_lines(spawn, 'datapack/data/baba/functions/board/spawn.mcfunction')
   tat.write_lines(spawntext, 'datapack/data/baba/functions/board/spawn_text.mcfunction')
 

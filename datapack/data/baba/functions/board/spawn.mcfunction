@@ -77,3 +77,5 @@ execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result s
 scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing 4
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s item.tag.scores.direction
 data remove entity @e[type=item_display,tag=spawn,distance=..0.1,limit=1] item.tag.scores
+execute unless score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0}] if score @s sprite = spawn baba run function baba:board/spawn_convert
+execute if score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973}] if score @s text = spawn_text baba run function baba:board/spawn_convert

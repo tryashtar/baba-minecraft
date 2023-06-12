@@ -45,16 +45,17 @@ class LevelGrid:
    def __init__(self, level_config, level_stream, object_table):
       self.cells = []
       self.config = level_config
+      self.object_table = object_table
       general = level_config['general']
       self.name = general['name']
-      edits = {}
+      self.edits = {}
       for target,set in level_config['tiles'].items():
          if target == 'changed':
             continue
          obj,prop = target.split('_')
-         if obj not in edits:
-            edits[obj] = {}
-         edits[obj][prop] = set
+         if obj not in self.edits:
+            self.edits[obj] = {}
+         self.edits[obj][prop] = set
       level_stream.seek(28, 1)
       layers = int.from_bytes(level_stream.read(2), byteorder="little")
       for _ in range(layers):
@@ -72,11 +73,11 @@ class LevelGrid:
             x,y = divmod(i, self.width)
             cell = self.cells[x][y]
             id = int.from_bytes(map_buffer[i * 2 : i * 2 + 2], byteorder="little")
-            object = object_table['by_index'].get(id)
+            object = self.object_table['by_index'].get(id)
             if object is not None:
                result = {'name':object['name']}
-               if object['obj'] in edits:
-                  result['edits'] = edits[object['obj']]
+               if object['obj'] in self.edits:
+                  result['edits'] = self.edits[object['obj']]
                cell.append(result)
             else:
                result = None
@@ -97,7 +98,6 @@ class LevelGrid:
       for i,p in enumerate(source.palettes):
          if p == palette and palette != 0:
             metadata.append(f'palette:{i}')
-      nbt.append('metadata:{' + ','.join(metadata) + '}')
       tiles_text = []
       text_prop = source.properties['text']
       for row in reversed(self.cells[1:-1]):
@@ -126,13 +126,13 @@ class LevelGrid:
                   continue
                edits = instance.get('edits', {})
                if (color := edits.get('colour')) is not None:
-                  palette = list(next(iter(source.palettes.values())).keys())
                   if name == 'text':
-                     cx,cy = color.split(',')
-                     props[source.properties['inactive_color']] = palette[int(cy) * 7 + int(cx)]
-                     color = edits.get('activecolour', color)
-                  cx,cy = color.split(',')
-                  props[source.properties['color']] = palette[int(cy) * 7 + int(cx)]
+                     props[source.properties['inactive_color']] = self.convert_color(source, color)
+                  else:
+                     props[source.properties['color']] = self.convert_color(source, color)
+               if (color := edits.get('activecolour')) is not None:
+                  if name == 'text':
+                     props[source.properties['color']] = self.convert_color(source, color)
                if (img := edits.get('image')) is not None:
                   if img == 'seastar':
                      props[source.properties['appearance']] = 'starfish'
@@ -141,8 +141,35 @@ class LevelGrid:
                tile_text.append('{' + ops.create_storage(props, extra_data) + '}')
             row_text.append('[' + ','.join(tile_text) + ']')
          tiles_text.append('[' + ','.join(row_text) + ']')
+      meta_edits = []
+      for target,stuff in self.edits.items():
+         if target == 'changed':
+            continue
+         spr = self.object_table['by_obj'][target]['name']
+         text = None
+         if spr.startswith('text_'):
+            text = spr[len('text_'):]
+            spr = 'text'
+         edit = [f'target:{ops.id_hash(spr)}']
+         if text is not None:
+            edit.append(f'text:{ops.id_hash(text)}')
+         for prop,val in stuff.items():
+            if prop == 'colour':
+               edit.append(f'color:{int(self.convert_color(source, val)[1:], 16)}')
+            elif prop == 'image':
+               if val == 'seastar':
+                  edit.append(f'appearance:{ops.id_hash("starfish")}')
+         meta_edits.append('{' + ','.join(edit) + '}')
+      if len(meta_edits) > 0:
+         metadata.append('conversions:[' + ','.join(meta_edits) + ']')
+      nbt.append('metadata:{' + ','.join(metadata) + '}')
       nbt.append(',tiles:[' + ','.join(tiles_text) + ']')
       return '{' + ''.join(nbt) + '}'
+
+   def convert_color(self, source, color):
+      palette = list(next(iter(source.palettes.values())).keys())
+      cx,cy = color.split(',')
+      return palette[int(cy) * 7 + int(cx)]
 
 
 if __name__ == '__main__':
