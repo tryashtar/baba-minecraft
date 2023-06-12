@@ -1,5 +1,4 @@
 execute store result score spawn baba run data get entity @s item.tag.has[0].text
-execute store result score spawn_variant baba run data get entity @s item.tag.has[0].variant
 # when spawning text, you spawn text of your own kind
 scoreboard players operation spawn_text baba = @s sprite
 function baba:board/spawn

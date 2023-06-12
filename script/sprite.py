@@ -12,6 +12,7 @@ class SpriteCollection:
     self.data = data
     self.objects = {}
     self.overlays = {}
+    self.alt_images = {}
     self.properties = {
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
@@ -25,11 +26,10 @@ class SpriteCollection:
       self.properties[name] = Metadata(name=name, kind=prop['type'], values=prop.get('values'), default=prop.get('default'), attributes=prop['attributes'])
     self.load_sprites()
     
-  def get_or_create_obj(self, name, is_overlay):
-    source = self.overlays if is_overlay else self.objects
+  def get_or_create_obj(self, name, source):
     if name in source:
       return source[name]
-    obj = BabaObject(name, is_overlay)
+    obj = BabaObject(name, source is self.overlays)
     source[name] = obj
     return obj
 
@@ -63,10 +63,15 @@ class SpriteCollection:
             sprite_configs.append(spr_data)
         if 'objects' in entry:
           source = entry['objects']
-          is_overlay = False
-        else:
+          obj_source = self.objects
+        elif 'overlays' in entry:
           source = entry['overlays']
-          is_overlay = True
+          obj_source = self.overlays
+        elif 'images' in entry:
+          source = entry['images']
+          obj_source = self.alt_images
+        else:
+          raise ValueError(entry)
         framecount = 1
         for obj_data in source:
           if obj_data is not None and 'coords' in obj_data:
@@ -82,7 +87,7 @@ class SpriteCollection:
             obj_frames = ImageFrames(list(self.get_frames(sprite_index, image, framecount, coords, size, framedir)))
             for obj_index,obj_data in enumerate(shared):
               # create the object, or find an existing one if the object's sprites appear on multiple rows (e.g. text)
-              baba = self.get_or_create_obj(obj_data['name'], is_overlay)
+              baba = self.get_or_create_obj(obj_data['name'], obj_source)
               if 'overlays' in obj_data:
                 for o in obj_data['overlays']:
                   if o not in baba.overlays:
@@ -94,7 +99,7 @@ class SpriteCollection:
               if raw_cfg == 'text':
                 if 'text coords' in obj_data:
                   adding_frames = ImageFrames(list(self.get_frames(sprite_index, image, framecount, obj_data['text coords'], size, framedir)))
-                adding = self.get_or_create_obj('text', False)
+                adding = self.get_or_create_obj('text', self.objects)
                 color = obj_data.get('text color', obj_data.get('color'))
                 cfg = {'text': obj_data['name'], 'part': 'noun'}
                 cfg['inactive_color'] = obj_data['inactive color']

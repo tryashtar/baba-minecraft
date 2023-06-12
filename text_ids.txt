@@ -57,7 +57,7 @@ not: 10631
 on: 419
 near: 279252
 facing: 86690878
-without: -5
+without: -100
 has: 5878
 make: 256910
 write: 12584543

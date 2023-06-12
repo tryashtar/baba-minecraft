@@ -1,7 +1,7 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:sprites/text_overlay"
+      "up": "baba:sprites/text_overlay/disabled-true"
    },
    "display": {
       "fixed": {

@@ -1,6 +1,6 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:sprites/star/starfish"
+      "up": "baba:sprites/star"
    }
 }

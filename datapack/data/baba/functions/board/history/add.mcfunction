@@ -4,7 +4,6 @@ data modify storage baba:main objects[-1].data set from storage baba:main object
 data modify storage baba:main objects[-1].tags set from storage baba:main object.Tags
 execute store result storage baba:main objects[-1].scores.sprite int 1 run scoreboard players get @s sprite
 execute store result storage baba:main objects[-1].scores.text int 1 run scoreboard players get @s text
-execute store result storage baba:main objects[-1].scores.variant int 1 run scoreboard players get @s variant
 execute store result storage baba:main objects[-1].scores.letter int 1 run scoreboard players get @s letter
 execute store result storage baba:main objects[-1].scores.text_id int 1 run scoreboard players get @s text_id
 execute store result storage baba:main objects[-1].scores.facing int 1 run scoreboard players get @s facing

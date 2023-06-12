@@ -1,6 +1,6 @@
 {
    "parent": "baba:editor_block",
    "textures": {
-      "all": "baba:editor/flower/violet"
+      "all": "baba:editor/text/star"
    }
 }

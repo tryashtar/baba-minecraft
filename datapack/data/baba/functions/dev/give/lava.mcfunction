@@ -1,1 +1,1 @@
-give @s beehive{babatile:1b,CustomModelData:258,BlockStateTag:{honey_level:"1",facing:"north"},display:{Name:'{"text":"lava","italic":false}'}}
+give @s chiseled_bookshelf{babatile:1b,CustomModelData:254,BlockStateTag:{slot_0_occupied:"true",slot_1_occupied:"false",slot_2_occupied:"true",slot_3_occupied:"true",slot_4_occupied:"true",slot_5_occupied:"true",facing:"west"},display:{Name:'{"text":"lava","italic":false}'}}

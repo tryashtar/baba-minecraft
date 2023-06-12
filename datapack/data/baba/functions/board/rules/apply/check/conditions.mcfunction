@@ -14,8 +14,8 @@ execute if data storage baba:main condition{condition:275525968} if predicate ba
 execute if data storage baba:main condition{condition:275525968} run tag @s add assign_always
 
 # these conditions can require multiple params, in which case any object can only count once
-execute if data storage baba:main condition{condition:-5} run function baba:board/rules/apply/check/without
-execute if data storage baba:main condition{condition:-5} run tag @s add assign_always
+execute if data storage baba:main condition{condition:-100} run function baba:board/rules/apply/check/without
+execute if data storage baba:main condition{condition:-100} run tag @s add assign_always
 tag @e[type=item_display,tag=baba.object,tag=used] remove used
 execute if data storage baba:main condition{condition:279252} run function baba:board/rules/apply/check/near
 execute if data storage baba:main condition{condition:279252} run tag @s add assign_move

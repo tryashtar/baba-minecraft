@@ -1,1 +1,1 @@
-give @s chiseled_bookshelf{babatile:1b,CustomModelData:76,BlockStateTag:{slot_0_occupied:"true",slot_1_occupied:"true",slot_2_occupied:"false",slot_3_occupied:"true",slot_4_occupied:"false",slot_5_occupied:"false",facing:"south"},display:{Name:'{"text":"text pull","italic":false}'}}
+give @s chiseled_bookshelf{babatile:1b,CustomModelData:74,BlockStateTag:{slot_0_occupied:"true",slot_1_occupied:"false",slot_2_occupied:"false",slot_3_occupied:"true",slot_4_occupied:"false",slot_5_occupied:"false",facing:"south"},display:{Name:'{"text":"text pull","italic":false}'}}

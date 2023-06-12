@@ -62,10 +62,6 @@ properties:
   disabled:
     type: tag
     attributes: [sprite]
-  variant:
-    type: score
-    attributes: [sprite, editor, primary, spawn]
-    values: [normal, [starfish, violet]]
 
 sprites:
 - sheet: sprites1
@@ -450,13 +446,6 @@ sprites:
       coords: [401, 676]
       properties:
         z_layer: 16
-        variant: normal
-    - name: star
-      color: '#e49950'
-      coords: [276, 910]
-      properties:
-        z_layer: 16
-        variant: starfish
     - coords: [376, 676]
       shared:
       - name: text
@@ -465,25 +454,11 @@ sprites:
         properties:
           text: star
           part: noun
-          variant: normal
-      - name: text
-        color: '#e49950'
-        properties:
-          text: star
-          part: noun
-          variant: starfish
-    - coords: [151, 226]
-      shared:
-      - name: flower
-        color: '#557ae0'
-        properties:
-          z_layer: 12
-          variant: normal
-      - name: flower
-        color: '#4759b1'
-        properties:
-          z_layer: 12
-          variant: violet
+    - name: flower
+      coords: [151, 226]
+      color: '#557ae0'
+      properties:
+        z_layer: 12
     - name: text
       coords: [126, 226]
       color: '#557ae0'
@@ -491,14 +466,15 @@ sprites:
       properties:
         text: flower
         part: noun
-        variant: normal
+    sprites:
+    - {}
+  - images:
+    - name: starfish
+      coords: [276, 910]
     - name: text
       coords: [626, 910]
-      color: '#557ae0'
       properties:
-        text: flower
-        part: noun
-        variant: violet
+        text: violet
     sprites:
     - {}
   - overlays:

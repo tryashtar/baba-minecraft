@@ -19,7 +19,6 @@ data modify storage baba:main parsing.not_ids set value []
 data modify storage baba:main parsing.rules3[-1][].verb set from storage baba:main parsing.verb
 data modify storage baba:main parsing.rules3[-1][].verb_text set from storage baba:main parsing.verb_text
 execute store result storage baba:main parsing.rules3[-1][].effect.text int 1 run scoreboard players get word baba
-execute store result storage baba:main parsing.rules3[-1][].effect.variant int 1 run scoreboard players get @s variant
 data modify storage baba:main parsing.rules3[-1][].effect.text_text set from storage baba:main parsing.word_text
 data modify storage baba:main parsing.rules3[-1][].effect.inverted set from storage baba:main parsing.inverted
 data modify storage baba:main parsing.rules3[-1][].effect.part set from storage baba:main parsing.effect_part

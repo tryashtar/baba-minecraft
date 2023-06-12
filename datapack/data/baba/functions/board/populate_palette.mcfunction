@@ -248,7 +248,7 @@ execute if entity @e[type=item_display,tag=baba.object,scores={text=10631},limit
 execute if entity @e[type=item_display,tag=baba.object,scores={text=419},limit=1] run data modify storage baba:main words.infix append value 419
 execute if entity @e[type=item_display,tag=baba.object,scores={text=279252},limit=1] run data modify storage baba:main words.infix append value 279252
 execute if entity @e[type=item_display,tag=baba.object,scores={text=86690878},limit=1] run data modify storage baba:main words.infix append value 86690878
-execute if entity @e[type=item_display,tag=baba.object,scores={text=-5},limit=1] run data modify storage baba:main words.infix append value -5
+execute if entity @e[type=item_display,tag=baba.object,scores={text=-100},limit=1] run data modify storage baba:main words.infix append value -100
 execute if entity @e[type=item_display,tag=baba.object,scores={text=5878},limit=1] run data modify storage baba:main words.verb append value 5878
 execute if entity @e[type=item_display,tag=baba.object,scores={text=256910},limit=1] run data modify storage baba:main words.verb append value 256910
 execute if entity @e[type=item_display,tag=baba.object,scores={text=12584543},limit=1] run data modify storage baba:main words.verb append value 12584543

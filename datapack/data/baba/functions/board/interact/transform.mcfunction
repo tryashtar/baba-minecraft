@@ -1,6 +1,5 @@
 data modify storage baba:main transform set from entity @s item.tag.transforms[0]
 execute store result score spawn baba run data get storage baba:main transform.text
-execute store result score spawn_variant baba run data get storage baba:main transform.variant
 # when transforming into text, you transform into text of your own kind
 scoreboard players operation spawn_text baba = @s sprite
 execute if data storage baba:main transform{write:1b} run scoreboard players set spawn baba 397973

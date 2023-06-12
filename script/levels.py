@@ -118,8 +118,7 @@ class LevelGrid:
                   condition = condition and (lambda x: text_prop in x.properties and x.properties[text_prop] == text)
                edits = instance.get('edits', {})
                if (img := edits.get('image')) is not None:
-                  if img == 'seastar':
-                     condition = condition and (lambda x: x.properties[source.properties['variant']] == 'starfish')
+                  pass
                props = None
                for spr in obj.sprites:
                   if condition(spr):
