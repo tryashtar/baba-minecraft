@@ -303,7 +303,7 @@ def generate_update_function(source, resources):
   update_obj.extend([
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={sprite=397973,text_used=0}] run function baba:display/inactive_text',
+    'execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color',
     f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
     f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
     'execute if score palette baba matches 1.. run function baba:display/palette'

@@ -17,6 +17,7 @@ class SpriteCollection:
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
+      'inactive_color': Metadata(name='inactive_color', kind='score', attributes=['spawn'], converter='hex'),
       'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
     }
     self.palettes = data['palettes']
@@ -96,6 +97,7 @@ class SpriteCollection:
                 adding = self.get_or_create_obj('text', False)
                 color = obj_data.get('text color', obj_data.get('color'))
                 cfg = {'text': obj_data['name'], 'part': 'noun'}
+                cfg['inactive_color'] = obj_data['inactive color']
               else:
                 adding_frames = obj_frames
                 adding = baba
@@ -103,6 +105,8 @@ class SpriteCollection:
                 cfg = raw_cfg.copy()
                 if isinstance(cfg, list):
                   cfg = cfg[obj_index]
+                if adding.name == 'text' and 'inactive color' in obj_data:
+                  cfg['inactive_color'] = obj_data['inactive color']
               # include properties specific to this object, or this sprite
               cfg['color'] = color
               if raw_cfg != 'text' and 'properties' in obj_data:
@@ -113,7 +117,7 @@ class SpriteCollection:
                     cfg[k] = v
               # make keys the actual metadata objects instead of their names
               props = {self.properties['sprite']:adding.name}
-              if adding.name in ('text','letter'):
+              if adding.name == 'text':
                 props[self.properties['z_layer']] = 20
                 props[self.properties['not_all']] = True
                 props[self.properties['reparse']] = True

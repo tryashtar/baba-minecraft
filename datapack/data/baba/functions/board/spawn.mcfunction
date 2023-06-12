@@ -45,7 +45,7 @@ execute if score spawn baba matches 60080 run summon item_display ~ ~ ~ {width:1
 execute if score spawn baba matches 3341 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:16777215,z_layer:12}}}}
 execute if score spawn baba matches -1 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:5259044,z_layer:17}}}}
 execute if score spawn baba matches 365747 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:15029051,z_layer:16}}}}
-execute if score spawn baba matches 94574 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:15590021,z_layer:12}}}}
+execute if score spawn baba matches 94574 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:12754502,z_layer:12}}}}
 execute if score spawn baba matches 97534954 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:9463614,z_layer:16}}}}
 execute if score spawn baba matches 4679038 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:9463614,z_layer:9}}}}
 execute if score spawn baba matches 10506715 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:9463614,z_layer:12}}}}
@@ -74,6 +74,7 @@ scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit
 scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] variant = spawn_variant baba
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s letter run data get entity @s item.tag.scores.letter
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s color run data get entity @s item.tag.scores.color
+execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s inactive_color run data get entity @s item.tag.scores.inactive_color
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s item.tag.scores.z_layer
 scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing 4
 execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s item.tag.scores.direction

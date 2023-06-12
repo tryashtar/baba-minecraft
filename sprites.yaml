@@ -75,23 +75,27 @@ sprites:
   entries:
   - objects:
     - name: baba
-      text color: '#d9396a'
       object color: '#ffffff'
+      text color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [1, 1]
       properties:
         z_layer: 18
     - name: keke
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [1, 751]
       properties:
         z_layer: 18
     - name: me
       color: '#8e5e9c'
+      inactive color: '#603981'
       coords: [1, 901]
       properties:
         z_layer: 18
     - name: robot
       color: '#737373'
+      inactive color: '#293141'
       coords: [1, 1051]
       properties:
         z_layer: 17
@@ -109,8 +113,9 @@ sprites:
   entries:
   - objects:
     - name: belt
+      object color: '#3e7688' # 3e7688 in editor
       text color: '#5f9dd1'
-      object color: '#3e7688'
+      inactive color: '#3e7688' 
       coords: [1, 85]
       properties:
         z_layer: 9
@@ -123,43 +128,54 @@ sprites:
   - objects:
     - name: bird
       color: '#e49950'
+      inactive color: '#e5533b'
       coords: [1, 322]
       properties:
         z_layer: 17
     - name: bug
       color: '#c29e46'
+      inactive color: '#503f24'
       properties:
         z_layer: 17
     - name: crab
       color: '#e5533b'
+      inactive color: '#82261c'
       properties:
         z_layer: 17
     - name: rocket
       color: '#737373'
+      inactive color: '#293141'
       coords: [1, 847]
       properties:
         z_layer: 15
     - name: skull
       color: '#82261c'
+      inactive color: '#421910'
       properties:
         z_layer: 17
     - name: ghost
       color: '#eb91ca'
+      inactive color: '#d9396a'
       coords: [276, 622]
       properties:
         z_layer: 17
     - name: statue
-      color: '#737373'
+      object color: '#737373'
+      text color: '#737373' # c3c3c3 in editor
+      inactive color: '#242424' # 737373 in editor
       coords: [276, 922]
       properties:
         z_layer: 17
     - name: bolt
       color: '#ede285'
+      inactive color: '#e49950'
       coords: [551, 322]
       properties:
         z_layer: 16
     - name: hand
-      color: '#ffffff'
+      object color: '#ffffff' # 8e5e9c in editor
+      text color: '#ffffff' # eb91ca in editor
+      inactive color: '#737373' # 8e5e9c in editor
       coords: [551, 622]
       properties:
         z_layer: 17
@@ -170,16 +186,20 @@ sprites:
   - objects:
     - name: bat
       color: '#8e5e9c'
+      inactive color: '#603981'
       coords: [1, 1081]
       properties:
         z_layer: 14
     - name: bubble
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [276, 1081]
       properties:
         z_layer: 12
     - name: cog
-      color: '#737373'
+      object color: '#737373'
+      text color: '#c3c3c3'
+      inactive color: '#737373'
       coords: [1, 1167]
       properties:
         z_layer: 16
@@ -193,8 +213,9 @@ sprites:
   entries:
   - objects:
     - name: algae
-      text color: '#4b5c1c'
       object color: '#5c8339'
+      text color: '#4b5c1c'
+      inactive color: '#303824'
       coords: [1, 1]
       properties:
         z_layer: 15
@@ -202,31 +223,38 @@ sprites:
     - null
     - name: flag
       color: '#ede285'
+      inactive color: '#90673e'
       properties:
         z_layer: 17
     - null
     - name: key
       color: '#ede285'
+      inactive color: '#90673e'
       properties:
         z_layer: 16
     - name: love
       color: '#eb91ca'
+      inactive color: '#d9396a'
       properties:
         z_layer: 16
     - null
     - null
     - name: spike
-      color: '#293141'
+      object color: '#293141'
+      text color: '#737373'
+      inactive color: '#293141'
       properties:
         z_layer: 10
     - null
     - name: ufo
       object color: '#eb91ca'
       text color: '#d9396a'
+      inactive color: '#682e4c'
       properties:
         z_layer: 17
     - name: door
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [126, 151]
       properties:
         z_layer: 15
@@ -236,21 +264,25 @@ sprites:
     - null
     - name: pillar
       color: '#737373'
+      inactive color: '#242424' # 293141 in editor
       properties:
         z_layer: 16
     - name: rock
-      text color: '#90673e'
       object color: '#c29e46'
+      text color: '#90673e'
+      inactive color: '#503f24'
       properties:
         z_layer: 16
     - null
     - name: tile
+      object color: '#15181f' # 242424 in editor
       text color: '#737373'
-      object color: '#15181f'
+      inactive color: '#293141'
       properties:
         z_layer: 4
     - name: fruit
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [376, 226]
       properties:
         z_layer: 16
@@ -258,6 +290,7 @@ sprites:
     - null
     - name: moon
       color: '#ede285'
+      inactive color: '#90673e'
       properties:
         z_layer: 16
     - null
@@ -265,59 +298,71 @@ sprites:
     - null
     - name: tree
       color: '#5c8339'
+      inactive color: '#4b5c1c'
       properties:
         z_layer: 16
     - name: box
-      text color: '#90673e'
       object color: '#c29e46'
+      text color: '#90673e'
+      inactive color: '#503f24'
       coords: [751, 1]
       properties:
         z_layer: 16
     - null
     - name: fire
-      text color: '#e5533b'
       object color: '#e49950'
+      text color: '#e5533b'
+      inactive color: '#421910'
       properties:
         z_layer: 15
     - name: gate
       color: '#e5533b'
+      inactive color: '#82261c'
       properties:
         z_layer: 15
     - name: jelly
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       properties:
         z_layer: 17
     - null
     - null
     - name: reed
       color: '#c29e46'
+      inactive color: '#90673e'
       properties:
         z_layer: 16
     - name: sign
-      text color: '#c29e46'
       object color: '#90673e'
+      text color: '#c29e46'
+      inactive color: '#90673e'
       properties:
         z_layer: 16
     - name: sun
       color: '#ede285'
+      inactive color: '#e49950'
       properties:
         z_layer: 14
     - name: fungi
-      text color: '#c29e46'
       object color: '#90673e'
+      text color: '#c29e46'
+      inactive color: '#503f24'
       coords: [501, 226]
       properties:
         z_layer: 8
     - name: husk
       color: '#90673e'
+      inactive color: '#4b5c1c'
       properties:
         z_layer: 15
     - name: leaf
       color: '#ede285'
+      inactive color: '#90673e'
       properties:
         z_layer: 8
     - name: orb
       color: '#d9396a'
+      inactive color: '#682e4c'
       properties:
         z_layer: 17
     - null
@@ -325,20 +370,24 @@ sprites:
     - null
     - name: trees
       color: '#5c8339'
+      inactive color: '#4b5c1c'
       properties:
         z_layer: 9
     - name: cake
       color: '#eb91ca'
+      inactive color: '#d9396a'
       coords: [251, 76]
       properties:
         z_layer: 17
     - name: dot
       color: '#ffffff'
+      inactive color: '#737373'
       properties:
         z_layer: 12
     - name: foliage
-      text color: '#e49950'
       object color: '#503f24'
+      text color: '#e49950'
+      inactive color: '#e5533b'
       properties:
         z_layer: 17
     - null
@@ -347,20 +396,25 @@ sprites:
     - null
     - name: rose
       color: '#e5533b'
+      inactive color: '#82261c'
       properties:
         z_layer: 16
     - name: dust
-      color: '#ede285'
+      object color: '#c29e46'
+      text color: '#ede285'
+      inactive color: '#c29e46'
       coords: [626, 151]
       properties:
         z_layer: 12
     - name: fungus
       color: '#90673e'
+      inactive color: '#503f24'
       properties:
         z_layer: 16
     - name: husks
-      text color: '#c29e46'
       object color: '#90673e'
+      text color: '#c29e46'
+      inactive color: '#90673e'
       properties:
         z_layer: 9
     - null
@@ -368,8 +422,9 @@ sprites:
     - null
     - null
     - name: stump
-      text color: '#c29e46'
       object color: '#90673e'
+      text color: '#c29e46'
+      inactive color: '#503f24'
       properties:
         z_layer: 12
     sprites:
@@ -383,6 +438,7 @@ sprites:
         z_layer: 20
     - name: text
       color: '#ede285'
+      inactive color: '#e49950'
       coords: [376, 826]
       frames: right
       properties:
@@ -405,6 +461,7 @@ sprites:
       shared:
       - name: text
         color: '#ede285'
+        inactive color: '#90673e'
         properties:
           text: star
           part: noun
@@ -430,6 +487,7 @@ sprites:
     - name: text
       coords: [126, 226]
       color: '#557ae0'
+      inactive color: '#4759b1'
       properties:
         text: flower
         part: noun
@@ -589,66 +647,77 @@ sprites:
   - objects:
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [226, 76]
       properties:
         text: is
         part: verb
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [301, 76]
       properties:
         text: and
         part: and
     - name: text
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [151, 76]
       properties:
         text: not
         part: not
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [1, 1273]
       properties:
         text: 'on'
         part: infix
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [76, 1273]
       properties:
         text: near
         part: infix
     - name: text
       color: '#ffffff'
+      inactive color: '#c3c3c3' # 737373 in editor
       coords: [226, 1273]
       properties:
         text: facing
         part: infix
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [1, 1348]
       properties:
         text: without
         part: infix
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [1, 151]
       properties:
         text: has
         part: verb
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [301, 151]
       properties:
         text: make
         part: verb
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [151, 226]
       properties:
         text: write
         part: verb
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [1, 1]
       properties:
         text: all
@@ -656,6 +725,7 @@ sprites:
         special: true
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [76, 76]
       properties:
         text: empty
@@ -663,162 +733,189 @@ sprites:
         special: true
     - name: text
       color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [76, 1]
       properties:
         text: text
         part: noun
     - name: text
       color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [151, 1]
       properties:
         text: level
         part: noun
     - name: text
       color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [226, 226]
       properties:
         text: you
         part: property
     - name: text
       color: '#90673e'
+      inactive color: '#503f24'
       coords: [1, 301]
       properties:
         text: push
         part: property
     - name: text
       color: '#c29e46'
+      inactive color: '#90673e'
       coords: [76, 301]
       properties:
         text: pull
         part: property
     - name: text
       color: '#a5b13f'
+      inactive color: '#4b5c1c'
       coords: [226, 301]
       properties:
         text: move
         part: property
     - name: text
       color: '#5f9dd1'
+      inactive color: '#3e7688'
       coords: [301, 301]
       properties:
         text: shift
         part: property
     - name: text
       color: '#82261c'
+      inactive color: '#421910'
       coords: [1, 730]
       properties:
         text: defeat
         part: property
     - name: text
       color: '#e49950'
+      inactive color: '#e5533b'
       coords: [76, 730]
       properties:
         text: hot
         part: property
     - name: text
       color: '#5f9dd1'
+      inactive color: '#3e7688'
       coords: [151, 730]
       properties:
         text: melt
         part: property
     - name: text
       color: '#557ae0'
+      inactive color: '#4759b1'
       coords: [1, 880]
       properties:
         text: hide
         part: property
     - name: text
       color: '#ede285'
+      inactive color: '#90673e'
       coords: [226, 1123]
       properties:
         text: win
         part: property
     - name: text
       color: '#4b5c1c'
+      inactive color: '#303824'
       coords: [151, 301]
       properties:
         text: stop
         part: property
     - name: text
       color: '#ede285'
+      inactive color: '#90673e'
       coords: [226, 730]
       properties:
         text: open
         part: property
     - name: text
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [301, 730]
       properties:
         text: shut
         part: property
     - name: text
       color: '#83c8e5'
+      inactive color: '#3e7688'
       coords: [226, 805]
       properties:
         text: float
         part: property
     - name: text
       color: '#5f9dd1'
+      inactive color: '#3e7688'
       coords: [1, 805]
       properties:
         text: sink
         part: property
     - name: text
       color: '#3e7688'
+      inactive color: '#293141'
       coords: [151, 1123]
       properties:
         text: weak
         part: property
     - name: text
       color: '#8e5e9c'
+      inactive color: '#603981'
       coords: [1, 1123]
       properties:
         text: swap
         part: property
     - name: text
       color: '#83c8e5'
+      inactive color: '#3e7688'
       coords: [76, 1123]
       properties:
         text: tele
         part: property
     - name: text
       color: '#a5b13f'
+      inactive color: '#4b5c1c'
       coords: [226, 2407]
       properties:
         text: fall
         part: property
     - name: text
       color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [301, 1123]
       properties:
         text: more
         part: property
     - name: text
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [151, 1498]
       properties:
         text: red
         part: property
     - name: text
       color: '#557ae0'
+      inactive color: '#4759b1'
       coords: [226, 1573]
       properties:
         text: blue
         part: property
     - name: text
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [1, 955]
       properties:
         text: sleep
         part: property
     - name: text
       color: '#557ae0'
+      inactive color: '#4759b1'
       coords: [226, 1]
       properties:
         text: group
         part: noun
     - name: text
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [1, 376]
       properties:
         text: right
@@ -826,12 +923,14 @@ sprites:
         direction: 4
     - name: text
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [76, 376]
       properties:
         text: up
         part: property
         direction: 1
     - name: text
+      inactive color: '#5f9dd1'
       color: '#83c8e5'
       coords: [151, 376]
       properties:
@@ -840,6 +939,7 @@ sprites:
         direction: 3
     - name: text
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [226, 376]
       properties:
         text: down
@@ -847,60 +947,70 @@ sprites:
         direction: 2
     - name: text
       color: '#ffffff'
+      inactive color: '#c3c3c3'
       coords: [1, 1198]
       properties:
         text: word
         part: property
     - name: text
       color: '#e49950'
+      inactive color: '#e5533b'
       coords: [76, 1198]
       properties:
         text: idle
         part: prefix
     - name: text
       color: '#e5533b'
+      inactive color: '#82261c'
       coords: [151, 1198]
       properties:
         text: lonely
         part: prefix
     - name: text
       color: '#a5b13f'
+      inactive color: '#5c8339'
       coords: [226, 1198]
       properties:
         text: often
         part: prefix
     - name: text
       color: '#557ae0'
+      inactive color: '#4759b1'
       coords: [301, 1198]
       properties:
         text: seldom
         part: prefix
     - name: text
       color: '#ede285'
+      inactive color: '#e49950'
       coords: [151, 1873]
       properties:
         text: select
         part: property
     - name: text
       color: '#ede285'
+      inactive color: '#e49950'
       coords: [151, 1723]
       properties:
         text: best
         part: property
     - name: text
       color: '#d9396a'
+      inactive color: '#682e4c'
       coords: [226, 1798]
       properties:
         text: bonus
         part: property
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [301, 1798]
       properties:
         text: end
         part: property
     - name: text
       color: '#ffffff'
+      inactive color: '#737373'
       coords: [1, 1873]
       properties:
         text: done
@@ -908,247 +1018,291 @@ sprites:
     sprites:
     - {}
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [1, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [1, 1948]
     sprites:
-     - letter: a
+    - letter: a
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [51, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [51, 1948]
     sprites:
-     - letter: b
+    - letter: b
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [101, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [101, 1948]
     sprites:
-     - letter: c
+    - letter: c
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [151, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [151, 1948]
     sprites:
-     - letter: d
+    - letter: d
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [201, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [201, 1948]
     sprites:
-     - letter: e
+    - letter: e
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [251, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [251, 1948]
     sprites:
-     - letter: f
+    - letter: f
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [301, 1948]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [301, 1948]
     sprites:
-     - letter: g
+    - letter: g
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [1, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [1, 2023]
     sprites:
-     - letter: h
+    - letter: h
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [51, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [51, 2023]
     sprites:
-     - letter: i
+    - letter: i
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [101, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [101, 2023]
     sprites:
-     - letter: j
+    - letter: j
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [151, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [151, 2023]
     sprites:
-     - letter: k
+    - letter: k
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [201, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [201, 2023]
     sprites:
-     - letter: l
+    - letter: l
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [251, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [251, 2023]
     sprites:
-     - letter: m
+    - letter: m
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [301, 2023]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [301, 2023]
     sprites:
-     - letter: 'n'
+    - letter: 'n'
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [1, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [1, 2098]
     sprites:
-     - letter: o
+    - letter: o
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [51, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [51, 2098]
     sprites:
-     - letter: p
+    - letter: p
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [101, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [101, 2098]
     sprites:
-     - letter: q
+    - letter: q
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [151, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [151, 2098]
     sprites:
-     - letter: r
+    - letter: r
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [201, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [201, 2098]
     sprites:
-     - letter: s
+    - letter: s
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [251, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [251, 2098]
     sprites:
-     - letter: t
+    - letter: t
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [301, 2098]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [301, 2098]
     sprites:
-     - letter: u
+    - letter: u
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [1, 2173]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [1, 2173]
     sprites:
-     - letter: v
+    - letter: v
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [51, 2173]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [51, 2173]
     sprites:
-     - letter: w
+    - letter: w
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [101, 2173]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [101, 2173]
     sprites:
-     - letter: x
+    - letter: x
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [151, 2173]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [151, 2173]
     sprites:
-     - letter: 'y'
+    - letter: 'y'
   - objects:
-     - name: text
-       color: '#ffffff'
-       coords: [201, 2173]
+    - name: text
+      color: '#ffffff'
+      inactive color: '#737373'
+      coords: [201, 2173]
     sprites:
-     - letter: z
+    - letter: z
   - objects:
-     - name: text
-       color: '#d9396a'
-       coords: [76, 2407]
+    - name: text
+      color: '#d9396a'
+      inactive color: '#682e4c'
+      coords: [76, 2407]
     sprites:
-     - letter: ab
+    - letter: ab
   - objects:
-     - name: text
-       color: '#d9396a'
-       coords: [151, 2407]
+    - name: text
+      color: '#d9396a'
+      inactive color: '#682e4c'
+      coords: [151, 2407]
     sprites:
-     - letter: ba
+    - letter: ba
 
 - sheet: tiles
   entries:
   - objects:
     - name: cloud
       color: '#83c8e5'
+      inactive color: '#5f9dd1'
       coords: [1, 451]
       properties:
         z_layer: 14
     - name: fence
       color: '#90673e'
+      inactive color: '#503f24'
       properties:
         z_layer: 14
     - null
     - name: grass
-      text color: '#a5b13f'
       object color: '#303824'
+      text color: '#a5b13f'
+      inactive color: '#4b5c1c'
       properties:
         z_layer: 10
     - name: hedge
       color: '#4b5c1c'
+      inactive color: '#303824'
       properties:
         z_layer: 14
     - name: ice
-      text color: '#5f9dd1'
       object color: '#3e7688'
+      text color: '#5f9dd1'
+      inactive color: '#3e7688'
       properties:
         z_layer: 9
     - null
     - name: line
       color: '#ffffff'
+      inactive color: '#c3c3c3'
       properties:
         z_layer: 20
     - name: pipe
-      color: '#293141'
+      object color: '#293141'
+      text color: '#737373'
+      inactive color: '#293141'
       properties:
         z_layer: 14
     - null
     - null
     - name: rubble
       color: '#503f24'
+      inactive color: '#503f24'
       properties:
         z_layer: 8
     - null
     - null
     - name: wall
-      text color: '#737373'
       object color: '#293141'
+      text color: '#737373'
+      inactive color: '#293141'
       properties:
         z_layer: 14
     - shared:
       - name: water
         color: '#5f9dd1'
+        inactive color: '#3e7688'
         properties:
           z_layer: 2
       - name: lava
         color: '#e49950'
+        inactive color: '#e5533b'
         text coords: [1, 901]
         properties:
           z_layer: 2
       - name: bog
-        text color: '#a5b13f'
         object color: '#4b5c1c'
+        text color: '#a5b13f'
+        inactive color: '#4b5c1c'
         text coords: [1, 76]
         properties:
           z_layer: 2
     - name: brick
-      text color: '#90673e'
       object color: '#362e22'
+      text color: '#90673e'
+      inactive color: '#503f24'
       properties:
         z_layer: 10
       coords: [1, 151]
     - name: cliff
-      color: '#90673e'
+      object color: '#90673e'
+      text color: '#c29e46'
+      inactive color: '#503f24'
       properties:
         z_layer: 14
     properties:

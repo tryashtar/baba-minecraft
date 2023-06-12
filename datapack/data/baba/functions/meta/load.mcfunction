@@ -12,6 +12,7 @@ scoreboard objectives add move_stacks dummy
 scoreboard objectives add shift_stacks dummy
 scoreboard objectives add z_layer dummy
 scoreboard objectives add color dummy
+scoreboard objectives add inactive_color dummy
 scoreboard objectives add repeats dummy
 scoreboard objectives add number dummy
 scoreboard objectives add win dummy
