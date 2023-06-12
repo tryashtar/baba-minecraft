@@ -116,9 +116,6 @@ class LevelGrid:
                condition = lambda x: True
                if text is not None:
                   condition = condition and (lambda x: text_prop in x.properties and x.properties[text_prop] == text)
-               edits = instance.get('edits', {})
-               if (img := edits.get('image')) is not None:
-                  pass
                props = None
                for spr in obj.sprites:
                   if condition(spr):
@@ -127,11 +124,18 @@ class LevelGrid:
                if props is None:
                   print(f'\tFailed to create: {instance}')
                   continue
+               edits = instance.get('edits', {})
                if (color := edits.get('colour')) is not None:
-                  color = edits.get('activecolour', color)
-                  cx,cy = color.split(',')
                   palette = list(next(iter(source.palettes.values())).keys())
+                  if name == 'text':
+                     cx,cy = color.split(',')
+                     props[source.properties['inactive_color']] = palette[int(cy) * 7 + int(cx)]
+                     color = edits.get('activecolour', color)
+                  cx,cy = color.split(',')
                   props[source.properties['color']] = palette[int(cy) * 7 + int(cx)]
+               if (img := edits.get('image')) is not None:
+                  if img == 'seastar':
+                     props[source.properties['appearance']] = 'starfish'
                if (direction := instance.get('direction')) is not None:
                   props[source.properties['facing']] = {0:4,1:1,2:3,3:2}[direction]
                tile_text.append('{' + ops.create_storage(props, extra_data) + '}')

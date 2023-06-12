@@ -1,5 +1,7 @@
 execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer
 execute at @s run tp @s ~ ~1.001 ~
+scoreboard players operation sprite baba = @s sprite
+execute unless score @s appearance matches 0 run scoreboard players operation @s sprite = @s appearance
 execute if entity @s[scores={sprite=40150}] run function baba:display/object/baba
 execute if entity @s[scores={sprite=397973}] run function baba:display/object/text
 execute if entity @s[scores={sprite=220460}] run function baba:display/object/keke
@@ -70,8 +72,11 @@ execute if entity @s[scores={sprite=1870}] run function baba:display/object/bog
 execute if entity @s[scores={sprite=1423829}] run function baba:display/object/brick
 execute if entity @s[scores={sprite=1837248}] run function baba:display/object/cliff
 execute if entity @s[scores={sprite=54575550}] run data modify entity @s item.tag.CustomModelData set value 522
+execute if entity @s[scores={sprite=-2}] run data modify entity @s item.tag.CustomModelData set value 579
+execute if entity @s[scores={sprite=397973,text=320763071}] run data modify entity @s item.tag.CustomModelData set value 580
 execute at @s[scores={sprite=397973},tag=!prop.hide] run function baba:display/object/text_overlay
 execute at @s[scores={sprite=6491892},tag=!prop.hide] run function baba:display/object/level_icon
+scoreboard players operation @s sprite = sprite baba
 execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0
 scoreboard players operation color baba = @s color
 execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color

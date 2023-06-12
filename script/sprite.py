@@ -15,6 +15,7 @@ class SpriteCollection:
     self.alt_images = {}
     self.properties = {
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
+      'appearance': Metadata(name='appearance', kind='score', attributes=['spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),

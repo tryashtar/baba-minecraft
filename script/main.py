@@ -250,13 +250,15 @@ def generate_update_function(source, resources):
   tat.delete_folder('datapack/data/baba/functions/display/object')
   update_obj = [
     'execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer',
-    'execute at @s run tp @s ~ ~1.001 ~'
+    'execute at @s run tp @s ~ ~1.001 ~',
+    'scoreboard players operation sprite baba = @s sprite',
+    'execute unless score @s appearance matches 0 run scoreboard players operation @s sprite = @s appearance',
   ]
-  # yes, the "execute if entity" is faster
-  for obj in source.objects.values():
+  for obj in list(source.objects.values()) + list(source.alt_images.values()):
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     if len(spritelist) == 1:
       spr,props = spritelist[0]
+      # yes, the "execute if entity" is faster
       update_obj.append(f'execute if entity @s[{ops.create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
     else:
       lines = []
@@ -292,6 +294,7 @@ def generate_update_function(source, resources):
     for overlay in obj.overlays:
       update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
   update_obj.extend([
+    'scoreboard players operation @s sprite = sprite baba',
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
     'execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color',
