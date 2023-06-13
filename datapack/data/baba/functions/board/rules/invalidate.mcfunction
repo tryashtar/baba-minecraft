@@ -1,5 +1,4 @@
 tag @s add reparse
-scoreboard players operation text_id baba = @s text_id
 execute if score @s text_id matches 1 run tag @e[type=marker,tag=baba.rule,tag=!remove,nbt={data:{text_ids:[1]}}] add remove
 execute if score @s text_id matches 2 run tag @e[type=marker,tag=baba.rule,tag=!remove,nbt={data:{text_ids:[2]}}] add remove
 execute if score @s text_id matches 3 run tag @e[type=marker,tag=baba.rule,tag=!remove,nbt={data:{text_ids:[3]}}] add remove

@@ -18,7 +18,8 @@ execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] r
 function baba:board/rules/disabling/find
 
 tag @e[type=marker,tag=baba.rule,tag=remove] add changed
-execute as @e[type=marker,tag=baba.rule,tag=changed] run function baba:board/rules/assign_changed
+execute as @e[type=marker,tag=baba.rule,tag=changed,tag=!subject_inverted] run function baba:board/rules/assign_changed
+execute as @e[type=marker,tag=baba.rule,tag=changed,tag=subject_inverted] run function baba:board/rules/assign_changed_inverted
 kill @e[type=marker,tag=baba.rule,tag=remove]
 tag @e[type=marker,tag=baba.rule,tag=changed] remove changed
 
