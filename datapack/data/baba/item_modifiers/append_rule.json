@@ -4,9 +4,7 @@
    "replace": false,
    "lore": [
       {
-         "storage": "baba:main",
-         "nbt": "text_rules[0]",
-         "interpret": true,
+         "selector": "@s",
          "font": "baba:font",
          "color": "white",
          "italic": false

@@ -1,9 +1,10 @@
-data modify storage baba:main iter_rules set value []
-data modify storage baba:main iter_rules append from storage baba:main rules[{effect:{inverted:0b}}]
+scoreboard players set @e[type=item_display,tag=baba.object,scores={sprite=397973}] text_disabled 0
 
-execute if data storage baba:main iter_rules[0] run function baba:board/rules/disabling/loop
+data modify storage baba:main disabled_ids set value []
+data modify storage baba:main enabled_ids set value []
+execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted] run function baba:board/rules/disabling/loop
+execute if data storage baba:main disabled_ids[0] run function baba:board/rules/disabling/disable
 
-execute as @e[type=item_display,tag=baba.object,scores={text_used=1..,text_disabled2=1..}] run scoreboard players operation @s text_disabled += @s text_disabled2
 execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add dirty
 execute as @e[type=item_display,tag=baba.object,tag=disabled,scores={text_used=1..}] unless score @s text_disabled >= @s text_used run tag @s add dirty
 execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled

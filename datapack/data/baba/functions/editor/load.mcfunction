@@ -1,6 +1,7 @@
 # unpacks level storage into entities
 kill @e[type=marker,tag=baba.space]
 kill @e[type=marker,tag=baba.conversion]
+kill @e[type=marker,tag=baba.rule]
 kill @e[type=item_display,tag=baba.object]
 kill @e[type=item_display,tag=baba.overlay]
 kill @e[type=text_display,tag=baba.text]
@@ -29,7 +30,6 @@ scoreboard players set text_id baba 0
 execute as @e[type=item_display,tag=baba.object,scores={sprite=397973}] store result score @s text_id run scoreboard players add text_id baba 1
 # don't trigger 'idle' conditions
 scoreboard players set direction baba -1
-data modify storage baba:main rules set value []
 tag @e[type=item_display,tag=baba.object] add assign
 function baba:board/rules/update
 function baba:board/rules/assign

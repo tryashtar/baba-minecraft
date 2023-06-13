@@ -1,7 +1,6 @@
 # any text marked for reparsing also marks all of its neighbors for reparsing, recursively
 # the reason for this is because we need to find the subject to start parsing from
 # all rules that contain these texts are removed
-data modify storage baba:main changed_subjects set value []
 execute as @e[type=item_display,tag=baba.object,tag=reparse] at @s run function baba:board/rules/invalidate
 
 tag @e[type=item_display,tag=baba.object,tag=reparse,scores={text_used=0}] add unused
@@ -16,11 +15,12 @@ execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=reparse] positi
 execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] rotated 90 0 run function baba:board/rules/parse
 
 # text gets the X overlay if all rules it's part of are disabled
-scoreboard players set @e[type=item_display,tag=baba.object,scores={sprite=397973}] text_disabled 0
-scoreboard players set @e[type=item_display,tag=baba.object,scores={sprite=397973}] text_disabled2 0
 function baba:board/rules/disabling/find
 
-execute if data storage baba:main changed_subjects[0] run function baba:board/rules/assign_changed
+tag @e[type=marker,tag=baba.rule,tag=remove] add changed
+execute as @e[type=marker,tag=baba.rule,tag=changed] run function baba:board/rules/assign_changed
+kill @e[type=marker,tag=baba.rule,tag=remove]
+tag @e[type=marker,tag=baba.rule,tag=changed] remove changed
 
 tag @e[type=item_display,tag=baba.object,tag=reparse] add dirty
 tag @e[type=item_display,tag=baba.object,tag=reparse] remove reparse

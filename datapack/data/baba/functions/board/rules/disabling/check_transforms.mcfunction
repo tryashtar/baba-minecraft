@@ -1,12 +1,4 @@
-execute store result score subject1 baba run data get storage baba:main disablers[0].subject.sprite
-execute store result score subject2 baba run data get storage baba:main rule.subject.sprite
-execute store result score effect1 baba run data get storage baba:main disablers[0].effect.text
-execute store result score effect2 baba run data get storage baba:main rule.effect.text
-
 # 'A is A' disables 'A is B'
-execute if score subject1 baba = effect1 baba if score subject1 baba = subject2 baba unless score effect2 baba = effect1 baba run function baba:board/rules/disabling/disable_transforms
+execute if score @s sprite = @s text if score @s sprite = subject baba unless score effect baba = @s text run data modify storage baba:main disabled_ids append from storage baba:main current_ids[]
 # 'A is A' disables 'A write A'
-execute if score subject1 baba = effect1 baba if score subject1 baba = subject2 baba if data storage baba:main rule{verb:12584543} run function baba:board/rules/disabling/disable_transforms
-
-data remove storage baba:main disablers[0]
-execute if data storage baba:main disablers[0] run function baba:board/rules/disabling/check_transforms
+execute if score @s sprite = @s text if score @s sprite = subject baba if data storage baba:main rule{verb:12584543} run data modify storage baba:main disabled_ids append from storage baba:main current_ids[]
