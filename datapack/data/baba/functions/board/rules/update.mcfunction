@@ -15,9 +15,18 @@ execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=reparse] positi
 execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] rotated 90 0 run function baba:board/rules/parse
 
 # text gets the X overlay if all rules it's part of are disabled
-function baba:board/rules/disabling/find
-
+data modify storage baba:main disabled_ids set value []
+data modify storage baba:main enabled_ids set value []
 tag @e[type=marker,tag=baba.rule,tag=remove] add changed
+execute as @e[type=marker,tag=baba.rule,tag=disabler,tag=changed] run function baba:board/rules/disabling/disabler_changed
+execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,tag=changed] run function baba:board/rules/disabling/normal_changed
+execute if data storage baba:main disabled_ids[0] run function baba:board/rules/disabling/disable_words
+execute if data storage baba:main enabled_ids[0] run function baba:board/rules/disabling/enable_words
+execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add dirty
+execute as @e[type=item_display,tag=baba.object,tag=disabled,scores={text_used=1..}] unless score @s text_disabled >= @s text_used run tag @s add dirty
+execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
+execute as @e[type=item_display,tag=baba.object,tag=disabled,scores={text_used=1..}] unless score @s text_disabled >= @s text_used run tag @s remove disabled
+
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=!subject_inverted] run function baba:board/rules/assign_changed
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=subject_inverted] run function baba:board/rules/assign_changed_inverted
 kill @e[type=marker,tag=baba.rule,tag=remove]
