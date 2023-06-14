@@ -1,4 +1,2 @@
-scoreboard players operation @e[type=item_display,tag=baba.object] sprite -= @s sprite
-tag @e[type=item_display,tag=baba.object,tag=!assign,scores={sprite=1..}] add assign
-tag @e[type=item_display,tag=baba.object,tag=!assign,scores={sprite=..-1}] add assign
-scoreboard players operation @e[type=item_display,tag=baba.object] sprite += @s sprite
+scoreboard players operation subject baba = @s sprite
+execute as @e[type=item_display,tag=baba.object,tag=!assign] unless score @s sprite = subject baba run tag @s add assign
