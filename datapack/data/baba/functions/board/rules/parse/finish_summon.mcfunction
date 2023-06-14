@@ -9,6 +9,11 @@ execute if data storage baba:main rule.effect{inverted:1b} run tag @s add effect
 execute if data storage baba:main rule.effect{part:"noun"} run tag @s add effect_noun
 execute if data storage baba:main rule{conditions:[],effect:{inverted:1b}} run tag @s add disabler
 execute if score @s life matches 262 if data storage baba:main rule{conditions:[],effect:{inverted:0b,part:"noun"}} run tag @s add transform_disabler
+tag @s[scores={sprite=397973}] add subject_text
+tag @s[scores={sprite=6491892}] add subject_level
+tag @s[scores={sprite=2925313}] add subject_empty
+tag @s[scores={sprite=1065}] add subject_all
+tag @s[scores={sprite=4085899}] add subject_group
 data modify entity @s data.conditions set from storage baba:main rule.conditions
 data modify entity @s data.text_ids set from storage baba:main rule.text_ids
 function baba:board/rules/render/render
