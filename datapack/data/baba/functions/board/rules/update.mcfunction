@@ -19,13 +19,11 @@ data modify storage baba:main disabled_ids set value []
 data modify storage baba:main enabled_ids set value []
 tag @e[type=marker,tag=baba.rule,tag=remove] add changed
 execute as @e[type=marker,tag=baba.rule,tag=disabler,tag=changed] run function baba:board/rules/disabling/disabler_changed
-execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,tag=changed] run function baba:board/rules/disabling/normal_changed
+execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,tag=changed,tag=remove,scores={text_disabled=1..}] run data modify storage baba:main enabled_ids append from entity @s data.text_ids[]
 execute if data storage baba:main disabled_ids[0] run function baba:board/rules/disabling/disable_words
 execute if data storage baba:main enabled_ids[0] run function baba:board/rules/disabling/enable_words
-execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add dirty
-execute as @e[type=item_display,tag=baba.object,tag=disabled,scores={text_used=1..}] unless score @s text_disabled >= @s text_used run tag @s add dirty
-execute as @e[type=item_display,tag=baba.object,tag=!disabled,scores={text_used=1..}] if score @s text_disabled >= @s text_used run tag @s add disabled
-execute as @e[type=item_display,tag=baba.object,tag=disabled,scores={text_used=1..}] unless score @s text_disabled >= @s text_used run tag @s remove disabled
+execute as @e[type=item_display,tag=baba.object,tag=disable_changed] run function baba:board/rules/disabling/update_word
+tag @e[type=item_display,tag=baba.object,tag=disable_changed] remove disable_changed
 
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=!subject_inverted] run function baba:board/rules/assign_changed
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=subject_inverted] run function baba:board/rules/assign_changed_inverted
