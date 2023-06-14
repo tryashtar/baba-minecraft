@@ -3,7 +3,6 @@ scoreboard players operation effect baba = @s text
 scoreboard players operation verb baba = @s life
 execute if entity @s[tag=!remove] run scoreboard players set disable_change baba 1
 execute if entity @s[tag=remove] run scoreboard players set disable_change baba -1
-
 scoreboard players operation @e[type=marker,tag=baba.rule,tag=!effect_inverted] life -= verb baba
 scoreboard players operation @e[type=marker,tag=baba.rule,tag=!effect_inverted] text -= effect baba
 # 'ALL verb not X' disables 'A verb X' unless A is empty/text/level/group

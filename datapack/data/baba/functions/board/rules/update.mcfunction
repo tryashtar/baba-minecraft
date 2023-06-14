@@ -5,6 +5,7 @@ execute as @e[type=item_display,tag=baba.object,tag=reparse] at @s run function 
 
 tag @e[type=item_display,tag=baba.object,tag=reparse,scores={text_used=0}] add unused
 scoreboard players set @e[type=item_display,tag=baba.object,tag=reparse] text_used 0
+data modify storage baba:main new_rules set value []
 
 # parse left-to-right text
 execute rotated 0 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
@@ -13,6 +14,8 @@ execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] r
 # parse up-to-down text
 execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
 execute if entity @e[type=item_display,tag=baba.object,tag=first_word,limit=1] rotated 90 0 run function baba:board/rules/parse
+
+execute if data storage baba:main new_rules[0] summon marker run function baba:board/rules/convert
 
 # text gets the X overlay if all rules it's part of are disabled
 data modify storage baba:main disabled_ids set value []
@@ -31,7 +34,7 @@ execute as @e[type=marker,tag=baba.rule,tag=changed,tag=subject_inverted] run fu
 kill @e[type=marker,tag=baba.rule,tag=remove]
 tag @e[type=marker,tag=baba.rule,tag=changed] remove changed
 
-tag @e[type=item_display,tag=baba.object,tag=reparse] add dirty
+tag @e[type=item_display,tag=baba.object,tag=reparse,tag=!dirty] add dirty
 tag @e[type=item_display,tag=baba.object,tag=reparse] remove reparse
 execute if entity @e[type=item_display,tag=baba.object,tag=unused,scores={text_used=1..},limit=1] as @a at @s run playsound baba:form_rule master @s
 tag @e[type=item_display,tag=baba.object,tag=unused] remove unused

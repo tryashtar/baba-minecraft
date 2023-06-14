@@ -21,4 +21,4 @@ function baba:board/rules/render/render
 data modify entity @s CustomName set from storage baba:main text_rule
 
 data remove storage baba:main new_rules[0]
-execute if data storage baba:main new_rules[0] summon marker run function baba:board/rules/parse/finish_summon
+execute if data storage baba:main new_rules[0] summon marker run function baba:board/rules/convert
