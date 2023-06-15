@@ -5,8 +5,8 @@ execute if score @s letter matches 1.. run function baba:board/rules/parse/consu
 execute unless score @s letter matches 1.. run function baba:board/rules/parse/consume_word
 
 execute if entity @s[tag=first_word] if data storage baba:main parsing{unexpected:1b} positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1] add first_word
-execute if entity @s[tag=!first_word] if data storage baba:main parsing{unexpected:1b} run tag @e[type=item_display,tag=current_not,sort=furthest,limit=1] add first_word
-execute if entity @s[tag=!first_word] if data storage baba:main parsing{unexpected:1b} unless entity @e[type=item_display,tag=current_not,limit=1] run tag @s add first_word
+execute if data storage baba:main parsing{unexpected:1b} run tag @e[type=item_display,tag=current_not,sort=furthest,limit=1] add first_word
+execute if data storage baba:main parsing{unexpected:1b} unless entity @e[type=item_display,tag=current_not,limit=1] run tag @e[type=item_display,tag=current_word,sort=furthest,limit=1] add first_word
 execute if data storage baba:main parsing{complete:1b,unexpected:1b} run function baba:board/rules/parse/finish
 execute if data storage baba:main parsing{complete:1b} unless data storage baba:main parsing{unexpected:1b} positioned ^ ^ ^1 unless entity @e[type=item_display,tag=baba.object,tag=reparse,distance=..0.1,limit=1] run function baba:board/rules/parse/finish
 
