@@ -15,7 +15,7 @@ execute if score level_background baba matches 1 run function baba:editor/load/b
 execute if score level_background baba matches 2 run function baba:editor/load/background/flower
 summon text_display 0 1 0 {Tags:["baba.text"],Rotation:[90f,-90f],alignment:"left",background:0,transformation:{scale:[4f,4f,4f],translation:[18.9f,-1f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
 execute store result entity @e[type=text_display,tag=baba.text,limit=1] Pos[0] double 1 run scoreboard players get level_height baba
-execute if data storage baba:main level.metadata.conversions[0] run function baba:editor/load_conversions
+execute if data storage baba:main level.metadata.conversions[0] summon marker run function baba:editor/load_conversions
 function baba:board/populate_palette
 
 # process some things before the first step
