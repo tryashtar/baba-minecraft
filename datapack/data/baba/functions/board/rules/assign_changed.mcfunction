@@ -1,2 +1,3 @@
 scoreboard players operation subject baba = @s sprite
-execute as @e[type=item_display,tag=baba.object,tag=!assign] if score @s sprite = subject baba run tag @s add assign
+execute if entity @s[tag=subject_all] run tag @e[type=item_display,tag=baba.object,tag=!not_all,tag=!assign] add assign
+execute if entity @s[tag=!subject_all] as @e[type=item_display,tag=baba.object,tag=!assign] if score @s sprite = subject baba run tag @s add assign
