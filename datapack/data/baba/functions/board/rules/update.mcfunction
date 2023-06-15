@@ -21,10 +21,10 @@ execute if data storage baba:main new_rules[0] summon marker run function baba:b
 data modify storage baba:main disabled_ids set value []
 data modify storage baba:main enabled_ids set value []
 tag @e[type=marker,tag=baba.rule,tag=remove] add changed
-execute as @e[type=marker,tag=baba.rule,tag=disabler,tag=changed] run function baba:board/rules/disabling/disabler_changed
-execute as @e[type=marker,tag=baba.rule,tag=transform_disabler,tag=changed] run function baba:board/rules/disabling/transform_disabler_changed
 execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,tag=changed,tag=!remove] run function baba:board/rules/disabling/normal_added
 execute as @e[type=marker,tag=baba.rule,tag=transformer,tag=changed,tag=!remove] run function baba:board/rules/disabling/transformer_added
+execute as @e[type=marker,tag=baba.rule,tag=disabler,tag=changed] run function baba:board/rules/disabling/disabler_changed
+execute as @e[type=marker,tag=baba.rule,tag=transform_disabler,tag=changed] run function baba:board/rules/disabling/transform_disabler_changed
 execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,tag=changed,tag=remove,scores={text_disabled=1..}] run data modify storage baba:main enabled_ids append from entity @s data.text_ids[]
 execute if data storage baba:main disabled_ids[0] run function baba:board/rules/disabling/disable_words
 execute if data storage baba:main enabled_ids[0] run function baba:board/rules/disabling/enable_words
