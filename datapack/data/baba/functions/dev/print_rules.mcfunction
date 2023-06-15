@@ -1,2 +1,1 @@
-function baba:dev/rules/render
-tellraw @a {"storage":"baba:main","nbt":"text_rules[]","interpret":true,"separator":"\n","color":"yellow"}
+tellraw @a {"selector":"@e[type=marker,tag=baba.rule]","separator":"\n","color":"yellow"}

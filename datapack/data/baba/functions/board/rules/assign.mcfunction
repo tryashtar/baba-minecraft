@@ -7,12 +7,8 @@ tag @e[type=item_display,tag=baba.object,tag=assign_idle] remove assign_idle
 tag @e[type=item_display,tag=baba.object,tag=assign_always] remove assign_always
 
 # apply negative rules first, this will prevent the matching positive rules from applying
-data modify storage baba:main iter_rules set value []
-data modify storage baba:main iter_rules append from storage baba:main rules[{effect:{inverted:1b}}]
-execute if data storage baba:main iter_rules[0] run function baba:board/rules/apply
-data modify storage baba:main iter_rules set value []
-data modify storage baba:main iter_rules append from storage baba:main rules[{effect:{inverted:0b}}]
-execute if data storage baba:main iter_rules[0] run function baba:board/rules/apply
+execute as @e[type=marker,tag=baba.rule,tag=effect_inverted] run function baba:board/rules/apply
+execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,scores={text_disabled=0}] run function baba:board/rules/apply
 
 execute as @e[type=item_display,tag=baba.object,tag=assign] run function baba:board/rules/finalize
 tag @e[type=item_display,tag=baba.object,tag=assign] add dirty

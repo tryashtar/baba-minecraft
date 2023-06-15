@@ -1,7 +1,3 @@
-execute store result score subject baba run data get storage baba:main changed_subjects[0].sprite
-execute store result score inverted baba run data get storage baba:main changed_subjects[0].inverted
-execute if score inverted baba matches 0 as @e[type=item_display,tag=baba.object,tag=!assign] if score @s sprite = subject baba run tag @s add assign
-execute if score inverted baba matches 1 as @e[type=item_display,tag=baba.object,tag=!assign] unless score @s sprite = subject baba run tag @s add assign
-
-data remove storage baba:main changed_subjects[0]
-execute if data storage baba:main changed_subjects[0] run function baba:board/rules/assign_changed
+scoreboard players operation subject baba = @s sprite
+execute if entity @s[tag=subject_all] run tag @e[type=item_display,tag=baba.object,tag=!not_all,tag=!assign] add assign
+execute if entity @s[tag=!subject_all] as @e[type=item_display,tag=baba.object,tag=!assign] if score @s sprite = subject baba run tag @s add assign
