@@ -1,5 +1,4 @@
 # if this rule's subject matches the object, proceed to check conditions
-scoreboard players operation subject baba = @s sprite
 scoreboard players operation verb baba = @s life
 scoreboard players operation effect baba = @s text
 execute store success score effect_noun baba if entity @s[tag=effect_noun]
@@ -11,6 +10,7 @@ execute store success storage baba:main effect.inverted byte 1 if entity @s[tag=
 execute if entity @s[tag=!inverted_subject,tag=all_subject] as @e[type=item_display,tag=baba.object,tag=!not_all,tag=assign] at @s run function baba:board/rules/apply/check
 execute if entity @s[tag=inverted_subject,tag=all_subject] as @e[type=item_display,tag=baba.object,tag=not_all,tag=assign] at @s run function baba:board/rules/apply/check
 execute if entity @s[tag=!all_subject] run scoreboard players operation @e[type=item_display,tag=baba.object,tag=assign] sprite -= @s sprite
-execute if entity @s[tag=!inverted_subject,tag=!all_subject] as @e[type=item_display,tag=baba.object,tag=assign,scores={sprite=0}] at @s run function baba:board/rules/apply/check
-execute if entity @s[tag=inverted_subject,tag=!all_subject] as @e[type=item_display,tag=baba.object,tag=!not_all,tag=assign,scores={sprite=0}] at @s run function baba:board/rules/apply/check
+execute if entity @s[tag=!all_subject] run tag @e[type=item_display,tag=baba.object,tag=assign,scores={sprite=0}] add check
 execute if entity @s[tag=!all_subject] run scoreboard players operation @e[type=item_display,tag=baba.object,tag=assign] sprite += @s sprite
+execute if entity @s[tag=!inverted_subject,tag=!all_subject] as @e[type=item_display,tag=baba.object,tag=assign,tag=check] at @s run function baba:board/rules/apply/check
+execute if entity @s[tag=inverted_subject,tag=!all_subject] as @e[type=item_display,tag=baba.object,tag=!not_all,tag=assign,tag=check] at @s run function baba:board/rules/apply/check

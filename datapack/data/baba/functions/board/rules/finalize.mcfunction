@@ -6,7 +6,6 @@ execute if data storage baba:main rule_data.parsing.transforms[0] run data modif
 execute if data storage baba:main rule_data.parsing.transforms[{inverted:1b,text:397973}] run data remove storage baba:main rule_data.parsing.writes
 execute if data storage baba:main rule_data.parsing{delete:0b,block_transforms:1b} run data remove storage baba:main rule_data.parsing.writes[]
 execute if data storage baba:main rule_data.parsing{delete:0b,block_transforms:1b} run data remove storage baba:main rule_data.parsing.transforms[]
-execute if data storage baba:main rule_data.parsing{delete:1b} unless data storage baba:main rule_data.parsing.transforms[{inverted:0b}] run function baba:board/interact/remove
 
 data modify storage baba:main rule_data merge value {transforms:[],properties:[],has:[],make:[]}
 data modify storage baba:main rule_data.properties append from storage baba:main rule_data.parsing.properties[{inverted:0b}].text
@@ -18,6 +17,7 @@ execute if data storage baba:main rule_data.transforms[{inverted:0b,write:0b,tex
 execute if data storage baba:main rule_data.transforms[{inverted:0b,write:1b,text:1065}] run data modify storage baba:main rule_data.transforms[{inverted:0b,write:1b,text:1065}].all set from storage baba:main all_write_list
 data modify storage baba:main rule_data.transforms append from storage baba:main rule_data.transforms[].all[]
 data remove storage baba:main rule_data.transforms[{inverted:0b,text:1065,write:0b}]
+execute if data storage baba:main rule_data.parsing{delete:1b} run data modify storage baba:main rule_data.transforms append value {inverted:0b,text:0,write:0b}
 
 # builtin rules: 'text is push', 'level is stop', 'cursor is select'
 # can be disabled by inverted rules
