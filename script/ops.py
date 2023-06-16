@@ -38,7 +38,7 @@ def create_selector(properties, extra_scores=None):
   return ','.join(result)
 
 def create_summon(properties, extra_data=None):
-  tags = ['baba.object','spawn']
+  tags = ['baba.object','spawn','assign','dirty']
   data = []
   scores = []
   nbt = ['width:1f','height:0.1f','item_display:"fixed"']

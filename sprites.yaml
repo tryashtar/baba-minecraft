@@ -24,7 +24,8 @@ properties:
     attributes: [spawn]
   walk:
     type: score
-    attributes: [sprite]
+    attributes: [sprite, all]
+    default: 0
   connector:
     type: tag
     attributes: [spawn]

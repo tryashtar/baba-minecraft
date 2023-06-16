@@ -79,7 +79,9 @@ scoreboard players set melted baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.hot] at @s run function baba:board/interact/hot
 execute if score melted baba matches 1.. as @a at @s run playsound baba:melt master @s
 execute as @e[type=item_display,tag=baba.object,tag=prop.defeat] at @s run function baba:board/interact/defeat
+scoreboard players set opened baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.shut] at @s run function baba:board/interact/shut
+execute if score opened baba matches 1.. as @a at @s run playsound baba:open master @s
 
 # assign again if anything is created by 'make', but don't parse text
 execute as @e[type=item_display,tag=baba.object] if data entity @s item.tag.make[0] at @s run function baba:board/interact/make
@@ -93,9 +95,7 @@ execute as @e[type=item_display,tag=baba.object,tag=connector,tag=dirty] at @s r
 execute as @e[type=item_display,tag=baba.object,tag=!prop.sleep,tag=has_frames] run function baba:board/graphics/frame
 execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
 
-scoreboard players add @e[type=item_display,tag=baba.object,scores={float_level=1..}] z_layer 100
 function baba:display/update
-scoreboard players remove @e[type=item_display,tag=baba.object,scores={z_layer=100..}] z_layer 100
 
 # save undo history
 # if nothing changed, don't record this step
