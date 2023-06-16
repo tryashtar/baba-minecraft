@@ -83,3 +83,5 @@ tag @s[tag=prop.stop] remove prop.stop
 execute if data storage baba:main rule_data{properties:[388978]} run tag @s add prop.stop
 tag @s[tag=prop.you] remove prop.you
 execute if data storage baba:main rule_data{properties:[18651]} run tag @s add prop.you
+scoreboard players set @s float_level 0
+scoreboard players set @s[tag=prop.float] float_level 1

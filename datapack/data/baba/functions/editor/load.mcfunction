@@ -5,6 +5,7 @@ kill @e[type=marker,tag=baba.rule]
 kill @e[type=item_display,tag=baba.object]
 kill @e[type=item_display,tag=baba.overlay]
 kill @e[type=text_display,tag=baba.text]
+kill @e[type=text_display,tag=particle]
 execute store result score level_height baba run data get storage baba:main level.tiles
 execute store result score level_width baba run data get storage baba:main level.tiles[0]
 execute store result score level_background baba run data get storage baba:main level.metadata.background

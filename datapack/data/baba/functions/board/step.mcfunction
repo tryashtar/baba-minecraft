@@ -62,11 +62,6 @@ tag @e[type=item_display,tag=baba.object,tag=prop.down] add dirty
 tag @e[type=item_display,tag=baba.object,tag=prop.left] add dirty
 tag @e[type=item_display,tag=baba.object,tag=prop.right] add dirty
 
-# cache float level in a score so we can compare it with /scoreboard players operation
-# very obscure interactions require this to go here
-scoreboard players set @e[type=item_display,tag=baba.object] float_level 0
-scoreboard players set @e[type=item_display,tag=baba.object,tag=prop.float] float_level 1
-
 # assign again if anything is created by 'more', but don't parse text
 execute as @e[type=item_display,tag=baba.object,tag=prop.more] at @s run function baba:board/interact/more
 execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
