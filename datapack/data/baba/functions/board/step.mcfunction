@@ -4,6 +4,7 @@
 # these ensure that, for example, a plus sign of moving objects with 'push' or 'stop' move correctly
 # it also allows objects with 'push' to stack when two 'shift' objects send them to the same tile
 scoreboard players set moved baba 0
+scoreboard players set opened baba 0
 
 execute if score direction baba matches 1.. run function baba:board/movement/batch/you
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
@@ -74,7 +75,6 @@ scoreboard players set melted baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.hot] at @s run function baba:board/interact/hot
 execute if score melted baba matches 1.. as @a at @s run playsound baba:melt master @s
 execute as @e[type=item_display,tag=baba.object,tag=prop.defeat] at @s run function baba:board/interact/defeat
-scoreboard players set opened baba 0
 execute as @e[type=item_display,tag=baba.object,tag=prop.shut] at @s run function baba:board/interact/shut
 execute if score opened baba matches 1.. as @a at @s run playsound baba:open master @s
 
