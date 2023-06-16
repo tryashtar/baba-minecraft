@@ -17,16 +17,56 @@ def main():
       lua.execute(file.read())
    vars = lua.globals()
    table = make_object_table(vars)
+   test_all = [
+      'data modify storage baba:main level_list set value []',
+      'data modify storage baba:main moves_list set value []',
+   ]
    for level_file in tat.get_files(os.path.join(baba_folder, 'Data/Worlds/baba')):
       if tat.extension(level_file) != '.ld':
          continue
       with open(level_file, 'r', encoding='utf-8') as ld, open(os.path.splitext(level_file)[0] + '.l', 'rb') as l:
+         level_name = tat.base_name(level_file)
          config = configparser.ConfigParser()
          config.read_file(ld)
          level = LevelGrid(config, l, table)
-         print(f'{tat.base_name(level_file)} - {level.name}')
+         print(f'{level_name} - {level.name}')
          storage = level.make_storage(source)
-         tat.write_text(f'data modify storage baba:main level set value {storage}\n', f'datapack/data/baba/functions/levels/{tat.base_name(level_file)}.mcfunction')
+         tat.write_text(f'data modify storage baba:main level set value {storage}\n', f'datapack/data/baba/functions/levels/{level_name}.mcfunction')
+         solution_folder = os.path.join('script/tests/BABA IS YOU/solutions-multiline')
+         if os.path.isdir(solution_folder):
+            moves = []
+            found = False
+            for solution_file in tat.get_files(solution_folder):
+               if f', {level.name}, ' in tat.base_name(solution_file).lower():
+                  for move in tat.read_lines(solution_file):
+                     moves.append({'U':1,'D':2,'L':3,'R':4,'W':0}[move])
+                  found = True
+                  break
+            if found:
+               move_storage = '[' + ','.join(map(str, moves)) + ']'
+               test_all.extend([
+                  f'function baba:levels/{level_name}',
+                  'data modify storage baba:main level_list append from storage baba:main level',
+                  f'data modify storage baba:main moves_list append value {move_storage}',
+               ])
+               test_level = [
+                  f'function baba:levels/{level_name}',
+                  'data modify storage baba:main level_list set value []',
+                  'data modify storage baba:main moves_list set value []',
+                  f'data modify storage baba:main moves set value {move_storage}',
+                  'execute positioned 0 1 0 run function baba:editor/load',
+                  'schedule function baba:levels/testing/automate 1t'
+               ]
+               tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{level_name}.mcfunction')
+   test_all.extend([
+      'data modify storage baba:main level set from storage baba:main level_list[0]',
+      'data modify storage baba:main moves set from storage baba:main moves_list[0]',
+      'data remove storage baba:main level_list[0]',
+      'data remove storage baba:main moves_list[0]',
+      'execute positioned 0 1 0 run function baba:editor/load',
+      'schedule function baba:levels/testing/automate 1t'
+   ])
+   tat.write_lines(test_all, f'datapack/data/baba/functions/levels/testing/all.mcfunction')
 
 def make_object_table(vars):
    table1 = {}

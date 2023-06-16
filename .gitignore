@@ -2,3 +2,4 @@ __pycache__
 extractor/assets
 extractor/Assets.dat
 script/Data
+script/tests
