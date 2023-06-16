@@ -4,4 +4,4 @@ tag @s[tag=prop.stop] add blocker
 tag @s[tag=prop.push] add blocker
 tag @s[tag=prop.pull] add blocker
 tag @s[tag=prop.swap] remove blocker
-execute if score @s[tag=blocker] float_level = float baba run function baba:board/movement/check_blocker_override
+execute if score @s[tag=blocker,tag=prop.weak] float_level = float baba run tag @s remove blocker
