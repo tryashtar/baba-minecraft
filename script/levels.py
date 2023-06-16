@@ -55,7 +55,8 @@ def main():
                   'data modify storage baba:main moves_list set value []',
                   f'data modify storage baba:main moves set value {move_storage}',
                   'execute positioned 0 1 0 run function baba:editor/load',
-                  'schedule function baba:levels/testing/automate 1t'
+                  'execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []',
+                  'execute unless entity @a[tag=scrub,limit=1] run schedule function baba:levels/testing/automate 1t',
                ]
                tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{level_name}.mcfunction')
    test_all.extend([
