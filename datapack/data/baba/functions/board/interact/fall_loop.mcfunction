@@ -4,7 +4,7 @@ execute if score open baba matches 1 as @e[type=item_display,tag=baba.object,dis
 execute if score shut baba matches 1 as @e[type=item_display,tag=baba.object,distance=..0.1,tag=prop.open] if score @s float_level = float baba run tag @s add open
 execute if entity @e[type=item_display,tag=baba.object,tag=open,limit=1] run function baba:board/movement/move_here
 execute if entity @e[type=item_display,tag=baba.object,tag=open,limit=1] run function baba:board/interact/open
-execute if entity @e[type=item_display,tag=baba.object,tag=!falling,distance=..0.1,tag=prop.weak,limit=1] as @a at @s run playsound baba:defeat master @s
+execute if entity @e[type=item_display,tag=baba.object,tag=!falling,distance=..0.1,tag=prop.weak,limit=1] run scoreboard players add destroyed baba 1
 execute as @e[type=item_display,tag=baba.object,tag=!falling,distance=..0.1,tag=prop.weak] run function baba:board/interact/destroy
 
 # recurse until we find a blocker or the edge of the level

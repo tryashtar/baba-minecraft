@@ -26,4 +26,6 @@ execute positioned ^ ^ ^1 unless block ~ ~-1 ~ #baba:board run tag @s remove can
 tag @s[tag=!can_move,tag=!auto_move,tag=prop.weak] add destroy
 
 # if you can't move, you can't push or pull
+tag @s[tag=destroy] add can_move
+execute if entity @s[tag=destroy] run scoreboard players add destroyed baba 1
 execute if entity @s[tag=!can_move] run tag @e[type=item_display,tag=baba.object,tag=can_move] remove can_move
