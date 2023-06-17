@@ -10,6 +10,10 @@ tag @e[type=item_display,tag=baba.object,tag=assign,tag=assign_always] remove as
 execute as @e[type=marker,tag=baba.rule,tag=effect_inverted] run function baba:board/rules/apply
 execute as @e[type=marker,tag=baba.rule,tag=!effect_inverted,scores={text_disabled=0}] run function baba:board/rules/apply
 
+execute if entity @e[type=item_display,tag=baba.object,tag=joined_group,limit=1] as @e[type=marker,tag=baba.rule,tag=subject_group,tag=effect_inverted] run function baba:board/rules/apply_group
+execute if entity @e[type=item_display,tag=baba.object,tag=joined_group,limit=1] as @e[type=marker,tag=baba.rule,tag=subject_group,tag=!effect_inverted,scores={text_disabled=0}] run function baba:board/rules/apply_group
+tag @e[type=item_display,tag=baba.object,tag=joined_group] remove joined_group
+
 execute as @e[type=item_display,tag=baba.object,tag=assign] run function baba:board/rules/finalize
 tag @e[type=item_display,tag=baba.object,tag=assign] add dirty
 execute at @e[type=item_display,tag=baba.object,tag=assign] run tag @e[type=marker,tag=baba.space,tag=!dirty,distance=..0.1,limit=1] add dirty
