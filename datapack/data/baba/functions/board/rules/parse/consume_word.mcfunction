@@ -1,5 +1,5 @@
 # full words are easy; we already know the part of speech, full word ID and string text
-tag @e[type=item_display,tag=current_word] remove current_word
+tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
 tag @s add current_word
 scoreboard players operation word baba = @s text
 data modify storage baba:main parsing.word_text set value []

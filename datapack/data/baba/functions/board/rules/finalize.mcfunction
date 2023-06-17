@@ -1,6 +1,7 @@
 # the entity's property data aren't yet in the format we like
 # here, we merge 'writes' with 'transforms', handle 'A is A' and 'A is not A', and throw away inverted properties
-data modify storage baba:main rule_data set from entity @s item.tag
+data modify storage baba:main rule_data set from entity @s[type=item_display] item.tag
+data modify storage baba:main rule_data set from entity @s[type=marker] data
 execute if data storage baba:main rule_data.parsing.writes[0] run data modify storage baba:main rule_data.parsing.writes[].write set value 1b
 execute if data storage baba:main rule_data.parsing.transforms[0] run data modify storage baba:main rule_data.parsing.transforms[].write set value 0b
 execute if data storage baba:main rule_data.parsing.transforms[{inverted:1b,text:397973}] run data remove storage baba:main rule_data.parsing.writes
@@ -25,7 +26,13 @@ execute if entity @s[scores={sprite=397973}] unless data storage baba:main rule_
 execute if entity @s[scores={sprite=6491892}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:388978}] run data modify storage baba:main rule_data.properties append value 388978
 execute if entity @s[scores={sprite=54575550}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:275526380}] run data modify storage baba:main rule_data.properties append value 275526380
 
-data modify entity @s item.tag set from storage baba:main rule_data
+data modify entity @s[type=item_display] item.tag set from storage baba:main rule_data
+data modify entity @s[type=marker] data set from storage baba:main rule_data
+
+tag @s[tag=has_transforms] remove has_transforms
+execute if data storage baba:main rule_data{transforms:[{}]} run tag @s add has_transforms
+tag @s[tag=has_makes] remove has_makes
+execute if data storage baba:main rule_data{make:[{}]} run tag @s add has_makes
 
 tag @s[tag=prop.move] remove prop.move
 execute if data storage baba:main rule_data{properties:[267413]} run tag @s add prop.move

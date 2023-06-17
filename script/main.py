@@ -205,7 +205,7 @@ def generate_spawn_functions(source):
           del props[sprite_prop]
         conditions = f'if score spawn baba matches {obj.id}'
         spawn.append(f'execute {conditions} run {ops.create_summon(props)}')
-  newspawn = '@e[type=item_display,tag=spawn,distance=..0.1,limit=1]'
+  newspawn = '@e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1]'
   spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
   spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')
   spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,scores={{sprite=397973}}] text_id')

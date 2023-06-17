@@ -1,5 +1,5 @@
-tag @e[type=item_display,tag=last_verb] remove last_verb
-tag @e[type=item_display,tag=current_word] add last_verb
+tag @e[type=item_display,tag=baba.object,tag=last_verb] remove last_verb
+tag @e[type=item_display,tag=baba.object,tag=current_word] add last_verb
 data modify storage baba:main parsing.verb_ids set value []
 data modify storage baba:main parsing.verb_ids append from storage baba:main parsing.word_ids[]
 execute store result storage baba:main parsing.verb int 1 run scoreboard players get word baba

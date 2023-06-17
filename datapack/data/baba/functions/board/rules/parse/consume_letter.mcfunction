@@ -4,7 +4,7 @@
 # we can shift the current word over to fit the new letter at the same time as fetching it from storage
 # conveniently, this also clamps instead of overflowing, preventing a bug where large words like "kbhuzow" would wrap to the same ID as "baba"
 execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] add first_word
-execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=current_word] remove current_word
+execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
 execute if data storage baba:main parsing{current:"word"} run data modify storage baba:main parsing merge value {current:"letter",word:0,word_text:[],word_ids:[]}
 tag @s add current_word
 execute store result score word baba run data get storage baba:main parsing.word 27

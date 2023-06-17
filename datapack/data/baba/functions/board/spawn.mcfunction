@@ -68,15 +68,15 @@ execute if score spawn baba matches 1870 run summon item_display ~ ~ ~ {width:1f
 execute if score spawn baba matches 1423829 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","connector"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:3550754,z_layer:10}}}}
 execute if score spawn baba matches 1837248 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","connector"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:9463614,z_layer:14}}}}
 execute if score spawn baba matches 54575550 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty"],item:{id:"minecraft:potion",Count:1b,tag:{scores:{color:15438282,z_layer:20}}}}
-scoreboard players operation @e[type=item_display,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s appearance run data get entity @s item.tag.scores.appearance
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s letter run data get entity @s item.tag.scores.letter
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s color run data get entity @s item.tag.scores.color
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s inactive_color run data get entity @s item.tag.scores.inactive_color
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s item.tag.scores.z_layer
-scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] facing 4
-scoreboard players set @e[type=item_display,tag=spawn,distance=..0.1,limit=1] walk 0
-execute as @e[type=item_display,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s item.tag.scores.direction
-data remove entity @e[type=item_display,tag=spawn,distance=..0.1,limit=1] item.tag.scores
+scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s appearance run data get entity @s item.tag.scores.appearance
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s letter run data get entity @s item.tag.scores.letter
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s color run data get entity @s item.tag.scores.color
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s inactive_color run data get entity @s item.tag.scores.inactive_color
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s item.tag.scores.z_layer
+scoreboard players set @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] facing 4
+scoreboard players set @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] walk 0
+execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s direction run data get entity @s item.tag.scores.direction
+data remove entity @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] item.tag.scores
 execute unless score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0}] if score @s sprite = spawn baba run function baba:board/spawn_convert
 execute if score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973}] if score @s text = spawn_text baba run function baba:board/spawn_convert
