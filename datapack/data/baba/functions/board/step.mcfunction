@@ -11,6 +11,7 @@ execute if score direction baba matches 1.. run function baba:board/movement/bat
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
 tag @e[type=item_display,tag=baba.object,tag=has_moved] remove has_moved
 execute if score empty baba matches 1 run function baba:board/update_empty
+execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 execute as @e[type=item_display,tag=baba.object,tag=prop.move,tag=!prop.sleep] run scoreboard players operation @s life = @s move_stacks
 function baba:board/movement/process/move
@@ -19,6 +20,7 @@ function baba:board/movement/process/move
 tag @e[type=item_display,tag=baba.object,tag=move_done] remove move_done
 tag @e[type=item_display,tag=baba.object,tag=has_moved] remove has_moved
 execute if score empty baba matches 1 run function baba:board/update_empty
+execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 execute as @e[type=item_display,tag=baba.object,tag=prop.shift] at @s run function baba:board/movement/process/setup_shift
 function baba:board/movement/process/shift
@@ -81,7 +83,7 @@ execute as @e[type=item_display,tag=baba.object,tag=prop.shut] at @s run functio
 execute if score opened baba matches 1.. as @a at @s run playsound baba:open master @s
 
 # assign again if anything is created by 'make', but don't parse text
-execute as @e[type=item_display,tag=baba.object] if data entity @s item.tag.make[0] at @s run function baba:board/interact/make
+execute as @e[type=item_display,tag=baba.object,nbt={item:{tag:{make:[{}]}}}] at @s run function baba:board/interact/make
 execute if entity @e[type=item_display,tag=baba.object,tag=assign,limit=1] run function baba:board/rules/assign
 
 execute as @e[type=item_display,tag=baba.object,tag=prop.win] at @s run function baba:board/interact/win
