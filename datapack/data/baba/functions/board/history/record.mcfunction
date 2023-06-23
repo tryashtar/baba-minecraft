@@ -1,11 +1,13 @@
-# copy data and scores of all objects on this tile
-# if it's the same as the last time record was called, just increment a count
-# if it's different, append it to the list with a count
-data modify storage baba:main objects set value []
-execute as @e[type=item_display,tag=baba.object,distance=..0.1] run function baba:board/history/add
-data modify storage baba:main previous set value 1b
-data modify storage baba:main previous set from entity @s data.history[-1].objects
-execute store success score different baba run data modify storage baba:main previous set from storage baba:main objects
-execute if score different baba matches 0 run scoreboard players add @s repeats 1
-execute if score different baba matches 1 run function baba:board/history/changed
-execute if data storage baba:main {previous:1b} run function baba:board/history/changed
+execute as @e[type=marker,tag=baba.space,tag=dirty] at @s run function baba:board/history/record_space
+scoreboard players add @e[type=marker,tag=baba.space,tag=!dirty] repeats 1
+tag @e[type=marker,tag=baba.space,tag=dirty] remove dirty
+
+data modify storage baba:main current_rules set value {repeats:1,rules:[]}
+execute if score rules_changed baba matches 1 as @e[type=marker,tag=baba.rule] run function baba:board/history/add_rule
+execute if score rules_changed baba matches 1 run data modify storage baba:main rule_history append from storage baba:main current_rules
+execute if score rules_changed baba matches 0 store result score repeats baba run data get storage baba:main rule_history[-1].repeats
+
+# if nothing changed, don't record this step
+execute if score rules_changed baba matches 0 if entity @e[type=marker,tag=baba.space,scores={repeats=1},limit=1] store result storage baba:main rule_history[-1].repeats int 1 run scoreboard players add repeats baba 1
+execute if entity @e[type=marker,tag=baba.space,scores={repeats=1},limit=1] run scoreboard players add steps baba 1
+execute unless entity @e[type=marker,tag=baba.space,scores={repeats=1},limit=1] run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1

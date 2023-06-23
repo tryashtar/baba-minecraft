@@ -6,6 +6,7 @@
 scoreboard players set moved baba 0
 scoreboard players set opened baba 0
 scoreboard players set destroyed baba 0
+scoreboard players set rules_changed baba 0
 
 execute if score direction baba matches 1.. run function baba:board/movement/batch/you
 tag @e[type=#baba:object,tag=baba.object,tag=move_done] remove move_done
@@ -97,8 +98,4 @@ execute as @e[type=item_display,tag=baba.object] at @s unless block ~ ~-1 ~ #bab
 function baba:display/update
 
 # save undo history
-# if nothing changed, don't record this step
-execute as @e[type=marker,tag=baba.space,tag=dirty] at @s run function baba:board/history/record
-scoreboard players add @e[type=marker,tag=baba.space,tag=!dirty] repeats 1
-tag @e[type=marker,tag=baba.space,tag=dirty] remove dirty
-execute unless entity @e[type=marker,tag=baba.space,scores={repeats=1}] run scoreboard players remove @e[type=marker,tag=baba.space] repeats 1
+function baba:board/history/record

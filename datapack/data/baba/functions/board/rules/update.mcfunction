@@ -59,6 +59,7 @@ tag @e[type=item_display,tag=baba.object,tag=disable_changed] remove disable_cha
 
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=!subject_inverted] run function baba:board/rules/assign_changed
 execute as @e[type=marker,tag=baba.rule,tag=changed,tag=subject_inverted] run function baba:board/rules/assign_changed_inverted
+execute if entity @e[type=marker,tag=baba.rule,tag=changed,limit=1] run scoreboard players set rules_changed baba 1
 kill @e[type=marker,tag=baba.rule,tag=remove]
 tag @e[type=marker,tag=baba.rule,tag=changed] remove changed
 

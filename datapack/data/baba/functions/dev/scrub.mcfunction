@@ -15,7 +15,7 @@ execute if entity @s[tag=forward] run function baba:board/step
 execute if entity @s[tag=forward] run data modify storage baba:main old_moves prepend from storage baba:main moves[0]
 execute if entity @s[tag=forward] run data remove storage baba:main moves[0]
 
-execute if entity @s[tag=reverse] run function baba:board/history/undo
+execute if entity @s[tag=reverse] if score steps baba matches 1.. run function baba:board/history/undo
 execute if entity @s[tag=reverse] run data modify storage baba:main moves prepend from storage baba:main old_moves[0]
 execute if entity @s[tag=reverse] run data remove storage baba:main old_moves[0]
 

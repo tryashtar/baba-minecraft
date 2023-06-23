@@ -6,6 +6,7 @@ kill @e[type=#baba:object,tag=baba.object]
 kill @e[type=item_display,tag=baba.overlay]
 kill @e[type=text_display,tag=baba.text]
 kill @e[type=text_display,tag=baba.particle]
+data modify storage baba:main rule_history set value []
 execute store result score level_height baba run data get storage baba:main level.tiles
 execute store result score level_width baba run data get storage baba:main level.tiles[0]
 execute store result score level_background baba run data get storage baba:main level.metadata.background
@@ -39,6 +40,7 @@ function baba:board/rules/assign
 execute as @e[type=item_display,tag=baba.object,scores={sprite=6491892},nbt={item:{tag:{level_data:{}}}}] run function baba:progress/check_completed
 
 execute as @e[type=#baba:object,tag=baba.object,tag=prop.select] at @s run function baba:progress/show_name
-execute as @e[type=marker,tag=baba.space] at @s run function baba:board/history/record
+function baba:board/history/record
+scoreboard players set steps baba 0
 
 function baba:display/update
