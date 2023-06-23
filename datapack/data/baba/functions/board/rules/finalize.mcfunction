@@ -92,5 +92,9 @@ tag @s[tag=prop.you] remove prop.you
 execute if data storage baba:main rule_data{properties:[18651]} run tag @s add prop.you
 tag @s[tag=prop.group] remove prop.group
 execute if data storage baba:main rule_data{properties:[4085899]} run tag @s add prop.group
+tag @s[tag=prop.word] remove prop.word
+execute if data storage baba:main rule_data{properties:[464134]} run tag @s add prop.word
+execute if entity @s[tag=prop.word,tag=!is_text] run function baba:board/rules/become_word
+execute if entity @s[tag=!prop.word,tag=is_text] unless score @s sprite matches 397973 run function baba:board/rules/unbecome_word
 scoreboard players set @s float_level 0
 scoreboard players set @s[tag=prop.float] float_level 1

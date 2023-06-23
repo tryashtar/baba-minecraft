@@ -101,5 +101,5 @@ execute if score @s text_id matches 99 run tag @e[type=marker,tag=baba.rule,tag=
 execute if score @s text_id matches 100 run tag @e[type=marker,tag=baba.rule,tag=!remove,nbt={data:{text_ids:[100]}}] add remove
 # if there is more than 100 text, just wipe everything and accept that the game is going to be insanely slow
 execute if score @s text_id matches 101.. run tag @e[type=marker,tag=baba.rule,tag=!remove] add remove
-execute if score @s text_id matches 101.. run tag @e[tag=baba.object,tag=!reparse,scores={sprite=397973}] add reparse
-execute as @e[type=item_display,tag=baba.object,tag=!reparse,scores={sprite=397973},distance=..1.1] at @s run function baba:board/rules/try_invalidate
+execute if score @s text_id matches 101.. run tag @e[tag=baba.object,tag=is_text,tag=!reparse] add reparse
+execute as @e[type=item_display,tag=baba.object,tag=is_text,tag=!reparse,distance=..1.1] at @s run function baba:board/rules/try_invalidate

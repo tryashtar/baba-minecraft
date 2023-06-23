@@ -74,7 +74,7 @@ execute if entity @s[scores={sprite=1837248}] run function baba:display/object/c
 execute if entity @s[scores={sprite=54575550}] run data modify entity @s item.tag.CustomModelData set value 522
 execute if entity @s[scores={sprite=-2}] run data modify entity @s item.tag.CustomModelData set value 579
 execute if entity @s[scores={sprite=397973,text=320763071}] run data modify entity @s item.tag.CustomModelData set value 580
-execute at @s[scores={sprite=397973},tag=!prop.hide] run function baba:display/object/text_overlay
+execute at @s[tag=is_text,tag=!prop.hide] run function baba:display/object/text_overlay
 execute at @s[scores={sprite=6491892},tag=!prop.hide] run function baba:display/object/level_icon
 scoreboard players operation @s sprite = sprite baba
 execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0

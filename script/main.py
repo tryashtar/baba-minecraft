@@ -208,7 +208,7 @@ def generate_spawn_functions(source):
   newspawn = '@e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1]'
   spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
   spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')
-  spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,scores={{sprite=397973}}] text_id')
+  spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
   spawntext.append(f'scoreboard players add {newspawn} text_id 1')
   for prop in source.properties.values():
     if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text'):
@@ -296,7 +296,10 @@ def generate_update_function(source, resources):
     tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{overlay.name}.mcfunction')
   for obj in source.objects.values():
     for overlay in obj.overlays:
-      update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
+      if obj.name == 'text':
+        update_obj.append(f'execute at @s[tag=is_text,tag=!prop.hide] run function baba:display/object/{overlay}')
+      else:
+        update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
   update_obj.extend([
     'scoreboard players operation @s sprite = sprite baba',
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',

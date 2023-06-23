@@ -1,7 +1,8 @@
 # full words are easy; we already know the part of speech, full word ID and string text
 tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
 tag @s add current_word
-scoreboard players operation word baba = @s text
+scoreboard players operation word baba = @s sprite
+scoreboard players operation word baba = @s[scores={sprite=397973}] text
 data modify storage baba:main parsing.word_text set value []
 data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 data modify storage baba:main parsing.word_ids set value [0]

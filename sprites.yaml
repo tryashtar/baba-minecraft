@@ -63,6 +63,9 @@ properties:
   disabled:
     type: tag
     attributes: [sprite]
+  is_text:
+    type: tag
+    attributes: [spawn]
 
 sprites:
 - sheet: sprites1

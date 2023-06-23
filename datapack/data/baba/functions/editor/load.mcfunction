@@ -4,8 +4,8 @@ kill @e[type=marker,tag=baba.conversion]
 kill @e[type=marker,tag=baba.rule]
 kill @e[type=#baba:object,tag=baba.object]
 kill @e[type=item_display,tag=baba.overlay]
+kill @e[type=item_display,tag=baba.particle]
 kill @e[type=text_display,tag=baba.text]
-kill @e[type=text_display,tag=baba.particle]
 data modify storage baba:main rule_history set value []
 execute store result score level_height baba run data get storage baba:main level.tiles
 execute store result score level_width baba run data get storage baba:main level.tiles[0]
@@ -30,7 +30,7 @@ execute if score empty baba matches 1 run tag @e[type=marker,tag=baba.object,tag
 
 execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
 scoreboard players set text_id baba 0
-execute as @e[type=item_display,tag=baba.object,scores={sprite=397973}] store result score @s text_id run scoreboard players add text_id baba 1
+execute as @e[type=item_display,tag=baba.object,tag=is_text] store result score @s text_id run scoreboard players add text_id baba 1
 # don't trigger 'idle' conditions
 scoreboard players set direction baba -1
 tag @e[type=#baba:object,tag=baba.object] add assign
