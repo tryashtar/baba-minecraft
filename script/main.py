@@ -114,11 +114,14 @@ def generate_packing_functions(source, blockstates):
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
       letter_val = props.get(source.properties['letter'])
+      sprite_val = props.get(source.properties['sprite'])
       extra_data = None
       if text_val is not None:
         extra_data = f'text:"{text_val}"'
       if letter_val is not None:
         extra_data = f'text:"{letter_val}"'
+      if obj.name != 'text':
+        extra_data = f'text:"{sprite_val}"'
       set_storage = ops.create_storage(spr.properties, extra_data)
       check_rest = ops.create_storage(ops.filter_properties(props, lambda x: x.name!='sprite'))
       block,state = blockstates[spr]
@@ -204,7 +207,9 @@ def generate_spawn_functions(source):
         if sprite_prop in props:
           del props[sprite_prop]
         conditions = f'if score spawn baba matches {obj.id}'
-        spawn.append(f'execute {conditions} run {ops.create_summon(props)}')
+        spr_text = spr.properties[sprite_prop]
+        summon = ops.create_summon(props, [f'text:"{spr_text}"'])
+        spawn.append(f'execute {conditions} run {summon}')
   newspawn = '@e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1]'
   spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
   spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')

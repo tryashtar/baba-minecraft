@@ -153,6 +153,8 @@ class LevelGrid:
                   text = name[len('text_'):]
                   name = 'text'
                   extra_data = f'text:"{text}"'
+               else:
+                  extra_data = f'text:"{name}"'
                obj = source.objects[name]
                condition = lambda x: True
                if text is not None:
