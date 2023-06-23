@@ -6,10 +6,6 @@ execute store result score rules baba run data get storage baba:main parsing.rul
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=current_word] text_used += rules baba
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=current_not] text_used += rules baba
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=last_verb] text_used += rules baba
-tag @e[type=item_display,tag=baba.object,tag=final_effect] remove final_effect
-tag @s add final_effect
-tag @e[type=item_display,tag=baba.object,tag=current_not] add final_effect
-tag @e[type=item_display,tag=baba.object,tag=current_not] remove current_not
 data modify storage baba:main parsing.complete set value 1b
 data modify storage baba:main parsing.rules3 append from storage baba:main parsing.rules2
 data modify storage baba:main parsing.rules3[-1][].text_ids append from storage baba:main parsing.word_ids[]
