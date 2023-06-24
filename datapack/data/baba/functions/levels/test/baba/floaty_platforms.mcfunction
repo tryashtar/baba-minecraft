@@ -1,3 +1,4 @@
+# test "floaty platforms" in 55 moves
 function baba:levels/load/baba/floaty_platforms
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

@@ -1,3 +1,4 @@
+# test "jelly throne" in 52 moves
 function baba:levels/load/baba/jelly_throne
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

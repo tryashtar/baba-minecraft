@@ -1,3 +1,4 @@
+# test "tiny isle" in 97 moves
 function baba:levels/load/baba/tiny_isle
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

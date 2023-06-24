@@ -1,3 +1,4 @@
+# test "Do it yourself" in 40 moves
 function baba:levels/load/baba/do_it_yourself
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

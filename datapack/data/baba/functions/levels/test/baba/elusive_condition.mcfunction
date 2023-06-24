@@ -1,3 +1,4 @@
+# test "elusive condition" in 77 moves
 function baba:levels/load/baba/elusive_condition
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

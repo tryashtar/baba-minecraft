@@ -1,3 +1,4 @@
+# test "exercise hall" in 67 moves
 function baba:levels/load/baba/exercise_hall
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

@@ -1,3 +1,4 @@
+# test "tiny pond" in 84 moves
 function baba:levels/load/baba/tiny_pond
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

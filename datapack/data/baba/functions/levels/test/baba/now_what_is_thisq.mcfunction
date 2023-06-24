@@ -1,3 +1,4 @@
+# test "now what is this?" in 22 moves
 function baba:levels/load/baba/now_what_is_thisq
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

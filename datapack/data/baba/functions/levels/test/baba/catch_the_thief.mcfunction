@@ -1,3 +1,4 @@
+# test "catch the thief!" in 84 moves
 function baba:levels/load/baba/catch_the_thief
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

@@ -1,3 +1,4 @@
+# test "vip area" in 55 moves
 function baba:levels/load/baba/vip_area
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

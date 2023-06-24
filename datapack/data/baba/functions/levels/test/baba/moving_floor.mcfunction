@@ -1,3 +1,4 @@
+# test "moving floor" in 104 moves
 function baba:levels/load/baba/moving_floor
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

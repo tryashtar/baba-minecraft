@@ -1,3 +1,4 @@
+# test "slideshow" in 18 moves
 function baba:levels/load/baba/slideshow
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

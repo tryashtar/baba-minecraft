@@ -1,3 +1,4 @@
+# test "another way" in 206 moves
 function baba:levels/load/baba/another_way
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

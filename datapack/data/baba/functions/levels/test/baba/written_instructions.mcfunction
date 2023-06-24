@@ -1,3 +1,4 @@
+# test "Written instructions" in 91 moves
 function baba:levels/load/baba/written_instructions
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

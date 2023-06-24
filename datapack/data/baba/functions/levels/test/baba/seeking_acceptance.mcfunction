@@ -1,3 +1,4 @@
+# test "seeking acceptance" in 155 moves
 function baba:levels/load/baba/seeking_acceptance
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

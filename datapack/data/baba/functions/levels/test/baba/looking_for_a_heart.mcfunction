@@ -1,3 +1,4 @@
+# test "looking for a heart" in 74 moves
 function baba:levels/load/baba/looking_for_a_heart
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

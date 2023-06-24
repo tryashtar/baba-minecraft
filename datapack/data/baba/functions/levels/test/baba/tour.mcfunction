@@ -1,3 +1,4 @@
+# test "tour" in 98 moves
 function baba:levels/load/baba/tour
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

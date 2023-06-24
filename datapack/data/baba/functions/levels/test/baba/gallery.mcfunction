@@ -1,3 +1,4 @@
+# test "gallery" in 38 moves
 function baba:levels/load/baba/gallery
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

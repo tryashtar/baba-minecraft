@@ -1,3 +1,4 @@
+# test "submerged ruins" in 63 moves
 function baba:levels/load/baba/submerged_ruins
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

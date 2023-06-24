@@ -1,3 +1,4 @@
+# test "crumbling floor" in 108 moves
 function baba:levels/load/baba/crumbling_floor
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

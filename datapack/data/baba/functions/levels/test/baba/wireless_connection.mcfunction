@@ -1,3 +1,4 @@
+# test "wireless connection" in 68 moves
 function baba:levels/load/baba/wireless_connection
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

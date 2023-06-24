@@ -1,3 +1,4 @@
+# test "castle disaster" in 34 moves
 function baba:levels/load/baba/castle_disaster
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

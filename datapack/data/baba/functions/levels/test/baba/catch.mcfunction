@@ -1,3 +1,4 @@
+# test "catch" in 103 moves
 function baba:levels/load/baba/catch
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

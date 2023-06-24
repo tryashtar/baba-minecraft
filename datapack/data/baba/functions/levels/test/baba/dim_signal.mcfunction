@@ -1,3 +1,4 @@
+# test "dim signal" in 112 moves
 function baba:levels/load/baba/dim_signal
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

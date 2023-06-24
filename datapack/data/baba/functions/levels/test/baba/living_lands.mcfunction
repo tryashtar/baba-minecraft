@@ -1,3 +1,4 @@
+# test "living lands" in 12 moves
 function baba:levels/load/baba/living_lands
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

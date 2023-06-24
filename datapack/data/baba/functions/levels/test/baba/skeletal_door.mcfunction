@@ -1,3 +1,4 @@
+# test "skeletal door" in 66 moves
 function baba:levels/load/baba/skeletal_door
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

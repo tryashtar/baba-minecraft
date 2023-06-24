@@ -1,3 +1,4 @@
+# test "tunnel vision" in 47 moves
 function baba:levels/load/baba/tunnel_vision
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

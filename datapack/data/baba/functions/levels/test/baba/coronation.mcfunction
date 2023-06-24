@@ -1,3 +1,4 @@
+# test "coronation" in 40 moves
 function baba:levels/load/baba/coronation
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

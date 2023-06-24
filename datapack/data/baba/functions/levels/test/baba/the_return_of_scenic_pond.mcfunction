@@ -1,3 +1,4 @@
+# test "the return of scenic pond" in 205 moves
 function baba:levels/load/baba/the_return_of_scenic_pond
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

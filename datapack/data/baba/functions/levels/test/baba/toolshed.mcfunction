@@ -1,3 +1,4 @@
+# test "toolshed" in 111 moves
 function baba:levels/load/baba/toolshed
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

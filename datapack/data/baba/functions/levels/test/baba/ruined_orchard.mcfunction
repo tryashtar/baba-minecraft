@@ -1,3 +1,4 @@
+# test "ruined orchard" in 163 moves
 function baba:levels/load/baba/ruined_orchard
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

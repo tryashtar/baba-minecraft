@@ -1,3 +1,4 @@
+# test "priority lane" in 73 moves
 function baba:levels/load/baba/priority_lane
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

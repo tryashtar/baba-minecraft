@@ -1,3 +1,4 @@
+# test "fragile existence" in 125 moves
 function baba:levels/load/baba/fragile_existence
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

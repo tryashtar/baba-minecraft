@@ -45,8 +45,22 @@ def main():
             solution = f'script/level_solutions/{pack_name}/{level_name}.txt'
             if os.path.exists(solution):
                moves = []
-               for move in tat.read_text(solution):
-                  moves.append({'U':1,'D':2,'L':3,'R':4,'W':0}[move])
+               text = tat.read_text(solution)
+               index = 0
+               while index < len(text):
+                  move = text[index]
+                  index += 1
+                  if index < len(text) and text[index] == "'":
+                     index += 1
+                  count = ""
+                  while index < len(text) and text[index].isdigit():
+                     count += text[index]
+                     index += 1
+                  count = 1 if count == "" else int(count)
+                  move = {'U':1,'D':2,'L':3,'R':4,'W':0}[move]
+                  moves.extend([move] * count)
+                  while index < len(text) and text[index].isspace():
+                     index += 1
                testable = True
                move_storage = '[' + ','.join(map(str, moves)) + ']'
                test_all.extend([
@@ -55,6 +69,7 @@ def main():
                   f'data modify storage baba:main moves_list append value {move_storage}',
                ])
                test_level = [
+                  f'# test "{level.name}" in {len(moves)} moves',
                   f'function baba:levels/load/{pack_name}/{level_name}',
                   'data modify storage baba:main level_list set value []',
                   'data modify storage baba:main moves_list set value []',

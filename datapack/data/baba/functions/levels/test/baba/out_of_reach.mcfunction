@@ -1,3 +1,4 @@
+# test "out of reach" in 38 moves
 function baba:levels/load/baba/out_of_reach
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

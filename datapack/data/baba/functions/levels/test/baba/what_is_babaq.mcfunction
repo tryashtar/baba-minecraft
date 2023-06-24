@@ -1,3 +1,4 @@
+# test "what is baba?" in 60 moves
 function baba:levels/load/baba/what_is_babaq
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []

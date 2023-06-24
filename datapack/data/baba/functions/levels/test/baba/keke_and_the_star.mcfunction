@@ -1,3 +1,4 @@
+# test "keke and the star" in 88 moves
 function baba:levels/load/baba/keke_and_the_star
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []
