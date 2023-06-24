@@ -18,13 +18,17 @@ def main():
    vars = lua.globals()
    table = make_object_table(vars)
    for pack in tat.get_folders(os.path.join(baba_folder, 'Data/Worlds')):
+      pack_name = os.path.basename(pack)
+      if pack_name == 'debug':
+         continue
+      if pack_name == 'levels':
+         pack_name = 'tests'
+      print(pack_name)
       testable = False
       test_all = [
          'data modify storage baba:main level_list set value []',
          'data modify storage baba:main moves_list set value []',
       ]
-      pack_name = os.path.basename(pack)
-      print(pack_name)
       for level_file in tat.get_files(os.path.join(baba_folder, pack)):
          if tat.extension(level_file) != '.ld':
             continue
