@@ -39,6 +39,8 @@ def main():
             config.read_file(ld)
             level = LevelGrid(config, l, table)
             level_name = level.name.lower().replace(' ','_').replace('?','q').replace('.','').replace("'",'').replace('*','').replace('|','').replace('(','').replace(')','').replace('!','').replace(',','')
+            if tat.base_name(level_file) in ['154level', '328level']:
+               level_name += '_unused'
             print(f'\t{tat.base_name(level_file)} - {level_name}')
             storage = level.make_storage(source)
             tat.write_text(f'data modify storage baba:main level set value {storage}\n', f'datapack/data/baba/functions/levels/load/{pack_name}/{level_name}.mcfunction')
@@ -162,14 +164,18 @@ class LevelGrid:
             metadata.append(f'palette:{i}')
       tiles_text = []
       text_prop = source.properties['text']
+      letter_prop = source.properties['letter']
       for row in reversed(self.cells[1:-1]):
          row_text = []
          for tile in row[1:-1]:
             tile_text = []
             for instance in tile:
                name = instance['name']
+               edits = instance.get('edits', {})
                if name == 'default':
                   name = 'baba'
+               if (change_name := edits.get('name')) is not None:
+                  name = change_name
                text = None
                extra_data = None
                if name.startswith('text_'):
@@ -178,10 +184,13 @@ class LevelGrid:
                   extra_data = f'text:"{text}"'
                else:
                   extra_data = f'text:"{name}"'
+               if name not in source.objects:
+                  print(f'\tUnknown object: {name}')
+                  continue
                obj = source.objects[name]
                condition = lambda x: True
                if text is not None:
-                  condition = condition and (lambda x: text_prop in x.properties and x.properties[text_prop] == text)
+                  condition = condition and (lambda x: (text_prop in x.properties and x.properties[text_prop] == text) or (letter_prop in x.properties and x.properties[letter_prop] == text))
                props = None
                for spr in obj.sprites:
                   if condition(spr):
@@ -190,7 +199,7 @@ class LevelGrid:
                if props is None:
                   print(f'\tFailed to create: {instance}')
                   continue
-               edits = instance.get('edits', {})
+               # colour, activecolour, image, name, tiling, layer, root, argextra, type, unittype, argtype, customobjects
                if (color := edits.get('colour')) is not None:
                   if name == 'text':
                      props[source.properties['inactive_color']] = self.convert_color(source, color)
