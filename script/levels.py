@@ -17,6 +17,8 @@ def main():
       lua.execute(file.read())
    vars = lua.globals()
    table = make_object_table(vars)
+   tat.delete_folder('datapack/data/baba/functions/levels/load')
+   tat.delete_folder('datapack/data/baba/functions/levels/test')
    for pack in tat.get_folders(os.path.join(baba_folder, 'Data/Worlds')):
       pack_name = os.path.basename(pack)
       if pack_name == 'debug':
@@ -40,34 +42,28 @@ def main():
             print(f'\t{tat.base_name(level_file)} - {level_name}')
             storage = level.make_storage(source)
             tat.write_text(f'data modify storage baba:main level set value {storage}\n', f'datapack/data/baba/functions/levels/load/{pack_name}/{level_name}.mcfunction')
-            solution_folder = os.path.join('script/tests/BABA IS YOU/solutions-multiline')
-            if os.path.isdir(solution_folder):
+            solution = f'script/level_solutions/{pack_name}/{level_name}.txt'
+            if os.path.exists(solution):
                moves = []
-               found = False
-               for solution_file in tat.get_files(solution_folder):
-                  if f', {level.name}, ' in tat.base_name(solution_file).lower():
-                     for move in tat.read_lines(solution_file):
-                        moves.append({'U':1,'D':2,'L':3,'R':4,'W':0}[move])
-                     found = True
-                     break
-               if found:
-                  testable = True
-                  move_storage = '[' + ','.join(map(str, moves)) + ']'
-                  test_all.extend([
-                     f'function baba:levels/load/{pack_name}/{level_name}',
-                     'data modify storage baba:main level_list append from storage baba:main level',
-                     f'data modify storage baba:main moves_list append value {move_storage}',
-                  ])
-                  test_level = [
-                     f'function baba:levels/load/{pack_name}/{level_name}',
-                     'data modify storage baba:main level_list set value []',
-                     'data modify storage baba:main moves_list set value []',
-                     f'data modify storage baba:main moves set value {move_storage}',
-                     'execute positioned 0 1 0 run function baba:editor/load',
-                     'execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []',
-                     'execute unless entity @a[tag=scrub,limit=1] run schedule function baba:levels/automate_step 1t',
-                  ]
-                  tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{pack_name}/{level_name}.mcfunction')
+               for move in tat.read_text(solution):
+                  moves.append({'U':1,'D':2,'L':3,'R':4,'W':0}[move])
+               testable = True
+               move_storage = '[' + ','.join(map(str, moves)) + ']'
+               test_all.extend([
+                  f'function baba:levels/load/{pack_name}/{level_name}',
+                  'data modify storage baba:main level_list append from storage baba:main level',
+                  f'data modify storage baba:main moves_list append value {move_storage}',
+               ])
+               test_level = [
+                  f'function baba:levels/load/{pack_name}/{level_name}',
+                  'data modify storage baba:main level_list set value []',
+                  'data modify storage baba:main moves_list set value []',
+                  f'data modify storage baba:main moves set value {move_storage}',
+                  'execute positioned 0 1 0 run function baba:editor/load',
+                  'execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []',
+                  'execute unless entity @a[tag=scrub,limit=1] run schedule function baba:levels/automate_step 1t',
+               ]
+               tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{pack_name}/{level_name}.mcfunction')
       if testable:
          test_all.extend([
             'data modify storage baba:main level set from storage baba:main level_list[0]',
