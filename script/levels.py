@@ -164,7 +164,6 @@ class LevelGrid:
             metadata.append(f'palette:{i}')
       tiles_text = []
       text_prop = source.properties['text']
-      letter_prop = source.properties['letter']
       for row in reversed(self.cells[1:-1]):
          row_text = []
          for tile in row[1:-1]:
@@ -190,7 +189,7 @@ class LevelGrid:
                obj = source.objects[name]
                condition = lambda x: True
                if text is not None:
-                  condition = condition and (lambda x: (text_prop in x.properties and x.properties[text_prop] == text) or (letter_prop in x.properties and x.properties[letter_prop] == text))
+                  condition = condition and (lambda x: (text_prop in x.properties and x.properties[text_prop] == text))
                props = None
                for spr in obj.sprites:
                   if condition(spr):

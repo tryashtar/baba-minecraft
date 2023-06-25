@@ -39,6 +39,8 @@ def generate_make_palette(source):
     if text_prop in spr.properties and part_prop in spr.properties:
       text = spr.properties[text_prop]
       part = spr.properties[part_prop]
+      if part == 'letter':
+        continue
       id = ops.id_hash(text)
       if part == 'noun' and text in source.objects:
         fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={id}}},limit=1] run data modify storage baba:main words.{part} append value {id}')
@@ -113,13 +115,10 @@ def generate_packing_functions(source, blockstates):
     lines = []
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
-      letter_val = props.get(source.properties['letter'])
       sprite_val = props.get(source.properties['sprite'])
       extra_data = None
       if text_val is not None:
         extra_data = f'text:"{text_val}"'
-      if letter_val is not None:
-        extra_data = f'text:"{letter_val}"'
       if obj.name != 'text':
         extra_data = f'text:"{sprite_val}"'
       set_storage = ops.create_storage(spr.properties, extra_data)
@@ -187,6 +186,7 @@ def generate_give_commands(resources, blockstates):
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
   sprite_prop = source.properties['sprite']
+  part_prop = source.properties['part']
   spawn = []
   spawntext = []
   objectlist = source.objects.values()
@@ -195,6 +195,8 @@ def generate_spawn_functions(source):
       spawn.insert(0, f'execute if score spawn baba matches {obj.id} run function baba:board/spawn_text')
       for spr in obj.sprites:
         if text_prop not in spr.properties:
+          continue
+        if part_prop in spr.properties and spr.properties[part_prop] == 'letter':
           continue
         spr_text = spr.properties[text_prop]
         props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))

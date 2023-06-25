@@ -2,7 +2,6 @@ data merge entity @s {width:1f,height:0.1f,item_display:"fixed",item:{id:"minecr
 execute store result score @s sprite run data get storage baba:main previous.objects[0].scores.sprite
 execute store result score @s appearance run data get storage baba:main previous.objects[0].scores.appearance
 execute store result score @s text run data get storage baba:main previous.objects[0].scores.text
-execute store result score @s letter run data get storage baba:main previous.objects[0].scores.letter
 execute store result score @s text_id run data get storage baba:main previous.objects[0].scores.text_id
 execute store result score @s facing run data get storage baba:main previous.objects[0].scores.facing
 execute store result score @s walk run data get storage baba:main previous.objects[0].scores.walk

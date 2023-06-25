@@ -1003,196 +1003,224 @@ sprites:
       inactive color: '#737373'
       coords: [1, 1948]
     sprites:
-    - letter: a
+    - text: a
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [51, 1948]
     sprites:
-    - letter: b
+    - text: b
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [101, 1948]
     sprites:
-    - letter: c
+    - text: c
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [151, 1948]
     sprites:
-    - letter: d
+    - text: d
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [201, 1948]
     sprites:
-    - letter: e
+    - text: e
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [251, 1948]
     sprites:
-    - letter: f
+    - text: f
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [301, 1948]
     sprites:
-    - letter: g
+    - text: g
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [1, 2023]
     sprites:
-    - letter: h
+    - text: h
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [51, 2023]
     sprites:
-    - letter: i
+    - text: i
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [101, 2023]
     sprites:
-    - letter: j
+    - text: j
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [151, 2023]
     sprites:
-    - letter: k
+    - text: k
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [201, 2023]
     sprites:
-    - letter: l
+    - text: l
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [251, 2023]
     sprites:
-    - letter: m
+    - text: m
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [301, 2023]
     sprites:
-    - letter: 'n'
+    - text: 'n'
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [1, 2098]
     sprites:
-    - letter: o
+    - text: o
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [51, 2098]
     sprites:
-    - letter: p
+    - text: p
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [101, 2098]
     sprites:
-    - letter: q
+    - text: q
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [151, 2098]
     sprites:
-    - letter: r
+    - text: r
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [201, 2098]
     sprites:
-    - letter: s
+    - text: s
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [251, 2098]
     sprites:
-    - letter: t
+    - text: t
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [301, 2098]
     sprites:
-    - letter: u
+    - text: u
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [1, 2173]
     sprites:
-    - letter: v
+    - text: v
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [51, 2173]
     sprites:
-    - letter: w
+    - text: w
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [101, 2173]
     sprites:
-    - letter: x
+    - text: x
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [151, 2173]
     sprites:
-    - letter: 'y'
+    - text: 'y'
+      part: letter
   - objects:
     - name: text
       color: '#ffffff'
       inactive color: '#737373'
       coords: [201, 2173]
     sprites:
-    - letter: z
+    - text: z
+      part: letter
   - objects:
     - name: text
       color: '#d9396a'
       inactive color: '#682e4c'
       coords: [76, 2407]
     sprites:
-    - letter: ab
+    - text: ab
+      part: letter
   - objects:
     - name: text
       color: '#d9396a'
       inactive color: '#682e4c'
       coords: [151, 2407]
     sprites:
-    - letter: ba
+    - text: ba
+      part: letter
 
 - sheet: tiles
   entries:

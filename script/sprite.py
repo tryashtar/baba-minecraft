@@ -17,7 +17,6 @@ class SpriteCollection:
       'sprite': Metadata(name='sprite', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
       'appearance': Metadata(name='appearance', kind='score', attributes=['spawn'], converter='hash'),
       'text': Metadata(name='text', kind='score', attributes=['editor','sprite','primary','spawn'], converter='hash'),
-      'letter': Metadata(name='letter', kind='score', attributes=['sprite','primary','spawn','editor'], converter='hash'),
       'color': Metadata(name='color', kind='score', attributes=['spawn'], converter='hex'),
       'inactive_color': Metadata(name='inactive_color', kind='score', attributes=['spawn'], converter='hex'),
       'z_layer': Metadata(name='z_layer', kind='score', default=1, attributes=['all','spawn'])
@@ -133,6 +132,9 @@ class SpriteCollection:
                   self.properties[k] = Metadata(k, 'mod', None, None, ['sprite'])
                 props[self.properties[k]] = v
               sprite = BabaSprite(adding_frames, props, width, height, obj_data.get('shift', [0,0]), scale)
+              for k,v in props.items():
+                if k.name == 'part' and v == 'letter':
+                  sprite.display_props[self.properties['sprite']] = 'letter'
               adding.sprites.append(sprite)
 
   def get_frames(self, i, image, framecount, coords, size, framedir):
@@ -178,6 +180,7 @@ class BabaSprite:
   def __init__(self, image, properties, width, height, shift, scale):
     self.image = image
     self.properties = properties
+    self.display_props = {}
     self.width = width
     self.height = height
     self.shift = shift
@@ -190,14 +193,13 @@ class BabaSprite:
 
   def display(self, properties, sep1, sep2):
     result = ''
-    for k,v in properties.items():
+    for k in properties.keys():
       if 'primary' in k.attributes:
-        if k.name == 'sprite' and any(map(lambda x: x.name == 'letter', properties.keys())):
-          result += 'letter' + sep1
-        else:
-          result += self.display_val(v) + sep1
-    for k,v in properties.items():
+        v = self.display_props[k] if k in self.display_props else properties[k]
+        result += self.display_val(v) + sep1
+    for k in properties.keys():
       if 'primary' not in k.attributes:
+        v = self.display_props[k] if k in self.display_props else properties[k]
         result += k.name + sep2 + self.display_val(v) + sep1
     result = result[:-1]
     return result

@@ -25,7 +25,7 @@ def path_to_resource(path):
   items[-1] = os.path.splitext(items[-1])[0]
   return f'{items[1]}:{"/".join(items[3:])}'
 
-def sprite_name(obj, spr, props):
+def sprite_name(spr, props):
   return spr.display(props, '.', '-').replace('.','/', 1)
 
 def save_image(spr, images, path):
@@ -62,7 +62,7 @@ def create_sprite_resources(source, resource_pack, namespace):
   for obj in list(source.objects.values()) + list(source.overlays.values()) + list(source.alt_images.values()):
     filtered = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     for spr,props in filtered:
-      display = sprite_name(obj, spr, props)
+      display = sprite_name(spr, props)
       if spr.image in cached_images:
         texture_path = cached_images[spr.image]
       else:
@@ -105,7 +105,7 @@ def create_editor_resources(source, resource_pack, namespace):
     filtered = list(obj.filter_sprites(lambda x: 'editor' in x.attributes).items())
     for spr,props in filtered:
       sprite_id += 1
-      display = sprite_name(obj, spr, props)
+      display = sprite_name(spr, props)
       texture_path = os.path.join(texture_folder, display + '.png')
       model_path = os.path.join(model_folder, display + '.json')
       frames = list(colorize_frames(spr.image.frames, bytes.fromhex(spr.properties[source.properties['color']][1:])))

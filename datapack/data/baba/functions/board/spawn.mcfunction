@@ -70,7 +70,6 @@ execute if score spawn baba matches 1837248 run summon item_display ~ ~ ~ {width
 execute if score spawn baba matches 54575550 run summon item_display ~ ~ ~ {width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty"],item:{id:"minecraft:potion",Count:1b,tag:{text:"cursor",scores:{color:15438282,z_layer:20}}}}
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] sprite = spawn baba
 execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s appearance run data get entity @s item.tag.scores.appearance
-execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s letter run data get entity @s item.tag.scores.letter
 execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s color run data get entity @s item.tag.scores.color
 execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s inactive_color run data get entity @s item.tag.scores.inactive_color
 execute as @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] store result score @s z_layer run data get entity @s item.tag.scores.z_layer

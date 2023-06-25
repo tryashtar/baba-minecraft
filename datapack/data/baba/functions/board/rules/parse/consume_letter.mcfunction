@@ -1,15 +1,15 @@
 # letters are trickier, we need to assemble the word ID and string one character at a time
 # even more strangely, only words present in the "level palette" can be parsed
-
-# we can shift the current word over to fit the new letter at the same time as fetching it from storage
-# conveniently, this also clamps instead of overflowing, preventing a bug where large words like "kbhuzow" would wrap to the same ID as "baba"
-execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,scores={letter=1..},distance=..0.1] add first_word
+execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,tag=part.letter,distance=..0.1] add first_word
 execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
 execute if data storage baba:main parsing{current:"word"} run data modify storage baba:main parsing merge value {current:"letter",word:0,word_text:[],word_ids:[]}
 tag @s add current_word
-execute store result score word baba run data get storage baba:main parsing.word 27
-execute if score @s letter matches 27.. run scoreboard players operation word baba *= #27 baba
-execute store result storage baba:main parsing.word int 1 run scoreboard players operation word baba += @s letter
+
+# we can shift the current word over to fit the new letter at the same time as fetching it from storage
+# conveniently, this also clamps instead of overflowing, preventing a bug where large words like "kbhuzow" would wrap to the same ID as "baba"
+execute if score @s text matches ..26 store result score word baba run data get storage baba:main parsing.word 27
+execute if score @s text matches 27.. store result score word baba run data get storage baba:main parsing.word 729
+execute store result storage baba:main parsing.word int 1 run scoreboard players operation word baba += @s text
 data modify storage baba:main parsing.word_text append from entity @s item.tag.text
 execute store result storage baba:main id int 1 run scoreboard players get @s text_id
 data modify storage baba:main parsing.word_ids append from storage baba:main id
