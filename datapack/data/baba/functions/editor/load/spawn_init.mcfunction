@@ -9,6 +9,7 @@ execute store result score @s inactive_color run data get storage baba:main leve
 execute store result score @s appearance run data get storage baba:main level.tiles[0][0][0].scores.appearance
 execute store result score @s z_layer run data get storage baba:main level.tiles[0][0][0].scores.z_layer
 execute store result score @s direction run data get storage baba:main level.tiles[0][0][0].scores.direction
+execute unless data storage baba:main level.tiles[0][0][0].scores.appearance run scoreboard players operation @s appearance = @s sprite
 scoreboard players set @s[scores={facing=0}] facing 4
 scoreboard players set @s frame 0
 data modify entity @s item.tag set from storage baba:main level.tiles[0][0][0].data

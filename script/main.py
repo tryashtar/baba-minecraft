@@ -218,7 +218,7 @@ def generate_spawn_functions(source):
   spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
   spawntext.append(f'scoreboard players add {newspawn} text_id 1')
   for prop in source.properties.values():
-    if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text'):
+    if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text','appearance'):
       spawn.append(f'execute as {newspawn} store result score @s {prop.name} run data get entity @s item.tag.scores.{prop.name}')
     if 'all' in prop.attributes and 'spawn' not in prop.attributes:
       if prop.kind == 'score':
@@ -227,6 +227,7 @@ def generate_spawn_functions(source):
         raise ValueError(prop.name)
   spawn.extend([
     f'data remove entity {newspawn} item.tag.scores',
+    'scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] appearance = @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] sprite',
     'execute unless score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0}] if score @s sprite = spawn baba run function baba:board/spawn_convert',
     'execute if score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973}] if score @s text = spawn_text baba run function baba:board/spawn_convert',
   ])
@@ -262,13 +263,14 @@ def generate_update_function(source, resources):
   update_obj = [
     'execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer',
     'execute at @s run tp @s ~ ~1.001 ~',
-    'scoreboard players operation sprite baba = @s sprite',
-    'execute unless score @s appearance matches 0 run scoreboard players operation @s sprite = @s appearance',
   ]
   for obj in list(source.objects.values()) + list(source.alt_images.values()):
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     if len(spritelist) == 1:
       spr,props = spritelist[0]
+      sprite_prop = props[source.properties['sprite']]
+      del props[source.properties['sprite']]
+      props[source.properties['appearance']] = sprite_prop
       # yes, the "execute if entity" is faster
       update_obj.append(f'execute if entity @s[{ops.create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
     else:
@@ -276,7 +278,7 @@ def generate_update_function(source, resources):
       for spr,props in spritelist:
         lines.append(f'execute if entity @s[{ops.create_selector(ops.filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s item.tag.CustomModelData set value {resources[spr].custom_model_data}')
       tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{obj.name}.mcfunction')
-      update_obj.append(f'execute if entity @s[scores={{sprite={ops.id_hash(obj.name)}}}] run function baba:display/object/{obj.name}')
+      update_obj.append(f'execute if entity @s[scores={{appearance={ops.id_hash(obj.name)}}}] run function baba:display/object/{obj.name}')
   for overlay in source.overlays.values():
     lines = []
     for prop,op in overlay.property_mods.items():
@@ -308,7 +310,6 @@ def generate_update_function(source, resources):
       else:
         update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
   update_obj.extend([
-    'scoreboard players operation @s sprite = sprite baba',
     'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
     'scoreboard players operation color baba = @s color',
     'execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color',
