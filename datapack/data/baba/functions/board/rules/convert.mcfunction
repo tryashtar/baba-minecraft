@@ -13,6 +13,7 @@ tag @s[tag=effect_inverted,tag=!has_conditions] add disabler
 execute if score @s life matches 262 if data storage baba:main rule{effect:{inverted:0b,part:"noun"}} run tag @s add transformer
 tag @s[tag=transformer,tag=!has_conditions] add transform_disabler
 tag @s[tag=!effect_inverted,scores={life=12584543}] add transformer
+tag @s[tag=!effect_inverted,scores={life=12584543}] add write_transform
 tag @s[scores={sprite=397973}] add subject_text
 tag @s[scores={sprite=6491892}] add subject_level
 tag @s[scores={sprite=2925313}] add subject_empty
