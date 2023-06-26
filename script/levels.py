@@ -43,7 +43,11 @@ def main():
                level_name += '_unused'
             print(f'\t{tat.base_name(level_file)} - {level_name}')
             storage = level.make_storage(source)
-            tat.write_text(f'data modify storage baba:main level set value {storage}\n', f'datapack/data/baba/functions/levels/load/{pack_name}/{level_name}.mcfunction')
+            lines = [
+               f'# {tat.base_name(level_file)}',
+               f'data modify storage baba:main level set value {storage}'
+            ]
+            tat.write_lines(lines, f'datapack/data/baba/functions/levels/load/{pack_name}/{level_name}.mcfunction')
             solution = f'script/level_solutions/{pack_name}/{level_name}.txt'
             if os.path.exists(solution):
                moves = []
