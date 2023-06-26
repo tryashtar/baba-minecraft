@@ -196,7 +196,7 @@ def generate_spawn_functions(source):
       for spr in obj.sprites:
         if text_prop not in spr.properties:
           continue
-        if part_prop in spr.properties and spr.properties[part_prop] == 'letter':
+        if part_prop in spr.properties and spr.properties[part_prop] not in ('noun','property'):
           continue
         spr_text = spr.properties[text_prop]
         props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))

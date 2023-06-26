@@ -1,6 +1,7 @@
 execute store result score spawn baba run data get storage baba:main spawn[0].text
 # when transforming into text, you transform into text of your own kind
 scoreboard players operation spawn_text baba = @s sprite
+data modify storage baba:main transform set from storage baba:main spawn[0]
 execute if data storage baba:main transform{write:1b} run scoreboard players set spawn baba 397973
 execute if data storage baba:main transform{write:1b} store result score spawn_text baba run data get storage baba:main transform.text
 function baba:board/spawn
