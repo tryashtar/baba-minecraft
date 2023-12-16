@@ -22,7 +22,7 @@
                      "condition": "minecraft:block_state_property",
                      "block": "minecraft:beehive",
                      "properties": {
-                        "honey_level": 0,
+                        "honey_level": "0",
                         "facing": "north"
                      }
                   }
@@ -54,7 +54,7 @@
                      "condition": "minecraft:block_state_property",
                      "block": "minecraft:beehive",
                      "properties": {
-                        "honey_level": 1,
+                        "honey_level": "1",
                         "facing": "north"
                      }
                   }

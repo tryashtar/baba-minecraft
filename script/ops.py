@@ -1,5 +1,3 @@
-import hashlib
-
 def filter_properties(properties, check):
   props = properties.copy()
   for p in properties:

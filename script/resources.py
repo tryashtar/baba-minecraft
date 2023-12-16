@@ -1,7 +1,6 @@
 import os
 import PIL.Image
 import tryashtools as tat
-import ops
 
 class SpriteResources:
   def __init__(self, sprite, props, texture_path, model_path, custom_model_data):
@@ -45,7 +44,7 @@ def save_model(spr, texture_resource, path, y):
     model['display'] = {"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, y, t2]}}
   tat.write_json(model, path)
 
-def save_editor_model(spr, texture_resource, path):
+def save_editor_model(texture_resource, path):
   model = {"parent":"baba:editor_block","textures":{"all":texture_resource}}
   tat.write_json(model, path)
 
@@ -81,16 +80,16 @@ def create_sprite_resources(source, resource_pack, namespace):
         cached_models[model_key] = (model_path, custom_model_data)
         overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)
-  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":f"minecraft:item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
+  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":"minecraft:item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
   return sprite_info
 
 def colorize_frames(images, color):
   for f in images:
     rc, gc, bc, ac = f.split()
     r, g, b = color
-    rc = rc.point(lambda x: x * r/255)
-    gc = gc.point(lambda x: x * g/255)
-    bc = bc.point(lambda x: x * b/255)
+    rc = rc.point(lambda x,r=r: x * r/255)
+    gc = gc.point(lambda x,g=g: x * g/255)
+    bc = bc.point(lambda x,b=b: x * b/255)
     yield PIL.Image.merge('RGBA', (rc, gc, bc, ac))
 
 def create_editor_resources(source, resource_pack, namespace):
@@ -110,7 +109,7 @@ def create_editor_resources(source, resource_pack, namespace):
       model_path = os.path.join(model_folder, display + '.json')
       frames = list(colorize_frames(spr.image.frames, bytes.fromhex(spr.properties[source.properties['color']][1:])))
       save_image(spr, [frames[0]], os.path.join(resource_pack, texture_path))
-      save_editor_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path))
+      save_editor_model(path_to_resource(texture_path), os.path.join(resource_pack, model_path))
       overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
   return sprite_info

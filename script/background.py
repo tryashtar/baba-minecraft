@@ -4,18 +4,18 @@ import PIL.ImageColor
 import tryashtools as tat
 
 def shroom_state(val):
-  dir = ['up','down','north','south','east','west']
+  dirs = ['up','down','north','south','east','west']
   result = []
-  for m in dir:
+  for m in dirs:
     result.append(f'{m}={str(val%2==1).lower()}')
     val = val // 2
   block = ['brown_mushroom_block', 'red_mushroom_block', 'mushroom_stem'][val%3]
   return (block, ','.join(result))
 
 def terracotta_state(val, half):
-  dir = ['north','south','east','west']
-  state = f'facing={dir[val%len(dir)]}'
-  val = val // len(dir)
+  dirs = ['north','south','east','west']
+  state = f'facing={dirs[val%len(dirs)]}'
+  val = val // len(dirs)
   blocks = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray'] if half else ['light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
   block = blocks[val%len(blocks)]+'_glazed_terracotta'
   val = val // len(blocks)
@@ -58,7 +58,7 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
       blockstates[block][state] = {"model":f"{namespace}:background/{n}_{t}","y":90}
       background.append(f'execute if score palette baba matches {i} run setblock ~ ~-1 ~ {block}[{state}]')
     if t == 'floor':
-      background.append(f'execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
+      background.append('execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
     tat.write_lines(background, os.path.join(background_load, f'{t}.mcfunction'))
   for k,v in blockstates.items():
     tat.write_json({"variants":v}, os.path.join(resource_pack, f'assets/minecraft/blockstates/{k}.json'))
