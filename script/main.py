@@ -81,10 +81,9 @@ def generate_particles(particles):
           'execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba'
         ])
     init_lines.extend([
-      'execute summon marker run function baba:display/particle/random',
       f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
-      f'execute store result storage baba:main merge.transformation.translation[0] float {speed/2147483647:.20f} run data get storage baba:main random[0]',
-      f'execute store result storage baba:main merge.transformation.translation[2] float {speed/2147483647:.20f} run data get storage baba:main random[1]',
+      f'execute store result storage baba:main merge.transformation.translation[0] float {speed/65536:.20f} run random value -65536..65536',
+      f'execute store result storage baba:main merge.transformation.translation[2] float {speed/65536:.20f} run random value -65536..65536',
       'data modify entity @s {} merge from storage baba:main merge',
       f'scoreboard players set @s life {life}',
     ])

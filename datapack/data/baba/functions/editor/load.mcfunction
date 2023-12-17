@@ -25,7 +25,7 @@ execute store success score empty baba if data storage baba:main words{noun:[292
 execute if data storage baba:main words{noun:[1065,10631]} run scoreboard players set empty baba 1
 execute if score empty baba matches 1 at @e[type=marker,tag=baba.space] unless entity @e[type=item_display,tag=baba.object,distance=..0.1,limit=1] run summon marker ~ ~ ~ {Tags:["baba.object","not_all","empty","spawn","assign"]}
 execute if score empty baba matches 1 run scoreboard players set @e[type=marker,tag=baba.object,tag=empty,tag=spawn] sprite 2925313
-execute if score empty baba matches 1 as @e[type=marker,tag=baba.object,tag=empty,tag=spawn] store result score @s facing run loot spawn ~ ~ ~ loot baba:random_4
+execute if score empty baba matches 1 as @e[type=marker,tag=baba.object,tag=empty,tag=spawn] store result score @s facing run random value 1..4
 execute if score empty baba matches 1 run tag @e[type=marker,tag=baba.object,tag=empty,tag=spawn] remove spawn
 
 execute as @e[type=item_display,tag=baba.object,tag=connector] at @s run function baba:board/graphics/connector
