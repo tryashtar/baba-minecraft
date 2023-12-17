@@ -1,0 +1,24 @@
+{
+   "condition": "minecraft:entity_scores",
+   "entity": "this",
+   "scores": {
+      "sprite": {
+         "min": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "sprite"
+            },
+            "score": "baba"
+         },
+         "max": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "sprite"
+            },
+            "score": "baba"
+         }
+      }
+   }
+}

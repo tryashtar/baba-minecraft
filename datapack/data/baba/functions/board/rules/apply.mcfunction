@@ -1,4 +1,5 @@
 # if this rule's subject matches the object, proceed to check conditions
+scoreboard players operation sprite baba = @s sprite
 scoreboard players operation verb baba = @s life
 scoreboard players operation effect baba = @s text
 execute store success score effect_noun baba if entity @s[tag=effect_noun]
@@ -11,12 +12,7 @@ execute store success storage baba:main effect.inverted byte 1 if entity @s[tag=
 execute if entity @s[tag=!subject_inverted,tag=subject_all] run tag @e[type=#baba:object,tag=baba.object,tag=!not_all,tag=assign] add check
 execute if entity @s[tag=subject_inverted,tag=subject_all] run tag @e[type=marker,tag=baba.object,tag=empty,tag=assign] add check
 execute if entity @s[tag=subject_inverted,tag=subject_all] run tag @e[type=#baba:object,tag=baba.object,tag=assign,scores={sprite=397973}] add check
-execute if entity @s[tag=!subject_all,tag=!subject_group] run scoreboard players operation @e[type=#baba:object,tag=baba.object,tag=assign] sprite -= @s sprite
-execute if entity @s[tag=!subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,scores={sprite=0}] add check
-execute if entity @s[tag=subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,scores={sprite=1..}] add check
-execute if entity @s[tag=subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,scores={sprite=..-1}] add check
-execute if entity @s[tag=!subject_all,tag=!subject_group] run scoreboard players operation @e[type=#baba:object,tag=baba.object,tag=assign] sprite += @s sprite
-execute if entity @s[tag=!subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,tag=check] add check
-execute if entity @s[tag=subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=!not_all,tag=assign,tag=check] add check
+execute if entity @s[tag=!subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,predicate=baba:same_sprite] add check
+execute if entity @s[tag=subject_inverted,tag=!subject_all,tag=!subject_group] run tag @e[type=#baba:object,tag=baba.object,tag=assign,predicate=!baba:same_sprite] add check
 
 execute as @e[type=#baba:object,tag=baba.object,tag=assign,tag=check] at @s run function baba:board/rules/apply/check

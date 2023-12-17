@@ -1,0 +1,24 @@
+{
+   "condition": "minecraft:entity_scores",
+   "entity": "this",
+   "scores": {
+      "life": {
+         "min": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "life"
+            },
+            "score": "baba"
+         },
+         "max": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "life"
+            },
+            "score": "baba"
+         }
+      }
+   }
+}
