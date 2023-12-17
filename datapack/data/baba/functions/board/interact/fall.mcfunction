@@ -1,5 +1,5 @@
 tag @s add falling
-scoreboard players operation float baba = @s float_level
+scoreboard players operation float_level baba = @s float_level
 scoreboard players set open baba 0
 scoreboard players set shut baba 0
 execute if entity @s[tag=prop.open] run scoreboard players set open baba 1

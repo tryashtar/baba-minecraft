@@ -189,7 +189,7 @@ def generate_spawn_functions(source):
   objectlist = source.objects.values()
   for obj in objectlist:
     if obj.name == 'text':
-      spawn.insert(0, f'execute if score spawn baba matches {obj.id} run function baba:board/spawn_text')
+      spawn.insert(0, f'execute if score sprite baba matches {obj.id} run function baba:board/spawn_text')
       for spr in obj.sprites:
         if text_prop not in spr.properties:
           continue
@@ -198,20 +198,20 @@ def generate_spawn_functions(source):
         spr_text = spr.properties[text_prop]
         props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))
         summon = ops.create_summon(props, [f'text:"{spr_text}"'])
-        conditions = f'if score spawn_text baba matches {ops.id_hash(spr_text)}'
+        conditions = f'if score text baba matches {ops.id_hash(spr_text)}'
         spawntext.append(f'execute {conditions} run {summon}')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
       for spr,props in variables.items():
         if sprite_prop in props:
           del props[sprite_prop]
-        conditions = f'if score spawn baba matches {obj.id}'
+        conditions = f'if score sprite baba matches {obj.id}'
         spr_text = spr.properties[sprite_prop]
         summon = ops.create_summon(props, [f'text:"{spr_text}"'])
         spawn.append(f'execute {conditions} run {summon}')
   newspawn = '@e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1]'
-  spawn.append(f'scoreboard players operation {newspawn} sprite = spawn baba')
-  spawntext.append(f'scoreboard players operation {newspawn} text = spawn_text baba')
+  spawn.append(f'scoreboard players operation {newspawn} sprite = sprite baba')
+  spawntext.append(f'scoreboard players operation {newspawn} text = text baba')
   spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
   spawntext.append(f'scoreboard players add {newspawn} text_id 1')
   for prop in source.properties.values():
@@ -225,8 +225,8 @@ def generate_spawn_functions(source):
   spawn.extend([
     f'data remove entity {newspawn} item.tag.scores',
     'scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] appearance = @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] sprite',
-    'execute unless score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0}] if score @s sprite = spawn baba run function baba:board/spawn_convert',
-    'execute if score spawn baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973}] if score @s text = spawn_text baba run function baba:board/spawn_convert',
+    'execute unless score sprite baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert',
+    'execute if score sprite baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert',
   ])
   tat.write_lines(spawn, 'datapack/data/baba/functions/board/spawn.mcfunction')
   tat.write_lines(spawntext, 'datapack/data/baba/functions/board/spawn_text.mcfunction')
