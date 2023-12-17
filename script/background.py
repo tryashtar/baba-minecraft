@@ -43,9 +43,11 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
         tat.write_json(model, os.path.join(model_folder, f'{bg}/{x}.{y}.json'))
         shroom_id += 1
     tat.write_lines(place, os.path.join(background_load, f'{bg}.mcfunction'))
-  for j,t in enumerate(['floor','wall']):
-    background = []
-    for i,(n,p) in enumerate(palettes.items()):
+  data = []
+  palette_data = []
+  for n,p in palettes.items():
+    stuff = []
+    for j,t in enumerate(['floor','wall']):
       color = p[['#080808','#15181f'][j]]
       texture = PIL.Image.new('RGB', (1,1), PIL.ImageColor.getrgb(color))
       texture.save(os.path.join(texture_folder, f'{n}_{t}.png'))
@@ -56,9 +58,13 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
         blockstates[block] = {}
       terra_id += 1
       blockstates[block][state] = {"model":f"{namespace}:background/{n}_{t}","y":90}
-      background.append(f'execute if score palette baba matches {i} run setblock ~ ~-1 ~ {block}[{state}]')
-    if t == 'floor':
-      background.append('execute if score level_background baba matches 1.. run setblock ~ ~-1 ~ barrier')
-    tat.write_lines(background, os.path.join(background_load, f'{t}.mcfunction'))
+      stuff.append(f'{t}:"{block}[{state}]"')
+    colors = []
+    for oldcol,tocol in p.items():
+      colors.append(f'"{int(oldcol[1:],16)}":{int(tocol[1:],16)}')
+    stuff.append(f'colors:{{{",".join(colors)}}}')
+    palette_data.append(f'{n}:{{{",".join(stuff)}}}')
+  data.append(f'data modify storage baba:main data.palettes set value {{{",".join(palette_data)}}}')
+  tat.write_lines(data, os.path.join(data_pack, 'data/baba/functions/meta/data.mcfunction'))
   for k,v in blockstates.items():
     tat.write_json({"variants":v}, os.path.join(resource_pack, f'assets/minecraft/blockstates/{k}.json'))

@@ -77,7 +77,8 @@ def generate_particles(particles):
       else:
         init_lines.extend([
           f'scoreboard players set color baba {int(color[1:],16)}',
-          'execute if score palette baba matches 1.. run function baba:display/palette',
+          'execute store result storage baba:main context.color int 1 run scoreboard players get color baba',
+          'function baba:display/palette with storage baba:main context',
           'execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba'
         ])
     init_lines.extend([
@@ -312,29 +313,11 @@ def generate_update_function(source, rsources):
     'execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color',
     f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
     f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
-    'execute if score palette baba matches 1.. run function baba:display/palette'
+    'execute store result storage baba:main context.color int 1 run scoreboard players get color baba',
+    'function baba:display/palette with storage baba:main context'
   ])
-  tat.delete_folder('datapack/data/baba/functions/display/palette')
-  pal_fn = []
-  for pid,(pname,palette) in enumerate(source.palettes.items()):
-    if pid == 0:
-      continue
-    pal_fn.append(f'execute if score palette baba matches {pid} run function baba:display/palette/{pname}')
-    function = []
-    conflict = False
-    for color1,color2 in palette.items():
-      if color1!=color2:
-        set_col = int(color2[1:],16)
-        if color2 in palette and palette[color2] != color2:
-          set_col *= -1
-          conflict = True
-        function.append(f'execute if score color baba matches {int(color1[1:],16)} run scoreboard players set color baba {set_col}')
-    if conflict:
-      function.append('execute if score color baba matches ..-1 run scoreboard players operation color baba *= #-1 baba')
-    tat.write_lines(function, f'datapack/data/baba/functions/display/palette/{pname}.mcfunction')
   update_obj.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba')
   tat.write_lines(update_obj, 'datapack/data/baba/functions/display/object.mcfunction')
-  tat.write_lines(pal_fn, 'datapack/data/baba/functions/display/palette.mcfunction')
 
 
 if __name__ == '__main__':

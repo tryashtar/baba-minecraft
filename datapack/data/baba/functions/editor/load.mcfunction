@@ -10,9 +10,15 @@ data modify storage baba:main rule_history set value []
 execute store result score level_height baba run data get storage baba:main level.tiles
 execute store result score level_width baba run data get storage baba:main level.tiles[0]
 execute store result score level_background baba run data get storage baba:main level.metadata.background
-execute store result score palette baba run data get storage baba:main level.metadata.palette
-scoreboard players set row baba 0
+data modify storage baba:main context.palette set from storage baba:main level.metadata.palette
 execute if data storage baba:main level.tiles[0] run function baba:editor/load/row
+execute store result storage baba:main context.wallx int 1 run scoreboard players get level_height baba
+execute store result storage baba:main context.floorx int 1 run scoreboard players remove level_height baba 1
+scoreboard players add level_height baba 1
+execute store result storage baba:main context.wallz int 1 run scoreboard players get level_width baba
+execute store result storage baba:main context.floorz int 1 run scoreboard players remove level_width baba 1
+scoreboard players add level_width baba 1
+function baba:editor/load/background with storage baba:main context
 execute if score level_background baba matches 1 run function baba:editor/load/background/island
 execute if score level_background baba matches 2 run function baba:editor/load/background/flower
 summon text_display 0 1 0 {Tags:["baba.text"],Rotation:[90f,-90f],alignment:"left",background:0,transformation:{scale:[4f,4f,4f],translation:[18.9f,-1f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}

@@ -31,7 +31,7 @@ def main():
          'data modify storage baba:main level_list set value []',
          'data modify storage baba:main moves_list set value []',
       ]
-      for level_file in tat.get_files(os.path.join(baba_folder, pack)):
+      for level_file in sorted(tat.get_files(os.path.join(baba_folder, pack))):
          if tat.extension(level_file) != '.ld':
             continue
          with open(level_file, 'r', encoding='utf-8') as ld, open(os.path.splitext(level_file)[0] + '.l', 'rb') as l:
@@ -163,9 +163,9 @@ class LevelGrid:
       nbt = []
       metadata = [f'name:\'"{fixed_name}"\'']
       palette = self.config['general']['palette'][:-4]
-      for i,p in enumerate(source.palettes):
-         if p == palette and palette != 0:
-            metadata.append(f'palette:{i}')
+      if palette not in source.palettes:
+         print(f'\tUnknown palette: {palette}')
+      metadata.append(f'palette:"{palette}"')
       tiles_text = []
       text_prop = source.properties['text']
       for row in reversed(self.cells[1:-1]):

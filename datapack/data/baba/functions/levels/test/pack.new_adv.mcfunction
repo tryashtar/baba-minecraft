@@ -18,6 +18,9 @@ data modify storage baba:main moves_list append value [4,4,1,4,1,1,3,2,1,3,2,1,3
 function baba:levels/load/new_adv/test_chamber
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,1,1,4,4,4,4,4,4,4,4,4,4,4,1,1,4,1,3,3,3,3,3,3,4,4,4,4,2,2,2,2,3,2,4,2,4,1,1,2,4,1,1,1,1,1,1,1,4,4,4,2,4,4,1,3,3,3,3,3,4,1,3,3,3,3,3,3,4,4,4,4,2,2,2,3,2,2,4,3,1,4,4,2,1,1,4,2,2,4,4,4,4,4,4,1,1,1,1,1]
+function baba:levels/load/new_adv/former_glory
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [1,1,4,4,4,4,4,4,4,4,1,4,2,1,4,2,3,3,2,4,1,1,4,4,2,3,3,2,4,3,3,3,3,3,3,2,2,4,4]
 function baba:levels/load/new_adv/bare
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [3,3,1,1,4,4,4,2,4,1,1,1,2,2,2,4,1,1,1,2,2,4,2,4,1,1,1,4,1,3,3,2,3,3,3,1,2,4,1]
@@ -51,24 +54,6 @@ data modify storage baba:main moves_list append value [3,3,2,2,2,2,4,1,1,1,1,1,1
 function baba:levels/load/new_adv/pushing_uphill
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,1,4,4,0,2,4,1,1,2,4,1,3,1,3,1,4,1,4,2,0,0,0,0,1,1,3,3,3,2,2,2,2,2]
-function baba:levels/load/new_adv/former_glory
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [1,1,4,4,4,4,4,4,4,4,1,4,2,1,4,2,3,3,2,4,1,1,4,4,2,3,3,2,4,3,3,3,3,3,3,2,2,4,4]
-function baba:levels/load/new_adv/presenting_credentials
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [2,2,2,2,2,1,3,3,2,4,2,4,1,1,1,1,4,2,2,2,0,3,1,3,2,1,2,2,2,2,3,3,2,4,1,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,4,4,4,2,3,3,3,3]
-function baba:levels/load/new_adv/new_friends
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [1,4,4,4,4,4,1,1,1,4,2,2,4,4,4,1,3,3,3,1,3,2,2,4,4,2,3,3,3,3,3,2,3,1,3,4,1,4,1,3,3,3,3,2,2,4,4,4,4,4,4,1,4,4,4,4,4,2,3,2,4,4,4,4,1,1,4,4,2,3,1,3,2,4,4,2,3,3,3,3,2,3,1,4,1,3,2,2,3,1,4,4,4,4,2,2,4,1,4,1,3,3,3,3,3,2,3,1,1,4,4,2,2,4,4,4,4,4,2,2,4,1,3,4,3,3,3,3,2,4,4,1,4,4,1,3,4,4,4,4,4,4,4,1,1,4,2,4,2,3,3,3,3,3,3,3,3,1,1,3,3,3,3,3,3,2,3,3,3,3,1,4,4,4,4,4,4,4,4,1,4,2,2,2,2,1,1,4]
-function baba:levels/load/new_adv/clear_vision
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [1,1,1,4,4,2,2,2,2,4,1,1,3,1,4,4,1,1,1,1,4,1,3,3,2,3,1,3,1,4,4,4,4,1,1,3,2,3,2,4,4,4,4,4,4,4,4,4,4,4,4,2,4,1,3,1,4,4,1,4,2,3,1,1,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4,4,4,4,1,4,2,2,2,2,2,2,4,4,4,1,3,3,1,4,1,3,1,3,2,2,2,2,2,2,1,1,1,1,1,4,4]
-function baba:levels/load/new_adv/gravity_chamber
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [4,2,2,3,2,3,1,3,1,4,2]
-function baba:levels/load/new_adv/happy_dance
-data modify storage baba:main level_list append from storage baba:main level
-data modify storage baba:main moves_list append value [1,1,1,3,2,2,2,2,2,1,3,2,4,2,2,4,4,4,4,1,4,4,3,3,1,1,1,1,1,4,1,1,4,2,2,2,2,2,2,0,0,0,0,1,1]
 function baba:levels/load/new_adv/whats_thatq
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [2,2,2,4,2,2,2,2,2,2,4,1,1,3,1,4,4,4,4,4,4,4,4,4,3,3,3,1,1,1,3,3,3,1,4,4,4,4,4,4,4,1,1]
@@ -90,6 +75,9 @@ data modify storage baba:main moves_list append value [2,2,2,2,2,4,4,4,4,4,4,4,4
 function baba:levels/load/new_adv/tapestries
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,2,2,2,2,3,3,3,3,1,3,3,2,1,3,2,2,2,4,4,1,3,4,4,1,3,3,1,3,2,2,2,4,4,2,2,2,3,3,3,3,3,3,3,3,3,3,1,1,1,4,4,2,1,1,1,1,1,1,1,1,1,4,4,4,2,2,2,2,2,2,2,2,2,4,2,3,3,3,3,3,3,3,3,3,3]
+function baba:levels/load/new_adv/presenting_credentials
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [2,2,2,2,2,1,3,3,2,4,2,4,1,1,1,1,4,2,2,2,0,3,1,3,2,1,2,2,2,2,3,3,2,4,1,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,4,4,4,4,4,4,2,3,3,3,3]
 function baba:levels/load/new_adv/aaaa
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [2,4,4,4,4,4,2,2,4,2,2,2,3,1,1,1,1,1,1,1,1,3,1,1,1,4,1,4,2,2,2,4,2,3]
@@ -117,6 +105,9 @@ data modify storage baba:main moves_list append value [1,1,4,1,1,4,1,1,1,3,1,1,1
 function baba:levels/load/new_adv/musical_interlude
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [3,3,3,3,3,3,3,3,2,2]
+function baba:levels/load/new_adv/new_friends
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [1,4,4,4,4,4,1,1,1,4,2,2,4,4,4,1,3,3,3,1,3,2,2,4,4,2,3,3,3,3,3,2,3,1,3,4,1,4,1,3,3,3,3,2,2,4,4,4,4,4,4,1,4,4,4,4,4,2,3,2,4,4,4,4,1,1,4,4,2,3,1,3,2,4,4,2,3,3,3,3,2,3,1,4,1,3,2,2,3,1,4,4,4,4,2,2,4,1,4,1,3,3,3,3,3,2,3,1,1,4,4,2,2,4,4,4,4,4,2,2,4,1,3,4,3,3,3,3,2,4,4,1,4,4,1,3,4,4,4,4,4,4,4,1,1,4,2,4,2,3,3,3,3,3,3,3,3,1,1,3,3,3,3,3,3,2,3,3,3,3,1,4,4,4,4,4,4,4,4,1,4,2,2,2,2,1,1,4]
 function baba:levels/load/new_adv/private_club
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [3,3,1,1,4,4,4,4,4,1,1,4,4,1,4,4,2,4,2,3,2,2,2,2,2,2,2,2,4,4,4,4,4,1,1,1,1,1,1,1,1,1,1,2,2,3,1,1]
@@ -150,6 +141,9 @@ data modify storage baba:main moves_list append value [3,3,3,3,3,3,3,2,2,2,4,4,4
 function baba:levels/load/new_adv/demolitionwork
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,4,4,4,1,1,4,2,2,2,2,4,2,3,3,4,4,2,3,3,3,3,4,1,4,1,1,3,3,3,3,2,3,1,1,1,1,4,4,4,2,2,2,4,1,1,1,1,3,3,2,2,2,2,4,4,2,2,3,1,1,1,1,1,1,4,4,1,3,3,3,3,3,3,3,2,3,3,3,1,1,3,1,1,4,1,4,3,3,2,2,2,4,1,1,2,4,1,4]
+function baba:levels/load/new_adv/clear_vision
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [1,1,1,4,4,2,2,2,2,4,1,1,3,1,4,4,1,1,1,1,4,1,3,3,2,3,1,3,1,4,4,4,4,1,1,3,2,3,2,4,4,4,4,4,4,4,4,4,4,4,4,2,4,1,3,1,4,4,1,4,2,3,1,1,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4,4,4,4,1,4,2,2,2,2,2,2,4,4,4,1,3,3,1,4,1,3,1,3,2,2,2,2,2,2,1,1,1,1,1,4,4]
 function baba:levels/load/new_adv/seeing_double
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [2,4,4,3,3,2,4,2,3,2,3,1,1,1,1,1,1,2,2,2,4,4,4,2,4,3,3,2,4,4,4,1,1,1,1,2,2,2,2,2,4,1,1,1,1,4,1,1,3,3,1,1,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,1,1,1]
@@ -228,6 +222,9 @@ data modify storage baba:main moves_list append value [4,4,4,1,1,1,1,1,4,2,1,4,2
 function baba:levels/load/new_adv/exactly_as_it_says
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [2,4,4,1,1,1,1,1,3,1,4,4,4,4,4,4,4,4,4,2,3,3,2,1,3,3,3,3,3,2,3,2,2,2,2,2]
+function baba:levels/load/new_adv/gravity_chamber
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,2,2,3,2,3,1,3,1,4,2]
 function baba:levels/load/new_adv/skull_pile
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [3,1,1,1,4,4,4,4,4,4,3,3,3,3,3,3,3,2,4,4,4,4,4,4,2,4,1,3,1,1,1,1,3,2,3,3,3,3,3,2,4,4,4,4,4,4,4,1,4,4,2,2,4,2,2,2,3,1,3,1,4,3,3,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -294,6 +291,9 @@ data modify storage baba:main moves_list append value [2,2,2,4,4,4,1,4,4,4,2,1,1
 function baba:levels/load/new_adv/treasure_chest
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [4,4,1,4,2,2,1,1,4,4,4,4,2,4,4,4,2,4,1,1,1,2,4,1,4,1,3,3,3,3,4,4,2,3,3,3,4,4,4,4,4,2,2,3,3,3,3,3,2,3,1,3,3,2,4,2,3,3,3,3,3,2,3,2,3,1,3,1,1,4,2,2,1,1,4,2,2,4,4,4,4,2,2,3,3,2,2,2,4,1,3,1,1,4,3,2,2,4,1,4,1,1,1,4,1,3,3,3,3,3,3,3,3,3,1,3,2,2,4,4,4,4,4,4,4,4,4,2,2,2,3,3,1,4,2,4,1,1,1,3,1,4,4,4,4,2,4,2,2,1,1,1,1,1,3,1,1,4,2,3,4,4,4,4,1,4,2,2,2,2,2,1,1,1,1,1,1,3,3,3,3]
+function baba:levels/load/new_adv/happy_dance
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [1,1,1,3,2,2,2,2,2,1,3,2,4,2,2,4,4,4,4,1,4,4,3,3,1,1,1,1,1,4,1,1,4,2,2,2,2,2,2,0,0,0,0,1,1]
 function baba:levels/load/new_adv/silly_trick
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,4,4,4,4,4,4,1,2,2,3,3,3,3,1,1,1,1,3,1,4,4,4,4,1,4,2,2,4,1,1,3,2,2,4,3,0,1,3,2,3,2,3,2,4,4,4,4,4,3,3,3,1,3,1,4,4,4,4,4,3,3,3,2,2,3,2,4,4,4,4,1,2,2,4,1,4,1,1,2,2,3,1,3,1,3,3,3,3,3,3,3,1,1,1,4,1,1,3,2,2,4,4,4,4]

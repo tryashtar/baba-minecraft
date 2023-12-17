@@ -1,0 +1,12 @@
+{
+   "variants": {
+      "facing=north": {
+         "model": "baba:background/swamp_floor",
+         "y": 90
+      },
+      "facing=east": {
+         "model": "baba:background/variant_floor",
+         "y": 90
+      }
+   }
+}

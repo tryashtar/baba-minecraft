@@ -1,0 +1,12 @@
+{
+   "variants": {
+      "facing=south": {
+         "model": "baba:background/garden_wall",
+         "y": 90
+      },
+      "facing=west": {
+         "model": "baba:background/mono_wall",
+         "y": 90
+      }
+   }
+}

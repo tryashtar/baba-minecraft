@@ -79,5 +79,6 @@ scoreboard players operation color baba = @s color
 execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color
 execute if entity @s[tag=prop.red] run scoreboard players set color baba 15029051
 execute if entity @s[tag=prop.blue] run scoreboard players set color baba 5602016
-execute if score palette baba matches 1.. run function baba:display/palette
+execute store result storage baba:main context.color int 1 run scoreboard players get color baba
+function baba:display/palette with storage baba:main context
 execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba
