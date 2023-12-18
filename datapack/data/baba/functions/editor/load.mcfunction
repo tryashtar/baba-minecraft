@@ -12,12 +12,8 @@ execute store result score level_width baba run data get storage baba:main level
 execute store result score level_background baba run data get storage baba:main level.metadata.background
 data modify storage baba:main context.palette set from storage baba:main level.metadata.palette
 execute if data storage baba:main level.tiles[0] run function baba:editor/load/row
-execute store result storage baba:main context.wallx int 1 run scoreboard players get level_height baba
-execute store result storage baba:main context.floorx int 1 run scoreboard players remove level_height baba 1
-scoreboard players add level_height baba 1
-execute store result storage baba:main context.wallz int 1 run scoreboard players get level_width baba
-execute store result storage baba:main context.floorz int 1 run scoreboard players remove level_width baba 1
-scoreboard players add level_width baba 1
+execute store result storage baba:main context.level_height int 1 run scoreboard players get level_height baba
+execute store result storage baba:main context.level_width int 1 run scoreboard players get level_width baba
 function baba:editor/load/background with storage baba:main context
 execute if score level_background baba matches 1 run function baba:editor/load/background/island
 execute if score level_background baba matches 2 run function baba:editor/load/background/flower

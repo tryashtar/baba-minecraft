@@ -21,7 +21,7 @@ def terracotta_state(val, half):
   val = val // len(blocks)
   return (block, state)
 
-def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
+def generate(palettes, backgrounds, data_pack, resource_pack, namespace, data):
   texture_folder = os.path.join(resource_pack, 'assets', namespace, 'textures/background')
   model_folder = os.path.join(resource_pack, 'assets', namespace, 'models/background')
   background_load = os.path.join(data_pack, 'data', namespace, 'functions/editor/load/background')
@@ -43,7 +43,6 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
         tat.write_json(model, os.path.join(model_folder, f'{bg}/{x}.{y}.json'))
         shroom_id += 1
     tat.write_lines(place, os.path.join(background_load, f'{bg}.mcfunction'))
-  data = []
   palette_data = []
   for n,p in palettes.items():
     stuff = []
@@ -65,6 +64,5 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace):
     stuff.append(f'colors:{{{",".join(colors)}}}')
     palette_data.append(f'{n}:{{{",".join(stuff)}}}')
   data.append(f'data modify storage baba:main data.palettes set value {{{",".join(palette_data)}}}')
-  tat.write_lines(data, os.path.join(data_pack, 'data/baba/functions/meta/data.mcfunction'))
   for k,v in blockstates.items():
     tat.write_json({"variants":v}, os.path.join(resource_pack, f'assets/minecraft/blockstates/{k}.json'))

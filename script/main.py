@@ -14,7 +14,8 @@ def main():
   sprite_resources = resources.create_sprite_resources(source, 'resourcepack', 'baba')
   editor_resources = resources.create_editor_resources(source, 'resourcepack', 'baba')
   blockstates = editor.create_blockstates(editor_resources, 'resourcepack')
-  background.generate(source.palettes, ['island', 'flower'], 'datapack', 'resourcepack', 'baba')
+  data = []
+  background.generate(source.palettes, ['island', 'flower'], 'datapack', 'resourcepack', 'baba', data)
   generate_reference_ids(source)
   generate_wiggle_fonts(source, sprite_resources)
   generate_spawn_functions(source)
@@ -23,6 +24,7 @@ def main():
   generate_packing_functions(source, blockstates)
   generate_particles(sprite_data['particles'])
   generate_make_palette(source)
+  tat.write_lines(data, os.path.join('datapack/data/baba/functions/meta/data.mcfunction'))
 
 def generate_make_palette(source):
   fn = [
@@ -185,52 +187,53 @@ def generate_spawn_functions(source):
   text_prop = source.properties['text']
   sprite_prop = source.properties['sprite']
   part_prop = source.properties['part']
-  spawn = []
-  spawntext = []
+  tat.delete_folder('datapack/data/baba/functions/board/spawn')
   objectlist = source.objects.values()
   for obj in objectlist:
     if obj.name == 'text':
-      spawn.insert(0, f'execute if score sprite baba matches {obj.id} run function baba:board/spawn_text')
       for spr in obj.sprites:
         if text_prop not in spr.properties:
           continue
         if part_prop in spr.properties and spr.properties[part_prop] not in ('noun','property'):
           continue
+        lines = []
+        scores = []
         spr_text = spr.properties[text_prop]
-        props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes and x.name not in ('text','sprite'))
-        summon = ops.create_summon(props, [f'text:"{spr_text}"'])
-        conditions = f'if score text baba matches {ops.id_hash(spr_text)}'
-        spawntext.append(f'execute {conditions} run {summon}')
+        props = ops.filter_properties(spr.properties, lambda x: 'spawn' in x.attributes)
+        props[source.properties['appearance']] = props[source.properties['sprite']]
+        for prop,val in list(props.items()):
+          if prop.kind == 'score':
+            del props[prop]
+            scores.append((prop,val))
+        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        lines.append(f'data merge entity @s {summon}')
+        for (score,val) in sorted(scores, key=lambda x: x[0].name):
+          lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
+        lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
+        lines.append('scoreboard players add @s text_id 1')
+        lines.append('scoreboard players set @s facing 4')
+        lines.append('scoreboard players set @s walk 0')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert')
+        tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
       for spr,props in variables.items():
-        if sprite_prop in props:
-          del props[sprite_prop]
-        conditions = f'if score sprite baba matches {obj.id}'
+        lines = []
+        scores = []
+        props[source.properties['appearance']] = props[source.properties['sprite']]
+        for prop,val in list(props.items()):
+          if prop.kind == 'score':
+            del props[prop]
+            scores.append((prop,val))
         spr_text = spr.properties[sprite_prop]
-        summon = ops.create_summon(props, [f'text:"{spr_text}"'])
-        spawn.append(f'execute {conditions} run {summon}')
-  newspawn = '@e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1]'
-  spawn.append(f'scoreboard players operation {newspawn} sprite = sprite baba')
-  spawntext.append(f'scoreboard players operation {newspawn} text = text baba')
-  spawntext.append(f'scoreboard players operation {newspawn} text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
-  spawntext.append(f'scoreboard players add {newspawn} text_id 1')
-  for prop in source.properties.values():
-    if 'spawn' in prop.attributes and prop.kind == 'score' and prop.name not in ('sprite','text','appearance'):
-      spawn.append(f'execute as {newspawn} store result score @s {prop.name} run data get entity @s item.tag.scores.{prop.name}')
-    if 'all' in prop.attributes and 'spawn' not in prop.attributes:
-      if prop.kind == 'score':
-        spawn.append(f'scoreboard players set {newspawn} {prop.name} {prop.convert(prop.default)}')
-      else:
-        raise ValueError(prop.name)
-  spawn.extend([
-    f'data remove entity {newspawn} item.tag.scores',
-    'scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] appearance = @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] sprite',
-    'execute unless score sprite baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert',
-    'execute if score sprite baba matches 397973 as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert',
-  ])
-  tat.write_lines(spawn, 'datapack/data/baba/functions/board/spawn.mcfunction')
-  tat.write_lines(spawntext, 'datapack/data/baba/functions/board/spawn_text.mcfunction')
+        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        lines.append(f'data merge entity @s {summon}')
+        for (score,val) in sorted(scores, key=lambda x: x[0].name):
+          lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
+        lines.append('scoreboard players set @s facing 4')
+        lines.append('scoreboard players set @s walk 0')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert')
+        tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):
   text_map = []
