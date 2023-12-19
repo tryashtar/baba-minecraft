@@ -1,0 +1,16 @@
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 458
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=right] run return run data modify storage baba:main model set value 459
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 460
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=right] run return run data modify storage baba:main model set value 461
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=!right] run return run data modify storage baba:main model set value 462
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=right] run return run data modify storage baba:main model set value 463
+execute if entity @s[tag=up,tag=!down,tag=left,tag=!right] run return run data modify storage baba:main model set value 464
+execute if entity @s[tag=up,tag=!down,tag=left,tag=right] run return run data modify storage baba:main model set value 465
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 466
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=right] run return run data modify storage baba:main model set value 467
+execute if entity @s[tag=up,tag=down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 468
+execute if entity @s[tag=up,tag=down,tag=!left,tag=right] run return run data modify storage baba:main model set value 469
+execute if entity @s[tag=!up,tag=down,tag=left,tag=!right] run return run data modify storage baba:main model set value 470
+execute if entity @s[tag=!up,tag=down,tag=left,tag=right] run return run data modify storage baba:main model set value 471
+execute if entity @s[tag=up,tag=down,tag=left,tag=!right] run return run data modify storage baba:main model set value 472
+execute if entity @s[tag=up,tag=down,tag=left,tag=right] run return run data modify storage baba:main model set value 473

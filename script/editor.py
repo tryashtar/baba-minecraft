@@ -6,19 +6,19 @@ def block_state(val):
   result = {}
   if val < 256:
     for i in range(6):
-      result[f'slot_{i}_occupied'] = val % 2 == 1
+      result[f'slot_{i}_occupied'] = str(val % 2 == 1).lower()
       val //= 2
-    dir = ['north','south','east','west']
-    result['facing'] = dir[val%len(dir)]
-    val //= len(dir)
+    dirs = ['north','south','east','west']
+    result['facing'] = dirs[val%len(dirs)]
+    val //= len(dirs)
     return ('chiseled_bookshelf', result)
   val -= 256
   honey = [0, 1, 2, 3, 4, 5]
-  dir = ['north','south','east','west']
-  result['honey_level'] = honey[val%len(honey)]
+  dirs = ['north','south','east','west']
+  result['honey_level'] = str(honey[val%len(honey)])
   val //= len(honey)
-  result['facing'] = dir[val%len(dir)]
-  val //= len(dir)
+  result['facing'] = dirs[val%len(dirs)]
+  val //= len(dirs)
   if val == 0:
     return ('beehive', result)
   elif val == 1:

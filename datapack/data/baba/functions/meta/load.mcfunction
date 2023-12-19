@@ -27,4 +27,4 @@ scoreboard objectives add drop dropped:diamond
 scoreboard objectives add use used:carrot_on_a_stick
 scoreboard players set #-1 baba -1
 scoreboard players set #10 baba 10
-scoreboard players set #27 baba 27
+function baba:meta/data

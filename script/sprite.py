@@ -1,4 +1,3 @@
-import tryashtools as tat
 import PIL.Image
 import PIL.ImageColor
 import itertools
@@ -166,7 +165,7 @@ class BabaObject:
     sprites = {}
     for s in self.sprites:
       props = ops.filter_properties(s.properties, check)
-      if not any(map(lambda x: x == props, sprites.values())):
+      if not any(map(lambda x,props=props: x == props, sprites.values())):
         sprites[s] = props
     return sprites
 

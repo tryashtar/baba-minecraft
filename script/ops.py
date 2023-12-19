@@ -1,5 +1,3 @@
-import hashlib
-
 def filter_properties(properties, check):
   props = properties.copy()
   for p in properties:
@@ -37,11 +35,11 @@ def create_selector(properties, extra_scores=None):
     result.append('nbt=!{item:{tag:{properties:['+f+']}}}')
   return ','.join(result)
 
-def create_summon(properties, extra_data=None):
+def create_data(properties, extra_data=None):
   tags = ['baba.object','spawn','assign','dirty']
   data = []
   scores = []
-  nbt = ['width:1f','height:0.1f','item_display:"fixed"']
+  nbt = ['teleport_duration:3','width:1f','height:0.1f','item_display:"fixed"']
   for m,val in properties.items():
     if m.kind == 'tag' and val != False:
       tags.append(m.convert(val))
@@ -56,7 +54,7 @@ def create_summon(properties, extra_data=None):
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
   nbt.append('item:{id:"minecraft:potion",Count:1b,tag:{' + ','.join(data) + '}}')
-  return f'summon item_display ~ ~ ~ {{{",".join(nbt)}}}'
+  return f'{{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):
   tags = []

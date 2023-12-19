@@ -21,30 +21,11 @@ execute if score word baba matches 10631 if data storage baba:main words{not:[10
 execute if score word baba matches 1111 if data storage baba:main words{and:[1111]} run function baba:board/rules/parse/part/and
 
 # other parts of speech have many words, so see if the current word ID is present in their palette
-data modify storage baba:main check_words set from storage baba:main words
-execute store result score nouns baba run data get storage baba:main check_words.noun
-execute store result score changed baba run data modify storage baba:main check_words.noun[] set from storage baba:main parsing.word
-execute if score nouns baba > changed baba run function baba:board/rules/parse/part/noun
-
-data modify storage baba:main check_words set from storage baba:main words
-execute store result score verbs baba run data get storage baba:main check_words.verb
-execute store result score changed baba run data modify storage baba:main check_words.verb[] set from storage baba:main parsing.word
-execute if score verbs baba > changed baba run function baba:board/rules/parse/part/verb
-
-data modify storage baba:main check_words set from storage baba:main words
-execute store result score props baba run data get storage baba:main check_words.property
-execute store result score changed baba run data modify storage baba:main check_words.property[] set from storage baba:main parsing.word
-execute if score props baba > changed baba run function baba:board/rules/parse/part/property
-
-data modify storage baba:main check_words set from storage baba:main words
-execute store result score infix baba run data get storage baba:main check_words.infix
-execute store result score changed baba run data modify storage baba:main check_words.infix[] set from storage baba:main parsing.word
-execute if score infix baba > changed baba run function baba:board/rules/parse/part/infix
-
-data modify storage baba:main check_words set from storage baba:main words
-execute store result score prefix baba run data get storage baba:main check_words.prefix
-execute store result score changed baba run data modify storage baba:main check_words.prefix[] set from storage baba:main parsing.word
-execute if score prefix baba > changed baba run function baba:board/rules/parse/part/prefix
+function baba:board/rules/parse/letter/check_noun with storage baba:main parsing
+function baba:board/rules/parse/letter/check_verb with storage baba:main parsing
+function baba:board/rules/parse/letter/check_property with storage baba:main parsing
+function baba:board/rules/parse/letter/check_infix with storage baba:main parsing
+function baba:board/rules/parse/letter/check_prefix with storage baba:main parsing
 
 execute if score parsed baba matches 1 run data modify storage baba:main parsing.current set value "word"
 execute if score parsed baba matches 1 run scoreboard players set parsed baba 2

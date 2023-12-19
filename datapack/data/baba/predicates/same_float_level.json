@@ -1,0 +1,24 @@
+{
+   "condition": "minecraft:entity_scores",
+   "entity": "this",
+   "scores": {
+      "float_level": {
+         "min": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "float_level"
+            },
+            "score": "baba"
+         },
+         "max": {
+            "type": "minecraft:score",
+            "target": {
+               "type": "minecraft:fixed",
+               "name": "float_level"
+            },
+            "score": "baba"
+         }
+      }
+   }
+}

@@ -11,7 +11,7 @@ execute positioned ^ ^ ^-1 as @e[type=#baba:object,tag=baba.object,tag=prop.pull
 execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 if entity @e[type=#baba:object,tag=baba.object,tag=prop.push,tag=!has_moved,tag=!can_move,tag=!prop.swap,distance=..0.1,limit=1] run tag @s remove can_move
 
 # if any object in front of you is a 'blocker', you can't move
-scoreboard players operation float baba = @s float_level
+scoreboard players operation float_level baba = @s float_level
 execute if entity @s[tag=can_move,tag=!prop.swap] positioned ^ ^ ^1 as @e[type=#baba:object,tag=baba.object,tag=!can_move,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_blocker
 execute if entity @s[tag=can_move,tag=prop.open] positioned ^ ^ ^1 if entity @e[type=#baba:object,tag=baba.object,tag=prop.shut,distance=..0.1,limit=1] unless entity @e[type=#baba:object,tag=baba.object,tag=blocker,tag=!prop.shut,limit=1] run function baba:board/movement/open
 execute if entity @s[tag=can_move,tag=prop.shut] positioned ^ ^ ^1 if entity @e[type=#baba:object,tag=baba.object,tag=prop.open,distance=..0.1,limit=1] unless entity @e[type=#baba:object,tag=baba.object,tag=blocker,tag=!prop.open,limit=1] run function baba:board/movement/open

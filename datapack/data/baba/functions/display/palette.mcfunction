@@ -1,15 +1,1 @@
-execute if score palette baba matches 1 run function baba:display/palette/ocean
-execute if score palette baba matches 2 run function baba:display/palette/factory
-execute if score palette baba matches 3 run function baba:display/palette/ruins
-execute if score palette baba matches 4 run function baba:display/palette/autumn
-execute if score palette baba matches 5 run function baba:display/palette/abstract
-execute if score palette baba matches 6 run function baba:display/palette/garden
-execute if score palette baba matches 7 run function baba:display/palette/mono
-execute if score palette baba matches 8 run function baba:display/palette/space
-execute if score palette baba matches 9 run function baba:display/palette/test
-execute if score palette baba matches 10 run function baba:display/palette/volcano
-execute if score palette baba matches 11 run function baba:display/palette/crystal
-execute if score palette baba matches 12 run function baba:display/palette/marshmallow
-execute if score palette baba matches 13 run function baba:display/palette/mountain
-execute if score palette baba matches 14 run function baba:display/palette/swamp
-execute if score palette baba matches 15 run function baba:display/palette/variant
+$execute if data storage baba:main data.palettes.$(palette).colors."$(color)" store result score color baba run data get storage baba:main data.palettes.$(palette).colors."$(color)"

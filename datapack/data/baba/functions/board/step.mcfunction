@@ -62,10 +62,7 @@ scoreboard players set @e[type=#baba:object,tag=baba.object,tag=prop.up] facing 
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=prop.down] facing 2
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=prop.left] facing 3
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=prop.right] facing 4
-tag @e[type=#baba:object,tag=baba.object,tag=prop.up] add dirty
-tag @e[type=#baba:object,tag=baba.object,tag=prop.down] add dirty
-tag @e[type=#baba:object,tag=baba.object,tag=prop.left] add dirty
-tag @e[type=#baba:object,tag=baba.object,tag=prop.right] add dirty
+tag @e[type=#baba:object,tag=baba.object,tag=prop.dir] add dirty
 
 # assign again if anything is created by 'more', but don't parse text
 execute as @e[type=#baba:object,tag=baba.object,tag=prop.more] at @s run function baba:board/interact/more

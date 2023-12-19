@@ -13,6 +13,7 @@ execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,
 # this doesn't consider rules that change the color of this object
 # ... which is actually correct behavior!
 scoreboard players operation color baba = @s color
-function baba:display/palette
+execute store result storage baba:main context.color int 1 run scoreboard players get color baba
+function baba:display/palette with storage baba:main context
 scoreboard players operation @e[type=item_display,tag=sink_particle,tag=!init,distance=..0.2] color = color baba
 function baba:board/interact/destroy

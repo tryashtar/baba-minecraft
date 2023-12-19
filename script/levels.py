@@ -15,8 +15,8 @@ def main():
    lua = lupa.LuaRuntime()
    with open(os.path.join(baba_folder, 'Data/values.lua'), 'r', encoding='utf-8') as file:
       lua.execute(file.read())
-   vars = lua.globals()
-   table = make_object_table(vars)
+   lua_vars = lua.globals()
+   table = make_object_table(lua_vars)
    tat.delete_folder('datapack/data/baba/functions/levels/load')
    tat.delete_folder('datapack/data/baba/functions/levels/test')
    for pack in tat.get_folders(os.path.join(baba_folder, 'Data/Worlds')):
@@ -31,7 +31,7 @@ def main():
          'data modify storage baba:main level_list set value []',
          'data modify storage baba:main moves_list set value []',
       ]
-      for level_file in tat.get_files(os.path.join(baba_folder, pack)):
+      for level_file in sorted(tat.get_files(os.path.join(baba_folder, pack))):
          if tat.extension(level_file) != '.ld':
             continue
          with open(level_file, 'r', encoding='utf-8') as ld, open(os.path.splitext(level_file)[0] + '.l', 'rb') as l:
@@ -96,15 +96,15 @@ def main():
          ])
          tat.write_lines(test_all, f'datapack/data/baba/functions/levels/test/pack.{pack_name}.mcfunction')
 
-def make_object_table(vars):
+def make_object_table(lua_vars):
    table1 = {}
    table2 = {}
    table3 = {}
-   for obj_name in vars.tileslist:
-      obj = vars.tileslist[obj_name]
-      id = (int(obj.tile[2]) << 8) | int(obj.tile[1])
-      result = {'name':obj.name, 'index':id, 'obj':obj_name}
-      table1[id] = result
+   for obj_name in lua_vars.tileslist:
+      obj = lua_vars.tileslist[obj_name]
+      obj_id = (int(obj.tile[2]) << 8) | int(obj.tile[1])
+      result = {'name':obj.name, 'index':obj_id, 'obj':obj_name}
+      table1[obj_id] = result
       table2[obj_name] = result
       table3[obj.name] = result
    return {'by_index':table1,'by_obj':table2,'by_name':table3}
@@ -117,13 +117,13 @@ class LevelGrid:
       general = level_config['general']
       self.name = general['name']
       self.edits = {}
-      for target,set in level_config['tiles'].items():
+      for target,set_tile in level_config['tiles'].items():
          if target in ('changed','changed2','changed3'):
             continue
          obj,prop = target.split('_')
          if obj not in self.edits:
             self.edits[obj] = {}
-         self.edits[obj][prop] = set
+         self.edits[obj][prop] = set_tile
       level_stream.seek(28, 1)
       layers = int.from_bytes(level_stream.read(2), byteorder="little")
       for _ in range(layers):
@@ -140,12 +140,12 @@ class LevelGrid:
          for i in range(len(map_buffer) // 2):
             x,y = divmod(i, self.width)
             cell = self.cells[x][y]
-            id = int.from_bytes(map_buffer[i * 2 : i * 2 + 2], byteorder="little")
-            object = self.object_table['by_index'].get(id)
-            if object is not None:
-               result = {'name':object['name']}
-               if object['obj'] in self.edits:
-                  result['edits'] = self.edits[object['obj']]
+            obj_id = int.from_bytes(map_buffer[i * 2 : i * 2 + 2], byteorder="little")
+            obj = self.object_table['by_index'].get(obj_id)
+            if obj is not None:
+               result = {'name':obj['name']}
+               if obj['obj'] in self.edits:
+                  result['edits'] = self.edits[obj['obj']]
                cell.append(result)
             else:
                result = None
@@ -163,9 +163,9 @@ class LevelGrid:
       nbt = []
       metadata = [f'name:\'"{fixed_name}"\'']
       palette = self.config['general']['palette'][:-4]
-      for i,p in enumerate(source.palettes):
-         if p == palette and palette != 0:
-            metadata.append(f'palette:{i}')
+      if palette not in source.palettes:
+         print(f'\tUnknown palette: {palette}')
+      metadata.append(f'palette:"{palette}"')
       tiles_text = []
       text_prop = source.properties['text']
       for row in reversed(self.cells[1:-1]):
@@ -193,7 +193,7 @@ class LevelGrid:
                obj = source.objects[name]
                condition = lambda x: True
                if text is not None:
-                  condition = condition and (lambda x: (text_prop in x.properties and x.properties[text_prop] == text))
+                  condition = condition and (lambda x,text=text: (text_prop in x.properties and x.properties[text_prop] == text))
                props = None
                for spr in obj.sprites:
                   if condition(spr):
