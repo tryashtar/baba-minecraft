@@ -261,25 +261,32 @@ def generate_wiggle_fonts(source, rsources):
 
 def generate_update_function(source, rsources):
   tat.delete_folder('datapack/data/baba/functions/display/object')
-  update_obj = [
-    'execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer',
-    'execute at @s run tp @s ~ ~1.001 ~',
-  ]
+  tat.delete_folder('datapack/data/baba/functions/display/text')
+  linecache = {}
+  text_prop = source.properties["text"]
   for obj in list(source.objects.values()) + list(source.alt_images.values()):
     spritelist = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
-    if len(spritelist) == 1:
-      spr,props = spritelist[0]
-      sprite_prop = props[source.properties['sprite']]
-      del props[source.properties['sprite']]
-      props[source.properties['appearance']] = sprite_prop
-      # yes, the "execute if entity" is faster
-      update_obj.append(f'execute if entity @s[{ops.create_selector(props)}] run data modify entity @s item.tag.CustomModelData set value {rsources[spr].custom_model_data}')
-    else:
-      lines = []
+    if obj.name == 'text':
+      lines = [
+        'execute store result storage baba:main context.text int 1 run scoreboard players get @s text',
+        'function baba:display/text.macro with storage baba:main context'
+      ]
       for spr,props in spritelist:
-        lines.append(f'execute if entity @s[{ops.create_selector(ops.filter_properties(props, lambda x: x.name!="sprite"))}] run data modify entity @s item.tag.CustomModelData set value {rsources[spr].custom_model_data}')
-      tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{obj.name}.mcfunction')
-      update_obj.append(f'execute if entity @s[scores={{appearance={ops.id_hash(obj.name)}}}] run function baba:display/object/{obj.name}')
+        textlines = [f'data modify storage baba:main model set value {rsources[spr].custom_model_data}']
+        prop = props[text_prop]
+        tat.write_lines(textlines, f'datapack/data/baba/functions/display/text/{text_prop.convert(prop)}.mcfunction')
+
+    else:
+      if obj.name not in linecache:
+        linecache[obj.name] = []
+      lines = linecache[obj.name]
+      for spr,props in spritelist:
+        selector = ops.create_selector(ops.filter_properties(props, lambda x: x.name!="sprite"))
+        if selector == '':
+          lines.append(f'data modify storage baba:main model set value {rsources[spr].custom_model_data}')
+        else:
+          lines.append(f'execute if entity @s[{selector}] run return run data modify storage baba:main model set value {rsources[spr].custom_model_data}')
+    tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{ops.id_hash(obj.name)}.mcfunction')
   for overlay in source.overlays.values():
     lines = []
     for prop,op in overlay.property_mods.items():
@@ -304,24 +311,6 @@ def generate_update_function(source, rsources):
       lines.append('execute if entity @s[tag=complete] as @e[type=item_display,tag=baba.overlay,distance=..0.001] run data modify entity @s item.tag.CustomPotionColor set value 4676017')
     lines.append('execute as @e[type=item_display,tag=baba.overlay,distance=..0.001] run ride @s mount @e[type=item_display,tag=baba.object,distance=..0.001,limit=1]')
     tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{overlay.name}.mcfunction')
-  for obj in source.objects.values():
-    for overlay in obj.overlays:
-      if obj.name == 'text':
-        update_obj.append(f'execute at @s[tag=is_text,tag=!prop.hide] run function baba:display/object/{overlay}')
-      else:
-        update_obj.append(f'execute at @s[scores={{sprite={ops.id_hash(obj.name)}}},tag=!prop.hide] run function baba:display/object/{overlay}')
-  update_obj.extend([
-    'execute if entity @s[tag=prop.hide] run data modify entity @s item.tag.CustomModelData set value 0',
-    'scoreboard players operation color baba = @s color',
-    'execute if entity @s[scores={sprite=397973,text_used=0}] run scoreboard players operation color baba = @s inactive_color',
-    f'execute if entity @s[tag=prop.red] run scoreboard players set color baba {int("e5533b",16)}',
-    f'execute if entity @s[tag=prop.blue] run scoreboard players set color baba {int("557ae0",16)}',
-    'execute store result storage baba:main context.color int 1 run scoreboard players get color baba',
-    'function baba:display/palette with storage baba:main context'
-  ])
-  update_obj.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba')
-  tat.write_lines(update_obj, 'datapack/data/baba/functions/display/object.mcfunction')
-
 
 if __name__ == '__main__':
   main()
