@@ -23,33 +23,7 @@ def main():
   generate_give_commands(editor_resources, blockstates)
   generate_packing_functions(source, blockstates)
   generate_particles(sprite_data['particles'])
-  generate_make_palette(source)
   tat.write_lines(data, os.path.join('datapack/data/baba/functions/meta/data.mcfunction'))
-
-def generate_make_palette(source):
-  fn = [
-    'data modify storage baba:main all_list set value []',
-    'data modify storage baba:main words set value {noun:[],property:[],verb:[],infix:[],prefix:[],and:[],not:[]}'
-  ]
-  for obj in source.objects.values():
-    if obj.name not in ('text', 'level'):
-      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={obj.id}}},limit=1] run data modify storage baba:main all_list append value {{text:{obj.id},inverted:0b}}')
-      fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={obj.id}}},limit=1] unless data storage baba:main all_list[{{text:{obj.id}}}] run data modify storage baba:main all_list append value {{text:{obj.id},inverted:0b}}')
-  text_prop = source.properties['text']
-  part_prop = source.properties['part']
-  for spr in source.objects['text'].filter_sprites(lambda x: x == text_prop):
-    if text_prop in spr.properties and part_prop in spr.properties:
-      text = spr.properties[text_prop]
-      part = spr.properties[part_prop]
-      if part == 'letter':
-        continue
-      spr_id = ops.id_hash(text)
-      if part == 'noun' and text in source.objects:
-        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{sprite={spr_id}}},limit=1] run data modify storage baba:main words.{part} append value {spr_id}')
-        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={spr_id}}},limit=1] unless data storage baba:main words{{{part}:[{spr_id}]}} run data modify storage baba:main words.{part} append value {spr_id}')
-      else:
-        fn.append(f'execute if entity @e[type=item_display,tag=baba.object,scores={{text={spr_id}}},limit=1] run data modify storage baba:main words.{part} append value {spr_id}')
-  tat.write_lines(fn, 'datapack/data/baba/functions/board/populate_palette.mcfunction')
 
 def generate_particles(particles):
   cmd = 1
@@ -107,7 +81,6 @@ def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
   tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
   pack_lines = []
-  unpack_lines = ['data modify storage baba:main tile set from storage baba:main level.tiles[0][0][0]']
   dir_checks = {}
   for obj in source.objects.values():
     spritelist = list(obj.filter_sprites(lambda x: 'editor' in x.attributes).items())
@@ -131,17 +104,14 @@ def generate_packing_functions(source, blockstates):
         dir_checks[direction] = []
         pack_lines.append(f'execute if block ~ ~ ~ #baba:editor_blocks[facing={direction}] run function baba:editor/pack/block/{direction}')
       del this_state['facing']
-      dir_checks[direction].append(f'execute if block ~ ~ ~ {block}[{ops.state_string(this_state)}] run data modify storage baba:main tile append value {{{set_storage}}}')
+      dir_checks[direction].append(f'execute if block ~ ~ ~ {block}[{ops.state_string(this_state)}] run return run data modify storage baba:main tile append value {{{set_storage}}}')
       if len(spritelist) == 1:
         b,s = blockstates[spritelist[0][0]]
-        unpack_lines.append(f'execute if data storage baba:main {check_sprite} run setblock ~ ~ ~ {b}[{ops.state_string(s)}]')
+        lines.append(f'setblock ~ ~ ~ {b}[{ops.state_string(s)}]')
       else:
-        lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run setblock ~ ~ ~ {block}[{state_str}]',)
-        unpack_line = f'execute if data storage baba:main {check_sprite} run function baba:editor/unpack/block/{obj.name}'
-        if unpack_line not in unpack_lines:
-          unpack_lines.append(unpack_line)
+        lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run return run setblock ~ ~ ~ {block}[{state_str}]')
     if len(lines) > 0:
-      tat.write_lines(lines, f'datapack/data/baba/functions/editor/unpack/block/{obj.name}.mcfunction')
+      tat.write_lines(lines, f'datapack/data/baba/functions/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
     for block_dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/functions/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([
@@ -149,16 +119,7 @@ def generate_packing_functions(source, blockstates):
     'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Bees[0].EntityData.extra',
     'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
-  unpack_lines.extend([
-    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items set value [{id:"book",Count:1b}]',
-    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Bees set value [{EntityData:{}}]',
-    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].tag.extra set from storage baba:main tile.extra',
-    'execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Bees[0].EntityData.extra set from storage baba:main tile.extra',
-    'data remove storage baba:main level.tiles[0][0][0]',
-    'execute if data storage baba:main level.tiles[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block',
-  ])
   tat.write_lines(pack_lines, 'datapack/data/baba/functions/editor/pack/block.mcfunction')
-  tat.write_lines(unpack_lines, 'datapack/data/baba/functions/editor/unpack/block.mcfunction')
 
 def generate_give_commands(rsources, blockstates):
   tat.delete_folder('datapack/data/baba/functions/dev/give')

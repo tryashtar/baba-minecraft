@@ -7,4 +7,3 @@ scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,dist
 tag @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] remove spawn
 data remove storage baba:main spawn[0]
 execute if data storage baba:main spawn[0] run function baba:board/interact/make_loop
-

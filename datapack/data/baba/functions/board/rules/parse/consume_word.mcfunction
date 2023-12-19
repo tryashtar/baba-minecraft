@@ -12,10 +12,10 @@ execute store result storage baba:main parsing.word_ids[0] int 1 run scoreboard 
 # each of these check the parsing context "state" to see if this part of speech is expected
 # if so, it will be parsed and modify the state accordingly
 # if not, parsing will terminate
-execute if entity @s[tag=part.not] run function baba:board/rules/parse/part/not
-execute if entity @s[tag=part.and] run function baba:board/rules/parse/part/and
-execute if entity @s[tag=part.noun] run function baba:board/rules/parse/part/noun
-execute if entity @s[tag=part.verb] run function baba:board/rules/parse/part/verb
-execute if entity @s[tag=part.property] run function baba:board/rules/parse/part/property
-execute if entity @s[tag=part.infix] run function baba:board/rules/parse/part/infix
-execute if entity @s[tag=part.prefix] run function baba:board/rules/parse/part/prefix
+execute if entity @s[tag=part.not] run return run function baba:board/rules/parse/part/not
+execute if entity @s[tag=part.and] run return run function baba:board/rules/parse/part/and
+execute if entity @s[tag=part.noun] run return run function baba:board/rules/parse/part/noun
+execute if entity @s[tag=part.verb] run return run function baba:board/rules/parse/part/verb
+execute if entity @s[tag=part.property] run return run function baba:board/rules/parse/part/property
+execute if entity @s[tag=part.infix] run return run function baba:board/rules/parse/part/infix
+execute if entity @s[tag=part.prefix] run return run function baba:board/rules/parse/part/prefix

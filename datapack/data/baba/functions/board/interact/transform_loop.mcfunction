@@ -10,6 +10,4 @@ scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,dist
 scoreboard players operation @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] frame = @s frame
 tag @e[type=item_display,tag=baba.object,tag=spawn,distance=..0.1,limit=1] remove spawn
 data remove storage baba:main spawn[0]
-# only kill when all transformations are done, because killing removes scores
-execute unless data storage baba:main spawn[0] run function baba:board/interact/remove
 execute if data storage baba:main spawn[0] run function baba:board/interact/transform_loop

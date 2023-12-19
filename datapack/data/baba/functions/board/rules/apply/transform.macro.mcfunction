@@ -1,0 +1,2 @@
+$execute if entity @s[type=item_display] unless data entity @s item.tag.parsing.transforms[{inverted:1b,text:"$(apply)"}] run data modify entity @s item.tag.parsing.transforms append from storage baba:main effect
+$execute if entity @s[type=marker] unless data entity @s data.parsing.transforms[{inverted:1b,text:"$(apply)"}] run data modify entity @s data.parsing.transforms append from storage baba:main effect
