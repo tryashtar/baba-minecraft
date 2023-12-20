@@ -44,5 +44,6 @@ execute as @e[type=item_display,tag=baba.object,scores={sprite=6491892},nbt={ite
 execute as @e[type=#baba:object,tag=baba.object,tag=prop.select] at @s run function baba:progress/show_name
 function baba:board/history/record
 scoreboard players set steps baba 0
+scoreboard players set win baba 0
 
 function baba:display/update
