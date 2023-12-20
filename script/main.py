@@ -147,16 +147,11 @@ def generate_give_commands(rsources, blockstates):
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
   sprite_prop = source.properties['sprite']
-  part_prop = source.properties['part']
   tat.delete_folder('datapack/data/baba/functions/board/spawn')
   objectlist = source.objects.values()
   for obj in objectlist:
     if obj.name == 'text':
       for spr in obj.sprites:
-        if text_prop not in spr.properties:
-          continue
-        if part_prop in spr.properties and spr.properties[part_prop] not in ('noun','property'):
-          continue
         lines = []
         scores = []
         spr_text = spr.properties[text_prop]
