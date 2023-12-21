@@ -23,7 +23,8 @@ scoreboard objectives add life dummy
 scoreboard objectives add color_anim dummy
 scoreboard objectives add move_cooldown dummy
 scoreboard objectives add buffer dummy
-scoreboard objectives add drop dropped:diamond
+scoreboard objectives add undo dropped:diamond
+scoreboard objectives add wait dropped:apple
 scoreboard objectives add use used:carrot_on_a_stick
 scoreboard players set #-1 baba -1
 scoreboard players set #10 baba 10
