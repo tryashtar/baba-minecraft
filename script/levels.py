@@ -87,6 +87,8 @@ def main():
                tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{pack_name}/{level_name}.mcfunction')
       if testable:
          test_all.extend([
+            'data modify storage baba:main test_report set value {}',
+            'scoreboard players set batch baba 1',
             'data modify storage baba:main level set from storage baba:main level_list[0]',
             'data modify storage baba:main moves set from storage baba:main moves_list[0]',
             'data remove storage baba:main level_list[0]',
