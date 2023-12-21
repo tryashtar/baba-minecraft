@@ -300,6 +300,8 @@ data modify storage baba:main moves_list append value [1,4,4,4,4,4,4,1,2,2,3,3,3
 function baba:levels/load/new_adv/silly_trick
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [1,4,4,4,4,4,4,1,2,2,3,3,3,3,1,1,1,1,3,1,4,4,4,4,1,4,2,2,4,1,1,3,2,2,4,3,0,1,3,2,3,2,3,2,4,4,4,4,4,3,3,3,1,3,1,4,4,4,4,4,3,3,3,2,2,3,2,4,4,4,4,1,2,2,4,1,4,1,1,2,2,3,1,3,1,3,3,3,3,3,3,3,1,1,1,4,1,1,3,2,2,4,4,4,4]
+data modify storage baba:main test_report set value {}
+scoreboard players set batch baba 1
 data modify storage baba:main level set from storage baba:main level_list[0]
 data modify storage baba:main moves set from storage baba:main moves_list[0]
 data remove storage baba:main level_list[0]

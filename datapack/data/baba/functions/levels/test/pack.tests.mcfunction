@@ -1,5 +1,50 @@
 data modify storage baba:main level_list set value []
 data modify storage baba:main moves_list set value []
+function baba:levels/load/tests/pull7
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,1]
+function baba:levels/load/tests/parsing24
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing25
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4]
+function baba:levels/load/tests/parsing26
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing27
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing28
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing29
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing30
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing31
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing32
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/letters1
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4]
+function baba:levels/load/tests/letters2
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4]
+function baba:levels/load/tests/letters3
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/letters4
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/letters5
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4]
 function baba:levels/load/tests/test_behavior
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [4,4,4,1,4,2,2,2,2,2,2,2,4,2,4,4,4,0,1,4,4,4,4,4,4,4,4,4]
@@ -141,6 +186,107 @@ data modify storage baba:main moves_list append value [4,4]
 function baba:levels/load/tests/open11
 data modify storage baba:main level_list append from storage baba:main level
 data modify storage baba:main moves_list append value [4]
+function baba:levels/load/tests/open12
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,2]
+function baba:levels/load/tests/pull1
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4,3]
+function baba:levels/load/tests/pull2
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4]
+function baba:levels/load/tests/pull3
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4]
+function baba:levels/load/tests/open13
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4]
+function baba:levels/load/tests/pull4
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,2,3,2,2]
+function baba:levels/load/tests/pull5
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,2,2,4,1,1,1,3,2,3,2,3,2,3,1,3,2,4,2,3,3]
+function baba:levels/load/tests/pull6
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,3,2,3,3,3,0,0,3,3,3,4,4,4,4,3,3,3,0,2,1,0,2]
+function baba:levels/load/tests/open14
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,2,2]
+function baba:levels/load/tests/open15
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,2,2]
+function baba:levels/load/tests/parsing1
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing2
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing3
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing4
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing5
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing6
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,2,2,3,1,1]
+function baba:levels/load/tests/parsing7
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,2,2,3,1,1]
+function baba:levels/load/tests/parsing8
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4]
+function baba:levels/load/tests/parsing9
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing10
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing11
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4]
+function baba:levels/load/tests/parsing12
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing13
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4]
+function baba:levels/load/tests/parsing14
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4,4]
+function baba:levels/load/tests/parsing15
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4]
+function baba:levels/load/tests/parsing16
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing17
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4]
+function baba:levels/load/tests/parsing18
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4]
+function baba:levels/load/tests/parsing19
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [0,4,4,4,4]
+function baba:levels/load/tests/parsing20
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [0,4,4,4,4]
+function baba:levels/load/tests/parsing21
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4,4]
+function baba:levels/load/tests/parsing22
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4,4,4,4]
+function baba:levels/load/tests/parsing23
+data modify storage baba:main level_list append from storage baba:main level
+data modify storage baba:main moves_list append value [4]
+data modify storage baba:main test_report set value {}
+scoreboard players set batch baba 1
 data modify storage baba:main level set from storage baba:main level_list[0]
 data modify storage baba:main moves set from storage baba:main moves_list[0]
 data remove storage baba:main level_list[0]
