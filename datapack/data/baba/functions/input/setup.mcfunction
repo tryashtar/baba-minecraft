@@ -1,7 +1,7 @@
 tag @s add inputting
-summon marker ~ ~ ~ {Tags:["baba.input","last_pos"]}
-summon marker ~1 ~ ~ {Tags:["baba.input","dir","up"]}
-summon marker ~-1 ~ ~ {Tags:["baba.input","dir","down"]}
-summon marker ~ ~ ~-1 {Tags:["baba.input","dir","left"]}
-summon marker ~ ~ ~1 {Tags:["baba.input","dir","right"]}
-tp @s @s
+summon minecart ~ ~ ~ {Tags:["baba.input"],NoGravity:1b,Invulnerable:1b}
+ride @s mount @e[type=minecart,tag=baba.input,limit=1]
+tag @s remove hold_up
+tag @s remove hold_down
+tag @s remove hold_left
+tag @s remove hold_right
