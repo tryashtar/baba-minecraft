@@ -1,11 +1,10 @@
 # this function adds the 'can_move' tag to the current object and anything it will push, if there is room to move
 tag @s add can_move
 
-# run this recursively on pushable objects ahead and pullable objects behind
-# swap property prevents pushing but not pulling
+# run this recursively on pushable objects ahead
+# swap property prevents pushing
 # anything that's already moved this step is ignored
 execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 as @e[type=#baba:object,tag=baba.object,tag=prop.push,tag=!prop.swap,tag=!has_moved,tag=!can_move,distance=..0.1] run function baba:board/movement/check_move
-execute positioned ^ ^ ^-1 as @e[type=#baba:object,tag=baba.object,tag=prop.pull,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move
 
 # if anything pushable in front of you can't move, then you can't either
 execute if entity @s[tag=!prop.swap] positioned ^ ^ ^1 if entity @e[type=#baba:object,tag=baba.object,tag=prop.push,tag=!has_moved,tag=!can_move,tag=!prop.swap,distance=..0.1,limit=1] run tag @s remove can_move
@@ -29,3 +28,5 @@ tag @s[tag=!can_move,tag=!auto_move,tag=prop.weak] add destroy
 tag @s[tag=destroy] add can_move
 execute if entity @s[tag=destroy] run scoreboard players add destroyed baba 1
 execute if entity @s[tag=!can_move] run tag @e[type=#baba:object,tag=baba.object,tag=can_move] remove can_move
+
+execute if entity @s[tag=can_move] positioned ^ ^ ^-1 as @e[type=#baba:object,tag=baba.object,tag=prop.pull,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move

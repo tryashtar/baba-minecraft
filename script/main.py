@@ -84,7 +84,6 @@ def generate_packing_functions(source, blockstates):
   dir_checks = {}
   for obj in source.objects.values():
     spritelist = list(obj.filter_sprites(lambda x: 'editor' in x.attributes).items())
-    check_sprite = f'tile{{scores:{{sprite:{ops.id_hash(obj.name)}}}}}'
     lines = []
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
