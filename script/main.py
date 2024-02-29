@@ -44,7 +44,7 @@ def generate_particles(particles):
     parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
     parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
     init_lines = [
-      f'item replace entity @s container.0 with splash_potion{{CustomModelData:{cmd}}}'
+      f'item replace entity @s container.0 with splash_potion[custom_model_data={cmd}]'
     ]
     tick_lines = []
     if color := particle.get('color'):
@@ -129,7 +129,7 @@ def generate_give_commands(rsources, blockstates):
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
     description = data.sprite.display(data.properties, '.', '-')
     simple_name = data.sprite.display(data.properties, ' ', '=')
-    cmd = f'give @s {block}{{babatile:1b,CustomModelData:{data.custom_model_data},BlockStateTag:{{{state_str}}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
+    cmd = f'give @s {block}[custom_name=\'{{"text":"{simple_name}","italic":false}}\',custom_model_data={data.custom_model_data},block_state={{{state_str}}}]{{babatile:1b}}'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
     if block not in loot_tables:

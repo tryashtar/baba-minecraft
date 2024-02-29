@@ -1,1 +1,1 @@
-give @s axolotl_spawn_egg{EntityTag:{id:"marker",Tags:["spawn_copier"]},display:{Name:'{"text":"Copy Tile","italic":false}'}}
+give @s axolotl_spawn_egg[custom_name='{"text":"Copy Tile","italic":false}',entity_data={id:"marker",Tags:["spawn_copier"]}]
