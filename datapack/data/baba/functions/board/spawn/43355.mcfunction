@@ -1,4 +1,4 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","has_frames"],item:{id:"potion",Count:1b,tag:{text:"belt"}}}
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","has_frames"],item:{id:"potion",tag:{text:"belt"}}}
 scoreboard players set @s appearance 43355
 scoreboard players set @s color 4093576
 scoreboard players set @s sprite 43355

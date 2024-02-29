@@ -1,5 +1,5 @@
 fill ~-1 ~-2 ~ ~ ~-2 ~ air
-setblock ~ ~-2 ~ jukebox{RecordItem:{id:"tnt",Count:1b}}
+setblock ~ ~-2 ~ jukebox{RecordItem:{id:"tnt"}}
 data modify block ~ ~-2 ~ RecordItem.tag set from storage baba:main level.metadata
 data remove block ~ ~-2 ~ RecordItem.tag.name
 execute if data storage baba:main level.metadata.name run setblock ~-1 ~-2 ~ bamboo_wall_sign[facing=west]

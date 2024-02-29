@@ -260,7 +260,7 @@ def generate_update_function(source, rsources):
       final = 'execute '
       for prop,spec in special_checks:
         final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"potion",Count:1b,tag:{{CustomModelData:{rsources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
+      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"potion",tag:{{CustomModelData:{rsources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
       lines.append(final)
     if overlay.name == 'level_icon':
       lines.append('execute if entity @s[tag=complete] as @e[type=item_display,tag=baba.overlay,distance=..0.001] run data modify entity @s item.tag.CustomPotionColor set value 4676017')
