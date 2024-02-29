@@ -53,7 +53,7 @@ def create_data(properties, extra_data=None):
     data.extend(extra_data)
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
-  nbt.append('item:{id:"minecraft:potion",Count:1b,tag:{' + ','.join(data) + '}}')
+  nbt.append('item:{id:"potion",Count:1b,tag:{' + ','.join(data) + '}}')
   return f'{{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):

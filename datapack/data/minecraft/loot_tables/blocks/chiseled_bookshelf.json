@@ -1,9 +1,9 @@
 {
-   "type": "minecraft:block",
+   "type": "block",
    "functions": [
       {
-         "function": "minecraft:copy_state",
-         "block": "minecraft:chiseled_bookshelf",
+         "function": "copy_state",
+         "block": "chiseled_bookshelf",
          "properties": [
             "slot_0_occupied",
             "slot_1_occupied",
@@ -20,12 +20,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -57,12 +57,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -94,12 +94,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -131,12 +131,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -168,12 +168,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -205,12 +205,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -242,12 +242,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -279,12 +279,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -316,12 +316,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -353,12 +353,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -390,12 +390,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -427,12 +427,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -464,12 +464,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -501,12 +501,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -538,12 +538,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -575,12 +575,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -612,12 +612,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -649,12 +649,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -686,12 +686,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -723,12 +723,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -760,12 +760,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -797,12 +797,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -834,12 +834,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -871,12 +871,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -908,12 +908,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -945,12 +945,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -982,12 +982,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1019,12 +1019,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1056,12 +1056,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1093,12 +1093,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1130,12 +1130,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1167,12 +1167,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1204,12 +1204,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1241,12 +1241,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1278,12 +1278,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1315,12 +1315,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1352,12 +1352,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1389,12 +1389,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1426,12 +1426,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1463,12 +1463,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1500,12 +1500,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1537,12 +1537,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1574,12 +1574,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1611,12 +1611,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1648,12 +1648,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1685,12 +1685,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1722,12 +1722,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1759,12 +1759,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1796,12 +1796,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1833,12 +1833,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -1870,12 +1870,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -1907,12 +1907,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -1944,12 +1944,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -1981,12 +1981,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2018,12 +2018,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2055,12 +2055,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2092,12 +2092,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2129,12 +2129,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2166,12 +2166,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2203,12 +2203,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2240,12 +2240,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2277,12 +2277,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2314,12 +2314,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2351,12 +2351,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2388,12 +2388,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2425,12 +2425,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2462,12 +2462,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2499,12 +2499,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2536,12 +2536,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2573,12 +2573,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2610,12 +2610,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2647,12 +2647,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2684,12 +2684,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2721,12 +2721,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2758,12 +2758,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2795,12 +2795,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2832,12 +2832,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -2869,12 +2869,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -2906,12 +2906,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -2943,12 +2943,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -2980,12 +2980,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3017,12 +3017,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3054,12 +3054,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3091,12 +3091,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3128,12 +3128,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3165,12 +3165,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3202,12 +3202,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3239,12 +3239,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3276,12 +3276,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3313,12 +3313,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3350,12 +3350,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3387,12 +3387,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3424,12 +3424,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3461,12 +3461,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3498,12 +3498,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3535,12 +3535,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3572,12 +3572,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3609,12 +3609,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3646,12 +3646,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3683,12 +3683,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3720,12 +3720,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3757,12 +3757,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3794,12 +3794,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3831,12 +3831,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -3868,12 +3868,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -3905,12 +3905,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -3942,12 +3942,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -3979,12 +3979,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4016,12 +4016,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4053,12 +4053,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4090,12 +4090,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4127,12 +4127,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4164,12 +4164,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4201,12 +4201,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4238,12 +4238,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4275,12 +4275,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4312,12 +4312,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4349,12 +4349,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4386,12 +4386,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4423,12 +4423,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4460,12 +4460,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4497,12 +4497,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4534,12 +4534,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4571,12 +4571,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4608,12 +4608,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4645,12 +4645,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4682,12 +4682,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4719,12 +4719,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4756,12 +4756,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4793,12 +4793,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4830,12 +4830,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -4867,12 +4867,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -4904,12 +4904,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -4941,12 +4941,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -4978,12 +4978,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5015,12 +5015,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5052,12 +5052,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5089,12 +5089,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5126,12 +5126,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5163,12 +5163,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5200,12 +5200,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5237,12 +5237,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5274,12 +5274,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5311,12 +5311,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5348,12 +5348,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5385,12 +5385,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5422,12 +5422,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5459,12 +5459,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5496,12 +5496,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5533,12 +5533,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5570,12 +5570,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5607,12 +5607,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5644,12 +5644,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5681,12 +5681,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5718,12 +5718,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5755,12 +5755,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5792,12 +5792,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5829,12 +5829,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -5866,12 +5866,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -5903,12 +5903,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -5940,12 +5940,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -5977,12 +5977,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6014,12 +6014,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6051,12 +6051,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6088,12 +6088,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6125,12 +6125,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6162,12 +6162,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6199,12 +6199,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6236,12 +6236,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6273,12 +6273,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6310,12 +6310,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6347,12 +6347,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6384,12 +6384,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6421,12 +6421,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6458,12 +6458,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6495,12 +6495,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6532,12 +6532,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6569,12 +6569,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6606,12 +6606,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6643,12 +6643,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6680,12 +6680,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6717,12 +6717,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6754,12 +6754,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6791,12 +6791,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6828,12 +6828,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -6865,12 +6865,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -6902,12 +6902,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -6939,12 +6939,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -6976,12 +6976,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7013,12 +7013,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7050,12 +7050,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7087,12 +7087,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7124,12 +7124,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7161,12 +7161,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7198,12 +7198,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7235,12 +7235,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7272,12 +7272,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7309,12 +7309,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7346,12 +7346,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7383,12 +7383,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7420,12 +7420,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7457,12 +7457,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7494,12 +7494,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7531,12 +7531,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7568,12 +7568,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7605,12 +7605,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7642,12 +7642,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7679,12 +7679,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7716,12 +7716,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7753,12 +7753,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7790,12 +7790,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7827,12 +7827,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -7864,12 +7864,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -7901,12 +7901,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -7938,12 +7938,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -7975,12 +7975,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8012,12 +8012,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8049,12 +8049,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8086,12 +8086,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8123,12 +8123,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8160,12 +8160,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8197,12 +8197,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8234,12 +8234,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8271,12 +8271,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8308,12 +8308,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8345,12 +8345,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8382,12 +8382,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8419,12 +8419,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8456,12 +8456,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8493,12 +8493,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8530,12 +8530,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8567,12 +8567,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8604,12 +8604,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8641,12 +8641,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8678,12 +8678,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8715,12 +8715,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8752,12 +8752,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8789,12 +8789,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8826,12 +8826,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -8863,12 +8863,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -8900,12 +8900,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -8937,12 +8937,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -8974,12 +8974,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -9011,12 +9011,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -9048,12 +9048,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -9085,12 +9085,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -9122,12 +9122,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -9159,12 +9159,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -9196,12 +9196,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -9233,12 +9233,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -9270,12 +9270,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -9307,12 +9307,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
@@ -9344,12 +9344,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
@@ -9381,12 +9381,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
@@ -9418,12 +9418,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
@@ -9455,12 +9455,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:chiseled_bookshelf",
+               "type": "item",
+               "name": "chiseled_bookshelf",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:chiseled_bookshelf",
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
