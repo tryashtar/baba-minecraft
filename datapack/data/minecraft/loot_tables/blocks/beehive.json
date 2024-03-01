@@ -36,8 +36,14 @@
                      }
                   },
                   {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:257}"
+                     "function": "set_components",
+                     "components": {
+                        "custom_model_data": 257
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{babatile:1b}"
                   }
                ]
             }
@@ -68,8 +74,14 @@
                      }
                   },
                   {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:258}"
+                     "function": "set_components",
+                     "components": {
+                        "custom_model_data": 258
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{babatile:1b}"
                   }
                ]
             }
