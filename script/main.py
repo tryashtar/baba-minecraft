@@ -70,7 +70,7 @@ def generate_particles(particles):
       model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
       tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{name}/{tx}.json')
       if i > 0:
-        tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run data modify entity @s item.components."minecraft:potion_contents".custom_color set value {cmd}')
+        tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run data modify entity @s item.components."minecraft:custom_model_data" set value {cmd}')
       cmd += 1
     tat.write_lines(tick_lines, f'datapack/data/baba/functions/display/particle/tick/{name}.mcfunction')
   tat.write_lines(parent_init, 'datapack/data/baba/functions/display/particle/init.mcfunction')
