@@ -15,6 +15,6 @@ data modify entity @e[type=text_display,tag=name,sort=nearest,limit=1] text set 
 
 # update block
 execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ Items[0] run data modify block ~ ~-1 ~ Items append value {id:"book"}
-execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ bees[0] run data modify block ~ ~-1 ~ bees append value {entity_data:{}}
+execute at @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] unless data block ~ ~-1 ~ bees[0] run data modify block ~ ~-1 ~ bees append value {entity_data:{},ticks_in_hive:0,min_ticks_in_hive:0}
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s run data modify block ~ ~-1 ~ Items[0].components."minecraft:custom_data".extra.data.level_data.link set from entity @s item.components."minecraft:custom_data".level_data.link
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] at @s run data modify block ~ ~-1 ~ bees[0].entity_data.extra.data.level_data.link set from entity @s item.components."minecraft:custom_data".level_data.link
