@@ -11,8 +11,6 @@ def state_string(state):
 def create_selector(properties, extra_scores=None):
   result = []
   tags = []
-  nbt_true = []
-  nbt_false = []
   scores = []
   for m,val in properties.items():
     if m.kind == 'tag':
@@ -29,10 +27,6 @@ def create_selector(properties, extra_scores=None):
     scores.extend(extra_scores)
   if len(scores) > 0:
     result.append('scores={'+','.join([x for x in scores])+'}')
-  if len(nbt_true) > 0:
-    result.append('nbt={item:{tag:{properties:['+','.join(nbt_true)+']}}}')
-  for f in nbt_false:
-    result.append('nbt=!{item:{tag:{properties:['+f+']}}}')
   return ','.join(result)
 
 def create_data(properties, extra_data=None):
@@ -53,7 +47,10 @@ def create_data(properties, extra_data=None):
     data.extend(extra_data)
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
-  nbt.append('item:{id:"potion",tag:{' + ','.join(data) + '}}')
+  if len(data) > 0:
+    nbt.append('item:{id:"potion",components:{custom_data:{' + ','.join(data) + '}}}')
+  else:
+    nbt.append('item:{id:"potion"}')
   return f'{{{",".join(nbt)}}}'
 
 def create_storage(properties, data=None):

@@ -1,4 +1,4 @@
-execute as @e[type=item,tag=!loaded] if data entity @s Item.tag.BlockEntityTag.RecordItem.tag.tiles run function baba:dev/load_jukebox
+execute as @e[type=item,tag=!loaded] if data entity @s Item.components."minecraft:block_entity_data".RecordItem.components."minecraft:custom_data".tiles run function baba:dev/load_jukebox
 execute at @e[type=marker,tag=baba.space] if block ~ ~ ~ #baba:editor_blocks run function baba:dev/board_manipulate
 
 execute as @e[type=marker,tag=spawn_tile_editor] at @s align xyz if block ~ ~-1 ~ #baba:editor_blocks run function baba:dev/tile_editor/open

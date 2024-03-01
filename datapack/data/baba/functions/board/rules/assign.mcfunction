@@ -1,5 +1,5 @@
 # re-assign rules to any objects that need them
-execute as @e[type=item_display,tag=baba.object,tag=assign] run data modify entity @s item.tag.parsing set value {delete:0b,block_transforms:0b,transforms:[],writes:[],properties:[],has:[],make:[]}
+execute as @e[type=item_display,tag=baba.object,tag=assign] run data modify entity @s item.components."minecraft:custom_data".parsing set value {delete:0b,block_transforms:0b,transforms:[],writes:[],properties:[],has:[],make:[]}
 execute as @e[type=marker,tag=baba.object,tag=assign] run data modify entity @s data.parsing set value {delete:0b,block_transforms:0b,transforms:[],writes:[],properties:[],has:[],make:[]}
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=assign] move_stacks 0
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=assign] shift_stacks 0

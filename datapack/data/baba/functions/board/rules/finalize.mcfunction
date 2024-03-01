@@ -1,6 +1,6 @@
 # the entity's property data aren't yet in the format we like
 # here, we merge 'writes' with 'transforms', handle 'A is A' and 'A is not A', and throw away inverted properties
-execute if entity @s[type=item_display] run data modify storage baba:main rule_data set from entity @s item.tag
+execute if entity @s[type=item_display] run data modify storage baba:main rule_data set from entity @s item.components."minecraft:custom_data"
 execute if entity @s[type=marker] run data modify storage baba:main rule_data set from entity @s data
 execute if data storage baba:main rule_data.parsing.transforms[{inverted:1b,text:397973}] run data remove storage baba:main rule_data.parsing.writes
 execute if data storage baba:main rule_data.parsing{delete:0b,block_transforms:1b} run data remove storage baba:main rule_data.parsing.writes
@@ -20,7 +20,7 @@ execute if entity @s[scores={sprite=397973}] unless data storage baba:main rule_
 execute if entity @s[scores={sprite=6491892}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:388978}] run data modify storage baba:main rule_data.properties append value 388978
 execute if entity @s[scores={sprite=54575550}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:275526380}] run data modify storage baba:main rule_data.properties append value 275526380
 
-execute if entity @s[type=item_display] run data modify entity @s item.tag set from storage baba:main rule_data
+execute if entity @s[type=item_display] run data modify entity @s item.components."minecraft:custom_data" set from storage baba:main rule_data
 execute if entity @s[type=marker] run data modify entity @s data set from storage baba:main rule_data
 
 tag @s[tag=has_transforms] remove has_transforms

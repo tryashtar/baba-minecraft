@@ -13,5 +13,5 @@ execute store result score @s text_disabled run data get storage baba:main previ
 execute store result score @s z_layer run data get storage baba:main previous.objects[0].scores.z_layer
 execute store result score @s direction run data get storage baba:main previous.objects[0].scores.direction
 scoreboard players set @s frame 0
-data modify entity @s item.tag set from storage baba:main previous.objects[0].data
+data modify entity @s item.components."minecraft:custom_data" set from storage baba:main previous.objects[0].data
 data modify entity @s Tags append from storage baba:main previous.objects[0].tags[]

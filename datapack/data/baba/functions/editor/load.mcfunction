@@ -39,7 +39,7 @@ tag @e[type=#baba:object,tag=baba.object] add assign
 function baba:board/rules/update
 function baba:board/rules/assign
 
-execute as @e[type=item_display,tag=baba.object,scores={sprite=6491892},nbt={item:{tag:{level_data:{}}}}] run function baba:progress/check_completed
+execute as @e[type=item_display,tag=baba.object,scores={sprite=6491892},nbt={item:{components:{"minecraft:custom_data":{level_data:{}}}}}] run function baba:progress/check_completed
 
 execute as @e[type=#baba:object,tag=baba.object,tag=prop.select] at @s run function baba:progress/show_name
 function baba:board/history/record

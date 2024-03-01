@@ -4,5 +4,5 @@ kill @e[type=item,distance=..2]
 scoreboard players set direction baba 0
 function baba:board/step
 execute if score rules_changed baba matches 1 run function baba:input/update_rules
-execute at @e[type=#baba:object,tag=baba.object,tag=prop.select] as @e[type=#baba:object,tag=baba.object,distance=..0.1,nbt={item:{tag:{level_data:{}}}},limit=1] run function baba:progress/enter_level
+execute at @e[type=#baba:object,tag=baba.object,tag=prop.select] as @e[type=#baba:object,tag=baba.object,distance=..0.1,nbt={item:{components:{"minecraft:custom_data":{level_data:{}}}}},limit=1] run function baba:progress/enter_level
 scoreboard players set @s move_cooldown 3
