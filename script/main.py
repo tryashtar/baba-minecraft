@@ -115,7 +115,7 @@ def generate_packing_functions(source, blockstates):
       tat.write_lines(lines, f'datapack/data/baba/functions/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([
     'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".extra',
-    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Bees[0].EntityData.extra',
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ bees[0].entity_data.extra',
     'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/functions/editor/pack/block.mcfunction')
