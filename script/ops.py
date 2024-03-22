@@ -47,11 +47,7 @@ def create_data(properties, extra_data=None):
     data.extend(extra_data)
   if len(scores) > 0:
     data.append('scores:{' + ','.join(scores) + '}')
-  if len(data) > 0:
-    nbt.append('item:{id:"potion",components:{custom_data:{' + ','.join(data) + '}}}')
-  else:
-    nbt.append('item:{id:"potion"}')
-  return f'{{{",".join(nbt)}}}'
+  return (f'{{{",".join(nbt)}}}', data)
 
 def create_storage(properties, data=None):
   tags = []

@@ -44,7 +44,7 @@ def generate_particles(particles):
     parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
     parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
     init_lines = [
-      f'item replace entity @s container.0 with splash_potion[custom_model_data={cmd}]'
+      f'item replace entity @s contents with splash_potion[custom_model_data={cmd}]'
     ]
     tick_lines = []
     if color := particle.get('color'):
@@ -160,8 +160,12 @@ def generate_spawn_functions(source):
           if prop.kind == 'score':
             del props[prop]
             scores.append((prop,val))
-        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        summon, data = ops.create_data(props, [f'text:"{spr_text}"'])
         lines.append(f'data merge entity @s {summon}')
+        if len(data) > 0:
+          lines.append(f'item replace entity @s contents with potion[custom_data={{{",".join(data)}}}]')
+        else:
+          lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
@@ -181,8 +185,12 @@ def generate_spawn_functions(source):
             del props[prop]
             scores.append((prop,val))
         spr_text = spr.properties[sprite_prop]
-        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        summon, data = ops.create_data(props, [f'text:"{spr_text}"'])
         lines.append(f'data merge entity @s {summon}')
+        if len(data) > 0:
+          lines.append(f'item replace entity @s contents with potion[custom_data={{{",".join(data)}}}]')
+        else:
+          lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players set @s facing 4')

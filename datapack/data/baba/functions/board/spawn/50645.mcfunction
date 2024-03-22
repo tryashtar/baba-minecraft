@@ -1,4 +1,5 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty"],item:{id:"potion",components:{custom_data:{text:"bolt"}}}}
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty"]}
+item replace entity @s contents with potion[custom_data={text:"bolt"}]
 scoreboard players set @s appearance 50645
 scoreboard players set @s color 15590021
 scoreboard players set @s sprite 50645
