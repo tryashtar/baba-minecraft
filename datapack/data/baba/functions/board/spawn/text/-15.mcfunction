@@ -1,9 +1,9 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","not_all","reparse","is_text","part.noun"],item:{id:"minecraft:potion",Count:1b,tag:{text:"rocket"}}}
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","not_all","reparse","is_text","part.property"],item:{id:"minecraft:potion",Count:1b,tag:{text:"defeat"}}}
 scoreboard players set @s appearance 397973
-scoreboard players set @s color 7566195
-scoreboard players set @s inactive_color 2699585
+scoreboard players set @s color 8529436
+scoreboard players set @s inactive_color 4331792
 scoreboard players set @s sprite 397973
-scoreboard players set @s text 266319164
+scoreboard players set @s text -15
 scoreboard players set @s z_layer 20
 scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id
 scoreboard players add @s text_id 1
