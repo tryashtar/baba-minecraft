@@ -1,1 +1,1 @@
-give @s chiseled_bookshelf[custom_name='{"text":"text all","italic":false}',custom_model_data=68,block_state={slot_0_occupied:"true",slot_1_occupied:"true",slot_2_occupied:"false",slot_3_occupied:"false",slot_4_occupied:"false",slot_5_occupied:"false",facing:"south"},custom_data={babatile:1b}]
+give @s chiseled_bookshelf[item_name='"text all"',custom_model_data=68,block_state={slot_0_occupied:"true",slot_1_occupied:"true",slot_2_occupied:"false",slot_3_occupied:"false",slot_4_occupied:"false",slot_5_occupied:"false",facing:"south"},custom_data={babatile:1b}]

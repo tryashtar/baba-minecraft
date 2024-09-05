@@ -1,7 +1,7 @@
-item replace entity @s hotbar.2 with music_disc_stal[custom_name='{"text":"< < <","italic":false}',custom_data={hold:"reverse"}]
-item replace entity @s hotbar.3 with carrot_on_a_stick[custom_name='{"text":"<","italic":false}',custom_data={use:"reverse"}]
-item replace entity @s hotbar.5 with carrot_on_a_stick[custom_name='{"text":">","italic":false}',custom_data={use:"forward"}]
-item replace entity @s hotbar.6 with music_disc_strad[custom_name='{"text":"> > >","italic":false}',custom_data={hold:"forward"}]
+item replace entity @s hotbar.2 with music_disc_stal[item_name='"< < <"',custom_data={hold:"reverse"}]
+item replace entity @s hotbar.3 with carrot_on_a_stick[item_name='"<"',custom_data={use:"reverse"}]
+item replace entity @s hotbar.5 with carrot_on_a_stick[item_name='">"',custom_data={use:"forward"}]
+item replace entity @s hotbar.6 with music_disc_strad[item_name='"> > >"',custom_data={hold:"forward"}]
 tag @s remove forward
 tag @s[predicate=baba:holding_forward] add forward
 tag @s[predicate=baba:using_forward,scores={use=1..}] add forward

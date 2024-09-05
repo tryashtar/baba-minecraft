@@ -129,7 +129,7 @@ def generate_give_commands(rsources, blockstates):
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
     description = data.sprite.display(data.properties, '.', '-')
     simple_name = data.sprite.display(data.properties, ' ', '=')
-    cmd = f'give @s {block}[custom_name=\'{{"text":"{simple_name}","italic":false}}\',custom_model_data={data.custom_model_data},block_state={{{state_str}}},custom_data={{babatile:1b}}]'
+    cmd = f'give @s {block}[item_name=\'"{simple_name}"\',custom_model_data={data.custom_model_data},block_state={{{state_str}}},custom_data={{babatile:1b}}]'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
     if block not in loot_tables:
