@@ -134,7 +134,7 @@ def generate_give_commands(rsources, blockstates):
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
     if block not in loot_tables:
       loot_tables[block] = (list(state.keys()), [])
-    loot_tables[block][1].append({"rolls":1,"entries":[{"type":"item","name":block,"conditions":[{"condition":"block_state_property","block":block,"properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_components","components":{"custom_model_data":data.custom_model_data}},{"function":"set_custom_data","tag":"{babatile:1b}"}]}]})
+    loot_tables[block][1].append({"rolls":1,"entries":[{"type":"item","name":block,"conditions":[{"condition":"block_state_property","block":block,"properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_custom_model_data","value":data.custom_model_data},{"function":"set_custom_data","tag":"{babatile:1b}"}]}]})
   tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
   for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
     path = f'datapack/data/minecraft/loot_tables/blocks/{block}.json'

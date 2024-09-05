@@ -36,10 +36,8 @@
                      }
                   },
                   {
-                     "function": "set_components",
-                     "components": {
-                        "custom_model_data": 257
-                     }
+                     "function": "set_custom_model_data",
+                     "value": 257
                   },
                   {
                      "function": "set_custom_data",
@@ -74,10 +72,8 @@
                      }
                   },
                   {
-                     "function": "set_components",
-                     "components": {
-                        "custom_model_data": 258
-                     }
+                     "function": "set_custom_model_data",
+                     "value": 258
                   },
                   {
                      "function": "set_custom_data",
