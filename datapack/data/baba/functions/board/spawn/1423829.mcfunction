@@ -6,4 +6,4 @@ scoreboard players set @s sprite 1423829
 scoreboard players set @s z_layer 10
 scoreboard players set @s facing 4
 scoreboard players set @s walk 0
-execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert
+execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert

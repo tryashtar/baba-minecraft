@@ -4,7 +4,9 @@
    "predicate": {
       "equipment": {
          "mainhand": {
-            "nbt": "{rule_book:1b}"
+            "predicates": {
+               "custom_data": "{rule_book:1b}"
+            }
          }
       }
    }

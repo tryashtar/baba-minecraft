@@ -11,4 +11,4 @@ scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,t
 scoreboard players add @s text_id 1
 scoreboard players set @s facing 4
 scoreboard players set @s walk 0
-execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert
+execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert

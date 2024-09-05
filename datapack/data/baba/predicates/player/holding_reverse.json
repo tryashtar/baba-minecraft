@@ -4,7 +4,9 @@
    "predicate": {
       "equipment": {
          "mainhand": {
-            "nbt": "{hold:'reverse'}"
+            "predicates": {
+               "custom_data": "{hold:'reverse'}"
+            }
          }
       }
    }

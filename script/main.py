@@ -172,7 +172,7 @@ def generate_spawn_functions(source):
         lines.append('scoreboard players add @s text_id 1')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
@@ -195,7 +195,7 @@ def generate_spawn_functions(source):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):

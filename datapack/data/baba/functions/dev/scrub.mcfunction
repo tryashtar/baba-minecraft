@@ -3,11 +3,11 @@ item replace entity @s hotbar.3 with carrot_on_a_stick[item_name='"<"',custom_da
 item replace entity @s hotbar.5 with carrot_on_a_stick[item_name='">"',custom_data={use:"forward"}]
 item replace entity @s hotbar.6 with music_disc_strad[item_name='"> > >"',custom_data={hold:"forward"}]
 tag @s remove forward
-tag @s[predicate=baba:holding_forward] add forward
-tag @s[predicate=baba:using_forward,scores={use=1..}] add forward
+tag @s[predicate=baba:player/holding_forward] add forward
+tag @s[predicate=baba:player/using_forward,scores={use=1..}] add forward
 tag @s remove reverse
-tag @s[predicate=baba:holding_reverse] add reverse
-tag @s[predicate=baba:using_reverse,scores={use=1..}] add reverse
+tag @s[predicate=baba:player/holding_reverse] add reverse
+tag @s[predicate=baba:player/using_reverse,scores={use=1..}] add reverse
 scoreboard players reset @s[scores={use=1..}] use
 
 execute if entity @s[tag=forward] store result score direction baba run data get storage baba:main moves[0]
