@@ -1,2 +1,2 @@
-execute if score @s life matches 6 run item modify entity @s contents {function:"set_custom_model_data",value:17}
-execute if score @s life matches 3 run item modify entity @s contents {function:"set_custom_model_data",value:18}
+execute if score @s life matches 6 run item modify entity @s contents {function:"set_components",components:{item_model:"baba:particles/sink/2"}}
+execute if score @s life matches 3 run item modify entity @s contents {function:"set_components",components:{item_model:"baba:particles/sink/3"}}

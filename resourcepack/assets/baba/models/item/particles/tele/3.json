@@ -1,7 +1,7 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:item/particles/tele/3"
+      "up": "baba:particles/tele/3"
    },
    "display": {
       "fixed": {

@@ -1,16 +1,16 @@
-execute if entity @s[tag=!up,tag=!down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 346
-execute if entity @s[tag=!up,tag=!down,tag=!left,tag=right] run return run data modify storage baba:main model set value 347
-execute if entity @s[tag=up,tag=!down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 348
-execute if entity @s[tag=up,tag=!down,tag=!left,tag=right] run return run data modify storage baba:main model set value 349
-execute if entity @s[tag=!up,tag=!down,tag=left,tag=!right] run return run data modify storage baba:main model set value 350
-execute if entity @s[tag=!up,tag=!down,tag=left,tag=right] run return run data modify storage baba:main model set value 351
-execute if entity @s[tag=up,tag=!down,tag=left,tag=!right] run return run data modify storage baba:main model set value 352
-execute if entity @s[tag=up,tag=!down,tag=left,tag=right] run return run data modify storage baba:main model set value 353
-execute if entity @s[tag=!up,tag=down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 354
-execute if entity @s[tag=!up,tag=down,tag=!left,tag=right] run return run data modify storage baba:main model set value 355
-execute if entity @s[tag=up,tag=down,tag=!left,tag=!right] run return run data modify storage baba:main model set value 356
-execute if entity @s[tag=up,tag=down,tag=!left,tag=right] run return run data modify storage baba:main model set value 357
-execute if entity @s[tag=!up,tag=down,tag=left,tag=!right] run return run data modify storage baba:main model set value 358
-execute if entity @s[tag=!up,tag=down,tag=left,tag=right] run return run data modify storage baba:main model set value 359
-execute if entity @s[tag=up,tag=down,tag=left,tag=!right] run return run data modify storage baba:main model set value 360
-execute if entity @s[tag=up,tag=down,tag=left,tag=right] run return run data modify storage baba:main model set value 361
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-false.left-false.right-false"}}
+execute if entity @s[tag=!up,tag=!down,tag=!left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-false.left-false.right-true"}}
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-false.left-false.right-false"}}
+execute if entity @s[tag=up,tag=!down,tag=!left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-false.left-false.right-true"}}
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-false.left-true.right-false"}}
+execute if entity @s[tag=!up,tag=!down,tag=left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-false.left-true.right-true"}}
+execute if entity @s[tag=up,tag=!down,tag=left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-false.left-true.right-false"}}
+execute if entity @s[tag=up,tag=!down,tag=left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-false.left-true.right-true"}}
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-true.left-false.right-false"}}
+execute if entity @s[tag=!up,tag=down,tag=!left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-true.left-false.right-true"}}
+execute if entity @s[tag=up,tag=down,tag=!left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-true.left-false.right-false"}}
+execute if entity @s[tag=up,tag=down,tag=!left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-true.left-false.right-true"}}
+execute if entity @s[tag=!up,tag=down,tag=left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-true.left-true.right-false"}}
+execute if entity @s[tag=!up,tag=down,tag=left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-false.down-true.left-true.right-true"}}
+execute if entity @s[tag=up,tag=down,tag=left,tag=!right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-true.left-true.right-false"}}
+execute if entity @s[tag=up,tag=down,tag=left,tag=right] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/fence/up-true.down-true.left-true.right-true"}}

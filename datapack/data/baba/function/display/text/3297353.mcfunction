@@ -1,1 +1,1 @@
-data modify storage baba:main model set value 155
+item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/text/fence"}}

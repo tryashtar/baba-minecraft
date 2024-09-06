@@ -36,8 +36,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 257
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/cliff"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -72,8 +74,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 258
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/cursor"
+                     }
                   },
                   {
                      "function": "set_custom_data",

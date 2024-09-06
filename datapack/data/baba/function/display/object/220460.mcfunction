@@ -1,20 +1,20 @@
-execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=0}] run return run data modify storage baba:main model set value 168
-execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=1}] run return run data modify storage baba:main model set value 169
-execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=2}] run return run data modify storage baba:main model set value 170
-execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=3}] run return run data modify storage baba:main model set value 171
-execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=0}] run return run data modify storage baba:main model set value 172
-execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=1}] run return run data modify storage baba:main model set value 173
-execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=2}] run return run data modify storage baba:main model set value 174
-execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=3}] run return run data modify storage baba:main model set value 175
-execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=0}] run return run data modify storage baba:main model set value 176
-execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=1}] run return run data modify storage baba:main model set value 177
-execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=2}] run return run data modify storage baba:main model set value 178
-execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=3}] run return run data modify storage baba:main model set value 179
-execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=0}] run return run data modify storage baba:main model set value 180
-execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=1}] run return run data modify storage baba:main model set value 181
-execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=2}] run return run data modify storage baba:main model set value 182
-execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=3}] run return run data modify storage baba:main model set value 183
-execute if entity @s[tag=prop.sleep,scores={facing=4}] run return run data modify storage baba:main model set value 184
-execute if entity @s[tag=prop.sleep,scores={facing=1}] run return run data modify storage baba:main model set value 185
-execute if entity @s[tag=prop.sleep,scores={facing=3}] run return run data modify storage baba:main model set value 186
-execute if entity @s[tag=prop.sleep,scores={facing=2}] run return run data modify storage baba:main model set value 187
+execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=0}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-right.walk-0.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=1}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-right.walk-1.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=2}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-right.walk-2.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=4,walk=3}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-right.walk-3.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=0}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-up.walk-0.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=1}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-up.walk-1.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=2}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-up.walk-2.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=1,walk=3}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-up.walk-3.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=0}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-left.walk-0.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=1}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-left.walk-1.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=2}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-left.walk-2.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=3,walk=3}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-left.walk-3.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=0}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-down.walk-0.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=1}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-down.walk-1.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=2}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-down.walk-2.sleep-false"}}
+execute if entity @s[tag=!prop.sleep,scores={facing=2,walk=3}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-down.walk-3.sleep-false"}}
+execute if entity @s[tag=prop.sleep,scores={facing=4}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-right.sleep-true"}}
+execute if entity @s[tag=prop.sleep,scores={facing=1}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-up.sleep-true"}}
+execute if entity @s[tag=prop.sleep,scores={facing=3}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-left.sleep-true"}}
+execute if entity @s[tag=prop.sleep,scores={facing=2}] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/keke/facing-down.sleep-true"}}

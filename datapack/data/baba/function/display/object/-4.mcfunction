@@ -1,1 +1,1 @@
-data modify storage baba:main model set value 299
+item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/pillar"}}

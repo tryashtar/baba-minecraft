@@ -1,2 +1,2 @@
-execute if entity @s[tag=!complete] run return run data modify storage baba:main model set value 328
-execute if entity @s[tag=complete] run return run data modify storage baba:main model set value 329
+execute if entity @s[tag=!complete] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/level/complete-false"}}
+execute if entity @s[tag=complete] run return run item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/level/complete-true"}}

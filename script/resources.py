@@ -3,14 +3,16 @@ import PIL.Image
 import tryashtools as tat
 
 class SpriteResources:
-  def __init__(self, sprite, props, texture_path, model_path, custom_model_data):
+  def __init__(self, sprite, props, texture_path, model_path):
     self.sprite = sprite
     self.properties = props
     self.texture_path = texture_path
     self.texture_resource = path_to_resource(texture_path)
     self.model_path = model_path
     self.model_resource = path_to_resource(model_path)
-    self.custom_model_data = custom_model_data
+    namespace, rest = self.model_resource.split(':')
+    seq = rest.split('/')
+    self.model_component = namespace + ':' + ('/'.join(seq[1:]))
 
 def resource_to_path(rc, folder, extension):
   try:
@@ -50,14 +52,12 @@ def save_editor_model(texture_resource, path):
 
 def create_sprite_resources(source, resource_pack, namespace):
   sprite_info = {}
-  overrides = []
   cached_images = {}
   cached_models = {}
   texture_folder = os.path.join('assets', namespace, 'textures/sprites')
   model_folder = os.path.join('assets', namespace, 'models/item/sprites')
   tat.delete_folder(os.path.join(resource_pack, texture_folder))
   tat.delete_folder(os.path.join(resource_pack, model_folder))
-  sprite_id = 0
   for obj in list(source.objects.values()) + list(source.overlays.values()) + list(source.alt_images.values()):
     filtered = list(obj.filter_sprites(lambda x: 'sprite' in x.attributes).items())
     for spr,props in filtered:
@@ -70,17 +70,13 @@ def create_sprite_resources(source, resource_pack, namespace):
         cached_images[spr.image] = texture_path
       model_key = f'{spr.image}.{spr.scale}.{spr.shift}'
       if model_key in cached_models:
-        (model_path, custom_model_data) = cached_models[model_key]
+        model_path = cached_models[model_key]
       else:
-        sprite_id += 1
-        custom_model_data = sprite_id
         model_path = os.path.join(model_folder, display + '.json')
         y = 0.01 if obj.is_overlay else 0
         save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path), y)
-        cached_models[model_key] = (model_path, custom_model_data)
-        overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
-      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)
-  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
+        cached_models[model_key] = model_path
+      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path)
   return sprite_info
 
 def colorize_frames(images, color):
@@ -94,7 +90,6 @@ def colorize_frames(images, color):
 
 def create_editor_resources(source, resource_pack, namespace):
   sprite_info = {}
-  overrides = []
   texture_folder = os.path.join('assets', namespace, 'textures/editor')
   model_folder = os.path.join('assets', namespace, 'models/item/editor')
   tat.delete_folder(os.path.join(resource_pack, texture_folder))
@@ -110,6 +105,5 @@ def create_editor_resources(source, resource_pack, namespace):
       frames = list(colorize_frames(spr.image.frames, bytes.fromhex(spr.properties[source.properties['color']][1:])))
       save_image(spr, [frames[0]], os.path.join(resource_pack, texture_path))
       save_editor_model(path_to_resource(texture_path), os.path.join(resource_pack, model_path))
-      overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
-      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
+      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path)
   return sprite_info

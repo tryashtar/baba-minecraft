@@ -1,7 +1,7 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:item/particles/sink/3"
+      "up": "baba:particles/sink/3"
    },
    "display": {
       "fixed": {

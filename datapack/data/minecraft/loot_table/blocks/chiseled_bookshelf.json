@@ -46,8 +46,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 1
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/baba/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -87,8 +89,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 2
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/baba/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -128,8 +132,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 3
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/baba/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -169,8 +175,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 4
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/baba/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -210,8 +218,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 5
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/baba"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -251,8 +261,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 6
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/keke"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -292,8 +304,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 7
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/me"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -333,8 +347,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 8
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/robot"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -374,8 +390,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 9
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/belt"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -415,8 +433,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 10
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bird"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -456,8 +476,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 11
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bug"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -497,8 +519,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 12
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/crab"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -538,8 +562,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 13
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/rocket"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -579,8 +605,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 14
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/skull"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -620,8 +648,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 15
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/ghost"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -661,8 +691,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 16
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/statue"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -702,8 +734,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 17
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bolt"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -743,8 +777,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 18
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/hand"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -784,8 +820,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 19
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bat"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -825,8 +863,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 20
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bubble"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -866,8 +906,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 21
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/cog"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -907,8 +949,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 22
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/algae"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -948,8 +992,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 23
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/flag"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -989,8 +1035,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 24
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/key"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1030,8 +1078,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 25
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/love"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1071,8 +1121,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 26
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/spike"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1112,8 +1164,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 27
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/ufo"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1153,8 +1207,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 28
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/door"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1194,8 +1250,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 29
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/pillar"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1235,8 +1293,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 30
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/rock"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1276,8 +1336,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 31
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/tile"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1317,8 +1379,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 32
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fruit"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1358,8 +1422,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 33
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/moon"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1399,8 +1465,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 34
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/tree"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1440,8 +1508,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 35
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/box"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1481,8 +1551,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 36
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fire"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1522,8 +1594,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 37
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/gate"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1563,8 +1637,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 38
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/jelly"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1604,8 +1680,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 39
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/reed"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1645,8 +1723,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 40
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/sign"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1686,8 +1766,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 41
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/sun"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1727,8 +1809,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 42
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fungi"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1768,8 +1852,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 43
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/husk"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1809,8 +1895,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 44
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/leaf"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1850,8 +1938,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 45
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/orb"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1891,8 +1981,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 46
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/trees"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1932,8 +2024,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 47
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/cake"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -1973,8 +2067,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 48
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/dot"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2014,8 +2110,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 49
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/foliage"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2055,8 +2153,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 50
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/rose"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2096,8 +2196,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 51
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/dust"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2137,8 +2239,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 52
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fungus"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2178,8 +2282,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 53
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/husks"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2219,8 +2325,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 54
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/stump"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2260,8 +2368,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 55
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/cursor"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2301,8 +2411,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 56
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/star"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2342,8 +2454,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 57
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/flower"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2383,8 +2497,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 58
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/is"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2424,8 +2540,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 59
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/and"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2465,8 +2583,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 60
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/not"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2506,8 +2626,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 61
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/on"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2547,8 +2669,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 62
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/near"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2588,8 +2712,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 63
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/facing"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2629,8 +2755,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 64
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/without"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2670,8 +2798,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 65
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/has"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2711,8 +2841,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 66
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/make"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2752,8 +2884,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 67
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/write"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2793,8 +2927,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 68
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/all"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2834,8 +2970,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 69
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/empty"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2875,8 +3013,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 70
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/text"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2916,8 +3056,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 71
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/level"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2957,8 +3099,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 72
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/you"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -2998,8 +3142,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 73
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/push"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3039,8 +3185,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 74
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/pull"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3080,8 +3228,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 75
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/move"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3121,8 +3271,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 76
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/shift"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3162,8 +3314,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 77
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/defeat"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3203,8 +3357,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 78
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/hot"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3244,8 +3400,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 79
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/melt"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3285,8 +3443,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 80
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/hide"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3326,8 +3486,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 81
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/win"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3367,8 +3529,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 82
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/stop"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3408,8 +3572,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 83
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/open"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3449,8 +3615,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 84
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/shut"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3490,8 +3658,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 85
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/float"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3531,8 +3701,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 86
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/sink"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3572,8 +3744,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 87
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/weak"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3613,8 +3787,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 88
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/swap"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3654,8 +3830,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 89
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/tele"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3695,8 +3873,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 90
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fall"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3736,8 +3916,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 91
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/more"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3777,8 +3959,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 92
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/red"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3818,8 +4002,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 93
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/blue"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3859,8 +4045,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 94
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/sleep"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3900,8 +4088,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 95
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/group"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3941,8 +4131,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 96
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -3982,8 +4174,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 97
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4023,8 +4217,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 98
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4064,8 +4260,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 99
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4105,8 +4303,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 100
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/word"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4146,8 +4346,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 101
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/idle"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4187,8 +4389,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 102
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/lonely"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4228,8 +4432,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 103
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/often"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4269,8 +4475,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 104
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/seldom"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4310,8 +4518,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 105
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/select"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4351,8 +4561,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 106
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/best"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4392,8 +4604,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 107
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bonus"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4433,8 +4647,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 108
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/end"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4474,8 +4690,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 109
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/done"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4515,8 +4733,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 110
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/a"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4556,8 +4776,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 111
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/b"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4597,8 +4819,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 112
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/c"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4638,8 +4862,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 113
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/d"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4679,8 +4905,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 114
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/e"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4720,8 +4948,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 115
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/f"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4761,8 +4991,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 116
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/g"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4802,8 +5034,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 117
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/h"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4843,8 +5077,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 118
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/i"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4884,8 +5120,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 119
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/j"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4925,8 +5163,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 120
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/k"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -4966,8 +5206,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 121
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/l"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5007,8 +5249,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 122
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/m"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5048,8 +5292,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 123
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/n"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5089,8 +5335,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 124
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/o"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5130,8 +5378,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 125
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/p"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5171,8 +5421,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 126
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/q"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5212,8 +5464,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 127
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/r"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5253,8 +5507,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 128
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/s"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5294,8 +5550,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 129
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/t"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5335,8 +5593,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 130
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/u"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5376,8 +5636,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 131
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/v"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5417,8 +5679,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 132
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/w"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5458,8 +5722,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 133
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/x"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5499,8 +5765,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 134
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/y"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5540,8 +5808,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 135
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/z"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5581,8 +5851,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 136
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/ab"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5622,8 +5894,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 137
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/letter/ba"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5663,8 +5937,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 138
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/cloud"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5704,8 +5980,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 139
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/fence"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5745,8 +6023,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 140
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/grass"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5786,8 +6066,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 141
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/hedge"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5827,8 +6109,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 142
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/ice"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5868,8 +6152,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 143
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/line"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5909,8 +6195,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 144
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/pipe"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5950,8 +6238,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 145
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/rubble"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -5991,8 +6281,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 146
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/wall"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6032,8 +6324,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 147
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/water"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6073,8 +6367,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 148
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/lava"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6114,8 +6410,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 149
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/bog"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6155,8 +6453,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 150
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/brick"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6196,8 +6496,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 151
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/text/cliff"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6237,8 +6539,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 152
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/keke/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6278,8 +6582,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 153
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/keke/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6319,8 +6625,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 154
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/keke/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6360,8 +6668,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 155
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/keke/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6401,8 +6711,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 156
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/me/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6442,8 +6754,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 157
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/me/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6483,8 +6797,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 158
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/me/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6524,8 +6840,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 159
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/me/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6565,8 +6883,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 160
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/robot/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6606,8 +6926,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 161
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/robot/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6647,8 +6969,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 162
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/robot/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6688,8 +7012,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 163
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/robot/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6729,8 +7055,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 164
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/belt/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6770,8 +7098,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 165
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/belt/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6811,8 +7141,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 166
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/belt/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6852,8 +7184,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 167
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/belt/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6893,8 +7227,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 168
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bird/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6934,8 +7270,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 169
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bird/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -6975,8 +7313,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 170
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bird/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7016,8 +7356,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 171
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bird/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7057,8 +7399,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 172
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bug/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7098,8 +7442,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 173
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bug/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7139,8 +7485,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 174
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bug/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7180,8 +7528,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 175
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bug/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7221,8 +7571,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 176
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/crab/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7262,8 +7614,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 177
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/crab/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7303,8 +7657,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 178
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/crab/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7344,8 +7700,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 179
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/crab/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7385,8 +7743,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 180
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rocket/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7426,8 +7786,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 181
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rocket/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7467,8 +7829,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 182
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rocket/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7508,8 +7872,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 183
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rocket/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7549,8 +7915,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 184
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/skull/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7590,8 +7958,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 185
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/skull/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7631,8 +8001,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 186
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/skull/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7672,8 +8044,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 187
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/skull/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7713,8 +8087,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 188
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ghost/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7754,8 +8130,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 189
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ghost/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7795,8 +8173,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 190
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ghost/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7836,8 +8216,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 191
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ghost/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7877,8 +8259,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 192
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/statue/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7918,8 +8302,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 193
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/statue/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -7959,8 +8345,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 194
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/statue/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8000,8 +8388,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 195
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/statue/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8041,8 +8431,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 196
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bolt/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8082,8 +8474,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 197
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bolt/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8123,8 +8517,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 198
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bolt/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8164,8 +8560,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 199
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bolt/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8205,8 +8603,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 200
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hand/facing-right"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8246,8 +8646,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 201
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hand/facing-up"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8287,8 +8689,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 202
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hand/facing-left"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8328,8 +8732,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 203
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hand/facing-down"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8369,8 +8775,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 204
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bat"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8410,8 +8818,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 205
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bubble"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8451,8 +8861,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 206
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/cog"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8492,8 +8904,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 207
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/algae"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8533,8 +8947,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 208
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/flag"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8574,8 +8990,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 209
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/key"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8615,8 +9033,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 210
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/love"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8656,8 +9076,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 211
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/spike"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8697,8 +9119,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 212
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ufo"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8738,8 +9162,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 213
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/door"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8779,8 +9205,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 214
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/pillar"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8820,8 +9248,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 215
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rock"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8861,8 +9291,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 216
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/tile"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8902,8 +9334,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 217
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/fruit"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8943,8 +9377,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 218
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/moon"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -8984,8 +9420,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 219
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/tree"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9025,8 +9463,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 220
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/box"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9066,8 +9506,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 221
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/fire"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9107,8 +9549,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 222
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/gate"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9148,8 +9592,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 223
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/jelly"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9189,8 +9635,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 224
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/reed"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9230,8 +9678,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 225
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/sign"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9271,8 +9721,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 226
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/sun"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9312,8 +9764,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 227
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/fungi"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9353,8 +9807,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 228
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/husk"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9394,8 +9850,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 229
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/leaf"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9435,8 +9893,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 230
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/orb"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9476,8 +9936,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 231
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/trees"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9517,8 +9979,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 232
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/cake"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9558,8 +10022,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 233
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/dot"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9599,8 +10065,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 234
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/foliage"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9640,8 +10108,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 235
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rose"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9681,8 +10151,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 236
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/dust"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9722,8 +10194,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 237
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/fungus"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9763,8 +10237,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 238
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/husks"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9804,8 +10280,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 239
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/stump"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9845,8 +10323,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 240
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/blossom"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9886,8 +10366,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 241
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/star"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9927,8 +10409,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 242
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/flower"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -9968,8 +10452,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 243
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/level"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10009,8 +10495,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 244
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/cloud"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10050,8 +10538,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 245
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/fence"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10091,8 +10581,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 246
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/grass"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10132,8 +10624,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 247
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hedge"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10173,8 +10667,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 248
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ice"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10214,8 +10710,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 249
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/line"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10255,8 +10753,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 250
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/pipe"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10296,8 +10796,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 251
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rubble"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10337,8 +10839,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 252
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/wall"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10378,8 +10882,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 253
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/water"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10419,8 +10925,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 254
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/lava"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10460,8 +10968,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 255
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bog"
+                     }
                   },
                   {
                      "function": "set_custom_data",
@@ -10501,8 +11011,10 @@
                      }
                   },
                   {
-                     "function": "set_custom_model_data",
-                     "value": 256
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/brick"
+                     }
                   },
                   {
                      "function": "set_custom_data",

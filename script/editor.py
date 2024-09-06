@@ -29,21 +29,15 @@ def block_state(val):
 def create_blockstates(resources, resource_pack):
   blockstates = {}
   state_models = {}
-  item_models = {}
   for i,data in enumerate(resources.values()):
     block,state = block_state(i)
     blockstates[data.sprite] = (block, state)
     if block not in state_models:
       state_models[block] = {}
-      item_models[block] = []
     state_models[block][ops.state_string(state)] = {'model': data.model_resource, 'y':90}
-    item_models[block].append({"predicate":{"custom_model_data":data.custom_model_data},"model":data.model_resource})
-  for block,parent in [('chiseled_bookshelf', 'block/chiseled_bookshelf_inventory'), ('beehive','block/beehive'), ('bee_nest', 'block/bee_nest')]:
+  for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
     state_path = os.path.join(resource_pack, f'assets/minecraft/blockstates/{block}.json')
-    item_path = os.path.join(resource_pack, f'assets/minecraft/models/item/{block}.json')
     tat.delete_file(state_path)
-    tat.delete_file(item_path)
     if block in state_models:
       tat.write_json({"variants":state_models[block]}, state_path)
-      tat.write_json({"parent":parent,"overrides":item_models[block]}, item_path)
   return blockstates
