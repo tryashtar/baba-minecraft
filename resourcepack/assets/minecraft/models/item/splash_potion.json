@@ -18,139 +18,139 @@
          "predicate": {
             "custom_model_data": 1
          },
-         "model": "baba:particles/win/1"
+         "model": "baba:item/particles/win/1"
       },
       {
          "predicate": {
             "custom_model_data": 2
          },
-         "model": "baba:particles/win/2"
+         "model": "baba:item/particles/win/2"
       },
       {
          "predicate": {
             "custom_model_data": 3
          },
-         "model": "baba:particles/win/3"
+         "model": "baba:item/particles/win/3"
       },
       {
          "predicate": {
             "custom_model_data": 4
          },
-         "model": "baba:particles/win/4"
+         "model": "baba:item/particles/win/4"
       },
       {
          "predicate": {
             "custom_model_data": 5
          },
-         "model": "baba:particles/win/5"
+         "model": "baba:item/particles/win/5"
       },
       {
          "predicate": {
             "custom_model_data": 6
          },
-         "model": "baba:particles/win/6"
+         "model": "baba:item/particles/win/6"
       },
       {
          "predicate": {
             "custom_model_data": 7
          },
-         "model": "baba:particles/melt/1"
+         "model": "baba:item/particles/melt/1"
       },
       {
          "predicate": {
             "custom_model_data": 8
          },
-         "model": "baba:particles/melt/2"
+         "model": "baba:item/particles/melt/2"
       },
       {
          "predicate": {
             "custom_model_data": 9
          },
-         "model": "baba:particles/melt/3"
+         "model": "baba:item/particles/melt/3"
       },
       {
          "predicate": {
             "custom_model_data": 10
          },
-         "model": "baba:particles/melt/4"
+         "model": "baba:item/particles/melt/4"
       },
       {
          "predicate": {
             "custom_model_data": 11
          },
-         "model": "baba:particles/melt/5"
+         "model": "baba:item/particles/melt/5"
       },
       {
          "predicate": {
             "custom_model_data": 12
          },
-         "model": "baba:particles/melt/6"
+         "model": "baba:item/particles/melt/6"
       },
       {
          "predicate": {
             "custom_model_data": 13
          },
-         "model": "baba:particles/melt/7"
+         "model": "baba:item/particles/melt/7"
       },
       {
          "predicate": {
             "custom_model_data": 14
          },
-         "model": "baba:particles/melt/8"
+         "model": "baba:item/particles/melt/8"
       },
       {
          "predicate": {
             "custom_model_data": 15
          },
-         "model": "baba:particles/melt/9"
+         "model": "baba:item/particles/melt/9"
       },
       {
          "predicate": {
             "custom_model_data": 16
          },
-         "model": "baba:particles/sink/1"
+         "model": "baba:item/particles/sink/1"
       },
       {
          "predicate": {
             "custom_model_data": 17
          },
-         "model": "baba:particles/sink/2"
+         "model": "baba:item/particles/sink/2"
       },
       {
          "predicate": {
             "custom_model_data": 18
          },
-         "model": "baba:particles/sink/3"
+         "model": "baba:item/particles/sink/3"
       },
       {
          "predicate": {
             "custom_model_data": 19
          },
-         "model": "baba:particles/tele/1"
+         "model": "baba:item/particles/tele/1"
       },
       {
          "predicate": {
             "custom_model_data": 20
          },
-         "model": "baba:particles/tele/2"
+         "model": "baba:item/particles/tele/2"
       },
       {
          "predicate": {
             "custom_model_data": 21
          },
-         "model": "baba:particles/tele/3"
+         "model": "baba:item/particles/tele/3"
       },
       {
          "predicate": {
             "custom_model_data": 22
          },
-         "model": "baba:particles/tele/4"
+         "model": "baba:item/particles/tele/4"
       },
       {
          "predicate": {
             "custom_model_data": 23
          },
-         "model": "baba:particles/tele/5"
+         "model": "baba:item/particles/tele/5"
       }
    ]
 }

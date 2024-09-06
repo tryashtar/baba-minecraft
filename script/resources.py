@@ -54,7 +54,7 @@ def create_sprite_resources(source, resource_pack, namespace):
   cached_images = {}
   cached_models = {}
   texture_folder = os.path.join('assets', namespace, 'textures/sprites')
-  model_folder = os.path.join('assets', namespace, 'models/sprites')
+  model_folder = os.path.join('assets', namespace, 'models/item/sprites')
   tat.delete_folder(os.path.join(resource_pack, texture_folder))
   tat.delete_folder(os.path.join(resource_pack, model_folder))
   sprite_id = 0
@@ -96,7 +96,7 @@ def create_editor_resources(source, resource_pack, namespace):
   sprite_info = {}
   overrides = []
   texture_folder = os.path.join('assets', namespace, 'textures/editor')
-  model_folder = os.path.join('assets', namespace, 'models/editor')
+  model_folder = os.path.join('assets', namespace, 'models/item/editor')
   tat.delete_folder(os.path.join(resource_pack, texture_folder))
   tat.delete_folder(os.path.join(resource_pack, model_folder))
   sprite_id = 0

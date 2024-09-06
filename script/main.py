@@ -30,7 +30,7 @@ def generate_particles(particles):
   model = []
   tat.delete_folder('datapack/data/baba/function/display/particle/init')
   tat.delete_folder('datapack/data/baba/function/display/particle/tick')
-  tat.delete_folder('resourcepack/assets/baba/models/particles')
+  tat.delete_folder('resourcepack/assets/baba/models/item/particles')
   parent_init = ['tag @s add init']
   parent_tick = [
     'scoreboard players remove @s life 1',
@@ -67,8 +67,8 @@ def generate_particles(particles):
     tat.write_lines(init_lines, f'datapack/data/baba/function/display/particle/init/{name}.mcfunction')
     textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{name}')), key=int))
     for i,tx in enumerate(textures):
-      model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
-      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{name}/{tx}.json')
+      model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:item/particles/{name}/{tx}"})
+      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:item/particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/item/particles/{name}/{tx}.json')
       if i > 0:
         tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1

@@ -5,13 +5,13 @@
          "predicate": {
             "custom_model_data": 257
          },
-         "model": "baba:editor/cliff"
+         "model": "baba:item/editor/cliff"
       },
       {
          "predicate": {
             "custom_model_data": 258
          },
-         "model": "baba:editor/cursor"
+         "model": "baba:item/editor/cursor"
       }
    ]
 }

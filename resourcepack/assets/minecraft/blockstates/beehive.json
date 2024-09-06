@@ -1,11 +1,11 @@
 {
    "variants": {
       "honey_level=0,facing=north": {
-         "model": "baba:editor/cliff",
+         "model": "baba:item/editor/cliff",
          "y": 90
       },
       "honey_level=1,facing=north": {
-         "model": "baba:editor/cursor",
+         "model": "baba:item/editor/cursor",
          "y": 90
       }
    }

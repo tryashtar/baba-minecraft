@@ -1,7 +1,7 @@
 {
    "parent": "baba:sprite",
    "textures": {
-      "up": "baba:particles/tele/3"
+      "up": "baba:item/particles/melt/8"
    },
    "display": {
       "fixed": {
@@ -11,9 +11,9 @@
             0
          ],
          "scale": [
-            0.333333,
+            1,
             0.001,
-            0.333333
+            1
          ]
       }
    }
