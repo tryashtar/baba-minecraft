@@ -24,7 +24,7 @@ def terracotta_state(val, half):
 def generate(palettes, backgrounds, data_pack, resource_pack, namespace, data):
   texture_folder = os.path.join(resource_pack, 'assets', namespace, 'textures/background')
   model_folder = os.path.join(resource_pack, 'assets', namespace, 'models/background')
-  background_load = os.path.join(data_pack, 'data', namespace, 'functions/editor/load/background')
+  background_load = os.path.join(data_pack, 'data', namespace, 'function/editor/load/background')
   tat.delete_folder(model_folder)
   tat.delete_folder(background_load)
   blockstates = {}

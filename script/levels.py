@@ -17,8 +17,8 @@ def main():
       lua.execute(file.read())
    lua_vars = lua.globals()
    table = make_object_table(lua_vars)
-   tat.delete_folder('datapack/data/baba/functions/levels/load')
-   tat.delete_folder('datapack/data/baba/functions/levels/test')
+   tat.delete_folder('datapack/data/baba/function/levels/load')
+   tat.delete_folder('datapack/data/baba/function/levels/test')
    for pack in tat.get_folders(os.path.join(baba_folder, 'Data/Worlds')):
       pack_name = os.path.basename(pack)
       if pack_name == 'debug':
@@ -47,7 +47,7 @@ def main():
                f'# {tat.base_name(level_file)}',
                f'data modify storage baba:main level set value {storage}'
             ]
-            tat.write_lines(lines, f'datapack/data/baba/functions/levels/load/{pack_name}/{level_name}.mcfunction')
+            tat.write_lines(lines, f'datapack/data/baba/function/levels/load/{pack_name}/{level_name}.mcfunction')
             solution = f'script/level_solutions/{pack_name}/{level_name}.txt'
             if os.path.exists(solution):
                moves = []
@@ -84,7 +84,7 @@ def main():
                   'execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []',
                   'execute unless entity @a[tag=scrub,limit=1] run schedule function baba:levels/automate_step 1t',
                ]
-               tat.write_lines(test_level, f'datapack/data/baba/functions/levels/test/{pack_name}/{level_name}.mcfunction')
+               tat.write_lines(test_level, f'datapack/data/baba/function/levels/test/{pack_name}/{level_name}.mcfunction')
       if testable:
          test_all.extend([
             'data modify storage baba:main test_report set value {}',
@@ -96,7 +96,7 @@ def main():
             'execute positioned 0 1 0 run function baba:editor/load',
             'schedule function baba:levels/automate_step 1t'
          ])
-         tat.write_lines(test_all, f'datapack/data/baba/functions/levels/test/pack.{pack_name}.mcfunction')
+         tat.write_lines(test_all, f'datapack/data/baba/function/levels/test/pack.{pack_name}.mcfunction')
 
 def make_object_table(lua_vars):
    table1 = {}
