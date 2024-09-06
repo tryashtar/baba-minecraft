@@ -23,13 +23,13 @@ def main():
   generate_give_commands(editor_resources, blockstates)
   generate_packing_functions(source, blockstates)
   generate_particles(sprite_data['particles'])
-  tat.write_lines(data, os.path.join('datapack/data/baba/functions/meta/data.mcfunction'))
+  tat.write_lines(data, os.path.join('datapack/data/baba/function/meta/data.mcfunction'))
 
 def generate_particles(particles):
   cmd = 1
   model = []
-  tat.delete_folder('datapack/data/baba/functions/display/particle/init')
-  tat.delete_folder('datapack/data/baba/functions/display/particle/tick')
+  tat.delete_folder('datapack/data/baba/function/display/particle/init')
+  tat.delete_folder('datapack/data/baba/function/display/particle/tick')
   tat.delete_folder('resourcepack/assets/baba/models/particles')
   parent_init = ['tag @s add init']
   parent_tick = [
@@ -64,7 +64,7 @@ def generate_particles(particles):
       'data modify entity @s {} merge from storage baba:main merge',
       f'scoreboard players set @s life {life}',
     ])
-    tat.write_lines(init_lines, f'datapack/data/baba/functions/display/particle/init/{name}.mcfunction')
+    tat.write_lines(init_lines, f'datapack/data/baba/function/display/particle/init/{name}.mcfunction')
     textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{name}')), key=int))
     for i,tx in enumerate(textures):
       model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
@@ -72,14 +72,14 @@ def generate_particles(particles):
       if i > 0:
         tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1
-    tat.write_lines(tick_lines, f'datapack/data/baba/functions/display/particle/tick/{name}.mcfunction')
-  tat.write_lines(parent_init, 'datapack/data/baba/functions/display/particle/init.mcfunction')
-  tat.write_lines(parent_tick, 'datapack/data/baba/functions/display/particle/tick.mcfunction')
+    tat.write_lines(tick_lines, f'datapack/data/baba/function/display/particle/tick/{name}.mcfunction')
+  tat.write_lines(parent_init, 'datapack/data/baba/function/display/particle/init.mcfunction')
+  tat.write_lines(parent_tick, 'datapack/data/baba/function/display/particle/tick.mcfunction')
   tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json')
 
 def generate_packing_functions(source, blockstates):
-  tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
-  tat.delete_folder('datapack/data/baba/functions/editor/unpack/block')
+  tat.delete_folder('datapack/data/baba/function/editor/pack/block')
+  tat.delete_folder('datapack/data/baba/function/editor/unpack/block')
   pack_lines = []
   dir_checks = {}
   for obj in source.objects.values():
@@ -110,18 +110,18 @@ def generate_packing_functions(source, blockstates):
       else:
         lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run return run setblock ~ ~ ~ {block}[{state_str}]')
     if len(lines) > 0:
-      tat.write_lines(lines, f'datapack/data/baba/functions/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
+      tat.write_lines(lines, f'datapack/data/baba/function/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
     for block_dir,lines in dir_checks.items():
-      tat.write_lines(lines, f'datapack/data/baba/functions/editor/pack/block/{block_dir}.mcfunction')
+      tat.write_lines(lines, f'datapack/data/baba/function/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([
     'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".baba.extra',
     'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ bees[0].entity_data.extra',
     'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
-  tat.write_lines(pack_lines, 'datapack/data/baba/functions/editor/pack/block.mcfunction')
+  tat.write_lines(pack_lines, 'datapack/data/baba/function/editor/pack/block.mcfunction')
 
 def generate_give_commands(rsources, blockstates):
-  tat.delete_folder('datapack/data/baba/functions/dev/give')
+  tat.delete_folder('datapack/data/baba/function/dev/give')
   get_all = []
   loot_tables = {}
   for data in rsources.values():
@@ -131,13 +131,13 @@ def generate_give_commands(rsources, blockstates):
     simple_name = data.sprite.display(data.properties, ' ', '=')
     cmd = f'give @s {block}[item_name=\'"{simple_name}"\',custom_model_data={data.custom_model_data},block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
     get_all.append(cmd)
-    tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
+    tat.write_lines([cmd], f'datapack/data/baba/function/dev/give/{description}.mcfunction')
     if block not in loot_tables:
       loot_tables[block] = (list(state.keys()), [])
     loot_tables[block][1].append({"rolls":1,"entries":[{"type":"item","name":block,"conditions":[{"condition":"block_state_property","block":block,"properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_custom_model_data","value":data.custom_model_data},{"function":"set_custom_data","tag":"{baba:{tile:1b}}"}]}]})
-  tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
+  tat.write_lines(get_all, 'datapack/data/baba/function/dev/all_items.mcfunction')
   for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
-    path = f'datapack/data/minecraft/loot_tables/blocks/{block}.json'
+    path = f'datapack/data/minecraft/loot_table/blocks/{block}.json'
     tat.delete_file(path)
     if block in loot_tables:
       keys, table = loot_tables[block]
@@ -146,7 +146,7 @@ def generate_give_commands(rsources, blockstates):
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
   sprite_prop = source.properties['sprite']
-  tat.delete_folder('datapack/data/baba/functions/board/spawn')
+  tat.delete_folder('datapack/data/baba/function/board/spawn')
   objectlist = source.objects.values()
   for obj in objectlist:
     if obj.name == 'text':
@@ -173,7 +173,7 @@ def generate_spawn_functions(source):
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
         lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
-        tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
+        tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
       for spr,props in variables.items():
@@ -196,7 +196,7 @@ def generate_spawn_functions(source):
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
         lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
-        tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/{obj.id}.mcfunction')
+        tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):
   text_map = []
@@ -223,8 +223,8 @@ def generate_wiggle_fonts(source, rsources):
       tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
 
 def generate_update_function(source, rsources):
-  tat.delete_folder('datapack/data/baba/functions/display/object')
-  tat.delete_folder('datapack/data/baba/functions/display/text')
+  tat.delete_folder('datapack/data/baba/function/display/object')
+  tat.delete_folder('datapack/data/baba/function/display/text')
   linecache = {}
   text_prop = source.properties["text"]
   for obj in list(source.objects.values()) + list(source.alt_images.values()):
@@ -237,7 +237,7 @@ def generate_update_function(source, rsources):
       for spr,props in spritelist:
         textlines = [f'data modify storage baba:main model set value {rsources[spr].custom_model_data}']
         prop = props[text_prop]
-        tat.write_lines(textlines, f'datapack/data/baba/functions/display/text/{text_prop.convert(prop)}.mcfunction')
+        tat.write_lines(textlines, f'datapack/data/baba/function/display/text/{text_prop.convert(prop)}.mcfunction')
 
     else:
       if obj.name not in linecache:
@@ -249,7 +249,7 @@ def generate_update_function(source, rsources):
           lines.append(f'data modify storage baba:main model set value {rsources[spr].custom_model_data}')
         else:
           lines.append(f'execute if entity @s[{selector}] run return run data modify storage baba:main model set value {rsources[spr].custom_model_data}')
-    tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{ops.id_hash(obj.name)}.mcfunction')
+    tat.write_lines(lines, f'datapack/data/baba/function/display/object/{ops.id_hash(obj.name)}.mcfunction')
   for overlay in source.overlays.values():
     lines = []
     for prop,op in overlay.property_mods.items():
@@ -273,7 +273,7 @@ def generate_update_function(source, rsources):
     if overlay.name == 'level_icon':
       lines.append('execute if entity @s[tag=complete] run item modify entity @e[type=item_display,tag=baba.overlay,distance=..0.001] contents {function:"set_components",components:{potion_contents:{custom_color:4676017}}}')
     lines.append('execute as @e[type=item_display,tag=baba.overlay,distance=..0.001] run ride @s mount @e[type=item_display,tag=baba.object,distance=..0.001,limit=1]')
-    tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{overlay.name}.mcfunction')
+    tat.write_lines(lines, f'datapack/data/baba/function/display/object/{overlay.name}.mcfunction')
 
 if __name__ == '__main__':
   main()

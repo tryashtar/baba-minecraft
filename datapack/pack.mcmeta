@@ -1,6 +1,6 @@
 {
    "pack": {
-      "pack_format": 41,
+      "pack_format": 48,
       "description": {
          "translate": "baba.translate",
          "fallback": "%2$s",
@@ -46,15 +46,15 @@
       "block": [
          {
             "namespace": "^minecraft$",
-            "path": "^advancements/.*"
+            "path": "^advancement/.*"
          },
          {
             "namespace": "^minecraft$",
-            "path": "^recipes/.*"
+            "path": "^recipe/.*"
          },
          {
             "namespace": "^minecraft$",
-            "path": "^loot_tables/.*"
+            "path": "^loot_table/.*"
          }
       ]
    }
