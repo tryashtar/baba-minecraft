@@ -5,7 +5,7 @@
       "equipment": {
          "mainhand": {
             "predicates": {
-               "custom_data": "{use:'reverse'}"
+               "custom_data": "{baba:{use:'reverse'}}"
             }
          }
       }

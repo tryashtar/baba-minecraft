@@ -1,5 +1,5 @@
 data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","not_all","reparse","is_text","part.noun"]}
-item replace entity @s contents with potion[custom_data={text:"bat"}]
+item replace entity @s contents with potion[custom_data={baba:{text:"bat"}}]
 scoreboard players set @s appearance 397973
 scoreboard players set @s color 9330332
 scoreboard players set @s inactive_color 6306177

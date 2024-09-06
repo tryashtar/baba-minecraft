@@ -5,7 +5,7 @@
       "equipment": {
          "mainhand": {
             "predicates": {
-               "custom_data": "{use:'forward'}"
+               "custom_data": "{baba:{use:'forward'}}"
             }
          }
       }

@@ -13,5 +13,5 @@ execute store result score @s direction run data get storage baba:main level.til
 execute unless data storage baba:main level.tiles[0][0][0].scores.appearance run scoreboard players operation @s appearance = @s sprite
 scoreboard players set @s[scores={facing=0}] facing 4
 scoreboard players set @s frame 0
-data modify entity @s item.components."minecraft:custom_data" set from storage baba:main level.tiles[0][0][0].data
+item modify entity @s contents {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level.tiles[0][0][0].data",target:"baba"}]}
 data modify entity @s Tags append from storage baba:main level.tiles[0][0][0].tags[]

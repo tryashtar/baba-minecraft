@@ -41,7 +41,7 @@
                   },
                   {
                      "function": "set_custom_data",
-                     "tag": "{babatile:1b}"
+                     "tag": "{baba:{tile:1b}}"
                   }
                ]
             }
@@ -77,7 +77,7 @@
                   },
                   {
                      "function": "set_custom_data",
-                     "tag": "{babatile:1b}"
+                     "tag": "{baba:{tile:1b}}"
                   }
                ]
             }

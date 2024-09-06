@@ -4,7 +4,7 @@ tag @s add current_word
 scoreboard players operation word baba = @s[tag=prop.word] sprite
 scoreboard players operation word baba = @s[scores={sprite=397973}] text
 data modify storage baba:main parsing.word_text set value []
-data modify storage baba:main parsing.word_text append from entity @s item.components."minecraft:custom_data".text
+data modify storage baba:main parsing.word_text append from entity @s item.components."minecraft:custom_data".baba.text
 data modify storage baba:main parsing.word_ids set value [0]
 data modify storage baba:main parsing.current set value "word"
 execute store result storage baba:main parsing.word_ids[0] int 1 run scoreboard players get @s text_id

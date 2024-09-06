@@ -1,5 +1,5 @@
 data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object","spawn","assign","dirty","connector"]}
-item replace entity @s contents with potion[custom_data={text:"lava"}]
+item replace entity @s contents with potion[custom_data={baba:{text:"lava"}}]
 scoreboard players set @s appearance 237520
 scoreboard players set @s color 14981456
 scoreboard players set @s sprite 237520

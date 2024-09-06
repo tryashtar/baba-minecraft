@@ -1,5 +1,5 @@
-execute if score @s life matches 10 run data modify entity @s item.components."minecraft:custom_model_data" set value 2
-execute if score @s life matches 8 run data modify entity @s item.components."minecraft:custom_model_data" set value 3
-execute if score @s life matches 6 run data modify entity @s item.components."minecraft:custom_model_data" set value 4
-execute if score @s life matches 4 run data modify entity @s item.components."minecraft:custom_model_data" set value 5
-execute if score @s life matches 2 run data modify entity @s item.components."minecraft:custom_model_data" set value 6
+execute if score @s life matches 10 run item modify entity @s contents {function:"set_custom_model_data",value:2}
+execute if score @s life matches 8 run item modify entity @s contents {function:"set_custom_model_data",value:3}
+execute if score @s life matches 6 run item modify entity @s contents {function:"set_custom_model_data",value:4}
+execute if score @s life matches 4 run item modify entity @s contents {function:"set_custom_model_data",value:5}
+execute if score @s life matches 2 run item modify entity @s contents {function:"set_custom_model_data",value:6}
