@@ -1,9 +1,9 @@
 {
-   "type": "minecraft:block",
+   "type": "block",
    "functions": [
       {
-         "function": "minecraft:copy_state",
-         "block": "minecraft:beehive",
+         "function": "copy_state",
+         "block": "beehive",
          "properties": [
             "honey_level",
             "facing"
@@ -15,12 +15,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:beehive",
+               "type": "item",
+               "name": "beehive",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:beehive",
+                     "condition": "block_state_property",
+                     "block": "beehive",
                      "properties": {
                         "honey_level": "0",
                         "facing": "north"
@@ -36,8 +36,12 @@
                      }
                   },
                   {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:257}"
+                     "function": "set_custom_model_data",
+                     "value": 257
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
                   }
                ]
             }
@@ -47,12 +51,12 @@
          "rolls": 1,
          "entries": [
             {
-               "type": "minecraft:item",
-               "name": "minecraft:beehive",
+               "type": "item",
+               "name": "beehive",
                "conditions": [
                   {
-                     "condition": "minecraft:block_state_property",
-                     "block": "minecraft:beehive",
+                     "condition": "block_state_property",
+                     "block": "beehive",
                      "properties": {
                         "honey_level": "1",
                         "facing": "north"
@@ -68,8 +72,12 @@
                      }
                   },
                   {
-                     "function": "set_nbt",
-                     "tag": "{babatile:1b,CustomModelData:258}"
+                     "function": "set_custom_model_data",
+                     "value": 258
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
                   }
                ]
             }

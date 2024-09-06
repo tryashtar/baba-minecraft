@@ -1,8 +1,8 @@
-item replace entity @s container.0 with splash_potion{CustomModelData:7}
+item replace entity @s contents with splash_potion[custom_model_data=7]
 scoreboard players set color baba 7566195
 execute store result storage baba:main context.color int 1 run scoreboard players get color baba
 function baba:display/palette with storage baba:main context
-execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba
+execute store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get color baba
 data modify storage baba:main merge set value {start_interpolation:0,interpolation_duration:18,transformation:{translation:[0f,0f,0f]}}
 execute store result storage baba:main merge.transformation.translation[0] float 0.00001525878906250000 run random value -65536..65536
 execute store result storage baba:main merge.transformation.translation[2] float 0.00001525878906250000 run random value -65536..65536

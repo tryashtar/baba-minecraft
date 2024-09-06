@@ -1,20 +1,20 @@
 {
-   "condition": "minecraft:entity_scores",
+   "condition": "entity_scores",
    "entity": "this",
    "scores": {
       "color": {
          "min": {
-            "type": "minecraft:score",
+            "type": "score",
             "target": {
-               "type": "minecraft:fixed",
+               "type": "fixed",
                "name": "color"
             },
             "score": "baba"
          },
          "max": {
-            "type": "minecraft:score",
+            "type": "score",
             "target": {
-               "type": "minecraft:fixed",
+               "type": "fixed",
                "name": "color"
             },
             "score": "baba"

@@ -4,4 +4,4 @@ execute if score @s color_anim matches 1..3 run scoreboard players set color bab
 execute if score @s color_anim matches 4..6 run scoreboard players set color baba 5602016
 execute store result storage baba:main context.color int 1 run scoreboard players get color baba
 function baba:display/palette with storage baba:main context
-execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba
+execute store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get color baba

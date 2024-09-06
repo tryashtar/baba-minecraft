@@ -2,8 +2,8 @@ kill @e[tag=tile_editor_menu]
 
 scoreboard players set y baba 0
 scoreboard players set x baba 0
-execute store result score y baba run data get entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item.tag.level_data.link[0]
-execute store result score x baba run data get entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item.tag.level_data.link[1]
+execute store result score y baba run data get entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item.components."minecraft:custom_data".baba.level_data.link[0]
+execute store result score x baba run data get entity @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] item.components."minecraft:custom_data".baba.level_data.link[1]
 data modify storage baba:main link set value [-1,-1]
 data modify storage baba:main level_name set value '[{"text":"[","color":"red"},{"score":{"name":"y","objective":"baba"}},",",{"score":{"name":"x","objective":"baba"}},"]"]'
 execute as @e[type=item_display,tag=baba.object,tag=tile_editor_preview,sort=nearest,limit=1] run function baba:progress/get_name

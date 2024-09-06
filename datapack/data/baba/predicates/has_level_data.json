@@ -1,0 +1,13 @@
+{
+   "condition": "entity_properties",
+   "entity": "this",
+   "predicate": {
+      "slots": {
+         "contents": {
+            "predicates": {
+               "custom_data": "{baba:{level_data:{}}}"
+            }
+         }
+      }
+   }
+}

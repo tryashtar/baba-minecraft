@@ -44,18 +44,18 @@ def generate_particles(particles):
     parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
     parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
     init_lines = [
-      f'item replace entity @s container.0 with splash_potion{{CustomModelData:{cmd}}}'
+      f'item replace entity @s contents with splash_potion[custom_model_data={cmd}]'
     ]
     tick_lines = []
     if color := particle.get('color'):
       if color == 'preset':
-        init_lines.append('execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get @s color')
+        init_lines.append('execute store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get @s color')
       else:
         init_lines.extend([
           f'scoreboard players set color baba {int(color[1:],16)}',
           'execute store result storage baba:main context.color int 1 run scoreboard players get color baba',
           'function baba:display/palette with storage baba:main context',
-          'execute store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get color baba'
+          'execute store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get color baba'
         ])
     init_lines.extend([
       f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
@@ -70,12 +70,12 @@ def generate_particles(particles):
       model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
       tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{name}/{tx}.json')
       if i > 0:
-        tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run data modify entity @s item.tag.CustomModelData set value {cmd}')
+        tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1
     tat.write_lines(tick_lines, f'datapack/data/baba/functions/display/particle/tick/{name}.mcfunction')
   tat.write_lines(parent_init, 'datapack/data/baba/functions/display/particle/init.mcfunction')
   tat.write_lines(parent_tick, 'datapack/data/baba/functions/display/particle/tick.mcfunction')
-  tat.write_json({"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/potion_overlay","layer1":"minecraft:item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json')
+  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json')
 
 def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/functions/editor/pack/block')
@@ -114,8 +114,8 @@ def generate_packing_functions(source, blockstates):
     for block_dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/functions/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([
-    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].tag.extra',
-    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Bees[0].EntityData.extra',
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".baba.extra',
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ bees[0].entity_data.extra',
     'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/functions/editor/pack/block.mcfunction')
@@ -129,19 +129,19 @@ def generate_give_commands(rsources, blockstates):
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
     description = data.sprite.display(data.properties, '.', '-')
     simple_name = data.sprite.display(data.properties, ' ', '=')
-    cmd = f'give @s {block}{{babatile:1b,CustomModelData:{data.custom_model_data},BlockStateTag:{{{state_str}}},display:{{Name:\'{{"text":"{simple_name}","italic":false}}\'}}}}'
+    cmd = f'give @s {block}[item_name=\'"{simple_name}"\',custom_model_data={data.custom_model_data},block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/functions/dev/give/{description}.mcfunction')
     if block not in loot_tables:
       loot_tables[block] = (list(state.keys()), [])
-    loot_tables[block][1].append({"rolls":1,"entries":[{"type":"minecraft:item","name":f"minecraft:{block}","conditions":[{"condition":"minecraft:block_state_property","block":f"minecraft:{block}","properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_nbt","tag":f"{{babatile:1b,CustomModelData:{data.custom_model_data}}}"}]}]})
+    loot_tables[block][1].append({"rolls":1,"entries":[{"type":"item","name":block,"conditions":[{"condition":"block_state_property","block":block,"properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_custom_model_data","value":data.custom_model_data},{"function":"set_custom_data","tag":"{baba:{tile:1b}}"}]}]})
   tat.write_lines(get_all, 'datapack/data/baba/functions/dev/all_items.mcfunction')
   for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
     path = f'datapack/data/minecraft/loot_tables/blocks/{block}.json'
     tat.delete_file(path)
     if block in loot_tables:
       keys, table = loot_tables[block]
-      tat.write_json({"type":"minecraft:block","functions":[{"function":"minecraft:copy_state","block":f"minecraft:{block}","properties":keys}],"pools":table}, path)
+      tat.write_json({"type":"block","functions":[{"function":"copy_state","block":block,"properties":keys}],"pools":table}, path)
 
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
@@ -160,15 +160,19 @@ def generate_spawn_functions(source):
           if prop.kind == 'score':
             del props[prop]
             scores.append((prop,val))
-        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        summon, data = ops.create_data(props, [f'text:"{spr_text}"'])
         lines.append(f'data merge entity @s {summon}')
+        if len(data) > 0:
+          lines.append(f'item replace entity @s contents with potion[custom_data={{baba:{{{",".join(data)}}}}}]')
+        else:
+          lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
         lines.append('scoreboard players add @s text_id 1')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:same_text] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
@@ -181,13 +185,17 @@ def generate_spawn_functions(source):
             del props[prop]
             scores.append((prop,val))
         spr_text = spr.properties[sprite_prop]
-        summon = ops.create_data(props, [f'text:"{spr_text}"'])
+        summon, data = ops.create_data(props, [f'text:"{spr_text}"'])
         lines.append(f'data merge entity @s {summon}')
+        if len(data) > 0:
+          lines.append(f'item replace entity @s contents with potion[custom_data={{baba:{{{",".join(data)}}}}}]')
+        else:
+          lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:same_sprite] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/functions/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):
@@ -260,10 +268,10 @@ def generate_update_function(source, rsources):
       final = 'execute '
       for prop,spec in special_checks:
         final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"minecraft:potion",Count:1b,tag:{{CustomModelData:{rsources[spr].custom_model_data},CustomPotionColor:{int(spr.properties[source.properties["color"]][1:],16)}}}}},Tags:["baba.overlay"]}}'
+      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"potion",count:1,components:{{custom_model_data:{rsources[spr].custom_model_data},potion_contents:{{custom_color:{int(spr.properties[source.properties["color"]][1:],16)}}}}}}},Tags:["baba.overlay"]}}'
       lines.append(final)
     if overlay.name == 'level_icon':
-      lines.append('execute if entity @s[tag=complete] as @e[type=item_display,tag=baba.overlay,distance=..0.001] run data modify entity @s item.tag.CustomPotionColor set value 4676017')
+      lines.append('execute if entity @s[tag=complete] run item modify entity @e[type=item_display,tag=baba.overlay,distance=..0.001] contents {function:"set_components",components:{potion_contents:{custom_color:4676017}}}')
     lines.append('execute as @e[type=item_display,tag=baba.overlay,distance=..0.001] run ride @s mount @e[type=item_display,tag=baba.object,distance=..0.001,limit=1]')
     tat.write_lines(lines, f'datapack/data/baba/functions/display/object/{overlay.name}.mcfunction')
 

@@ -1,1 +1,1 @@
-give @s beehive{babatile:1b,CustomModelData:257,BlockStateTag:{honey_level:"0",facing:"north"},display:{Name:'{"text":"cliff","italic":false}'}}
+give @s beehive[item_name='"cliff"',custom_model_data=257,block_state={honey_level:"0",facing:"north"},custom_data={baba:{tile:1b}}]

@@ -111,5 +111,5 @@ scoreboard players set @e[tag=color33] color 7580659
 scoreboard players set @e[tag=color34] color 11981632
 scoreboard players set @e[tag=color35] color 723726
 
-execute as @e[type=item_display,tag=tile_editor_menu] store result entity @s item.tag.CustomPotionColor int 1 run scoreboard players get @s color
-execute as @e[type=item_display,tag=tile_editor_menu,predicate=baba:same_color] run data modify entity @s Glowing set value 1b
+execute as @e[type=item_display,tag=tile_editor_menu] store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get @s color
+execute as @e[type=item_display,tag=tile_editor_menu,predicate=baba:match_score/color] run data modify entity @s Glowing set value 1b

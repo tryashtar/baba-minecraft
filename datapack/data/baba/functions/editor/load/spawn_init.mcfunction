@@ -1,4 +1,5 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{id:"minecraft:potion",Count:1b},Tags:["baba.object"]}
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba.object"]}
+item replace entity @s contents with potion
 execute store result score @s sprite run data get storage baba:main level.tiles[0][0][0].scores.sprite
 execute store result score @s text run data get storage baba:main level.tiles[0][0][0].scores.text
 execute store result score @s facing run data get storage baba:main level.tiles[0][0][0].scores.facing
@@ -12,5 +13,5 @@ execute store result score @s direction run data get storage baba:main level.til
 execute unless data storage baba:main level.tiles[0][0][0].scores.appearance run scoreboard players operation @s appearance = @s sprite
 scoreboard players set @s[scores={facing=0}] facing 4
 scoreboard players set @s frame 0
-data modify entity @s item.tag set from storage baba:main level.tiles[0][0][0].data
+item modify entity @s contents {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level.tiles[0][0][0].data",target:"baba"}]}
 data modify entity @s Tags append from storage baba:main level.tiles[0][0][0].tags[]

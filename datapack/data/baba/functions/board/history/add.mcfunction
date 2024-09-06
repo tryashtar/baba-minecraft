@@ -1,6 +1,6 @@
 data modify storage baba:main objects append value {}
 data modify storage baba:main object set from entity @s {}
-data modify storage baba:main objects[-1].data set from storage baba:main object.item.tag
+data modify storage baba:main objects[-1].data set from storage baba:main object.item.components."minecraft:custom_data".baba
 data modify storage baba:main objects[-1].tags set from storage baba:main object.Tags
 execute store result storage baba:main objects[-1].scores.sprite int 1 run scoreboard players get @s sprite
 execute store result storage baba:main objects[-1].scores.appearance int 1 run scoreboard players get @s appearance

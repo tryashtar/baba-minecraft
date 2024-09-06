@@ -38,7 +38,7 @@ def create_blockstates(resources, resource_pack):
       item_models[block] = []
     state_models[block][ops.state_string(state)] = {'model': data.model_resource, 'y':90}
     item_models[block].append({"predicate":{"custom_model_data":data.custom_model_data},"model":data.model_resource})
-  for block,parent in [('chiseled_bookshelf', 'minecraft:block/chiseled_bookshelf_inventory'), ('beehive','minecraft:block/beehive'), ('bee_nest', 'minecraft:block/bee_nest')]:
+  for block,parent in [('chiseled_bookshelf', 'block/chiseled_bookshelf_inventory'), ('beehive','block/beehive'), ('bee_nest', 'block/bee_nest')]:
     state_path = os.path.join(resource_pack, f'assets/minecraft/blockstates/{block}.json')
     item_path = os.path.join(resource_pack, f'assets/minecraft/models/item/{block}.json')
     tat.delete_file(state_path)
