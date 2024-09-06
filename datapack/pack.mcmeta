@@ -46,15 +46,15 @@
       "block": [
          {
             "namespace": "^minecraft$",
-            "path": "^advancements/.*"
+            "path": "^advancement/.*"
          },
          {
             "namespace": "^minecraft$",
-            "path": "^recipes/.*"
+            "path": "^recipe/.*"
          },
          {
             "namespace": "^minecraft$",
-            "path": "^loot_tables/.*"
+            "path": "^loot_table/.*"
          }
       ]
    }
