@@ -1,5 +1,3 @@
-scoreboard players set @s wait 0
-item replace entity @s weapon.mainhand with apple
 kill @e[type=item,distance=..2]
 scoreboard players set direction baba 0
 function baba:board/step
