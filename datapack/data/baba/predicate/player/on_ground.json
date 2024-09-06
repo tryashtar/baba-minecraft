@@ -1,14 +1,9 @@
 {
-   "condition": "inverted",
-   "term": {
-      "condition": "entity_properties",
-      "entity": "this",
-      "predicate": {
-         "stepping_on": {
-            "block": {
-               "blocks": ["air"]
-            }
-         }
+   "condition": "entity_properties",
+   "entity": "this",
+   "predicate": {
+      "flags": {
+         "is_on_ground": true
       }
    }
 }
