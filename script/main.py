@@ -13,14 +13,14 @@ def main():
   source = sprite.SpriteCollection(sprite_data)
   sprite_resources = resources.create_sprite_resources(source, 'resourcepack', 'baba')
   editor_resources = resources.create_editor_resources(source, 'resourcepack', 'baba')
-  blockstates = editor.create_blockstates(editor_resources, 'resourcepack')
+  (items, blockstates) = editor.create_blockstates(source, editor_resources, 'resourcepack')
   data = []
   background.generate(source.palettes, ['island', 'flower'], 'datapack', 'resourcepack', 'baba', data)
   generate_reference_ids(source)
   generate_wiggle_fonts(source, sprite_resources)
   generate_spawn_functions(source)
   generate_update_function(source, sprite_resources)
-  generate_give_commands(editor_resources, blockstates)
+  generate_give_commands(source, items)
   generate_packing_functions(source, blockstates)
   generate_particles(sprite_data['particles'])
   tat.write_lines(data, os.path.join('datapack/data/baba/function/meta/data.mcfunction'))
@@ -115,15 +115,18 @@ def generate_packing_functions(source, blockstates):
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/function/editor/pack/block.mcfunction')
 
-def generate_give_commands(rsources, blockstates):
+def generate_give_commands(source, items):
   tat.delete_folder('datapack/data/baba/function/dev/give')
   get_all = []
   loot_tables = {}
-  for data in rsources.values():
-    block,state = blockstates[data.sprite]
+  for data in items.keys():
+    block,state = items[data]
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
-    description = data.sprite.display(data.properties, '.', '-')
-    simple_name = data.sprite.display(data.properties, ' ', '=')
+    properties = data.properties.copy()
+    if source.properties['facing'] in properties:
+      del properties[source.properties['facing']]
+    description = data.sprite.display(properties, '.', '-')
+    simple_name = data.sprite.display(properties, ' ', '=')
     cmd = f'give @s {block}[item_name=\'"{simple_name}"\',item_model="{data.model_component}",block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/function/dev/give/{description}.mcfunction')

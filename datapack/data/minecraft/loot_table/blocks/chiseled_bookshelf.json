@@ -10,8 +10,7 @@
             "slot_2_occupied",
             "slot_3_occupied",
             "slot_4_occupied",
-            "slot_5_occupied",
-            "facing"
+            "slot_5_occupied"
          ]
       }
    ],
@@ -32,8 +31,7 @@
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "north"
+                        "slot_5_occupied": "false"
                      }
                   }
                ],
@@ -41,7 +39,7 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing=right",
+                        "text": "baba",
                         "italic": false
                      }
                   },
@@ -75,8 +73,7 @@
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "north"
+                        "slot_5_occupied": "false"
                      }
                   }
                ],
@@ -84,14 +81,14 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing=up",
+                        "text": "keke",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_components",
                      "components": {
-                        "item_model": "baba:editor/baba/facing-up"
+                        "item_model": "baba:editor/keke/facing-right"
                      }
                   },
                   {
@@ -118,8 +115,7 @@
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "north"
+                        "slot_5_occupied": "false"
                      }
                   }
                ],
@@ -127,14 +123,14 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing=left",
+                        "text": "me",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_components",
                      "components": {
-                        "item_model": "baba:editor/baba/facing-left"
+                        "item_model": "baba:editor/me/facing-right"
                      }
                   },
                   {
@@ -161,8 +157,7 @@
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "north"
+                        "slot_5_occupied": "false"
                      }
                   }
                ],
@@ -170,14 +165,14 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "baba facing=down",
+                        "text": "robot",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_components",
                      "components": {
-                        "item_model": "baba:editor/baba/facing-down"
+                        "item_model": "baba:editor/robot/facing-right"
                      }
                   },
                   {
@@ -203,6 +198,426 @@
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "belt",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/belt/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "bird",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bird/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "bug",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bug/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "crab",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/crab/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "rocket",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/rocket/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "skull",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/skull/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "ghost",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/ghost/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "statue",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/statue/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "bolt",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/bolt/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "hand",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_components",
+                     "components": {
+                        "item_model": "baba:editor/hand/facing-right"
+                     }
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -243,9 +658,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -286,10 +701,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -329,10 +744,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -372,10 +787,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -415,10 +830,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -458,10 +873,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -501,10 +916,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -544,10 +959,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -587,10 +1002,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -630,10 +1045,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -673,10 +1088,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
                      }
@@ -716,9 +1131,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -759,9 +1174,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -802,9 +1217,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -845,9 +1260,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -888,9 +1303,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -931,9 +1346,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "north"
@@ -974,11 +1389,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1017,11 +1432,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1060,11 +1475,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1103,11 +1518,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1146,11 +1561,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1189,11 +1604,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1232,11 +1647,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1275,11 +1690,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1318,11 +1733,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1361,11 +1776,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "north"
                      }
                   }
@@ -1404,9 +1819,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1447,9 +1862,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1490,9 +1905,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1533,9 +1948,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1576,9 +1991,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1619,9 +2034,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -1662,10 +2077,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1705,10 +2120,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1748,10 +2163,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1791,10 +2206,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1834,10 +2249,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1877,10 +2292,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1920,10 +2335,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -1963,10 +2378,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -2006,10 +2421,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -2049,10 +2464,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
                      }
@@ -2092,9 +2507,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2135,9 +2550,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2178,9 +2593,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2221,9 +2636,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2264,9 +2679,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2307,9 +2722,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "north"
@@ -2352,10 +2767,10 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2395,10 +2810,10 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2438,10 +2853,10 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2481,10 +2896,10 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2524,10 +2939,10 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2567,10 +2982,10 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2610,10 +3025,10 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2653,10 +3068,10 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2696,10 +3111,10 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2739,10 +3154,10 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "north"
+                        "slot_5_occupied": "false",
+                        "facing": "south"
                      }
                   }
                ],
@@ -2782,8 +3197,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -2825,8 +3240,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -2868,8 +3283,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -2911,8 +3326,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -2954,8 +3369,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -2997,8 +3412,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -3040,8 +3455,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -3083,8 +3498,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
                      }
@@ -3126,9 +3541,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3169,9 +3584,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3212,9 +3627,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3255,9 +3670,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3298,9 +3713,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3341,9 +3756,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3384,9 +3799,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3427,9 +3842,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3470,9 +3885,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3513,9 +3928,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3556,9 +3971,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3599,9 +4014,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3642,9 +4057,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3685,9 +4100,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3728,9 +4143,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3771,9 +4186,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3814,9 +4229,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3857,9 +4272,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3900,9 +4315,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3943,9 +4358,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -3986,9 +4401,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -4029,9 +4444,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -4072,9 +4487,9 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -4115,9 +4530,9 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "south"
                      }
                   }
@@ -4158,8 +4573,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4201,8 +4616,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4244,8 +4659,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4287,8 +4702,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4330,8 +4745,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4373,8 +4788,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4416,8 +4831,8 @@
                         "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4459,8 +4874,8 @@
                         "slot_0_occupied": "true",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4500,12 +4915,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4543,12 +4958,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4586,12 +5001,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4629,12 +5044,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4672,12 +5087,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4715,12 +5130,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4758,12 +5173,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4801,12 +5216,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4844,12 +5259,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4887,12 +5302,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4930,12 +5345,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -4973,12 +5388,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5016,12 +5431,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5059,12 +5474,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5102,12 +5517,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5145,12 +5560,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5188,12 +5603,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5231,12 +5646,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "south"
+                        "slot_5_occupied": "false",
+                        "facing": "east"
                      }
                   }
                ],
@@ -5274,12 +5689,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5317,12 +5732,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5360,12 +5775,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5403,12 +5818,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5446,12 +5861,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5489,12 +5904,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
-                        "facing": "south"
+                        "facing": "east"
                      }
                   }
                ],
@@ -5532,11 +5947,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5575,11 +5990,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5618,11 +6033,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5661,11 +6076,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5704,11 +6119,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5747,11 +6162,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5790,11 +6205,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5833,11 +6248,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5876,11 +6291,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5919,11 +6334,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -5962,11 +6377,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6005,11 +6420,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6048,11 +6463,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6091,11 +6506,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6134,11 +6549,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6177,11 +6592,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
+                        "slot_3_occupied": "false",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6220,11 +6635,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6263,11 +6678,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6306,11 +6721,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6349,11 +6764,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6392,11 +6807,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6435,11 +6850,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6478,11 +6893,11 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
+                        "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
+                        "slot_5_occupied": "true",
                         "facing": "east"
                      }
                   }
@@ -6521,2248 +6936,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "keke facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/keke/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "keke facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/keke/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "keke facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/keke/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "keke facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/keke/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "me facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/me/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "me facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/me/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "me facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/me/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "me facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/me/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "robot facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/robot/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "robot facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/robot/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "robot facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/robot/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "robot facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/robot/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "belt facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/belt/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "belt facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/belt/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "belt facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/belt/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "belt facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/belt/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bird facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bird/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bird facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bird/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bird facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bird/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bird facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bird/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bug facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bug/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bug facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bug/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bug facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bug/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bug facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bug/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "crab facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/crab/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "crab facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/crab/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "crab facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/crab/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "crab facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/crab/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "rocket facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/rocket/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "rocket facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/rocket/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "rocket facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/rocket/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "rocket facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/rocket/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "skull facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/skull/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "skull facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/skull/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "skull facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/skull/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "skull facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/skull/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "ghost facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/ghost/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "ghost facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/ghost/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "ghost facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/ghost/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "ghost facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/ghost/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "statue facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/statue/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "statue facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/statue/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "statue facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/statue/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "statue facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/statue/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bolt facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bolt/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bolt facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bolt/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bolt facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bolt/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "bolt facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/bolt/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "hand facing=right",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/hand/facing-right"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "hand facing=up",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/hand/facing-up"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "hand facing=left",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/hand/facing-left"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "hand facing=down",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_components",
-                     "components": {
-                        "item_model": "baba:editor/hand/facing-down"
-                     }
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
                      }
                   }
                ],
@@ -8800,12 +6979,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
+                        "facing": "east"
                      }
                   }
                ],
@@ -8843,12 +7022,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
+                        "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
+                        "facing": "east"
                      }
                   }
                ],
