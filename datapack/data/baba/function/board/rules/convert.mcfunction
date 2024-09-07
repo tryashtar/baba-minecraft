@@ -1,3 +1,4 @@
+tag @s add baba
 tag @s add baba.rule
 tag @s add changed
 scoreboard players set @s text_disabled 0
