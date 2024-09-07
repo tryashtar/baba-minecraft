@@ -6,6 +6,7 @@ import resources
 import background
 import ops
 import editor
+import json
 
 def main():
   os.chdir('..')
@@ -115,10 +116,21 @@ def generate_packing_functions(source, blockstates):
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/function/editor/pack/block.mcfunction')
 
+def next_char(char):
+  char += 1
+  while chr(char) == '§':
+    char += 1
+  return char
+
 def generate_give_commands(source, items):
   tat.delete_folder('datapack/data/baba/function/dev/give')
   get_all = []
   loot_tables = {}
+  lang = {"baba.translate":"%1$s"}
+  font = [{"type":"space","advances":{" ":14}}]
+  message = ["\n"]
+  char = 33
+  i = 0
   for data in items.keys():
     block,state = items[data]
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
@@ -127,12 +139,21 @@ def generate_give_commands(source, items):
       del properties[source.properties['facing']]
     description = data.sprite.display(properties, '.', '-')
     simple_name = data.sprite.display(properties, ' ', '=')
+    lang[f'baba.sprite.{description}'] = chr(char) + chr(next_char(char)) + " "
+    font.append({"type":"bitmap","file":data.texture_resource + ".png","height":16,"ascent":12,"chars":[chr(char)]})
+    font.append({"type":"bitmap","file":data.texture_resource + ".png","height":-16,"ascent":-32768,"chars":[chr(next_char(char))]})
     cmd = f'give @s {block}[item_name=\'"{simple_name}"\',item_model="{data.model_component}",block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/function/dev/give/{description}.mcfunction')
+    message.append({"translate":"baba.translate","fallback":"%2$s","with":[{"translate":f'baba.sprite.{description}',"font":"baba:sprites"},simple_name],"clickEvent":{"action":"run_command","value":f'/function baba:dev/give/{description}'},"hoverEvent":{"action":"show_text","contents":simple_name}})
+    i += 1
+    if i % 12 == 0:
+      message.append("\n\n")
     if block not in loot_tables:
       loot_tables[block] = (list(state.keys()), [])
     loot_tables[block][1].append({"rolls":1,"entries":[{"type":"item","name":block,"conditions":[{"condition":"block_state_property","block":block,"properties":state}],"functions":[{"function":"set_name","name":{"text":simple_name,"italic":False}},{"function":"set_components","components":{"item_model":data.model_component}},{"function":"set_custom_data","tag":"{baba:{tile:1b}}"}]}]})
+    char = next_char(char)
+    char = next_char(char)
   tat.write_lines(get_all, 'datapack/data/baba/function/dev/all_items.mcfunction')
   for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
     path = f'datapack/data/minecraft/loot_table/blocks/{block}.json'
@@ -140,6 +161,12 @@ def generate_give_commands(source, items):
     if block in loot_tables:
       keys, table = loot_tables[block]
       tat.write_json({"type":"block","functions":[{"function":"copy_state","block":block,"properties":keys}],"pools":table}, path)
+  tat.write_json(lang, 'resourcepack/assets/baba/lang/en_us.json')
+  tat.write_json({"providers":font}, 'resourcepack/assets/baba/font/sprites.json')
+  give_menu = [
+    f'tellraw @s {json.dumps(message, separators=(',', ':'))}'
+  ]
+  tat.write_lines(give_menu, 'datapack/data/baba/function/dev/menu.mcfunction')
 
 def generate_spawn_functions(source):
   text_prop = source.properties['text']
