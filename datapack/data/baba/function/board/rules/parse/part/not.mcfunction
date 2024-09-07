@@ -1,5 +1,5 @@
 scoreboard players set parsed baba 1
-tag @e[type=item_display,tag=baba.object,tag=current_word] add current_not
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_word] add current_not
 execute if data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.unexpected set value 1b
 execute unless data storage baba:main parsing.state{not:"none"} run data modify storage baba:main parsing.not_ids append from storage baba:main parsing.word_ids[]
 execute unless data storage baba:main parsing.state{not:"none"} store success storage baba:main parsing.inverted byte 1 unless data storage baba:main parsing{inverted:1b}

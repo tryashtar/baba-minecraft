@@ -1,8 +1,8 @@
 scoreboard players set passed baba 0
 execute store result score inverted baba run data get storage baba:main condition.parameters[0].inverted
 execute store result score sprite baba run data get storage baba:main condition.parameters[0].text
-execute if score inverted baba matches 0 run tag @e[type=#baba:object,tag=baba.object,tag=!self,tag=!used,predicate=baba:match_score/sprite,distance=..0.1] add found
-execute if score inverted baba matches 1 run tag @e[type=#baba:object,tag=baba.object,tag=!self,tag=!used,tag=!not_all,predicate=!baba:match_score/sprite,distance=..0.1] add found
+execute if score inverted baba matches 0 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=!self,tag=!used,predicate=baba:match_score/sprite,distance=..0.1] add found
+execute if score inverted baba matches 1 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=!self,tag=!used,tag=!not_all,predicate=!baba:match_score/sprite,distance=..0.1] add found
 execute if entity @e[type=#baba:object,tag=baba.object,tag=found,limit=1] run scoreboard players set passed baba 1
 tag @e[type=#baba:object,tag=baba.object,tag=found,limit=1] add used
 tag @e[type=#baba:object,tag=baba.object,tag=found] remove found

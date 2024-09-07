@@ -1,5 +1,6 @@
 tag @s add baba
 tag @s add baba.rule
+tag @s add active
 tag @s add changed
 scoreboard players set @s text_disabled 0
 data modify storage baba:main rule set from storage baba:main new_rules[0]

@@ -1,15 +1,15 @@
 scoreboard players add sank baba 1
-summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
-execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle"]}
+summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1..3 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
+execute if score sank baba matches 1 run summon item_display ~ ~0.1 ~ {width:2f,height:0.1f,item_display:"fixed",Tags:["baba","baba.particle","sink_particle","active"]}
 # this doesn't consider rules that change the color of this object
 # ... which is actually correct behavior!
 scoreboard players operation color baba = @s color

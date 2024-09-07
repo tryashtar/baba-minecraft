@@ -1,5 +1,5 @@
 # full words are easy; we already know the part of speech, full word ID and string text
-tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_word] remove current_word
 tag @s add current_word
 scoreboard players operation word baba = @s[tag=prop.word] sprite
 scoreboard players operation word baba = @s[scores={sprite=397973}] text

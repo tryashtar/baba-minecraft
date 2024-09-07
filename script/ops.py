@@ -30,7 +30,7 @@ def create_selector(properties, extra_scores=None):
   return ','.join(result)
 
 def create_data(properties, extra_data=None):
-  tags = ['baba','baba.object','spawn','assign','dirty']
+  tags = ['baba','baba.object','spawn','active','assign','dirty']
   data = []
   scores = []
   nbt = ['teleport_duration:3','width:1f','height:0.1f','item_display:"fixed"']

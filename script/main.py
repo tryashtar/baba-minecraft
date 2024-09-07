@@ -195,11 +195,11 @@ def generate_spawn_functions(source):
           lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
-        lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=is_text] text_id')
+        lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text] text_id')
         lines.append('scoreboard players add @s text_id 1')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
@@ -222,7 +222,7 @@ def generate_spawn_functions(source):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):
@@ -295,7 +295,7 @@ def generate_update_function(source, rsources):
       final = 'execute '
       for prop,spec in special_checks:
         final += f'if score {prop.name} baba matches {prop.convert(spec)} '
-      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"potion",count:1,components:{{custom_model_data:{rsources[spr].custom_model_data},potion_contents:{{custom_color:{int(spr.properties[source.properties["color"]][1:],16)}}}}}}},Tags:["baba","baba.overlay"]}}'
+      final += f'if entity @s[{selector}] run summon item_display ~ ~ ~ {{teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",item:{{id:"potion",count:1,components:{{custom_model_data:{rsources[spr].custom_model_data},potion_contents:{{custom_color:{int(spr.properties[source.properties["color"]][1:],16)}}}}}}},Tags:["baba","baba.overlay","active"]}}'
       lines.append(final)
     if overlay.name == 'level_icon':
       lines.append('execute if entity @s[tag=complete] run item modify entity @e[type=item_display,tag=baba.overlay,distance=..0.001] contents {function:"set_components",components:{potion_contents:{custom_color:4676017}}}')

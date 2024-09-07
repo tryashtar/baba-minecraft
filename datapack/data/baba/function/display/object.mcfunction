@@ -1,5 +1,6 @@
-execute store result entity @s Pos[1] double 0.0001 run scoreboard players get @s z_layer
-execute at @s run tp @s ~ ~1.001 ~
+execute at @s align y run tp @s ~ ~0.001 ~
+execute store result storage baba:main context.z_layer double 0.0001 run scoreboard players get @s z_layer
+function baba:display/set_height with storage baba:main context
 execute store result storage baba:main context.appearance int 1 run scoreboard players get @s appearance
 function baba:display/object.macro with storage baba:main context
 execute at @s[tag=is_text,tag=!prop.hide] run function baba:display/object/text_overlay
