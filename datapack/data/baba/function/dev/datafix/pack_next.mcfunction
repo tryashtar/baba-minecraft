@@ -1,8 +1,8 @@
 scoreboard players add packed baba 1
 function baba:editor/pack
-setblock ~-1 ~-1 ~2 air
-setblock ~-1 ~-1 ~2 jukebox{RecordItem:{id:"tnt",count:1}}
-item modify block ~-1 ~-1 ~2 container.0 {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]}
+setblock ~ ~-2 ~ air
+setblock ~ ~-2 ~ jukebox{RecordItem:{id:"tnt",count:1}}
+item modify block ~ ~-2 ~ container.0 {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]}
 execute at @e[type=marker,tag=baba.storage] run fill ~ ~ ~ ~ ~ ~1 air
 execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~ jukebox{RecordItem:{id:"tnt",count:1}}
 execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~1 bamboo_wall_sign[facing=south]{front_text:{messages:['{"storage":"baba:main","nbt":"level.metadata.name","interpret":true}','""','""','""']}}
