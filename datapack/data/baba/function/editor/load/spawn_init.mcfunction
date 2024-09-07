@@ -1,4 +1,4 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba","baba.object"]}
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba","baba.object","active"]}
 item replace entity @s contents with potion
 execute store result score @s sprite run data get storage baba:main level.tiles[0][0][0].scores.sprite
 execute store result score @s text run data get storage baba:main level.tiles[0][0][0].scores.text

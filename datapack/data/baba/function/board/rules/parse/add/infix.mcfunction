@@ -1,6 +1,6 @@
-tag @e[type=item_display,tag=baba.object,tag=current_word] add all_rules
-tag @e[type=item_display,tag=baba.object,tag=current_not] add all_rules
-tag @e[type=item_display,tag=baba.object,tag=current_not] remove current_not
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_word] add all_rules
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_not] add all_rules
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_not] remove current_not
 data modify storage baba:main parsing.rules2[].text_ids append from storage baba:main parsing.word_ids[]
 data modify storage baba:main parsing.rules2[].text_ids append from storage baba:main parsing.not_ids[]
 data modify storage baba:main parsing.not_ids set value []

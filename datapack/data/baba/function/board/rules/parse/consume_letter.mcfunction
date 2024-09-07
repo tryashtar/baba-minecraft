@@ -1,7 +1,7 @@
 # letters are trickier, we need to assemble the word ID and string one character at a time
 # even more strangely, only words present in the "level palette" can be parsed
-execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=reparse,tag=part.letter,distance=..0.1] add first_word
-execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=baba.object,tag=current_word] remove current_word
+execute positioned ^ ^ ^1 run tag @e[type=item_display,tag=baba.object,tag=active,tag=reparse,tag=part.letter,distance=..0.1] add first_word
+execute if data storage baba:main parsing{current:"word"} run tag @e[type=item_display,tag=baba.object,tag=active,tag=current_word] remove current_word
 execute if data storage baba:main parsing{current:"word"} run data modify storage baba:main parsing merge value {current:"letter",word:0,word_text:[],word_ids:[]}
 tag @s add current_word
 

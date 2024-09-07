@@ -1,15 +1,15 @@
-tag @e[type=item_display,tag=baba.object,tag=maybe_all_rules] add all_rules
-tag @e[type=item_display,tag=baba.object,tag=maybe_all_rules] remove maybe_all_rules
+tag @e[type=item_display,tag=baba.object,tag=active,tag=maybe_all_rules] add all_rules
+tag @e[type=item_display,tag=baba.object,tag=active,tag=maybe_all_rules] remove maybe_all_rules
 data modify storage baba:main parsing.all_ids append from storage baba:main parsing.maybe_all_ids[]
 data modify storage baba:main parsing.maybe_all_ids set value []
 execute store result score rules baba run data get storage baba:main parsing.rules2
-scoreboard players operation @e[type=item_display,tag=baba.object,tag=current_word] text_used += rules baba
-scoreboard players operation @e[type=item_display,tag=baba.object,tag=current_not] text_used += rules baba
-scoreboard players operation @e[type=item_display,tag=baba.object,tag=last_verb] text_used += rules baba
-tag @e[type=item_display,tag=baba.object,tag=final_effect] remove final_effect
-tag @e[type=item_display,tag=baba.object,tag=current_word] add final_effect
-tag @e[type=item_display,tag=baba.object,tag=current_not] add final_effect
-tag @e[type=item_display,tag=baba.object,tag=current_not] remove current_not
+scoreboard players operation @e[type=item_display,tag=baba.object,tag=active,tag=current_word] text_used += rules baba
+scoreboard players operation @e[type=item_display,tag=baba.object,tag=active,tag=current_not] text_used += rules baba
+scoreboard players operation @e[type=item_display,tag=baba.object,tag=active,tag=last_verb] text_used += rules baba
+tag @e[type=item_display,tag=baba.object,tag=active,tag=final_effect] remove final_effect
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_word] add final_effect
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_not] add final_effect
+tag @e[type=item_display,tag=baba.object,tag=active,tag=current_not] remove current_not
 data modify storage baba:main parsing.complete set value 1b
 data modify storage baba:main parsing.rules3 append from storage baba:main parsing.rules2
 data modify storage baba:main parsing.rules3[-1][].text_ids append from storage baba:main parsing.word_ids[]
