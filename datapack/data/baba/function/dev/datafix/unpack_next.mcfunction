@@ -1,4 +1,3 @@
-setblock ~ ~3 ~ gold_block
 scoreboard players add packed baba 1
 data modify storage baba:main level set from block ~-1 ~-1 ~2 RecordItem.components."minecraft:custom_data".baba
 function baba:editor/unpack/grid

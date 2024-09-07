@@ -1,10 +1,8 @@
 scoreboard players add packed baba 1
 function baba:editor/pack
-fill ~-1 ~-1 ~ ~-1 ~-1 ~2 air
-setblock ~-1 ~-1 ~ oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:['""','{"text":"unpack","clickEvent":{"action":"run_command","value":"/function baba:dev/datafix/unpack_sign"}}','""','""']}}
-setblock ~-1 ~-1 ~1 oak_wall_sign[facing=west]{front_text:{color:"yellow",has_glowing_text:1b,messages:['""','{"text":"pack","clickEvent":{"action":"run_command","value":"/function baba:dev/datafix/pack_sign"}}','""','""']}}
+setblock ~-1 ~-1 ~2 air
 setblock ~-1 ~-1 ~2 jukebox{RecordItem:{id:"tnt",count:1}}
-data modify block ~-1 ~-1 ~2 RecordItem.components."minecraft:custom_data".baba set from storage baba:main level
+item modify block ~-1 ~-1 ~2 container.0 {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]}
 execute at @e[type=marker,tag=baba.storage] run fill ~ ~ ~ ~ ~ ~1 air
 execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~ jukebox{RecordItem:{id:"tnt",count:1}}
 execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~1 bamboo_wall_sign[facing=south]{front_text:{messages:['{"storage":"baba:main","nbt":"level.metadata.name","interpret":true}','""','""','""']}}
