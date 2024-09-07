@@ -1,3 +1,4 @@
+tag @s add baba
 tag @s add baba.conversion
 execute store result score @s sprite run data get storage baba:main level.metadata.conversions[0].target
 execute store result score @s text run data get storage baba:main level.metadata.conversions[0].text
