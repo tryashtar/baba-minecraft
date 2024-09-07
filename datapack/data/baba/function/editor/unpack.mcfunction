@@ -1,2 +1,2 @@
-# unpacks jukebox into bookshelves
+# unpacks storage into bookshelves
 function baba:editor/unpack/grid

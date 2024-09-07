@@ -1,3 +1,7 @@
+execute store result storage baba:main context.level_height int 1 run scoreboard players get @s level_height
+execute store result storage baba:main context.level_width int 1 run scoreboard players get @s level_width
+function baba:board/tag_objects with storage baba:main context
+
 # process movement in batches: you, then move, then shift
 # if anything in a batch fails to move, try again until everything either succeeds or fails
 # additionally, anything can only move once per batch

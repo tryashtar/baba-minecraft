@@ -11,7 +11,7 @@ tag @s[predicate=baba:player/using_reverse,scores={use=1..}] add reverse
 scoreboard players reset @s[scores={use=1..}] use
 
 execute if entity @s[tag=forward] store result score direction baba run data get storage baba:main moves[0]
-execute if entity @s[tag=forward] run function baba:board/step
+execute if entity @s[tag=forward] run function baba:input/step
 execute if entity @s[tag=forward] run data modify storage baba:main old_moves prepend from storage baba:main moves[0]
 execute if entity @s[tag=forward] run data remove storage baba:main moves[0]
 
