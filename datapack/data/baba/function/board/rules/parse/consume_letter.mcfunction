@@ -17,8 +17,8 @@ data modify storage baba:main parsing.word_ids append from storage baba:main id
 data modify storage baba:main alt_parsing set from storage baba:main parsing
 
 # these parts of speech only have one possible word, so a simple palette check
-execute if score word baba matches 10631 if data storage baba:main words{not:[10631]} run function baba:board/rules/parse/part/not
-execute if score word baba matches 1111 if data storage baba:main words{and:[1111]} run function baba:board/rules/parse/part/and
+execute if score word baba matches 10631 if data storage baba:main palette.words{not:[10631]} run function baba:board/rules/parse/part/not
+execute if score word baba matches 1111 if data storage baba:main palette.words{and:[1111]} run function baba:board/rules/parse/part/and
 
 # other parts of speech have many words, so see if the current word ID is present in their palette
 function baba:board/rules/parse/letter/check_noun with storage baba:main parsing

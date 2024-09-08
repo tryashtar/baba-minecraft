@@ -1,3 +1,5 @@
+data modify storage baba:main palette set from entity @s data.palette
+
 # any text marked for reparsing also marks all of its neighbors for reparsing, recursively
 # the reason for this is because we need to find the subject to start parsing from
 # all rules that contain these texts are removed
