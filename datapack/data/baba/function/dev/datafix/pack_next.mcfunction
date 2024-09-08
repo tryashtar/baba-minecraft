@@ -1,12 +1,12 @@
 scoreboard players add packed baba 1
 function baba:editor/pack
 setblock ~ ~-2 ~ air
-setblock ~ ~-2 ~ jukebox{RecordItem:{id:"tnt",count:1}}
-item modify block ~ ~-2 ~ container.0 {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]}
+setblock ~ ~-2 ~ decorated_pot{item:{id:"music_disc_wait",count:1}}
+item modify block ~ ~-2 ~ container.0 [{function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]},{function:"set_name",entity:"this",target:"item_name",name:{storage:"baba:main",nbt:"level.metadata.name",interpret:1b}}]
 execute at @e[type=marker,tag=baba.storage] run fill ~ ~ ~ ~ ~ ~1 air
-execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~ jukebox{RecordItem:{id:"tnt",count:1}}
+execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~ decorated_pot{item:{id:"music_disc_wait",count:1}}
 execute at @e[type=marker,tag=baba.storage] run setblock ~ ~ ~1 bamboo_wall_sign[facing=south]{front_text:{messages:['{"storage":"baba:main","nbt":"level.metadata.name","interpret":true}','""','""','""']}}
-execute at @e[type=marker,tag=baba.storage] run data modify block ~ ~ ~ RecordItem.components."minecraft:custom_data".baba set from storage baba:main level
+execute at @e[type=marker,tag=baba.storage] run item modify block ~ ~ ~ container.0 [{function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]},{function:"set_name",entity:"this",target:"item_name",name:{storage:"baba:main",nbt:"level.metadata.name",interpret:1b}}]
 execute store result score height baba run data get storage baba:main level.tiles
 execute store result score width baba run data get storage baba:main level.tiles[0]
 execute store result score saved baba if data storage baba:main level.tiles[][][]
