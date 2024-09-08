@@ -23,6 +23,7 @@ def main():
   generate_update_function(source, sprite_resources)
   generate_give_commands(source, items)
   generate_packing_functions(source, blockstates)
+  generate_swapping_function(source, blockstates)
   generate_particles(sprite_data['particles'])
   tat.write_lines(data, os.path.join('datapack/data/baba/function/meta/data.mcfunction'))
 
@@ -73,6 +74,53 @@ def generate_particles(particles):
   tat.write_lines(parent_init, 'datapack/data/baba/function/display/particle/init.mcfunction')
   tat.write_lines(parent_tick, 'datapack/data/baba/function/display/particle/tick.mcfunction')
 
+def generate_swapping_function(source, blockstates):
+  sprite_prop = source.properties['sprite']
+  text_prop = source.properties['text']
+  swap = [
+    'data modify storage baba:main extra set value 0b',
+    'data modify storage baba:main extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".baba',
+    'data modify storage baba:main extra set from block ~ ~ ~ bees[0].entity_data.baba',
+    'scoreboard players set block baba 0',
+  ]
+  swap2 = [
+    'execute if score block baba matches 1.. run setblock ~ ~ ~ air'
+  ]
+  pairs = {}
+  for spr in blockstates.keys():
+    if spr.properties[sprite_prop] == 'text':
+      text = spr.properties[text_prop]
+      if text not in pairs:
+        pairs[text] = {}
+      pairs[text]['text'] = spr
+    else:
+      obj = spr.properties[sprite_prop]
+      if obj not in pairs:
+        pairs[obj] = {}
+      if 'sprite' not in pairs[obj]:
+        pairs[obj]['sprite'] = []
+      pairs[obj]['sprite'].append(spr)
+  i = 1
+  for pair in pairs.values():
+    if 'text' in pair and 'sprite' in pair:
+      (text_block, text_state) = blockstates[pair['text']]
+      (obj_block, obj_state) = blockstates[pair['sprite'][0]]
+      swap.append(f'execute if block ~ ~ ~ {text_block}[{ops.state_string(text_state)}] run scoreboard players set block baba {i}')
+      swap2.append(f'execute if score block baba matches {i} run setblock ~ ~ ~ {obj_block}[{ops.state_string(obj_state)}]')
+      for entry in pair['sprite']:
+        (obj_block, obj_state) = blockstates[entry]
+        swap.append(f'execute if block ~ ~ ~ {obj_block}[{ops.state_string(obj_state)}] run scoreboard players set block baba {i+1}')
+        swap2.append(f'execute if score block baba matches {i+1} run setblock ~ ~ ~ {text_block}[{ops.state_string(text_state)}]')
+      i += 2
+  swap.extend(swap2)
+  swap.extend([
+    'execute unless data storage baba:main {extra:0b} run data modify block ~ ~ ~ Items set value [{id:"book",count:1}]',
+    'execute unless data storage baba:main {extra:0b} run data modify block ~ ~ ~ bees set value [{entity_data:{},ticks_in_hive:0,min_ticks_in_hive:0}]',
+    'execute unless data storage baba:main {extra:0b} run data modify block ~ ~ ~ Items[0].components."minecraft:custom_data".baba set from storage baba:main extra',
+    'execute unless data storage baba:main {extra:0b} run data modify block ~ ~ ~ bees[0].entity_data.baba set from storage baba:main extra',
+  ])
+  tat.write_lines(swap, 'datapack/data/baba/function/dev/tool/text_swap/use.mcfunction')
+
 def generate_packing_functions(source, blockstates):
   tat.delete_folder('datapack/data/baba/function/editor/pack/block')
   tat.delete_folder('datapack/data/baba/function/editor/unpack/block')
@@ -110,8 +158,8 @@ def generate_packing_functions(source, blockstates):
     for block_dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/function/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([
-    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".baba.extra',
-    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ bees[0].entity_data.extra',
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ Items[0].components."minecraft:custom_data".baba',
+    'data modify storage baba:main tile[-1].extra set from block ~ ~ ~ bees[0].entity_data.baba',
     'execute positioned ~ ~1 ~ if block ~ ~ ~ #baba:editor_blocks run function baba:editor/pack/block'
   ])
   tat.write_lines(pack_lines, 'datapack/data/baba/function/editor/pack/block.mcfunction')
