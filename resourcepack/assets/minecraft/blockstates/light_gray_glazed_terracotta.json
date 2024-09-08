@@ -1,11 +1,19 @@
 {
    "variants": {
-      "facing=south": {
+      "facing=north": {
          "model": "baba:background/default_wall",
          "y": 90
       },
-      "facing=west": {
+      "facing=south": {
          "model": "baba:background/ocean_wall",
+         "y": 90
+      },
+      "facing=east": {
+         "model": "baba:background/factory_wall",
+         "y": 90
+      },
+      "facing=west": {
+         "model": "baba:background/ruins_wall",
          "y": 90
       }
    }
