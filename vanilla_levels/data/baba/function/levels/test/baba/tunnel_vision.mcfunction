@@ -1,8 +1,5 @@
 # test "tunnel vision" in 47 moves
 function baba:levels/load/baba/tunnel_vision
-data modify storage baba:main level_list set value []
-data modify storage baba:main moves_list set value []
 data modify storage baba:main moves set value [1,1,1,1,1,3,1,1,4,4,1,4,4,4,1,1,1,2,4,1,1,3,4,4,1,3,3,4,4,4,2,2,2,2,2,2,4,4,4,2,2,2,4,4,4,4,4]
-execute positioned 0 1 0 run function baba:editor/load
-execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []
-execute unless entity @a[tag=scrub,limit=1] run schedule function baba:dev/tests/automate_step 1t
+execute positioned 0 1 0 run function baba:dev/tests/load
+schedule function baba:dev/tests/automate_step_schedule 1t

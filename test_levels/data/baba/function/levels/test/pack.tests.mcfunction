@@ -292,4 +292,4 @@ data modify storage baba:main moves set from storage baba:main moves_list[0]
 data remove storage baba:main level_list[0]
 data remove storage baba:main moves_list[0]
 execute positioned 0 1 0 run function baba:editor/load
-schedule function baba:dev/tests/automate_step 1t
+schedule function baba:dev/tests/automate_step_schedule 1t

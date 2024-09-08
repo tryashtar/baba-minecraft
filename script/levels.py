@@ -81,12 +81,9 @@ def main():
                test_level = [
                   f'# test "{level.name}" in {len(moves)} moves',
                   f'function baba:levels/load/{pack_name}/{level_name}',
-                  'data modify storage baba:main level_list set value []',
-                  'data modify storage baba:main moves_list set value []',
                   f'data modify storage baba:main moves set value {move_storage}',
-                  'execute positioned 0 1 0 run function baba:editor/load',
-                  'execute if entity @a[tag=scrub,limit=1] run data modify storage baba:main old_moves set value []',
-                  'execute unless entity @a[tag=scrub,limit=1] run schedule function baba:dev/tests/automate_step 1t',
+                  'execute positioned 0 1 0 run function baba:dev/tests/load',
+                  'schedule function baba:dev/tests/automate_step_schedule 1t'
                ]
                tat.write_lines(test_level, f'{datapack}/data/baba/function/levels/test/{pack_name}/{level_name}.mcfunction')
       if testable:
@@ -98,7 +95,7 @@ def main():
             'data remove storage baba:main level_list[0]',
             'data remove storage baba:main moves_list[0]',
             'execute positioned 0 1 0 run function baba:editor/load',
-            'schedule function baba:dev/tests/automate_step 1t'
+            'schedule function baba:dev/tests/automate_step_schedule 1t'
          ])
          tat.write_lines(test_all, f'{datapack}/data/baba/function/levels/test/pack.{pack_name}.mcfunction')
 

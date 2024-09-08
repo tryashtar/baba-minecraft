@@ -2,6 +2,7 @@ tag @s add baba
 tag @s add baba.board
 data modify entity @s data set value {rule_history:[]}
 data modify entity @s data.color_palette set from storage baba:main level.metadata.palette
+data modify entity @s CustomName set from storage baba:main level.metadata.name
 
 execute store result score @s level_height run data get storage baba:main level.tiles
 execute store result score @s level_width run data get storage baba:main level.tiles[0]
