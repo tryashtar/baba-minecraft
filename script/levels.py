@@ -31,10 +31,8 @@ def main():
          datapack = 'test_levels'
       print(pack_name)
       testable = False
-      test_all = [
-         'data modify storage baba:main level_list set value []',
-         'data modify storage baba:main moves_list set value []',
-      ]
+      test_all = []
+      y = 1
       for level_file in sorted(tat.get_files(os.path.join(baba_folder, pack))):
          if tat.extension(level_file) != '.ld':
             continue
@@ -75,9 +73,10 @@ def main():
                move_storage = '[' + ','.join(map(str, moves)) + ']'
                test_all.extend([
                   f'function baba:levels/load/{pack_name}/{level_name}',
-                  'data modify storage baba:main level_list append from storage baba:main level',
-                  f'data modify storage baba:main moves_list append value {move_storage}',
+                  f'data modify storage baba:main moves set value {move_storage}',
+                  f'execute positioned 13 {y} -64 run function baba:dev/tests/load',
                ])
+               y += 3
                test_level = [
                   f'# test "{level.name}" in {len(moves)} moves',
                   f'function baba:levels/load/{pack_name}/{level_name}',
@@ -88,13 +87,6 @@ def main():
                tat.write_lines(test_level, f'{datapack}/data/baba/function/levels/test/{pack_name}/{level_name}.mcfunction')
       if testable:
          test_all.extend([
-            'data modify storage baba:main test_report set value {}',
-            'scoreboard players set batch baba 1',
-            'data modify storage baba:main level set from storage baba:main level_list[0]',
-            'data modify storage baba:main moves set from storage baba:main moves_list[0]',
-            'data remove storage baba:main level_list[0]',
-            'data remove storage baba:main moves_list[0]',
-            'execute positioned 0 1 0 run function baba:editor/load',
             'schedule function baba:dev/tests/automate_step_schedule 1t'
          ])
          tat.write_lines(test_all, f'{datapack}/data/baba/function/levels/test/pack.{pack_name}.mcfunction')
