@@ -1,5 +1,6 @@
 execute store result storage baba:main context.level_height int 1 run scoreboard players get @s level_height
 execute store result storage baba:main context.level_width int 1 run scoreboard players get @s level_width
+data modify storage baba:main context.palette set from entity @s data.color_palette
 function baba:board/tag_objects with storage baba:main context
 
 # process movement in batches: you, then move, then shift
