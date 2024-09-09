@@ -3,7 +3,7 @@ data modify storage baba:main level set from block ~ ~-2 ~ item.components."mine
 execute store result score height baba run data get storage baba:main level.tiles
 execute store result score width baba run data get storage baba:main level.tiles[0]
 execute store result score saved baba if data storage baba:main level.tiles[][][]
-function baba:editor/unpack/grid
+execute rotated 90 -90 run function baba:editor/unpack
 setblock ~-1 ~-1 ~3 bamboo_wall_sign[facing=west]{front_text:{messages:['""','{"text":"Play","clickEvent":{"action":"run_command","value":"/function baba:dev/board/play"}}','""','""']}}
 execute store result score x baba run data get entity @s Pos[0]
 execute store result score z baba run data get entity @s Pos[2]
