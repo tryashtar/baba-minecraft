@@ -1,1 +1,1 @@
-give @s beehive[item_name='"cliff"',item_model="baba:editor/cliff",block_state={honey_level:"0",facing:"north"},custom_data={baba:{tile:1b}}]
+give @s chiseled_bookshelf[item_name='"cliff"',item_model="baba:editor/cliff",block_state={slot_0_occupied:"true",slot_1_occupied:"false",slot_2_occupied:"false",slot_3_occupied:"true",slot_4_occupied:"false",slot_5_occupied:"true",facing:"north"},custom_data={baba:{tile:1b}}]

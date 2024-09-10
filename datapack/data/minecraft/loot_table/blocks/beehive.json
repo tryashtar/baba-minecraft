@@ -31,14 +31,14 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cliff",
+                        "text": "letter ab",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_components",
                      "components": {
-                        "item_model": "baba:editor/cliff"
+                        "item_model": "baba:editor/letter/ab"
                      }
                   },
                   {
@@ -69,14 +69,14 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "cursor",
+                        "text": "letter ba",
                         "italic": false
                      }
                   },
                   {
                      "function": "set_components",
                      "components": {
-                        "item_model": "baba:editor/cursor"
+                        "item_model": "baba:editor/letter/ba"
                      }
                   },
                   {

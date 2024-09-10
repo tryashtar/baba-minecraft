@@ -21,7 +21,7 @@ def main():
   generate_wiggle_fonts(source, sprite_resources)
   generate_spawn_functions(source)
   generate_update_function(source, sprite_resources)
-  generate_give_commands(source, items)
+  generate_give_commands(items)
   generate_packing_functions(source, blockstates)
   generate_swapping_function(source, blockstates)
   generate_particles(sprite_data['particles'])
@@ -151,7 +151,7 @@ def next_char(char):
     char += 1
   return char
 
-def generate_give_commands(source, items):
+def generate_give_commands(items):
   tat.delete_folder('datapack/data/baba/function/dev/give')
   get_all = []
   loot_tables = {}
@@ -160,12 +160,9 @@ def generate_give_commands(source, items):
   message = ["\n"]
   char = 33
   i = 0
-  for data in items.keys():
-    block,state = items[data]
+  for data,(block, state) in items.items():
     state_str = ','.join(map(lambda x:f'{x[0]}:"{str(x[1]).lower()}"', state.items()))
     properties = data.properties.copy()
-    if source.properties['facing'] in properties:
-      del properties[source.properties['facing']]
     description = data.sprite.display(properties, '.', '-')
     simple_name = data.sprite.display(properties, ' ', '=')
     lang[f'baba.sprite.{description}'] = chr(char) + chr(next_char(char)) + " "

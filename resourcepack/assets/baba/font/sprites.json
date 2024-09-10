@@ -8,7 +8,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/baba/facing-right.png",
+         "file": "baba:editor/text/algae.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -17,7 +17,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/baba/facing-right.png",
+         "file": "baba:editor/text/algae.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -26,7 +26,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/keke/facing-right.png",
+         "file": "baba:editor/algae.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -35,7 +35,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/keke/facing-right.png",
+         "file": "baba:editor/algae.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -44,7 +44,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/me/facing-right.png",
+         "file": "baba:editor/text/baba.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -53,7 +53,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/me/facing-right.png",
+         "file": "baba:editor/text/baba.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -62,7 +62,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/robot/facing-right.png",
+         "file": "baba:editor/baba/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -71,7 +71,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/robot/facing-right.png",
+         "file": "baba:editor/baba/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -80,7 +80,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/belt/facing-right.png",
+         "file": "baba:editor/baba/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -89,7 +89,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/belt/facing-right.png",
+         "file": "baba:editor/baba/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -98,7 +98,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bird/facing-right.png",
+         "file": "baba:editor/baba/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -107,7 +107,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bird/facing-right.png",
+         "file": "baba:editor/baba/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -116,7 +116,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bug/facing-right.png",
+         "file": "baba:editor/baba/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -125,7 +125,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bug/facing-right.png",
+         "file": "baba:editor/baba/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -134,7 +134,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/crab/facing-right.png",
+         "file": "baba:editor/text/bat.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -143,7 +143,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/crab/facing-right.png",
+         "file": "baba:editor/text/bat.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -152,7 +152,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rocket/facing-right.png",
+         "file": "baba:editor/bat.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -161,7 +161,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rocket/facing-right.png",
+         "file": "baba:editor/bat.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -170,7 +170,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/skull/facing-right.png",
+         "file": "baba:editor/text/belt.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -179,7 +179,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/skull/facing-right.png",
+         "file": "baba:editor/text/belt.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -188,7 +188,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ghost/facing-right.png",
+         "file": "baba:editor/belt/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -197,7 +197,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ghost/facing-right.png",
+         "file": "baba:editor/belt/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -206,7 +206,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/statue/facing-right.png",
+         "file": "baba:editor/belt/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -215,7 +215,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/statue/facing-right.png",
+         "file": "baba:editor/belt/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -224,7 +224,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bolt/facing-right.png",
+         "file": "baba:editor/belt/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -233,7 +233,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bolt/facing-right.png",
+         "file": "baba:editor/belt/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -242,7 +242,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/hand/facing-right.png",
+         "file": "baba:editor/belt/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -251,7 +251,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/hand/facing-right.png",
+         "file": "baba:editor/belt/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -260,7 +260,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/baba.png",
+         "file": "baba:editor/text/bird.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -269,7 +269,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/baba.png",
+         "file": "baba:editor/text/bird.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -278,7 +278,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/keke.png",
+         "file": "baba:editor/bird/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -287,7 +287,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/keke.png",
+         "file": "baba:editor/bird/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -296,7 +296,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/me.png",
+         "file": "baba:editor/bird/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -305,7 +305,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/me.png",
+         "file": "baba:editor/bird/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -314,7 +314,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/robot.png",
+         "file": "baba:editor/bird/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -323,7 +323,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/robot.png",
+         "file": "baba:editor/bird/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -332,7 +332,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/belt.png",
+         "file": "baba:editor/bird/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -341,7 +341,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/belt.png",
+         "file": "baba:editor/bird/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -350,7 +350,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bird.png",
+         "file": "baba:editor/blossom.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -359,7 +359,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bird.png",
+         "file": "baba:editor/blossom.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -368,7 +368,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bug.png",
+         "file": "baba:editor/text/bog.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -377,7 +377,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bug.png",
+         "file": "baba:editor/text/bog.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -386,7 +386,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/crab.png",
+         "file": "baba:editor/bog.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -395,7 +395,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/crab.png",
+         "file": "baba:editor/bog.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -404,7 +404,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rocket.png",
+         "file": "baba:editor/text/bolt.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -413,7 +413,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rocket.png",
+         "file": "baba:editor/text/bolt.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -422,7 +422,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/skull.png",
+         "file": "baba:editor/bolt/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -431,7 +431,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/skull.png",
+         "file": "baba:editor/bolt/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -440,7 +440,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ghost.png",
+         "file": "baba:editor/bolt/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -449,7 +449,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ghost.png",
+         "file": "baba:editor/bolt/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -458,7 +458,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/statue.png",
+         "file": "baba:editor/bolt/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -467,7 +467,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/statue.png",
+         "file": "baba:editor/bolt/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -476,7 +476,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bolt.png",
+         "file": "baba:editor/bolt/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -485,7 +485,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bolt.png",
+         "file": "baba:editor/bolt/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -494,7 +494,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hand.png",
+         "file": "baba:editor/text/box.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -503,7 +503,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hand.png",
+         "file": "baba:editor/text/box.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -512,7 +512,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bat.png",
+         "file": "baba:editor/box.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -521,7 +521,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bat.png",
+         "file": "baba:editor/box.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -530,7 +530,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bubble.png",
+         "file": "baba:editor/text/brick.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -539,7 +539,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bubble.png",
+         "file": "baba:editor/text/brick.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -548,7 +548,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cog.png",
+         "file": "baba:editor/brick.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -557,7 +557,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cog.png",
+         "file": "baba:editor/brick.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -566,7 +566,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/algae.png",
+         "file": "baba:editor/text/bubble.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -575,7 +575,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/algae.png",
+         "file": "baba:editor/text/bubble.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -584,7 +584,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/flag.png",
+         "file": "baba:editor/bubble.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -593,7 +593,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/flag.png",
+         "file": "baba:editor/bubble.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -602,7 +602,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/key.png",
+         "file": "baba:editor/text/bug.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -611,7 +611,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/key.png",
+         "file": "baba:editor/text/bug.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -620,7 +620,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/love.png",
+         "file": "baba:editor/bug/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -629,7 +629,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/love.png",
+         "file": "baba:editor/bug/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -638,7 +638,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/spike.png",
+         "file": "baba:editor/bug/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -647,7 +647,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/spike.png",
+         "file": "baba:editor/bug/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -656,7 +656,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ufo.png",
+         "file": "baba:editor/bug/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -665,7 +665,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ufo.png",
+         "file": "baba:editor/bug/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -674,7 +674,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/door.png",
+         "file": "baba:editor/bug/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -683,7 +683,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/door.png",
+         "file": "baba:editor/bug/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -692,7 +692,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pillar.png",
+         "file": "baba:editor/text/cake.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -701,7 +701,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pillar.png",
+         "file": "baba:editor/text/cake.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -710,7 +710,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rock.png",
+         "file": "baba:editor/cake.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -719,7 +719,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rock.png",
+         "file": "baba:editor/cake.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -728,7 +728,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tile.png",
+         "file": "baba:editor/text/cliff.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -737,7 +737,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tile.png",
+         "file": "baba:editor/text/cliff.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -746,7 +746,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fruit.png",
+         "file": "baba:editor/cliff.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -755,7 +755,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fruit.png",
+         "file": "baba:editor/cliff.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -764,7 +764,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/moon.png",
+         "file": "baba:editor/text/cloud.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -773,7 +773,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/moon.png",
+         "file": "baba:editor/text/cloud.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -782,7 +782,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tree.png",
+         "file": "baba:editor/cloud.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -791,7 +791,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tree.png",
+         "file": "baba:editor/cloud.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -800,7 +800,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/box.png",
+         "file": "baba:editor/text/cog.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -809,7 +809,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/box.png",
+         "file": "baba:editor/text/cog.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -818,7 +818,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fire.png",
+         "file": "baba:editor/cog.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -827,7 +827,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fire.png",
+         "file": "baba:editor/cog.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -836,7 +836,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/gate.png",
+         "file": "baba:editor/text/crab.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -845,7 +845,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/gate.png",
+         "file": "baba:editor/text/crab.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -854,7 +854,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/jelly.png",
+         "file": "baba:editor/crab/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -863,7 +863,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/jelly.png",
+         "file": "baba:editor/crab/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -872,7 +872,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/reed.png",
+         "file": "baba:editor/crab/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -881,7 +881,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/reed.png",
+         "file": "baba:editor/crab/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -890,7 +890,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sign.png",
+         "file": "baba:editor/crab/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -899,7 +899,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sign.png",
+         "file": "baba:editor/crab/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -908,7 +908,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sun.png",
+         "file": "baba:editor/crab/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -917,7 +917,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sun.png",
+         "file": "baba:editor/crab/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -926,7 +926,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fungi.png",
+         "file": "baba:editor/text/cursor.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -935,7 +935,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fungi.png",
+         "file": "baba:editor/text/cursor.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -944,7 +944,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/husk.png",
+         "file": "baba:editor/cursor.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -953,7 +953,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/husk.png",
+         "file": "baba:editor/cursor.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -962,7 +962,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/leaf.png",
+         "file": "baba:editor/text/door.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -971,7 +971,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/leaf.png",
+         "file": "baba:editor/text/door.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -980,7 +980,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/orb.png",
+         "file": "baba:editor/door.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -989,7 +989,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/orb.png",
+         "file": "baba:editor/door.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -998,7 +998,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/trees.png",
+         "file": "baba:editor/text/dot.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1007,7 +1007,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/trees.png",
+         "file": "baba:editor/text/dot.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1016,7 +1016,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cake.png",
+         "file": "baba:editor/dot.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1025,7 +1025,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cake.png",
+         "file": "baba:editor/dot.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1034,7 +1034,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/dot.png",
+         "file": "baba:editor/text/dust.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1043,7 +1043,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/dot.png",
+         "file": "baba:editor/text/dust.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1052,7 +1052,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/foliage.png",
+         "file": "baba:editor/dust.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1061,7 +1061,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/foliage.png",
+         "file": "baba:editor/dust.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1070,7 +1070,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rose.png",
+         "file": "baba:editor/text/fence.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1079,7 +1079,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rose.png",
+         "file": "baba:editor/text/fence.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1088,7 +1088,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/dust.png",
+         "file": "baba:editor/fence.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1097,7 +1097,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/dust.png",
+         "file": "baba:editor/fence.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1106,7 +1106,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fungus.png",
+         "file": "baba:editor/text/fire.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1115,7 +1115,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fungus.png",
+         "file": "baba:editor/text/fire.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1124,7 +1124,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/husks.png",
+         "file": "baba:editor/fire.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1133,7 +1133,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/husks.png",
+         "file": "baba:editor/fire.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1142,7 +1142,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/stump.png",
+         "file": "baba:editor/text/flag.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1151,7 +1151,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/stump.png",
+         "file": "baba:editor/text/flag.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1160,7 +1160,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cursor.png",
+         "file": "baba:editor/flag.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1169,7 +1169,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cursor.png",
+         "file": "baba:editor/flag.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1178,7 +1178,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/star.png",
+         "file": "baba:editor/text/flower.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1187,7 +1187,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/star.png",
+         "file": "baba:editor/text/flower.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1196,7 +1196,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/flower.png",
+         "file": "baba:editor/flower.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1205,7 +1205,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/flower.png",
+         "file": "baba:editor/flower.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1214,7 +1214,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/is.png",
+         "file": "baba:editor/text/foliage.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1223,7 +1223,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/is.png",
+         "file": "baba:editor/text/foliage.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1232,7 +1232,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/and.png",
+         "file": "baba:editor/foliage.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1241,7 +1241,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/and.png",
+         "file": "baba:editor/foliage.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1250,7 +1250,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/not.png",
+         "file": "baba:editor/text/fruit.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1259,7 +1259,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/not.png",
+         "file": "baba:editor/text/fruit.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1268,7 +1268,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/on.png",
+         "file": "baba:editor/fruit.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1277,7 +1277,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/on.png",
+         "file": "baba:editor/fruit.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1286,7 +1286,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/near.png",
+         "file": "baba:editor/text/fungi.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1295,7 +1295,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/near.png",
+         "file": "baba:editor/text/fungi.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1304,7 +1304,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/facing.png",
+         "file": "baba:editor/fungi.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1313,7 +1313,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/facing.png",
+         "file": "baba:editor/fungi.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1322,7 +1322,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/without.png",
+         "file": "baba:editor/text/fungus.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1331,7 +1331,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/without.png",
+         "file": "baba:editor/text/fungus.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1340,7 +1340,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/has.png",
+         "file": "baba:editor/fungus.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1349,7 +1349,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/has.png",
+         "file": "baba:editor/fungus.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1358,7 +1358,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/make.png",
+         "file": "baba:editor/text/gate.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1367,7 +1367,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/make.png",
+         "file": "baba:editor/text/gate.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1376,7 +1376,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/write.png",
+         "file": "baba:editor/gate.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1385,7 +1385,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/write.png",
+         "file": "baba:editor/gate.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1394,7 +1394,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/all.png",
+         "file": "baba:editor/text/ghost.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1403,7 +1403,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/all.png",
+         "file": "baba:editor/text/ghost.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1412,7 +1412,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/empty.png",
+         "file": "baba:editor/ghost/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1421,7 +1421,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/empty.png",
+         "file": "baba:editor/ghost/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1430,7 +1430,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/text.png",
+         "file": "baba:editor/ghost/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1439,7 +1439,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/text.png",
+         "file": "baba:editor/ghost/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1448,7 +1448,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/level.png",
+         "file": "baba:editor/ghost/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1457,7 +1457,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/level.png",
+         "file": "baba:editor/ghost/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1466,7 +1466,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/you.png",
+         "file": "baba:editor/ghost/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1475,7 +1475,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/you.png",
+         "file": "baba:editor/ghost/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1484,7 +1484,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/push.png",
+         "file": "baba:editor/text/grass.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1493,7 +1493,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/push.png",
+         "file": "baba:editor/text/grass.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1502,7 +1502,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pull.png",
+         "file": "baba:editor/grass.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1511,7 +1511,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pull.png",
+         "file": "baba:editor/grass.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1520,7 +1520,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/move.png",
+         "file": "baba:editor/text/hand.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1529,7 +1529,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/move.png",
+         "file": "baba:editor/text/hand.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1538,7 +1538,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/shift.png",
+         "file": "baba:editor/hand/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1547,7 +1547,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/shift.png",
+         "file": "baba:editor/hand/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1556,7 +1556,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/defeat.png",
+         "file": "baba:editor/hand/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1565,7 +1565,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/defeat.png",
+         "file": "baba:editor/hand/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1574,7 +1574,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hot.png",
+         "file": "baba:editor/hand/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1583,7 +1583,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hot.png",
+         "file": "baba:editor/hand/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1592,7 +1592,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/melt.png",
+         "file": "baba:editor/hand/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1601,7 +1601,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/melt.png",
+         "file": "baba:editor/hand/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1610,7 +1610,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hide.png",
+         "file": "baba:editor/text/hedge.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1619,7 +1619,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hide.png",
+         "file": "baba:editor/text/hedge.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1628,7 +1628,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/win.png",
+         "file": "baba:editor/hedge.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1637,7 +1637,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/win.png",
+         "file": "baba:editor/hedge.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1646,7 +1646,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/stop.png",
+         "file": "baba:editor/text/husk.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1655,7 +1655,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/stop.png",
+         "file": "baba:editor/text/husk.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1664,7 +1664,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/open.png",
+         "file": "baba:editor/husk.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1673,7 +1673,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/open.png",
+         "file": "baba:editor/husk.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1682,7 +1682,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/shut.png",
+         "file": "baba:editor/text/husks.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1691,7 +1691,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/shut.png",
+         "file": "baba:editor/text/husks.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1700,7 +1700,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/float.png",
+         "file": "baba:editor/husks.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1709,7 +1709,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/float.png",
+         "file": "baba:editor/husks.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1718,7 +1718,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sink.png",
+         "file": "baba:editor/text/ice.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1727,7 +1727,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sink.png",
+         "file": "baba:editor/text/ice.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1736,7 +1736,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/weak.png",
+         "file": "baba:editor/ice.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1745,7 +1745,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/weak.png",
+         "file": "baba:editor/ice.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1754,7 +1754,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/swap.png",
+         "file": "baba:editor/text/jelly.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1763,7 +1763,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/swap.png",
+         "file": "baba:editor/text/jelly.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1772,7 +1772,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tele.png",
+         "file": "baba:editor/jelly.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1781,7 +1781,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/tele.png",
+         "file": "baba:editor/jelly.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1790,7 +1790,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fall.png",
+         "file": "baba:editor/text/keke.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1799,7 +1799,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fall.png",
+         "file": "baba:editor/text/keke.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1808,7 +1808,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/more.png",
+         "file": "baba:editor/keke/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1817,7 +1817,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/more.png",
+         "file": "baba:editor/keke/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1826,7 +1826,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/red.png",
+         "file": "baba:editor/keke/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1835,7 +1835,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/red.png",
+         "file": "baba:editor/keke/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1844,7 +1844,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/blue.png",
+         "file": "baba:editor/keke/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1853,7 +1853,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/blue.png",
+         "file": "baba:editor/keke/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1862,7 +1862,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sleep.png",
+         "file": "baba:editor/keke/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1871,7 +1871,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/sleep.png",
+         "file": "baba:editor/keke/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1880,7 +1880,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/group.png",
+         "file": "baba:editor/text/key.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1889,7 +1889,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/group.png",
+         "file": "baba:editor/text/key.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1898,7 +1898,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/right.png",
+         "file": "baba:editor/key.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1907,7 +1907,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/right.png",
+         "file": "baba:editor/key.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1916,7 +1916,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/up.png",
+         "file": "baba:editor/text/lava.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1925,7 +1925,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/up.png",
+         "file": "baba:editor/text/lava.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1934,7 +1934,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/left.png",
+         "file": "baba:editor/lava.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1943,7 +1943,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/left.png",
+         "file": "baba:editor/lava.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1952,7 +1952,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/down.png",
+         "file": "baba:editor/text/leaf.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1961,7 +1961,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/down.png",
+         "file": "baba:editor/text/leaf.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1970,7 +1970,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/word.png",
+         "file": "baba:editor/leaf.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1979,7 +1979,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/word.png",
+         "file": "baba:editor/leaf.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -1988,7 +1988,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/idle.png",
+         "file": "baba:editor/text/level.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -1997,7 +1997,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/idle.png",
+         "file": "baba:editor/text/level.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2006,7 +2006,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/lonely.png",
+         "file": "baba:editor/level.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2015,7 +2015,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/lonely.png",
+         "file": "baba:editor/level.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2024,7 +2024,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/often.png",
+         "file": "baba:editor/text/line.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2033,7 +2033,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/often.png",
+         "file": "baba:editor/text/line.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2042,7 +2042,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/seldom.png",
+         "file": "baba:editor/line.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2051,7 +2051,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/seldom.png",
+         "file": "baba:editor/line.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2060,7 +2060,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/select.png",
+         "file": "baba:editor/text/love.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2069,7 +2069,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/select.png",
+         "file": "baba:editor/text/love.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2078,7 +2078,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/best.png",
+         "file": "baba:editor/love.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2087,7 +2087,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/best.png",
+         "file": "baba:editor/love.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2096,7 +2096,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bonus.png",
+         "file": "baba:editor/text/me.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2105,7 +2105,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bonus.png",
+         "file": "baba:editor/text/me.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2114,7 +2114,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/end.png",
+         "file": "baba:editor/me/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2123,7 +2123,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/end.png",
+         "file": "baba:editor/me/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2132,7 +2132,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/done.png",
+         "file": "baba:editor/me/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2141,7 +2141,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/done.png",
+         "file": "baba:editor/me/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2150,7 +2150,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/a.png",
+         "file": "baba:editor/me/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2159,7 +2159,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/a.png",
+         "file": "baba:editor/me/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2168,7 +2168,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/b.png",
+         "file": "baba:editor/me/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2177,7 +2177,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/b.png",
+         "file": "baba:editor/me/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2186,7 +2186,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/c.png",
+         "file": "baba:editor/text/moon.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2195,7 +2195,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/c.png",
+         "file": "baba:editor/text/moon.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2204,7 +2204,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/d.png",
+         "file": "baba:editor/moon.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2213,7 +2213,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/d.png",
+         "file": "baba:editor/moon.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2222,7 +2222,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/e.png",
+         "file": "baba:editor/text/orb.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2231,7 +2231,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/e.png",
+         "file": "baba:editor/text/orb.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2240,7 +2240,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/f.png",
+         "file": "baba:editor/orb.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2249,7 +2249,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/f.png",
+         "file": "baba:editor/orb.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2258,7 +2258,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/g.png",
+         "file": "baba:editor/text/pillar.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2267,7 +2267,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/g.png",
+         "file": "baba:editor/text/pillar.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2276,7 +2276,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/h.png",
+         "file": "baba:editor/pillar.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2285,7 +2285,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/h.png",
+         "file": "baba:editor/pillar.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2294,7 +2294,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/i.png",
+         "file": "baba:editor/text/pipe.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2303,7 +2303,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/i.png",
+         "file": "baba:editor/text/pipe.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2312,7 +2312,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/j.png",
+         "file": "baba:editor/pipe.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2321,7 +2321,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/j.png",
+         "file": "baba:editor/pipe.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2330,7 +2330,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/k.png",
+         "file": "baba:editor/text/reed.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2339,7 +2339,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/k.png",
+         "file": "baba:editor/text/reed.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2348,7 +2348,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/l.png",
+         "file": "baba:editor/reed.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2357,7 +2357,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/l.png",
+         "file": "baba:editor/reed.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2366,7 +2366,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/m.png",
+         "file": "baba:editor/text/robot.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2375,7 +2375,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/m.png",
+         "file": "baba:editor/text/robot.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2384,7 +2384,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/n.png",
+         "file": "baba:editor/robot/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2393,7 +2393,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/n.png",
+         "file": "baba:editor/robot/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2402,7 +2402,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/o.png",
+         "file": "baba:editor/robot/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2411,7 +2411,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/o.png",
+         "file": "baba:editor/robot/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2420,7 +2420,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/p.png",
+         "file": "baba:editor/robot/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2429,7 +2429,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/p.png",
+         "file": "baba:editor/robot/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2438,7 +2438,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/q.png",
+         "file": "baba:editor/robot/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2447,7 +2447,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/q.png",
+         "file": "baba:editor/robot/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2456,7 +2456,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/r.png",
+         "file": "baba:editor/text/rock.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2465,7 +2465,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/r.png",
+         "file": "baba:editor/text/rock.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2474,7 +2474,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/s.png",
+         "file": "baba:editor/rock.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2483,7 +2483,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/s.png",
+         "file": "baba:editor/rock.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2492,7 +2492,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/t.png",
+         "file": "baba:editor/text/rocket.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2501,7 +2501,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/t.png",
+         "file": "baba:editor/text/rocket.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2510,7 +2510,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/u.png",
+         "file": "baba:editor/rocket/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2519,7 +2519,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/u.png",
+         "file": "baba:editor/rocket/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2528,7 +2528,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/v.png",
+         "file": "baba:editor/rocket/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2537,7 +2537,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/v.png",
+         "file": "baba:editor/rocket/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2546,7 +2546,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/w.png",
+         "file": "baba:editor/rocket/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2555,7 +2555,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/w.png",
+         "file": "baba:editor/rocket/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2564,7 +2564,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/x.png",
+         "file": "baba:editor/rocket/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2573,7 +2573,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/x.png",
+         "file": "baba:editor/rocket/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2582,7 +2582,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/y.png",
+         "file": "baba:editor/text/rose.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2591,7 +2591,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/y.png",
+         "file": "baba:editor/text/rose.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2600,7 +2600,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/z.png",
+         "file": "baba:editor/rose.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2609,7 +2609,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/z.png",
+         "file": "baba:editor/rose.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2618,7 +2618,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/ab.png",
+         "file": "baba:editor/text/rubble.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2627,7 +2627,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/ab.png",
+         "file": "baba:editor/text/rubble.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2636,7 +2636,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/ba.png",
+         "file": "baba:editor/rubble.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2645,7 +2645,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/letter/ba.png",
+         "file": "baba:editor/rubble.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2654,7 +2654,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cloud.png",
+         "file": "baba:editor/text/sign.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2663,7 +2663,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cloud.png",
+         "file": "baba:editor/text/sign.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2672,7 +2672,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fence.png",
+         "file": "baba:editor/sign.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2681,7 +2681,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/fence.png",
+         "file": "baba:editor/sign.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2690,7 +2690,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/grass.png",
+         "file": "baba:editor/text/skull.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2699,7 +2699,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/grass.png",
+         "file": "baba:editor/text/skull.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2708,7 +2708,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hedge.png",
+         "file": "baba:editor/skull/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2717,7 +2717,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/hedge.png",
+         "file": "baba:editor/skull/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2726,7 +2726,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ice.png",
+         "file": "baba:editor/skull/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2735,7 +2735,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/ice.png",
+         "file": "baba:editor/skull/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2744,7 +2744,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/line.png",
+         "file": "baba:editor/skull/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2753,7 +2753,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/line.png",
+         "file": "baba:editor/skull/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2762,7 +2762,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pipe.png",
+         "file": "baba:editor/skull/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2771,7 +2771,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/pipe.png",
+         "file": "baba:editor/skull/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2780,7 +2780,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rubble.png",
+         "file": "baba:editor/text/spike.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2789,7 +2789,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/rubble.png",
+         "file": "baba:editor/text/spike.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2798,7 +2798,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/wall.png",
+         "file": "baba:editor/spike.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2807,7 +2807,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/wall.png",
+         "file": "baba:editor/spike.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2816,7 +2816,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/water.png",
+         "file": "baba:editor/text/star.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2825,7 +2825,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/water.png",
+         "file": "baba:editor/text/star.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2834,7 +2834,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/lava.png",
+         "file": "baba:editor/star.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2843,7 +2843,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/lava.png",
+         "file": "baba:editor/star.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2852,7 +2852,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bog.png",
+         "file": "baba:editor/text/statue.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2861,7 +2861,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/bog.png",
+         "file": "baba:editor/text/statue.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2870,7 +2870,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/brick.png",
+         "file": "baba:editor/statue/facing-right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2879,7 +2879,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/brick.png",
+         "file": "baba:editor/statue/facing-right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2888,7 +2888,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cliff.png",
+         "file": "baba:editor/statue/facing-up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2897,7 +2897,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/text/cliff.png",
+         "file": "baba:editor/statue/facing-up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2906,7 +2906,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bat.png",
+         "file": "baba:editor/statue/facing-left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2915,7 +2915,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bat.png",
+         "file": "baba:editor/statue/facing-left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2924,7 +2924,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bubble.png",
+         "file": "baba:editor/statue/facing-down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2933,7 +2933,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bubble.png",
+         "file": "baba:editor/statue/facing-down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2942,7 +2942,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cog.png",
+         "file": "baba:editor/text/stump.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2951,7 +2951,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cog.png",
+         "file": "baba:editor/text/stump.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2960,7 +2960,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/algae.png",
+         "file": "baba:editor/stump.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2969,7 +2969,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/algae.png",
+         "file": "baba:editor/stump.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2978,7 +2978,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/flag.png",
+         "file": "baba:editor/text/sun.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -2987,7 +2987,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/flag.png",
+         "file": "baba:editor/text/sun.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -2996,7 +2996,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/key.png",
+         "file": "baba:editor/sun.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3005,7 +3005,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/key.png",
+         "file": "baba:editor/sun.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3014,7 +3014,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/love.png",
+         "file": "baba:editor/text/tile.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3023,7 +3023,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/love.png",
+         "file": "baba:editor/text/tile.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3032,7 +3032,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/spike.png",
+         "file": "baba:editor/tile.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3041,7 +3041,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/spike.png",
+         "file": "baba:editor/tile.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3050,7 +3050,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ufo.png",
+         "file": "baba:editor/text/tree.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3059,7 +3059,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ufo.png",
+         "file": "baba:editor/text/tree.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3068,7 +3068,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/door.png",
+         "file": "baba:editor/tree.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3077,7 +3077,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/door.png",
+         "file": "baba:editor/tree.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3086,7 +3086,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/pillar.png",
+         "file": "baba:editor/text/trees.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3095,7 +3095,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/pillar.png",
+         "file": "baba:editor/text/trees.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3104,7 +3104,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rock.png",
+         "file": "baba:editor/trees.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3113,7 +3113,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rock.png",
+         "file": "baba:editor/trees.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3122,7 +3122,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/tile.png",
+         "file": "baba:editor/text/ufo.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3131,7 +3131,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/tile.png",
+         "file": "baba:editor/text/ufo.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3140,7 +3140,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fruit.png",
+         "file": "baba:editor/ufo.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3149,7 +3149,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fruit.png",
+         "file": "baba:editor/ufo.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3158,7 +3158,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/moon.png",
+         "file": "baba:editor/text/wall.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3167,7 +3167,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/moon.png",
+         "file": "baba:editor/text/wall.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3176,7 +3176,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/tree.png",
+         "file": "baba:editor/wall.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3185,7 +3185,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/tree.png",
+         "file": "baba:editor/wall.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3194,7 +3194,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/box.png",
+         "file": "baba:editor/text/water.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3203,7 +3203,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/box.png",
+         "file": "baba:editor/text/water.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3212,7 +3212,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fire.png",
+         "file": "baba:editor/water.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3221,7 +3221,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fire.png",
+         "file": "baba:editor/water.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3230,7 +3230,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/gate.png",
+         "file": "baba:editor/text/best.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3239,7 +3239,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/gate.png",
+         "file": "baba:editor/text/best.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3248,7 +3248,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/jelly.png",
+         "file": "baba:editor/text/blue.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3257,7 +3257,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/jelly.png",
+         "file": "baba:editor/text/blue.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3266,7 +3266,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/reed.png",
+         "file": "baba:editor/text/bonus.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3275,7 +3275,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/reed.png",
+         "file": "baba:editor/text/bonus.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3284,7 +3284,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/sign.png",
+         "file": "baba:editor/text/defeat.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3293,7 +3293,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/sign.png",
+         "file": "baba:editor/text/defeat.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3302,7 +3302,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/sun.png",
+         "file": "baba:editor/text/done.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3311,7 +3311,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/sun.png",
+         "file": "baba:editor/text/done.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3320,7 +3320,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fungi.png",
+         "file": "baba:editor/text/down.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3329,7 +3329,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fungi.png",
+         "file": "baba:editor/text/down.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3338,7 +3338,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/husk.png",
+         "file": "baba:editor/text/end.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3347,7 +3347,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/husk.png",
+         "file": "baba:editor/text/end.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3356,7 +3356,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/leaf.png",
+         "file": "baba:editor/text/fall.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3365,7 +3365,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/leaf.png",
+         "file": "baba:editor/text/fall.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3374,7 +3374,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/orb.png",
+         "file": "baba:editor/text/float.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3383,7 +3383,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/orb.png",
+         "file": "baba:editor/text/float.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3392,7 +3392,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/trees.png",
+         "file": "baba:editor/text/hide.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3401,7 +3401,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/trees.png",
+         "file": "baba:editor/text/hide.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3410,7 +3410,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cake.png",
+         "file": "baba:editor/text/hot.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3419,7 +3419,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cake.png",
+         "file": "baba:editor/text/hot.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3428,7 +3428,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/dot.png",
+         "file": "baba:editor/text/left.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3437,7 +3437,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/dot.png",
+         "file": "baba:editor/text/left.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3446,7 +3446,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/foliage.png",
+         "file": "baba:editor/text/melt.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3455,7 +3455,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/foliage.png",
+         "file": "baba:editor/text/melt.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3464,7 +3464,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rose.png",
+         "file": "baba:editor/text/more.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3473,7 +3473,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rose.png",
+         "file": "baba:editor/text/more.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3482,7 +3482,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/dust.png",
+         "file": "baba:editor/text/move.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3491,7 +3491,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/dust.png",
+         "file": "baba:editor/text/move.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3500,7 +3500,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fungus.png",
+         "file": "baba:editor/text/open.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3509,7 +3509,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fungus.png",
+         "file": "baba:editor/text/open.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3518,7 +3518,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/husks.png",
+         "file": "baba:editor/text/pull.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3527,7 +3527,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/husks.png",
+         "file": "baba:editor/text/pull.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3536,7 +3536,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/stump.png",
+         "file": "baba:editor/text/push.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3545,7 +3545,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/stump.png",
+         "file": "baba:editor/text/push.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3554,7 +3554,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/blossom.png",
+         "file": "baba:editor/text/red.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3563,7 +3563,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/blossom.png",
+         "file": "baba:editor/text/red.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3572,7 +3572,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/star.png",
+         "file": "baba:editor/text/right.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3581,7 +3581,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/star.png",
+         "file": "baba:editor/text/right.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3590,7 +3590,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/flower.png",
+         "file": "baba:editor/text/select.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3599,7 +3599,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/flower.png",
+         "file": "baba:editor/text/select.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3608,7 +3608,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/level.png",
+         "file": "baba:editor/text/shift.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3617,7 +3617,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/level.png",
+         "file": "baba:editor/text/shift.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3626,7 +3626,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cloud.png",
+         "file": "baba:editor/text/shut.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3635,7 +3635,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cloud.png",
+         "file": "baba:editor/text/shut.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3644,7 +3644,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fence.png",
+         "file": "baba:editor/text/sink.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3653,7 +3653,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/fence.png",
+         "file": "baba:editor/text/sink.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3662,7 +3662,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/grass.png",
+         "file": "baba:editor/text/sleep.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3671,7 +3671,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/grass.png",
+         "file": "baba:editor/text/sleep.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3680,7 +3680,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/hedge.png",
+         "file": "baba:editor/text/stop.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3689,7 +3689,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/hedge.png",
+         "file": "baba:editor/text/stop.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3698,7 +3698,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ice.png",
+         "file": "baba:editor/text/swap.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3707,7 +3707,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/ice.png",
+         "file": "baba:editor/text/swap.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3716,7 +3716,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/line.png",
+         "file": "baba:editor/text/tele.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3725,7 +3725,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/line.png",
+         "file": "baba:editor/text/tele.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3734,7 +3734,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/pipe.png",
+         "file": "baba:editor/text/up.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3743,7 +3743,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/pipe.png",
+         "file": "baba:editor/text/up.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3752,7 +3752,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rubble.png",
+         "file": "baba:editor/text/weak.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3761,7 +3761,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/rubble.png",
+         "file": "baba:editor/text/weak.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3770,7 +3770,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/wall.png",
+         "file": "baba:editor/text/win.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3779,7 +3779,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/wall.png",
+         "file": "baba:editor/text/win.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3788,7 +3788,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/water.png",
+         "file": "baba:editor/text/word.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3797,7 +3797,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/water.png",
+         "file": "baba:editor/text/word.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3806,7 +3806,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/lava.png",
+         "file": "baba:editor/text/you.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3815,7 +3815,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/lava.png",
+         "file": "baba:editor/text/you.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3824,7 +3824,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bog.png",
+         "file": "baba:editor/text/and.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3833,7 +3833,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/bog.png",
+         "file": "baba:editor/text/and.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3842,7 +3842,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/brick.png",
+         "file": "baba:editor/text/facing.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3851,7 +3851,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/brick.png",
+         "file": "baba:editor/text/facing.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3860,7 +3860,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cliff.png",
+         "file": "baba:editor/text/near.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3869,7 +3869,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cliff.png",
+         "file": "baba:editor/text/near.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
@@ -3878,7 +3878,7 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cursor.png",
+         "file": "baba:editor/text/on.png",
          "height": 16,
          "ascent": 12,
          "chars": [
@@ -3887,11 +3887,767 @@
       },
       {
          "type": "bitmap",
-         "file": "baba:editor/cursor.png",
+         "file": "baba:editor/text/on.png",
          "height": -16,
          "ascent": -32768,
          "chars": [
             "\u01d1"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/without.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01d2"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/without.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01d3"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/not.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01d4"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/not.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01d5"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/all.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01d6"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/all.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01d7"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/empty.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01d8"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/empty.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01d9"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/group.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01da"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/group.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01db"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/text.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01dc"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/text.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01dd"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/idle.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01de"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/idle.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01df"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/lonely.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01e0"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/lonely.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01e1"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/often.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01e2"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/often.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01e3"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/seldom.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01e4"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/seldom.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01e5"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/has.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01e6"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/has.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01e7"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/is.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01e8"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/is.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01e9"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/make.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01ea"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/make.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01eb"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/write.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01ec"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/text/write.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01ed"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/a.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01ee"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/a.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01ef"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/b.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01f0"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/b.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01f1"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/c.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01f2"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/c.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01f3"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/d.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01f4"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/d.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01f5"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/e.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01f6"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/e.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01f7"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/f.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01f8"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/f.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01f9"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/g.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01fa"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/g.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01fb"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/h.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01fc"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/h.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01fd"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/i.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u01fe"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/i.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u01ff"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/j.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0200"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/j.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0201"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/k.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0202"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/k.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0203"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/l.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0204"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/l.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0205"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/m.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0206"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/m.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0207"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/n.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0208"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/n.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0209"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/o.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u020a"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/o.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u020b"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/p.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u020c"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/p.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u020d"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/q.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u020e"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/q.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u020f"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/r.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0210"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/r.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0211"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/s.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0212"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/s.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0213"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/t.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0214"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/t.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0215"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/u.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0216"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/u.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0217"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/v.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0218"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/v.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0219"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/w.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u021a"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/w.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u021b"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/x.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u021c"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/x.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u021d"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/y.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u021e"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/y.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u021f"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/z.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0220"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/z.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0221"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/ab.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0222"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/ab.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0223"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/ba.png",
+         "height": 16,
+         "ascent": 12,
+         "chars": [
+            "\u0224"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "baba:editor/letter/ba.png",
+         "height": -16,
+         "ascent": -32768,
+         "chars": [
+            "\u0225"
          ]
       }
    ]

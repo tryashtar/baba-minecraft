@@ -718,6 +718,7 @@ sprites:
       properties:
         text: text
         part: noun
+        special: true
     - name: text
       color: '#d9396a'
       inactive color: '#682e4c'
@@ -893,6 +894,7 @@ sprites:
       properties:
         text: group
         part: noun
+        special: true
     - name: text
       color: '#83c8e5'
       inactive color: '#5f9dd1'
