@@ -1,10 +1,10 @@
-data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba","baba.object","spawn","active","assign","dirty","not_all","reparse","is_text","part.infix"]}
-item replace entity @s contents with potion[custom_data={baba:{text:"without"}}]
+data merge entity @s {teleport_duration:3,width:1f,height:0.1f,item_display:"fixed",Tags:["baba","baba.object","spawn","active","assign","dirty","not_all","reparse","is_text","part.noun"]}
+item replace entity @s contents with potion[custom_data={baba:{text:"pillar"}}]
 scoreboard players set @s appearance 397973
-scoreboard players set @s color 16777215
-scoreboard players set @s inactive_color 7566195
+scoreboard players set @s color 7566195
+scoreboard players set @s inactive_color 2368548
 scoreboard players set @s sprite 397973
-scoreboard players set @s text -100
+scoreboard players set @s text -11
 scoreboard players set @s z_layer 20
 scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text] text_id
 scoreboard players add @s text_id 1

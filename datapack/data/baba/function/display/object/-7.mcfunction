@@ -1,1 +1,1 @@
-item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/blossom"}}
+item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/foliage"}}

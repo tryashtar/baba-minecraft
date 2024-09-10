@@ -1,1 +1,1 @@
-item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/text/cursor"}}
+item modify entity @s contents {function:"set_components",components:{item_model:"baba:sprites/text/rubble"}}
