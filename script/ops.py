@@ -1,3 +1,5 @@
+import tryashtools as tat
+
 def filter_properties(properties, check):
   props = properties.copy()
   for p in properties:
@@ -66,17 +68,15 @@ def create_storage(properties, data=None):
     nbt.append('data:{' + data + '}')
   return ','.join(nbt)
 
-too_big = {}
+big_ids = tat.read_yaml('big_ids.yaml')
 def id_hash(string):
-  if string == 'without':
-    return -100
+  if string in big_ids:
+    return big_ids[string]
   total = 0
   for i,c in enumerate(reversed(string)):
     total += 27**i * (ord(c) - 96)
   if total > 16777216:
-    if string not in too_big:
-      too_big[string] = -len(too_big) - 1
-    return too_big[string]
+    raise ValueError((string, total))
   return total
 
 def reverse_hash(num):

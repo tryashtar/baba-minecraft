@@ -1,4 +1,4 @@
-execute if entity @s[scores={facing=4}] run return run data modify storage baba:main model set value 268
-execute if entity @s[scores={facing=1}] run return run data modify storage baba:main model set value 269
-execute if entity @s[scores={facing=3}] run return run data modify storage baba:main model set value 270
-execute if entity @s[scores={facing=2}] run return run data modify storage baba:main model set value 271
+execute if entity @s[scores={frame=0}] run return run data modify storage baba:main model set value 284
+execute if entity @s[scores={frame=1}] run return run data modify storage baba:main model set value 285
+execute if entity @s[scores={frame=2}] run return run data modify storage baba:main model set value 286
+execute if entity @s[scores={frame=3}] run return run data modify storage baba:main model set value 287

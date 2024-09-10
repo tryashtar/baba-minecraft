@@ -1,0 +1,23 @@
+blossom: -1
+bubble: -2
+cursor: -3
+defeat: -4
+facing: -5
+flower: -6
+foliage: -7
+fungus: -8
+level_icon: -9
+lonely: -10
+pillar: -11
+rocket: -12
+rubble: -13
+seldom: -14
+select: -15
+starfish: -16
+statue: -17
+text_overlay: -18
+violet: -19
+without: -20
+follow: -21 # ???
+default: -22 # ???
+wonder: -23 # ???
