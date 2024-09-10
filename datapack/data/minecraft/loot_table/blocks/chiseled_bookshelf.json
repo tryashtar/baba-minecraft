@@ -3485,47 +3485,6 @@
                   {
                      "function": "set_name",
                      "name": {
-                        "text": "text group",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_custom_model_data",
-                     "value": 95
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
-                        "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
-                        "slot_5_occupied": "false",
-                        "facing": "south"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
                         "text": "text hand",
                         "italic": false
                      }
@@ -3553,8 +3512,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -3594,7 +3553,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -3635,10 +3594,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "south"
@@ -3676,7 +3635,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -3717,8 +3676,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -3758,7 +3717,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -3799,9 +3758,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -3840,7 +3799,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -3881,8 +3840,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -3922,7 +3881,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -3963,12 +3922,12 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
                         "facing": "south"
                      }
                   }
@@ -4004,7 +3963,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -4045,8 +4004,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -4086,7 +4045,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -4127,9 +4086,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
@@ -4168,7 +4127,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -4209,8 +4168,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -4250,7 +4209,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -4291,10 +4250,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "south"
@@ -4332,7 +4291,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -4373,8 +4332,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -4414,7 +4373,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -4455,9 +4414,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
@@ -4496,7 +4455,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -4537,8 +4496,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -4578,7 +4537,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -4619,11 +4578,11 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "south"
                      }
@@ -4660,7 +4619,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -4701,8 +4660,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -4742,7 +4701,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -4783,9 +4742,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -4824,7 +4783,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -4865,8 +4824,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -4906,7 +4865,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -4947,10 +4906,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "south"
@@ -4988,7 +4947,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -5029,8 +4988,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -5070,7 +5029,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -5111,9 +5070,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -5152,7 +5111,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -5193,8 +5152,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -5234,7 +5193,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -5275,13 +5234,13 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "east"
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
+                        "facing": "south"
                      }
                   }
                ],
@@ -5316,7 +5275,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -5357,8 +5316,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -5398,7 +5357,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -5439,9 +5398,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -5480,7 +5439,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -5521,8 +5480,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -5562,7 +5521,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -5603,10 +5562,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "east"
@@ -5644,7 +5603,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -5685,8 +5644,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -5726,7 +5685,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -5767,9 +5726,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -5808,7 +5767,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -5849,8 +5808,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -5890,7 +5849,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -5931,11 +5890,11 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "east"
                      }
@@ -5972,7 +5931,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -6013,8 +5972,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -6054,7 +6013,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -6095,9 +6054,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -6136,7 +6095,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -6177,8 +6136,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -6218,7 +6177,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -6259,10 +6218,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "east"
@@ -6300,7 +6259,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -6341,8 +6300,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -6382,7 +6341,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
@@ -6423,9 +6382,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -6464,7 +6423,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -6505,8 +6464,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -6546,7 +6505,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
@@ -6587,12 +6546,12 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
                         "facing": "east"
                      }
                   }
@@ -6628,7 +6587,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -6669,8 +6628,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -6710,7 +6669,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
@@ -6751,9 +6710,9 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
@@ -6792,7 +6751,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -6833,8 +6792,8 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -6874,7 +6833,7 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "true",
+                        "slot_0_occupied": "false",
                         "slot_1_occupied": "true",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
@@ -6915,51 +6874,10 @@
                      "condition": "block_state_property",
                      "block": "chiseled_bookshelf",
                      "properties": {
-                        "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "true",
-                        "facing": "east"
-                     }
-                  }
-               ],
-               "functions": [
-                  {
-                     "function": "set_name",
-                     "name": {
-                        "text": "text text",
-                        "italic": false
-                     }
-                  },
-                  {
-                     "function": "set_custom_model_data",
-                     "value": 70
-                  },
-                  {
-                     "function": "set_custom_data",
-                     "tag": "{baba:{tile:1b}}"
-                  }
-               ]
-            }
-         ]
-      },
-      {
-         "rolls": 1,
-         "entries": [
-            {
-               "type": "item",
-               "name": "chiseled_bookshelf",
-               "conditions": [
-                  {
-                     "condition": "block_state_property",
-                     "block": "chiseled_bookshelf",
-                     "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "east"
@@ -6998,7 +6916,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -7039,7 +6957,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -7080,8 +6998,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
@@ -7121,8 +7039,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
@@ -7162,7 +7080,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -7203,7 +7121,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -7244,10 +7162,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "east"
                      }
@@ -7285,10 +7203,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "true",
                         "facing": "east"
                      }
@@ -7326,7 +7244,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -7367,7 +7285,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -7408,8 +7326,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -7449,8 +7367,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -7490,7 +7408,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -7531,7 +7449,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -7572,9 +7490,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "east"
@@ -7613,9 +7531,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
                         "facing": "east"
@@ -7654,7 +7572,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -7695,7 +7613,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -7736,8 +7654,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -7777,8 +7695,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "true",
@@ -7818,7 +7736,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -7859,7 +7777,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -7900,12 +7818,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
+                        "facing": "east"
                      }
                   }
                ],
@@ -7941,12 +7859,12 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "false",
-                        "slot_5_occupied": "false",
-                        "facing": "west"
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "true",
+                        "facing": "east"
                      }
                   }
                ],
@@ -7982,7 +7900,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -8023,7 +7941,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -8064,8 +7982,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -8105,8 +8023,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -8146,7 +8064,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -8187,7 +8105,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
@@ -8228,9 +8146,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "west"
@@ -8269,9 +8187,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "west"
@@ -8310,7 +8228,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -8351,7 +8269,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -8392,8 +8310,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -8433,8 +8351,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
@@ -8474,7 +8392,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -8515,7 +8433,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "false",
@@ -8556,10 +8474,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "west"
                      }
@@ -8597,10 +8515,10 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "false",
-                        "slot_4_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "false",
                         "slot_5_occupied": "false",
                         "facing": "west"
                      }
@@ -8638,7 +8556,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -8679,7 +8597,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -8720,8 +8638,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -8761,8 +8679,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -8802,7 +8720,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -8843,7 +8761,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "true",
                         "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
@@ -8884,9 +8802,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "west"
@@ -8925,9 +8843,9 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "false",
-                        "slot_3_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "false",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
                         "facing": "west"
@@ -8966,7 +8884,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -9007,7 +8925,7 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "true",
+                        "slot_1_occupied": "false",
                         "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
@@ -9048,8 +8966,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "false",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -9089,8 +9007,8 @@
                      "block": "chiseled_bookshelf",
                      "properties": {
                         "slot_0_occupied": "true",
-                        "slot_1_occupied": "false",
-                        "slot_2_occupied": "true",
+                        "slot_1_occupied": "true",
+                        "slot_2_occupied": "false",
                         "slot_3_occupied": "true",
                         "slot_4_occupied": "true",
                         "slot_5_occupied": "false",
@@ -9109,6 +9027,88 @@
                   {
                      "function": "set_custom_model_data",
                      "value": 69
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "false",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "west"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text group",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_custom_model_data",
+                     "value": 95
+                  },
+                  {
+                     "function": "set_custom_data",
+                     "tag": "{baba:{tile:1b}}"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "chiseled_bookshelf",
+               "conditions": [
+                  {
+                     "condition": "block_state_property",
+                     "block": "chiseled_bookshelf",
+                     "properties": {
+                        "slot_0_occupied": "true",
+                        "slot_1_occupied": "false",
+                        "slot_2_occupied": "true",
+                        "slot_3_occupied": "true",
+                        "slot_4_occupied": "true",
+                        "slot_5_occupied": "false",
+                        "facing": "west"
+                     }
+                  }
+               ],
+               "functions": [
+                  {
+                     "function": "set_name",
+                     "name": {
+                        "text": "text text",
+                        "italic": false
+                     }
+                  },
+                  {
+                     "function": "set_custom_model_data",
+                     "value": 70
                   },
                   {
                      "function": "set_custom_data",
