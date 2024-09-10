@@ -6,4 +6,4 @@ execute if data storage baba:main tile.extra run data modify block ~ ~ ~ bees se
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ Items[0].components."minecraft:custom_data".baba set from storage baba:main tile.extra
 execute if data storage baba:main tile.extra run data modify block ~ ~ ~ bees[0].entity_data.baba set from storage baba:main tile.extra
 data remove storage baba:main level.tiles[0][0][0]
-execute if data storage baba:main level.tiles[0][0][0] positioned ~ ~1 ~ run function baba:editor/unpack/block
+execute if data storage baba:main level.tiles[0][0][0] positioned ^ ^ ^1 run function baba:editor/unpack/block
