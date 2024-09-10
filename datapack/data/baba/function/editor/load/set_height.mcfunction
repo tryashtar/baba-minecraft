@@ -1,1 +1,1 @@
-$tp @s ~$(level_height) ~ ~
+$tp @s ^ ^$(level_height) ^

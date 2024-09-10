@@ -1,3 +1,4 @@
+tp @s ~ ~ ~ ~ ~
 tag @s add baba
 tag @s add baba.board
 data modify entity @s data set value {rule_history:[]}
@@ -11,7 +12,7 @@ execute if data storage baba:main level.tiles[0] run function baba:editor/load/r
 execute store result storage baba:main context.level_height int 1 run scoreboard players get @s level_height
 execute store result storage baba:main context.level_width int 1 run scoreboard players get @s level_width
 data modify storage baba:main context.palette set from storage baba:main level.metadata.palette
-function baba:editor/load/background with storage baba:main context
+execute positioned ^ ^ ^0.5 run function baba:editor/load/background with storage baba:main context
 execute if score @s level_background matches 1 run function baba:editor/load/background/island
 execute if score @s level_background matches 2 run function baba:editor/load/background/flower
 summon text_display ~ ~ ~ {Tags:["baba","baba.text","active"],Rotation:[90f,-90f],alignment:"left",background:0,transformation:{scale:[4f,4f,4f],translation:[18.9f,-1f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}

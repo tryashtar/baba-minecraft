@@ -1,5 +1,5 @@
 scoreboard players add packed baba 1
-execute rotated 90 -90 run function baba:editor/pack
+execute rotated 90 -90 run function baba:editor/pack {meta:"~-1 ~-1 ~2",name:"~-1 ~-1 ~1"}
 setblock ~ ~-2 ~ air
 setblock ~ ~-2 ~ decorated_pot{item:{id:"music_disc_wait",count:1}}
 item modify block ~ ~-2 ~ container.0 [{function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"level",target:"baba"}]},{function:"set_name",entity:"this",target:"item_name",name:{storage:"baba:main",nbt:"level.metadata.name",interpret:1b}}]

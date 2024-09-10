@@ -35,7 +35,7 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace, data):
     for x in range(0,11):
       for y in range(0,6):
         (shroom, state) = shroom_state(shroom_id)
-        place.append(f'setblock ~{16-(3*y)} ~-1 ~{1+(3*x)} {shroom}[{state}]')
+        place.append(f'setblock ^{1+(3*x)} ^{16-(3*y)} ^-1 {shroom}[{state}]')
         if shroom not in blockstates:
           blockstates[shroom] = {}
         blockstates[shroom][state] = {"model":f"{namespace}:background/{bg}/{x}.{y}","y":90}
