@@ -55,14 +55,18 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace, data):
       (block, state) = terracotta_state(terra_id, t=='floor')
       if block not in blockstates:
         blockstates[block] = {}
-      terra_id += 1
       blockstates[block][state] = {"model":f"{namespace}:background/{n}_{t}","y":90}
       stuff.append(f'{t}:"{block}[{state}]"')
+    terra_id += 1
     colors = []
     for oldcol,tocol in p.items():
       colors.append(f'"{int(oldcol[1:],16)}":{int(tocol[1:],16)}')
     stuff.append(f'colors:{{{",".join(colors)}}}')
     palette_data.append(f'{n}:{{{",".join(stuff)}}}')
   data.append(f'data modify storage baba:main data.palettes set value {{{",".join(palette_data)}}}')
+  for shroom in ['brown_mushroom_block', 'red_mushroom_block', 'mushroom_stem']:
+    tat.delete_file(os.path.join(resource_pack, f'assets/minecraft/blockstates/{shroom}.json'))
+  for color in ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']:
+    tat.delete_file(os.path.join(resource_pack, f'assets/minecraft/blockstates/{color}_glazed_terracotta.json'))
   for k,v in blockstates.items():
     tat.write_json({"variants":v}, os.path.join(resource_pack, f'assets/minecraft/blockstates/{k}.json'))

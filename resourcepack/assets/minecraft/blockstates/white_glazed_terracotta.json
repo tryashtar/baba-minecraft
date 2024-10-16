@@ -4,8 +4,16 @@
          "model": "baba:background/default_floor",
          "y": 90
       },
-      "facing=east": {
+      "facing=south": {
          "model": "baba:background/ocean_floor",
+         "y": 90
+      },
+      "facing=east": {
+         "model": "baba:background/factory_floor",
+         "y": 90
+      },
+      "facing=west": {
+         "model": "baba:background/ruins_floor",
          "y": 90
       }
    }
