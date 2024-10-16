@@ -1,3 +1,5 @@
+data modify storage baba:main rule_history set from entity @s data.rule_history
+
 execute as @e[type=marker,tag=baba.space,tag=active,tag=dirty] at @s run function baba:board/history/record_space
 scoreboard players add @e[type=marker,tag=baba.space,tag=active,tag=!dirty] repeats 1
 tag @e[type=marker,tag=baba.space,tag=active,tag=dirty] remove dirty
@@ -11,3 +13,5 @@ execute if score rules_changed baba matches 0 store result score repeats baba ru
 execute if score rules_changed baba matches 0 if entity @e[type=marker,tag=baba.space,tag=active,scores={repeats=1},limit=1] store result storage baba:main rule_history[-1].repeats int 1 run scoreboard players add repeats baba 1
 execute if entity @e[type=marker,tag=baba.space,tag=active,scores={repeats=1},limit=1] run scoreboard players add steps baba 1
 execute unless entity @e[type=marker,tag=baba.space,tag=active,scores={repeats=1},limit=1] run scoreboard players remove @e[type=marker,tag=baba.space,tag=active] repeats 1
+
+data modify entity @s data.rule_history set from storage baba:main rule_history

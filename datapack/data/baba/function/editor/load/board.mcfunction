@@ -5,7 +5,6 @@ data modify entity @s data set value {rule_history:[]}
 execute store result score @s level_height run data get storage baba:main level.tiles
 execute store result score @s level_width run data get storage baba:main level.tiles[0]
 execute store result score @s level_background run data get storage baba:main level.metadata.background
-data modify storage baba:main context.palette set from storage baba:main level.metadata.palette
 execute if data storage baba:main level.tiles[0] run function baba:editor/load/row
 execute store result storage baba:main context.level_height int 1 run scoreboard players get @s level_height
 execute store result storage baba:main context.level_width int 1 run scoreboard players get @s level_width

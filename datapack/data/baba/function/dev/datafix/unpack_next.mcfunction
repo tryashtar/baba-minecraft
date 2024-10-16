@@ -1,6 +1,9 @@
 setblock ~ ~3 ~ gold_block
 scoreboard players add packed baba 1
-data modify storage baba:main level set from block ~-1 ~-1 ~2 RecordItem.components."minecraft:custom_data".baba
+data modify storage baba:main level set from block ~ ~-2 ~ item.components."minecraft:custom_data".baba
+execute store result score height baba run data get storage baba:main level.tiles
+execute store result score width baba run data get storage baba:main level.tiles[0]
+execute store result score saved baba if data storage baba:main level.tiles[][][]
 function baba:editor/unpack/grid
 execute store result score height baba run data get block ~-1 ~-1 ~2 RecordItem.components."minecraft:custom_data".baba.tiles
 execute store result score width baba run data get block ~-1 ~-1 ~2 RecordItem.components."minecraft:custom_data".baba.tiles[0]
