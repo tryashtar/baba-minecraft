@@ -91,25 +91,3 @@ def colorize_frames(images, color):
     gc = gc.point(lambda x,g=g: x * g/255)
     bc = bc.point(lambda x,b=b: x * b/255)
     yield PIL.Image.merge('RGBA', (rc, gc, bc, ac))
-
-def create_editor_resources(source, resource_pack, namespace):
-  sprite_info = {}
-  overrides = []
-  texture_folder = os.path.join('assets', namespace, 'textures/editor')
-  model_folder = os.path.join('assets', namespace, 'models/editor')
-  tat.delete_folder(os.path.join(resource_pack, texture_folder))
-  tat.delete_folder(os.path.join(resource_pack, model_folder))
-  sprite_id = 0
-  for obj in source.objects.values():
-    filtered = list(obj.filter_sprites(lambda x: 'editor' in x.attributes).items())
-    for spr,props in filtered:
-      sprite_id += 1
-      display = sprite_name(spr, props)
-      texture_path = os.path.join(texture_folder, display + '.png')
-      model_path = os.path.join(model_folder, display + '.json')
-      frames = list(colorize_frames(spr.image.frames, bytes.fromhex(spr.properties[source.properties['color']][1:])))
-      save_image(spr, [frames[0]], os.path.join(resource_pack, texture_path))
-      save_editor_model(path_to_resource(texture_path), os.path.join(resource_pack, model_path))
-      overrides.append({'predicate':{'custom_model_data':sprite_id},'model':path_to_resource(model_path)})
-      sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, sprite_id)
-  return sprite_info
