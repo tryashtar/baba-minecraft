@@ -37,9 +37,9 @@ summon item_display 80.5 74.5625 -144.5 {Tags:["baba"], billboard: "vertical", h
 function baba:booth/door_close
 
 # sign
-summon item_display 75.5 81.0 -144.4375 {Tags:["baba"], height: 5.0f, item: {components: {"minecraft:custom_model_data": 21, "minecraft:potion_contents": {custom_color: 14236010}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0000007f, 2.999998f, 2.9999998f], translation: [0.0f, 0.0f, 0.0f]}, width: 5.0f}
-summon item_display 78.5 81.0 -144.4375 {Tags:["baba"], height: 5.0f, item: {components: {"minecraft:custom_model_data": 74, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.000001f, 2.999998f, 2.9999976f], translation: [0.0f, 0.0f, 0.0f]}, width: 5.0f}
-summon item_display 81.5 81.0 -144.4375 {Tags:["baba"], height: 5.0f, item: {components: {"minecraft:custom_model_data": 88, "minecraft:potion_contents": {custom_color: 14236010}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0000005f, 2.9999986f, 2.9999986f], translation: [0.0f, 0.0f, 0.0f]}, width: 5.0f}
+summon item_display 75.5 81.0 -144.4375 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 21, "minecraft:potion_contents": {custom_color: 14236010}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0000007f, 2.999998f, 2.9999998f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
+summon item_display 78.5 81.0 -144.4375 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 74, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.000001f, 2.999998f, 2.9999976f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
+summon item_display 81.5 81.0 -144.4375 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 88, "minecraft:potion_contents": {custom_color: 14236010}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0000005f, 2.9999986f, 2.9999986f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
 summon text_display 78.5 78.5625 -145.9375 {Tags:["baba"], alignment: "center", background: 0, default_background: 0b, height: 3.0f, line_width: 200, see_through: 0b, shadow: 1b, text: '{"text":"game by hempuli\\n pack by tryashtar","font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
 
 # lines
@@ -55,4 +55,36 @@ summon item_display 77.5 74.51 -142.5 {Tags:["baba"], height: 1.0f, item: {compo
 summon item_display 78.5 74.51 -146.5 {Tags:["baba"], height: 1.0f, item: {components: {"minecraft:custom_model_data": 420, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 1.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 1.0f}
 
 # side art
-summon minecraft:item_display 86.5625 76.5 -156.5 {height: 8.0f, item: {components: {"minecraft:custom_model_data": 2, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.5f, -0.5f, -0.5f, 0.5f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [5.0f, 5.0f, 5.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
+summon item_display 86.5625 76.5 -156.5 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 2, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.5f, -0.5f, -0.5f, 0.5f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [5.0f, 5.0f, 5.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
+summon item_display 61.4375 76.5 -151.5 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 252, "minecraft:potion_contents": {custom_color: 15029051}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.5f, 0.5f, 0.5f, 0.5f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [5.0f, 5.0f, 5.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
+
+# blockers
+summon interaction 75.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 76.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 77.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 79.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 80.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 81.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 65.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 68.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 69.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 71.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 72.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 73.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 74.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 76.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 77.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 78.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 79.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 81.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 82.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 83.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 64.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 65.5 73.0 -159.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+summon interaction 66.5 73.0 -159.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
+
+# text inside
+summon text_display 82.0 74.25 -147.0625 {Tags:["baba"], alignment: "center", background: 0, default_background: 0b, line_width: 70, see_through: 0b, shadow: 1b, text: '{"text":"","extra":[{"text":"build credits","underlined":true},{"text":"\\n\\nmmmehbby\\nliorhaddad\\ncelesian\\nmulverinex\\nnightlibra","color":"#EDE285"},"\\n\\nthank you all for your help on such short notice! ",{"text":"❤","color":"#EB91CA"}],"font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 1.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 66.01 74.0 -146.0 {Tags:["baba"], alignment: "left", background: 0, default_background: 0b, line_width: 150, see_through: 0b, shadow: 1b, text: '{"text":"","extra":[{"text":"baba is you","color":"#D9396A"}," is a wonderful indie puzzle game by ",{"text":"arvi teikari","color":"#EDE285"},"! B\\n\\n",{"text":"tryashtar","color":"#83C8E5"}," wanted to bring the game to ",{"text":"minecraft","color":"#5C8339"},", since original ideas are too hard."],"font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 66.01 74.1875 -152.0 {Tags:["baba"], alignment: "left", background: 0, default_background: 0b, line_width: 195, see_through: 0b, shadow: 1b, text: '{"text":"","extra":["in its final form, this project aims to be a full recreation of the original game, with some extra minecraft spice added in.\\n\\ncurrently, i have almost all levels loadable and working, as well as a custom in-game block level editor!\\n\\nthe remaining work involves tracking the player\'s progress across levels, and fixing some subtle simulation discrepancies. baba has some very delicate interactions!\\n\\n",{"text":"@ ","color":"#00FFFF"},{"text":"@ ","color":"#F8BB54"},{"text":"@ ","color":"#FCB5FF"},{"text":"@ ","color":"#FF0000"},{"text":"     >","color":"#8E5E9C"},{"text":"        A","color":"#83C8E5"},{"text":"I","color":"#FFFFFF"},{"text":"M","color":"#A5B13F"},{"text":" F","color":"#EDE285"}],"font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.75f, 0.75f, 0.75f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 75.5 72.25 -159.99 {Tags:["baba"], alignment: "center", background: 0, default_background: 0b, line_width: 60, see_through: 0b, shadow: 1b, text: '{"text":"","extra":["try some levels!"],"font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}}

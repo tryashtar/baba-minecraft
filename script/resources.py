@@ -32,6 +32,9 @@ def save_image(spr, images, path):
   img = PIL.Image.new('RGBA', (spr.width, spr.height * len(images)), '#00000000')
   for i,f in enumerate(images):
     PIL.Image.Image.paste(img, f, (0, i*spr.height), f)
+  img2 = img.copy()
+  img2.putalpha(253)
+  img.paste(img2, img)
   img.save(path)
   if len(images) > 1:
     tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
