@@ -56,7 +56,7 @@ def generate(palettes, backgrounds, data_pack, resource_pack, namespace, data):
       if block not in blockstates:
         blockstates[block] = {}
       blockstates[block][state] = {"model":f"{namespace}:background/{n}_{t}","y":90}
-      stuff.append(f'{t}:"{block}[{state}]"')
+      stuff.append(f'{t}:"{block}[{state}]",{t}_bg:"{color}"')
     terra_id += 1
     colors = []
     for oldcol,tocol in p.items():
