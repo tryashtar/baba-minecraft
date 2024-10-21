@@ -1,0 +1,6 @@
+{
+   "parent": "baba:editor_block",
+   "textures": {
+      "all": "baba:editor/letter/ab"
+   }
+}

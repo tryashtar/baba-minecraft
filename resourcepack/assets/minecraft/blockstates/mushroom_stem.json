@@ -1,0 +1,20 @@
+{
+   "variants": {
+      "up=false,down=false,north=false,south=false,east=false,west=false": {
+         "model": "baba:background/flower/10.2",
+         "y": 90
+      },
+      "up=true,down=false,north=false,south=false,east=false,west=false": {
+         "model": "baba:background/flower/10.3",
+         "y": 90
+      },
+      "up=false,down=true,north=false,south=false,east=false,west=false": {
+         "model": "baba:background/flower/10.4",
+         "y": 90
+      },
+      "up=true,down=true,north=false,south=false,east=false,west=false": {
+         "model": "baba:background/flower/10.5",
+         "y": 90
+      }
+   }
+}
