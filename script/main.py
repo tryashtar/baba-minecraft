@@ -3,6 +3,7 @@ import math
 import tryashtools as tat
 import sprite
 import resources
+import background
 import ops
 import json
 import shutil
@@ -13,6 +14,7 @@ def main():
   source = sprite.SpriteCollection(sprite_data)
   sprite_resources = resources.create_sprite_resources(source, 'resourcepack', 'baba')
   data = []
+  background.generate(source.palettes, data)
   generate_reference_ids(source)
   generate_wiggle_fonts(source, sprite_resources)
   generate_spawn_functions(source)
