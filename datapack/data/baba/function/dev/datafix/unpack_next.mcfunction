@@ -1,4 +1,3 @@
-setblock ~ ~3 ~ gold_block
 scoreboard players add packed baba 1
 data modify storage baba:main level set from block ~ ~-2 ~ item.components."minecraft:custom_data".baba
 execute store result score height baba run data get storage baba:main level.tiles
