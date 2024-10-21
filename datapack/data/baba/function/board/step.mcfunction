@@ -95,7 +95,7 @@ execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.win] at @s r
 execute at @e[type=item_display,tag=baba.object,tag=active,tag=dirty] run tag @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=!dirty,distance=..1.1] add dirty
 execute as @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=dirty] at @s run function baba:board/graphics/connector
 execute as @e[type=item_display,tag=baba.object,tag=active,tag=has_frames,tag=!prop.sleep] run function baba:board/graphics/frame
-execute as @e[type=item_display,tag=baba.object,tag=active] at @s unless block ~ ~-1 ~ #baba:board run function baba:board/interact/destroy
+execute as @e[type=item_display,tag=baba.object,tag=active] at @s unless block ~ ~ ~-1 #baba:board run function baba:board/interact/destroy
 
 function baba:display/update
 

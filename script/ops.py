@@ -35,7 +35,7 @@ def create_data(properties, extra_data=None):
   tags = ['baba','baba.object','spawn','active','assign','dirty']
   data = []
   scores = []
-  nbt = ['teleport_duration:3','width:1f','height:0.1f','item_display:"fixed"']
+  nbt = ['teleport_duration:3','width:1f','height:0.1f','item_display:"fixed"','transformation:{left_rotation:[0.5f,0.5f,0.5f,0.5f],translation:[0f,0f,0f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}']
   for m,val in properties.items():
     if m.kind == 'tag' and val != False:
       tags.append(m.convert(val))
