@@ -146,7 +146,7 @@ def generate_give_commands(items):
     lang[f'baba.sprite.{description}'] = chr(char) + chr(next_char(char)) + " "
     font.append({"type":"bitmap","file":data.texture_resource + ".png","height":16,"ascent":12,"chars":[chr(char)]})
     font.append({"type":"bitmap","file":data.texture_resource + ".png","height":-16,"ascent":-32768,"chars":[chr(next_char(char))]})
-    cmd = f'give @s {block}[item_name=\'"{simple_name}"\',custom_model_data="{data.custom_model_data}",block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
+    cmd = f'give @s {block}[item_name=\'"{simple_name}"\',custom_model_data={data.custom_model_data},block_state={{{state_str}}},custom_data={{baba:{{tile:1b}}}}]'
     get_all.append(cmd)
     tat.write_lines([cmd], f'datapack/data/baba/function/dev/give/{description}.mcfunction')
     message.append({"translate":"baba.translate","fallback":"%2$s","with":[{"translate":f'baba.sprite.{description}',"font":"baba:sprites"},simple_name],"clickEvent":{"action":"run_command","value":f'/function baba:dev/give/{description}'},"hoverEvent":{"action":"show_text","contents":simple_name}})
