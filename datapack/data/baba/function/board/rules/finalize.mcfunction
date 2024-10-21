@@ -18,7 +18,7 @@ execute if data storage baba:main rule_data.parsing{delete:1b} run data modify s
 # can be disabled by inverted rules
 execute if entity @s[scores={sprite=397973}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:330758}] run data modify storage baba:main rule_data.properties append value 330758
 execute if entity @s[scores={sprite=6491892}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:388978}] run data modify storage baba:main rule_data.properties append value 388978
-execute if entity @s[scores={sprite=54575550}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:275526380}] run data modify storage baba:main rule_data.properties append value 275526380
+execute if entity @s[scores={sprite=-3}] unless data storage baba:main rule_data.parsing.properties[{inverted:1b,text:-15}] run data modify storage baba:main rule_data.properties append value -15
 
 execute if entity @s[type=item_display] run item modify entity @s contents {function:"copy_custom_data",source:{type:"storage",source:"baba:main"},ops:[{op:"replace",source:"rule_data",target:"baba"}]}
 execute if entity @s[type=marker] run data modify entity @s data set from storage baba:main rule_data
@@ -37,7 +37,7 @@ execute if data storage baba:main rule_data{properties:[397634]} run tag @s add 
 tag @s[tag=prop.shift] remove prop.shift
 execute if data storage baba:main rule_data{properties:[10261586]} run tag @s add prop.shift
 tag @s[tag=prop.select] remove prop.select
-execute if data storage baba:main rule_data{properties:[275526380]} run tag @s add prop.select
+execute if data storage baba:main rule_data{properties:[-15]} run tag @s add prop.select
 tag @s[tag=prop.fall] remove prop.fall
 execute if data storage baba:main rule_data{properties:[119163]} run tag @s add prop.fall
 tag @s[tag=prop.up] remove prop.up
@@ -61,7 +61,7 @@ execute if data storage baba:main rule_data{properties:[6257]} run tag @s add pr
 tag @s[tag=prop.melt] remove prop.melt
 execute if data storage baba:main rule_data{properties:[259868]} run tag @s add prop.melt
 tag @s[tag=prop.defeat] remove prop.defeat
-execute if data storage baba:main rule_data{properties:[60174623]} run tag @s add prop.defeat
+execute if data storage baba:main rule_data{properties:[-4]} run tag @s add prop.defeat
 tag @s[tag=prop.shut] remove prop.shut
 execute if data storage baba:main rule_data{properties:[380396]} run tag @s add prop.shut
 tag @s[tag=prop.open] remove prop.open

@@ -6,12 +6,12 @@ scoreboard players set passed baba 0
 # so we mark the object for re-assign if it changes in certain ways next step
 execute if data storage baba:main condition{condition:180392} if score direction baba matches 0 run scoreboard players set passed baba 1
 execute if data storage baba:main condition{condition:180392} run tag @s add assign_idle
-execute if data storage baba:main condition{condition:180438055} unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=!self,distance=..0.1] run scoreboard players set passed baba 1
-execute if data storage baba:main condition{condition:180438055} run tag @s add assign_move
+execute if data storage baba:main condition{condition:-10} unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=!self,distance=..0.1] run scoreboard players set passed baba 1
+execute if data storage baba:main condition{condition:-10} run tag @s add assign_move
 execute if data storage baba:main condition{condition:8104442} if predicate baba:often run scoreboard players set passed baba 1
 execute if data storage baba:main condition{condition:8104442} run tag @s add assign_always
-execute if data storage baba:main condition{condition:275525968} if predicate baba:seldom run scoreboard players set passed baba 1
-execute if data storage baba:main condition{condition:275525968} run tag @s add assign_always
+execute if data storage baba:main condition{condition:-14} if predicate baba:seldom run scoreboard players set passed baba 1
+execute if data storage baba:main condition{condition:-14} run tag @s add assign_always
 
 # these conditions can require multiple params, in which case any object can only count once
 execute if data storage baba:main condition{condition:-100} run function baba:board/rules/apply/check/without
@@ -23,8 +23,8 @@ tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
 execute if data storage baba:main condition{condition:419} run function baba:board/rules/apply/check/on
 execute if data storage baba:main condition{condition:419} run tag @s add assign_move
 tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
-execute if data storage baba:main condition{condition:86690878} run function baba:board/rules/apply/check/facing
-execute if data storage baba:main condition{condition:86690878} run tag @s add assign_move
+execute if data storage baba:main condition{condition:-5} run function baba:board/rules/apply/check/facing
+execute if data storage baba:main condition{condition:-5} run tag @s add assign_move
 tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
 execute if score passed baba matches 0 if data storage baba:main condition{inverted:0b} run scoreboard players set affected baba 0
 execute if score passed baba matches 1 if data storage baba:main condition{inverted:1b} run scoreboard players set affected baba 0

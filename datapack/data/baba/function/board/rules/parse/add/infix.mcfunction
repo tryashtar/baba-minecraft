@@ -12,6 +12,6 @@ data modify storage baba:main parsing.inverted set value 0b
 
 # "facing" is allowed to have directions as parameters
 data modify storage baba:main parsing.allow_facing set value 0b
-execute if score word baba matches 86690878 run data modify storage baba:main parsing.allow_facing set value 1b
+execute if score word baba matches -5 run data modify storage baba:main parsing.allow_facing set value 1b
 
 data modify storage baba:main parsing.state set value {noun:"parameter",verb:"none",property:"parameter",and:"none",not:"parameter",prefix:"none",infix:"none"}
