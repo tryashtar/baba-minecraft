@@ -3,15 +3,15 @@
    "overrides": [
       {
          "predicate": {
-            "custom_model_data": 257
+            "custom_model_data": 136
          },
-         "model": "baba:editor/cliff"
+         "model": "baba:editor/letter/ab"
       },
       {
          "predicate": {
-            "custom_model_data": 258
+            "custom_model_data": 137
          },
-         "model": "baba:editor/cursor"
+         "model": "baba:editor/letter/ba"
       }
    ]
 }

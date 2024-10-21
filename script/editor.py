@@ -36,6 +36,7 @@ def block_state(val, exclude_facing=False):
 def create_blockstates(source: sprite.SpriteCollection, sprites: dict[sprite.BabaObject, resources.SpriteResources], resource_pack):
   blockstates = {}
   state_models = {}
+  item_models = {}
   items = {}
   
   sprite_prop = source.properties['sprite']
@@ -68,11 +69,16 @@ def create_blockstates(source: sprite.SpriteCollection, sprites: dict[sprite.Bab
     items[entry] = (block, state)
     if block not in state_models:
       state_models[block] = {}
+      item_models[block] = []
     state_models[block][ops.state_string(state)] = {'model': entry.model_resource, 'y':90}
+    item_models[block].append({"predicate":{"custom_model_data":entry.custom_model_data},"model":entry.model_resource})
     i += 1
-  for block in ['chiseled_bookshelf', 'beehive', 'bee_nest']:
+  for block,parent in [('chiseled_bookshelf', 'block/chiseled_bookshelf_inventory'), ('beehive','block/beehive'), ('bee_nest', 'block/bee_nest')]:
     state_path = os.path.join(resource_pack, f'assets/minecraft/blockstates/{block}.json')
+    item_path = os.path.join(resource_pack, f'assets/minecraft/models/item/{block}.json')
     tat.delete_file(state_path)
+    tat.delete_file(item_path)
     if block in state_models:
       tat.write_json({"variants":state_models[block]}, state_path)
+      tat.write_json({"parent":parent,"overrides":list(sorted(item_models[block], key=lambda x: x['predicate']['custom_model_data']))}, item_path)
   return (items, blockstates)

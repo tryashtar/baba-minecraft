@@ -813,18 +813,6 @@
       },
       {
          "predicate": {
-            "custom_model_data": 136
-         },
-         "model": "baba:editor/letter/ab"
-      },
-      {
-         "predicate": {
-            "custom_model_data": 137
-         },
-         "model": "baba:editor/letter/ba"
-      },
-      {
-         "predicate": {
             "custom_model_data": 138
          },
          "model": "baba:editor/text/cloud"
@@ -1536,6 +1524,18 @@
             "custom_model_data": 256
          },
          "model": "baba:editor/brick"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 257
+         },
+         "model": "baba:editor/cliff"
+      },
+      {
+         "predicate": {
+            "custom_model_data": 258
+         },
+         "model": "baba:editor/cursor"
       }
    ]
 }
