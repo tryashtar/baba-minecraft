@@ -1,4 +1,4 @@
-execute at @s align z run tp @s ~ ~ ~0.001
+execute at @s align z run tp @s ~ ~ ~0.03
 execute store result storage baba:main context.z_layer double 0.0001 run scoreboard players get @s z_layer
 execute at @s run function baba:display/set_height with storage baba:main context
 execute store result storage baba:main context.appearance int 1 run scoreboard players get @s appearance
