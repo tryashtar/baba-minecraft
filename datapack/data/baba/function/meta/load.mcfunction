@@ -27,8 +27,8 @@ scoreboard objectives add level_height dummy
 scoreboard objectives add level_width dummy
 scoreboard objectives add level_background dummy
 scoreboard objectives add float_anim dummy
-scoreboard objectives add undo dropped:diamond
-scoreboard objectives add wait dropped:apple
+scoreboard objectives add undo dummy
+scoreboard objectives add wait dummy
 scoreboard objectives add use used:carrot_on_a_stick
 scoreboard players set #-1 baba -1
 scoreboard players set #10 baba 10
