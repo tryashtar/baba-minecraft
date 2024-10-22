@@ -1,2 +1,2 @@
 tag @e[tag=baba,tag=active] remove active
-$execute align xyz positioned ~ ~-1 ~ run tag @e[tag=baba,dx=$(level_height),dz=$(level_width),dy=1] add active
+execute positioned ~-1 ~-1 ~-1 run tag @e[tag=baba,dx=25,dy=14,dz=2] add active

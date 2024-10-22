@@ -43,9 +43,6 @@ tag @e[type=#baba:object,tag=baba.object,tag=active] add assign
 function baba:board/rules/update
 function baba:board/rules/assign
 
-execute as @e[type=item_display,tag=baba.object,tag=active,scores={sprite=6491892},predicate=baba:has_level_data] run function baba:progress/check_completed
-
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.select] at @s run function baba:progress/show_name
 function baba:board/history/record
 scoreboard players set steps baba 0
 scoreboard players set win baba 0
