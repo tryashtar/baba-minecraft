@@ -48,3 +48,5 @@ scoreboard players set steps baba 0
 scoreboard players set win baba 0
 
 function baba:display/update
+execute as @e[tag=baba,tag=active] run function baba:editor/load/save_scores
+execute as @e[tag=baba,tag=active] on passengers at @s run ride @s dismount

@@ -1,2 +1,3 @@
-kill @e[tag=baba,x=63,y=67,z=-168,dx=24,dy=14,dz=0]
-place template baba:levels/map 63 68 -168
+kill @e[tag=baba,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1]
+place template baba:levels/map 64 69 -169
+execute as @e[tag=baba,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:booth/levels/load_scores

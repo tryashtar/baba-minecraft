@@ -1,4 +1,4 @@
-kill @e[tag=baba]
+kill @e[tag=baba,tag=!baba_persist]
 
 # trees
 summon item_display 74.5 74.5625 -130.5 {Tags:["baba"], billboard: "vertical", height: 1.0f, item: {components: {"minecraft:custom_model_data": 304, "minecraft:potion_contents": {custom_color: 6062905}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.5f]}, width: 1.0f, shadow_radius: 0.3f}

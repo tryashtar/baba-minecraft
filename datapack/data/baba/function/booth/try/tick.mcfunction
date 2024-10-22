@@ -1,4 +1,2 @@
-scoreboard players set has_hitter baba 0
-execute on attacker run scoreboard players set has_hitter baba 1
-execute on target run scoreboard players set has_hitter baba 2
-execute if score has_hitter baba matches 1..2 run function baba:booth/try/start
+function baba:input/input
+execute as @e[type=marker,tag=baba.board,distance=..40,limit=1] at @s run function baba:display/tick
