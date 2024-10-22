@@ -10,12 +10,12 @@ scoreboard players set @e[type=item_display,tag=baba.object,tag=active,tag=repar
 data modify storage baba:main new_rules set value []
 
 # parse left-to-right text
-execute rotated 0 0 as @e[type=item_display,tag=baba.object,tag=active,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=first_word,limit=1] rotated 0 0 run function baba:board/rules/parse
+execute rotated -90 0 as @e[type=item_display,tag=baba.object,tag=active,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=first_word,limit=1] rotated -90 0 run function baba:board/rules/parse
 
 # parse up-to-down text
-execute rotated 90 0 as @e[type=item_display,tag=baba.object,tag=active,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=first_word,limit=1] rotated 90 0 run function baba:board/rules/parse
+execute rotated 0 90 as @e[type=item_display,tag=baba.object,tag=active,tag=reparse] positioned as @s positioned ^ ^ ^-1 unless entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] positioned ^ ^ ^2 if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,distance=..0.1,limit=1] run tag @s add first_word
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=first_word,limit=1] rotated 0 90 run function baba:board/rules/parse
 
 execute if data storage baba:main new_rules[0] summon marker run function baba:board/rules/convert
 

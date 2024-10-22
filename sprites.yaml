@@ -1346,7 +1346,7 @@ sprites:
       coords: [376, 851]
       frames: right
       properties:
-        z_layer: 20
+        z_layer: 21
     sprites:
     - {}
 

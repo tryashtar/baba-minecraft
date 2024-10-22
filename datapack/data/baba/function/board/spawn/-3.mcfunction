@@ -3,7 +3,7 @@ item replace entity @s contents with potion[custom_data={baba:{text:"cursor"}}]
 scoreboard players set @s appearance -3
 scoreboard players set @s color 15438282
 scoreboard players set @s sprite -3
-scoreboard players set @s z_layer 20
+scoreboard players set @s z_layer 21
 scoreboard players set @s facing 4
 scoreboard players set @s walk 0
 execute as @e[type=marker,tag=baba.conversion,tag=active,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert
