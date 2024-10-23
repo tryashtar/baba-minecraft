@@ -185,6 +185,7 @@ class LevelGrid:
                   name = 'baba'
                if (change_name := edits.get('name')) is not None:
                   name = change_name
+               name = name.replace('violet', 'flower')
                text = None
                extra_data = None
                if name.startswith('text_'):
