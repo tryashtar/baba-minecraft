@@ -63,7 +63,7 @@ def generate_particles(particles):
     init_lines.extend([
       f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
       f'execute store result storage baba:main merge.transformation.translation[0] float {speed/65536:.20f} run random value -65536..65536',
-      f'execute store result storage baba:main merge.transformation.translation[2] float {speed/65536:.20f} run random value -65536..65536',
+      f'execute store result storage baba:main merge.transformation.translation[1] float {speed/65536:.20f} run random value -65536..65536',
       'data modify entity @s {} merge from storage baba:main merge',
       f'scoreboard players set @s life {life}',
     ])
@@ -91,6 +91,7 @@ def generate_packing_functions(source, blockstates):
     for spr,props in spritelist:
       text_val = props.get(source.properties['text'])
       sprite_val = props.get(source.properties['sprite'])
+      default_color = spr.properties.get(source.properties['color'])
       extra_data = None
       if text_val is not None:
         extra_data = f'text:"{text_val}"'
@@ -112,8 +113,8 @@ def generate_packing_functions(source, blockstates):
         lines.append(f'setblock ~ ~ ~ {b}[{ops.state_string(s)}]')
       else:
         lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run return run setblock ~ ~ ~ {block}[{state_str}]')
-    if len(lines) > 0:
-      tat.write_lines(lines, f'datapack/data/baba/function/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
+    lines.append(f'execute unless data storage baba:main tile.scores{{color:{int(default_color[1:], 16)}}} run scoreboard players set write_color baba 1')
+    tat.write_lines(lines, f'datapack/data/baba/function/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
     for block_dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/function/editor/pack/block/{block_dir}.mcfunction')
   pack_lines.extend([

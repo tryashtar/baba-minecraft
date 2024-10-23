@@ -1,5 +1,5 @@
-fill ~ ~ ~ ^3 ^2 ^ white_concrete
-fill ^ ^-1 ^ ^3 ^-1 ^ black_concrete
+fill ~ ~ ~ ^3 ^2 ^ black_concrete
+fill ^ ^-1 ^ ^3 ^-1 ^ white_concrete
 setblock ^1 ^-1 ^1 air
 $setblock ^1 ^-1 ^1 bamboo_wall_sign[facing=$(facing)]{front_text:{messages:['"level"','"default"','""','""']}}
 setblock ^3 ^-1 ^1 air
