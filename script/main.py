@@ -114,6 +114,7 @@ def generate_packing_functions(source, blockstates):
       else:
         lines.append(f'execute if data storage baba:main tile{{{check_rest}}} run return run setblock ~ ~ ~ {block}[{state_str}]')
     lines.append(f'execute unless data storage baba:main tile.scores{{color:{int(default_color[1:], 16)}}} run scoreboard players set write_color baba 1')
+    lines.append(f'execute unless data storage baba:main tile.scores{{appearance:{ops.id_hash(sprite_val)}}} run scoreboard players set write_sprite baba 1')
     tat.write_lines(lines, f'datapack/data/baba/function/editor/unpack/block/{ops.id_hash(obj.name)}.mcfunction')
     for block_dir,lines in dir_checks.items():
       tat.write_lines(lines, f'datapack/data/baba/function/editor/pack/block/{block_dir}.mcfunction')
