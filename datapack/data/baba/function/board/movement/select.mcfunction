@@ -6,4 +6,6 @@ scoreboard players operation @s facing = direction baba
 tag @s remove can_move
 tag @s add dirty
 
-function baba:progress/show_name
+data modify storage baba:main level_name set value '""'
+execute at @s as @e[type=#baba:object,tag=baba.object,distance=..0.1,predicate=baba:has_level_data,limit=1] run data modify storage baba:main level_name set from entity @s item.components."minecraft:custom_data".baba.level.name
+data modify entity @e[type=text_display,tag=baba.text,limit=1] text set value '[{"storage":"baba:main","nbt":"level_name","interpret":true,"font":"baba:font"},"\\n\\ue000"]'

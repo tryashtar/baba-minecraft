@@ -1,6 +1,8 @@
 data modify storage baba:main scores set value {}
 execute if entity @s[type=marker] run data modify storage baba:main scores set from entity @s data.saved_scores
+execute if entity @s[type=marker] run data remove entity @s data.saved_scores
 execute if entity @s[type=item_display] run data modify storage baba:main scores set from entity @s item.components."minecraft:custom_data".baba.saved_scores
+execute if entity @s[type=item_display] run data remove entity @s item.components."minecraft:custom_data".baba.saved_scores
 
 execute store result score @s sprite run data get storage baba:main scores.sprite
 execute store result score @s appearance run data get storage baba:main scores.appearance
