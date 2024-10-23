@@ -8,7 +8,7 @@ execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=!falling,t
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=!falling,tag=prop.weak,predicate=baba:match_score/float_level,distance=..0.1] run function baba:board/interact/destroy
 
 # recurse until we find a blocker or the edge of the level
-execute positioned ~-1 ~ ~ as @e[type=#baba:object,tag=baba.object,tag=active,tag=!can_move,distance=..0.1] run function baba:board/movement/check_blocker
-execute unless block ~-1 ~-1 ~ #baba:board unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
-execute if block ~-1 ~-1 ~ #baba:board positioned ~-1 ~ ~ if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=blocker,distance=..0.1,limit=1] positioned ~1 ~ ~ unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
-execute if entity @s[tag=!removed] if block ~-1 ~-1 ~ #baba:board positioned ~-1 ~ ~ unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=blocker,distance=..0.1,limit=1] run function baba:board/interact/fall_loop
+execute positioned ~ ~-1 ~ as @e[type=#baba:object,tag=baba.object,tag=active,tag=!can_move,distance=..0.1] run function baba:board/movement/check_blocker
+execute unless block ~ ~-1 ~-1 #baba:board unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
+execute if block ~ ~-1 ~-1 #baba:board positioned ~ ~-1 ~ if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=blocker,distance=..0.1,limit=1] positioned ~ ~1 ~ unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=falling,distance=..0.1,limit=1] run function baba:board/movement/move_here
+execute if entity @s[tag=!removed] if block ~ ~-1 ~-1 #baba:board positioned ~ ~-1 ~ unless entity @e[type=#baba:object,tag=baba.object,tag=active,tag=blocker,distance=..0.1,limit=1] run function baba:board/interact/fall_loop
