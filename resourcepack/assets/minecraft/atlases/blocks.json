@@ -9,6 +9,10 @@
          "type": "directory",
          "source": "particles",
          "prefix": "particles/"
+      },
+      {
+         "type": "single",
+         "resource": "baba:dandelion"
       }
    ]
 }
