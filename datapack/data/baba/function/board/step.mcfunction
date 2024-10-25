@@ -51,12 +51,12 @@ execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,lim
 tag @e[type=#baba:object,tag=baba.object,tag=active,tag=teleported] remove teleported
 scoreboard players set teleported baba 0
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.tele] at @s run function baba:board/interact/teleport
-execute if score teleported baba matches 1.. as @a at @s run playsound baba:teleport master @s
+execute if score teleported baba matches 1.. run playsound baba:teleport master @a 75 74 -162
 # shift changes the facing direction of objects both when pushing and when landing
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shift] at @s run function baba:board/interact/shift_dir
 execute if score direction baba matches 1.. as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.select] at @s run function baba:board/movement/select
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.fall] at @s run function baba:board/interact/fall
-execute if score moved baba matches 1.. as @a at @s run playsound baba:move master @s
+execute if score moved baba matches 1.. run playsound baba:move master @a 75 74 -162
 
 # parse and assign again if something moved, including text
 execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1] run function baba:board/rules/update
@@ -75,15 +75,15 @@ execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,lim
 
 scoreboard players set sank baba 0
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.sink] at @s run function baba:board/interact/sink
-execute if score sank baba matches 1.. as @a at @s run playsound baba:sink master @s
+execute if score sank baba matches 1.. run playsound baba:sink master @a 75 74 -162
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.weak] at @s run function baba:board/interact/weak
 scoreboard players set melted baba 0
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.hot] at @s run function baba:board/interact/hot
-execute if score melted baba matches 1.. as @a at @s run playsound baba:melt master @s
+execute if score melted baba matches 1.. run playsound baba:melt master @a 75 74 -162
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.defeat] at @s run function baba:board/interact/defeat
-execute if score destroyed baba matches 1.. as @a at @s run playsound baba:defeat master @s
+execute if score destroyed baba matches 1.. run playsound baba:defeat master @a 75 74 -162
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shut] at @s run function baba:board/interact/shut
-execute if score opened baba matches 1.. as @a at @s run playsound baba:open master @s
+execute if score opened baba matches 1.. run playsound baba:open master @a 75 74 -162
 
 # assign again if anything is created by 'make', but don't parse text
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=has_makes] at @s run function baba:board/interact/make

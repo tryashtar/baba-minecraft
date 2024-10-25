@@ -67,5 +67,5 @@ tag @e[type=marker,tag=baba.rule,tag=changed] remove changed
 
 tag @e[type=item_display,tag=baba.object,tag=active,tag=reparse,tag=!dirty] add dirty
 tag @e[type=item_display,tag=baba.object,tag=active,tag=reparse] remove reparse
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=unused,scores={text_used=1..},limit=1] as @a at @s run playsound baba:form_rule master @s
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=unused,scores={text_used=1..},limit=1] run playsound baba:form_rule master @a 75 74 -162
 tag @e[type=item_display,tag=baba.object,tag=active,tag=unused] remove unused
