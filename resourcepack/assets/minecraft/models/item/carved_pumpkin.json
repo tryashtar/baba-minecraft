@@ -1,0 +1,11 @@
+{
+   "parent": "block/carved_pumpkin",
+   "overrides": [
+      {
+         "predicate": {
+            "custom_model_data": 794001
+         },
+         "model": "baba:hat"
+      }
+   ]
+}
