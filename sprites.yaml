@@ -1356,6 +1356,11 @@ particles:
   scale: 0.666666
   speed: 1
   life: 12
+- name: open
+  color: '#ede285'
+  scale: 0.666666
+  speed: 1.2
+  life: 12
 - name: melt
   color: '#737373'
   speed: 1
@@ -1365,6 +1370,11 @@ particles:
   scale: 0.666666
   speed: 0.8
   life: 10
+- name: defeat
+  color: '#ffffff'
+  scale: 0.666666
+  speed: 0.9
+  life: 7
 - name: tele
   color: '#83c8e5'
   scale: 0.333333
