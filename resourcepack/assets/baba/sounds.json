@@ -1,4 +1,12 @@
 {
+   "music": {
+      "sounds": [
+         {
+            "name": "baba:music",
+            "stream": true
+         }
+      ]
+   },
    "secret": {
       "sounds": ["baba:secret"]
    },
