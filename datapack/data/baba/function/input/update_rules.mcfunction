@@ -1,4 +1,1 @@
-item replace entity @s hotbar.8 with knowledge_book[item_name='{"text":"rules:","color":"white","font":"baba:font"}',custom_data={baba:{rule_book:1b}}]
-tag @s add self
-execute as @e[type=marker,tag=baba.rule] run item modify entity @a[tag=self,limit=1] hotbar.8 baba:append_rule
-tag @s remove self
+data modify entity @e[type=text_display,tag=baba_rules,x=78,y=73,z=-160,distance=..10,limit=1] text set value '[{"text":"","font":"baba:font"},{"text":"rules:\\n","underlined":true},{"selector":"@e[type=marker,tag=baba.rule,x=63,y=68,z=-166,distance=..5]","separator":"\\n"}]'

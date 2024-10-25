@@ -1,5 +1,5 @@
 # start the demo
-playsound baba:win master @a ~ ~ ~
+tp @s ~ ~ ~ 180 0
 ride @s mount @e[type=item_display,tag=baba_mount,distance=..10,limit=1]
 tag @s remove hold_up
 tag @s remove hold_down
