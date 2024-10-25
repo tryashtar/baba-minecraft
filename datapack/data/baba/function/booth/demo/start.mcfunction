@@ -1,6 +1,6 @@
 # someone started the demo
 summon item_display 75.5 74.0 -160.5 {Tags:["baba","baba_mount"], width: 0.0f, height: 0.0f}
-summon interaction ~ ~2 ~ {Tags:["baba","baba_demo"],width:1f,height:1f}
+summon interaction 75.5 74.5 -160.5 {Tags:["baba","baba_demo"],width:1f,height:1f}
 execute if score has_hitter baba matches 1 on attacker at @s run function baba:booth/demo/begin
 execute if score has_hitter baba matches 2 on target at @s run function baba:booth/demo/begin
 kill @s
