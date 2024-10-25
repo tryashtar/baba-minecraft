@@ -90,3 +90,12 @@ summon text_display 66.01 74.1875 -152.0 {Tags:["baba"], alignment: "left", back
 
 # try levels
 function baba:booth/demo/reset
+
+# basement
+summon block_display 68.0 68.0 -162.0 {block_state: {Name: "minecraft:deepslate_bricks"},Tags:["baba"]}
+summon block_display 68.0 69.0 -162.0 {block_state: {Name: "minecraft:deepslate_bricks"},Tags:["baba"]}
+summon item_display 81.5 69.5 -152.5625 {Tags:["baba"],height: 3.0f, item: {components: {"minecraft:custom_model_data": 158, "minecraft:potion_contents": {custom_color: 6266321}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.7071068f, 0.0f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
+summon item_display 80.5 69.5 -152.5625 {Tags:["baba"],height: 3.0f, item: {components: {"minecraft:custom_model_data": 74, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.7071068f, 0.0f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
+summon item_display 79.5 69.5 -152.5625 {Tags:["baba"],height: 3.0f, item: {components: {"minecraft:custom_model_data": 105, "minecraft:potion_contents": {custom_color: 8636645}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.7071068f, 0.0f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
+summon item_display 80.5 68.5625 -153.5 {Tags:["baba","baba_ice"],height: 3.0f, item: {components: {"minecraft:custom_model_data": 394, "minecraft:potion_contents": {custom_color: 4093576}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
+summon item_display 70.5 79.5 -152.5 {Tags:["baba"],height: 3.0f, item: {components: {"minecraft:custom_model_data": 394, "minecraft:potion_contents": {custom_color: 4093576}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [1.0f, 0.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 3.0f}
