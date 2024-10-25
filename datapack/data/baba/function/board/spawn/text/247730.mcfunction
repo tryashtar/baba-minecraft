@@ -6,8 +6,8 @@ scoreboard players set @s inactive_color 14236010
 scoreboard players set @s sprite 397973
 scoreboard players set @s text 247730
 scoreboard players set @s z_layer 20
-scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text] text_id
+scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] text_id
 scoreboard players add @s text_id 1
 scoreboard players set @s facing 4
 scoreboard players set @s walk 0
-execute as @e[type=marker,tag=baba.conversion,tag=active,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert
+execute as @e[type=marker,tag=baba.conversion,tag=active,scores={sprite=397973},predicate=baba:match_score/text,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/spawn_convert

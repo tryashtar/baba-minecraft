@@ -27,6 +27,6 @@ tag @s[tag=!can_move,tag=!auto_move,tag=prop.weak] add destroy
 # if you can't move, you can't push or pull
 tag @s[tag=destroy] add can_move
 execute if entity @s[tag=destroy] run scoreboard players add destroyed baba 1
-execute if entity @s[tag=!can_move] run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=can_move] remove can_move
+execute if entity @s[tag=!can_move] run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=can_move,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove can_move
 
 execute if entity @s[tag=can_move] positioned ^ ^ ^-1 as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.pull,tag=!has_moved,distance=..0.1] run function baba:board/movement/check_move

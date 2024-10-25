@@ -16,16 +16,16 @@ execute if data storage baba:main condition{condition:-14} run tag @s add assign
 # these conditions can require multiple params, in which case any object can only count once
 execute if data storage baba:main condition{condition:-100} run function baba:board/rules/apply/check/without
 execute if data storage baba:main condition{condition:-100} run tag @s add assign_always
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove used
 execute if data storage baba:main condition{condition:279252} run function baba:board/rules/apply/check/near
 execute if data storage baba:main condition{condition:279252} run tag @s add assign_move
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used,distance=..2] remove used
 execute if data storage baba:main condition{condition:419} run function baba:board/rules/apply/check/on
 execute if data storage baba:main condition{condition:419} run tag @s add assign_move
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used,distance=..2] remove used
 execute if data storage baba:main condition{condition:-5} run function baba:board/rules/apply/check/facing
 execute if data storage baba:main condition{condition:-5} run tag @s add assign_move
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used] remove used
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=used,distance=..2] remove used
 execute if score passed baba matches 0 if data storage baba:main condition{inverted:0b} run scoreboard players set affected baba 0
 execute if score passed baba matches 1 if data storage baba:main condition{inverted:1b} run scoreboard players set affected baba 0
 

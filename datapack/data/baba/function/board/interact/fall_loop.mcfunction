@@ -2,8 +2,8 @@
 # but not win, defeat, tele, swap, hot, melt
 execute if score open baba matches 1 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shut,predicate=baba:match_score/float_level,distance=..0.1] add open
 execute if score shut baba matches 1 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.open,predicate=baba:match_score/float_level,distance=..0.1] add open
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=open,limit=1] run function baba:board/movement/move_here
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=open,limit=1] run function baba:board/interact/open
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=open,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/movement/move_here
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=open,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/interact/open
 execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=!falling,tag=prop.weak,predicate=baba:match_score/float_level,distance=..0.1,limit=1] run scoreboard players add destroyed baba 1
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=!falling,tag=prop.weak,predicate=baba:match_score/float_level,distance=..0.1] run function baba:board/interact/weak_destroy
 

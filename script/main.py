@@ -114,11 +114,11 @@ def generate_spawn_functions(source):
           lines.append('item replace entity @s contents with potion')
         for (score,val) in sorted(scores, key=lambda x: x[0].name):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
-        lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text] text_id')
+        lines.append('scoreboard players operation @s text_id > @e[type=item_display,tag=baba.object,tag=active,tag=is_text,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] text_id')
         lines.append('scoreboard players add @s text_id 1')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={sprite=397973},predicate=baba:match_score/text] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={sprite=397973},predicate=baba:match_score/text,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/text/{ops.id_hash(spr_text)}.mcfunction')
     else:
       variables = obj.filter_sprites(lambda x: 'spawn' in x.attributes)
@@ -141,7 +141,7 @@ def generate_spawn_functions(source):
           lines.append(f'scoreboard players set @s {score.name} {score.convert(val)}')
         lines.append('scoreboard players set @s facing 4')
         lines.append('scoreboard players set @s walk 0')
-        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={text=0},predicate=baba:match_score/sprite] run function baba:board/spawn_convert')
+        lines.append('execute as @e[type=marker,tag=baba.conversion,tag=active,scores={text=0},predicate=baba:match_score/sprite,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/spawn_convert')
         tat.write_lines(lines, f'datapack/data/baba/function/board/spawn/{obj.id}.mcfunction')
 
 def generate_reference_ids(source):

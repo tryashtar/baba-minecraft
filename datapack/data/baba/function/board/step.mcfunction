@@ -14,88 +14,88 @@ scoreboard players set destroyed baba 0
 scoreboard players set rules_changed baba 0
 
 execute if score direction baba matches 1.. run function baba:board/movement/batch/you
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done] remove move_done
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved] remove has_moved
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove move_done
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove has_moved
 execute if score empty baba matches 1 run function baba:board/update_empty
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.move,tag=!prop.sleep] run scoreboard players operation @s life = @s move_stacks
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.move,tag=!prop.sleep,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run scoreboard players operation @s life = @s move_stacks
 function baba:board/movement/process/move
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.move,tag=!prop.sleep,tag=!move_done] run function baba:board/movement/turn_around
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.move,tag=!prop.sleep,tag=!move_done,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/movement/turn_around
 function baba:board/movement/process/move
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done] remove move_done
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved] remove has_moved
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove move_done
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove has_moved
 execute if score empty baba matches 1 run function baba:board/update_empty
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shift] at @s run function baba:board/movement/process/setup_shift
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shift,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/movement/process/setup_shift
 function baba:board/movement/process/shift
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done] remove move_done
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved] remove has_moved
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=shifting] remove shifting
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=move_done,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove move_done
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=has_moved,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove has_moved
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=shifting,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove shifting
 execute if score empty baba matches 1 run function baba:board/update_empty
 
 # first rule parsing and assignment, along with transforms
 # rules with certain conditions cause all affected objects to re-assign every step
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=assign_always] add assign
-execute if score direction baba matches 0 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=assign_idle] add assign
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1] run function baba:board/rules/update
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=has_transforms] at @s run function baba:board/interact/transform
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=assign_always,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] add assign
+execute if score direction baba matches 0 run tag @e[type=#baba:object,tag=baba.object,tag=active,tag=assign_idle,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] add assign
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/update
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=has_transforms,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/transform
 
 # parse and assign again if anything transformed, possibly into text
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1] run function baba:board/rules/update
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/update
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
 # properties are checked in batches
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=teleported] remove teleported
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=teleported,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] remove teleported
 scoreboard players set teleported baba 0
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.tele] at @s run function baba:board/interact/teleport
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.tele,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/teleport
 execute if score teleported baba matches 1.. run playsound baba:teleport master @a 75 74 -162
 # shift changes the facing direction of objects both when pushing and when landing
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shift] at @s run function baba:board/interact/shift_dir
-execute if score direction baba matches 1.. as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.select] at @s run function baba:board/movement/select
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.fall] at @s run function baba:board/interact/fall
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shift,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/shift_dir
+execute if score direction baba matches 1.. as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.select,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/movement/select
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.fall,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/fall
 execute if score moved baba matches 1.. run playsound baba:move master @a 75 74 -162
 
 # parse and assign again if something moved, including text
-execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1] run function baba:board/rules/update
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute if entity @e[type=item_display,tag=baba.object,tag=active,tag=reparse,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/update
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
 # the real game has a bit more nuance on how facing properties interact, not done here
-scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.up] facing 1
-scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.down] facing 2
-scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.left] facing 3
-scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.right] facing 4
-tag @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.dir] add dirty
+scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.up,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] facing 1
+scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.down,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] facing 2
+scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.left,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] facing 3
+scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.right,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] facing 4
+tag @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.dir,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] add dirty
 
 # assign again if anything is created by 'more', but don't parse text
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.more] at @s run function baba:board/interact/more
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.more,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/more
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
 scoreboard players set sank baba 0
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.sink] at @s run function baba:board/interact/sink
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.sink,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/sink
 execute if score sank baba matches 1.. run playsound baba:sink master @a 75 74 -162
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.weak] at @s run function baba:board/interact/weak
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.weak,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/weak
 scoreboard players set melted baba 0
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.hot] at @s run function baba:board/interact/hot
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.hot,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/hot
 execute if score melted baba matches 1.. run playsound baba:melt master @a 75 74 -162
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.defeat] at @s run function baba:board/interact/defeat
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.defeat,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/defeat
 execute if score destroyed baba matches 1.. run playsound baba:defeat master @a 75 74 -162
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shut] at @s run function baba:board/interact/shut
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.shut,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/shut
 execute if score opened baba matches 1.. run playsound baba:open master @a 75 74 -162
 
 # assign again if anything is created by 'make', but don't parse text
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=has_makes] at @s run function baba:board/interact/make
-execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1] run function baba:board/rules/assign
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=has_makes,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/make
+execute if entity @e[type=#baba:object,tag=baba.object,tag=active,tag=assign,limit=1,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/rules/assign
 
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.win] at @s run function baba:board/interact/win
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=prop.win,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/interact/win
 
 # graphical updates
-execute at @e[type=item_display,tag=baba.object,tag=active,tag=dirty] run tag @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=!dirty,distance=..1.1] add dirty
-execute as @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=dirty] at @s run function baba:board/graphics/connector
-execute as @e[type=item_display,tag=baba.object,tag=active,tag=has_frames,tag=!prop.sleep] run function baba:board/graphics/frame
-execute as @e[type=item_display,tag=baba.object,tag=active] at @s unless block ~ ~ ~-1 #baba:board run function baba:board/interact/destroy
+execute at @e[type=item_display,tag=baba.object,tag=active,tag=dirty,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run tag @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=!dirty,distance=..1.1] add dirty
+execute as @e[type=item_display,tag=baba.object,tag=active,tag=connector,tag=dirty,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/graphics/connector
+execute as @e[type=item_display,tag=baba.object,tag=active,tag=has_frames,tag=!prop.sleep,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] run function baba:board/graphics/frame
+execute as @e[type=item_display,tag=baba.object,tag=active,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s unless block ~ ~ ~-1 #baba:board run function baba:board/interact/destroy
 
 function baba:display/update
 
