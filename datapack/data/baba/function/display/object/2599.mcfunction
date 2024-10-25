@@ -1,4 +1,4 @@
-execute if entity @s[scores={frame=0}] run return run data modify storage baba:main model set value 288
-execute if entity @s[scores={frame=1}] run return run data modify storage baba:main model set value 289
-execute if entity @s[scores={frame=2}] run return run data modify storage baba:main model set value 290
-execute if entity @s[scores={frame=3}] run return run data modify storage baba:main model set value 291
+execute if entity @s[scores={frame=0}] run return run data modify storage baba:main model set value 794288
+execute if entity @s[scores={frame=1}] run return run data modify storage baba:main model set value 794289
+execute if entity @s[scores={frame=2}] run return run data modify storage baba:main model set value 794290
+execute if entity @s[scores={frame=3}] run return run data modify storage baba:main model set value 794291

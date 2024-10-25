@@ -1,4 +1,4 @@
-item replace entity @s contents with splash_potion[custom_model_data=31]
+item replace entity @s contents with splash_potion[custom_model_data=794031]
 scoreboard players set color baba 16777215
 execute store result storage baba:main context.color int 1 run scoreboard players get color baba
 function baba:display/palette with storage baba:main context

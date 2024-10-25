@@ -76,7 +76,7 @@ def create_sprite_resources(source, resource_pack, namespace):
         (model_path, custom_model_data) = cached_models[model_key]
       else:
         sprite_id += 1
-        custom_model_data = sprite_id
+        custom_model_data = sprite_id + 794000
         model_path = os.path.join(model_folder, display + '.json')
         y = 0.01 if obj.is_overlay else 0
         save_model(spr, path_to_resource(texture_path), os.path.join(resource_pack, model_path), y)

@@ -29,7 +29,7 @@ def main():
   shutil.make_archive('resources', 'zip', 'resourcepack')
 
 def generate_particles(particles):
-  cmd = 1
+  cmd = 794001
   model = []
   tat.delete_folder('datapack/data/baba/function/display/particle/init')
   tat.delete_folder('datapack/data/baba/function/display/particle/tick')

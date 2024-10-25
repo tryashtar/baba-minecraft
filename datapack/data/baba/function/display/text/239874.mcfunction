@@ -1,1 +1,1 @@
-data modify storage baba:main model set value 60
+data modify storage baba:main model set value 794060

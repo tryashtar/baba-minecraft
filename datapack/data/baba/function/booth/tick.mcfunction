@@ -13,6 +13,6 @@ execute as @e[type=interaction,tag=baba_play,distance=..40,limit=1] at @s run fu
 execute as @e[type=item_display,tag=baba_mount,distance=..40,limit=1] at @s run function baba:booth/demo/tick
 
 # music:
-execute as @a[tag=!baba_music,x=70,y=72,z=-131,dx=11,dy=10,dz=20] at @s run function baba:booth/start_music
+execute as @a[tag=!baba_music,x=70,y=72,z=-131,dx=11,dy=10,dz=-20] at @s run function baba:booth/start_music
 execute as @a[tag=baba_music,distance=..35] at @s run function baba:booth/tick_music
 execute as @a[tag=baba_music,distance=35..] at @s run function baba:booth/stop_music
