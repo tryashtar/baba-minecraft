@@ -1,5 +1,5 @@
 # move everything that was marked as able to move at once
-execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=destroy] at @s run function baba:board/interact/destroy
+execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=destroy] at @s run function baba:board/interact/weak_destroy
 scoreboard players add @e[type=#baba:object,tag=baba.object,tag=active,tag=can_move] walk 1
 scoreboard players set @e[type=#baba:object,tag=baba.object,tag=active,tag=can_move,scores={walk=4..}] walk 0
 execute as @e[type=#baba:object,tag=baba.object,tag=active,tag=can_move] positioned as @s positioned ^ ^ ^1 run function baba:board/movement/move_here

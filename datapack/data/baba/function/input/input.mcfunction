@@ -11,8 +11,8 @@ execute if entity @s[tag=!hold_down] if score z baba matches 100.. run function 
 execute if entity @s[tag=!hold_right] if score x baba matches 100.. run function baba:input/press/right
 execute if entity @s[tag=!hold_left] if score x baba matches ..-100 run function baba:input/press/left
 
-execute unless score load_timer baba matches 1.. if entity @s[scores={undo=0,wait=0,move_cooldown=0,win=0,facing=1..}] run function baba:input/move
-execute unless score load_timer baba matches 1.. if entity @s[scores={undo=0,wait=1..,move_cooldown=0,win=0,facing=0}] run function baba:input/wait
-execute unless score load_timer baba matches 1.. if entity @s[scores={undo=1..,win=0}] run function baba:input/undo
+execute unless score load_timer baba matches 1.. unless score win baba matches 1.. if entity @s[scores={undo=0,wait=0,move_cooldown=0,facing=1..}] run function baba:input/move
+execute unless score load_timer baba matches 1.. unless score win baba matches 1.. if entity @s[scores={undo=0,wait=1..,move_cooldown=0,facing=0}] run function baba:input/wait
+execute unless score load_timer baba matches 1.. unless score win baba matches 1.. if entity @s[scores={undo=1..}] run function baba:input/undo
 
 scoreboard players remove @s[scores={move_cooldown=1..}] move_cooldown 1

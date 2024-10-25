@@ -8,5 +8,4 @@ tag @s remove hold_right
 scoreboard players set @s undo 0
 scoreboard players set @s wait 0
 scoreboard players set @s move_cooldown 0
-scoreboard players set @s win 0
 scoreboard players set @s facing 0

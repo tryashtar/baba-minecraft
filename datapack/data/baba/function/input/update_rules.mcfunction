@@ -1,1 +1,3 @@
+execute if data storage baba:main {load_level:"bonus"} if entity @e[type=marker,tag=baba.rule,x=63,y=68,z=-166,nbt={data:{text_ids:[11,10,12]}},distance=..5] run function baba:booth/make_hot
+execute if data storage baba:main {load_level:"bonus"} run return run data modify entity @e[type=text_display,tag=baba_rules,x=78,y=73,z=-160,distance=..10,limit=1] text set value '[{"text":"","font":"baba:font"},{"text":"rules:\\n","underlined":true},"???"]'
 data modify entity @e[type=text_display,tag=baba_rules,x=78,y=73,z=-160,distance=..10,limit=1] text set value '[{"text":"","font":"baba:font"},{"text":"rules:\\n","underlined":true},{"selector":"@e[type=marker,tag=baba.rule,x=63,y=68,z=-166,distance=..5]","separator":"\\n"}]'

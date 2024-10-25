@@ -7,6 +7,10 @@ execute if entity @s[tag=baba_menu] if score has_hitter baba matches 1..2 run da
 execute if entity @s[tag=baba_menu] if score has_hitter baba matches 1..2 run scoreboard players set load_timer baba 23
 execute if entity @s[tag=baba_menu] if score has_hitter baba matches 1..2 run function baba:booth/demo/close_menu
 
+execute if entity @s[tag=baba_restart] if score has_hitter baba matches 1..2 run playsound baba:enter_level master @a 75 74 -162
+execute if entity @s[tag=baba_restart] if score has_hitter baba matches 1..2 run scoreboard players set load_timer baba 23
+execute if entity @s[tag=baba_restart] if score has_hitter baba matches 1..2 run function baba:booth/demo/close_menu
+
 execute if entity @s[tag=baba_quit] if score has_hitter baba matches 1..2 run tp @a[tag=baba_playing,distance=..40] 75.5 71.5 -156.5 180 0
 execute if entity @s[tag=baba_quit] if score has_hitter baba matches 1..2 run playsound baba:defeat master @a 75 74 -162
 execute if entity @s[tag=baba_quit] if score has_hitter baba matches 1..2 run function baba:booth/demo/reset
