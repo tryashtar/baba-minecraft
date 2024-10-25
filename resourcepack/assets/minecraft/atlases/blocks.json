@@ -7,16 +7,6 @@
       },
       {
          "type": "directory",
-         "source": "editor",
-         "prefix": "editor/"
-      },
-      {
-         "type": "directory",
-         "source": "background",
-         "prefix": "background/"
-      },
-      {
-         "type": "directory",
          "source": "particles",
          "prefix": "particles/"
       }
