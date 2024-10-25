@@ -9,4 +9,4 @@ kill @e[type=item_display,tag=baba_spin,distance=..10,limit=1]
 playsound baba:enter_level master @a 75 74 -162
 data modify storage baba:main load_level set value "map"
 scoreboard players set load_timer baba 23
-summon minecraft:text_display 78.5 74.00 -160.5 {Tags:["baba","baba_rules"],alignment:"center",billboard:"center",text:'""',line_width:2000,background:1879048192}
+summon minecraft:text_display 82.9375 75.0625 -156.5 {Tags:["baba","baba_rules"],alignment:"center",billboard:"fixed",text:'""',line_width:2000,background:1879048192,transformation: {left_rotation: [0.0f, -0.7071068f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.5f, 1.5f, 1.5f], translation: [0.0f, 0.0f, 0.0f]}}
