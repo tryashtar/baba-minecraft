@@ -43,7 +43,9 @@ def generate_particles(particles):
     name = particle['name']
     scale = particle.get('scale', 1)
     speed = particle['speed']
+    texture = particle.get('texture', name)
     life = particle['life']
+    is_3d = particle.get('3d', False)
     parent_init.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/init/{name}')
     parent_tick.append(f'execute if entity @s[tag={name}_particle] run function baba:display/particle/tick/{name}')
     init_lines = [
@@ -61,17 +63,23 @@ def generate_particles(particles):
           'execute store result entity @s item.components."minecraft:potion_contents".custom_color int 1 run scoreboard players get color baba'
         ])
     init_lines.extend([
-      f'data modify storage baba:main merge set value {{start_interpolation:0,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
+      f'data modify storage baba:main merge set value {{start_interpolation:-1,interpolation_duration:{life},transformation:{{translation:[0f,0f,0f]}}}}',
       f'execute store result storage baba:main merge.transformation.translation[0] float {speed/65536:.20f} run random value -65536..65536',
       f'execute store result storage baba:main merge.transformation.translation[1] float {speed/65536:.20f} run random value -65536..65536',
+    ])
+    if is_3d:
+      init_lines.extend([
+        f'execute store result storage baba:main merge.transformation.translation[2] float {speed/65536:.20f} run random value -65536..65536',
+      ])
+    init_lines.extend([
       'data modify entity @s {} merge from storage baba:main merge',
       f'scoreboard players set @s life {life}',
     ])
     tat.write_lines(init_lines, f'datapack/data/baba/function/display/particle/init/{name}.mcfunction')
-    textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{name}')), key=int))
+    textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{texture}')), key=int))
     for i,tx in enumerate(textures):
-      model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{name}/{tx}"})
-      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{name}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{name}/{tx}.json')
+      model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{texture}/{tx}"})
+      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{texture}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{texture}/{tx}.json')
       if i > 0:
         tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1

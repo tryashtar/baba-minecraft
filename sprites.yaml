@@ -1357,10 +1357,18 @@ particles:
   speed: 1
   life: 12
 - name: open
+  texture: win
   color: '#ede285'
   scale: 0.666666
   speed: 1.2
   life: 12
+- name: big_open
+  texture: win
+  color: '#ede285'
+  scale: 0.666666
+  speed: 1.2
+  life: 12
+  3d: true
 - name: melt
   color: '#737373'
   speed: 1
@@ -1371,6 +1379,7 @@ particles:
   speed: 0.8
   life: 10
 - name: defeat
+  texture: sink
   color: '#ffffff'
   scale: 0.666666
   speed: 0.9
@@ -1380,6 +1389,13 @@ particles:
   scale: 0.333333
   speed: 1.5
   life: 12
+- name: big_tele
+  texture: tele
+  color: '#83c8e5'
+  scale: 0.333333
+  speed: 1.5
+  life: 12
+  3d: true
 
 palettes:
   default: # 0

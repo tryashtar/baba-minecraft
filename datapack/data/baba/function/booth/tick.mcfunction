@@ -1,3 +1,7 @@
+# particle display
+execute as @e[type=item_display,tag=baba.particle,tag=!init,distance=..40] run function baba:display/particle/init
+execute as @e[type=item_display,tag=baba.particle,distance=..40] run function baba:display/particle/tick
+
 # door logic:
 execute if score door_status baba matches 0 run function baba:booth/door/closed_tick
 execute if score door_status baba matches 1 run function baba:booth/door/opened_tick

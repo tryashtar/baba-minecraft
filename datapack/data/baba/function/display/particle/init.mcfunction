@@ -1,7 +1,9 @@
 tag @s add init
 execute if entity @s[tag=win_particle] run function baba:display/particle/init/win
 execute if entity @s[tag=open_particle] run function baba:display/particle/init/open
+execute if entity @s[tag=big_open_particle] run function baba:display/particle/init/big_open
 execute if entity @s[tag=melt_particle] run function baba:display/particle/init/melt
 execute if entity @s[tag=sink_particle] run function baba:display/particle/init/sink
 execute if entity @s[tag=defeat_particle] run function baba:display/particle/init/defeat
 execute if entity @s[tag=tele_particle] run function baba:display/particle/init/tele
+execute if entity @s[tag=big_tele_particle] run function baba:display/particle/init/big_tele
