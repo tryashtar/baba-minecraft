@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/level/complete-true"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/level/complete-true"}}

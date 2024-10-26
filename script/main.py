@@ -74,14 +74,14 @@ def generate_particles(particles):
     textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{texture}')), key=int))
     for i,tx in enumerate(textures):
       model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{texture}/{tx}"})
-      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{texture}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{texture}/{tx}.json')
+      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{texture}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{texture}/{tx}.json', mini=True)
       if i > 0:
         tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1
     tat.write_lines(tick_lines, f'datapack/data/baba/function/display/particle/tick/{name}.mcfunction')
   tat.write_lines(parent_init, 'datapack/data/baba/function/display/particle/init.mcfunction')
   tat.write_lines(parent_tick, 'datapack/data/baba/function/display/particle/tick.mcfunction')
-  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json')
+  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/splash_potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":model}, 'resourcepack/assets/minecraft/models/item/splash_potion.json', mini=True)
 
 def next_char(char):
   char += 1
@@ -166,7 +166,7 @@ def generate_wiggle_fonts(source, rsources):
         chars[h] = str(h)
         path = rsources[spr].texture_resource + '.png'
         providers.append({"type":"bitmap","file":path,"height":12,"ascent":8,"chars":chars})
-      tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json')
+      tat.write_json({"providers":providers}, f'resourcepack/assets/baba/font/icon_{text}.json', mini=True)
 
 def generate_update_function(source, rsources):
   tat.delete_folder('datapack/data/baba/function/display/object')

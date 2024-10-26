@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/belt/facing-left.frame-0"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/belt/facing-left.frame-0"}}

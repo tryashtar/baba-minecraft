@@ -1,13 +1,1 @@
-{
-   "parent": "item/generated",
-   "textures": {
-      "layer0": "baba:sprites/baba/facing-left.walk-0.sleep-false"
-   },
-   "display": {
-      "head": {
-         "rotation": [0, 180, 0],
-         "translation": [0, 14, 0],
-         "scale": [1, 1, 1]
-      }
-   }
-}
+{"parent":"item/generated","textures":{"layer0":"baba:sprites/baba/facing-left.walk-0.sleep-false"},"display":{"head":{"rotation":[0, 180, 0],"translation":[0, 14, 0],"scale":[1, 1, 1]}}}

@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/bolt/facing-up"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/bolt/facing-up"}}

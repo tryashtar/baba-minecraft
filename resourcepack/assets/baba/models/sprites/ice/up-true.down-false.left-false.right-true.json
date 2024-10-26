@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/ice/up-true.down-false.left-false.right-true"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/ice/up-true.down-false.left-false.right-true"}}

@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/letter/a"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/letter/a"}}

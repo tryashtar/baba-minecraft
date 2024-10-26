@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/robot/facing-down.walk-1.sleep-false"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/robot/facing-down.walk-1.sleep-false"}}

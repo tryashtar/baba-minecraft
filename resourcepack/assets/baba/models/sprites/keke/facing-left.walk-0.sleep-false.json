@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/keke/facing-left.walk-0.sleep-false"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/keke/facing-left.walk-0.sleep-false"}}

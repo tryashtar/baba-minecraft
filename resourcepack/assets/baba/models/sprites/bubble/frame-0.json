@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/bubble/frame-0"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/bubble/frame-0"}}

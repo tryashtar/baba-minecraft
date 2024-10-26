@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/bird/facing-down"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/bird/facing-down"}}

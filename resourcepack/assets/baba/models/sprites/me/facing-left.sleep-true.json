@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/me/facing-left.sleep-true"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/me/facing-left.sleep-true"}}

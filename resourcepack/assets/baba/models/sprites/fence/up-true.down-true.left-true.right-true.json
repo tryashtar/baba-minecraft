@@ -1,6 +1,1 @@
-{
-   "parent": "baba:sprite",
-   "textures": {
-      "up": "baba:sprites/fence/up-true.down-true.left-true.right-true"
-   }
-}
+{"parent":"baba:sprite","textures":{"up":"baba:sprites/fence/up-true.down-true.left-true.right-true"}}

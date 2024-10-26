@@ -35,9 +35,10 @@ def save_image(spr, images, path):
   img2 = img.copy()
   img2.putalpha(253)
   img.paste(img2, img)
-  img.save(path)
+  img = img.convert('P', palette=PIL.Image.Palette.ADAPTIVE, colors=3)
+  img.save(path, optimize=True)
   if len(images) > 1:
-    tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta')
+    tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta', mini=True)
 
 def save_model(spr, texture_resource, path, y):
   t1 = round(-16*spr.scale*spr.shift[1]/24,2)
@@ -45,11 +46,11 @@ def save_model(spr, texture_resource, path, y):
   model = {"parent":"baba:sprite","textures":{"up":texture_resource}}
   if (t1, y, t2) != (0, 0, 0) or spr.scale != 1:
     model['display'] = {"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, y, t2]}}
-  tat.write_json(model, path)
+  tat.write_json(model, path, mini=True)
 
 def save_editor_model(texture_resource, path):
   model = {"parent":"baba:editor_block","textures":{"all":texture_resource}}
-  tat.write_json(model, path)
+  tat.write_json(model, path, mini=True)
 
 def create_sprite_resources(source, resource_pack, namespace):
   sprite_info = {}
@@ -83,7 +84,7 @@ def create_sprite_resources(source, resource_pack, namespace):
         cached_models[model_key] = (model_path, custom_model_data)
         overrides.append({'predicate':{'custom_model_data':custom_model_data},'model':path_to_resource(model_path)})
       sprite_info[spr] = SpriteResources(spr, props, texture_path, model_path, custom_model_data)
-  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'))
+  tat.write_json({"parent":"item/generated","textures":{"layer0":"item/potion_overlay","layer1":"item/potion"},"display":{"fixed":{"scale":[0,0,0]}},"overrides":overrides}, os.path.join(resource_pack, 'assets/minecraft/models/item/potion.json'), mini=True)
   return sprite_info
 
 def colorize_frames(images, color):
