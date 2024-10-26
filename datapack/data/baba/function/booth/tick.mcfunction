@@ -4,7 +4,7 @@ execute as @e[type=item_display,tag=baba.particle,distance=..40] run function ba
 execute at @e[type=item_display,tag=baba_ice,distance=..40,limit=1] if predicate baba:10_percent run summon item_display ~ ~0.1 ~ {width:2f,height:2f,item_display:"fixed",Tags:["baba","baba.particle","big_tele_particle"],billboard:"center",transformation:{left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.5f]}}
 
 # door logic:
-execute if score door_status baba matches 0 run function baba:booth/door/closed_tick
+execute unless score door_status baba matches 1.. run function baba:booth/door/closed_tick
 execute if score door_status baba matches 1 run function baba:booth/door/opened_tick
 
 # demo logic:
