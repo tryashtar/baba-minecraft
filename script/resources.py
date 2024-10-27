@@ -29,21 +29,23 @@ def sprite_name(spr, props):
 
 def save_image(spr, images, path):
   tat.setup_path(path)
-  img = PIL.Image.new('RGBA', (spr.width, spr.height * len(images)), '#00000000')
+  img = PIL.Image.new('RGBA', (32, 32 * len(images)), '#00000000')
   for i,f in enumerate(images):
-    PIL.Image.Image.paste(img, f, (0, i*spr.height), f)
+    PIL.Image.Image.paste(img, f, (0, i*32), f)
   img2 = img.copy()
   img2.putalpha(253)
   img.paste(img2, img)
   img = img.convert('P', palette=PIL.Image.Palette.ADAPTIVE, colors=3)
   img.save(path, optimize=True)
   if len(images) > 1:
-    tat.write_json({"animation":{"frametime":4,"width":spr.width,"height":spr.height}}, path + '.mcmeta', mini=True)
+    tat.write_json({"animation":{"frametime":4,"width":32,"height":32}}, path + '.mcmeta', mini=True)
 
 def save_model(spr, texture_resource, path, y):
   t1 = round(-16*spr.scale*spr.shift[1]/24,2)
   t2 = round(-16*spr.scale*spr.shift[0]/24,2)
-  model = {"parent":"baba:sprite","textures":{"up":texture_resource}}
+  model = {"parent":"baba:sprite_cropped","textures":{"up":texture_resource}}
+  if spr.width != 24:
+    model['parent'] = 'baba:sprite_full'
   if (t1, y, t2) != (0, 0, 0) or spr.scale != 1:
     model['display'] = {"fixed":{"rotation":[0,90,0],"scale":[spr.scale,0.001,spr.scale],"translation":[t1, y, t2]}}
   tat.write_json(model, path, mini=True)

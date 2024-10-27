@@ -1,1 +1,1 @@
-{"parent":"baba:sprite","textures":{"up":"baba:sprites/level_icon/digit.first_digit-8"},"display":{"fixed":{"rotation":[0,90,0],"scale":[1,0.001,1],"translation":[0.0,0.01,-2.67]}}}
+{"parent":"baba:sprite_cropped","textures":{"up":"baba:sprites/level_icon/digit.first_digit-8"},"display":{"fixed":{"rotation":[0,90,0],"scale":[1,0.001,1],"translation":[0.0,0.01,-2.67]}}}

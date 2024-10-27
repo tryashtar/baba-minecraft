@@ -37,57 +37,57 @@
       {
          "type": "bitmap",
          "file": "baba:sprites/love.png",
-         "height": 8,
-         "ascent": 6,
+         "height": 10.4,
+         "ascent": 7.8,
          "chars": ["❤", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/ghost/facing-right.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": ["@", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/me/facing-right.walk-1.sleep-false.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": [">", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/text/all.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": ["{", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/text/is.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": ["}", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/text/move.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": ["[", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/flag.png",
-         "height": 14,
-         "ascent": 6,
+         "height": 18.2,
+         "ascent": 7.8,
          "chars": ["]", "\u0000", "\u0000"]
       },
       {
          "type": "bitmap",
          "file": "baba:sprites/baba/facing-right.walk-0.sleep-false.png",
-         "height": 10,
-         "ascent": 8,
+         "height": 13,
+         "ascent": 7.8,
          "chars": ["|", "\u0000", "\u0000"]
       }
    ]

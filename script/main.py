@@ -74,7 +74,10 @@ def generate_particles(particles):
     textures = list(sorted(map(tat.base_name, tat.get_files(f'resourcepack/assets/baba/textures/particles/{texture}')), key=int))
     for i,tx in enumerate(textures):
       model.append({"predicate":{"custom_model_data":cmd},"model":f"baba:particles/{texture}/{tx}"})
-      tat.write_json({"parent":"baba:sprite","textures":{"up":f"baba:particles/{texture}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{texture}/{tx}.json', mini=True)
+      parent = 'baba:sprite_full'
+      if name == 'melt':
+        parent = 'baba:sprite_melt'
+      tat.write_json({"parent":parent,"textures":{"up":f"baba:particles/{texture}/{tx}"},"display":{"fixed":{"rotation":[0,90,0],"scale":[scale,0.001,scale]}}}, f'resourcepack/assets/baba/models/particles/{texture}/{tx}.json', mini=True)
       if i > 0:
         tick_lines.append(f'execute if score @s life matches {math.floor(life*(len(textures)-i)/len(textures))} run item modify entity @s contents {{function:"set_custom_model_data",value:{cmd}}}')
       cmd += 1

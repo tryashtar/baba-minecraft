@@ -1,1 +1,1 @@
-{"parent":"baba:sprite","textures":{"up":"baba:sprites/baba/facing-left.walk-0.sleep-false"}}
+{"parent":"baba:sprite_cropped","textures":{"up":"baba:sprites/baba/facing-left.walk-0.sleep-false"}}

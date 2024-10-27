@@ -1,1 +1,1 @@
-{"parent":"baba:sprite","textures":{"up":"baba:particles/sink/1"},"display":{"fixed":{"rotation":[0,90,0],"scale":[0.666666,0.001,0.666666]}}}
+{"parent":"baba:sprite_full","textures":{"up":"baba:particles/sink/1"},"display":{"fixed":{"rotation":[0,90,0],"scale":[0.666666,0.001,0.666666]}}}

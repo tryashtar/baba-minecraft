@@ -1,1 +1,1 @@
-{"parent":"baba:sprite","textures":{"up":"baba:sprites/text/defeat"}}
+{"parent":"baba:sprite_cropped","textures":{"up":"baba:sprites/text/defeat"}}

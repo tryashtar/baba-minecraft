@@ -1,1 +1,1 @@
-{"parent":"baba:sprite","textures":{"up":"baba:sprites/bat/frame-3"}}
+{"parent":"baba:sprite_cropped","textures":{"up":"baba:sprites/bat/frame-3"}}
