@@ -31,7 +31,8 @@ scoreboard objectives add undo dummy
 scoreboard objectives add wait dummy
 scoreboard objectives add last_loaded_level dummy
 scoreboard objectives add baba_music dummy
-scoreboard objectives add use used:carrot_on_a_stick
 scoreboard players set #-1 baba -1
 scoreboard players set #10 baba 10
-function baba:meta/data
+
+execute unless score setup_data baba matches 1 run function baba:meta/data
+scoreboard players set setup_data baba 1

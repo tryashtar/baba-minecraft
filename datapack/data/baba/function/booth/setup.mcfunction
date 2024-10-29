@@ -1,5 +1,11 @@
 kill @e[tag=baba,tag=!baba_persist]
 
+fill 63 68 -167 87 81 -167 light[level=15]
+setblock 81 82 -168 barrier
+setblock 83 82 -168 barrier
+setblock 67 82 -168 barrier
+setblock 69 82 -168 barrier
+
 # trees
 summon item_display 74.5 74.5625 -130.5 {Tags:["baba"], billboard: "vertical", height: 1.0f, item: {components: {"minecraft:custom_model_data": 794304, "minecraft:potion_contents": {custom_color: 6062905}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.5f]}, width: 1.0f, shadow_radius: 0.3f}
 summon item_display 81.5 74.5625 -131.5 {Tags:["baba"], billboard: "vertical", height: 1.0f, item: {components: {"minecraft:custom_model_data": 794304, "minecraft:potion_contents": {custom_color: 6062905}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [0.0f, 0.7071068f, 0.7071068f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.5f]}, width: 1.0f, shadow_radius: 0.3f}
@@ -57,31 +63,6 @@ summon item_display 78.5 74.51 -146.5 {Tags:["baba"], height: 1.0f, item: {compo
 # side art
 summon item_display 86.5625 76.5 -156.5 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 794002, "minecraft:potion_contents": {custom_color: 16777215}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.5f, -0.5f, -0.5f, 0.5f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [5.0f, 5.0f, 5.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
 summon item_display 61.4375 76.5 -151.5 {Tags:["baba"], height: 8.0f, item: {components: {"minecraft:custom_model_data": 794252, "minecraft:potion_contents": {custom_color: 15029051}}, count: 1, id: "minecraft:potion"}, transformation: {left_rotation: [-0.5f, 0.5f, 0.5f, 0.5f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [5.0f, 5.0f, 5.0f], translation: [0.0f, 0.0f, 0.0f]}, width: 8.0f}
-
-# blockers
-summon interaction 75.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 76.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 77.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 79.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 80.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 81.5 74.0 -152.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 65.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 68.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 69.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 71.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 72.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 73.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 74.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 76.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 77.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 78.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 79.5 71.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 81.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 82.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 83.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 64.5 72.0 -162.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 65.5 73.0 -159.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
-summon interaction 66.5 73.0 -159.5 {Tags:["baba"], width: 1.0f, height: 1.5f}
 
 # text inside
 summon text_display 82.0 74.25 -147.0625 {Tags:["baba"], alignment: "center", background: 0, default_background: 0b, line_width: 70, see_through: 0b, shadow: 1b, text: '{"text":"","extra":[{"text":"build credits","underlined":true},{"text":"\\n\\nmmmehbby\\nliorhaddad\\ncelesian\\nmulverinex\\nnightlibra","color":"#EDE285"},"\\n\\nthank you all for your help on such short notice! ",{"text":"❤","color":"#EB91CA"}],"font":"baba:font"}', text_opacity: -1b, transformation: {left_rotation: [0.0f, 1.0f, 0.0f, 0.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]}}
