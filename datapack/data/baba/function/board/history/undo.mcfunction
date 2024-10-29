@@ -3,11 +3,14 @@ scoreboard players remove @e[type=marker,tag=baba.space,tag=active,x=63.0,y=67.0
 execute as @e[type=marker,tag=baba.space,tag=active,scores={repeats=0},x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1] at @s run function baba:board/history/pop
 execute if score empty baba matches 1 run function baba:board/update_empty
 
+data modify storage baba:main rule_history set from entity @s data.rule_history
 execute store result score repeats baba run data get storage baba:main rule_history[-1].repeats
 execute if score repeats baba matches 1 run kill @e[type=marker,tag=baba.rule,tag=active,x=63.0,y=67.0,z=-168.0,dx=24,dy=14,dz=1]
 execute if score repeats baba matches 1 run data remove storage baba:main rule_history[-1]
 execute if score repeats baba matches 1 run data modify storage baba:main current_rules set from storage baba:main rule_history[-1].rules
 execute if score repeats baba matches 1 summon marker run function baba:board/history/pop_rules
 execute if score repeats baba matches 2.. store result storage baba:main rule_history[-1].repeats int 1 run scoreboard players remove repeats baba 1
+data modify entity @s data.rule_history set from storage baba:main rule_history
 
 function baba:display/update
+function baba:input/update_rules
