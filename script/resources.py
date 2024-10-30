@@ -56,7 +56,7 @@ def save_editor_model(texture_resource, path):
 
 def create_sprite_resources(source, resource_pack, namespace):
   sprite_info = {}
-  overrides = [{'predicate':{'custom_model_data':794000,'model':'baba:empty'}}]
+  overrides = [{'predicate':{'custom_model_data':794000},'model':'baba:empty'}]
   cached_images = {}
   cached_models = {}
   texture_folder = os.path.join('assets', namespace, 'textures/sprites')
